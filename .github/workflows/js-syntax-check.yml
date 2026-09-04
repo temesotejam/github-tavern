@@ -7,6 +7,7 @@ on:
     paths:
       - "app.js"
       - "spoken-overview-client.js"
+      - "keeper-closing-client.js"
       - "public-pages-client.js"
       - "index.html"
       - ".github/workflows/js-syntax-check.yml"
@@ -38,6 +39,24 @@ jobs:
 
           if (!result.includes('数値積分する。')) throw new Error('「数値積分します」が常体に変換されていません');
           if (/(です|ます)([。、，,]|$)/.test(result)) throw new Error('概要に「です・ます」調が残っています');
+          NODE
+      - name: Check keeper-closing-client.js syntax
+        run: node --check keeper-closing-client.js
+      - name: Test keeper closing remarks
+        run: |
+          node <<'NODE'
+          require('./keeper-closing-client.js');
+          const closingFor = globalThis.__projectTavernClosingFor;
+          if (typeof closingFor !== 'function') throw new Error('keeper closing generator is unavailable');
+
+          const control = closingFor('リアクションホイール 数値積分 制御工学 シミュレータ', 'reaction-wheel-rocking-sim');
+          const sensor = closingFor('BNO085 IMU センサ 姿勢推定', 'imu-test');
+          const low = closingFor('CONF LOW 資料が少ない 詳細は判断できない', 'unknown-repo');
+          console.log({ control, sensor, low });
+
+          if (!control || !sensor || !low) throw new Error('keeper closing remark was empty');
+          if (control === sensor) throw new Error('different repository themes should not collapse to one closing');
+          if (!/資料|推測|分かって/.test(low)) throw new Error('low-confidence closing is not appropriately cautious');
           NODE
       - name: Check public-pages-client.js syntax
         run: node --check public-pages-client.js
