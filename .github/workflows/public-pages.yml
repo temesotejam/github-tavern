@@ -1,0 +1,54 @@
+name: Refresh verified public pages
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "47 */6 * * *"
+  push:
+    branches: [main]
+    paths:
+      - "scripts/update-public-pages.mjs"
+      - ".github/workflows/public-pages.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: tavern-public-page-refresh
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: "24"
+
+      - name: Verify public pages
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          TAVERN_OWNER: temesotejam
+        run: node scripts/update-public-pages.mjs
+
+      - name: Commit verified page cache
+        run: |
+          if git diff --quiet -- data/public-pages.json; then
+            echo "No public page changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/public-pages.json
+          git commit -m "chore: refresh verified public pages"
+          git fetch origin main
+          git rebase origin/main
+          git push origin main
