@@ -1,5 +1,397 @@
 {
   "schemaVersion": 1,
-  "generatedAt": null,
-  "repositories": {}
+  "generatedAt": "2026-09-04T05:40:21.521Z",
+  "repositories": {
+    "github-tavern": {
+      "title": "GitHubリポジトリ酒場",
+      "summary": "temesotejamの公開GitHubリポジトリを酒場風の一覧で探せる個人向けポータルです。検索や分類、README・Copilot要約の表示に対応します。",
+      "detail": "公開リポジトリをGitHub APIから取得し、名前や説明、Topics、言語、要約を横断して検索できます。技術領域による簡易分類やカード形式の詳細表示を備えています。Copilot CLIとGitHub Actionsで要約キャッシュを更新し、未解析のリポジトリにはREADME由来の暫定説明を表示します。GitHub Pagesで静的サイトとして公開できる構成です。",
+      "features": [
+        "GitHub APIによる公開リポジトリの自動取得",
+        "リポジトリ情報と要約の横断検索",
+        "技術領域ごとの簡易分類",
+        "カード選択による概要・詳細表示",
+        "READMEプレビューとCopilot要約の表示"
+      ],
+      "technologies": [
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "GitHub API",
+        "GitHub Copilot CLI",
+        "GitHub Actions",
+        "GitHub Pages",
+        "MutationObserver"
+      ],
+      "categories": [
+        "Web・ツール",
+        "個人ポータル",
+        "GitHub連携",
+        "静的サイト"
+      ],
+      "status": "ツール",
+      "confidence": "high",
+      "sourcePushedAt": "2026-09-04T05:37:20Z",
+      "sourceDefaultBranch": "main",
+      "generatedAt": "2026-09-04T05:37:47.703Z"
+    },
+    "semicircle-decay-sim": {
+      "title": "足裏形状の減衰シミュレーター",
+      "summary": "リアクションホイール搭載ロッキング機体の自由減衰を、完全円モデルとSTEP由来の中央欠損を含む足裏形状モデルで比較・同定するPython解析リポジトリです。",
+      "detail": "実機の動画ピーク角やIMUジャイロのゼロクロス角速度を使い、足裏形状が減衰挙動に与える影響を調べる酒場の研究道具です。STEP形状から半径150mmの円弧と中央10mm欠損を再現したpiecewiseモデルを扱います。自由減衰では実形状モデルの誤差低下が確認されていますが、再構成後の不一致にはリアクションホイール状態や左右非対称など別要因が残ると整理されています。現状はgeometry auditを進めるVersion 1です。",
+      "features": [
+        "完全円モデルと中央欠損を含む足裏形状モデルの比較",
+        "STEPデータから足裏の円弧範囲・半径・座標系を解析",
+        "自由減衰データから有効慣性などのパラメータを同定",
+        "動画ピーク角とIMUジャイロのゼロクロス角速度を比較",
+        "リアクションホイール状態を含む再構成後モデルを検討"
+      ],
+      "technologies": [
+        "Python",
+        "STEP",
+        "Onshape",
+        "CAD",
+        "IMUジャイロ",
+        "リアクションホイール",
+        "物理モデル",
+        "時系列データ解析"
+      ],
+      "categories": [
+        "シミュレーション",
+        "ロボティクス",
+        "機械力学",
+        "CAD解析"
+      ],
+      "status": "実験",
+      "confidence": "high",
+      "sourcePushedAt": "2026-09-04T04:20:51Z",
+      "sourceDefaultBranch": "main",
+      "generatedAt": "2026-09-04T05:38:01.757Z"
+    },
+    "reaction-wheel-rocking-sim": {
+      "title": "リアクションホイール揺動シミュレータ",
+      "summary": "リアクションホイール付き左右ロッキング機体を2次元モデル化し、入力と揺動エネルギーの関係や制御成立条件を調べるシミュレータです。",
+      "detail": "この酒場では、機体のロール角・角速度とホイール角速度を数値積分し、Q入力による次ピークのエネルギー変化を無入力時と比較できます。入力効果がQだけで決まるか、入力時の状態にも依存するかを、Q sweepや初期振幅 sweepで検討します。ブラウザ版はdocs/index.htmlとして用意されていますが、3次元運動や実機同定値などは対象外です。",
+      "features": [
+        "2次元の正面X-Z断面モデル",
+        "リアクションホイール入力と次ピークの反実仮想比較",
+        "Q sweepによる入力効果の確認",
+        "初期振幅 sweepによる状態依存性の確認",
+        "ブラウザで動かせるインタラクティブ版"
+      ],
+      "technologies": [
+        "HTML",
+        "GitHub Pages",
+        "数値積分",
+        "リアクションホイール",
+        "IMU"
+      ],
+      "categories": [
+        "シミュレータ",
+        "制御工学",
+        "ロボティクス"
+      ],
+      "status": "試作",
+      "confidence": "high",
+      "sourcePushedAt": "2026-09-03T08:36:46Z",
+      "sourceDefaultBranch": "main",
+      "generatedAt": "2026-09-04T05:38:13.422Z"
+    },
+    "realsense-web-viewer": {
+      "title": "RealSenseブラウザビューア",
+      "summary": "Intel RealSenseの深度・トラッキングカメラをブラウザで可視化する実験的ビューア。D400系の直接深度入力とT265向けWebUSB研究、ネイティブブリッジを備えます。",
+      "detail": "ブラウザの標準カメラ・USB APIを優先し、D400/D405の深度映像をgetUserMedia経由で表示します。WebGL2による深度カラー化やマウス位置のZ16値・距離表示に対応しています。T265はWebUSBでの起動デバイス検証段階で、SDK利用のローカルブリッジも用意されています。GitHub Pagesで動く静的サイトとして構成されています。",
+      "features": [
+        "RealSense Depth入力の検出と直接UVCストリーミング",
+        "GPU深度カラー化と表示範囲の調整",
+        "マウス位置のRaw Z16値と距離表示",
+        "T265のWebUSBインターフェース検証",
+        "T265・D400のデモ表示とネイティブブリッジ"
+      ],
+      "technologies": [
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Python",
+        "getUserMedia",
+        "WebUSB",
+        "WebGL2",
+        "librealsense"
+      ],
+      "categories": [
+        "コンピュータビジョン",
+        "深度カメラ",
+        "ブラウザアプリ",
+        "ハードウェア実験"
+      ],
+      "status": "実験",
+      "confidence": "high",
+      "sourcePushedAt": "2026-09-02T05:59:22Z",
+      "sourceDefaultBranch": "main",
+      "generatedAt": "2026-09-04T05:38:25.958Z"
+    },
+    "youtube-video-fetcher": {
+      "title": "YouTube動画取得・解析連携ツール",
+      "summary": "YouTube動画や指定区間を取得し、GitHub Actions Artifact経由でChatGPTなどの後段解析へ渡すPythonベースのFetcherです。",
+      "detail": "YouTubeの動画全体または指定区間を、Windows self-hosted runner上で取得してArtifactにまとめます。動画本体、メタデータ、ログ、解析依頼を後段へ渡し、映像理解やフレーム解析はFetcherの外で行う構成です。字幕取得と音声認識の補助・実験経路も備えています。",
+      "features": [
+        "全編または指定区間のYouTube動画取得",
+        "GitHub Actionsの手動実行・request.json更新による起動",
+        "動画、メタデータ、ログ、解析依頼のArtifact化",
+        "ChatGPTなどによる取得MP4の後段直接解析を想定",
+        "YouTube字幕取得と独立ASRの補助・実験経路"
+      ],
+      "technologies": [
+        "Python",
+        "GitHub Actions",
+        "Windows self-hosted runner",
+        "yt-dlp",
+        "Deno",
+        "FFmpeg",
+        "faster-whisper",
+        "OpenCV"
+      ],
+      "categories": [
+        "動画取得",
+        "映像解析連携",
+        "GitHub Actions",
+        "AIワークフロー"
+      ],
+      "status": "ツール",
+      "confidence": "high",
+      "sourcePushedAt": "2026-08-30T14:43:39Z",
+      "sourceDefaultBranch": "main",
+      "generatedAt": "2026-09-04T05:38:36.243Z"
+    },
+    "marker-angle-recorder": {
+      "title": "マーカー角度記録ツール",
+      "summary": "ブラウザ上で白丸マーカーを認識し、機体の絶対角度と生動画を記録する研究実験向けツール。RWLOGを検証して動画・角度データと一つのSession ZIPにまとめます。",
+      "detail": "カメラ映像から白丸2点を追跡し、固定水平基準による絶対ロール角を計測する酒場道具です。生動画、角度CSV、RWLOG、manifestをSessionとして保存し、SHA-256やCRC、時間、受動測定条件も確認できます。処理はブラウザ内で完結し、将来形式のRWLOGも原本として添付できる設計です。",
+      "features": [
+        "白丸2点のROI追跡によるリアルタイム角度計測",
+        "固定水平基準による絶対角度と確認用の相対角度",
+        "生動画・角度CSV・RWLOG・manifestのSession ZIP出力",
+        "RWLOG v41の互換性、CRC、受動測定条件、時間の監査",
+        "カメラ映像や測定ファイルを外部へアップロードしないローカル処理"
+      ],
+      "technologies": [
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "ES modules",
+        "MediaRecorder",
+        "USBカメラ",
+        "GitHub Pages",
+        "GitHub Actions"
+      ],
+      "categories": [
+        "計測ツール",
+        "研究支援",
+        "動画記録",
+        "データ監査"
+      ],
+      "status": "ツール",
+      "confidence": "high",
+      "sourcePushedAt": "2026-08-29T06:56:14Z",
+      "sourceDefaultBranch": "main",
+      "generatedAt": "2026-09-04T05:38:48.801Z"
+    },
+    "spike-rt-web-toolkit": {
+      "title": "SPIKE-RT Web開発ツールキット",
+      "summary": "github.devでSPIKE-RTのCアプリを編集し、GitHub Actionsでビルド、GitHub PagesからSPIKE Prime HubへWebUSB書き込みとWeb Serialログ確認を行うツールキットです。",
+      "detail": "SPIKE-RTアプリをapps配下に配置し、GitHub Actionsで一括ビルドしてPagesから選択・書き込めます。WebUSBのDFU書き込みに加え、Web Serialで実行中のUSBシリアルログをブラウザ表示できます。ボタン、LED、モーターなどのサンプルアプリも収録されています。",
+      "features": [
+        "github.devでのCソース編集",
+        "GitHub ActionsによるSPIKE-RT v0.2.0の固定ビルド",
+        "GitHub PagesからのWebUSB DFU書き込み",
+        "Web Serialによる115200 bpsログ表示",
+        "ボタン・LED・モーターのサンプルアプリ収録"
+      ],
+      "technologies": [
+        "JavaScript",
+        "C",
+        "HTML",
+        "CSS",
+        "SPIKE-RT",
+        "GitHub Actions",
+        "GitHub Pages",
+        "WebUSB / Web Serial API"
+      ],
+      "categories": [
+        "開発ツール",
+        "組み込み",
+        "Webアプリ",
+        "教育・ロボット"
+      ],
+      "status": "ツール",
+      "confidence": "high",
+      "sourcePushedAt": "2026-08-25T09:46:58Z",
+      "sourceDefaultBranch": "main",
+      "generatedAt": "2026-09-04T05:39:00.934Z"
+    },
+    "reaction-wheel-rocker-baseline-sim": {
+      "title": "反動ホイール揺動基準シミュレータ",
+      "summary": "リアクションホイール機体の左右揺動について、中央欠損を含むModel Bの物理モデルと検証済みパラメータをBaseline v1として固定するPythonシミュレータです。",
+      "detail": "この酒場では、STEP形状と実験結果をもとにした接触モードや重心高さ、実効慣性を基準値として扱います。粘性減衰や摩擦など未確定の要素は加えず、エネルギー保存の受動ロッカーとしてRK4積分します。CSV出力とブラウザ表示に対応し、将来のモデル比較で再現可能な基準を提供します。",
+      "features": [
+        "Model Bの中央欠損付き円弧接触モデル",
+        "接触モードの判定と時系列CSV出力",
+        "Baseline v1の物理パラメータ凍結",
+        "RK4によるエネルギー保存シミュレーション",
+        "JavaScript製ブラウザビューア"
+      ],
+      "technologies": [
+        "Python",
+        "JavaScript",
+        "RK4",
+        "CSV",
+        "GitHub Pages",
+        "STEP"
+      ],
+      "categories": [
+        "物理シミュレーション",
+        "ロボティクス",
+        "数値解析",
+        "研究支援ツール"
+      ],
+      "status": "ツール",
+      "confidence": "high",
+      "sourcePushedAt": "2026-08-24T06:21:53Z",
+      "sourceDefaultBranch": "main",
+      "generatedAt": "2026-09-04T05:39:14.934Z"
+    },
+    "acrobot-swingup-hybrid-control": {
+      "title": "Acrobotハイブリッド制御",
+      "summary": "連続トルク型Acrobotの振り上げと直立安定化を、軌道最適化・TVLQR・適応的モデル選択で実現するPython実験。",
+      "detail": "この酒場では、CasADi/IPOPTによる21秒の振り上げ軌道生成と、軌道追従用TVLQRおよび直立時LQRを組み合わせています。9モデルの不確実性バンクからオンラインでモデルを選び、選択モデルに対して非線形再計画を行う構成です。READMEの報告では、試験したモデル不一致8ケースで適応制御が全てCaptureおよびFinal stableに到達しています。",
+      "features": [
+        "CasADi/IPOPTによるダイレクト多重射撃軌道最適化",
+        "1050サンプルにわたる有限時間TVLQRフィードバック",
+        "9モデルのオンライン選択と制約付き非線形再計画",
+        "振り上げ後の5状態直立LQR安定化",
+        "初期状態・モデル不一致に対するCIロバストネスゲート"
+      ],
+      "technologies": [
+        "Python",
+        "CasADi",
+        "IPOPT",
+        "NumPy",
+        "SciPy",
+        "Matplotlib",
+        "pytest",
+        "imageio-ffmpeg"
+      ],
+      "categories": [
+        "制御工学",
+        "ロボティクス",
+        "最適化",
+        "シミュレーション"
+      ],
+      "status": "実験",
+      "confidence": "high",
+      "sourcePushedAt": "2026-08-22T08:37:45Z",
+      "sourceDefaultBranch": "main",
+      "generatedAt": "2026-09-04T05:39:27.525Z"
+    },
+    "spike-rt-dfu-winusb-setup": {
+      "title": "SPIKE-RT DFU WinUSB設定ツール",
+      "summary": "LEGO SPIKE Prime／Technic Large HubのDFUモードを対象に、WindowsでWinUSBを安全に設定する専用ツールです。",
+      "detail": "この酒場の道具は、USB VID/PIDと機器名・メーカーを確認し、対象が1台だけのときに限ってWinUSB設定へ進みます。検出と安全判定はCLI workerに集約され、GUIから利用できます。設定済みの場合は変更せず、COMポートや他のUSB機器には触れません。GUIの一部実機確認と新規設定経路は未確認です。",
+      "features": [
+        "SPIKE Prime／Technic Large HubのDFUモードに限定",
+        "複数台・誤PID・誤名称・誤メーカーを拒否するfail-closed判定",
+        "GUIから再確認・WinUSB設定・終了を操作",
+        "設定後にSetupAPIでService=WinUSBを再確認",
+        "workerの--self-testと非破壊の--prepare-onlyを提供"
+      ],
+      "technologies": [
+        "C++20",
+        "CMake",
+        "PowerShell",
+        "Win32 API",
+        "Windows SetupAPI",
+        "WinUSB",
+        "libwdi v1.5.1",
+        "GitHub Actions"
+      ],
+      "categories": [
+        "Windowsツール",
+        "USBドライバ",
+        "LEGO SPIKE-RT",
+        "開発支援"
+      ],
+      "status": "試作",
+      "confidence": "high",
+      "sourcePushedAt": "2026-08-22T06:31:20Z",
+      "sourceDefaultBranch": "main",
+      "generatedAt": "2026-09-04T05:39:39.357Z"
+    },
+    "inertial-perception-sim": {
+      "title": "慣性知覚センサー融合シミュレーター",
+      "summary": "IMUを中心にカメラと距離センサーを組み合わせ、状態推定や可観測性、ドリフト補正を可視化するPython製シミュレーターです。",
+      "detail": "15状態のINS ESKFで位置・速度・姿勢・センサーバイアスを推定し、IMU単独とカメラ・距離センサー併用時の違いを比較できます。合成3Dシーンから画像や距離データを生成し、観測できる方向だけを補正する設計です。ブラウザ表示、評価指標、回帰テストも用意されています。",
+      "features": [
+        "6軸IMUのバイアス・ノイズを含むシミュレーション",
+        "15状態ESKFと15×15共分散の伝播",
+        "Harris特徴追跡とRANSACによる相対カメラ回転推定",
+        "8×8距離センサーによる局所平面の傾き・法線方向変位推定",
+        "ブラウザ可視化とGitHub Actionsによる決定的回帰テスト"
+      ],
+      "technologies": [
+        "Python",
+        "NumPy",
+        "SciPy",
+        "PyYAML",
+        "pytest",
+        "JavaScript",
+        "HTML",
+        "GitHub Actions"
+      ],
+      "categories": [
+        "センサーシミュレーション",
+        "状態推定",
+        "センサーフュージョン",
+        "可視化"
+      ],
+      "status": "実験",
+      "confidence": "high",
+      "sourcePushedAt": "2026-08-22T03:48:22Z",
+      "sourceDefaultBranch": "main",
+      "generatedAt": "2026-09-04T05:40:06.328Z"
+    },
+    "rl-acrobot-swingup-benchmark": {
+      "title": "Acrobot強化学習ベンチマーク",
+      "summary": "連続トルクのAcrobot振り上げをPPO・SAC・TD3で同一条件比較し、学習、評価、動画生成、結果公開まで行うベンチマークです。",
+      "detail": "2リンク・非駆動肩関節・駆動肘関節のAcrobot環境を基に、ノイズを含む観測と連続的なカリキュラム学習を用います。Capture率や安定滞在率、最終安定性、トルクなどを共通の評価seedで比較します。設定、テスト、学習結果、Web表示、GitHub Actionsによる自動実行の構成が確認できます。",
+      "features": [
+        "PPO・SAC・TD3を同一条件で比較",
+        "連続値difficultyによる適応的カリキュラム",
+        "Capture・安定滞在・最終安定性などの評価指標",
+        "best/finalモデルや動画、CSV、メタデータの保存",
+        "GitHub ActionsとGitHub Pagesによる学習・結果公開"
+      ],
+      "technologies": [
+        "Python",
+        "Gymnasium",
+        "Stable-Baselines3",
+        "PyTorch",
+        "NumPy",
+        "Matplotlib",
+        "PyYAML",
+        "pytest"
+      ],
+      "categories": [
+        "強化学習",
+        "ベンチマーク",
+        "ロボティクス",
+        "機械学習実験"
+      ],
+      "status": "実験",
+      "confidence": "high",
+      "sourcePushedAt": "2026-08-21T11:12:36Z",
+      "sourceDefaultBranch": "main",
+      "generatedAt": "2026-09-04T05:40:21.521Z"
+    }
+  },
+  "repositoryCount": 72
 }
