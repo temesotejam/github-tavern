@@ -1,43 +1,43 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-04T08:21:10.533Z",
+  "generatedAt": "2026-09-04T08:44:00.850Z",
   "repositories": {
     "github-tavern": {
-      "title": "Project Tavern公開リポジトリ案内所",
-      "summary": "GitHub APIから公開リポジトリを取得し、検索・分類・詳細閲覧できる個人向け静的ポータル。",
-      "detail": "調べた限りじゃ、temesotejam所有の公開リポジトリをGitHub APIから集め、名前や説明、Topics、言語、要約を横断検索できる。カードを選べば概要や技術情報を確認でき、Copilot解析済みなら根拠付きの日本語説明も出る。GitHub Pagesで動かせる構成だ。",
+      "title": "Project Tavern公開リポジトリ酒場",
+      "summary": "GitHub APIから公開リポジトリを取得し、検索・分類・閲覧できる個人向けポータル。Copilot生成の日本語説明も表示する。",
+      "detail": "公開リポジトリを酒場風のUIで一覧化し、名前や説明、Topics、言語、分類、Copilot要約を横断検索できる。GitHub Pagesで静的に公開でき、未解析のリポジトリにはREADMEから暫定説明を補う。定期実行のGitHub Actionsが要約キャッシュを更新する構成だ。",
       "features": [
-        "GitHub APIによる公開リポジトリの自動取得",
-        "リポジトリ名・説明・Topics・言語・要約の横断検索",
-        "技術領域ごとの簡易分類とカテゴリーフィルター",
-        "カード選択による概要・詳細表示",
-        "Copilot要約とREADME暫定説明の表示"
+        "GitHub APIから公開リポジトリを自動取得",
+        "名前・説明・Topics・言語・要約の横断検索",
+        "技術領域ごとの簡易分類とカード表示",
+        "README・構成・設定ファイルを根拠にした日本語要約",
+        "GitHub Pages向けの静的ホスティング"
       ],
       "technologies": [
         "JavaScript",
         "HTML",
         "CSS",
         "GitHub API",
+        "GitHub Pages",
         "GitHub Actions",
         "GitHub Copilot CLI",
-        "GitHub Pages",
-        "Fetch API"
+        "MutationObserver"
       ],
       "categories": [
-        "Web・ツール",
-        "静的サイト",
-        "GitHub連携",
-        "個人ポータル"
+        "Webアプリ",
+        "ポータル",
+        "GitHubツール",
+        "自動化"
       ],
       "status": "ツール",
       "confidence": "high",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-09-04T08:20:37Z",
+      "sourcePushedAt": "2026-09-04T08:43:38Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-09-04T08:20:37Z",
+        "pushedAt": "2026-09-04T08:43:38Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -47,8 +47,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "dbe99644de1e63ce3227d6e2f50660c19ba3309093dcf791676e57644d6eb659",
-      "generatedAt": "2026-09-04T08:21:10.532Z"
+      "sourceFingerprint": "7180fb199e22ffcc68414feae3bd401ccbd12361b32ba6f9e32adeb551567b88",
+      "generatedAt": "2026-09-04T08:44:00.849Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状の減衰シミュレーター",
