@@ -6,7 +6,7 @@ on:
       max_repos:
         description: Maximum repositories to analyze in this run
         required: false
-        default: "12"
+        default: "100"
       force:
         description: Re-analyze even when the repository has not changed
         required: false
@@ -51,7 +51,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
           TAVERN_OWNER: temesotejam
-          MAX_REPOS: ${{ github.event.inputs.max_repos || '12' }}
+          MAX_REPOS: ${{ github.event.inputs.max_repos || '100' }}
           FORCE: ${{ github.event.inputs.force || 'false' }}
         run: node scripts/update-summaries.mjs
 
