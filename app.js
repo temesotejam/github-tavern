@@ -72,7 +72,7 @@
   function applyTheme(value) {
     var c = categoryById(value);
     document.body.setAttribute('data-theme', c.id);
-    els.locationTag.textContent = 'ARCHIVE / ' + c.label.toUpperCase();
+    els.locationTag.textContent = '酒場 / ' + c.label;
   }
   function renderFilters() {
     var list = [ALL].concat(RULES,[OTHER]);
@@ -99,7 +99,7 @@
   function renderRepos() {
     var list = visibleRepos();
     state.selectedRow = Math.max(0, Math.min(state.selectedRow, Math.max(list.length-1,0)));
-    els.count.textContent = list.length + ' / ' + state.repos.length + ' RECORDS';
+    els.count.textContent = list.length + ' / ' + state.repos.length + ' 件';
     els.empty.hidden = list.length > 0;
     els.grid.hidden = list.length === 0;
     els.grid.innerHTML = list.map(function(repo,index){
@@ -107,11 +107,11 @@
       var c = categoryOf(repo);
       var selected = index === state.selectedRow;
       var title = s.title || repo.name;
-      var desc = s.summary || repo.description || (repo.name + ' に関する公開記録。');
+      var desc = s.summary || repo.description || (repo.name + '――この件はまだ説明資料が少ない。');
       return '<button class="record-row'+(selected?' is-selected':'')+'" type="button" role="option" aria-selected="'+(selected?'true':'false')+'" data-repo="'+esc(repo.name)+'" data-index="'+index+'">'+
         '<span class="record-no"><span class="record-pointer" aria-hidden="true">☞</span><span>'+String(index+1).padStart(2,'0')+'</span></span>'+
         '<span class="record-main"><span class="record-titleline"><span class="record-title">'+esc(title)+'</span><span class="record-repo">'+esc(repo.name)+'</span></span><span class="record-summary">'+esc(desc)+'</span></span>'+
-        '<span class="record-side"><span class="ai-mark">'+(s.summary?'COPILOT':'RAW')+'</span><strong>'+esc(c.label)+'</strong><span>'+esc(repo.language||'—')+' / '+esc(relDate(repo.pushed_at))+'</span></span></button>';
+        '<span class="record-side"><span class="ai-mark">'+(s.summary?'整理済':'原資料')+'</span><strong>'+esc(c.label)+'</strong><span>'+esc(repo.language||'—')+' / '+esc(relDate(repo.pushed_at))+'</span></span></button>';
     }).join('');
   }
   function selectRow(n, focus) {
@@ -123,15 +123,20 @@
     current.scrollIntoView({block:'nearest'});
     if (focus) current.focus({preventScroll:true});
   }
+  function confidenceLabel(value) {
+    if (value === 'high') return '高';
+    if (value === 'low') return '低';
+    return '中';
+  }
   function meta(repo,s) {
     var a=[];
-    if (repo.language) a.push('LANG '+repo.language);
-    a.push('UPDATED '+fmtDate(repo.pushed_at));
-    if (state.liveApi) a.push('STAR '+(repo.stargazers_count||0));
-    a.push(repo.fork?'FORK':'ORIGINAL');
-    if (repo.archived) a.push('ARCHIVED');
-    if (s.status) a.push('STATUS '+s.status);
-    if (s.confidence) a.push('CONF '+String(s.confidence).toUpperCase());
+    if (repo.language) a.push('言語 '+repo.language);
+    a.push('更新 '+fmtDate(repo.pushed_at));
+    if (state.liveApi) a.push('★ '+(repo.stargazers_count||0));
+    a.push(repo.fork?'派生':'原本');
+    if (repo.archived) a.push('保管済み');
+    if (s.status) a.push('状態 '+s.status);
+    if (s.confidence) a.push('確度 '+confidenceLabel(s.confidence));
     els.detailMeta.innerHTML = a.map(function(x){return '<span class="meta-pill">'+esc(x)+'</span>';}).join('');
   }
   function features(items) {
@@ -153,26 +158,35 @@
     typingTimer=setInterval(function(){ i+=2; els.keeperText.textContent=text.slice(0,i); if(i>=text.length) clearInterval(typingTimer); },10);
   }
   function openPrompt(repo) {
-    var s=summaryFor(repo)||{}, c=categoryOf(repo);
+    var s=summaryFor(repo)||{}, c=categoryOf(repo), title=s.title||repo.name;
     state.pendingRepo=repo; applyTheme(c.id);
-    els.confirmCategory.textContent='ARCHIVE / '+c.label;
-    els.confirmTitle.textContent=s.title||repo.name;
-    els.confirmText.textContent=s.confidence==='low' ? '「'+(s.title||repo.name)+'か。資料は少ないが、確認できる範囲の記録はある。」' : '「'+(s.title||repo.name)+'か。記録は揃ってる。中身を見ていくか？」';
+    els.confirmCategory.textContent='情報棚 / '+c.label;
+    els.confirmTitle.textContent=title;
+    els.confirmText.textContent=s.confidence==='low'
+      ? '「'+title+'ね。……その件は資料が少ない。確かなところまででいいなら見せるよ。」'
+      : '「'+title+'ね。その情報ならある。公開分だけでよければ見せるよ。」';
     els.confirmStage.hidden=false; els.detailStage.hidden=true;
     if (!els.dialog.open) els.dialog.showModal();
     setTimeout(function(){els.confirmYes.focus();},0);
   }
+  function keeperDetail(repo,s) {
+    var base=s.detail||s.summary||repo.description||'この件は、まだ説明に使える資料がほとんどない。';
+    if (s.confidence==='low') return '「この件は資料が薄い。分かってるところだけ話す。\n'+base+'」';
+    var leads=['調べた限りじゃ、こういう記録だ。','要点だけ言うと、こうだ。','資料を追うと、こういう話になる。'];
+    return '「'+leads[String(repo.name||'').length%leads.length]+'\n'+base+'」';
+  }
   function showDetail(repo) {
     var s=summaryFor(repo)||{}, c=categoryOf(repo), idx=state.repos.findIndex(function(x){return x.id===repo.id;})+1;
     els.confirmStage.hidden=true; els.detailStage.hidden=false;
-    els.detailBreadcrumb.textContent='ARCHIVE / '+c.label+' / RECORD';
-    els.detailNumber.textContent='RECORD No.'+String(Math.max(idx,1)).padStart(3,'0');
+    els.detailBreadcrumb.textContent='酒場 / '+c.label+' / 情報';
+    els.detailNumber.textContent='情報 No.'+String(Math.max(idx,1)).padStart(3,'0');
     els.detailTitle.textContent=s.title||repo.name; els.detailRepo.textContent=OWNER+'/'+repo.name;
     els.repoLink.href=repo.html_url||('https://github.com/'+OWNER+'/'+repo.name);
-    els.pagesLink.hidden=!repo.homepage; if(repo.homepage) els.pagesLink.href=repo.homepage;
+    els.pagesLink.hidden=true;
+    els.pagesLink.removeAttribute('href');
     meta(repo,s); features(s.features); tech(repo,s);
-    els.summarySource.textContent=s.summary ? 'COPILOT ANALYSIS / '+fmtDate(s.generatedAt) : 'REPOSITORY METADATA';
-    typeText('「'+(s.detail||s.summary||repo.description||'確認できる説明資料が少ない記録だ。')+'」');
+    els.summarySource.textContent=s.summary ? 'COPILOT整理 / '+fmtDate(s.generatedAt) : 'リポジトリ情報';
+    typeText(keeperDetail(repo,s));
   }
   function closeDialog() {
     if (typingTimer) clearInterval(typingTimer);
@@ -181,7 +195,7 @@
   function status(label) {
     var ai=state.repos.filter(function(r){return state.summaries[r.name]&&state.summaries[r.name].summary;}).length;
     els.notice.classList.remove('is-error');
-    els.noticeText.textContent=state.repos.length+'件の公開記録を確認 / COPILOT解析 '+ai+'件 / '+label;
+    els.noticeText.textContent=state.repos.length+'件の情報を確認 / 整理済み '+ai+'件 / '+label;
   }
   function reposFromCache(data) {
     var dict=data&&data.repositories?data.repositories:{};
@@ -221,20 +235,20 @@
   }
   function init() {
     try { validate(); document.documentElement.setAttribute('data-app-loaded','1'); applyTheme('all'); renderFilters(); els.grid.innerHTML='<div class="loading-row"></div>'.repeat(8); bind(); }
-    catch(err){ if(els.notice)els.notice.classList.add('is-error'); if(els.noticeText)els.noticeText.textContent='端末初期化エラー: '+err.message; return; }
+    catch(err){ if(els.notice)els.notice.classList.add('is-error'); if(els.noticeText)els.noticeText.textContent='……端末の準備に失敗した: '+err.message; return; }
 
     var liveError=null;
     var livePromise=fetchLive().catch(function(e){liveError=e;return null;});
     fetchCache().then(function(data){
-      state.summaries=data.repositories||{}; state.repos=reposFromCache(data); status('CACHE'); renderRepos();
+      state.summaries=data.repositories||{}; state.repos=reposFromCache(data); status('保存記録'); renderRepos();
       return livePromise;
     }).then(function(live){
-      if(live&&live.length){state.repos=live;state.liveApi=true;status('LIVE API');renderRepos();}
-      else if(state.repos.length){status(liveError&&liveError.name==='AbortError'?'API TIMEOUT / CACHE':'API UNAVAILABLE / CACHE');}
+      if(live&&live.length){state.repos=live;state.liveApi=true;status('最新照合');renderRepos();}
+      else if(state.repos.length){status(liveError&&liveError.name==='AbortError'?'API時間切れ / 保存記録':'API接続不可 / 保存記録');}
     }).catch(function(err){
       livePromise.then(function(live){
-        if(live&&live.length){state.repos=live;state.liveApi=true;status('LIVE API / SUMMARY unavailable');renderRepos();}
-        else {els.notice.classList.add('is-error');els.noticeText.textContent='記録を取得できませんでした: '+err.message;els.count.textContent='0 RECORDS';els.grid.innerHTML='';}
+        if(live&&live.length){state.repos=live;state.liveApi=true;status('最新照合 / 整理情報なし');renderRepos();}
+        else {els.notice.classList.add('is-error');els.noticeText.textContent='……悪い。記録棚を開けない: '+err.message;els.count.textContent='0 件';els.grid.innerHTML='';}
       });
     });
   }
