@@ -25,5 +25,19 @@ jobs:
         run: node --check app.js
       - name: Check spoken-overview-client.js syntax
         run: node --check spoken-overview-client.js
+      - name: Test spoken overview normalization
+        run: |
+          node <<'NODE'
+          require('./spoken-overview-client.js');
+          const spokenize = globalThis.__projectTavernSpokenize;
+          if (typeof spokenize !== 'function') throw new Error('spokenize transformer is unavailable');
+
+          const sample = 'こいつは、リアクションホイールで左右に揺れる機体を制御できるか調べるためのものだ。機体ロール角・角速度とホイール角速度を状態として、運動方程式を数値積分します。Qあり・なしの差から観測エネルギー変化を求めます。入力効果を確認できますが、実機同定は対象外です。';
+          const result = spokenize(sample);
+          console.log(result);
+
+          if (!result.includes('数値積分する。')) throw new Error('「数値積分します」が常体に変換されていません');
+          if (/(です|ます)([。、，,]|$)/.test(result)) throw new Error('概要に「です・ます」調が残っています');
+          NODE
       - name: Check public-pages-client.js syntax
         run: node --check public-pages-client.js
