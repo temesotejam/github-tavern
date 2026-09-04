@@ -1,17 +1,17 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-04T09:27:58.784Z",
+  "generatedAt": "2026-09-04T09:28:41.513Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ案内ポータル",
-      "summary": "temesotejamが所有する公開GitHubリポジトリを、検索や分類を通じて一覧・閲覧できる個人向けポータル。GitHub APIから情報を取得し、CopilotがREADMEや構成を根拠に生成した日本語説明と、未解析時のREADME暫定説明をカードや詳細画面に表示する。",
-      "detail": "Project Tavernは、公開リポジトリを無機質な一覧ではなく、検索して内容を読み比べられる個人ポータルとして整理するための静的サイトだ。ブラウザ上のJavaScriptがGitHub APIからリポジトリのメタデータを取得し、名前・説明・Topics・言語・生成済み要約を横断検索できるようにしている。技術領域の簡易分類や並べ替えにも対応し、カードを選ぶと概要、特徴、使用技術などを詳細表示する。GitHub Actions上のGitHub Copilot CLIは定期的に更新を確認し、READMEやルート構成、主要設定ファイルなどを根拠にdata/summaries.jsonを更新する。Copilot未解析のリポジトリには、ブラウザ側でREADMEから短い暫定説明を作る仕組みもある一方、対象は公開リポジトリに限られ、サイトからGitHubへの書き込み操作は行わない。",
+      "title": "GitHubリポジトリ酒場",
+      "summary": "個人が所有する公開GitHubリポジトリを、酒場を思わせる画面で検索・分類・閲覧する静的ポータルです。GitHub APIから取得した情報に加え、CopilotがREADMEや構成をもとに生成した日本語説明もカードや詳細画面で確認できます。",
+      "detail": "Project Tavernは、公開リポジトリを無機質な一覧ではなく、目的や技術領域から探せる個人向けの閲覧サイトとして構成されています。ブラウザ上のJavaScriptがGitHub APIからtemesotejam所有の公開リポジトリを取得し、名前、説明、Topics、言語、更新日などを使って検索・並べ替えを行います。強化学習、制御・ロボット、センサ・組込み、画像・映像、Web・ツールといった簡易分類にも対応し、選択したカードでは特徴、技術、カテゴリを含む説明を表示できます。GitHub Actionsで6時間ごとに更新対象を確認し、GitHub Copilot CLIがREADMEや設定ファイル、ルート構成などを根拠にdata/summaries.jsonを更新する仕組みです。未解析のリポジトリにはREADMEから短い暫定説明を表示しますが、対象は公開リポジトリに限られ、サイトからGitHubへの書き込み操作は行いません。",
       "features": [
         "GitHub APIから公開リポジトリを自動取得",
         "名前・説明・Topics・言語・要約を横断検索",
         "技術領域による簡易分類と並べ替え",
-        "READMEや構成を根拠にした日本語要約",
-        "GitHub Pagesで静的に公開できる構成"
+        "Copilotによる日本語要約のキャッシュ表示",
+        "未解析リポジトリのREADME暫定説明"
       ],
       "technologies": [
         "JavaScript",
@@ -23,21 +23,21 @@
         "GitHub Copilot CLI"
       ],
       "categories": [
-        "Webツール",
+        "Webアプリ",
+        "開発者ツール",
         "GitHub連携",
-        "リポジトリ検索",
         "静的サイト"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "natural-prose-v3",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-09-04T09:06:59Z",
+      "sourcePushedAt": "2026-09-04T09:28:00Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-09-04T09:06:59Z",
+        "pushedAt": "2026-09-04T09:28:00Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -47,8 +47,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "f92f68e7d5a1d3107cd33bd9eedfd54d19289d5cfc39efc5c6d807d9ebcfd1c3",
-      "generatedAt": "2026-09-04T09:07:35.362Z"
+      "sourceFingerprint": "607ff18c465017032ce48da8f30356914dfd27a26e18ea72b4945847b1fa5f6e",
+      "generatedAt": "2026-09-04T09:28:41.513Z"
     },
     "semicircle-decay-sim": {
       "title": "半円足ロッキング機体の減衰解析",
