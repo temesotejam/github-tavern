@@ -2,6 +2,12 @@
 
 公開GitHubリポジトリを、無機質な一覧ではなく「酒場の依頼・記録」のように選べる個人ポータルです。
 
+## ▶ Project Tavernを開く
+
+**[Project Tavern / プロジェクト酒場を開く](https://temesotejam.github.io/github-tavern/)**
+
+> 公開リポジトリを、古い情報端末のようなUIから検索・選択・閲覧できます。
+
 ## できること
 
 - `temesotejam` が所有する**公開リポジトリをGitHub APIから自動取得**
