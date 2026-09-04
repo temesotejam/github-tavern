@@ -3,100 +3,137 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#17110d">
-  <meta name="description" content="公開GitHubリポジトリを酒場の依頼書のように探せる個人ポータル。">
-  <title>Project Tavern</title>
+  <meta name="theme-color" content="#090b0d">
+  <meta name="description" content="公開GitHubリポジトリを古い情報端末のように探索できるProject Tavern。">
+  <title>Project Tavern // Archive Terminal</title>
   <link rel="stylesheet" href="./styles.css">
 </head>
-<body>
-  <div class="grain" aria-hidden="true"></div>
+<body data-theme="all">
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
 
-  <header class="hero">
-    <div class="hero__inner">
-      <p class="eyebrow">PUBLIC REPOSITORY ARCHIVE</p>
+  <header class="terminal-header">
+    <div class="location-tag" id="locationTag">ARCHIVE / ALL RECORDS</div>
+    <div class="terminal-header__inner">
+      <p class="system-id">PUBLIC REPOSITORY INFORMATION NETWORK</p>
       <h1>PROJECT TAVERN</h1>
-      <p class="hero__jp">プロジェクト酒場</p>
-      <p class="hero__line">「さて、今日はどの記録を見に来た？」</p>
+      <p class="terminal-header__jp">プロジェクト酒場</p>
+      <p class="keeper-greeting">「何を探してる？　記録ならここにある。」</p>
     </div>
   </header>
 
-  <main class="shell">
-    <section class="counter" aria-label="検索と絞り込み">
-      <div class="search-wrap">
-        <span aria-hidden="true">⌕</span>
-        <input id="searchInput" type="search" autocomplete="off" placeholder="記録名・技術・説明から探す…" aria-label="リポジトリを検索">
-        <kbd>/</kbd>
+  <main class="terminal-shell">
+    <section class="control-window" aria-label="検索と分類">
+      <div class="window-titlebar">
+        <span>RECORD SEARCH / INDEX</span>
+        <span class="window-lights" aria-hidden="true">■ □ ×</span>
       </div>
 
-      <div class="toolbar">
-        <div id="categoryFilters" class="chips" aria-label="カテゴリ"></div>
-        <select id="sortSelect" aria-label="並び順">
-          <option value="updated">最近動きがあった順</option>
-          <option value="name">名前順</option>
-          <option value="stars">Star順</option>
-        </select>
+      <div class="control-window__body">
+        <div id="categoryFilters" class="category-menu" aria-label="カテゴリ"></div>
+
+        <div class="search-line">
+          <label for="searchInput">QUERY&gt;</label>
+          <input id="searchInput" type="search" autocomplete="off" placeholder="記録名・技術・説明から検索" aria-label="リポジトリを検索">
+          <kbd>/</kbd>
+        </div>
+
+        <div class="sort-line">
+          <label for="sortSelect">ORDER&gt;</label>
+          <select id="sortSelect" aria-label="並び順">
+            <option value="updated">最近動きがあった順</option>
+            <option value="name">名前順</option>
+            <option value="stars">Star順</option>
+          </select>
+        </div>
       </div>
     </section>
 
-    <section class="notice" id="notice" aria-live="polite">
-      <span class="notice__lamp" aria-hidden="true"></span>
-      <span id="noticeText">酒場の帳簿を開いています…</span>
+    <section class="status-line" id="notice" aria-live="polite">
+      <span class="status-prompt">SYSTEM&gt;</span>
+      <span id="noticeText">公開記録を照合しています…</span>
     </section>
 
-    <section class="ledger-heading">
-      <div>
-        <p class="eyebrow">REQUEST LEDGER</p>
-        <h2>依頼・記録一覧</h2>
+    <section class="record-window">
+      <div class="window-titlebar">
+        <span>SELECT RECORD</span>
+        <span id="repoCount">—</span>
       </div>
-      <div class="count" id="repoCount">—</div>
+      <div class="record-columns" aria-hidden="true">
+        <span>NO.</span><span>RECORD / BRIEF</span><span>STATUS</span>
+      </div>
+      <div id="repoGrid" class="record-list" role="listbox" aria-label="公開リポジトリ一覧"></div>
+
+      <div id="emptyState" class="empty-terminal" hidden>
+        <p>NO MATCHING RECORD.</p>
+        <button id="clearFilters" class="terminal-button" type="button">RESET QUERY</button>
+      </div>
     </section>
 
-    <section id="repoGrid" class="repo-grid" aria-label="公開リポジトリ一覧"></section>
-    <div id="emptyState" class="empty" hidden>
-      <div class="empty__icon">☕</div>
-      <p>その条件に合う記録は見当たらない。</p>
-      <button id="clearFilters" class="text-button" type="button">条件をすべて戻す</button>
-    </div>
+    <p class="key-hint">↑↓ SELECT　/　ENTER OPEN　/　/ SEARCH　/　ESC CLOSE</p>
   </main>
 
-  <dialog id="detailDialog" class="detail-dialog">
-    <article class="detail" id="detailContent">
-      <button class="detail__close" id="closeDialog" type="button" aria-label="閉じる">×</button>
-      <div class="detail__seal" aria-hidden="true">T</div>
-      <p class="detail__number" id="detailNumber"></p>
-      <h2 id="detailTitle"></h2>
-      <p class="detail__repo" id="detailRepo"></p>
-
-      <section class="keeper-box">
-        <div class="keeper-box__label">TAVERN KEEPER</div>
-        <p id="keeperText" class="keeper-text">記録を確認しています…</p>
-      </section>
-
-      <div class="detail__meta" id="detailMeta"></div>
-
-      <section class="detail-section" id="featureSection" hidden>
-        <h3>この記録で分かること</h3>
-        <ul id="featureList"></ul>
-      </section>
-
-      <section class="detail-section" id="techSection" hidden>
-        <h3>主な技術・手掛かり</h3>
-        <div id="techList" class="tag-list"></div>
-      </section>
-
-      <div class="detail__actions">
-        <a id="repoLink" class="button button--primary" target="_blank" rel="noreferrer">GitHubで記録を開く ↗</a>
-        <a id="pagesLink" class="button" target="_blank" rel="noreferrer" hidden>動いているページを見る ↗</a>
+  <dialog id="detailDialog" class="archive-dialog">
+    <article class="archive-window">
+      <div class="window-titlebar archive-titlebar">
+        <span>PROJECT TAVERN // INFORMATION COUNTER</span>
+        <button id="closeDialog" class="window-close" type="button" aria-label="閉じる">×</button>
       </div>
-      <p id="summarySource" class="summary-source"></p>
+
+      <section id="confirmStage" class="confirm-stage">
+        <p class="dialog-location" id="confirmCategory">ARCHIVE</p>
+        <div class="keeper-terminal">
+          <div class="keeper-terminal__label">TAVERN KEEPER</div>
+          <p id="confirmText">記録を確認しています…</p>
+        </div>
+        <div class="access-ticket">
+          <span>PUBLIC ARCHIVE</span>
+          <strong id="confirmTitle">—</strong>
+          <span>INFORMATION FEE : 0 CREDITS</span>
+        </div>
+        <p class="confirm-question">この記録を閲覧しますか？</p>
+        <div class="yes-no">
+          <button id="confirmYes" class="choice-button is-primary" type="button"><span>☞</span> YES</button>
+          <button id="confirmNo" class="choice-button" type="button">NO</button>
+        </div>
+      </section>
+
+      <section id="detailStage" class="detail-stage" hidden>
+        <div class="detail-breadcrumb" id="detailBreadcrumb">ARCHIVE / RECORD</div>
+        <p class="detail-number" id="detailNumber"></p>
+        <h2 id="detailTitle"></h2>
+        <p class="detail-repo" id="detailRepo"></p>
+
+        <section class="keeper-terminal detail-keeper">
+          <div class="keeper-terminal__label">TAVERN KEEPER</div>
+          <p id="keeperText">記録を確認しています…</p>
+        </section>
+
+        <div class="detail-meta" id="detailMeta"></div>
+
+        <section class="evidence-panel" id="featureSection" hidden>
+          <div class="evidence-panel__title">FILE / KNOWN FEATURES</div>
+          <ul id="featureList"></ul>
+        </section>
+
+        <section class="evidence-panel" id="techSection" hidden>
+          <div class="evidence-panel__title">KEYWORDS / TECHNOLOGY</div>
+          <div id="techList" class="tag-list"></div>
+        </section>
+
+        <div class="detail-actions">
+          <a id="repoLink" class="terminal-link terminal-link--primary" target="_blank" rel="noreferrer">OPEN GITHUB RECORD ↗</a>
+          <a id="pagesLink" class="terminal-link" target="_blank" rel="noreferrer" hidden>OPEN LIVE PAGE ↗</a>
+        </div>
+        <p id="summarySource" class="summary-source"></p>
+      </section>
     </article>
   </dialog>
 
   <footer>
-    GitHubの公開情報を表示しています。ファイルやリポジトリには変更を加えません。
+    PROJECT TAVERN / PUBLIC DATA ONLY / READ-ONLY TERMINAL
   </footer>
 
   <script src="./app.js" defer></script>
-  <script src="./card-enricher.js" defer></script>
 </body>
 </html>
