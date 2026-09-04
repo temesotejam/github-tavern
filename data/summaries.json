@@ -1,38 +1,53 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-09-04T05:57:30.292Z",
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-04T06:05:57.342Z",
   "repositories": {
     "github-tavern": {
-      "title": "GitHub酒場ポータル",
-      "summary": "temesotejamの公開リポジトリをGitHub APIから取得し、検索・分類・詳細表示できる個人向け静的ポータルです。",
-      "detail": "リポジトリを酒場の依頼や記録になぞらえ、名前や説明、Topics、言語、Copilot要約を横断検索できます。カード選択時には概要や技術情報を表示し、未解析のリポジトリにはREADMEから暫定説明を補います。GitHub Pagesで静的ホスティングでき、定期的にGitHub ActionsとCopilot CLIが要約データを更新します。",
+      "title": "Project Tavern リポジトリ酒場",
+      "summary": "temesotejamの公開GitHubリポジトリを取得し、検索・分類・詳細表示できる個人向けポータルです。Copilotによる日本語要約にも対応します。",
+      "detail": "公開リポジトリを酒場の依頼書のようなカードで並べ、名前や説明、Topics、言語、要約を横断して探せる案内所です。GitHub APIから情報を取得し、技術領域ごとの簡易分類やカード詳細を表示します。GitHub Actionsが定期的にリポジトリの変更を確認し、READMEや構成などを根拠に要約を更新します。",
       "features": [
         "公開リポジトリのGitHub API自動取得",
-        "名前・説明・Topics・言語・要約の横断検索",
-        "技術領域による簡易分類と並べ替え",
-        "READMEや構成を根拠にした日本語要約表示",
-        "GitHub Pages向けの静的ホスティング"
+        "リポジトリ情報と要約の横断検索",
+        "技術領域ごとの簡易分類",
+        "カード選択による詳細表示",
+        "READMEを使った未解析リポジトリの暫定説明"
       ],
       "technologies": [
         "JavaScript",
         "HTML",
         "CSS",
         "GitHub API",
-        "GitHub Pages",
         "GitHub Actions",
-        "GitHub Copilot CLI"
+        "GitHub Copilot CLI",
+        "GitHub Pages"
       ],
       "categories": [
         "Webアプリ",
         "GitHubツール",
         "個人ポータル",
-        "静的サイト"
+        "自動化"
       ],
       "status": "ツール",
       "confidence": "high",
-      "sourcePushedAt": "2026-09-04T05:45:23Z",
+      "sourceRepositoryId": 1356723072,
+      "sourcePushedAt": "2026-09-04T06:05:41Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:45:50.024Z"
+      "sourceMetadata": {
+        "repositoryId": 1356723072,
+        "name": "github-tavern",
+        "pushedAt": "2026-09-04T06:05:41Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "JavaScript"
+      },
+      "sourceFingerprint": "3fb1c18613e7a4889fa887717f39ae5f90d764734db04fb850a47c7f820af704",
+      "generatedAt": "2026-09-04T06:05:57.342Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状の減衰シミュレーター",
@@ -65,7 +80,22 @@
       "confidence": "high",
       "sourcePushedAt": "2026-09-04T04:20:51Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:38:01.757Z"
+      "generatedAt": "2026-09-04T05:38:01.757Z",
+      "sourceRepositoryId": 1344526643,
+      "sourceMetadata": {
+        "repositoryId": 1344526643,
+        "name": "semicircle-decay-sim",
+        "pushedAt": "2026-09-04T04:20:51Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "Python"
+      },
+      "sourceFingerprint": "47860885e4ba8cdd9cd30c9dff19d387f70b9e4005374fce21a9f9c34e512dbc"
     },
     "reaction-wheel-rocking-sim": {
       "title": "リアクションホイール揺動シミュレータ",
@@ -94,7 +124,22 @@
       "confidence": "high",
       "sourcePushedAt": "2026-09-03T08:36:46Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:38:13.422Z"
+      "generatedAt": "2026-09-04T05:38:13.422Z",
+      "sourceRepositoryId": 1354538992,
+      "sourceMetadata": {
+        "repositoryId": 1354538992,
+        "name": "reaction-wheel-rocking-sim",
+        "pushedAt": "2026-09-03T08:36:46Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": ""
+      },
+      "sourceFingerprint": "41462427be06b4ba501db66e423cfdf42cf450615bcdf9033d9df77affb5123c"
     },
     "realsense-web-viewer": {
       "title": "RealSenseブラウザビューア",
@@ -127,7 +172,22 @@
       "confidence": "high",
       "sourcePushedAt": "2026-09-02T05:59:22Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:38:25.958Z"
+      "generatedAt": "2026-09-04T05:38:25.958Z",
+      "sourceRepositoryId": 1354330504,
+      "sourceMetadata": {
+        "repositoryId": 1354330504,
+        "name": "realsense-web-viewer",
+        "pushedAt": "2026-09-02T05:59:22Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "JavaScript"
+      },
+      "sourceFingerprint": "369e6a87584a0c49ec357b0d25e313d26be8f8c25cac34d1d2557140ba5ac2fd"
     },
     "youtube-video-fetcher": {
       "title": "YouTube動画取得・解析連携ツール",
@@ -160,7 +220,22 @@
       "confidence": "high",
       "sourcePushedAt": "2026-08-30T14:43:39Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:38:36.243Z"
+      "generatedAt": "2026-09-04T05:38:36.243Z",
+      "sourceRepositoryId": 1351374820,
+      "sourceMetadata": {
+        "repositoryId": 1351374820,
+        "name": "youtube-video-fetcher",
+        "pushedAt": "2026-08-30T14:43:39Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "Python"
+      },
+      "sourceFingerprint": "283768d3410ea1ad63a17a064384a5546d73826885aa26c83da4a76444dc2c29"
     },
     "marker-angle-recorder": {
       "title": "マーカー角度記録ツール",
@@ -193,7 +268,22 @@
       "confidence": "high",
       "sourcePushedAt": "2026-08-29T06:56:14Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:38:48.801Z"
+      "generatedAt": "2026-09-04T05:38:48.801Z",
+      "sourceRepositoryId": 1346887024,
+      "sourceMetadata": {
+        "repositoryId": 1346887024,
+        "name": "marker-angle-recorder",
+        "pushedAt": "2026-08-29T06:56:14Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "JavaScript"
+      },
+      "sourceFingerprint": "48e5b3cc38f5fbddd6d03be1f270798a6dc103cacf73bf57f6797b530e06eda0"
     },
     "spike-rt-web-toolkit": {
       "title": "SPIKE-RT Web開発ツールキット",
@@ -226,7 +316,22 @@
       "confidence": "high",
       "sourcePushedAt": "2026-08-25T09:46:58Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:39:00.934Z"
+      "generatedAt": "2026-09-04T05:39:00.934Z",
+      "sourceRepositoryId": 1341511616,
+      "sourceMetadata": {
+        "repositoryId": 1341511616,
+        "name": "spike-rt-web-toolkit",
+        "pushedAt": "2026-08-25T09:46:58Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "JavaScript"
+      },
+      "sourceFingerprint": "3488cdaa79347c7fa6c907979e875573ae8144bb1f18a5c3d07c3d9b7aa5dd84"
     },
     "reaction-wheel-rocker-baseline-sim": {
       "title": "反動ホイール揺動基準シミュレータ",
@@ -257,7 +362,22 @@
       "confidence": "high",
       "sourcePushedAt": "2026-08-24T06:21:53Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:39:14.934Z"
+      "generatedAt": "2026-09-04T05:39:14.934Z",
+      "sourceRepositoryId": 1344606543,
+      "sourceMetadata": {
+        "repositoryId": 1344606543,
+        "name": "reaction-wheel-rocker-baseline-sim",
+        "pushedAt": "2026-08-24T06:21:53Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "Python"
+      },
+      "sourceFingerprint": "4c6352f070d9f7e4030166592f614402f003a0136a176b67a7a14cfb50b02216"
     },
     "acrobot-swingup-hybrid-control": {
       "title": "Acrobotハイブリッド制御",
@@ -290,7 +410,22 @@
       "confidence": "high",
       "sourcePushedAt": "2026-08-22T08:37:45Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:39:27.525Z"
+      "generatedAt": "2026-09-04T05:39:27.525Z",
+      "sourceRepositoryId": 1342392257,
+      "sourceMetadata": {
+        "repositoryId": 1342392257,
+        "name": "acrobot-swingup-hybrid-control",
+        "pushedAt": "2026-08-22T08:37:45Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "Python"
+      },
+      "sourceFingerprint": "e64d8af7701d9eccd7258f2ffc4d6e019b8ac442bbfbf537d886c8a2da538066"
     },
     "spike-rt-dfu-winusb-setup": {
       "title": "SPIKE-RT DFU WinUSB設定ツール",
@@ -323,7 +458,22 @@
       "confidence": "high",
       "sourcePushedAt": "2026-08-22T06:31:20Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:39:39.357Z"
+      "generatedAt": "2026-09-04T05:39:39.357Z",
+      "sourceRepositoryId": 1342417274,
+      "sourceMetadata": {
+        "repositoryId": 1342417274,
+        "name": "spike-rt-dfu-winusb-setup",
+        "pushedAt": "2026-08-22T06:31:20Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "C++"
+      },
+      "sourceFingerprint": "ecf1b9a342a105caaa06e7e8024929fabe7053be79aa2348b8bd6edd823d8433"
     },
     "inertial-perception-sim": {
       "title": "慣性知覚センサー融合シミュレーター",
@@ -356,7 +506,22 @@
       "confidence": "high",
       "sourcePushedAt": "2026-08-22T03:48:22Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:40:06.328Z"
+      "generatedAt": "2026-09-04T05:40:06.328Z",
+      "sourceRepositoryId": 1340242581,
+      "sourceMetadata": {
+        "repositoryId": 1340242581,
+        "name": "inertial-perception-sim",
+        "pushedAt": "2026-08-22T03:48:22Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "Python"
+      },
+      "sourceFingerprint": "f8ce50a759416879de80dbc0cd7be45c7adbd9ca73f9cdce240e810e4453446d"
     },
     "rl-acrobot-swingup-benchmark": {
       "title": "Acrobot強化学習ベンチマーク",
@@ -389,7 +554,22 @@
       "confidence": "high",
       "sourcePushedAt": "2026-08-21T11:12:36Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:40:21.521Z"
+      "generatedAt": "2026-09-04T05:40:21.521Z",
+      "sourceRepositoryId": 1340304695,
+      "sourceMetadata": {
+        "repositoryId": 1340304695,
+        "name": "rl-acrobot-swingup-benchmark",
+        "pushedAt": "2026-08-21T11:12:36Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "Python"
+      },
+      "sourceFingerprint": "3bbedff98c7f5652fae979dc3d69290b47581cec9b6fceab1a8a6b4fc5803cb1"
     },
     "spike-rt-web-project-selected": {
       "title": "SPIKE-RT選択ビルド用Webフラッシャー",
@@ -422,7 +602,22 @@
       "confidence": "high",
       "sourcePushedAt": "2026-08-21T06:57:23Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:46:02.259Z"
+      "generatedAt": "2026-09-04T05:46:02.259Z",
+      "sourceRepositoryId": 1313772475,
+      "sourceMetadata": {
+        "repositoryId": 1313772475,
+        "name": "spike-rt-web-project-selected",
+        "pushedAt": "2026-08-21T06:57:23Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "JavaScript"
+      },
+      "sourceFingerprint": "c6110e175daebe62f4923c20f1378a3be5521d62f17f01f45eeee93018b50fcf"
     },
     "spike-rt-web-project": {
       "title": "SPIKE-RT Web書き込み環境",
@@ -455,7 +650,22 @@
       "confidence": "high",
       "sourcePushedAt": "2026-08-21T06:37:37Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:46:13.914Z"
+      "generatedAt": "2026-09-04T05:46:13.914Z",
+      "sourceRepositoryId": 1313518403,
+      "sourceMetadata": {
+        "repositoryId": 1313518403,
+        "name": "spike-rt-web-project",
+        "pushedAt": "2026-08-21T06:37:37Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "JavaScript"
+      },
+      "sourceFingerprint": "5744ca7be3d20fba5f4da8e0e8c2ca5752beb1da38ca653e8d5de3af0469390c"
     },
     "spike-rt-hub-dumper": {
       "title": "SPIKE-RT Hubバックアップ復元ツール",
@@ -488,7 +698,22 @@
       "confidence": "high",
       "sourcePushedAt": "2026-08-21T04:14:01Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:46:26.044Z"
+      "generatedAt": "2026-09-04T05:46:26.044Z",
+      "sourceRepositoryId": 1341308377,
+      "sourceMetadata": {
+        "repositoryId": 1341308377,
+        "name": "spike-rt-hub-dumper",
+        "pushedAt": "2026-08-21T04:14:01Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "JavaScript"
+      },
+      "sourceFingerprint": "84267f818bfb52e61bfa1184f246801eb0b49f6e4aced104babd0690796efc37"
     },
     "wheel-terrain-sim": {
       "title": "車輪・地盤相互作用シミュレータ",
@@ -521,7 +746,22 @@
       "confidence": "high",
       "sourcePushedAt": "2026-08-20T06:59:51Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:46:40.215Z"
+      "generatedAt": "2026-09-04T05:46:40.215Z",
+      "sourceRepositoryId": 1340308979,
+      "sourceMetadata": {
+        "repositoryId": 1340308979,
+        "name": "wheel-terrain-sim",
+        "pushedAt": "2026-08-20T06:59:51Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "JavaScript"
+      },
+      "sourceFingerprint": "7f8919650e86b16d2284a5538579cb1fe08300ec673e34b46ab6bc1eac4842d5"
     },
     "rl-cartpole-swingup-td3": {
       "title": "TD3台車振り子制御実験",
@@ -554,7 +794,22 @@
       "confidence": "high",
       "sourcePushedAt": "2026-08-20T04:56:29Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:46:51.971Z"
+      "generatedAt": "2026-09-04T05:46:51.971Z",
+      "sourceRepositoryId": 1340258156,
+      "sourceMetadata": {
+        "repositoryId": 1340258156,
+        "name": "rl-cartpole-swingup-td3",
+        "pushedAt": "2026-08-20T04:56:29Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "Python"
+      },
+      "sourceFingerprint": "1d96e089b81b6173486fb7368bda3af579a031b81d83f429b9b73bf83c17ba24"
     },
     "rl-cartpole-swingup-sac": {
       "title": "SAC台車型倒立振子実験",
@@ -587,7 +842,22 @@
       "confidence": "high",
       "sourcePushedAt": "2026-08-20T03:47:25Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:47:04.776Z"
+      "generatedAt": "2026-09-04T05:47:04.776Z",
+      "sourceRepositoryId": 1340202799,
+      "sourceMetadata": {
+        "repositoryId": 1340202799,
+        "name": "rl-cartpole-swingup-sac",
+        "pushedAt": "2026-08-20T03:47:25Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "Python"
+      },
+      "sourceFingerprint": "2cdf8d2852060f039553eaa28a02af9602a8af07df1998a4b38f84c0f8001ed0"
     },
     "rl-cartpole-swingup-ppo": {
       "title": "台車倒立振子の振り上げ学習",
@@ -620,7 +890,22 @@
       "confidence": "high",
       "sourcePushedAt": "2026-08-20T02:20:56Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:47:17.045Z"
+      "generatedAt": "2026-09-04T05:47:17.045Z",
+      "sourceRepositoryId": 1340192094,
+      "sourceMetadata": {
+        "repositoryId": 1340192094,
+        "name": "rl-cartpole-swingup-ppo",
+        "pushedAt": "2026-08-20T02:20:56Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "Python"
+      },
+      "sourceFingerprint": "8e9e53624f1ff351597e99490ed84974cb10a8986c031d85d55e73a26779b7ac"
     },
     "rl-cartpole-ppo": {
       "title": "連続力カートポールPPO実験",
@@ -653,7 +938,22 @@
       "confidence": "high",
       "sourcePushedAt": "2026-08-20T02:02:15Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:47:30.138Z"
+      "generatedAt": "2026-09-04T05:47:30.138Z",
+      "sourceRepositoryId": 1339401536,
+      "sourceMetadata": {
+        "repositoryId": 1339401536,
+        "name": "rl-cartpole-ppo",
+        "pushedAt": "2026-08-20T02:02:15Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "Python"
+      },
+      "sourceFingerprint": "e52fd79dbcb0ad0a8a84f7a22cd9e3891ca3c14bc8ac7e27f977ced3dfa32518"
     },
     "rl-pendulum-ppo": {
       "title": "ノイズ付き振り子PPO実験",
@@ -686,7 +986,22 @@
       "confidence": "high",
       "sourcePushedAt": "2026-08-19T09:53:45Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:47:42.818Z"
+      "generatedAt": "2026-09-04T05:47:42.818Z",
+      "sourceRepositoryId": 1339333646,
+      "sourceMetadata": {
+        "repositoryId": 1339333646,
+        "name": "rl-pendulum-ppo",
+        "pushedAt": "2026-08-19T09:53:45Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "Python"
+      },
+      "sourceFingerprint": "df87a73a72b49ae30ba41bbaa8f3e542392169a281e6f5c36b98817a852cde17"
     },
     "video-rwlog-angle-analyzer": {
       "title": "動画・RWLOG角度比較ツール",
@@ -719,7 +1034,22 @@
       "confidence": "high",
       "sourcePushedAt": "2026-08-17T07:03:31Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:47:54.934Z"
+      "generatedAt": "2026-09-04T05:47:54.934Z",
+      "sourceRepositoryId": 1336673727,
+      "sourceMetadata": {
+        "repositoryId": 1336673727,
+        "name": "video-rwlog-angle-analyzer",
+        "pushedAt": "2026-08-17T07:03:31Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "HTML"
+      },
+      "sourceFingerprint": "5e8ce672beed9c04919e59432d9e076c4961d71e6f4773628c5c18d33979e881"
     },
     "2026_8_12": {
       "title": "CoreS3船舶ソフト検証環境",
@@ -752,7 +1082,22 @@
       "confidence": "high",
       "sourcePushedAt": "2026-08-13T03:41:33Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:48:08.022Z"
+      "generatedAt": "2026-09-04T05:48:08.022Z",
+      "sourceRepositoryId": 1331672343,
+      "sourceMetadata": {
+        "repositoryId": 1331672343,
+        "name": "2026_8_12",
+        "pushedAt": "2026-08-13T03:41:33Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "C++"
+      },
+      "sourceFingerprint": "2b2eb0a2aa17843c388e9c5c30af5d2b45359d2094866f9111172890a8844c32"
     },
     "m5stack-m135-gnss-ins": {
       "title": "M135小型GNSS/INS航法基盤",
@@ -785,7 +1130,22 @@
       "confidence": "high",
       "sourcePushedAt": "2026-08-12T03:45:28Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:48:20.560Z"
+      "generatedAt": "2026-09-04T05:48:20.560Z",
+      "sourceRepositoryId": 1331578245,
+      "sourceMetadata": {
+        "repositoryId": 1331578245,
+        "name": "m5stack-m135-gnss-ins",
+        "pushedAt": "2026-08-12T03:45:28Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": ""
+      },
+      "sourceFingerprint": "2a1957970f55aa39a073c87ace6e4712653dc21575c296c0e91b36c7a69b7d79"
     },
     "2026_8_6": {
       "title": "水上翼船2ノード制御ファームウェア",
@@ -818,7 +1178,22 @@
       "confidence": "high",
       "sourcePushedAt": "2026-08-11T01:25:49Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:48:34.428Z"
+      "generatedAt": "2026-09-04T05:48:34.428Z",
+      "sourceRepositoryId": 1324865791,
+      "sourceMetadata": {
+        "repositoryId": 1324865791,
+        "name": "2026_8_6",
+        "pushedAt": "2026-08-11T01:25:49Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "C++"
+      },
+      "sourceFingerprint": "0126b111ceac0b8d51791d17f722e975cdc7a2ee40d426052c9f20b2f457ac5d"
     },
     "2026_8_5_3": {
       "title": "水上翼船制御ファームウェア",
@@ -851,7 +1226,22 @@
       "confidence": "high",
       "sourcePushedAt": "2026-08-06T23:21:54Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:48:49.161Z"
+      "generatedAt": "2026-09-04T05:48:49.161Z",
+      "sourceRepositoryId": 1324228204,
+      "sourceMetadata": {
+        "repositoryId": 1324228204,
+        "name": "2026_8_5_3",
+        "pushedAt": "2026-08-06T23:21:54Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "C++"
+      },
+      "sourceFingerprint": "9a89b36af00a44ca87bb25cf0becd2548cafc5e7b5ed98535a8b1b5cd71a0380"
     },
     "zatu": {
       "title": "M5Stack PORT.A周辺機器チェッカー",
@@ -883,7 +1273,22 @@
       "confidence": "medium",
       "sourcePushedAt": "2026-08-06T22:57:20Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:49:00.596Z"
+      "generatedAt": "2026-09-04T05:49:00.596Z",
+      "sourceRepositoryId": 1306259859,
+      "sourceMetadata": {
+        "repositoryId": 1306259859,
+        "name": "zatu",
+        "pushedAt": "2026-08-06T22:57:20Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "C++"
+      },
+      "sourceFingerprint": "5178f8a6fd1a69abbe5bd9fbb3269ebcfdef882ae1f03737169bb5c827164eb5"
     },
     "2026_8_6_2": {
       "title": "ESP32-S3航法ナビゲーター",
@@ -916,7 +1321,22 @@
       "confidence": "high",
       "sourcePushedAt": "2026-08-06T07:50:40Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:49:12.958Z"
+      "generatedAt": "2026-09-04T05:49:12.958Z",
+      "sourceRepositoryId": 1324902942,
+      "sourceMetadata": {
+        "repositoryId": 1324902942,
+        "name": "2026_8_6_2",
+        "pushedAt": "2026-08-06T07:50:40Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "C++"
+      },
+      "sourceFingerprint": "073d56a60dd0324a377f53a8798a8d344d94f326df7bd1348c59031bd229dd8c"
     },
     "two-xiao-rotation-vector-boat": {
       "title": "XIAO二台式姿勢実験艇",
@@ -949,7 +1369,22 @@
       "confidence": "high",
       "sourcePushedAt": "2026-08-06T05:00:55Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:49:23.934Z"
+      "generatedAt": "2026-09-04T05:49:23.934Z",
+      "sourceRepositoryId": 1324721613,
+      "sourceMetadata": {
+        "repositoryId": 1324721613,
+        "name": "two-xiao-rotation-vector-boat",
+        "pushedAt": "2026-08-06T05:00:55Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "C++"
+      },
+      "sourceFingerprint": "776a01a3b76cc8249b65cd1f0b6cefcf233a421eb79ffe0c1ddad1bfa806efdb"
     },
     "2026_8_5_2": {
       "title": "水上ボート制御ファームウェア",
@@ -982,7 +1417,22 @@
       "confidence": "high",
       "sourcePushedAt": "2026-08-05T15:36:32Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:49:34.988Z"
+      "generatedAt": "2026-09-04T05:49:34.988Z",
+      "sourceRepositoryId": 1324131226,
+      "sourceMetadata": {
+        "repositoryId": 1324131226,
+        "name": "2026_8_5_2",
+        "pushedAt": "2026-08-05T15:36:32Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "C++"
+      },
+      "sourceFingerprint": "bd0689baf554128072d204d731e207817fb0870526d89bf9be46824a112257ae"
     },
     "2026_8_5": {
       "title": "ボート制御・テレメトリーファームウェア",
@@ -1009,7 +1459,22 @@
       "confidence": "medium",
       "sourcePushedAt": "2026-08-05T14:05:24Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:49:44.391Z"
+      "generatedAt": "2026-09-04T05:49:44.391Z",
+      "sourceRepositoryId": 1324110294,
+      "sourceMetadata": {
+        "repositoryId": 1324110294,
+        "name": "2026_8_5",
+        "pushedAt": "2026-08-05T14:05:24Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "C++"
+      },
+      "sourceFingerprint": "78c043fe36684a63c1a9ac310327c536ca9d1b0aefc5dc1b858d28937d9d11a6"
     },
     "proglam": {
       "title": "船体制御・計測実験集",
@@ -1042,7 +1507,22 @@
       "confidence": "high",
       "sourcePushedAt": "2026-08-05T11:19:39Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:49:56.872Z"
+      "generatedAt": "2026-09-04T05:49:56.872Z",
+      "sourceRepositoryId": 1306322424,
+      "sourceMetadata": {
+        "repositoryId": 1306322424,
+        "name": "proglam",
+        "pushedAt": "2026-08-05T11:19:39Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "C++"
+      },
+      "sourceFingerprint": "e80f567f17b48043a2aece8c20b61cebef28e41b0595c8fb284867d6f20b1921"
     },
     "cores3-android-dualsense-bridge-WEB": {
       "title": "CoreS3 DualSense操作ブリッジ",
@@ -1075,7 +1555,22 @@
       "confidence": "high",
       "sourcePushedAt": "2026-08-05T05:57:57Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:50:09.132Z"
+      "generatedAt": "2026-09-04T05:50:09.132Z",
+      "sourceRepositoryId": 1323614361,
+      "sourceMetadata": {
+        "repositoryId": 1323614361,
+        "name": "cores3-android-dualsense-bridge-WEB",
+        "pushedAt": "2026-08-05T05:57:57Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "HTML"
+      },
+      "sourceFingerprint": "75899ddaf8f933d4502787b65122a1ba175ff3c19a61f40d8a1d61781345e1ee"
     },
     "cores3-android-dualsense-bridge": {
       "title": "CoreS3 DualSense無線制御橋",
@@ -1108,7 +1603,22 @@
       "confidence": "high",
       "sourcePushedAt": "2026-08-03T11:05:50Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:50:19.487Z"
+      "generatedAt": "2026-09-04T05:50:19.487Z",
+      "sourceRepositoryId": 1321190974,
+      "sourceMetadata": {
+        "repositoryId": 1321190974,
+        "name": "cores3-android-dualsense-bridge",
+        "pushedAt": "2026-08-03T11:05:50Z",
+        "description": "Android DualSense to M5Stack CoreS3 Wi-Fi safety bridge",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "HTML"
+      },
+      "sourceFingerprint": "02b8ba7322b678ef035b60f232aaa8c9ecf79111b7050c2ce21f381a049e2704"
     },
     "controller-input-diagnostics": {
       "title": "コントローラ入力診断",
@@ -1141,7 +1651,22 @@
       "confidence": "high",
       "sourcePushedAt": "2026-08-02T11:28:42Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:50:31.169Z"
+      "generatedAt": "2026-09-04T05:50:31.169Z",
+      "sourceRepositoryId": 1319820480,
+      "sourceMetadata": {
+        "repositoryId": 1319820480,
+        "name": "controller-input-diagnostics",
+        "pushedAt": "2026-08-02T11:28:42Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "Kotlin"
+      },
+      "sourceFingerprint": "67999fe873133a64c56098f8783cd1489f5fdbebc616ab1707dbb53e51e9d7c0"
     },
     "dualsense-input-inspector": {
       "title": "DualSense入力インスペクター",
@@ -1174,7 +1699,22 @@
       "confidence": "high",
       "sourcePushedAt": "2026-08-02T07:11:45Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:50:43.297Z"
+      "generatedAt": "2026-09-04T05:50:43.297Z",
+      "sourceRepositoryId": 1319902851,
+      "sourceMetadata": {
+        "repositoryId": 1319902851,
+        "name": "dualsense-input-inspector",
+        "pushedAt": "2026-08-02T07:11:45Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "JavaScript"
+      },
+      "sourceFingerprint": "2779b915d7d61408f5a894542c85e946ceb622b54156392e3c841a668fb344e9"
     },
     "controller-web-demo": {
       "title": "DualSenseブラウザ操作デモ",
@@ -1207,7 +1747,22 @@
       "confidence": "high",
       "sourcePushedAt": "2026-08-02T06:51:15Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:50:55.311Z"
+      "generatedAt": "2026-09-04T05:50:55.311Z",
+      "sourceRepositoryId": 1319841461,
+      "sourceMetadata": {
+        "repositoryId": 1319841461,
+        "name": "controller-web-demo",
+        "pushedAt": "2026-08-02T06:51:15Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "JavaScript"
+      },
+      "sourceFingerprint": "005a44270307ffb323a054916c4a3747af105e5c4da8db35ff1453ee18d51aa7"
     },
     "mediapipe-hand-demo": {
       "title": "MediaPipe手検出ラボ",
@@ -1240,7 +1795,22 @@
       "confidence": "high",
       "sourcePushedAt": "2026-08-02T04:40:43Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:51:05.504Z"
+      "generatedAt": "2026-09-04T05:51:05.504Z",
+      "sourceRepositoryId": 1319820233,
+      "sourceMetadata": {
+        "repositoryId": 1319820233,
+        "name": "mediapipe-hand-demo",
+        "pushedAt": "2026-08-02T04:40:43Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "JavaScript"
+      },
+      "sourceFingerprint": "e1bf551b0f75a922f98e0f1ef4916b983ec50982968efe561a9a8ca7d62c7b7c"
     },
     "pico-copter-uf2-builder": {
       "title": "Pico Copter UF2ビルダー",
@@ -1273,7 +1843,22 @@
       "confidence": "high",
       "sourcePushedAt": "2026-07-29T23:56:20Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:51:17.935Z"
+      "generatedAt": "2026-09-04T05:51:17.935Z",
+      "sourceRepositoryId": 1315717800,
+      "sourceMetadata": {
+        "repositoryId": 1315717800,
+        "name": "pico-copter-uf2-builder",
+        "pushedAt": "2026-07-29T23:56:20Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "C"
+      },
+      "sourceFingerprint": "ed68fdc925fb11934085611140d0da72ff02155ecc37da5fb0c050e3833ccbcb"
     },
     "pico-uf2-web-builder": {
       "title": "Pico UF2ビルド配布ツール",
@@ -1306,7 +1891,22 @@
       "confidence": "high",
       "sourcePushedAt": "2026-07-29T04:49:01Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:51:30.128Z"
+      "generatedAt": "2026-09-04T05:51:30.128Z",
+      "sourceRepositoryId": 1315538573,
+      "sourceMetadata": {
+        "repositoryId": 1315538573,
+        "name": "pico-uf2-web-builder",
+        "pushedAt": "2026-07-29T04:49:01Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "JavaScript"
+      },
+      "sourceFingerprint": "75afde2b6a14f70c6c8cb3c8e5aed9fa683c1e1e54c6a0bd6baff0667f047781"
     },
     "splitsend-web": {
       "title": "SplitSendファイル分割ツール",
@@ -1339,7 +1939,22 @@
       "confidence": "high",
       "sourcePushedAt": "2026-07-18T15:47:54Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:51:43.187Z"
+      "generatedAt": "2026-09-04T05:51:43.187Z",
+      "sourceRepositoryId": 1304998293,
+      "sourceMetadata": {
+        "repositoryId": 1304998293,
+        "name": "splitsend-web",
+        "pushedAt": "2026-07-18T15:47:54Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "HTML"
+      },
+      "sourceFingerprint": "aba66ded7b81a906ef075c52208f1eae034efa547107b7902527b0464444f962"
     },
     "waypoint_drift_los_goal_time_sim": {
       "title": "ウェイポイント航法シミュレーション",
@@ -1362,7 +1977,22 @@
       "confidence": "low",
       "sourcePushedAt": "2026-07-04T09:11:59Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:51:52.658Z"
+      "generatedAt": "2026-09-04T05:51:52.658Z",
+      "sourceRepositoryId": 1289041151,
+      "sourceMetadata": {
+        "repositoryId": 1289041151,
+        "name": "waypoint_drift_los_goal_time_sim",
+        "pushedAt": "2026-07-04T09:11:59Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "HTML"
+      },
+      "sourceFingerprint": "dbe96e2bb9ebbc72c056cd6549214f32d1c7e3ce9eab802f3ce40693bced0841"
     },
     "weipointotuijyuu2_drift_los_sim": {
       "title": "Drift Vector LOS追従シミュレーター",
@@ -1395,7 +2025,22 @@
       "confidence": "high",
       "sourcePushedAt": "2026-07-03T08:52:51Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:52:05.879Z"
+      "generatedAt": "2026-09-04T05:52:05.879Z",
+      "sourceRepositoryId": 1288047164,
+      "sourceMetadata": {
+        "repositoryId": 1288047164,
+        "name": "weipointotuijyuu2_drift_los_sim",
+        "pushedAt": "2026-07-03T08:52:51Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "HTML"
+      },
+      "sourceFingerprint": "2ba3a86987342fe196ea55e8fc32e3d15edfb45ca605688e0976d1f28745f1ba"
     },
     "weipointotuijyuu2": {
       "title": "ウェイポイント航法シミュレータ",
@@ -1427,7 +2072,22 @@
       "confidence": "medium",
       "sourcePushedAt": "2026-07-03T04:11:32Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:52:18.142Z"
+      "generatedAt": "2026-09-04T05:52:18.142Z",
+      "sourceRepositoryId": 1287717715,
+      "sourceMetadata": {
+        "repositoryId": 1287717715,
+        "name": "weipointotuijyuu2",
+        "pushedAt": "2026-07-03T04:11:32Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "HTML"
+      },
+      "sourceFingerprint": "31e9d940dc8172b8d7eb4f0d06a28851ba1139f96ac08edd6e9a10e0c7d0b528"
     },
     "waypoint_tuijyuu": {
       "title": "ウェイポイント追従デモ",
@@ -1453,7 +2113,22 @@
       "confidence": "medium",
       "sourcePushedAt": "2026-07-02T10:54:24Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:52:29.337Z"
+      "generatedAt": "2026-09-04T05:52:29.337Z",
+      "sourceRepositoryId": 1287062106,
+      "sourceMetadata": {
+        "repositoryId": 1287062106,
+        "name": "waypoint_tuijyuu",
+        "pushedAt": "2026-07-02T10:54:24Z",
+        "description": "",
+        "topics": [],
+        "homepage": "https://temesotejam.github.io/waypoint_tuijyuu/",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "HTML"
+      },
+      "sourceFingerprint": "9ecac8818c9d9fc04a6835c806b8b956146b464f23071de99accdb2487154caf"
     },
     "t265-runtime-api-public": {
       "title": "T265ポータブル実行API",
@@ -1486,7 +2161,22 @@
       "confidence": "high",
       "sourcePushedAt": "2026-06-26T11:57:18Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:52:40.835Z"
+      "generatedAt": "2026-09-04T05:52:40.835Z",
+      "sourceRepositoryId": 1281227288,
+      "sourceMetadata": {
+        "repositoryId": 1281227288,
+        "name": "t265-runtime-api-public",
+        "pushedAt": "2026-06-26T11:57:18Z",
+        "description": "Portable T265 runtime API without redistributed firmware binaries",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "C"
+      },
+      "sourceFingerprint": "775901fa7eb55f5fafa89b327712a18a9b724ad68bdd5c4a26c12a5f58aa7b7b"
     },
     "librealsense": {
       "title": "RealSense深度カメラSDK",
@@ -1519,7 +2209,22 @@
       "confidence": "high",
       "sourcePushedAt": "2026-06-15T08:32:08Z",
       "sourceDefaultBranch": "master",
-      "generatedAt": "2026-09-04T05:52:53.080Z"
+      "generatedAt": "2026-09-04T05:52:53.080Z",
+      "sourceRepositoryId": 908485559,
+      "sourceMetadata": {
+        "repositoryId": 908485559,
+        "name": "librealsense",
+        "pushedAt": "2026-06-15T08:32:08Z",
+        "description": "Intel® RealSense™ SDK",
+        "topics": [],
+        "homepage": "https://www.intelrealsense.com/",
+        "defaultBranch": "master",
+        "archived": false,
+        "disabled": false,
+        "fork": true,
+        "language": "C++"
+      },
+      "sourceFingerprint": "ebe733e7ed3d239cdfff5311b1f15fd299451808e4fae1b856184250954ffc16"
     },
     "ackermann-designer": {
       "title": "アッカーマン操舵設計ツール",
@@ -1545,7 +2250,22 @@
       "confidence": "medium",
       "sourcePushedAt": "2026-05-31T16:50:34Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:53:03.894Z"
+      "generatedAt": "2026-09-04T05:53:03.894Z",
+      "sourceRepositoryId": 1151186740,
+      "sourceMetadata": {
+        "repositoryId": 1151186740,
+        "name": "ackermann-designer",
+        "pushedAt": "2026-05-31T16:50:34Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "HTML"
+      },
+      "sourceFingerprint": "7a9ce16bf5e8760a3803f51bb44cfc59aac3c97572e10279abb857425e375570"
     },
     "2026_05_21_flutter_gsi_gnss_offline_map_monitor": {
       "title": "GNSSオフライン地図モニター",
@@ -1578,7 +2298,22 @@
       "confidence": "high",
       "sourcePushedAt": "2026-05-21T23:25:06Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:53:14.412Z"
+      "generatedAt": "2026-09-04T05:53:14.412Z",
+      "sourceRepositoryId": 1246148671,
+      "sourceMetadata": {
+        "repositoryId": 1246148671,
+        "name": "2026_05_21_flutter_gsi_gnss_offline_map_monitor",
+        "pushedAt": "2026-05-21T23:25:06Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "Dart"
+      },
+      "sourceFingerprint": "263094ed09250bacfe22d69268d8c5cd338b8bfeddcf6aa0bb436756747f2fc5"
     },
     "2026_05_21_cores3_vl53l5cx_distance_map": {
       "title": "CoreS3 8x8距離マップ",
@@ -1611,7 +2346,22 @@
       "confidence": "high",
       "sourcePushedAt": "2026-05-21T04:29:34Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:53:25.863Z"
+      "generatedAt": "2026-09-04T05:53:25.863Z",
+      "sourceRepositoryId": 1245273578,
+      "sourceMetadata": {
+        "repositoryId": 1245273578,
+        "name": "2026_05_21_cores3_vl53l5cx_distance_map",
+        "pushedAt": "2026-05-21T04:29:34Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "C++"
+      },
+      "sourceFingerprint": "7e3af353d4be520f1f38dd3298ae108fd3074e8127ed172b4a4bf26653768574"
     },
     "2026_05_20_xiao_esp32s3_sense_gnss_bno08x_web_monitor": {
       "title": "XIAO航海センサWebモニター",
@@ -1644,7 +2394,22 @@
       "confidence": "high",
       "sourcePushedAt": "2026-05-20T10:36:14Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:53:38.021Z"
+      "generatedAt": "2026-09-04T05:53:38.021Z",
+      "sourceRepositoryId": 1244402746,
+      "sourceMetadata": {
+        "repositoryId": 1244402746,
+        "name": "2026_05_20_xiao_esp32s3_sense_gnss_bno08x_web_monitor",
+        "pushedAt": "2026-05-20T10:36:14Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "C++"
+      },
+      "sourceFingerprint": "da4bd683f3f1f69fc4c1cf275ee9f27b742e933ad269139a1c88f23d963223de"
     },
     "2026_05_20_xiao_esp32s3_bno08x_gpio4_gpio5_test": {
       "title": "XIAO ESP32S3 BNO08X動作確認",
@@ -1677,7 +2442,22 @@
       "confidence": "high",
       "sourcePushedAt": "2026-05-20T07:58:42Z",
       "sourceDefaultBranch": "master",
-      "generatedAt": "2026-09-04T05:53:50.657Z"
+      "generatedAt": "2026-09-04T05:53:50.657Z",
+      "sourceRepositoryId": 1244378453,
+      "sourceMetadata": {
+        "repositoryId": 1244378453,
+        "name": "2026_05_20_xiao_esp32s3_bno08x_gpio4_gpio5_test",
+        "pushedAt": "2026-05-20T07:58:42Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "master",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "C++"
+      },
+      "sourceFingerprint": "75310b39a370d10fecf108403e14c42d24ec47ff14b509aa930c68a8e10114e9"
     },
     "2026_05_20_gnss_satellite_monitor_akizuki_xiao_esp32s3_sense": {
       "title": "XIAO GNSS衛星モニター",
@@ -1710,7 +2490,22 @@
       "confidence": "high",
       "sourcePushedAt": "2026-05-20T06:31:50Z",
       "sourceDefaultBranch": "master",
-      "generatedAt": "2026-09-04T05:54:03.668Z"
+      "generatedAt": "2026-09-04T05:54:03.668Z",
+      "sourceRepositoryId": 1244304445,
+      "sourceMetadata": {
+        "repositoryId": 1244304445,
+        "name": "2026_05_20_gnss_satellite_monitor_akizuki_xiao_esp32s3_sense",
+        "pushedAt": "2026-05-20T06:31:50Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "master",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "C++"
+      },
+      "sourceFingerprint": "b2152c833a7362a298866f62dbf64d62276f71bf7775447435df61b7840d8ac6"
     },
     "cores3-xiao-esp32s3-sense-uart-sd-logger": {
       "title": "ESP32-S3 IMU記録・監視システム",
@@ -1743,7 +2538,22 @@
       "confidence": "high",
       "sourcePushedAt": "2026-05-18T10:39:42Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:54:15.413Z"
+      "generatedAt": "2026-09-04T05:54:15.413Z",
+      "sourceRepositoryId": 1242302971,
+      "sourceMetadata": {
+        "repositoryId": 1242302971,
+        "name": "cores3-xiao-esp32s3-sense-uart-sd-logger",
+        "pushedAt": "2026-05-18T10:39:42Z",
+        "description": "M5Stack CoreS3 and XIAO ESP32-S3 Sense UART IMU bridge with web monitor and microSD CSV logging",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "C++"
+      },
+      "sourceFingerprint": "79e585b1b19991d1725c2a7b4248761a975ee5377bde94a4b6e572c4370d36e5"
     },
     "xiao-cores3-imu-uart-web-bridge": {
       "title": "XIAO・CoreS3 IMU通信ブリッジ",
@@ -1776,7 +2586,22 @@
       "confidence": "high",
       "sourcePushedAt": "2026-05-14T10:43:20Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:54:27.135Z"
+      "generatedAt": "2026-09-04T05:54:27.135Z",
+      "sourceRepositoryId": 1238670979,
+      "sourceMetadata": {
+        "repositoryId": 1238670979,
+        "name": "xiao-cores3-imu-uart-web-bridge",
+        "pushedAt": "2026-05-14T10:43:20Z",
+        "description": "XIAO ESP32S3 and M5Stack CoreS3 IMU UART web bridge sample",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "C++"
+      },
+      "sourceFingerprint": "7fb228e84db32348f343c9ea7503d4046e265b4416fccab5fa3604508b6f9104"
     },
     "MadgwickAHRS": {
       "title": "Madgwick姿勢推定ライブラリ",
@@ -1808,7 +2633,22 @@
       "confidence": "high",
       "sourcePushedAt": "2026-05-14T07:56:12Z",
       "sourceDefaultBranch": "master",
-      "generatedAt": "2026-09-04T05:54:36.744Z"
+      "generatedAt": "2026-09-04T05:54:36.744Z",
+      "sourceRepositoryId": 866309271,
+      "sourceMetadata": {
+        "repositoryId": 866309271,
+        "name": "MadgwickAHRS",
+        "pushedAt": "2026-05-14T07:56:12Z",
+        "description": "Arduino implementation of the MadgwickAHRS algorithm ",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "master",
+        "archived": false,
+        "disabled": false,
+        "fork": true,
+        "language": "C++"
+      },
+      "sourceFingerprint": "888dcd69ae8d8a6c599a123bbc557fcc9290d0c28a7c5426829bc5803cad9c7a"
     },
     "arduino-pico": {
       "title": "Arduino-Pico開発コア",
@@ -1841,7 +2681,22 @@
       "confidence": "high",
       "sourcePushedAt": "2026-05-14T07:55:32Z",
       "sourceDefaultBranch": "master",
-      "generatedAt": "2026-09-04T05:54:48.864Z"
+      "generatedAt": "2026-09-04T05:54:48.864Z",
+      "sourceRepositoryId": 756658345,
+      "sourceMetadata": {
+        "repositoryId": 756658345,
+        "name": "arduino-pico",
+        "pushedAt": "2026-05-14T07:55:32Z",
+        "description": "Raspberry Pi Pico Arduino core, for all RP2040 boards",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "master",
+        "archived": false,
+        "disabled": false,
+        "fork": true,
+        "language": "C"
+      },
+      "sourceFingerprint": "24eff7ef01329cc4ae6a2a373c43b4ccebbcc3120006ebb4874dccd5441b41a9"
     },
     "2026_05_14_gnss_satellite_monitor_akizuki_m5stack_core2": {
       "title": "M5Stack GNSS衛星モニタ",
@@ -1874,7 +2729,31 @@
       "confidence": "high",
       "sourcePushedAt": "2026-05-14T05:38:52Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:55:00.701Z"
+      "generatedAt": "2026-09-04T05:55:00.701Z",
+      "sourceRepositoryId": 1238418004,
+      "sourceMetadata": {
+        "repositoryId": 1238418004,
+        "name": "2026_05_14_gnss_satellite_monitor_akizuki_m5stack_core2",
+        "pushedAt": "2026-05-14T05:38:52Z",
+        "description": "M5Stack Core2で秋月GT-505GGBL5-DR-NのGGA/GSA/GSV/RMCを監視するGNSSモニタ",
+        "topics": [
+          "arduino",
+          "gnss",
+          "gps",
+          "m5stack",
+          "m5stack-core2",
+          "nmea",
+          "platformio",
+          "qzss"
+        ],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "C++"
+      },
+      "sourceFingerprint": "f745710719b139ad21ed8343ebfae85f377a28a535a2162d6c17290da68e2299"
     },
     "t265-runtime-api-showcase": {
       "title": "T265ランタイムAPI設計資料",
@@ -1906,7 +2785,22 @@
       "confidence": "high",
       "sourcePushedAt": "2026-05-07T09:27:02Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:55:11.891Z"
+      "generatedAt": "2026-09-04T05:55:11.891Z",
+      "sourceRepositoryId": 1231687933,
+      "sourceMetadata": {
+        "repositoryId": 1231687933,
+        "name": "t265-runtime-api-showcase",
+        "pushedAt": "2026-05-07T09:27:02Z",
+        "description": "Design notes and technical showcase for an experimental Intel RealSense T265 runtime API.",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "Mermaid"
+      },
+      "sourceFingerprint": "62233810286736c96a6f557a65999bafb8e3223ed0f02fee6628dd2774211931"
     },
     "M5stackcores3_BNO08x_roller485": {
       "title": "C++プロジェクト",
@@ -1929,7 +2823,22 @@
       "confidence": "low",
       "sourcePushedAt": "2026-02-06T06:14:56Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:55:21.514Z"
+      "generatedAt": "2026-09-04T05:55:21.514Z",
+      "sourceRepositoryId": 1151171903,
+      "sourceMetadata": {
+        "repositoryId": 1151171903,
+        "name": "M5stackcores3_BNO08x_roller485",
+        "pushedAt": "2026-02-06T06:14:56Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "C++"
+      },
+      "sourceFingerprint": "6e190182368576aca3b56b4f331ed38ad9f921b7afa88bdbaa650359cdefb447"
     },
     "simple_cores3_roller485_bno055": {
       "title": "C++ソースコード集",
@@ -1952,7 +2861,22 @@
       "confidence": "low",
       "sourcePushedAt": "2026-01-29T05:07:03Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:55:29.211Z"
+      "generatedAt": "2026-09-04T05:55:29.211Z",
+      "sourceRepositoryId": 1144829479,
+      "sourceMetadata": {
+        "repositoryId": 1144829479,
+        "name": "simple_cores3_roller485_bno055",
+        "pushedAt": "2026-01-29T05:07:03Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "C++"
+      },
+      "sourceFingerprint": "2d4e6bbfe31638adf5526022032012f34699ca2df48b3811eff3b5fcf7ba9994"
     },
     "ahrs": {
       "title": "Python姿勢推定ライブラリ",
@@ -1985,7 +2909,22 @@
       "confidence": "high",
       "sourcePushedAt": "2025-11-10T18:31:33Z",
       "sourceDefaultBranch": "master",
-      "generatedAt": "2026-09-04T05:55:40.058Z"
+      "generatedAt": "2026-09-04T05:55:40.058Z",
+      "sourceRepositoryId": 1238535135,
+      "sourceMetadata": {
+        "repositoryId": 1238535135,
+        "name": "ahrs",
+        "pushedAt": "2025-11-10T18:31:33Z",
+        "description": "Attitude and Heading Reference Systems in Python",
+        "topics": [],
+        "homepage": "https://ahrs.readthedocs.io/",
+        "defaultBranch": "master",
+        "archived": false,
+        "disabled": false,
+        "fork": true,
+        "language": ""
+      },
+      "sourceFingerprint": "4546c0d34195726eca1d10071a84845edf035042b4b5d8e5779decd973b5c70e"
     },
     "2025_koudaisai_Robocon": {
       "title": "AtomS3・CoreS3ロボコン制御",
@@ -2018,7 +2957,22 @@
       "confidence": "high",
       "sourcePushedAt": "2025-10-18T16:50:34Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:55:52.551Z"
+      "generatedAt": "2026-09-04T05:55:52.551Z",
+      "sourceRepositoryId": 1078890770,
+      "sourceMetadata": {
+        "repositoryId": 1078890770,
+        "name": "2025_koudaisai_Robocon",
+        "pushedAt": "2025-10-18T16:50:34Z",
+        "description": "2025年工大際ロボコンプログラム",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "C++"
+      },
+      "sourceFingerprint": "0c7179d2dd6ada88f1ccd476794975c2c087c40f4035385216f706300332d4d1"
     },
     "AtomS3R_CAM-": {
       "title": "AtomS3R_CAM プロジェクト",
@@ -2042,7 +2996,22 @@
       "confidence": "low",
       "sourcePushedAt": "2025-10-13T05:16:26Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:56:02.563Z"
+      "generatedAt": "2026-09-04T05:56:02.563Z",
+      "sourceRepositoryId": 1075140952,
+      "sourceMetadata": {
+        "repositoryId": 1075140952,
+        "name": "AtomS3R_CAM-",
+        "pushedAt": "2025-10-13T05:16:26Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "C++"
+      },
+      "sourceFingerprint": "37f8cf1a455349df02e14e07d1dfb3a6bc33d3c8ad932842d169b5ec9a5c9364"
     },
     "esp-now-simple-example": {
       "title": "ESP-NOW通信サンプル",
@@ -2075,7 +3044,22 @@
       "confidence": "high",
       "sourcePushedAt": "2025-10-09T03:04:01Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:56:12.806Z"
+      "generatedAt": "2026-09-04T05:56:12.806Z",
+      "sourceRepositoryId": 856340756,
+      "sourceMetadata": {
+        "repositoryId": 856340756,
+        "name": "esp-now-simple-example",
+        "pushedAt": "2025-10-09T03:04:01Z",
+        "description": "ESP-NOW Simple Example / ESP-NOW 簡単な例  ESP-NOWを使う初心者向けの簡単な例です。２つのESPマイコン間で送りたい変数を簡単に送受信する例を示します。とても便利で電子工作の可能性が広がります！",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": true,
+        "language": "C"
+      },
+      "sourceFingerprint": "769a9a91049f81d9bf5195f90926a1fba7e8ed8d58a520590662364dd7cda238"
     },
     "StampFly_Workshop": {
       "title": "StampFly制御学習ワークショップ",
@@ -2108,7 +3092,22 @@
       "confidence": "high",
       "sourcePushedAt": "2025-10-09T02:58:43Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:56:25.090Z"
+      "generatedAt": "2026-09-04T05:56:25.090Z",
+      "sourceRepositoryId": 756621418,
+      "sourceMetadata": {
+        "repositoryId": 756621418,
+        "name": "StampFly_Workshop",
+        "pushedAt": "2025-10-09T02:58:43Z",
+        "description": "Let's control StampFly!",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": true,
+        "language": "C"
+      },
+      "sourceFingerprint": "0bf7b190881266eb001ceb9fd0081795c29c337ec3b92a9215f4af5646d1b4bd"
     },
     "ubuntu_realsenseT265": {
       "title": "RealSense T265位置姿勢取得",
@@ -2140,7 +3139,22 @@
       "confidence": "high",
       "sourcePushedAt": "2025-09-24T11:01:20Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:56:35.588Z"
+      "generatedAt": "2026-09-04T05:56:35.588Z",
+      "sourceRepositoryId": 1063232873,
+      "sourceMetadata": {
+        "repositoryId": 1063232873,
+        "name": "ubuntu_realsenseT265",
+        "pushedAt": "2025-09-24T11:01:20Z",
+        "description": "ubuntu 22.04.5 LSTでrealsenseT265を使って位置姿勢を取得するためのプログラム",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "C"
+      },
+      "sourceFingerprint": "1943eba487065915538846d890db0db044e2e413b0aff5c02e4ba49269052f04"
     },
     "-Mbps_M5cores3": {
       "title": "Arduinoシリアル通信プロジェクト",
@@ -2173,7 +3187,22 @@
       "confidence": "high",
       "sourcePushedAt": "2025-09-12T09:53:12Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:56:48.367Z"
+      "generatedAt": "2026-09-04T05:56:48.367Z",
+      "sourceRepositoryId": 1055460771,
+      "sourceMetadata": {
+        "repositoryId": 1055460771,
+        "name": "-Mbps_M5cores3",
+        "pushedAt": "2025-09-12T09:53:12Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "C++"
+      },
+      "sourceFingerprint": "a948b621f22d855a2232d3170da26d90c10c5beee508ce374a751c00ee5b6f36"
     },
     "M5StampFly_skeleton": {
       "title": "StampFly飛行制御骨組み",
@@ -2206,7 +3235,22 @@
       "confidence": "high",
       "sourcePushedAt": "2025-06-24T09:12:43Z",
       "sourceDefaultBranch": "main",
-      "generatedAt": "2026-09-04T05:56:59.735Z"
+      "generatedAt": "2026-09-04T05:56:59.735Z",
+      "sourceRepositoryId": 1072650413,
+      "sourceMetadata": {
+        "repositoryId": 1072650413,
+        "name": "M5StampFly_skeleton",
+        "pushedAt": "2025-06-24T09:12:43Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": true,
+        "language": ""
+      },
+      "sourceFingerprint": "222153555e84ac543e1a6e61509d8b04262b37078b507a87f3faa4649983e6d5"
     },
     "MKS-ESP32FOC": {
       "title": "MKS ESP32 FOC制御基板",
@@ -2235,7 +3279,22 @@
       "confidence": "medium",
       "sourcePushedAt": "2024-11-19T10:04:37Z",
       "sourceDefaultBranch": "MKS-ESP32-FOC-V2.0",
-      "generatedAt": "2026-09-04T05:57:09.549Z"
+      "generatedAt": "2026-09-04T05:57:09.549Z",
+      "sourceRepositoryId": 1085401798,
+      "sourceMetadata": {
+        "repositoryId": 1085401798,
+        "name": "MKS-ESP32FOC",
+        "pushedAt": "2024-11-19T10:04:37Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "MKS-ESP32-FOC-V2.0",
+        "archived": false,
+        "disabled": false,
+        "fork": true,
+        "language": ""
+      },
+      "sourceFingerprint": "8cf8c27201a678ba156fb53483963370dbc59899fb67c892b27e53881909b31f"
     },
     "touritusinsi1jiku": {
       "title": "M5Stack Core2向けC++プロジェクト",
@@ -2267,7 +3326,22 @@
       "confidence": "medium",
       "sourcePushedAt": "2024-07-04T00:50:00Z",
       "sourceDefaultBranch": "master",
-      "generatedAt": "2026-09-04T05:57:20.651Z"
+      "generatedAt": "2026-09-04T05:57:20.651Z",
+      "sourceRepositoryId": 823886148,
+      "sourceMetadata": {
+        "repositoryId": 823886148,
+        "name": "touritusinsi1jiku",
+        "pushedAt": "2024-07-04T00:50:00Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "master",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "C++"
+      },
+      "sourceFingerprint": "e40e8684613ac8e34d2f0e43c32e8ba228217945122d673c2fd66fb332ab811c"
     },
     "M5-ProductExampleCodes": {
       "title": "M5Stack製品サンプル集",
@@ -2299,7 +3373,22 @@
       "confidence": "high",
       "sourcePushedAt": "2022-07-21T01:05:46Z",
       "sourceDefaultBranch": "master",
-      "generatedAt": "2026-09-04T05:57:30.291Z"
+      "generatedAt": "2026-09-04T05:57:30.291Z",
+      "sourceRepositoryId": 774236769,
+      "sourceMetadata": {
+        "repositoryId": 774236769,
+        "name": "M5-ProductExampleCodes",
+        "pushedAt": "2022-07-21T01:05:46Z",
+        "description": "All example codes of products supplied by M5Stack have been collected in this reposity.",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "master",
+        "archived": false,
+        "disabled": false,
+        "fork": true,
+        "language": ""
+      },
+      "sourceFingerprint": "b5ca5ad4b10fadbd08fc67fe7b464f90adfc712514915f84848d2054d96a107c"
     }
   },
   "repositoryCount": 72
