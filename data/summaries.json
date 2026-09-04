@@ -1,17 +1,17 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-04T09:06:09.893Z",
+  "generatedAt": "2026-09-04T09:06:44.006Z",
   "repositories": {
     "github-tavern": {
-      "title": "Project Tavern公開リポジトリ案内所",
-      "summary": "temesotejamの公開GitHubリポジトリを、酒場風の静的UIで検索・分類・閲覧する個人ポータル。",
-      "detail": "公開GitHub APIからリポジトリを取得し、名前や説明、Topics、言語、Copilot要約を横断検索できる。カード選択で概要や技術情報を表示し、READMEを使った暫定説明にも対応する。GitHub Actionsで要約キャッシュを定期更新し、GitHub Pagesで公開する構成だ。",
+      "title": "公開リポジトリ酒場",
+      "summary": "temesotejamの公開GitHubリポジトリを検索・分類し、概要や技術情報を閲覧できる個人向けポータル。GitHub APIと自動生成要約を使って、リポジトリを一覧以上の形で確認できる。",
+      "detail": "このサイトは、GitHub APIから公開リポジトリを取得し、名前や説明、Topics、使用言語、Copilot要約を横断検索できる静的Webアプリだ。学習・AI、制御・ロボット、センサ・組込み、画像・映像、Web・ツールといった簡易分類で絞り込み、カードから各リポジトリの概要や特徴を確認できる。GitHub Actionsが更新されたリポジトリを定期的に解析して要約キャッシュを更新し、未解析のリポジトリにはREADMEから暫定説明を表示する構成になっている。GitHub Pagesで公開できる一方、対象はtemesotejamが所有する公開リポジトリに限られる。",
       "features": [
-        "公開リポジトリのGitHub API自動取得",
+        "GitHub APIから公開リポジトリを自動取得",
         "名前・説明・Topics・言語・要約の横断検索",
-        "技術領域ごとの簡易分類とカード表示",
-        "Copilotによる日本語要約のキャッシュ表示",
-        "READMEからの暫定説明と公開ページへのリンク"
+        "技術領域による簡易分類と絞り込み",
+        "Copilotによる日本語要約の自動更新",
+        "READMEを利用した未解析リポジトリの暫定説明"
       ],
       "technologies": [
         "JavaScript",
@@ -24,20 +24,20 @@
         "MutationObserver"
       ],
       "categories": [
-        "Webツール",
-        "静的サイト",
+        "Webアプリ",
+        "検索・閲覧ツール",
         "GitHub連携",
-        "個人ポータル"
+        "自動化"
       ],
       "status": "ツール",
       "confidence": "high",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-09-04T09:05:40Z",
+      "sourcePushedAt": "2026-09-04T09:06:11Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-09-04T09:05:40Z",
+        "pushedAt": "2026-09-04T09:06:11Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -47,8 +47,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "d43582b7077e6227e13c1531d4e468a5d11fe9322bf3a00634c941e90ddb5698",
-      "generatedAt": "2026-09-04T09:06:09.893Z"
+      "sourceFingerprint": "6918a652d9f4952cb621b85b617cf7c98c67cfc7a7478903b658ca916bb276d8",
+      "generatedAt": "2026-09-04T09:06:44.006Z"
     },
     "semicircle-decay-sim": {
       "title": "ロッキング機体減衰シミュレータ",
