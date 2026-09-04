@@ -58,5 +58,24 @@ jobs:
           if (control === sensor) throw new Error('different repository themes should not collapse to one closing');
           if (!/資料|推測|分かって/.test(low)) throw new Error('low-confidence closing is not appropriately cautious');
           NODE
+      - name: Guard keeper observer feedback loop
+        run: |
+          node <<'NODE'
+          const fs = require('node:fs');
+          const source = fs.readFileSync('keeper-closing-client.js', 'utf8');
+
+          if (/\.observe\(document\.getElementById\(['"]detailStage['"]\)/.test(source)) {
+            throw new Error('keeper closing must not observe detailStage because it contains keeperClosing itself');
+          }
+          if (/\.observe\([^\n]*keeperClosing/.test(source)) {
+            throw new Error('keeper closing must never observe its own output element');
+          }
+          if (!source.includes('closing.textContent !== nextText')) {
+            throw new Error('keeper closing writes must be guarded against identical text updates');
+          }
+          if (!source.includes('sources.forEach')) {
+            throw new Error('keeper closing observer should be attached only to source elements');
+          }
+          NODE
       - name: Check public-pages-client.js syntax
         run: node --check public-pages-client.js
