@@ -52,7 +52,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
           TAVERN_OWNER: temesotejam
-          MAX_REPOS: ${{ github.event.inputs.max_repos || '12' }}
+          MAX_REPOS: "100"
           FORCE: ${{ github.event.inputs.force || 'false' }}
         run: node scripts/update-summaries.mjs
 
