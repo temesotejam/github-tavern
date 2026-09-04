@@ -1,17 +1,17 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-04T10:01:52.520Z",
+  "generatedAt": "2026-09-04T10:02:25.647Z",
   "repositories": {
     "github-tavern": {
       "title": "公開リポジトリ案内ポータル",
-      "summary": "temesotejamが所有する公開GitHubリポジトリを、検索や分類を通じて選び、内容を読みやすく確認できる個人向けポータル。GitHub APIで一覧を取得し、CopilotがREADMEや構成をもとに生成した日本語説明をカードと詳細画面に表示する。",
-      "detail": "Project Tavernは、公開リポジトリを無機質な一覧ではなく、テーマ性のある画面から探して閲覧するための静的Webポータルだ。app.jsがGitHub APIからtemesotejamの公開リポジトリを取得し、名前やDescription、Topics、使用言語、生成済み説明を横断検索できるようにしている。技術領域の簡易分類や並べ替えにも対応し、カードを選ぶと概要、特徴、技術情報、リポジトリへのリンクを確認できる。Copilot CLIを使うGitHub Actionsが6時間ごとに新規・更新リポジトリを調べ、READMEや主要設定ファイルなどを根拠にdata/summaries.jsonを更新する。未解析のリポジトリにはREADMEから短い暫定説明を作る仕組みもあり、GitHub Pagesで公開できる一方、対象は公開リポジトリに限られ、書き込み操作は行わない。",
+      "summary": "temesotejamが所有する公開GitHubリポジトリを、酒場を思わせる画面で検索・分類・閲覧する個人向けポータル。GitHub APIのメタデータとCopilot生成の日本語説明を組み合わせ、READMEや構成を手がかりに各リポジトリの概要を確認できる。",
+      "detail": "Project Tavernは、公開GitHubリポジトリを無機質な一覧ではなく、検索しやすい記録帳として閲覧するための静的Webポータルだ。中ではGitHub APIからリポジトリ名、Description、Topics、使用言語などを取得し、検索語や技術領域ごとの簡易分類でカードを絞り込める。カードを選ぶと、保存されたCopilot解析結果から、README・ファイル構成・設定ファイルを根拠にした日本語の概要、特徴、技術情報を表示する構成になっている。未解析の新規リポジトリにはREADMEから短いプレビューを補い、公開ページが確認済みなら詳細画面からリンクも開ける。GitHub Pagesで動く静的サイトで、対象は公開リポジトリに限られ、書き込み操作は行わない。",
       "features": [
         "GitHub APIによる公開リポジトリの自動取得",
-        "名前・説明・Topics・言語を横断する検索",
-        "技術領域ごとの簡易分類と並べ替え",
-        "Copilotによる日本語リポジトリ説明の生成",
-        "未解析リポジトリ向けREADME暫定説明"
+        "名前・説明・Topics・言語・Copilot要約の横断検索",
+        "技術領域ごとの簡易分類とカード表示",
+        "Copilot解析結果による日本語の詳細説明",
+        "未解析リポジトリのREADMEプレビューと公開ページ連携"
       ],
       "technologies": [
         "JavaScript",
@@ -21,24 +21,24 @@
         "GitHub Copilot CLI",
         "GitHub Actions",
         "GitHub Pages",
-        "README"
+        "MutationObserver"
       ],
       "categories": [
-        "Web・ツール",
-        "GitHub",
+        "Webツール",
         "静的サイト",
-        "リポジトリ管理"
+        "GitHub連携",
+        "リポジトリ閲覧"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "natural-prose-v3",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-09-04T10:01:21Z",
+      "sourcePushedAt": "2026-09-04T10:01:54Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-09-04T10:01:21Z",
+        "pushedAt": "2026-09-04T10:01:54Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -48,8 +48,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "bd1b6775cda48cb2203621e1b8abb0d17428755b73969467b8cdc4617c9d073f",
-      "generatedAt": "2026-09-04T10:01:52.520Z"
+      "sourceFingerprint": "187a9b2e59b372b6647c7ef1fc1d9fd61b97053598823a26dae83476f5748d0d",
+      "generatedAt": "2026-09-04T10:02:25.647Z"
     },
     "semicircle-decay-sim": {
       "title": "半円足ロッキング機体の減衰解析",
