@@ -1,44 +1,45 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-04T10:48:42.878Z",
+  "generatedAt": "2026-09-04T11:11:50.190Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ案内ポータル",
-      "summary": "temesotejamが所有する公開GitHubリポジトリを、酒場風の画面で検索・分類・閲覧する個人向けポータル。GitHub APIとCopilot要約を使い、READMEを根拠にした日本語概要や公開ページへの導線も表示する。",
-      "detail": "こいつは、temesotejamが所有する公開GitHubリポジトリを、無機質な一覧ではなく酒場風の画面から探して眺めるための個人ポータルだ。中ではGitHub APIからリポジトリ情報を取得し、名前やDescription、Topics、使用言語、Copilot要約を横断検索できるようにしてる。技術領域ごとの分類やカードからの詳細表示に加え、解析済みならREADMEや構成を根拠にした日本語説明を出し、未解析の新規リポジトリにはREADMEから短い暫定説明を補う仕組みだな。GitHub Actionsが6時間ごとに更新分を解析し、GitHub Pagesで静的に公開できる。ただし対象は公開リポジトリに限られ、削除や変更、Issue作成といった書き込み操作は行わない。",
+      "title": "公開リポジトリ酒場",
+      "summary": "temesotejamが所有する公開GitHubリポジトリを、酒場の依頼書のような画面で探して読む個人ポータル。GitHub APIの情報とCopilot生成の日本語要約を横断検索でき、未解析のリポジトリにはREADMEから暫定説明も補う。",
+      "detail": "こいつは、temesotejamが所有する公開GitHubリポジトリを、無機質な一覧ではなく酒場の記録のように探して閲覧する個人ポータルだ。中ではGitHub APIからリポジトリ名やDescription、Topics、言語を取得し、検索語と技術領域の分類でカードを絞り込める。カードを選べば、CopilotがREADMEや構成、設定ファイルを根拠に作った日本語の概要・特徴・技術情報を確認でき、まだ解析されていない新規リポジトリにはREADMEから短い暫定説明を出す仕組みもある。Copilot要約は6時間ごとのActionsで更新され、変更のないリポジトリは再解析しないから、一覧を保つ手間を抑えている。GitHub Pagesで静的に公開できる一方、対象は公開リポジトリだけで、削除や変更、Issue作成などの書き込み操作までは行わない。",
+      "closingRemark": "要約を更新する係までActionsに任せて、案内役は観察ループに落ちないよう見張ってる。酒場にも保守担当は必要ってわけだな。",
       "features": [
-        "GitHub APIによる公開リポジトリの自動取得",
-        "名前・説明・Topics・言語・要約の横断検索",
-        "技術領域ごとの簡易分類と詳細表示",
-        "Copilot要約とREADME由来の暫定説明",
-        "GitHub Pages向けの静的公開"
+        "GitHub APIから公開リポジトリを自動取得",
+        "名前・説明・Topics・言語・Copilot要約を横断検索",
+        "技術領域ごとの簡易分類とカード表示",
+        "READMEや構成を根拠にした日本語の自動説明",
+        "未解析リポジトリへのREADME暫定説明"
       ],
       "technologies": [
         "JavaScript",
         "HTML",
         "CSS",
         "GitHub API",
+        "GitHub Copilot CLI",
         "GitHub Actions",
         "GitHub Pages",
-        "GitHub Copilot CLI",
         "MutationObserver"
       ],
       "categories": [
         "Web・ツール",
-        "GitHub連携",
+        "GitHub",
         "静的サイト",
-        "AI要約"
+        "自動化"
       ],
       "status": "ツール",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-09-04T10:48:09Z",
+      "sourcePushedAt": "2026-09-04T10:50:38Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-09-04T10:48:09Z",
+        "pushedAt": "2026-09-04T10:50:38Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -48,19 +49,20 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "e7f28651e342fd89f874c047aa8ea2638c71502301eb70f9be76425e59744ca9",
-      "generatedAt": "2026-09-04T10:48:42.878Z"
+      "sourceFingerprint": "227d7ddf7a54c8ba149c0181c5f2c3b24faebb8c7f20630477a36b84c780591e",
+      "generatedAt": "2026-09-04T10:51:14.029Z"
     },
     "semicircle-decay-sim": {
-      "title": "足裏形状ロッキング解析",
-      "summary": "リアクションホイールを搭載した左右ロッキング機体について、実機の自由減衰と足裏形状の違いを物理モデルで比較する解析リポジトリだ。STEP形状の中央欠損を含むモデルを使い、ゼロクロス角速度や再構成後のずれを調べる。",
-      "detail": "こいつは、リアクションホイールで左右に揺れる機体について、実機の自由減衰が足裏形状でどこまで説明できるかを調べるための解析リポジトリだ。中ではOnshapeから出したSTEP形状を参照し、完全な半円足と、中央に10 mmの欠損を持つ左右分割の円弧をpiecewiseな物理モデルとして比較してる。動画のピーク角とIMUジャイロのゼロクロス角速度から有効慣性を同定し、エネルギー差や実測時系列とのずれを確認できる。中央欠損を入れると自由減衰のRMSEは大きく下がる一方、再構成後に残る速度差までは説明しきれず、リアクションホイール状態や左右非対称、接触損失の切り分けが次の課題ってところだ。CADは形状と寸法だけに使い、質量や慣性は実測値を基準にしている。",
+      "title": "足裏形状付きロッキング解析",
+      "summary": "リアクションホイール搭載の左右ロッキング機体について、実機の自由減衰と足裏形状を物理モデルで比較する解析リポジトリ。STEP由来の中央欠損を含むpiecewiseモデルで、ゼロクロス角速度や再構成後のずれを調べます。",
+      "detail": "こいつは、リアクションホイールを搭載した左右ロッキング機体の自由減衰を、実際の足裏形状に沿って調べるための解析リポジトリだ。中ではOnshapeから出したSTEPを寸法参照にして、半径150 mmの左右円弧と中央10 mmの欠損を再現したpiecewise rocker modelを組み、完全円モデルとの位置エネルギーや運動を比較してる。動画から得たピーク角とIMUジャイロのゼロクロス角速度を使って有効慣性を同定し、中央欠損を入れることでRMSEが大きく下がるか、固定Q状態ゲート付近の予測がどう変わるかを確認できる。自由減衰では形状モデルの改善が見える一方、V61の再構成区間にはリアクションホイールの残留回転や左右非対称、接触・滑りで説明すべきずれが残っている。CADの質量や重心、慣性は使わず実測値を参照する方針で、現状はVersion 1のジオメトリ監査と追加モデル実装の段階だな。",
+      "closingRemark": "中央の10 mmを見つけても、再構成後のずれまでは隠れていなかった。形状監査は、なかなか正直だな。",
       "features": [
-        "完全円モデルと中央欠損モデルの比較",
-        "STEP形状から足裏の接触範囲と幾何学角を解析",
-        "自由減衰データから有効慣性を同定",
-        "動画ピーク角とIMUゼロクロス速度の照合",
-        "リアクションホイール再構成後の不一致を切り分け"
+        "STEP形状から左右の円弧と中央欠損を抽出",
+        "完全円と実形状のpiecewiseモデルを比較",
+        "動画ピーク角とIMUゼロクロス速度で有効慣性を同定",
+        "自由減衰とリアクションホイール再構成後の差を分離",
+        "残留回転・左右非対称・接触損失を次段階の状態として検討"
       ],
       "technologies": [
         "Python",
@@ -69,7 +71,8 @@
         "CAD",
         "リアクションホイール",
         "IMUジャイロ",
-        "piecewise物理モデル"
+        "piecewise rocker model",
+        "自由減衰解析"
       ],
       "categories": [
         "物理シミュレーション",
@@ -79,7 +82,7 @@
       ],
       "status": "実験",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1344526643,
       "sourcePushedAt": "2026-09-04T04:20:51Z",
       "sourceDefaultBranch": "main",
@@ -97,36 +100,38 @@
         "language": "Python"
       },
       "sourceFingerprint": "47860885e4ba8cdd9cd30c9dff19d387f70b9e4005374fce21a9f9c34e512dbc",
-      "generatedAt": "2026-09-04T10:03:31.382Z"
+      "generatedAt": "2026-09-04T10:51:32.726Z"
     },
     "reaction-wheel-rocking-sim": {
-      "title": "リアクションホイール揺動制御シミュレータ",
-      "summary": "リアクションホイールを備えた左右ロッキング機体を2次元でモデル化し、入力Qと揺動エネルギーの関係や制御の成立条件を調べるシミュレータ。初期状態やゼロクロス角速度による差を比較でき、ブラウザ版も用意されている。",
-      "detail": "こいつは、リアクションホイールで左右に揺れる機体をどう制御できるか、その成立条件を理想化した2次元系で切り分けるためのシミュレータだ。中では機体のロール角・角速度とホイール角速度を状態として、接触形状に応じた運動方程式を数値積分し、位置エネルギーや有効慣性も含めて揺動を追っている。入力Qはエネルギーそのものとは扱わず、仮のモータトルク定数を介した電流積分値として与え、Qあり・なしの次ピークを比較して反実仮想的な効果を調べる仕組みだ。Q sweepや初期振幅 sweepで、同じ入力でも状態によって結果が変わるかを確認できるし、docs/index.htmlのブラウザ版もある。ただし、3次元運動や滑り、実測したトルク定数、IMU誤差などは意図的に含まれていない。",
+      "title": "リアクションホイール揺動シミュレータ",
+      "summary": "リアクションホイールで左右に揺れる機体を2次元モデルとして数値シミュレーションし、入力Qと揺動エネルギーの関係や制御の成立条件を調べる道具だ。初期状態を変えた比較やブラウザ上での確認にも対応している。",
+      "detail": "こいつは、リアクションホイールを載せた左右ロッキング機体について、エネルギー制御が本当に成り立つ条件を切り分けるためのシミュレータだ。中では正面から見た2次元系に絞り、機体のロール角・角速度・ホイール角速度を状態として、接触形状に応じた位置エネルギーと有効慣性を含む運動方程式を数値積分してる。入力Qはエネルギーそのものとは扱わず、仮のモータトルク定数を通してトルク波形に変換し、Qあり・なしの次ピークを比べて反実仮想的なΔE_obsを求める仕組みだ。Q sweepや初期振幅 sweepで、同じ入力でもゼロクロス角速度など状態によって効果が変わるかを確かめられるし、docs/index.htmlには2Dブラウザ版もある。ただし、3次元運動や滑り、実測したモータ特性、IMU誤差までは扱わない理想化モデルだな。",
+      "closingRemark": "Qをエネルギーと呼ばず、次のピークで帳尻を合わせるあたりが、このシミュレータの慎重なところだな。",
       "features": [
-        "リアクションホイール搭載機体の2D揺動モデル",
-        "運動方程式と接触形状を含む数値シミュレーション",
-        "Qあり・なしの次ピーク比較による入力効果の評価",
-        "入力状態や初期振幅を変えるスイープ解析",
-        "GitHub Pagesで公開できるブラウザ版"
+        "2次元の左右ロッキング機体をモデル化",
+        "Qあり・なしの反実仮想比較で入力効果を評価",
+        "Q sweepと初期振幅 sweepに対応",
+        "接触領域ごとの位置エネルギーと有効慣性を計算",
+        "docs/index.htmlでブラウザ実行が可能"
       ],
       "technologies": [
         "リアクションホイール",
-        "2次元力学モデル",
         "数値積分",
-        "運動エネルギー解析",
-        "GitHub Pages",
-        "HTML"
+        "2次元力学シミュレーション",
+        "エネルギー制御",
+        "モータトルクモデル",
+        "HTML",
+        "GitHub Pages"
       ],
       "categories": [
-        "シミュレーション",
+        "シミュレータ",
         "制御工学",
         "ロボティクス",
-        "研究・検証"
+        "物理モデリング"
       ],
       "status": "実験",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1354538992,
       "sourcePushedAt": "2026-09-03T08:36:46Z",
       "sourceDefaultBranch": "main",
@@ -144,38 +149,39 @@
         "language": ""
       },
       "sourceFingerprint": "41462427be06b4ba501db66e423cfdf42cf450615bcdf9033d9df77affb5123c",
-      "generatedAt": "2026-09-04T10:03:51.797Z"
+      "generatedAt": "2026-09-04T10:51:50.295Z"
     },
     "realsense-web-viewer": {
-      "title": "RealSenseブラウザ深度ビューア",
-      "summary": "Intel RealSenseの深度カメラやトラッキングカメラを、ブラウザ上で可視化する実験的なビューアだ。D400系の深度映像をWebUSBやgetUserMediaで直接扱い、GPUカラー化や距離測定を試せるほか、T265向けのネイティブブリッジも備えている。",
-      "detail": "こいつは、Intel RealSense D400系の深度カメラとT265トラッキングカメラを、できるだけブラウザだけで扱うための実験的なビューアだ。中ではgetUserMediaでDepth UVC入力を見つけ、WebGL2のR32F経路で16ビット相当のZ16値を保ったままGPUカラー化し、画面上のポインター位置から生の深度値や距離を確認できる。D400のデモや3D軌跡表示に加えて、WebUSBの診断ページもあり、T265のブートデバイスがどこまでブラウザから操作できるかを切り分けてるわけだ。ブラウザで公開できない機能には、librealsenseとpyrealsense2を使うローカルブリッジを逃げ道として用意している。ただし現状は実験版で、深度スケールは編集可能な既定値に頼っており、RGB同時表示や点群、T265のライブ姿勢取得まではまだ完成していない。",
+      "title": "RealSense深度カメラのブラウザビューア",
+      "summary": "Intel RealSenseの深度・トラッキングカメラを、ブラウザ中心で可視化する実験的なビューアだ。D400系の深度映像をgetUserMediaとWebGL2で直接扱い、T265はWebUSBやネイティブブリッジを使ってブラウザ対応の可能性を探っている。",
+      "detail": "こいつは、Intel RealSenseの深度カメラやトラッキングカメラをブラウザから観察するための実験的なビューアだ。D400系ではRealSenseのDepth入力をgetUserMediaで開き、WebGL2のR32F経路から16ビット相当のZ16値を保ったままGPUで色付けしてる。映像の検出、UVCやWebUSBの診断ページも分かれていて、マウス位置の生Z16値や深度スケール換算の距離まで確認できる。T265についてはMovidiusのブートデバイスをWebUSBで調べつつ、SDKを使うPythonのネイティブブリッジもフォールバックとして残してある。まだv0.2の試験段階で、深度単位の機種別検証やRGB同時表示、T265の姿勢取得などは未実装だし、表示距離も実測校正なしには測定値と扱えないな。",
+      "closingRemark": "ブラウザだけで深度は見えてきたが、T265の姿勢まではまだUSBの向こう側だな。",
       "features": [
-        "D400系Depth入力のブラウザ直接ストリーミング",
-        "GPUによる深度カラー化と表示範囲調整",
-        "マウス位置での生Z16値・距離確認",
-        "T265向けWebUSB調査と6DoF軌跡デモ",
-        "SDK利用時のWebSocketネイティブブリッジ"
+        "D400系のDepth入力をブラウザから直接検出・開始・停止できる",
+        "WebGL2のR32F経路でZ16深度値を保持してGPU色付けする",
+        "マウス位置の生Z16値と深度スケール換算距離を確認できる",
+        "UVC・WebUSB・深度精度を個別の診断ページで検証できる",
+        "GitHub Pagesの静的フロントエンドとローカルネイティブブリッジに対応する"
       ],
       "technologies": [
         "JavaScript",
         "HTML",
-        "Python",
-        "WebRTC getUserMedia",
-        "WebUSB",
+        "CSS",
         "WebGL2",
-        "librealsense",
+        "WebUSB",
+        "getUserMedia",
+        "Python",
         "pyrealsense2"
       ],
       "categories": [
         "コンピュータビジョン",
-        "深度カメラ",
-        "ブラウザツール",
+        "ブラウザアプリ",
+        "深度センシング",
         "ハードウェア実験"
       ],
       "status": "実験",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1354330504,
       "sourcePushedAt": "2026-09-02T05:59:22Z",
       "sourceDefaultBranch": "main",
@@ -193,38 +199,39 @@
         "language": "JavaScript"
       },
       "sourceFingerprint": "369e6a87584a0c49ec357b0d25e313d26be8f8c25cac34d1d2557140ba5ac2fd",
-      "generatedAt": "2026-09-04T10:04:08.627Z"
+      "generatedAt": "2026-09-04T10:52:08.854Z"
     },
     "youtube-video-fetcher": {
-      "title": "YouTube動画解析搬送ツール",
-      "summary": "YouTube動画や指定区間を取得し、GitHub ActionsのArtifact経由でChatGPTなどの後段解析へ渡すFetcher。Windows self-hosted runner上でyt-dlpやFFmpegを準備し、動画本体・メタデータ・解析依頼をまとめて扱える。",
-      "detail": "こいつは、YouTubeの動画や指定区間を取得して、ChatGPTなどの解析側へ安全に運ぶためのFetcherだ。中ではGitHub Actionsを起点にWindows self-hosted runnerを使い、Workflow内でyt-dlp、Deno、FFmpegを用意して動画、メタデータ、取得ログ、解析目的をまとめたArtifactを作ってる。request.jsonの更新やworkflow_dispatchから全編・部分取得を選べるので、後段では字幕に頼らずMP4からフレームを抜き、映像や時系列の変化を直接確認できるってわけだ。YouTube字幕の取得とfaster-whisperによる独立ASRは補助・実験経路として用意されている。ただしFetcher自身が映像理解や本格的な解析を行うものではなく、publicリポジトリでself-hosted runnerを動かす際の安全管理も必要になるな。",
+      "title": "YouTube映像搬送Fetcher",
+      "summary": "YouTube動画や指定区間を取得し、GitHub ActionsのArtifact経由でChatGPTなどの後段解析へ渡すためのFetcher。映像そのものを中心に、メタデータや解析依頼もまとめて受け渡せます。",
+      "detail": "こいつは、YouTubeの動画を解析側まで確実に運ぶためのFetcherだな。中ではrequest.jsonやworkflow_dispatchを入口にして、Windows x64のself-hosted runnerでyt-dlp、Deno、FFmpegを用意し、全編または指定区間の動画を取得してる。動画本体に加えてmetadata、ログ、manifest、ユーザーの質問をArtifactへまとめるから、ChatGPT側で必要な時刻のフレームを直接確認し、映像理解や時系列比較へ進められるってわけだ。字幕取得は補助経路、faster-whisperによる独立ASRは実験経路で、主役はあくまでMP4そのものになっている。Artifactの保持は1日で、publicリポジトリのself-hosted runnerには第三者コードを流さない、非公開URLや秘密情報を入れないといった運用上の制約も明記されている。",
+      "closingRemark": "字幕を主役にせず、MP4を一日だけArtifactの棚に置く。映像解析の前口上としては、ずいぶん実務的だな。",
       "features": [
-        "YouTube動画の全編または指定区間の取得",
-        "request.json更新と手動Workflow実行に対応",
-        "動画・メタデータ・ログ・解析依頼をArtifactへ集約",
-        "ChatGPT側でMP4を直接解析する主経路",
-        "字幕取得と独立ASRの補助・実験経路"
+        "全編または指定区間のYouTube動画取得",
+        "request.json更新とworkflow_dispatchによる実行",
+        "動画・メタデータ・解析依頼をArtifactへ同梱",
+        "ChatGPT側で動画から直接フレーム解析",
+        "字幕取得と独立ASRを補助・実験経路として分離"
       ],
       "technologies": [
-        "Python 3.12",
+        "Python",
         "GitHub Actions",
         "Windows self-hosted runner",
         "yt-dlp",
         "Deno",
         "FFmpeg",
         "faster-whisper",
-        "Whisper"
+        "OpenCV"
       ],
       "categories": [
-        "動画取得",
-        "映像解析基盤",
+        "動画処理",
         "GitHub Actions",
-        "AI連携"
+        "AI連携",
+        "自動化ツール"
       ],
       "status": "ツール",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1351374820,
       "sourcePushedAt": "2026-08-30T14:43:39Z",
       "sourceDefaultBranch": "main",
@@ -242,38 +249,39 @@
         "language": "Python"
       },
       "sourceFingerprint": "283768d3410ea1ad63a17a064384a5546d73826885aa26c83da4a76444dc2c29",
-      "generatedAt": "2026-09-04T10:04:24.704Z"
+      "generatedAt": "2026-09-04T10:52:25.445Z"
     },
     "marker-angle-recorder": {
-      "title": "機体角度計測・記録ツール",
-      "summary": "ブラウザのカメラ映像から白丸マーカーを認識し、機体のロール角を測定・録画する研究実験向けツールです。角度CSVとRWLOGを照合し、原動画・監査情報・メタデータを1つのSession ZIPにまとめられます。",
-      "detail": "こいつは、カメラ映像から機体の物理ロール角を測り、実験動画とRWLOGの取り違えを防ぐためのブラウザツールだ。中では既存の白丸2点認識とROI追跡をリアルタイムに動かし、固定水平基準に対する絶対角度、任意の相対角度、マーカー座標や追跡状態をCSVへ記録してる。生のWebM動画には認識表示を焼き込まず、RWLOGの形式・CRC・受動測定条件・記録時間などを確認したうえで、動画、角度CSV、ログ、manifestをSession ZIPにまとめられる。処理はすべてブラウザ内で完結し、将来形式のRWLOGも原本として添付できる設計だ。ただしUSBカメラとMediaRecorderの都合から、Chromium系のHTTPS環境が推奨されている。",
+      "title": "機体角度・RWLOG記録ツール",
+      "summary": "ブラウザ上でUSBカメラの映像から機体のロール角を測り、角度CSVと生動画、RWLOGを1回の実験Sessionとしてまとめる研究用ツール。固定水平基準による絶対角度、ログ監査、SHA-256確認、ZIP出力まで外部送信なしで行えます。",
+      "detail": "こいつは、研究実験で撮った動画とRWLOGを取り違えず、カメラから独立した機体の物理ロール角を記録するためのブラウザツールだ。中では1280×720に正規化した映像から白丸2点を見つけ、左右のROI追跡で角度を算出し、生動画・角度CSV・RWLOG・manifestを1つのSession ZIPにまとめてる。標準はカメラ校正時の固定水平基準による絶対角度で、相対ZEROは画面確認用に限定される。RWLOG v41ではCRC、時間、重複、ペア判定に加えて受動測定の指令状態も監査でき、未知の将来形式でも原本を添付できる構成だな。処理はすべてブラウザ内で完結するが、USBカメラとMediaRecorderの互換性からChromium系デスクトップブラウザが前提になる。",
+      "closingRemark": "白丸二つの角度から、動画とRWLOGの縁談まで一つのZIPに収める。取り違えだけは許さない作りだな",
       "features": [
         "白丸2点の認識とROI追跡によるリアルタイム角度計測",
-        "固定水平基準を使った絶対角度の記録",
-        "生動画・角度CSV・RWLOG・manifestのSession ZIP化",
-        "RWLOGの形式、CRC、受動測定条件、時間の監査",
-        "外部サービスへデータを送らないブラウザ内処理"
+        "固定水平基準の絶対角度と確認用の相対角度",
+        "生動画・角度CSV・RWLOG・manifestのSession ZIP出力",
+        "RWLOG v41のCRC、時間、重複、受動状態の監査",
+        "未知のRWLOG形式も原本のまま保存できる将来互換構成"
       ],
       "technologies": [
         "JavaScript",
         "HTML",
         "CSS",
         "ES modules",
-        "MediaRecorder API",
-        "Webカメラ",
-        "RWLOG v41",
-        "GitHub Pages"
+        "MediaRecorder",
+        "GitHub Pages",
+        "SHA-256",
+        "RWLOG v41"
       ],
       "categories": [
-        "研究実験",
-        "計測ツール",
-        "動画記録",
-        "データ監査"
+        "実験計測",
+        "動画解析",
+        "データ記録",
+        "ブラウザツール"
       ],
-      "status": "ツール",
+      "status": "実験",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1346887024,
       "sourcePushedAt": "2026-08-29T06:56:14Z",
       "sourceDefaultBranch": "main",
@@ -291,38 +299,39 @@
         "language": "JavaScript"
       },
       "sourceFingerprint": "48e5b3cc38f5fbddd6d03be1f270798a6dc103cacf73bf57f6797b530e06eda0",
-      "generatedAt": "2026-09-04T10:04:40.332Z"
+      "generatedAt": "2026-09-04T10:52:42.974Z"
     },
     "spike-rt-web-toolkit": {
-      "title": "SPIKE-RT Web書き込みツール",
-      "summary": "SPIKE Prime Hub向けのSPIKE-RTアプリを、ブラウザ中心で編集・ビルド・書き込み・デバッグするためのツールキット。GitHub ActionsとGitHub Pagesを組み合わせ、WebUSBによるDFU書き込みとWeb Serialログ表示まで一連の流れで扱えます。",
-      "detail": "こいつは、SPIKE Prime Hubで動かすSPIKE-RTアプリを、github.devから実機確認までつなぐためのWebツールキットだ。中ではGitHub ActionsがSPIKE-RT v0.2.0のアプリをビルドし、GitHub Pages上の画面からSHA-256を確認して、WebUSBとDfuSeで`asp.bin`をDFU書き込みする。`apps/<app>/<app>.c`を置くだけでアプリを追加でき、buttonやLED、モーターのサンプルも収録されている。書き込み後はWeb Serial APIで115200 bpsのUSBシリアルログをブラウザ表示でき、Windows向けにはDFUモード専用WinUSBセットアップへの導線も用意されている。ただし、WinUSB未設定PCでの新規ドライバ割り当て経路は最終実機確認待ちだな。",
+      "title": "SPIKE-RT書き込み・ログ確認ツール",
+      "summary": "SPIKE Prime Hub向けのSPIKE-RTアプリを、github.devで編集してGitHub Actionsでビルドし、GitHub PagesからWebUSBで書き込めるツールキットだ。Web Serialによる実行ログ確認や、Windows向けDFU初回設定の導線も備えている。",
+      "detail": "こいつは、SPIKE-RTアプリの編集から実機への書き込み、実行ログの確認までをブラウザ中心でつなぐためのWebツールキットだな。中ではapps以下のCアプリをGitHub ActionsでSPIKE-RT v0.2.0向けに一括ビルドし、生成したasp.binをGitHub PagesからWebUSBとDfuSeでSPIKE Prime Hubへ転送してる。書き込み後はHubを再起動してアプリを実行でき、ChromeやEdgeのWeb Serial APIで115200 bpsのUSBシリアルログも確認できる。SHA-256検証、DFU状態や転送サイズの確認、Windows向けWinUSBセットアップへの案内まで含むのが特徴だ。myappやbutton、LED、モーターのサンプルも収録されているが、WinUSB未設定PCへの新規ドライバ割り当て経路は最終実機確認待ちとなっている。",
+      "closingRemark": "ブラウザで書き込み、COMポートは手で選ぶ。自動化の手前に、まだ一手だけ残してあるな。",
       "features": [
-        "github.devでのCソース編集から実機書き込みまで対応",
-        "GitHub Actionsで複数のSPIKE-RTアプリを一括ビルド",
-        "WebUSBとDfuSeによるSPIKE Prime HubへのDFU書き込み",
-        "Web Serialで実行中のUSBシリアルログを表示",
-        "PagesからWindows用DFU WinUSBセットアップを案内"
+        "github.devでCソースを編集して自動ビルド",
+        "apps/<app>/<app>.c中心の簡潔なアプリ追加構成",
+        "GitHub PagesからWebUSBでDFU書き込み",
+        "SHA-256・転送サイズ・DFU状態を確認",
+        "Web Serialで実行中のUSBシリアルログを表示"
       ],
       "technologies": [
         "JavaScript",
         "C",
-        "HTML",
-        "CSS",
         "SPIKE-RT v0.2.0",
+        "WebUSB",
+        "Web Serial API",
+        "DfuSe",
         "GitHub Actions",
-        "GitHub Pages",
-        "WebUSB / Web Serial API"
+        "GitHub Pages"
       ],
       "categories": [
-        "開発ツール",
+        "ツール",
         "組み込み",
         "Webアプリ",
-        "SPIKE Prime"
+        "ロボット"
       ],
       "status": "ツール",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1341511616,
       "sourcePushedAt": "2026-08-25T09:46:58Z",
       "sourceDefaultBranch": "main",
@@ -340,18 +349,19 @@
         "language": "JavaScript"
       },
       "sourceFingerprint": "3488cdaa79347c7fa6c907979e875573ae8144bb1f18a5c3d07c3d9b7aa5dd84",
-      "generatedAt": "2026-09-04T10:04:56.305Z"
+      "generatedAt": "2026-09-04T10:52:59.062Z"
     },
     "reaction-wheel-rocker-baseline-sim": {
-      "title": "左右揺動モデル基準シミュレータ",
-      "summary": "リアクションホイール機体の左右ロッキングを、検証済みの幾何・重心高さ・実効慣性で再現する比較基準シミュレータ。Pythonで時系列CSVを出力でき、ブラウザ上でも接触モードやエネルギーを確認できます。",
-      "detail": "こいつは、リアクションホイール機体の左右揺動について、現時点で検証済みの物理モデルをBaseline v1として固定し、将来のモデル改善と比べるためのシミュレータだ。中では中央に接触面の欠損があるModel Bの形状を使い、重心高さ128 mmと一般化実効慣性を基準に、位置エネルギーから運動を求めてRK4で積分してる。初期角度や計算時間を指定すれば、角度・角速度・接触モード・位置エネルギー・全エネルギーをCSVに保存でき、docs/index.htmlでは同じ計算をブラウザで確認できる。Model Aより実験データへの速度RMSEが小さいことも示されているな。ただし減衰、摩擦、衝突損失、足のばね、ホイール残留回転などは未確定で、実機の減衰を完全再現するモデルではない。",
+      "title": "反応ホイール機体の基準シミュレータ",
+      "summary": "反応ホイール機体の左右ロッキング運動について、検証済みのModel B物理パラメータをBaseline v1として固定するシミュレータだ。Python実行とブラウザ表示に対応し、接触モードや角速度、エネルギーの推移を比較できる。",
+      "detail": "こいつは、反応ホイール機体が左右に揺れる運動を、将来の比較に使える固定基準として残すためのシミュレータだな。中ではSTEP形状と実機動画に対応させた中央欠損つき円弧モデルを使い、接触状態を内側端支点と円弧接触に切り替えながら、位置エネルギーから運動方程式を作ってRK4で積分してる。質量、重心高さH=128 mm、実効慣性J_eff=0.815×10^-3 kg m²などをBaseline v1として固定し、角度・角速度・接触モード・エネルギーをCSVへ出力できるほか、docs/index.htmlで同じ計算をブラウザから確認できる。実機データとの検証では完全円モデルより誤差が小さいが、粘性減衰や摩擦、衝突損失、足のばね、ホイール残留回転は未確定で、実機の減衰を完全再現するモデルではない。",
+      "closingRemark": "ここでは数値を新しい結果で上書きせず、改善の物差しそのものを凍結している。",
       "features": [
-        "中央欠損を含むModel Bの接触モードを再現",
-        "Baseline v1の物理パラメータを変更せず固定",
-        "RK4による受動ロッカーのエネルギー保存シミュレーション",
-        "角度・角速度・接触モードなどをCSV出力",
-        "Python実行とブラウザ表示の両方に対応"
+        "Model Bの中央欠損つき円弧接触を再現",
+        "接触モードを角度に応じて判定",
+        "RK4によるエネルギー保存型の時間積分",
+        "CSV出力で角度・角速度・エネルギーを確認",
+        "Pythonとブラウザの両方で実行可能"
       ],
       "technologies": [
         "Python",
@@ -359,17 +369,18 @@
         "RK4",
         "CSV",
         "GitHub Pages",
+        "STEP",
         "unittest"
       ],
       "categories": [
         "シミュレーション",
         "物理モデル",
-        "ロボティクス",
-        "検証ツール"
+        "検証ツール",
+        "研究基盤"
       ],
       "status": "ツール",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1344606543,
       "sourcePushedAt": "2026-08-24T06:21:53Z",
       "sourceDefaultBranch": "main",
@@ -387,18 +398,19 @@
         "language": "Python"
       },
       "sourceFingerprint": "4c6352f070d9f7e4030166592f614402f003a0136a176b67a7a14cfb50b02216",
-      "generatedAt": "2026-09-04T10:05:13.109Z"
+      "generatedAt": "2026-09-04T10:53:15.166Z"
     },
     "acrobot-swingup-hybrid-control": {
-      "title": "Acrobotハイブリッド制御シミュレータ",
-      "summary": "連続トルク型Acrobotの振り上げと倒立安定化を、モデルベース制御で検証するPythonリポジトリ。軌道最適化、TVLQR、複数モデル選択、非線形再計画を組み合わせ、初期状態や物理パラメータのずれに対する頑健性まで評価できる。",
-      "detail": "こいつは、2本のリンクを持つ連続トルク型Acrobotを、下から振り上げて直立させ、そのまま安定化できるかを調べるシミュレータだ。中ではCasADi/IPOPTによる21秒の軌道最適化を起点に、1050サンプルの軌道へTVLQRフィードバックを組み込み、終盤は5状態のLQRへ引き継いでる。さらに、質量やリンク長、モータ遅れ、粘性減衰を変えた9モデルを用意し、最初の0.5秒の状態遷移から実機に近いモデルを選んで軌道を再計画する構成だな。初期状態のずれや8種類のモデル不一致を含むロバストネス掃引、軌道・ゲイン・グラフ・動画の出力まで確認できる。固定ゲインを超える適応制御の効果は示されているが、測定ノイズやモデル間の値、より大きな状態偏差への対応は次の課題として残っている。",
+      "title": "Acrobotハイブリッド振り上げ制御",
+      "summary": "連続トルク型Acrobotを、振り上げから直立安定化までモデルベースに制御するPython実装。軌道最適化、TVLQR、複数モデル選択、非線形再計画を組み合わせ、検証用の頑健性 sweep と可視化結果まで生成する。",
+      "detail": "こいつは、肩関節が受動で肘だけを駆動するAcrobotを、振り上げてから直立状態へ持ち込むためのハイブリッド制御実験だ。中ではCasADi/IPOPTのdirect multiple shootingで21秒の軌道を最適化し、その全軌道に離散TVLQRをかけ、終盤は5状態の直立LQRへ引き継いでる。さらに質量やリンク長、モータ遅れ、粘性摩擦をずらした9モデルを用意し、最初の0.5秒の状態遷移から候補を選んで、選択モデル向けに制約付き再計画を行う構成だ。名目条件と8種類のモデル不一致では適応制御が8/8でCaptureとFinal stableに到達した一方、保持外のパラメータ、ノイズ、より大きな状態偏差への対応はこれからってところだな。",
+      "closingRemark": "21秒かけて振り上げ、最後はLQRに任せる。派手さより、引き継ぎの正確さを選んだ設計だな。",
       "features": [
-        "21秒の直接多重射撃による振り上げ軌道最適化",
-        "TVLQRから直立LQRへ切り替えるハイブリッド制御",
-        "9モデルの予測誤差を使ったオンラインモデル選択",
-        "選択モデルに合わせた制約付き非線形再計画",
-        "初期状態・モデル不一致のロバストネス評価と可視化出力"
+        "CasADi/IPOPTによる21秒の軌道最適化",
+        "1050サンプル全域のTVLQR軌道フィードバック",
+        "9モデルの予測誤差を使うオンラインモデル選択",
+        "選択モデル向けの制約付き非線形再計画",
+        "初期状態・モデル不一致の頑健性 sweep と動画生成"
       ],
       "technologies": [
         "Python",
@@ -407,18 +419,18 @@
         "NumPy",
         "SciPy",
         "Matplotlib",
-        "Pillow",
-        "pytest"
+        "Pytest",
+        "Acrobot"
       ],
       "categories": [
         "制御工学",
-        "シミュレーション",
         "ロボティクス",
-        "最適化"
+        "最適制御",
+        "シミュレーション"
       ],
       "status": "実験",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1342392257,
       "sourcePushedAt": "2026-08-22T08:37:45Z",
       "sourceDefaultBranch": "main",
@@ -436,38 +448,39 @@
         "language": "Python"
       },
       "sourceFingerprint": "e64d8af7701d9eccd7258f2ffc4d6e019b8ac442bbfbf537d886c8a2da538066",
-      "generatedAt": "2026-09-04T10:05:30.299Z"
+      "generatedAt": "2026-09-04T10:53:32.065Z"
     },
     "spike-rt-dfu-winusb-setup": {
       "title": "SPIKE-RT用WinUSB設定ツール",
-      "summary": "LEGO SPIKE PrimeやTechnic Large Hubを、Windows上でSPIKE-RTのWebUSB書き込みに使えるようWinUSBへ安全に設定するツールです。対象機器を厳密に判定し、既存のCOMポートや他のUSB機器には触れず、GUIから確認と設定を行えます。",
-      "detail": "こいつは、LEGO SPIKE Prime / Technic Large HubをSPIKE-RTのWebUSB書き込みで使えるよう、WindowsのWinUSB設定を安全に行うためのツールだ。中ではWin32 GUIが専用workerへ処理を委ね、USB VID/PID、DFUモードの名称、メーカー、接続台数を確認して、条件が一つでも合わなければ変更せず停止する。未設定の場合だけlibwdiでWinUSB用INFを生成して導入し、SetupAPIでService=WinUSBになったことまで再確認する仕組みだな。CLIの自己テストや非破壊のprepare-only検証も用意されている。ただし、v0.3 GUIでの設定済みPC判定と、実際の新規WinUSB導入から再確認までの実機検証はまだ残っている。",
+      "summary": "LEGO SPIKE PrimeやTechnic Large HubをDFUモードでSPIKE-RT WebUSB書き込みに使えるよう、対象を厳密に判定してWinUSBを設定するWindows専用ツール。GUIと検証済みworkerを分離し、誤ったUSB機器やCOMポートに触れない構成になっている。",
+      "detail": "こいつは、WindowsでLEGO SPIKE Prime / Technic Large HubのDFUモードをSPIKE-RT WebUSB書き込みに使えるよう、WinUSBを設定する専用ツールだな。中ではGUIがUSBドライバの判定や変更を直接抱え込まず、実機確認済みのworkerへ処理を任せている。workerはVID 0694、PID 0008の機器が1台だけ接続され、名称やメーカーも一致した場合に限って進み、libwdiでWinUSB用INFを生成・導入するわけだ。対象外の機器、複数台接続、未接続、設定済みのPCでは変更せず、SPIKE-RT実行時のUSBシリアルやCOMポートにも触れない。self-testとprepare-onlyによる非破壊検証やGitHub Actionsでのビルドは確認済みだが、v0.3 GUIの実機設定経路と新規WinUSB導入後の再確認までは未検証ってところだ。",
+      "closingRemark": "DFUの入口は狭く、COMポートには手を出さない。用心深い道具ほど、黙って終わる場面が多いものだな。",
       "features": [
-        "DFUモードの対象Hubだけを厳密に判定",
-        "複数台接続や誤った機器では変更しないfail-closed設計",
-        "Win32 GUIから再確認とWinUSB設定を実行",
-        "既存のSPIKE-RT用COMポートや他のUSB機器を保護",
-        "自己テストとドライバ非変更のprepare-only検証に対応"
+        "VID/PID・名称・メーカーを照合するfail-closed判定",
+        "DFU Hubが0台または複数台なら変更を中止",
+        "GUIと検証済みworkerを分離した安全設計",
+        "WinUSB設定後にSetupAPIでServiceを再確認",
+        "self-testとprepare-onlyで非破壊検証が可能"
       ],
       "technologies": [
         "C++20",
         "CMake",
-        "Win32 API",
-        "Windows SetupAPI",
-        "WinUSB",
-        "libwdi 1.5.1",
         "PowerShell",
+        "Win32 GUI",
+        "WinUSB",
+        "libwdi v1.5.1",
+        "SetupAPI",
         "GitHub Actions"
       ],
       "categories": [
-        "ツール",
-        "Windows",
-        "USB",
+        "Windowsツール",
+        "USBドライバ",
+        "SPIKE-RT",
         "組み込み開発"
       ],
-      "status": "ツール",
+      "status": "試作",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1342417274,
       "sourcePushedAt": "2026-08-22T06:31:20Z",
       "sourceDefaultBranch": "main",
@@ -485,18 +498,19 @@
         "language": "C++"
       },
       "sourceFingerprint": "ecf1b9a342a105caaa06e7e8024929fabe7053be79aa2348b8bd6edd823d8433",
-      "generatedAt": "2026-09-04T10:05:46.145Z"
+      "generatedAt": "2026-09-04T10:53:49.045Z"
     },
     "inertial-perception-sim": {
       "title": "慣性知覚センサー融合シミュレータ",
-      "summary": "IMUを中心に、CameraとRangeセンサーを組み合わせた状態推定の仕組みを可視化するシミュレータ。ESKFによるドリフト補正や、各センサーが実際に観測できる状態の範囲をブラウザ上で比較・確認できる。",
-      "detail": "こいつは、IMUを軸にCameraとRangeセンサーを組み合わせ、位置・速度・姿勢・バイアスの推定がどう進み、どこでドリフトするのかを確かめるためのシミュレータだ。中では6軸IMUのノイズとバイアスを使って15状態のINS ESKFを伝播し、RGB画像からHarris特徴と2Dトラックを取り出して相対回転を推定、8×8のRangeデータからは局所平面の傾きと観測可能な法線方向の移動だけを補正してる。IMUのみ、Camera併用、Range併用、全センサーの比較に加え、共分散や1σ、不確かさ、センサー故障のイベントまでブラウザで追えるってわけだ。単眼Cameraの並進・スケールや、平面に沿った移動までは観測できないという制約も明示されている。実行にはPython環境が必要で、GitHub Pages向けの可視化とGitHub Actionsの回帰テストも用意されているな。",
+      "summary": "IMUを軸に、カメラと距離センサーを組み合わせた状態推定の仕組みを検証するシミュレータだ。観測可能性を守りながら、ドリフト補正の効果や各センサーの役割をブラウザ上で比較できる。",
+      "detail": "こいつは、IMUを時間軸の背骨にして、カメラと距離センサーがどこまで姿勢や位置のドリフトを補正できるかを確かめるシミュレータだな。中では決定論的な3D運動から6軸IMU、RGB画像、8×8の距離データを生成し、15状態のINS ESKFで位置・速度・姿勢・センサーバイアスを推定してる。カメラはHarris特徴とRANSACで相対回転を、距離センサーは局所平面の法線方向に限って並進を補正するため、観測できない成分を都合よく埋めない設計になっている。IMU単独から全センサー併用まで比較でき、共分散や残差、特徴追跡、補正量をブラウザで追えるほか、GitHub Pages向けの出力と回帰テストも用意されている。単純な推定器も基準として残っているが、単眼カメラの並進・スケール融合や床面方向の移動まではまだ扱わない。",
+      "closingRemark": "距離センサーが床に沿う移動を見失うのは欠陥ではなく、このシミュレータが観測可能性を律儀に守った結果だな。",
       "features": [
         "15状態INS ESKFによる位置・速度・姿勢・バイアス推定",
-        "IMU・Camera・Rangeの融合モードを比較可能",
-        "センサーの観測可能性を尊重した補正設計",
-        "ブラウザ上で推定値・共分散・特徴追跡を可視化",
-        "決定論的なシナリオと回帰テストに対応"
+        "IMU単独、カメラ併用、距離センサー併用、全センサーの比較",
+        "観測可能な法線方向だけに限定した距離補正",
+        "Ground Truth、推定値、共分散、残差を確認できるブラウザ表示",
+        "決定論的なシミュレーションとGitHub Actionsの回帰テスト"
       ],
       "technologies": [
         "Python",
@@ -506,17 +520,17 @@
         "JavaScript",
         "HTML",
         "pytest",
-        "ESKF"
+        "GitHub Pages"
       ],
       "categories": [
-        "シミュレータ",
         "センサー融合",
         "状態推定",
+        "シミュレーション",
         "コンピュータビジョン"
       ],
-      "status": "ツール",
+      "status": "実験",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1340242581,
       "sourcePushedAt": "2026-08-22T03:48:22Z",
       "sourceDefaultBranch": "main",
@@ -534,18 +548,19 @@
         "language": "Python"
       },
       "sourceFingerprint": "f8ce50a759416879de80dbc0cd7be45c7adbd9ca73f9cdce240e810e4453446d",
-      "generatedAt": "2026-09-04T10:06:03.064Z"
+      "generatedAt": "2026-09-04T10:54:07.103Z"
     },
     "rl-acrobot-swingup-benchmark": {
       "title": "Acrobot強化学習ベンチマーク",
-      "summary": "連続トルクのAcrobot Swing-upを対象に、PPO・SAC・TD3を同一条件で学習し、性能を比較するベンチマークだ。ノイズ付き観測、連続適応カリキュラム、安定性重視の報酬、CIと動画・Pagesによる評価結果の公開まで一通り揃えている。",
-      "detail": "こいつは、2リンクのAcrobotをほぼ真下から振り上げて安定させる強化学習手法を、同じ条件で比べるためのベンチマークだな。中ではGymnasium由来の力学モデルに連続トルク、モータ遅れ、関節減衰、観測ノイズを加え、PPO・SAC・TD3を学習させている。報酬は高さだけでなく、上側で低速に保つ安定性も評価し、Capture率やFinal stable、Stable dwell、トルク、学習時間まで測れる。連続値のdifficultyで初期状態を段階的に難しくし、SACとTD3では性能退行時に方策だけを戻して新しいリプレイを集める回復処理も入ってる。GitHub Actionsで3方式を並列実行し、モデル、動画、CSV、グラフをArtifactとGitHub Pagesで比較できる構成だ。",
+      "summary": "連続トルクのAcrobotを真下から振り上げ、PPO・SAC・TD3の性能を同一条件で比較する強化学習ベンチマーク。連続カリキュラム、安定保持を重視した報酬、ロールバック復旧、動画やGitHub Pagesでの評価表示まで一通り揃えている。",
+      "detail": "こいつは、2リンクのAcrobotを連続トルクで振り上げ、PPO・SAC・TD3の学習性能を同じ条件で比べるためのベンチマークだ。中ではGymnasiumの力学を土台に、ノイズを含む6次元観測だけで40秒間制御させ、tip heightやCaptureだけでなく、上側で低速を保てた時間も評価してる。difficultyを0から1まで連続的に変えるカリキュラムと、Captureや安定保持を基準にしたcheckpoint選定が特徴で、SAC・TD3はrollback時に重みだけ戻し、新しいreplay bufferと学習率低下で復旧を試みる。GitHub Actionsでは3方式のquick学習やnormal学習を並列実行し、モデル、動画、CSV、metadataを保存して、best modelと実際のfinal modelをPages上で比較できる。実機制御ではなく、設定されたAcrobotモデル上の実験結果を扱うものだな。",
+      "closingRemark": "bestとfinalを別々に再評価するあたり、最後に残ったモデルまで疑ってかかるベンチマークだな。",
       "features": [
         "PPO・SAC・TD3を同一条件で比較",
-        "ノイズ付き観測と連続適応カリキュラム",
-        "高さと低速安定性を組み合わせた報酬設計",
-        "CaptureやStable dwellなど多面的な評価指標",
-        "GitHub ActionsとPagesによる自動評価・公開"
+        "連続値difficultyによる適応カリキュラム",
+        "Captureと安定保持を重視した報酬・評価",
+        "SAC・TD3向けのfresh replay復旧と学習率減衰",
+        "モデル・動画・指標をGitHub Pagesで比較表示"
       ],
       "technologies": [
         "Python",
@@ -553,19 +568,19 @@
         "Stable-Baselines3",
         "PyTorch",
         "NumPy",
-        "PyYAML",
         "GitHub Actions",
-        "GitHub Pages"
+        "GitHub Pages",
+        "pytest"
       ],
       "categories": [
         "強化学習",
         "ベンチマーク",
         "シミュレーション",
-        "機械学習"
+        "実験"
       ],
       "status": "実験",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1340304695,
       "sourcePushedAt": "2026-08-21T11:12:36Z",
       "sourceDefaultBranch": "main",
@@ -583,38 +598,39 @@
         "language": "Python"
       },
       "sourceFingerprint": "3bbedff98c7f5652fae979dc3d69290b47581cec9b6fceab1a8a6b4fc5803cb1",
-      "generatedAt": "2026-09-04T10:06:20.723Z"
+      "generatedAt": "2026-09-04T10:54:23.844Z"
     },
     "spike-rt-web-project-selected": {
-      "title": "SPIKE-RT選択ビルド書き込み",
-      "summary": "SPIKE-RTアプリを1つ選んでコンパイルし、GitHub PagesからSPIKE Prime Hubへ書き込むための仕組みです。GitHub Actionsによる手動ビルドと、WebUSB／DfuSeを使ったDFU書き込みに対応しています。",
-      "detail": "こいつは、複数のSPIKE-RTアプリから選んだ1個だけをビルドし、SPIKE Prime Hubへ届けるためのリポジトリだな。中ではGitHub ActionsがSPIKE-RT v0.2.0のカーネルと指定アプリをコンパイルし、asp.binをArtifactとGitHub Pagesへ公開してる。PagesのフラッシャーはWebUSB／DfuSeでHubに接続し、必要なセクタを消去して0x08008000へ分割書き込みしたあと、DFUを終了して再起動できる。buttonやled、motorなどのサンプルを手動実行で切り替えられる一方、公開中なのは最後に成功した1アプリだけで、motorはポートAの実機が動く点に注意が要る。全バイトの読み戻し検証は実機の転送エラーを避けるため行わず、最大992 KiBや書き込み先の制限はコードで拒否する構成だ。",
+      "title": "SPIKE-RT選択ビルド書き込み器",
+      "summary": "SPIKE-RTの複数アプリから1つだけをGitHub Actionsでビルドし、生成したファームウェアをGitHub PagesのWebUSB画面からSPIKE Prime Hubへ書き込む仕組みだ。DFUの状態確認や安全な書き込み先の制限まで含めている。",
+      "detail": "こいつは、SPIKE-RTアプリを選んでビルドし、SPIKE Prime Hubへ書き込むための公開ツールだな。中ではGitHub Actionsの手動実行でアプリを1個だけ選び、SPIKE-RT v0.2.0のカーネルと対象アプリをコンパイルして、asp.binをArtifactとGitHub Pagesへ出してる。Pages側ではWebUSBとDfuSeを使い、必要なセクタ消去から0x08008000への分割書き込み、DFU状態と転送サイズの確認、終了処理と再起動まで進められる。アプリはbuttonやled、motorなどを収録し、github.devで編集して追加する手順も揃っている。ただし公開されるのは最後に成功した1個だけで、全アプリをまとめて選ぶ構成ではない。実機ではUPLOADによる全バイト読み戻しを使わないなど、SPIKE Prime固有の転送制約も抱えているってわけだ。",
+      "closingRemark": "選べるのは一度に一個、書き込める先も0x08008000だけ。Hub相手には、そのくらいの几帳面さがちょうどいい。",
       "features": [
-        "GitHub Actionsでアプリを1つ選んで手動ビルド",
-        "GitHub PagesからSPIKE Prime Hubへ直接書き込み",
-        "WebUSB／DfuSeによるセクタ消去と分割転送",
-        "asp.binとハッシュ、マニフェスト、ビルドログをArtifact化",
-        "書き込み先とファームウェア容量をコードで制限"
+        "GitHub Actionsで選択した1アプリだけをビルド",
+        "GitHub PagesからWebUSBでHubへ直接書き込み",
+        "DFU状態とUSB転送サイズを各段階で検証",
+        "安全な書き込み先と最大992 KiBをコードで制限",
+        "Artifactにファームウェアとハッシュ、ログ、メタデータを保存"
       ],
       "technologies": [
         "JavaScript",
         "C",
-        "HTML",
-        "CSS",
         "GitHub Actions",
         "GitHub Pages",
         "WebUSB",
-        "DfuSe"
+        "DfuSe",
+        "SPIKE-RT v0.2.0",
+        "SPIKE Prime Hub"
       ],
       "categories": [
         "ツール",
         "組み込み",
         "ファームウェア",
-        "教育"
+        "WebUSB"
       ],
       "status": "ツール",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1313772475,
       "sourcePushedAt": "2026-08-21T06:57:23Z",
       "sourceDefaultBranch": "main",
@@ -632,38 +648,39 @@
         "language": "JavaScript"
       },
       "sourceFingerprint": "c6110e175daebe62f4923c20f1378a3be5521d62f17f01f45eeee93018b50fcf",
-      "generatedAt": "2026-09-04T10:06:36.351Z"
+      "generatedAt": "2026-09-04T10:54:41.559Z"
     },
     "spike-rt-web-project": {
-      "title": "SPIKE Prime用Web書き込み環境",
-      "summary": "github.devでSPIKE-RTのCアプリを編集し、GitHub Actionsでまとめてビルド、GitHub Pages上のWeb画面からSPIKE Prime Hubへ書き込むためのプロジェクトです。複数のサンプルアプリとWebUSBによるDFU転送を備えています。",
-      "detail": "こいつは、ブラウザ上でSPIKE-RTアプリを編集して、LEGO SPIKE Prime Hubへ書き込む流れをまとめたプロジェクトだ。github.devでapps以下のCファイルを編集し、変更をPushすると、GitHub ActionsがSPIKE-RTカーネルを一度だけコンパイルして、複数のアプリを順番にビルドする。生成されたファームウェアはGitHub Pagesへアプリ別に配置され、Web画面ではcatalog.jsonから選んでWebUSB経由のDFU書き込みを実行できるってわけだ。ボタン入力、LED表示、モーター制御、カウントダウンなどの例があり、アプリ追加時の設定ファイル生成にも対応している。ただし、書き込み対象はSPIKE Prime HubのDFUモードに限られ、motorは実機のモーターが自動で動くため注意が要るな。",
+      "title": "SPIKE-RT開発・書き込み環境",
+      "summary": "github.devでSPIKE-RTアプリを編集し、GitHub ActionsでビルドしたファームウェアをGitHub PagesとWebUSB経由でSPIKE Prime Hubへ書き込める開発環境だ。複数アプリの一括ビルドや自動カタログ化にも対応している。",
+      "detail": "こいつは、ブラウザだけでSPIKE-RTアプリを編集し、LEGO SPIKE Prime Hubへ書き込む流れをまとめた開発環境だな。github.devでapps以下のCファイルを編集してCommit & Pushすると、GitHub ActionsがSPIKE-RTカーネルを1回だけビルドし、それを共用して全アプリを順番にコンパイルする。生成物はアプリ別にGitHub Pagesへ配置され、catalog.jsonをもとにWeb画面が選択肢を自動検出し、WebUSBでDFU書き込みまで進められる。DFU状態と転送サイズを確認する方式はSPIKE-RTのpydfu.pyに合わせてあり、モーターを動かすサンプルには実機向けの警告も出る。追加アプリはCファイルとproject.jsonを置けばよく、細かな構成ファイルも個別指定できる。ただし、利用にはPages設定と対応するSPIKE Prime Hubが必要だ。",
+      "closingRemark": "カーネルは一度、アプリは順番に。最後はHubが黙って書き込まれる番だな。",
       "features": [
-        "github.devでCアプリを直接編集",
-        "カーネルを共用した全アプリの一括ビルド",
-        "GitHub Pagesでのファームウェア配布",
-        "WebUSBによるDFU書き込み",
-        "アプリ一覧の自動検出とサンプル収録"
+        "github.devでブラウザ編集からビルドまで完結",
+        "カーネル1回でapps以下を一括ビルド",
+        "GitHub Pagesのカタログからアプリを自動検出",
+        "WebUSBによるSPIKE Prime HubへのDFU書き込み",
+        "アプリ追加時に標準構成ファイルを自動生成"
       ],
       "technologies": [
+        "C",
         "JavaScript",
         "HTML",
         "CSS",
-        "C",
         "GitHub Actions",
         "GitHub Pages",
         "WebUSB",
         "SPIKE-RT"
       ],
       "categories": [
-        "Webツール",
+        "ツール",
         "組み込み開発",
-        "ファームウェア",
-        "教育"
+        "WebUSB",
+        "ロボット"
       ],
       "status": "ツール",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1313518403,
       "sourcePushedAt": "2026-08-21T06:37:37Z",
       "sourceDefaultBranch": "main",
@@ -681,38 +698,39 @@
         "language": "JavaScript"
       },
       "sourceFingerprint": "5744ca7be3d20fba5f4da8e0e8c2ca5752beb1da38ca653e8d5de3af0469390c",
-      "generatedAt": "2026-09-04T10:06:52.511Z"
+      "generatedAt": "2026-09-04T10:55:00.394Z"
     },
     "spike-rt-hub-dumper": {
-      "title": "SPIKE-RTハブバックアップ復元ツール",
-      "summary": "LEGO SPIKE Prime HubをDFUモードで接続し、WebUSB経由でFlashイメージをバックアップ・復元するブラウザツール。復元範囲をSPIKE-RT領域に限定し、SHA-256照合と全域の完全比較で安全性を確認できます。",
-      "detail": "こいつは、LEGO SPIKE Prime Hubに保存されたSPIKE-RTのコンパイル済みFlashイメージを、ブラウザから保存し、必要なら元の領域へ戻すためのツールだな。中ではWebUSBでDFUデバイスに接続し、SPIKE-RT領域の992 KiBと、保険として内部Flash全体1 MiBを読み出して、BINとメタデータに保存してる。既知のasp.binとはSHA-256で照合でき、復元時は先頭32 KiBを保護したまま消去・書き込みを行い、書き戻した992 KiBを1 byteずつ再読み出しして一致を確認する。復元前のサイズやハッシュ確認、明示的な確認操作も必要になる構成だ。ただし、ここで扱えるのはコンパイル済みイメージで、元のCソースコードまでは復元できない。",
+      "title": "SPIKE Prime Hub復元ツール",
+      "summary": "LEGO SPIKE Prime HubをDFUモードで接続し、WebUSB経由でFlashのバックアップとSPIKE-RT領域の復元を行うブラウザツール。SHA-256照合や全域の読み戻し検証により、安全な機体返却を支援する。",
+      "detail": "こいつは、LEGO SPIKE Prime Hubに保存されたSPIKE-RTプログラムを退避し、必要なら元の状態へ戻すためのブラウザツールだな。中ではWebUSBでDFUデバイスへ接続し、DfuSeのSet Address PointerやDFU_UPLOAD、Erase、DFU_DNLOADを使って、SPIKE-RT領域の992 KiBを読み書きしてる。内部Flash全体1 MiBも読み出し専用で保存でき、SHA-256やベクタテーブル先頭を記録し、既知のasp.binとの照合もできる。復元時は先頭32 KiBを対象外に固定し、サイズとmetadata.jsonを確認したうえで、書き戻した992 KiBを1 byteずつ再読出しして検証する仕組みだ。静的なHTML/JavaScriptとして動き、GitHub Pagesへ配置できるが、元のCソースコードを復元するものではなく、扱うのはコンパイル済みFlashイメージだけってところだ。",
+      "closingRemark": "1 MiB丸ごと守りに残し、書き戻すのは992 KiBだけ。慎重さにも境界線が引いてあるな。",
       "features": [
-        "SPIKE-RT領域992 KiBとFlash全体1 MiBをバックアップ",
-        "BINとSHA-256などのメタデータを保存",
-        "既知ファームウェアのハッシュ照合",
-        "先頭32 KiBを保護した限定復元",
-        "復元後の全域byte-for-byte検証"
+        "SPIKE-RT領域992 KiBのバックアップと復元",
+        "内部Flash全体1 MiBの読み出し専用バックアップ",
+        "SHA-256と既知のasp.binによるイメージ照合",
+        "先頭32 KiBを保護する固定安全境界",
+        "書き戻し後の全域byte-for-byte検証"
       ],
       "technologies": [
         "JavaScript",
         "HTML",
         "CSS",
         "WebUSB",
-        "DFU",
         "DfuSe",
+        "DFU",
         "STM32F413",
-        "GitHub Pages"
+        "SHA-256"
       ],
       "categories": [
         "ツール",
-        "組み込み",
-        "バックアップ",
-        "Webアプリ"
+        "WebUSB",
+        "LEGO SPIKE",
+        "ファームウェア"
       ],
       "status": "ツール",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1341308377,
       "sourcePushedAt": "2026-08-21T04:14:01Z",
       "sourceDefaultBranch": "main",
@@ -730,38 +748,39 @@
         "language": "JavaScript"
       },
       "sourceFingerprint": "84267f818bfb52e61bfa1184f246801eb0b49f6e4aced104babd0690796efc37",
-      "generatedAt": "2026-09-04T10:07:09.194Z"
+      "generatedAt": "2026-09-04T10:55:17.611Z"
     },
     "wheel-terrain-sim": {
-      "title": "車輪・変形地盤シミュレータ",
-      "summary": "ブラウザ上でタイヤと変形する地盤の相互作用を比較・可視化するテラメカニクス用サンドボックス。Bekker–Wong系モデルとgranular RFTを使い、タイヤ形状、地盤、荷重、スリップ率を変えた傾向比較や再踏破の検討ができる。",
-      "detail": "こいつは、タイヤが砂や土に沈み込み、力を伝えながら進む様子をブラウザで比較・可視化する軽量なテラメカニクス用サンドボックスだ。中では接触弧を数値積分し、Bekker–Wong系のpressure–sinkageとJanosi–Hanamoto型せん断モデルから沈下量、推進力、トルクを計算してる。タイヤの半径や幅、ラグ、地盤特性、荷重、スリップ率を変えられ、轍や再踏破による締固めも確認できる。さらにgranular RFTの局所要素力と、編集・CSV入出力できるαマップを使って、二つのモデルを同じ画面で比べられるってわけだ。ただしDEMではなく、係数の実測校正なしに実機設計の絶対値を予測するものではない。",
+      "title": "車輪・地盤相互作用シミュレータ",
+      "summary": "ブラウザ上でタイヤと変形する地盤の相互作用を比較・可視化する軽量テラメカニクス sandbox。タイヤ形状や地盤特性、スリップ率、荷重を変え、Bekker–Wong系モデルと granular RFT の推進力・沈下・トルクを同じ画面で調べられます。",
+      "detail": "こいつは、車輪が砂や土にどう沈み、どれだけ前へ進むかを、実験や本格解析の前段で比較するためのブラウザ用サンドボックスだ。中では接触弧を数値積分し、Bekker–Wong系のpressure–sinkageとJanosi–Hanamoto型せん断モデルから沈下、推進力、トルクを計算してる。タイヤ形状や地盤パラメータ、荷重、スリップ率を変えられ、轍や排土のアニメーション、1〜8回の再踏破、さらにgranular RFTとの比較まで確認できる。RFTのαマップはヒートマップ編集やCSV入出力、ブラウザ保存にも対応している。GitHub Pagesで動き、Node.jsの自動テストもあるが、係数は実測校正なしに実機の絶対値予測へ使うものではないな。",
+      "closingRemark": "轍は描けても粒子までは描かない。実機へ持ち出す前に、まず係数の出どころを確かめる道具ってわけだ。",
       "features": [
-        "Bekker–Wong系モデルとgranular RFTの比較",
-        "タイヤ形状・地盤特性・荷重・スリップ率の編集",
-        "沈下・推進力・トルク・接触反力の可視化",
-        "再踏破による締固めと累積轍のモデル化",
-        "RFT αマップのヒートマップ編集とCSV入出力"
+        "Bekker–Wong系モデルとgranular RFTを同一条件で比較",
+        "タイヤ形状・地盤特性・荷重・スリップ率を編集可能",
+        "沈下・推進力・トルク・轍・排土を可視化",
+        "再踏破による締固めと累積轍を1〜8回で評価",
+        "RFT αマップのヒートマップ編集とCSV入出力に対応"
       ],
       "technologies": [
         "JavaScript",
         "HTML",
         "CSS",
-        "Canvas API",
         "Node.js",
+        "Canvas",
+        "localStorage",
         "GitHub Pages",
-        "Bekker–Wongモデル",
-        "granular RFT"
+        "Bekker–Wong / RFT"
       ],
       "categories": [
         "シミュレーション",
-        "可視化",
+        "可視化ツール",
         "テラメカニクス",
-        "ブラウザツール"
+        "設計探索"
       ],
-      "status": "ツール",
+      "status": "完成品",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1340308979,
       "sourcePushedAt": "2026-08-20T06:59:51Z",
       "sourceDefaultBranch": "main",
@@ -779,24 +798,25 @@
         "language": "JavaScript"
       },
       "sourceFingerprint": "7f8919650e86b16d2284a5538579cb1fe08300ec673e34b46ab6bc1eac4842d5",
-      "generatedAt": "2026-09-04T10:07:29.470Z"
+      "generatedAt": "2026-09-04T10:55:35.953Z"
     },
     "rl-cartpole-swingup-td3": {
-      "title": "TD3カートポール振り上げ実験",
-      "summary": "連続入力のカートポール振り上げをTD3で学習し、PPOやSACと同じ条件で性能を比較する実験リポジトリ。物理・報酬・ノイズ・評価方法を揃え、捕捉成功率や最終安定性、学習効率を確かめます。",
-      "detail": "こいつは、連続入力のCart-Pole swing-up問題をTwin Delayed DDPG（TD3）で学習し、既存のPPO・SAC実験と比べるためのリポジトリだ。中では台車と振り子の物理モデルにセンサノイズを加え、観測値だけを使って制御を学ばせてる。Twin critics、遅延したactor更新、target policy smoothingを使い、初期角度を段階的に広げるカリキュラムも組み込んでいる。捕捉成功率、最終2秒の安定化率、角度滞在率、台車位置やモータ力、学習時間を評価でき、GitHub Actionsで学習から動画・CSV・グラフ生成、Pages公開まで回す構成だな。ただし、観察資料からは実際の学習結果の数値や、PPO・SACとの差までは判断できない。",
+      "title": "TD3台車振り子実験",
+      "summary": "連続入力のCart-Pole swing-upをTD3で学習し、PPO・SAC実験と公平に比較するためのリポジトリだ。ノイズ付き観測、段階的カリキュラム、評価動画や指標の自動生成まで揃えている。",
+      "detail": "こいつは、台車を動かして振り子を直立させる連続入力Cart-Pole swing-upを、TD3でどこまで学べるか調べる実験だな。物理モデルやreward、センサノイズ、初期状態カリキュラム、評価seed、学習step数をPPO・SAC版と揃え、アルゴリズムの違いを比べられるようにしてる。観測には位置や速度、角度のsin・cos、角速度を使い、Twin critics、遅延したactor更新、target policy smoothingを組み込む。25%、50%、75%、100%の段階で学習し、Capture率、最後の2秒の安定化率、滞在率、台車位置、モータ力を動画やCSV、グラフにまとめる構成だ。GitHub Actionsではquick学習をCIで実行し、normal 400kの結果をPagesへ公開する予定だが、実際の比較結果そのものは資料からはまだ断定できない。",
+      "closingRemark": "SACの速さとPPOの整定性、その間をTD3が本当に通れるかを400k stepで見にいく実験だな。",
       "features": [
-        "TD3とPPO・SACを共通条件で比較",
-        "センサノイズ込みの物理シミュレーション",
-        "初期角度を広げる4段階カリキュラム",
-        "捕捉・最終安定化など複数指標で評価",
-        "Actionsで学習結果とPagesを自動公開"
+        "PPO・SACと条件を揃えたTD3比較実験",
+        "センサノイズを含む台車振り子シミュレーション",
+        "4段階の初期角度カリキュラム",
+        "Captureと最終安定化の定量評価",
+        "学習結果の動画・CSV・グラフ・Pages公開"
       ],
       "technologies": [
         "Python",
+        "TD3",
         "Gymnasium",
         "Stable-Baselines3",
-        "TD3",
         "NumPy",
         "Matplotlib",
         "PyYAML",
@@ -804,13 +824,13 @@
       ],
       "categories": [
         "強化学習",
-        "ロボット制御",
         "シミュレーション",
+        "ロボット制御",
         "比較実験"
       ],
       "status": "実験",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1340258156,
       "sourcePushedAt": "2026-08-20T04:56:29Z",
       "sourceDefaultBranch": "main",
@@ -828,38 +848,39 @@
         "language": "Python"
       },
       "sourceFingerprint": "1d96e089b81b6173486fb7368bda3af579a031b81d83f429b9b73bf83c17ba24",
-      "generatedAt": "2026-09-04T10:07:46.519Z"
+      "generatedAt": "2026-09-04T10:55:53.161Z"
     },
     "rl-cartpole-swingup-sac": {
       "title": "SAC台車型倒立振子実験",
-      "summary": "台車型倒立振子を真下から振り上げ、倒立捕捉から中央付近の安定化までをSACで学習する実験リポジトリです。PPO版と物理条件や評価指標をそろえ、学習速度や成功率、制御入力の違いを比較できます。",
-      "detail": "こいつは、台車型倒立振子を真下から振り上げて倒立させ、最後は中央付近で安定化する制御をSoft Actor-Critic（SAC）で学習する実験だな。中ではGymnasiumの物理環境にセンサノイズやモータ遅れを加え、Replay Bufferを使うStable-Baselines3のSACエージェントへ、台車位置・速度と振り子角度の三角関数表現などを渡している。near_uprightからdownward_mixまで4段階のカリキュラムを進め、capture率、最終安定化率、到達時間、台車のずれ、モータ力などを評価できる。PPO版と物理条件、reward、評価条件、通常400k stepの学習量をそろえているから、アルゴリズムの学習効率を比べる用途に向いている。GitHub Actionsでquick・normal・longの学習を実行し、結果をGitHub Pagesで確認できる一方、実機ではなくシミュレーション上の比較までを扱う構成だ。",
+      "summary": "台車型倒立振子を真下から振り上げ、倒立捕捉と中央付近での安定化をSACで学習する実験です。PPO版と物理条件や評価指標を揃え、学習速度や成功率、制御入力の違いを比較できます。",
+      "detail": "こいつは、台車型倒立振子を真下から振り上げ、倒立を捕捉したあと中央付近で安定させる制御をSoft Actor-Criticで学習する実験リポジトリだ。中ではPPO版と同じ物理環境、reward、センサノイズ、カリキュラム、評価条件、400k stepの学習量を使い、アルゴリズムだけをSACへ替えて比較してる。SACはReplay Bufferで過去の遷移を再利用し、entropy係数も自動調整するため、探索を保ちながら連続的なモータ力を学ぶ構成になっている。capture率や最終安定化率、capture時間、角度・台車位置・モータ力などを評価し、GitHub Actionsで学習、GitHub Pagesで動画やグラフを確認できるってわけだ。ただし実機ではなく、50Hzの物理シミュレータ上での比較までを扱う資料だな。",
+      "closingRemark": "Replay Bufferは過去を忘れないが、台車がレール端を越えれば実験はきちんと終わる。",
       "features": [
-        "SACによる台車型倒立振子のスイングアップ学習",
-        "PPO版と条件をそろえたアルゴリズム比較",
-        "センサノイズ、モータ遅れ、現実寄りの制約を含む物理環境",
-        "4段階カリキュラムと真下スタートの固定評価",
-        "GitHub Actionsでの学習実行とGitHub Pagesでの結果公開"
+        "PPO版と条件を揃えたSAC比較実験",
+        "Replay Bufferによる経験再利用",
+        "4段階のカリキュラム学習",
+        "センサノイズを含む物理シミュレーション",
+        "GitHub ActionsとPagesで学習結果を公開"
       ],
       "technologies": [
         "Python",
-        "Gymnasium",
+        "Soft Actor-Critic",
         "Stable-Baselines3",
-        "Soft Actor-Critic（SAC）",
+        "Gymnasium",
         "NumPy",
-        "PyYAML",
         "Matplotlib",
+        "PyYAML",
         "GitHub Actions"
       ],
       "categories": [
         "強化学習",
         "制御工学",
-        "シミュレーション",
+        "物理シミュレーション",
         "比較実験"
       ],
       "status": "実験",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1340202799,
       "sourcePushedAt": "2026-08-20T03:47:25Z",
       "sourceDefaultBranch": "main",
@@ -877,18 +898,19 @@
         "language": "Python"
       },
       "sourceFingerprint": "2cdf8d2852060f039553eaa28a02af9602a8af07df1998a4b38f84c0f8001ed0",
-      "generatedAt": "2026-09-04T10:08:04.865Z"
+      "generatedAt": "2026-09-04T10:56:10.531Z"
     },
     "rl-cartpole-swingup-ppo": {
       "title": "台車型倒立振子のPPO振り上げ実験",
-      "summary": "台車型倒立振子をほぼ真下から振り上げ、倒立状態を捕捉して中央で安定化するまでをPPOに学習させる実験リポジトリです。カリキュラム学習、センサノイズやモータ遅れを含む物理モデル、動画・評価指標・学習済みモデルの生成に対応しています。",
-      "detail": "こいつは、台車型倒立振子をほぼ真下から振り上げ、倒立させたうえで台車を中央へ戻しながら安定化できるかを調べるPPO実験だ。中ではCart-Poleの物理モデルに、センサノイズ、episode固定バイアス、モータの一次遅れ、有限のレールを組み込み、エージェントには位置や速度、角度のsin・cos、角速度だけを観測させている。学習は直立近傍のBalanceから始め、広い角度、全角度、真下中心へと段階的に難しくするカリキュラム方式で、評価は常に真下付近から行う仕組みだ。Capture rateや安定化率、捕捉時間、動画、グラフ、モデルを残せるので、学習のどの段階で振り上げ行動を獲得したかを比較できる。GitHub ActionsのCPU runnerでquick・normal・longの学習を実行し、GitHub Pagesで結果を確認できるが、実際の学習結果が想定通りになるかまでは保証されていない。",
+      "summary": "台車型倒立振子をほぼ真下から振り上げ、倒立捕捉・安定化・中央復帰までをPPOに学習させる実験用リポジトリです。センサノイズやモータ遅れを含む環境で、段階的なカリキュラム学習と動画・指標による比較を行えます。",
+      "detail": "こいつは、台車型倒立振子をほぼ真下から振り上げ、倒立させたあと台車を中央へ戻して安定化するまでを、ひとつのPPO方策に学習させる実験リポジトリだ。中ではCart-Poleの物理モデルにモータの一次遅れとセンサノイズを加え、PPOには位置・速度・角度のsin/cos・角速度からなる観測だけを渡してる。まず直立近傍のBalanceから始め、広い角度、全角度、真下中心へと学習範囲を広げるカリキュラムで、Swing-upからCapture、Balance、Re-centerまでを狙う構成だな。GitHub ActionsのCPU runnerで学習し、各checkpointのモデル、動画、グラフ、capture rateやfinal stable rateなどを保存でき、GitHub Pagesでは最新結果をブラウザから確認できる。ただし、READMEに示された目標どおりの性能が実際に得られたかまでは、この観察資料だけでは判断できない。",
+      "closingRemark": "真下からの一振りを、動画と指標でどこまで説得できるかを見る実験ってわけだ。",
       "features": [
-        "Swing-upからCapture、Balance、Re-centerまでを一つの方策で学習",
-        "near_uprightからdownward_mixへ進む4段階のカリキュラム学習",
-        "センサノイズとモータ一次遅れを含む現実寄りのシミュレーション",
-        "複数seedによる捕捉率・安定化率・RMS値などの評価",
-        "GitHub Actionsでの学習と動画・モデル・グラフのArtifact保存"
+        "Swing-upから倒立捕捉・中央復帰までを一方策で学習",
+        "センサノイズと50msのモータ遅れを含むシミュレーション",
+        "near_uprightからdownward_mixへ進む4段階カリキュラム",
+        "真下±5°から各checkpointを同条件で評価",
+        "動画・学習済みモデル・評価指標をArtifactとPagesで公開"
       ],
       "technologies": [
         "Python",
@@ -902,13 +924,13 @@
       ],
       "categories": [
         "強化学習",
+        "倒立振子",
         "シミュレーション",
-        "制御工学",
-        "実験"
+        "機械学習実験"
       ],
       "status": "実験",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1340192094,
       "sourcePushedAt": "2026-08-20T02:20:56Z",
       "sourceDefaultBranch": "main",
@@ -926,18 +948,19 @@
         "language": "Python"
       },
       "sourceFingerprint": "8e9e53624f1ff351597e99490ed84974cb10a8986c031d85d55e73a26779b7ac",
-      "generatedAt": "2026-09-04T10:08:23.245Z"
+      "generatedAt": "2026-09-04T10:56:29.022Z"
     },
     "rl-cartpole-ppo": {
-      "title": "連続力台車倒立振子PPO実験",
-      "summary": "連続的なモータ力で台車を動かし、PPOが倒立振子を立て続ける過程を調べる物理シミュレーション実験。摩擦やモータ応答遅れ、センサノイズを含む独自環境で、学習途中の動画と制御性能を比較できる。",
-      "detail": "こいつは、台車を左右へ動かして倒立振子を立て続ける制御方策を、PPOに学習させるための実験環境だ。中では独自の連続力入力モデルを使い、台車の摩擦やモータの一次遅れ、位置・速度・角度・ジャイロの観測ノイズまで含めて物理シミュレーションしてる。PPOが受け取るのはノイズ付きのセンサ値で、評価や動画表示には真の状態を使うから、見かけだけでなく実際の安定性を確かめられるってわけだ。quick、normal、longの学習プリセットとGitHub Actionsによる実行、5段階の評価動画、学習曲線や成功率などのレポートが揃っている。現状は倒立付近からのBalanceが対象で、下向きから振り上げるSwing-upや実機とのsim-to-realまではまだ扱わない。",
+      "title": "連続力CartPoleのPPO実験",
+      "summary": "連続的なモータ力で台車を動かし、PPOに倒立振子のバランス制御を学習させる物理シミュレーション実験だ。摩擦やモータ遅れ、センサノイズを含む独自環境で、学習途中の動画・モデル・評価指標まで比較できる。",
+      "detail": "こいつは、台車を左右へ動かして振り子を立て続ける制御方策を、PPOで学習・評価する実験リポジトリだな。中ではGymnasiumの標準CartPole-v1をそのまま使わず、連続力入力、台車摩擦、モータの一次遅れ、白色ノイズとepisode固有のバイアスを持つ独自環境を動かしている。PPOにはセンサ観測だけを渡し、動画表示と評価にはシミュレータの真値を使うから、ノイズ込みの制御性能を切り分けて見られるわけだ。quick・normal・longのプリセットやGitHub ActionsによるCPU学習に加え、5段階の動画、モデル、グラフ、metrics.csv、GitHub Pagesのダッシュボードまで生成する。現状の主眼は初期角度がおよそ±10度以内のBalanceで、下向きから振り上げるSwing-upや実機へのsim-to-realまではまだ扱っていない。",
+      "closingRemark": "真値は評価席に座り、PPOにはノイズのある観客席だけが見えている。なかなか慎重な実験だな。",
       "features": [
-        "連続値のモータ力（-10〜+10 N）を学習",
-        "台車摩擦とモータ応答遅れを含む独自環境",
-        "センサノイズ付き観測と物理真値を分離",
+        "連続値のモータ力をPPOが決定",
+        "摩擦・モータ遅れ・センサノイズを含む独自CartPole環境",
+        "真値とノイズ付き観測を分離した評価設計",
         "学習進行を5段階の動画で比較",
-        "成功率やRMS誤差などの評価指標を出力"
+        "ActionsとGitHub Pagesによる再現可能な結果公開"
       ],
       "technologies": [
         "Python",
@@ -953,11 +976,11 @@
         "強化学習",
         "物理シミュレーション",
         "制御工学",
-        "機械学習実験"
+        "可視化"
       ],
       "status": "実験",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1339401536,
       "sourcePushedAt": "2026-08-20T02:02:15Z",
       "sourceDefaultBranch": "main",
@@ -975,18 +998,19 @@
         "language": "Python"
       },
       "sourceFingerprint": "e52fd79dbcb0ad0a8a84f7a22cd9e3891ca3c14bc8ac7e27f977ced3dfa32518",
-      "generatedAt": "2026-09-04T10:08:41.456Z"
+      "generatedAt": "2026-09-04T10:56:47.124Z"
     },
     "rl-pendulum-ppo": {
-      "title": "ノイズ付き振り子制御実験",
-      "summary": "GymnasiumのPendulum-v1を舞台に、センサノイズやバイアスを含む観測だけでPPOエージェントが振り子を立てる過程を再現する実験リポジトリ。GitHub Actionsで学習から評価、動画や指標の生成まで実行できる。",
-      "detail": "こいつは、物理シミュレーション上の振り子を強化学習で上向きに保つまでの流れを、再実行しやすい形で確かめるための実験リポジトリだ。中ではGymnasiumのPendulum-v1に民生用MEMS IMUを想定した角度・角速度の白色ノイズとエピソード単位のバイアスを加え、PPOには真値ではなく[cos(θm), sin(θm), ωm]だけを渡している。学習前から25%、50%、75%、100%まで同じ評価条件で比較でき、動画、学習曲線、角度誤差、直立率、トルクなどから方策の改善を読み取れるってわけだ。GitHub ActionsのCPU runnerで学習・評価・動画生成まで完結し、Artifactとして結果を保存できる。現段階ではアクチュエータ遅れや外乱、物理パラメータのランダム化までは扱っていない。",
+      "title": "ノイズ振り子PPO実験",
+      "summary": "物理シミュレーション上の振り子を、センサノイズのある観測だけでPPOに制御させ、学習前から完了までの上達を比較する実験環境だ。GitHub Actionsで学習・評価・動画生成を自動化し、再現可能な成果物として保存できる。",
+      "detail": "こいつは、民生用MEMS IMUを想定した不完全な観測から、振り子を上向きに保つ方策をPPOで学習させる実験リポジトリだ。中ではGymnasiumのPendulum-v1に角度と角速度の白色ノイズ、エピソードごとの固定バイアスを加え、PPOには真値ではなく[cos(θm), sin(θm), ωm]だけを渡してる。学習前のランダム操作から25%、50%、75%、100%時点までを同じ評価seedで比べられ、報酬、角度誤差、直立維持率、角速度、トルク、動画やグラフで改善の具合を確認できる。GitHub ActionsのCPU runnerで学習からArtifact保存まで完結し、quick、normal、longの設定やclean sensor評価も用意されている。ただし遅延、外乱、摩擦のばらつき、domain randomizationなどはまだモデル化されていないな。",
+      "closingRemark": "真値を隠されたPPOが、ノイズ越しにどこまで振り子を立たせるかを記録する実験場ってわけだ。",
       "features": [
-        "ノイズと固定バイアスを含むIMU風の観測モデル",
-        "PPOが見る観測と評価用の物理真値を分離",
-        "学習前後5段階を同一seed条件で比較",
-        "動画・グラフ・CSV・メタデータを成果物として保存",
-        "GitHub Actions上でCPUのみの再現可能な実験"
+        "センサノイズとエピソード固定バイアスを含む観測モデル",
+        "学習前から完了まで5段階の公平な比較評価",
+        "動画・グラフ・CSV・JSON・要約をArtifactとして保存",
+        "GitHub Actions上でCPU学習から成果物生成まで自動実行",
+        "ノイズあり・なしのセンサ条件を切り替えた評価"
       ],
       "technologies": [
         "Python",
@@ -996,17 +1020,17 @@
         "PPO",
         "PyTorch",
         "GitHub Actions",
-        "Matplotlib"
+        "PyYAML"
       ],
       "categories": [
         "強化学習",
         "物理シミュレーション",
-        "機械学習実験",
-        "制御"
+        "ロボティクス",
+        "実験"
       ],
       "status": "実験",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1339333646,
       "sourcePushedAt": "2026-08-19T09:53:45Z",
       "sourceDefaultBranch": "main",
@@ -1024,38 +1048,39 @@
         "language": "Python"
       },
       "sourceFingerprint": "df87a73a72b49ae30ba41bbaa8f3e542392169a281e6f5c36b98817a852cde17",
-      "generatedAt": "2026-09-04T10:08:58.752Z"
+      "generatedAt": "2026-09-04T10:57:04.239Z"
     },
     "video-rwlog-angle-analyzer": {
-      "title": "実験動画・RWLOG角度比較ツール",
-      "summary": "実験動画の白丸2点から算出した角度と、RWLOGに記録された姿勢推定値をブラウザ内で比較する研究用ツールです。START/END同期によるグラフ表示、時系列分析、各種指標の確認やCSV・JSON・PNG・ZIP保存に対応しています。",
-      "detail": "こいつは、実験動画から得た角度とRWLOGの姿勢推定値がどれだけ一致するかを調べるための、ブラウザ上の研究用ツールだ。中では動画の白丸2点を検出・追跡して角度を計算し、RWLOG v34/v35を解析して、STARTとENDの2点を基準に時間同期している。MID1〜MID6は主同期には使わず、同期残差の診断に回す構成で、RMSEやMAE、Bias、追跡率、CRCも確認できる。動画角度、姿勢角、誤差、モータ電流、IMU、Betaなどは時系列ビューで選択表示でき、結果はCSV・JSON・PNGやZIPとして保存可能だ。処理はサーバーへアップロードせずブラウザ内で行い、固定された実験形式に特化しているため、最新のChromeまたはEdgeが推奨される。",
+      "title": "動画・RWLOG角度比較ツール",
+      "summary": "実験動画の白丸2点から算出した角度と、RWLOGの姿勢推定値をブラウザ上で比較する研究用ツール。MP4とRWLOGをサーバーへ送らずに処理し、同期グラフや誤差指標、解析結果のCSV・JSON・PNG・ZIP保存まで行える。",
+      "detail": "こいつは、実験動画から測った角度とRWLOG内の姿勢推定値を突き合わせ、両者がどれだけ一致するかを調べるためのブラウザ用ツールだ。中では白丸2点を自動追跡して動画角度を出し、RWLOG v34/v35を解析したうえで、STARTとENDの2点を使って主時間軸を同期してる。MID1〜MID6は主同期には使わず、残差による診断に回しているのが特徴で、時系列ビューでは角度、誤差、モータ電流、IMU、Beta、試験状態などを選んで並べて確認できる。処理はWebCodecs APIでブラウザ内に閉じ、グラフや各種データを保存できるが、対応形式は固定された実験配置とMP4、RWLOG v34/v35に限られるな。",
+      "closingRemark": "STARTとENDは主役、MIDは診断役。同期にも役割分担があるらしい。",
       "features": [
         "白丸2点の自動検出・追跡による動画角度算出",
-        "START/ENDを使った主時間同期とMID残差診断",
-        "動画・RWLOG・誤差などを比較する選択式時系列ビュー",
-        "RMSE・MAE・Bias・追跡率・CRCの表示",
-        "CSV・JSON・PNG・ZIP形式での解析結果保存"
+        "START/END基準の主同期とMID残差診断",
+        "動画・姿勢角・誤差などを選べる時系列ビュー",
+        "RMSE・MAE・Biasや追跡率、RWLOG CRCの確認",
+        "CSV・JSON・PNGと解析結果ZIPの保存"
       ],
       "technologies": [
         "HTML",
         "JavaScript",
         "WebCodecs API",
-        "GitHub Pages",
         "MP4",
         "H.264/AVC",
         "RWLOG v34/v35",
-        "Canvas"
+        "Canvas",
+        "GitHub Pages"
       ],
       "categories": [
-        "研究ツール",
+        "研究用ツール",
         "動画解析",
-        "データ比較",
-        "ブラウザアプリ"
+        "時系列解析",
+        "データ可視化"
       ],
       "status": "ツール",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1336673727,
       "sourcePushedAt": "2026-08-17T07:03:31Z",
       "sourceDefaultBranch": "main",
@@ -1073,38 +1098,39 @@
         "language": "HTML"
       },
       "sourceFingerprint": "5e8ce672beed9c04919e59432d9e076c4961d71e6f4773628c5c18d33979e881",
-      "generatedAt": "2026-09-04T10:09:15.027Z"
+      "generatedAt": "2026-09-04T10:57:21.059Z"
     },
     "2026_8_12": {
       "title": "CoreS3ボート制御検証環境",
-      "summary": "M5Stack CoreS3／XIAO向けボートソフトウェアを、実機なしで決定論的にシミュレーションし検証するC++環境。仮想センサー障害、2台のUART通信、実運用プロトコル、制御ロジック、ハードウェアログ再生までCIで確認できる。",
-      "detail": "こいつは、M5Stack CoreS3／XIAOで動くボートソフトウェアの挙動を、実機やホスト型シミュレータに頼らず検証するための環境だ。中ではC++のアプリロジックに仮想I2C、UART、SD、BNO08X、INA226、VL53L5CX、GNSSを接続し、切断や遅延、CRCエラー、古いセンサーデータといった障害を決定論的に注入してる。さらに2台のコントローラ間を921600 bpsの仮想UARTで再現し、実際のboat_protocolに合わせたCRC32、COBS、ACK、再送、重複抑止、テレメトリ送信まで確認できる。BOATLOG1の観測値比較や、外部イベントと制御出力を記録するBOATLOG2の再生にも対応しているってわけだ。ただしESP32-S3の命令実行、FreeRTOSの競合、電気的な波形、物理センサーのノイズや電源断までは再現しない。",
+      "summary": "M5Stack CoreS3／XIAO向けボートソフトウェアを、実機なしで検証する決定論的なネイティブC++シミュレーション環境。仮想センサーやUART障害、製品プロトコル、コマンド再送、ハードウェアログ比較までをGitHub Actionsで再現できる。",
+      "detail": "こいつは、M5Stack CoreS3／XIAOで動くボート制御ソフトウェアを、実機やホスト型シミュレータに頼らず検証するための環境だ。中では仮想I2C・UART・SDと各種センサーを使って、アプリ状態遷移や通信断、タイミング異常を再現し、さらに2台のコントローラ間通信、実際のboat_protocolのABI・CRC32・COBS、コマンド再送と重複抑止、テレメトリ順序までネイティブに実行してる。BOATLOG1では観測ログを基準ログと最近傍時刻で比較し、BOATLOG2では外部イベントと期待出力を記録してControllerの決定論的な再生もできる。CMakeとPlatformIOの両方に対応し、シナリオCSVやCSV・JSON・SVGの成果物で挙動を追えるってわけだ。ただしESP32-S3の命令実行、RTOSの競合、電気的な波形、実際のノイズや電源断までは再現しない。",
+      "closingRemark": "ログに残った観測値は比べられるが、残っていない入力まで蘇らせる魔法はまだ実装されていない。",
       "features": [
-        "仮想センサーと通信障害を使った決定論的シミュレーション",
-        "2台のコントローラ間UARTとリンク断フェイルセーフの検証",
-        "実運用プロトコルのCRC32・COBS・ACK・再送処理の確認",
-        "BOATLOG1／BOATLOG2によるハードウェアログ再生と比較",
-        "CMake、CTest、GitHub Actions、PlatformIOを使ったCI検証"
+        "仮想I2C・UART・SDによるセンサー障害とタイミング異常の再現",
+        "921600bps 8N1の双方向コントローラ通信とリンク断フェイルセーフ検証",
+        "製品boat_protocolのABI・CRC32・COBS・ストリーミングDecoderを使用",
+        "ACK再送、重複抑止、リプレイウィンドウ、テレメトリ順序を検証",
+        "BOATLOG1／BOATLOG2のログ比較と決定論的リプレイ"
       ],
       "technologies": [
         "C++17",
         "CMake",
-        "CTest",
         "PlatformIO",
         "Arduino",
         "M5Stack CoreS3",
-        "UART",
-        "I2C"
+        "ESP32-S3",
+        "boat_protocol",
+        "GitHub Actions"
       ],
       "categories": [
         "シミュレーション",
-        "組み込み",
-        "テスト",
+        "組み込み開発",
+        "テスト・検証",
         "ボート制御"
       ],
-      "status": "ツール",
+      "status": "実験",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1331672343,
       "sourcePushedAt": "2026-08-13T03:41:33Z",
       "sourceDefaultBranch": "main",
@@ -1122,22 +1148,23 @@
         "language": "C++"
       },
       "sourceFingerprint": "2b2eb0a2aa17843c388e9c5c30af5d2b45359d2094866f9111172890a8844c32",
-      "generatedAt": "2026-09-04T10:09:33.877Z"
+      "generatedAt": "2026-09-04T10:57:43.042Z"
     },
     "m5stack-m135-gnss-ins": {
       "title": "M135 GNSS/INS航法基盤",
-      "summary": "M5Stack Module GNSS（M135）とCoreS3を使い、GNSSとIMUを統合した小型航法システムを段階的に構築するプロジェクト。まずはセンサー取得、時刻・座標系の統一、再生可能な機械可読ログを整える。",
-      "detail": "こいつは、M5Stack Module GNSS（M135）とCoreS3で小型のGNSS/INS航法システムを組み立てるための土台だな。まずはM0として、加速度・角速度・磁気・気圧、それにGNSSの位置、速度、品質情報を正しく取得し、取得時刻と単位、FRD/NED座標系をそろえる計画になってる。センサーの更新周期や古いデータも監視し、オフラインで再生できる決まった形式のログへ出すところまでを目指す。その先では15状態の誤差状態EKF、磁気干渉への対応、PPS同期、航法状態の出力へ段階的に進む。ただ、現時点ではリポジトリを初期化して目標と設計方針を定めた段階で、実装済みのファームウェアまでは確認できない。",
+      "summary": "M5Stack CoreS3とM135モジュールで、GNSSとIMUを統合した小型航法システムを段階的に構築する試作プロジェクトです。まずはセンサー値の取得、時刻・単位・座標系の統一、診断付きの機械可読ログ出力を固めます。",
+      "detail": "こいつは、M5Stack CoreS3とModule GNSS（M135）を使って、GNSSとIMUを統合した小型航法システムを作るための土台だな。中ではNEO-M9Nの測位・NED速度と、BMI270の加速度・角速度、BMM150の磁場、BMP280の気圧を取得し、FRDの機体座標とNEDの航法座標へ明示的に変換する構想になってる。まずはM0として、各データを取得時点でタイムスタンプし、単位や更新レート、古いデータ、センサーの健全性を確認しながらCSV形式で記録する。それを足場に15状態GNSS/INS EKF、磁気干渉対策、PPS同期、最終的なNavigationState出力へ進む計画だ。現時点ではリポジトリ初期化と目標定義の段階で、実装やEKFの動作までは資料から確認できない。",
+      "closingRemark": "まずは壮大なEKFより、センサーが正しい向きを向いているかの確認から始まる。航法も酒場も、足元が大事というわけだな。",
       "features": [
-        "M135の複数センサーを統合する段階的な航法開発",
-        "FRDとNEDを明示した座標変換方針",
-        "取得時刻・更新周期・データ鮮度の管理",
-        "機械可読で再生可能なセンサーログ",
-        "将来のGNSS/INS EKFと航法状態出力を見据えた構成"
+        "M135搭載センサーをまとめて扱う航法基盤",
+        "FRD・NED座標系への明示的な軸変換",
+        "取得時刻、更新レート、古いデータを含む診断設計",
+        "オフライン再生を想定した決定的なCSVログ",
+        "センサードライバと航法計算を分離する構成"
       ],
       "technologies": [
         "M5Stack CoreS3",
-        "M5Stack Module GNSS（M135）",
+        "M5Stack Module GNSS (M135)",
         "u-blox NEO-M9N",
         "Bosch BMI270",
         "Bosch BMM150",
@@ -1148,12 +1175,12 @@
       "categories": [
         "組み込み",
         "航法",
-        "センサー",
-        "ESP32"
+        "GNSS",
+        "センサー"
       ],
-      "status": "実験",
+      "status": "試作",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1331578245,
       "sourcePushedAt": "2026-08-12T03:45:28Z",
       "sourceDefaultBranch": "main",
@@ -1171,38 +1198,39 @@
         "language": ""
       },
       "sourceFingerprint": "2a1957970f55aa39a073c87ace6e4712653dc21575c296c0e91b36c7a69b7d79",
-      "generatedAt": "2026-09-04T10:09:52.099Z"
+      "generatedAt": "2026-09-04T10:58:01.317Z"
     },
     "2026_8_6": {
-      "title": "水上翼船の2ノード制御基盤",
-      "summary": "XIAO ESP32S3を通信側と制御側に分け、水上翼船を実機運用するためのファームウェア。GNSSによるウェイポイント航行、姿勢・高さ制御、Web操作、安全停止、Web Serial書き込みまでをまとめている。",
-      "detail": "こいつは、水上翼船を実機で走らせるための2ノード構成のファームウェアでな。通信側と制御側をそれぞれXIAO ESP32S3で動かし、GNSSやWeb画面、ウェイポイント送信は通信側、姿勢・高さ制御と推進、安全管理は制御側が受け持ってる。中ではBNO08XのRotation Vector、ToF高さ、VESC、INA226などを使い、LOS誘導による固定ウェイポイント追従と、前翼・後部ヨーの制御を行う。手動操作にも対応し、通信途絶や低電圧、過電流、VESC faultなどを検知すると出力を停止できる構成だ。PlatformIOで個別にビルドでき、GitHub Actions経由のWeb InstallerからWeb Serialで書き込める。ただしmicroSDの自動記録と時刻同期は、まだ統合運転版には戻っていない。",
+      "title": "水上翼船の2ノード制御FW",
+      "summary": "水上翼船を実機運用するための、通信側と制御側を分離した2ノード構成のファームウェア。GNSSによるWaypoint航行、姿勢・高さ制御、手動操作と多重の安全停止をXIAO ESP32S3で実現する。",
+      "detail": "こいつは、水上翼船を実機で走らせるためのファームウェアでな。通信側と制御側をそれぞれXIAO ESP32S3に分け、通信側がGNSS、Web画面、Waypoint送信、Heartbeatを受け持ち、制御側が姿勢・高さ・翼・推進の制御を担当してる。GNSSから作ったローカル座標を使うLOS誘導で固定Waypointを追従し、BNO08X、ToF、INA226、VESCなどの状態を監視しながら50 Hzで前翼と後部ヨーを動かす構成だ。Manual操作からLOS航行まで4通りの組み合わせを選べて、通信途絶、低電圧、過電流、VESC faultや拘束を検出すると安全停止に入る。Web InstallerとPlatformIOの両方に対応しているが、microSDの自動記録と時刻同期は統合運転版ではまだ戻っていない。",
+      "closingRemark": "二台のXIAOで役割を分け、最後は1.5 m以内で自分から停止する。船のほうが手順をよく覚えてるな。",
       "features": [
-        "通信側と制御側を分離した2ノード構成",
-        "GNSSとLOS誘導による固定ウェイポイント航行",
-        "BNO08X・ToFを使った姿勢・高さ制御",
-        "Web画面からの手動操作と自動制御切り替え",
-        "低電圧・過電流・通信途絶などへの安全停止"
+        "通信側と制御側を独立した2ノードに分離",
+        "GNSSとLOS誘導による固定Waypoint航行",
+        "Manual・姿勢補助・LOS航行を独立に切り替え可能",
+        "姿勢・高さ・電源・VESC状態を使った安全管理",
+        "Web InstallerとPlatformIOによる書き込みに対応"
       ],
       "technologies": [
         "C++",
-        "XIAO ESP32S3",
         "PlatformIO",
+        "XIAO ESP32S3",
         "GNSS",
         "BNO08X",
         "ToF",
-        "VESC",
-        "PCA9685"
+        "INA226",
+        "VESC"
       ],
       "categories": [
         "組み込み",
         "ファームウェア",
-        "自動制御",
-        "水上ロボット"
+        "航行制御",
+        "ロボティクス"
       ],
       "status": "試作",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1324865791,
       "sourcePushedAt": "2026-08-11T01:25:49Z",
       "sourceDefaultBranch": "main",
@@ -1220,17 +1248,18 @@
         "language": "C++"
       },
       "sourceFingerprint": "0126b111ceac0b8d51791d17f722e975cdc7a2ee40d426052c9f20b2f457ac5d",
-      "generatedAt": "2026-09-04T10:10:07.748Z"
+      "generatedAt": "2026-09-04T10:58:19.407Z"
     },
     "2026_8_5_3": {
-      "title": "水上翼船の2ノード制御ファームウェア",
-      "summary": "M5Stack CoreS3とXIAO ESP32S3を通信側・制御側に分け、水上翼船を実機運用するためのファームウェアです。GNSSによる固定Waypoint追従、姿勢・高さ制御、手動操作、電源や通信途絶時の安全停止までを備えています。",
-      "detail": "こいつは、水上翼船を実機で走らせるための2ノード構成のファームウェアだな。通信側のM5Stack CoreS3がGNSS、統合Web画面、Waypoint送信、Heartbeatを受け持ち、制御側のXIAO ESP32S3がBNO08XやToFの計測を使って前翼と後部ヨーを制御してる。GNSS位置から作ったローカル座標でLOS誘導を行い、Manual操作、姿勢・高さ制御、固定点への自動航行を切り替えられる。INA226、VESC UART、通信状態などを監視し、低電圧や過電流、拘束、故障、途絶時には出力を止める安全管理も組み込まれている。各ノードは独立したPlatformIOプロジェクトで、Web InstallerやGitHub Actionsから書き込める一方、README上ではSD自動記録と時刻同期はまだ統合運転版に戻っていない。",
+      "title": "水上翼船の2ノード制御FW",
+      "summary": "M5Stack CoreS3とXIAO ESP32S3を通信側・制御側に分け、水上翼船を実機運用するためのファームウェア。GNSS航行、姿勢・高さ制御、Web操作、サーボと推進系の安全停止までをまとめて扱う。",
+      "detail": "こいつは、水上翼船を実機で走らせるためのファームウェアだな。中ではM5Stack CoreS3がGNSS、統合Web画面、固定Waypoint送信、Heartbeatを受け持ち、XIAO ESP32S3がBNO08XやToF、INA226、VESC、PCA9685を使って姿勢・高さ制御と安全管理を担当してる。GNSSから作ったローカル座標でLOS誘導を行い、前翼2枚と後部ヨーを50 Hzで制御できるほか、Manual操作にも対応する。低電圧、過電流、VESC fault、拘束、通信途絶を検知すると出力を止め、Waypoint到達時もDISARMEDへ遷移する構成だ。2つのPlatformIOプロジェクトは完全分離され、Web InstallerやGitHub Actionsから書き込める。ただし、README上では統合運転版のSD自動記録と時刻同期はまだ復旧していない。",
+      "closingRemark": "安全停止は細かいが、SD記録だけはまだ岸で待っているらしい。",
       "features": [
         "CoreS3とXIAO ESP32S3を分離した2ノード構成",
-        "GNSSとLOS誘導による固定Waypoint追従",
-        "姿勢・高さ制御とWeb経由のManual操作",
-        "低電圧・過電流・VESC故障・通信途絶時の安全停止",
+        "GNSSのLOS誘導による固定Waypoint航行",
+        "姿勢・高さ制御と手動操作の独立切り替え",
+        "低電圧やVESC faultなどを含む多重な安全停止",
         "GitHub ActionsとWeb Installerによる書き込み"
       ],
       "technologies": [
@@ -1246,12 +1275,12 @@
       "categories": [
         "組み込み",
         "ロボティクス",
-        "自動制御",
+        "自動航行",
         "ファームウェア"
       ],
       "status": "試作",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1324228204,
       "sourcePushedAt": "2026-08-06T23:21:54Z",
       "sourceDefaultBranch": "main",
@@ -1269,36 +1298,38 @@
         "language": "C++"
       },
       "sourceFingerprint": "9a89b36af00a44ca87bb25cf0becd2548cafc5e7b5ed98535a8b1b5cd71a0380",
-      "generatedAt": "2026-09-04T10:10:24.984Z"
+      "generatedAt": "2026-09-04T10:58:37.537Z"
     },
     "zatu": {
-      "title": "M5Stack周辺機器チェッカー",
-      "summary": "M5Stack Core2とCoreS3のPort Aに接続した周辺機器を確認するためのツール。PCA9685の初期化やサーボ操作に対応し、ブラウザから導入できるWebインストーラーも用意されている。",
-      "detail": "こいつは、M5Stack Core2とCoreS3のPort Aに接続した周辺機器を確認するためのチェッカーだな。中ではC++のファームウェアに加えてHTMLとCSSのWeb画面を使い、Core2向けにはPCA9685の初期化確認やサーボ操作を扱っている。サーボの値はスライダーだけでなくステップボタンでも変更でき、Webインストーラーから導入できる構成ってところだ。Core2ではPCA9685のホットプラグ時の初期化修正も入っている。ただ、READMEや詳しい配線方法、対応する周辺機器の範囲までは資料からは分からない。",
+      "title": "M5Stack Port A周辺機器チェッカー",
+      "summary": "M5Stack Core2とCoreS3のPort Aに接続した周辺機器を確認するためのC++プロジェクトだ。PCA9685経由のサーボ操作や、ブラウザから導入できるWebインストーラーを備えている。",
+      "detail": "こいつは、M5Stack Core2とCoreS3のPort A周辺機器を手早く確認するためのチェック用ツールだな。中には機種ごとに分かれたチェッカーがあり、PCA9685を使ったサーボ制御を試せる構成になっている。Core2側ではサーボのスライダーを段階ボタンへ置き換え、PCA9685を抜き差ししたときの初期化も調整されているらしい。さらにwebディレクトリにはWebインストーラーが用意されている。ただ、READMEや設定の詳細は観察できないため、対応する周辺機器の範囲や検査項目の全容までは断定できない。",
+      "closingRemark": "サーボの動きは細かくなったが、対応機器の全一覧までは資料の棚に残っていない。",
       "features": [
-        "Core2のPort A周辺機器チェック",
-        "CoreS3のPort A周辺機器チェック",
-        "PCA9685のホットプラグ初期化対応",
-        "サーボ値のスライダー・ステップボタン操作",
-        "Webインストーラーを提供"
+        "Core2向けとCoreS3向けのPort Aチェッカーを収録",
+        "PCA9685接続時のサーボ操作に対応",
+        "Core2の操作をスライダーから段階ボタンへ変更",
+        "PCA9685のホットプラグ時の初期化を修正",
+        "ブラウザ経由で導入できるWebインストーラーを含む"
       ],
       "technologies": [
         "C++",
-        "HTML",
-        "CSS",
         "M5Stack Core2",
         "M5Stack CoreS3",
         "PCA9685",
-        "サーボ"
+        "サーボモーター",
+        "HTML",
+        "CSS"
       ],
       "categories": [
-        "ツール",
         "組み込み",
-        "ハードウェア検証"
+        "ハードウェア検証",
+        "M5Stack",
+        "ツール"
       ],
       "status": "ツール",
       "confidence": "medium",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1306259859,
       "sourcePushedAt": "2026-08-06T22:57:20Z",
       "sourceDefaultBranch": "main",
@@ -1316,18 +1347,19 @@
         "language": "C++"
       },
       "sourceFingerprint": "5178f8a6fd1a69abbe5bd9fbb3269ebcfdef882ae1f03737169bb5c827164eb5",
-      "generatedAt": "2026-09-04T10:10:39.399Z"
+      "generatedAt": "2026-09-04T10:58:54.260Z"
     },
     "2026_8_6_2": {
-      "title": "ESP32-S3航路ナビゲータ",
-      "summary": "ESP32-S3上で固定コースのブイ周回航法を10Hzで実行する初期実装です。Drift Vector LOSやDubins復帰、GPS速度からの外乱推定、USBシリアルとSoftAPのWeb UIによる試験操作に対応しています。",
-      "detail": "こいつは、ESP32-S3でブイ周回用の固定コースを航行するための航法部分を、10Hzで動かせるC++実装に切り出したものだ。中ではRgateとHermite整流ゲートを生成し、GPSの対地速度から外乱ベクトルを見積もりながらDrift Vector LOSで次の区間を追う。ゲート通過を判定し、必要ならLSLやRSRなどのDubins経路で自動・手動の復帰も試み、失敗時は再計算する構成になってる。開始地点はNVSに保存でき、USBの試験入力かBoatNav-SetupのSoftAP Web UIから選択・開始・停止・状態確認ができる。実機のGNSSとBNO08XをNavInputへ渡す境界までは用意されているが、サーボや実アクチュエータを直接動かすところまでは担当しない。",
+      "title": "ESP32-S3航法ナビゲータ",
+      "summary": "ESP32-S3上で固定コースのブイ周回航法を10 Hzで実行する初期実装。Drift Vector LOSによる誘導、GPS対地速度からの外乱推定、Dubins復帰、USBシリアルとSoftAP Web UIでの試験操作に対応する。",
+      "detail": "こいつは、船を固定コースのブイ周回ルートへ導く航法部分をESP32-S3で動かすための初期実装だな。中ではAからHを往復するコースに対して、Rgateを使った周回ゲートとHermite整流ゲートを生成し、GPSの対地速度から外乱ベクトルを見積もりながらDrift Vector LOSで進行方向を決めてる。経路を外れたときはDubinsのLSLやRSRなど六つの候補で自動復帰し、失敗すれば再計算、USBシリアルや軽量SoftAP Web UIから開始地点の選択・開始・停止・手動復帰も試せる。選んだ開始地点はNVSに保存される仕組みだ。ただしFIX入力は試験用で、実機ではGNSSとBNO08Xの値をNavInputへ渡し、操舵要求を安全処理付きの制御系へ接続する必要がある。",
+      "closingRemark": "10 Hzで航路は追えるが、サーボを直接動かす仕事までは引き受けていない。そこは安全ゲートの出番だな。",
       "features": [
-        "AからGを経て復路へ戻る固定コース航法",
-        "Drift Vector LOSによる外乱対応の経路追従",
-        "Dubins経路を使った自動・手動復帰と再計算",
+        "A→B→C→D→E→F→G→H→C→B→Aの固定コース航法",
+        "Drift Vector LOSとGPS対地速度による外乱推定",
+        "六種類のDubins経路による自動・手動復帰",
         "開始地点の選択とNVS保存",
-        "USBシリアルおよびSoftAP Web UIでの試験操作"
+        "USBシリアル試験入力とSoftAP Web UI"
       ],
       "technologies": [
         "C++17",
@@ -1342,12 +1374,12 @@
       "categories": [
         "航法",
         "組み込み",
-        "自律航行",
+        "船舶制御",
         "試験ツール"
       ],
       "status": "試作",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1324902942,
       "sourcePushedAt": "2026-08-06T07:50:40Z",
       "sourceDefaultBranch": "main",
@@ -1365,18 +1397,19 @@
         "language": "C++"
       },
       "sourceFingerprint": "073d56a60dd0324a377f53a8798a8d344d94f326df7bd1348c59031bd229dd8c",
-      "generatedAt": "2026-09-04T10:10:55.833Z"
+      "generatedAt": "2026-09-04T10:59:11.283Z"
     },
     "two-xiao-rotation-vector-boat": {
-      "title": "2台XIAO回転ベクトル艇",
-      "summary": "Seeed Studio XIAO ESP32S3 Senseを2台で分担して動かす、安全な実験用ボートファームウェアだ。BNO08XのRotation Vector、GNSS、microSDログ、SoftAP経由のWeb UIを扱いながら、アクチュエータ出力は無効化されている。",
-      "detail": "こいつは、2台のSeeed Studio XIAO ESP32S3 Senseを使って姿勢情報と通信・記録を切り分ける、安全な実験用ボートファームウェアだな。制御側ではBNO08Xの内蔵フュージョンからRotation Vectorを50 Hzで受け取り、クォータニオンとRoll/Pitch/YawをUARTで通信側へ送っている。通信側はGNSS、microSD、SoftAP/Web UI、UART中継を受け持ち、Yawグラフや状態JSONの表示、ログ開始・停止、安全状態コマンドの送信ができる。ログは受信フレームとして保存されるが、ESKFは使わず、PCA9685とVESCを含むアクチュエータ駆動も無効化された構成だ。実機への書き込みや航走試験は未実施で、磁気センサ由来のヨー角が磁場やキャリブレーションの影響を受ける点にも注意が要る。",
+      "title": "二台XIAOの安全実験ボート",
+      "summary": "Seeed Studio XIAO ESP32S3 Senseを2台で構成する、安全な実験用ボート制御ファームウェア。BNO08XのRotation Vectorを50Hzで扱い、GNSS・microSD・SoftAP/Web UI・UART中継を分担する。",
+      "detail": "こいつは、2台のSeeed Studio XIAO ESP32S3 Senseを使ってボート制御系を安全に検証するための実験用ファームウェアだ。制御側はBNO08X内蔵フュージョンのRotation Vectorを50Hzで受け取り、クォータニオンとRoll/Pitch/Yawを通信側へ送る。通信側はGNSS、microSD、SoftAP上のWeb UI、UART中継を担当し、状態表示やYawグラフ、JSON API、ログ操作、安全状態コマンドを提供してる。ESKFは使わず、PCA9685とVESCも受信・解析までで、ACTUATOR_OUTPUT_ENABLE=0のためアクチュエータは駆動しない。磁場やキャリブレーションがヨー角に影響し、実機への書き込みや航走試験はまだ未実施という制約も残っているな。",
+      "closingRemark": "安全側に舵を切った構成で、まだ海には出ていない。ログだけは先に航海の記録を待っているようだ。",
       "features": [
-        "2台のXIAOで制御系と通信系を分離",
-        "BNO08XのRotation Vectorを50 Hzで取得",
-        "GNSS・microSD・UART中継に対応",
-        "SoftAP上のWeb UIで状態とYawを確認",
-        "アクチュエータ出力を無効化した安全構成"
+        "XIAO ESP32S3 Senseを制御側と通信側に分離",
+        "BNO08XのRotation Vectorを50Hzで送信",
+        "GNSS・microSD・SoftAP/Web UI・UART中継を統合",
+        "Yawグラフと状態確認用JSON APIを提供",
+        "アクチュエータ出力を無効化した安全な実験構成"
       ],
       "technologies": [
         "C++",
@@ -1386,7 +1419,7 @@
         "GNSS",
         "microSD",
         "SoftAP",
-        "PCA9685"
+        "UART"
       ],
       "categories": [
         "組み込み",
@@ -1396,7 +1429,7 @@
       ],
       "status": "実験",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1324721613,
       "sourcePushedAt": "2026-08-06T05:00:55Z",
       "sourceDefaultBranch": "main",
@@ -1414,18 +1447,19 @@
         "language": "C++"
       },
       "sourceFingerprint": "776a01a3b76cc8249b65cd1f0b6cefcf233a421eb79ffe0c1ddad1bfa806efdb",
-      "generatedAt": "2026-09-04T10:11:15.587Z"
+      "generatedAt": "2026-09-04T10:59:29.985Z"
     },
     "2026_8_5_2": {
       "title": "水上ボート制御ファームウェア",
-      "summary": "水上ボートを動かすためのファームウェアで、通信系と制御系を独立した2つのPlatformIOプロジェクトに分けている。GNSSやSD記録、Web UI、姿勢センサー、安全処理、アクチュエータ出力まで役割ごとに整理された構成だ。",
-      "detail": "こいつは、水上ボートの通信と機体制御を動かすためのファームウェアだな。中ではM5Stack CoreS3を通信ノード、XIAO ESP32S3を制御ノードとして使い、通信側がGNSS受信、SDへのログ保存、Web UI、制御側とのUART通信を受け持ってる。制御側は各種センサー、BNO08Xの融合姿勢、制御計算、安全ロジック、アクチュエータ出力を担当する構成だ。それぞれのフォルダにplatformio.iniやプロトコル、専用ライブラリを持たせ、通信と制御を別々に開いてビルドできる。リポジトリのルートに共有ディレクトリを置かない方針までは分かるが、実際の操作手順や機体の詳細な制御方式までは資料に出ていない。",
+      "summary": "水上ボートを動かすためのファームウェアで、通信系と制御系を独立したPlatformIOプロジェクトに分けている。GNSSやSD記録、Web UI、姿勢センサー、安全 logic、アクチュエータ出力を2台のマイコンで分担する構成だ。",
+      "detail": "こいつは、水上ボートの通信と機体制御を動かすためのファームウェアだな。中ではM5Stack CoreS3を通信ノード、XIAO ESP32S3を制御ノードとして使い、UARTでつないで役割を分けている。通信側はGNSSの受信、SDへのログ保存、Web UIを受け持ち、制御側はセンサー処理、BNO08Xの融合姿勢、 safety logic、制御計算、アクチュエータ出力を担当する構成だ。それぞれが独立したPlatformIOプロジェクトになっていて、個別に開いてビルドできるほか、プロトコルやprivate libraryも各フォルダ内に置かれている。実際の航行性能やWeb UIの細部まではこの観察資料だけでは分からないが、通信と制御を分離して保守しやすくした試作 firmware というところだ。",
+      "closingRemark": "ボートの頭脳を二つに分けたぶん、片方が黙っても原因は追いやすそうだな。",
       "features": [
-        "通信ノードと制御ノードを独立したプロジェクトに分離",
-        "GNSS受信とSDカードへの航行ログ保存",
-        "Web UIとUARTによる制御ノード連携",
-        "BNO08Xの融合姿勢を使った制御",
-        "安全ロジックとアクチュエータ出力を制御側に集約"
+        "通信ノードと制御ノードを独立したPlatformIOプロジェクトに分離",
+        "M5Stack CoreS3でGNSS受信、SDログ、Web UI、UART通信を担当",
+        "XIAO ESP32S3で姿勢処理、安全 logic、制御計算、出力を担当",
+        "BNO08Xの融合姿勢を制御側で利用",
+        "各プロジェクトが独自のプロトコルとprivate libraryを保持"
       ],
       "technologies": [
         "C++",
@@ -1433,19 +1467,19 @@
         "M5Stack CoreS3",
         "XIAO ESP32S3",
         "GNSS",
-        "SDカード",
-        "UART",
+        "SD",
+        "Web UI",
         "BNO08X"
       ],
       "categories": [
         "組み込み",
-        "ファームウェア",
+        "ロボティクス",
         "ボート制御",
-        "制御システム"
+        "ファームウェア"
       ],
       "status": "試作",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1324131226,
       "sourcePushedAt": "2026-08-05T15:36:32Z",
       "sourceDefaultBranch": "main",
@@ -1463,36 +1497,35 @@
         "language": "C++"
       },
       "sourceFingerprint": "bd0689baf554128072d204d731e207817fb0870526d89bf9be46824a112257ae",
-      "generatedAt": "2026-09-04T10:11:32.167Z"
+      "generatedAt": "2026-09-04T10:59:45.916Z"
     },
     "2026_8_5": {
-      "title": "小型ボート制御ファームウェア",
-      "summary": "小型ボート向けの現行プロダクションファームウェアをまとめたC++リポジトリらしい。M5Stack CoreS3のテレメトリ橋渡し、XIAOを使った制御連携、共有コードを含む構成になっている。",
-      "detail": "こいつは、小型ボートを動かす現行ファームウェアを保管するためのリポジトリらしいな。中を見ると、M5Stack CoreS3でテレメトリを橋渡しする部分、XIAOを使ったボート制御の連携部分、それらで共有するコードを分けて置いてる。主な実装はC++で、コミットにも「current boat production firmware」とあるから、単なるサンプルではなく実運用向けの構成と見てよさそうだ。ただ、READMEや設定ファイルの情報がないため、通信方式や制御対象、実際の配線まではここから先は判断できない。",
+      "title": "ボート制御ファームウェア",
+      "summary": "小型ボートの現行プロダクション用ファームウェアを保管・統合するためのリポジトリだな。M5Stack CoreS3向けのテレメトリ中継、XIAO系のボート制御、共通コードを分けて管理している。",
+      "detail": "こいつは、現在使われているボート用プロダクションファームウェアを取り込み、制御系と通信系をまとめて扱うためのリポジトリらしい。中を見ると、m5stack-cores3-telemetry-bridge、xiao-boat-control-integration、sharedの3領域に分かれていて、M5Stack CoreS3側のテレメトリ中継と、XIAOを使うボート制御、それらで共有するコードを置いている構成だ。コミット履歴にも現行ファームウェアのコピーと初期化が残っている。ただ、READMEや設定ファイルは確認できないため、通信方式や制御対象の詳細、実際のビルド手順まではここから先は判断できないな。",
+      "closingRemark": "現行の船を預かった記録はあるが、航路図までは置いていない。操船の細部はコードを読むしかないな。",
       "features": [
-        "小型ボート向けの現行ファームウェアを収録",
-        "M5Stack CoreS3によるテレメトリ橋渡し",
-        "XIAOを使ったボート制御連携",
-        "共有コードを独立ディレクトリで管理",
-        "C++を中心とした組み込み向け構成"
+        "現行ボート用プロダクションファームウェアを収録",
+        "テレメトリ中継とボート制御を別ディレクトリで分離",
+        "共通コードをsharedに集約",
+        "M5Stack側とXIAO側の構成を同居させている",
+        "READMEがなく詳細な利用手順は不明"
       ],
       "technologies": [
         "C++",
         "C",
         "M5Stack CoreS3",
-        "XIAO",
-        "テレメトリ",
-        "組み込みファームウェア"
+        "XIAO"
       ],
       "categories": [
         "組み込み",
-        "船舶制御",
-        "ファームウェア",
-        "テレメトリ"
+        "ボート制御",
+        "テレメトリ",
+        "ファームウェア"
       ],
-      "status": "完成品",
+      "status": "試作",
       "confidence": "medium",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1324110294,
       "sourcePushedAt": "2026-08-05T14:05:24Z",
       "sourceDefaultBranch": "main",
@@ -1510,18 +1543,19 @@
         "language": "C++"
       },
       "sourceFingerprint": "78c043fe36684a63c1a9ac310327c536ca9d1b0aefc5dc1b858d28937d9d11a6",
-      "generatedAt": "2026-09-04T10:11:47.075Z"
+      "generatedAt": "2026-09-04T11:00:00.742Z"
     },
     "proglam": {
-      "title": "船体制御・センサー統合実験集",
-      "summary": "Seeed Studio XIAO ESP32S3を中心に、船体制御、センサー計測、UARTテレメトリー、microSD記録を検証するPlatformIOプロジェクト集。BNO08XやVL53L5CX、INA226、PCA9685、VESCなどを個別・統合で試せる。",
-      "detail": "こいつは、船体を制御しながら各種センサーの計測値と通信データを記録するための、実験用PlatformIOプロジェクト集だ。中心にあるのはSeeed Studio XIAO ESP32S3で、制御側ではBNO08X、VL53L5CX、INA226、PCA9685、VESCを統合し、通信側ではGNSSや比較用BNO08X、UART、microSD、SoftAP画面をつないでいる。個別センサーの診断やサーボ、VESCの動作確認から、船体制御とテレメトリー保存まで段階的に検証できる構成ってわけだ。各ディレクトリは独立したPlatformIOプロジェクトとして、対象場所でビルドや書き込みを行う。多数の検証用コードと引継ぎ文書が揃っている一方、実験・統合作業の途中で、完成品としての運用範囲までは資料だけでは断定できないな。",
+      "title": "船体制御・計測実験基盤",
+      "summary": "Seeed Studio XIAO ESP32S3を中心に、船体制御、センサー計測、UART通信、microSD記録を検証するPlatformIOプロジェクト集。統合機と個別センサー試験を分け、実機の検証結果や引継ぎ情報まで文書化している。",
+      "detail": "こいつは、XIAO ESP32S3を使った船体制御とセンサー計測を、段階的に組み上げていくための実験用プロジェクト集だな。中ではBNO08X、VL53L5CX、INA226、PCA9685、VESCなどを個別に確かめたうえで、制御側と通信側を統合し、GNSSやSD記録、UARTテレメトリー、SoftAPの監視画面までつないでいる。各ディレクトリが独立したPlatformIOプロジェクトになっていて、対象を選んでビルドや書き込みを実行できる構成だ。さらに、実装済み範囲、実機で確認できた証拠、BINログの解析、未実装部分をdocsに残し、作業を引き継げるようにしている。ただし、これは完成品というより、複数の検証と統合を進めている段階の記録兼ファームウェア群ってところだ。",
+      "closingRemark": "センサーを一つずつ試して最後に船へ束ねる、地道だがログだけはかなり雄弁な構成だな。",
       "features": [
-        "船体制御とテレメトリー記録の統合",
-        "センサーや周辺機器を個別に検証",
-        "UART経由のデータをmicroSDへ保存",
-        "SoftAPとWeb UIによる状態確認",
-        "実施計画・検証結果・未実装範囲を文書化"
+        "船体制御とテレメトリーを統合する実装",
+        "センサーやVESCの個別検証プロジェクト",
+        "UART経由のテレメトリーとmicroSD記録",
+        "SoftAPとWeb UIによる監視",
+        "実機検証結果と作業引継ぎ文書の整備"
       ],
       "technologies": [
         "C++",
@@ -1530,18 +1564,18 @@
         "Seeed Studio XIAO ESP32S3",
         "BNO08X",
         "VL53L5CX",
-        "INA226",
-        "PCA9685"
+        "VESC",
+        "microSD"
       ],
       "categories": [
         "組み込み",
         "船体制御",
         "センサー計測",
-        "実験"
+        "実機検証"
       ],
       "status": "実験",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1306322424,
       "sourcePushedAt": "2026-08-05T11:19:39Z",
       "sourceDefaultBranch": "main",
@@ -1559,18 +1593,19 @@
         "language": "C++"
       },
       "sourceFingerprint": "e80f567f17b48043a2aece8c20b61cebef28e41b0595c8fb284867d6f20b1921",
-      "generatedAt": "2026-09-04T10:12:05.216Z"
+      "generatedAt": "2026-09-04T11:00:18.324Z"
     },
     "cores3-android-dualsense-bridge-WEB": {
-      "title": "CoreS3 DualSense操作ブリッジ",
-      "summary": "LG style3のAndroid ChromeでPS5 DualSenseの入力を受け、M5Stack CoreS3からサーボ3系統とVESCモータを無線制御する構成です。端末固有のGamepad API差異に対応し、安全停止や設定保存、Web UIも備えています。",
-      "detail": "こいつは、PS5 DualSenseの操作をLG style3経由で受け取り、M5Stack CoreS3からサーボとVESCを動かす無線コントロール構成だ。CoreS3がWi-FiアクセスポイントとWeb UIを提供し、Android ChromeのGamepad APIで拾った入力をWebSocketで約30Hz送信している。中ではPCA9685経由で左翼・右翼・左右向きの3サーボを制御し、VESCにはUARTでDuty指令を送るほか、L1を離したときや通信断、非常停止時には出力をゼロにする安全処理も入ってる。サーボの上下限はNVSへ保存でき、入力状態や生データも画面で確認できる。要するに、汎用ブリッジではなく、LG style3とこの入力配置で実運用できた具体例で、別端末へ持ち込むなら先にGamepad APIの見え方を診断する必要があるってところだな。",
+      "title": "CoreS3用DualSense操作ブリッジ",
+      "summary": "LG style3のAndroid ChromeでPS5 DualSenseの入力を拾い、M5Stack CoreS3経由でPCA9685の3サーボとVESCを無線制御する構成です。端末固有の入力ずれや起動時の誤反応を、安全処理込みで扱います。",
+      "detail": "こいつは、PS5 DualSenseからの操作をLG style3のAndroid Chromeで受け取り、M5Stack CoreS3からサーボとモータへ渡す無線コントロール構成だ。CoreS3がWi-Fiアクセスポイントと日本語Web UIを用意し、Gamepad APIの入力をWebSocketで約30 Hz送信する。受け側ではI2C接続のPCA9685で左翼・右翼・左右向きの3サーボを動かし、UART経由でVESCへDuty指令を出している。L1をデッドマンとして扱い、切断や入力断、非常停止、不正パケットでは全出力をゼロにするほか、サーボの上下限はNVSへ保存できる。右スティックやL2/R2の見え方、起動直後の右翼入力はLG style3固有の前提なので、別端末へ持ち出すには生入力の診断と端末別プロファイル追加が必要だな。",
+      "closingRemark": "DualSenseの一般論ではなく、LG style3でようやく話が通じた入力表をCoreS3が預かっている。",
       "features": [
-        "DualSense入力をWebSocketでCoreS3へ転送",
+        "CoreS3がWi-Fi APと操作用Web UIを提供",
+        "Gamepad API入力をWebSocketで約30 Hz送信",
         "PCA9685で3系統のサーボを制御",
-        "VESCへUARTでモータDutyを送信",
-        "通信断・非常停止・入力断時の安全停止",
-        "サーボ上下限をNVSへ永続保存"
+        "UARTでVESCへDuty指令を送信",
+        "入力断や非常停止時に全出力をゼロ化"
       ],
       "technologies": [
         "M5Stack CoreS3",
@@ -1578,9 +1613,9 @@
         "Arduino",
         "PlatformIO",
         "M5Unified",
-        "Android Chrome Gamepad API",
-        "WebSocket",
-        "PCA9685"
+        "PS5 DualSense",
+        "PCA9685",
+        "VESC"
       ],
       "categories": [
         "組み込み",
@@ -1590,7 +1625,7 @@
       ],
       "status": "試作",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1323614361,
       "sourcePushedAt": "2026-08-05T05:57:57Z",
       "sourceDefaultBranch": "main",
@@ -1608,18 +1643,19 @@
         "language": "HTML"
       },
       "sourceFingerprint": "75899ddaf8f933d4502787b65122a1ba175ff3c19a61f40d8a1d61781345e1ee",
-      "generatedAt": "2026-09-04T10:12:21.037Z"
+      "generatedAt": "2026-09-04T11:00:37.210Z"
     },
     "cores3-android-dualsense-bridge": {
-      "title": "CoreS3用DualSense無線制御橋",
-      "summary": "LG style3のAndroid ChromeとPS5 DualSenseを使い、M5Stack CoreS3経由でサーボ3系統とVESCモータを無線操作する構成です。Gamepad APIの端末依存を吸収し、非常停止や入力断時の安全停止、設定の永続保存にも対応しています。",
-      "detail": "こいつは、LG style3のAndroid Chromeで受けたPS5 DualSenseの入力を、M5Stack CoreS3からPCA9685接続の3サーボとVESCへ安全に渡すための無線ブリッジだ。CoreS3がWi-Fiアクセスポイントと日本語Web UIを立て、ブラウザ側はGamepad APIで入力を拾い、WebSocketで約30 Hzの指令を送ってる。中ではI2C経由で左右翼と左右向きのサーボを動かし、UARTのDuty指令でVESCを制御するほか、L1のデッドマン、PSやUIの非常停止、通信断やタイムアウト時の全出力ゼロ化も担っている。サーボ上下限はNVSへ保存でき、入力プロファイルや生入力ログも確認可能だな。ただし汎用DualSenseブリッジではなく、L1・L2/R2・右スティックの見え方を含めてLG style3向けに調整された構成で、別端末でそのまま動くまでは分からない。",
+      "title": "CoreS3 DualSense安全ブリッジ",
+      "summary": "LG style3上のAndroid ChromeでPS5 DualSenseの入力を受け、M5Stack CoreS3経由で3つのサーボとVESCを無線制御する構成です。端末固有の入力差を吸収し、切断時の全出力ゼロ化や設定の永続保存にも対応しています。",
+      "detail": "こいつは、LG style3とAndroid Chrome、PS5 DualSenseを使って、M5Stack CoreS3からサーボとモータを安全に動かすための無線ブリッジだ。CoreS3がWi-Fiアクセスポイントと日本語Web UIを立て、ブラウザのGamepad APIで拾った入力をWebSocketで約30Hz送信し、PCA9685の3サーボとVESCのDuty制御へつないでいる。中を見ると、L1をデッドマンとして扱い、非常停止や入力断、一定時間の無通信では全出力をゼロにするなど、受け側に安全判断を寄せた構成になってる。サーボ上下限はNVSへ保存でき、入力プロファイルや生入力ログも確認できる。ただし、L1やL2/R2、右スティックの割り当てはLG style3固有の実測結果なので、別端末でそのまま使える汎用ブリッジではないな。",
+      "closingRemark": "右スティックがボタン由来で動くあたり、汎用性より実測を信じた設計ってわけだ。",
       "features": [
-        "Wi-Fi APと日本語Web UIを内蔵",
-        "DualSense入力をWebSocketで約30 Hz送信",
-        "PCA9685で3系統のサーボを制御",
-        "VESCへUARTでDuty指令を出力",
-        "非常停止・デッドマン・通信断時の安全停止と設定のNVS保存"
+        "CoreS3がWi-Fi APと日本語操作ページを提供",
+        "DualSense入力を約30HzのWebSocketで送信",
+        "PCA9685で3つのサーボ、VESCでモータDutyを制御",
+        "切断・無通信・非常停止時に全出力をゼロ化",
+        "サーボ上下限をNVSへ永続保存"
       ],
       "technologies": [
         "M5Stack CoreS3",
@@ -1628,18 +1664,18 @@
         "PlatformIO",
         "M5Unified",
         "Android Chrome Gamepad API",
-        "WebSocket",
-        "PCA9685"
+        "PCA9685",
+        "VESC"
       ],
       "categories": [
         "組み込み",
-        "無線制御",
         "ロボット制御",
-        "試作"
+        "ゲームパッド連携",
+        "安全制御"
       ],
       "status": "試作",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1321190974,
       "sourcePushedAt": "2026-08-03T11:05:50Z",
       "sourceDefaultBranch": "main",
@@ -1657,18 +1693,19 @@
         "language": "HTML"
       },
       "sourceFingerprint": "02b8ba7322b678ef035b60f232aaa8c9ecf79111b7050c2ce21f381a049e2704",
-      "generatedAt": "2026-09-04T10:12:36.550Z"
+      "generatedAt": "2026-09-04T11:00:55.190Z"
     },
     "controller-input-diagnostics": {
-      "title": "Androidコントローラ入力診断",
-      "summary": "PS4／PS5コントローラがAndroidへ実際に届ける入力を確認する診断アプリ。デバイス情報や全軸の値、ボタン・ポインタ履歴、タッチパッドのジェスチャー判定をまとめて観察できます。",
-      "detail": "こいつは、PS4／PS5コントローラをAndroidで使う前に、実際の入力イベントがどう届いているかを確かめるための診断アプリだな。Bluetoothをアプリから直接操作せず、Androidの標準入力イベントを監視して、接続されたGAMEPAD／JOYSTICKやタッチパッド候補のデバイス情報、全MotionRange、軸の生値、ボタン操作を画面に出している。ポインタの座標やpressure、tool type、button stateも履歴として追え、タッチパッドのスワイプや対角急停止ジェスチャー、ACTION_CANCELによる破棄まで確認できるってわけだ。MOVEや軸履歴は間引きつつ重要イベントを保護し、コントローラ操作が画面のボタンや戻る操作へ流れないようイベントも消費している。端末やAndroidのバージョンによる軸割り当ての違いを調べる道具で、デッドゾーンやESP32への通信、切断時の安全停止まではまだ実装されていない。",
+      "title": "PS4/PS5入力診断アプリ",
+      "summary": "Androidに届いたPS4／PS5コントローラの入力を可視化し、機種ごとの軸割り当てやタッチパッドの挙動を確かめる診断アプリだ。Bluetooth接続後のMotionEventを監視し、軸値・ボタン・ポインタ・ジェスチャーを履歴として確認できる。",
+      "detail": "こいつは、PS4／PS5コントローラがAndroidへ実際にどんな入力を届けているかを調べるための診断アプリだな。中ではBluetoothそのものを制御せず、Android標準の入力イベントからゲームパッドやタッチパッド候補を検出し、デバイス情報、全MotionRangeの生値、ボタン履歴、ポインタ座標を表示してる。タッチパッドのスワイプや対角急停止も判定でき、MOVEや軸履歴は間引きながら重要イベントを残す構成だ。機種やAndroidの違いで軸の割り当てが変わるため、表示された値を見て実機ごとの対応を確定する使い方になる。ただし、デッドゾーンやESP32への通信、安全停止といった本番用の制御機能はまだ診断結果の先に置かれている。",
+      "closingRemark": "入力の正体はかなり見えるが、操縦まではまだ任せない。その慎重さが、このアプリの仕事ぶりだな。",
       "features": [
-        "接続デバイスと入力ソースの検出・表示",
-        "全MotionRangeと軸パラメータの列挙",
-        "ボタン・ポインタ・モーション履歴の分離表示",
-        "タッチパッドのスワイプと急停止ジェスチャー判定",
-        "ジェスチャー判定のJVM単体テスト"
+        "ゲームパッドとタッチパッド候補デバイスを検出",
+        "全軸の生値とMotionRange情報を一覧表示",
+        "ボタン・ポインタ・軸の履歴を分離して記録",
+        "タッチパッドのスワイプや急停止を判定",
+        "入力イベントが画面操作へ流れないよう消費"
       ],
       "technologies": [
         "Kotlin",
@@ -1676,19 +1713,19 @@
         "MotionEvent",
         "Bluetooth",
         "Gradle",
+        "JVM単体テスト",
         "Android Studio",
-        "GitHub Actions",
-        "JDK 17"
+        "GitHub Actions"
       ],
       "categories": [
         "Android",
-        "入力診断",
-        "ゲームコントローラ",
-        "開発ツール"
+        "コントローラ診断",
+        "Bluetooth",
+        "入力テスト"
       ],
       "status": "ツール",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1319820480,
       "sourcePushedAt": "2026-08-02T11:28:42Z",
       "sourceDefaultBranch": "main",
@@ -1706,38 +1743,39 @@
         "language": "Kotlin"
       },
       "sourceFingerprint": "67999fe873133a64c56098f8783cd1489f5fdbebc616ab1707dbb53e51e9d7c0",
-      "generatedAt": "2026-09-04T10:12:53.238Z"
+      "generatedAt": "2026-09-04T11:01:11.884Z"
     },
     "dualsense-input-inspector": {
       "title": "DualSense入力解析ツール",
-      "summary": "PS5用DualSenseの入力レポートを、ブラウザから直接読み取り可視化する調査用ツール。スティックやボタンだけでなく、タッチパッド、IMU、バッテリー、生バイト列まで確認できます。",
-      "detail": "こいつは、PS5用DualSenseが送るHID入力レポートの中身を調べるためのブラウザツールだな。ChromeまたはEdgeのWebHIDでコントローラへ接続し、Bluetooth拡張入力を開始したうえで、スティックやL2/R2、各ボタン、タッチパッド2点、ジャイロ、加速度、シーケンス番号、センサー時刻、バッテリー状態を画面に出している。Bluetoothの0x31 / 77 bytesとUSBの0x01 / 63 bytesを判別し、共通の解析処理で値を扱えるほか、入力レポート全体のrawバイト列も見られるから、未知の領域を操作前後で比較する用途にも向いてる。GitHub Pagesまたはlocalhostで動かせるが、確認済みの中心はWindowsへBluetooth接続したDualSenseで、モーション値の物理単位や予約領域の意味まではまだ確定していない。",
+      "summary": "PS5 DualSenseの入力レポートを、ChromeやEdgeのWebHID経由で直接読み取り、スティックやボタン、タッチパッド、IMU、バッテリーまで一覧表示する調査用ツール。Bluetoothの生データと復号結果を並べて、未知の値も追跡できます。",
+      "detail": "こいつは、PS5用DualSenseが送ってくるHID入力レポートの中身を、ブラウザ上で調べるためのツールだな。WebHIDでVendor IDとProduct IDを絞って接続し、BluetoothではFeature Report 0x05やゼロ指令の出力で拡張入力を開始してから、受信したpayloadをoffsetごとに解析してる。スティックやL2/R2、各ボタン、タッチパッド2点、ジャイロ、加速度、タイムスタンプ、バッテリー、受信レートまで画面で確認でき、下部には全バイトも残るから、入力を一つだけ動かして未知の領域を切り分けられる。USBの0x01 / 63 bytesにも構造上は対応しているが、実際に確認済みなのはWindowsでBluetooth接続したDualSenseとChrome / Edgeだ。モーションの物理単位や予約領域の意味、DualSense Edgeや他OSまではまだ検証中ってところだ。",
+      "closingRemark": "77 bytesの正体を追う道具で、予約領域だけはまだ黙秘を続けている。",
       "features": [
-        "DualSenseの入力値をWebHIDでリアルタイム表示",
-        "BluetoothとUSBの入力レポート形式に対応",
-        "タッチパッド、ジャイロ、加速度、バッテリーを解析",
-        "入力レポートのrawバイト列と受信レートを確認",
-        "GitHub Pagesやlocalhostで実行可能"
+        "WebHIDでDualSenseへ直接接続",
+        "Bluetooth拡張入力の開始処理とフォールバック送信",
+        "スティック・ボタン・タッチ・IMU・バッテリーの可視化",
+        "Report ID、payload長、受信レート、生バイトの表示",
+        "BluetoothとUSBで異なるoffsetを切り替えて解析"
       ],
       "technologies": [
         "JavaScript",
         "HTML",
         "CSS",
-        "WebHID API",
+        "WebHID",
         "GitHub Pages",
         "Chrome",
         "Edge",
         "DualSense"
       ],
       "categories": [
-        "入力解析",
-        "Webツール",
-        "ハードウェア",
-        "開発者向け"
+        "ツール",
+        "ハードウェア解析",
+        "WebHID",
+        "ゲームコントローラー"
       ],
       "status": "ツール",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1319902851,
       "sourcePushedAt": "2026-08-02T07:11:45Z",
       "sourceDefaultBranch": "main",
@@ -1755,38 +1793,39 @@
         "language": "JavaScript"
       },
       "sourceFingerprint": "2779b915d7d61408f5a894542c85e946ceb622b54156392e3c841a668fb344e9",
-      "generatedAt": "2026-09-04T10:13:09.101Z"
+      "generatedAt": "2026-09-04T11:01:28.280Z"
     },
     "controller-web-demo": {
       "title": "DualSense操作Webデモ",
-      "summary": "PS4／PS5コントローラをブラウザから読み取り、スマートフォン経由の機器操作に必要な入力UIやジェスチャーを確認する静的Webデモです。DualSenseのWebHID拡張入力、タッチパッド操作、急停止、安全な有効化条件まで検証できます。",
-      "detail": "こいつは、DualSenseをブラウザにつないで、将来のスマートフォン経由ESP32操作に使う入力経路を確かめるためのデモだ。中ではWebHIDでBluetooth拡張入力レポート0x31を受け取り、左右スティックとL2／R2、中央タッチパッドの座標や接触状態を読み取っている。上方向のスワイプで推進速度を増減し、対角スワイプでは推進を0にして操作を無効化する急停止も働くほか、入力値や生レポートの診断表示も確認できる。Gamepad APIや画面上のシミュレーターも備えているが、ESP32へのWi-Fi送信や切断時の実機フェイルセーフまではまだ実装されていない。",
+      "summary": "PS4／PS5コントローラの入力をブラウザで読み取り、スマートフォン操作系の画面やジェスチャー判定を確認する静的Webデモ。DualSenseのWebHID拡張入力からタッチ座標、スティック、トリガーを取得し、急停止や診断表示まで試せる。",
+      "detail": "こいつは、PS4／PS5コントローラをブラウザから扱い、将来のスマートフォン経由ESP32操作系に必要な入力取得と安全処理を確かめるためのデモだ。中ではWebHIDでDualSenseのFeature Report 0x05を読み、Bluetooth拡張入力レポート0x31から左右スティック、L2／R2、中央タッチパッドの座標を解析してる。上下一定距離のスワイプで推進速度を5%ずつ変え、対角スワイプでは推進を0にして操作を無効化する急停止まで入っているし、入力が中立でなければ有効化しない。Gamepad APIや画面上のシミュレーターも使えるが、直近のWebHID入力を優先し、生バイトや変化したoffsetも診断できる。現状はESP32へのWi-Fi送信や切断時のフェイルセーフまでは実装されず、Chromium系ブラウザとDualSenseの環境に依存する試作段階だな。",
+      "closingRemark": "77バイトの中身は覗けるが、ESP32の向こうへ操縦値を渡す仕事はまだこれからだな。",
       "features": [
-        "DualSenseのBluetooth WebHID入力を直接取得",
-        "タッチパッドの座標表示とスワイプ操作",
-        "推進速度の変更と対角スワイプによる急停止",
-        "中立確認を伴うコントローラ操作の有効化",
-        "HIDレポートの生バイト診断と入力シミュレーター"
+        "DualSenseのBluetooth拡張入力をWebHIDで直接解析",
+        "タッチパッドのスワイプで推進速度や急停止を操作",
+        "中立確認付きの操作有効化と急停止解除",
+        "WebHID、Gamepad API、画面シミュレーターの入力切り替え",
+        "HIDレポートのoffset変化と生バイト診断"
       ],
       "technologies": [
         "JavaScript",
-        "HTML",
-        "CSS",
         "WebHID API",
         "Gamepad API",
-        "DualSense",
         "Bluetooth HID",
-        "GitHub Pages"
+        "DualSense",
+        "HTML",
+        "CSS",
+        "ESP32"
       ],
       "categories": [
         "Webデモ",
-        "入力デバイス",
-        "ブラウザ操作",
-        "組み込み連携"
+        "コントローラ制御",
+        "入力解析",
+        "IoT連携"
       ],
-      "status": "ツール",
+      "status": "試作",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1319841461,
       "sourcePushedAt": "2026-08-02T06:51:15Z",
       "sourceDefaultBranch": "main",
@@ -1804,37 +1843,39 @@
         "language": "JavaScript"
       },
       "sourceFingerprint": "005a44270307ffb323a054916c4a3747af105e5c4da8db35ff1453ee18d51aa7",
-      "generatedAt": "2026-09-04T10:13:26.107Z"
+      "generatedAt": "2026-09-04T11:01:48.074Z"
     },
     "mediapipe-hand-demo": {
-      "title": "MediaPipe手認識デモ",
-      "summary": "ブラウザのカメラ映像から手を検出し、ランドマークや簡易ジェスチャーを確認できる日本語デモです。推論結果やFPS、GPU/CPUの利用状況を表示でき、GitHub Pagesへビルドなしで公開できます。",
-      "detail": "こいつは、MediaPipe Hand Landmarkerをブラウザだけで試し、カメラ映像から手の動きを見える形にするデモだな。中では最大2つの手を検出し、片手21個のランドマーク、左右の判定、信頼度、正規化座標を描画してる。ランドマーク同士の位置関係から「つまむ」などの簡易ジェスチャーを判定し、人差し指の位置を操舵や推力の仮入力へ変換するほか、推論時間や処理FPS、GPU/CPU Delegate、結果JSONも確認できる。Vanilla HTML/CSS/JavaScriptで構成され、GitHub Pagesならビルドやバックエンドなしで公開できるってわけだ。ただしジェスチャー判定は公式Gesture Recognizerではなく独自ルールで、実機制御へつなぐ場合の安全処理までは別途実装が必要になる。",
+      "title": "MediaPipe手検出ラボ",
+      "summary": "ブラウザのカメラ映像から手の位置やジェスチャーをリアルタイムに確認する日本語デモ。最大2 handsの21ランドマーク、信頼度、推論性能、簡易的な操舵・推力値まで、ビルドやバックエンドなしで試せる。",
+      "detail": "こいつは、MediaPipe Hand Landmarkerをブラウザだけで試すための説明用デモだ。中ではカメラ映像をローカル推論し、最大2つの手それぞれについて21個のランドマークを描画、右手・左手の判定や信頼度、正規化座標、推論結果のJSONまで表示してる。ランドマークの位置関係から「つまむ」などのジェスチャーを独自ルールで判定し、人差し指の位置を仮の操舵・推力値にも変換できるほか、FPS、推論時間、GPU/CPU Delegateも確認できる。Vanilla HTML/CSS/JavaScriptで構成され、GitHub PagesとActionsでそのまま公開できるのが手軽なところだな。ただしモデルとWASMは外部から読み込むため初回は通信が必要で、公式Gesture Recognizerの分類ではなく、実機制御には通信途絶時停止や独立した緊急停止を別途用意しなきゃならない。",
+      "closingRemark": "指先から操舵まで話は進むが、実機を止める役目だけはまだ画面の外に置いてある。",
       "features": [
         "カメラ映像から最大2つの手をリアルタイム検出",
-        "手ごとの21ランドマークと左右・信頼度を表示",
-        "位置関係による簡易ジェスチャー判定",
-        "人差し指を操舵・推力の仮入力へ変換",
-        "推論結果、FPS、遅延、GPU/CPUを可視化"
+        "片手あたり21個のランドマークと骨格を描画",
+        "手の種類、信頼度、正規化座標、結果JSONを表示",
+        "独自ルールによる簡易ジェスチャー判定",
+        "人差し指の位置を操舵・推力値へ変換し性能も表示"
       ],
       "technologies": [
         "MediaPipe Tasks Vision 0.10.35",
         "Hand Landmarker",
         "Hand Landmarker float16 model",
-        "WebAssembly",
         "Vanilla JavaScript",
         "HTML",
         "CSS",
-        "GitHub Pages"
+        "GitHub Pages",
+        "GitHub Actions"
       ],
       "categories": [
         "ツール",
-        "デモ",
-        "コンピュータビジョン"
+        "ブラウザデモ",
+        "コンピュータビジョン",
+        "機械学習"
       ],
-      "status": "ツール",
+      "status": "完成品",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1319820233,
       "sourcePushedAt": "2026-08-02T04:40:43Z",
       "sourceDefaultBranch": "main",
@@ -1852,18 +1893,19 @@
         "language": "JavaScript"
       },
       "sourceFingerprint": "e1bf551b0f75a922f98e0f1ef4916b983ec50982968efe561a9a8ca7d62c7b7c",
-      "generatedAt": "2026-09-04T10:13:42.925Z"
+      "generatedAt": "2026-09-04T11:02:05.453Z"
     },
     "pico-copter-uf2-builder": {
-      "title": "Pico Copter用UF2ビルダー",
-      "summary": "Raspberry Pi Pico向けPico CopterファームウェアをGitHub Actionsでビルドし、生成したUF2をGitHub Pagesから配布する仕組みだ。編集しやすい独立フォルダ構成と、依存関係のキャッシュにも対応している。",
-      "detail": "こいつは、Raspberry Pi Picoで動くPico Copterのファームウェアを、GitHub上で編集・ビルド・配布するための仕組みだな。中ではfirmware/pico_copter/に制御、センサー、EKF、PWM、無線通信などのソースと独立したCMake設定をまとめ、GitHub ActionsがPico SDKとEigenを使ってUF2を生成してる。mainへの変更や手動実行でビルドが走り、成功したファームウェアはGitHub Pagesからダウンロードできるほか、Pull Requestでは公開せずコンパイル確認だけを行う。生成物にはUF2のほかSHA-256、サイズ情報、マニフェスト、各種ログも含まれる。元リポジトリとのサブモジュール連携や自動同期はなく、実際の飛行制御の詳しい仕様まではREADMEだけでは分からない。",
+      "title": "Pico Copter UF2ビルダー",
+      "summary": "Raspberry Pi Pico向けPico CopterファームウェアをGitHub Actionsでビルドし、生成したUF2をGitHub Pagesから配布する仕組みだ。ファームウェアを単独で持ち出せる構成に分け、Pull Requestでは公開せずコンパイル確認だけ行う。",
+      "detail": "こいつは、Raspberry Pi Picoで動かすPico Copterのファームウェアを、GitHub上でビルドしてUF2として配布するためのリポジトリだな。中ではfirmware/pico_copterにプログラム本体と独立したCMakeLists.txt、ビルド手順をまとめ、GitHub ActionsがPico SDKとEigenを使ってコンパイルしてる。mainへの変更や手動実行が成功すれば、UF2とハッシュ、サイズ情報、ログ類を生成し、最後に成功したUF2をGitHub Pagesへ公開するという流れだ。C++17、Pico SDK 2.3.0、Eigen 3.4.0を固定し、SDKやEigen、ccacheもキャッシュするから、継続的な編集と配布に向いている。元リポジトリとのサブモジュール連携や自動同期はなく、Pull Requestではビルド確認まででPages公開は行わない。",
+      "closingRemark": "最後に成功したUF2だけがPagesに残る。失敗作はログの中で静かに余生を送るわけだな。",
       "features": [
-        "GitHub ActionsによるPico Copterファームウェアの自動ビルド",
-        "生成したUF2をGitHub Pagesで配布",
-        "ファームウェアを持ち出せる独立フォルダに分離",
-        "Eigen・Pico SDK・ccacheのキャッシュによるビルド高速化",
-        "Pull Requestでは公開せずコンパイル確認のみ実行"
+        "GitHub ActionsでPico Copterを自動ビルド",
+        "成功したUF2をGitHub Pagesで配布",
+        "ファームウェアフォルダを単独で共有・ビルド可能",
+        "Pull Requestではコンパイル確認のみ実行",
+        "Pico SDK・Eigen・ccacheをキャッシュ"
       ],
       "technologies": [
         "Raspberry Pi Pico",
@@ -1873,17 +1915,17 @@
         "CMake",
         "GitHub Actions",
         "GitHub Pages",
-        "UF2"
+        "ccache"
       ],
       "categories": [
         "組み込み",
         "ファームウェア",
-        "ビルド自動化",
-        "ドローン"
+        "CI/CD",
+        "ビルドツール"
       ],
       "status": "ツール",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1315717800,
       "sourcePushedAt": "2026-07-29T23:56:20Z",
       "sourceDefaultBranch": "main",
@@ -1901,38 +1943,39 @@
         "language": "C"
       },
       "sourceFingerprint": "ed68fdc925fb11934085611140d0da72ff02155ecc37da5fb0c050e3833ccbcb",
-      "generatedAt": "2026-09-04T10:13:59.377Z"
+      "generatedAt": "2026-09-04T11:02:24.264Z"
     },
     "pico-uf2-web-builder": {
       "title": "Pico向けUF2ビルダー",
-      "summary": "Raspberry Pi Pico向けのC/C++アプリをgithub.devで編集し、GitHub Actionsで選択したボード用のUF2へビルドする仕組みだ。生成物はGitHub Pagesから取得でき、Pico SDKとccacheのキャッシュで再ビルドも効率化されている。",
-      "detail": "こいつは、手元のPCにPico SDKやCMake、ARM GCC、Dockerを入れず、Raspberry Pi Pico向けアプリを編集からUF2配布まで進めるための公開プロジェクトだ。github.devでC/C++コードを直してCommit & Pushしたあと、GitHub Actionsでアプリとボードを選ぶと、GitHub Runner上でPico SDKを使ってビルドし、UF2とログ、サイズ情報をGitHub Pagesへ公開する。Pico、Pico W、Pico 2、Pico 2 Wに対応し、SDKキャッシュとアプリ・ボード・SDK単位のccacheで再ビルドを速めているところが特徴だな。収録例はLED点滅とUSBシリアル出力で、PagesからUF2を落としてBOOTSELモードのPicoへコピーできる。ただし、ブラウザからのWebUSB直接書き込みはまだ実装されていない。",
+      "summary": "Raspberry Pi Pico向けC/C++アプリをgithub.devで編集し、GitHub ActionsでUF2へビルドしてGitHub Pagesから配布する仕組みだ。Pico SDKとccacheのキャッシュで再ビルドを速め、複数のPico系ボードを選んで扱える。",
+      "detail": "こいつは、手元のPCにPico SDKやCMake、ARM GCC、Dockerを入れずに、Raspberry Pi Pico向けのC/C++アプリをUF2へ仕上げるための公開ビルダーだな。github.devでコードを編集してCommit & Pushし、GitHub Actionsからアプリとボードを選ぶと、GitHub Runner上でPico SDK 2.3.0を使ってコンパイルする。生成物はUF2、SHA-256、サイズ情報、build.logとして、最後に成功した1回分だけGitHub Pagesへ公開される。Pico、Pico W、Pico 2、Pico 2 Wに対応し、SDKキャッシュとアプリ・ボード別のccacheで再ビルドを短縮してる。収録例はLED点滅とUSBシリアル出力で、ただし現状はPagesからUF2をダウンロードしてBOOTSEL経由で書き込む方式で、WebUSBによる直接書き込みまでは実装されていない。",
+      "closingRemark": "Pagesに置かれるのは最後の成功ビルドだけ。失敗作まで飾らないあたり、展示棚としては妙に堅実だな。",
       "features": [
-        "github.devでの編集からUF2公開までをGitHub上で完結",
-        "GitHub Actionsでアプリと対応ボードを選択してビルド",
-        "Pico SDKとccacheによるビルドキャッシュ",
-        "GitHub Pagesで最新の成功ビルドを配布",
-        "アプリIDと対応ボードの許可リスト検証"
+        "github.devでの編集からActionsビルドまでをブラウザ中心で完結",
+        "Pico SDKとccacheを使った再ビルド高速化",
+        "4種類のPico系ボードをビルド時に選択可能",
+        "UF2とbuild.logなどをGitHub Pagesへ公開",
+        "アプリとボードを許可リストおよびproject.jsonで検証"
       ],
       "technologies": [
-        "C",
-        "C++",
         "JavaScript",
         "HTML",
         "CSS",
+        "C",
         "CMake",
         "GitHub Actions",
+        "Raspberry Pi Pico",
         "Pico SDK 2.3.0"
       ],
       "categories": [
-        "組み込み開発",
-        "ビルドツール",
-        "GitHub Actions",
-        "Raspberry Pi Pico"
+        "開発ツール",
+        "組み込み",
+        "CI/CD",
+        "ファームウェア"
       ],
       "status": "ツール",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1315538573,
       "sourcePushedAt": "2026-07-29T04:49:01Z",
       "sourceDefaultBranch": "main",
@@ -1950,37 +1993,36 @@
         "language": "JavaScript"
       },
       "sourceFingerprint": "75afde2b6a14f70c6c8cb3c8e5aed9fa683c1e1e54c6a0bd6baff0667f047781",
-      "generatedAt": "2026-09-04T10:14:33.623Z"
+      "generatedAt": "2026-09-04T11:02:42.350Z"
     },
     "splitsend-web": {
-      "title": "ブラウザ完結型ファイル分割ツール",
-      "summary": "大きな単一ファイルを指定サイズ以下のパーツへ分割し、受信側で元のファイルへ復元できる静的Webツール。サーバーへアップロードせず、ブラウザ内で分割・検証・保存まで完結します。",
-      "detail": "こいつは、Discordやメールなどの容量制限に合わせて大きな単一ファイルを分割し、相手側で元どおりに復元するためのWebツールだな。中ではファイルをバイト列として扱い、指定サイズごとのパーツと復元情報を作成して、復元時には不足・重複・サイズ不一致を確認しながら正しい順番で結合してる。各パーツと復元後のファイルにはSHA-256検証をかけ、元ファイルと1バイト単位で一致したことまで確かめられる。処理は単一のindex.htmlによる静的アプリとしてブラウザ内で完結し、サーバー送信や外部CDN、アナリティクスも使わない。ただし暗号化や圧縮の道具ではなく、フォルダーの直接分割にも対応していないため、デスクトップ版ChromeまたはEdgeで使う前提ってところだ。",
+      "title": "ブラウザ内ファイル分割・復元",
+      "summary": "大きな単一ファイルをDiscordなどの容量制限に合わせて分割し、受信側で元どおりに復元する静的Webツール。サーバーへ送信せず、ブラウザ内で分割・保存・SHA-256検証まで完結します。",
+      "detail": "こいつは、大きな単一ファイルを送信しやすいサイズへ分け、受信側で元のファイルに戻すためのWebツールだな。中ではファイルをバイト列として扱い、9.5 MBや25 MB、49 MB、95 MB、カスタムサイズのパーツへ分割し、復元に必要な情報を.splitsend.jsonへ記録してる。復元時は欠落や重複、サイズ不一致を見つけ、各パーツと復元後の全体をSHA-256で検証するから、1バイト単位で一致したか確認できる。処理はすべてブラウザ内で行われ、Pythonや専用アプリ、外部サーバーは必要ない。単一ファイル向けなのでフォルダーは先にZIP化する必要があり、安定した利用にはGitHub Pages上のデスクトップ版ChromeまたはEdgeが推奨されている。",
+      "closingRemark": "暗号化も圧縮もしない。ただ、散らばりがちなパーツを専用フォルダーへ整列させる手際はいい。",
       "features": [
-        "指定サイズで単一ファイルを分割・復元",
-        "Discord向け9.5 MBなどのサイズプリセット",
-        "不足・重複・サイズ不一致の検出",
-        "各パーツと復元結果のSHA-256検証",
-        "サーバーへ送信せずブラウザ内で処理"
+        "9.5 MBから任意サイズまで指定してファイルを分割",
+        "ブラウザ内だけで読み込み・分割・復元・保存を実行",
+        "欠落・重複・サイズ不一致のパーツを検出",
+        "各パーツと復元後ファイルをSHA-256で検証",
+        "分割結果を専用サブフォルダーへまとめて保存"
       ],
       "technologies": [
         "HTML",
         "JavaScript",
-        "Webブラウザ",
         "GitHub Pages",
         "SHA-256",
-        "Google Chrome",
-        "Microsoft Edge"
+        "WebブラウザAPI"
       ],
       "categories": [
         "Webツール",
-        "ファイル処理",
-        "静的Webアプリ",
-        "プライバシー"
+        "ファイル分割",
+        "ブラウザアプリ",
+        "静的サイト"
       ],
       "status": "ツール",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1304998293,
       "sourcePushedAt": "2026-07-18T15:47:54Z",
       "sourceDefaultBranch": "main",
@@ -1998,18 +2040,19 @@
         "language": "HTML"
       },
       "sourceFingerprint": "aba66ded7b81a906ef075c52208f1eae034efa547107b7902527b0464444f962",
-      "generatedAt": "2026-09-04T10:14:49.897Z"
+      "generatedAt": "2026-09-04T11:02:59.260Z"
     },
     "waypoint_drift_los_goal_time_sim": {
-      "title": "ウェイポイント漂流シミュレータ",
-      "summary": "ウェイポイント間の漂流と、LOS（Line of Sight）誘導、目標到達時間を扱うシミュレーション用ページと見られる。HTMLの単一ファイルで構成されているが、具体的な計算方法や操作方法は資料から確認できない。",
-      "detail": "こいつは、ウェイポイント間を漂流する対象について、LOS（Line of Sight）による誘導と目標到達時間を調べるためのシミュレーションらしい。ルート名から扱うテーマまでは読めるものの、公開されているのはindex.htmlだけで、内部のモデルや入力項目、結果の表示方法までは分からない。HTML単体で動く試作ページかツールというところだが、実際の挙動を断定するにはファイルの中身を直接確認する必要があるな。",
+      "title": "ウェイポイント航法シミュレータ",
+      "summary": "ウェイポイント、ドリフト、LOS（視線方向）、ゴール到達時間を扱うシミュレーション用リポジトリらしい。確認できるファイルは単一のHTMLで、ブラウザ上で動く構成と見られるが、実装の詳細や操作方法までは資料から判断できない。",
+      "detail": "こいつは、リポジトリ名から見る限り、ウェイポイント航法にドリフトとLOS（Line of Sight）による目標追従、それにゴール到達時間の要素を加えて挙動を確かめるシミュレータらしい。中身として確認できるのは、約71KBのHTMLでできたindex.htmlが1つだけで、ブラウザで開く単一ページ型の試作かツールというところだな。ただ、READMEもコード抜粋もなく、どんな運動モデルや制御則を使っているのか、入力を変えられるのかまでは分からない。名前の示す範囲を越えた機能は、実装を直接読まないと判断できない。",
+      "closingRemark": "航法の題材は見えるが、地図も操縦桿も資料の外だ。まずはindex.htmlを開くところから始まる。",
       "features": [
-        "ウェイポイントを使った経路・目標のシミュレーションらしい",
-        "漂流（drift）の影響を扱う構成",
-        "LOS誘導をテーマにしている",
-        "目標到達時間の評価を想定している",
-        "単一のHTMLファイルで構成されている"
+        "ウェイポイント航法を扱う構成",
+        "ドリフトの影響を想定したシミュレーション",
+        "LOS（視線方向）に基づく目標追従要素",
+        "ゴール到達時間を扱う設計らしさ",
+        "単一HTMLファイルによる構成"
       ],
       "technologies": [
         "HTML"
@@ -2017,11 +2060,11 @@
       "categories": [
         "シミュレーション",
         "航法",
-        "誘導制御"
+        "可視化"
       ],
-      "status": "実験",
+      "status": "不明",
       "confidence": "low",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1289041151,
       "sourcePushedAt": "2026-07-04T09:11:59Z",
       "sourceDefaultBranch": "main",
@@ -2039,38 +2082,39 @@
         "language": "HTML"
       },
       "sourceFingerprint": "dbe96e2bb9ebbc72c056cd6549214f32d1c7e3ce9eab802f3ce40693bced0841",
-      "generatedAt": "2026-09-04T10:15:02.532Z"
+      "generatedAt": "2026-09-04T11:03:14.375Z"
     },
     "weipointotuijyuu2_drift_los_sim": {
       "title": "水上機体の外乱追従シミュレータ",
-      "summary": "水上機体のゲート生成と経路追従を、ブラウザ上で検証するシミュレーション。Drift Vector LOSによる横流れ補正や、Dubins復帰ゲート、旋回半径の比較を通じて、実機向け制御の性質を確かめられる。",
-      "detail": "こいつは、水上機体が風や水流で流されてもコースへ戻れるかを、ブラウザ上で確かめるためのシミュレーションでな。緯度経度のブイ配置をローカルXYへ変換し、円弧ゲートとHermite曲線の整流ゲートから追従パスを作って、横ずれと外乱ベクトルを見ながらDrift Vector LOSで目標方位と曲率を計算してる。通常経路には物理最小旋回半径Rminより大きいRgateを使い、余った旋回能力を流れへの補正に回す設計が特徴だ。大きく外れたときはDubins復帰ゲートを生成し、半径倍率ごとの最大ずれや走行距離、成功率も比較できる。ただしGNSSやBNO08Xの誤差、通信遅延、波や船体の非線形までは簡略化されているから、実機へそのまま適用するものではない。",
+      "summary": "水上機体が風や水流で横へ流される状況を想定し、Drift Vector LOSによる経路追従と外乱復帰をブラウザで検証するシミュレーションだ。RgateとRminを分離したゲート生成、Dubins復帰、複数条件の比較機能を備えている。",
+      "detail": "こいつは、風や水流で横へ流される水上機体が、制御しやすい経路を追従できるか確かめるブラウザシミュレーションでな。中では緯度経度のブイ配置をローカルXYへ変換し、円弧ゲートとHermite曲線の整流ゲートからパスを作る。そのうえで横ずれと世界座標の外乱ベクトルを使ってDrift Vector LOSの目標方位を求め、曲率指令に変換して簡略化した船体モデルを動かしている。通常ゲートには余裕を持たせたRgate、制御限界とDubins復帰には物理最小旋回半径Rminを使い分け、大きく外れれば復帰ゲートや安全退避へ切り替わる仕組みだ。Rgateの倍率ごとの成功率、ずれ、距離、時間、蛇行も比較できる。ただしGNSSやBNO08Xの実機ノイズ、通信遅延、波や横滑りまでは再現していない。",
+      "closingRemark": "Rgateを大きくすれば道は楽になるが、実機の荒波までこの画面が代わりに走ってくれるわけじゃないな。",
       "features": [
-        "Drift Vector LOSによる横流れ補正",
-        "RminとRgateを分けた旋回余裕の検証",
-        "Dubins復帰ゲートと安全退避の確認",
-        "流れや周期風などの外乱条件を変更可能",
-        "旋回半径倍率ごとの性能比較"
+        "Drift Vector LOSによる外乱補正付き経路追従",
+        "RgateとRminを分離した旋回余裕の検証",
+        "Dubins復帰ゲートと安全退避ゲート",
+        "外乱ベクトルの推定・フィルタ表示",
+        "旋回半径倍率ごとの走行比較"
       ],
       "technologies": [
         "HTML",
-        "JavaScript",
         "GitHub Pages",
         "Drift Vector LOS",
         "Dubins経路",
         "Hermite曲線",
         "GNSS",
-        "BNO08X"
+        "BNO08X",
+        "ローカルXY座標変換"
       ],
       "categories": [
         "シミュレーション",
-        "制御工学",
-        "自律航行",
-        "水上ロボット"
+        "制御",
+        "航法",
+        "水上機体"
       ],
       "status": "実験",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1288047164,
       "sourcePushedAt": "2026-07-03T08:52:51Z",
       "sourceDefaultBranch": "main",
@@ -2088,37 +2132,39 @@
         "language": "HTML"
       },
       "sourceFingerprint": "2ba3a86987342fe196ea55e8fc32e3d15edfb45ca605688e0976d1f28745f1ba",
-      "generatedAt": "2026-09-04T10:15:20.785Z"
+      "generatedAt": "2026-09-04T11:03:33.363Z"
     },
     "weipointotuijyuu2": {
       "title": "ウェイポイント航法シミュレータ",
-      "summary": "自律航行体や小型船舶を想定し、ブイ列に沿ったウェイポイント追従と外乱からの復帰をブラウザ上で検証するシミュレータ。最小旋回半径や安全退避まで含めて、航法アルゴリズムの挙動を視覚的に確認できる。",
-      "detail": "こいつは、自律航行体や小型船舶がブイ列のコースを安全に回るための航法アルゴリズムを、ブラウザ上で試すシミュレータだ。中ではブイの外側にRmin円弧ゲートを生成し、整流区間をHermite補間でつないだうえで、前方注視によるPure Pursuit風の追従を行ってる。外乱ボタンで船を経路から外せるほか、逸脱時には現在姿勢からDubins経路を計算して復帰ゲートを作り、失敗が続けば安全退避へ切り替える構成だな。AからHを往復する周回コースや、しきい値、船速、最小旋回半径などを画面から調整し、経路追従の成否を視覚的に比較できる。実機の操舵やGPS誤差そのものを再現するものではなく、あくまでブラウザ内の平面シミュレーションというところだ。",
+      "summary": "自律航行体や小型船舶が、ブイを順番に回るコースを安全に追従できるかブラウザで検証するシミュレータだ。最小旋回半径を守るゲート生成、外乱からのDubins復帰、失敗時の安全退避まで確認できる。",
+      "detail": "こいつは、自律航行体や小型船舶がブイ列のコースを安全に回れるか、ブラウザ上で確かめるためのシミュレータだな。中ではブイの外側にRminを満たす円弧ゲートを作り、Hermite補間の整流区間で次のブイへつないだ経路を、前方注視のPure Pursuit風制御で追従してる。AからHを往復するコースを対象に、船速や各種しきい値を調整しながら、小外乱・大外乱を入れたときの逸脱と復帰を視覚的に見られる。外れた場合は現在姿勢から複数の復帰先を比較してDubins経路を選び、連続失敗や危険接近時には安全退避へ切り替わる仕組みだ。ただし、実機のGPSや舵・推力系を動かすものではなく、位置更新もシミュレーション用に限られる。",
+      "closingRemark": "ブイを避けるための経路が、外乱には逃げ道まで用意している。船より段取りのほうが慎重ってわけだな",
       "features": [
-        "ブイ外側のRmin円弧ゲートと整流区間の自動生成",
-        "前方注視によるウェイポイント追従",
-        "大外乱・小外乱を投入した経路逸脱の検証",
-        "Dubins経路による姿勢と最小旋回半径を考慮した復帰",
-        "復帰失敗時の再計算と安全退避"
+        "ブイ外側にRmin制約つきの円弧ゲートを自動生成",
+        "Hermite補間による整流区間でゲート列を接続",
+        "前方注視による通常経路追従と船体応答をシミュレーション",
+        "外乱投入後にDubins経路で元のゲート列へ復帰",
+        "復帰失敗時の再計算と安全退避を実装"
       ],
       "technologies": [
         "HTML",
         "JavaScript",
         "GitHub Pages",
-        "Dubins経路",
         "Pure Pursuit",
+        "Dubins経路",
         "Hermite補間",
-        "GPS座標の平面変換"
+        "GPS座標変換",
+        "2次元平面座標"
       ],
       "categories": [
-        "シミュレータ",
-        "自律航法",
-        "航路計画",
-        "ブラウザツール"
+        "航法シミュレーション",
+        "自律航行",
+        "ブラウザツール",
+        "経路計画"
       ],
       "status": "ツール",
-      "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "confidence": "medium",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1287717715,
       "sourcePushedAt": "2026-07-03T04:11:32Z",
       "sourceDefaultBranch": "main",
@@ -2136,18 +2182,19 @@
         "language": "HTML"
       },
       "sourceFingerprint": "31e9d940dc8172b8d7eb4f0d06a28851ba1139f96ac08edd6e9a10e0c7d0b528",
-      "generatedAt": "2026-09-04T10:15:38.944Z"
+      "generatedAt": "2026-09-04T11:03:51.991Z"
     },
     "waypoint_tuijyuu": {
       "title": "ウェイポイント追従デモ",
-      "summary": "単一のHTMLファイルで構成された、ウェイポイントや経路をブラウザ上で確認するための小規模なデモらしい。ファイル名にはDubins経路、ゲート、リカバリ、再計画などの要素が含まれている。",
-      "detail": "こいつは、ブラウザ上でウェイポイント経路の挙動を確認するための小さなHTMLデモらしい。リポジトリにはindex.htmlしかなく、GitHub Pagesの公開先も用意されている。直近のコミットで、A地点からゴールまでのコース、ゲート、リカバリ、再計画、最小旋回半径、Dubins経路を含む名前のファイルがindex.htmlへ改名されているから、そうした経路計画や追従の確認を扱っている可能性は高い。ただしREADMEもコード断片もないため、操作方法や実装の詳細までは判断できないな。",
+      "summary": "ウェイポイントを順に追従する経路計画・運行デモらしいリポジトリだな。実コース上でのスタート、ゴール、ゲート、復帰や再計画まで含む構成を、単一のHTMLページとして公開している。",
+      "detail": "こいつは、ウェイポイントをたどる経路追従の挙動をブラウザで確認するためのデモらしい。コミット履歴では、実コースにA地点のスタートとゴール、ゲート、デモ、リカバリ、リプラン、さらにrminやDubinsを含むHTMLからindex.htmlへ名前を変えていて、単なる最短経路だけでなく経路復帰や再計画まで扱う意図が見える。中身はルート直下のindex.html一つで、GitHub PagesのURLから公開されている。ただしREADMEもファイル内容も観察できないため、入力方法や画面表示、Dubins経路の具体的な実装までは断定できないな。",
+      "closingRemark": "名前には復帰も再計画も並ぶが、肝心の操縦席はindex.html一枚に収まっている。",
       "features": [
-        "GitHub Pagesで公開されている",
-        "index.html単体で構成されている",
-        "ウェイポイント経路の確認を想定",
-        "Dubins経路に関係する構成らしい",
-        "リカバリと再計画の要素を含む可能性がある"
+        "ウェイポイント追従を扱う構成",
+        "スタート地点とゴール地点を含む実コース想定",
+        "ゲートを通過するデモ要素",
+        "経路から外れた際のリカバリ想定",
+        "再計画とDubins経路条件を含むファイル名"
       ],
       "technologies": [
         "HTML",
@@ -2155,14 +2202,14 @@
         "Dubins path"
       ],
       "categories": [
+        "ツール",
+        "実験",
         "経路計画",
-        "ウェイポイント",
-        "ブラウザデモ",
-        "シミュレーション"
+        "可視化"
       ],
-      "status": "試作",
+      "status": "実験",
       "confidence": "low",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1287062106,
       "sourcePushedAt": "2026-07-02T10:54:24Z",
       "sourceDefaultBranch": "main",
@@ -2180,38 +2227,39 @@
         "language": "HTML"
       },
       "sourceFingerprint": "9ecac8818c9d9fc04a6835c806b8b956146b464f23071de99accdb2487154caf",
-      "generatedAt": "2026-09-04T10:15:53.285Z"
+      "generatedAt": "2026-09-04T11:04:06.004Z"
     },
     "t265-runtime-api-public": {
-      "title": "T265向けポータブル実行API",
-      "summary": "Intel RealSense T265をLinux上で扱うための、libusbベースのポータブルなCランタイムAPI。複数台の列挙やシリアル番号・役割による接続、ブートローダー復旧、姿勢データ取得と長時間検証までまとめて確認できます。",
-      "detail": "こいつは、Intel RealSense T265をLinuxから扱うためのポータブルなランタイムAPIだな。中ではlibusbを使ってデバイスの列挙と接続を行い、インデックス、USBバスとアドレス、シリアル番号、役割名のいずれからでも開けるようにしてる。姿勢・ジャイロ・加速度・魚眼メタデータの取得例に加え、複数台の最新状態読み出しや、left/rightの役割に割り当てた長時間検証ツールも用意されている。ブートローダー状態のT265をランタイム状態へ戻す補助スクリプトやudevルールも含まれるため、接続確認から実験運用まで一通り試せるってわけだ。ただしIntelのファームウェアバイナリは再配布せず、ビルド前にスクリプトで手元へ取得する必要がある。",
+      "title": "T265汎用ランタイムAPI",
+      "summary": "Intel RealSense T265をLinux上で扱うための、libusbベースのポータブルなC APIだ。複数台の列挙やシリアル番号・役割による接続、ブートローダー復旧、姿勢データ取得の検証まで一通り揃っている。",
+      "detail": "こいつは、Intel RealSense T265をLinux上のアプリケーションから扱うためのポータブルなランタイムAPIだな。中ではlibusbとpthreadを使ってデバイスを列挙し、インデックス、USBバスとアドレス、シリアル番号、あるいはleftやrightのような役割名で開けるようにしてる。姿勢・ジャイロ・加速度・魚眼メタデータの取得例に加え、複数台の最新状態確認や長時間の役割ベース検証、03e7:2150のブートローダーから8087:0b37のランタイムへの復旧も用意されている。既存の単体向けt265_open()も残されているから、段階的に複数台対応へ移れるってわけだ。ただしIntelのファームウェア本体は配布せず、ビルド前に取得スクリプトでローカルへ用意する構成になっている。",
+      "closingRemark": "二台のT265を役割で呼び分けられるが、肝心のファームウェアは自分で迎えに行く仕組みだな。",
       "features": [
-        "T265の複数台列挙と最新状態取得",
-        "シリアル番号や役割名によるデバイス接続",
-        "ブートローダーからランタイムへの復旧",
-        "姿勢・センサー・魚眼メタデータの取得例",
-        "複数台の長時間動作検証"
+        "T265をインデックス、USB情報、シリアル番号、役割名で開ける",
+        "複数台の最新状態取得と300秒の長時間検証に対応",
+        "ブートローダーからランタイムモードへの復旧を支援",
+        "姿勢・ジャイロ・加速度・魚眼メタデータの取得例を収録",
+        "librealsenseに依存せず、公開ヘッダーとC実装で利用できる"
       ],
       "technologies": [
         "C",
         "libusb-1.0",
-        "POSIX pthread",
+        "pthread",
         "GCC",
         "GNU Make",
-        "Intel RealSense T265",
+        "objcopy",
         "Linux",
-        "udev"
+        "Intel RealSense T265"
       ],
       "categories": [
-        "ライブラリ",
-        "ツール",
-        "組み込み",
-        "コンピュータビジョン"
+        "ハードウェア制御",
+        "センサー",
+        "C API",
+        "検証ツール"
       ],
-      "status": "ライブラリ",
+      "status": "ツール",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1281227288,
       "sourcePushedAt": "2026-06-26T11:57:18Z",
       "sourceDefaultBranch": "main",
@@ -2229,38 +2277,39 @@
         "language": "C"
       },
       "sourceFingerprint": "775901fa7eb55f5fafa89b327712a18a9b724ad68bdd5c4a26c12a5f58aa7b7b",
-      "generatedAt": "2026-09-04T10:16:09.180Z"
+      "generatedAt": "2026-09-04T11:04:23.489Z"
     },
     "librealsense": {
       "title": "RealSense深度カメラSDK",
-      "summary": "こいつはIntel RealSense深度カメラ向けのクロスプラットフォームSDKだ。深度・カラー映像の取得、キャリブレーション情報の利用、Viewerや品質測定ツール、各種言語ラッパーまで揃え、ロボティクスや3Dスキャンの開発を支える。",
-      "detail": "こいつは、Intel RealSense深度カメラをアプリケーションから扱うためのオープンソースSDKだな。中ではC++とCのライブラリを中心に、深度・カラー映像のストリーミングや、カメラの内部・外部キャリブレーション情報を取得するAPIを提供してる。パイプラインでフレームを受け取り、画素の距離を読む例があり、RealSense Viewerでは映像の確認や設定調整、録画・再生まで扱える。Python、C#、Java、ROS 2などのラッパーや豊富なサンプルも用意され、Ubuntu、Windows、macOS、Jetson、Raspberry Piなどでの利用を想定している。CMakeでソースからビルドできる一方、これはIntelRealSense系から移行した公開先のフォークで、masterにはベータ版も入る方針らしく、安定版を使うならリリース情報の確認が要る。",
+      "summary": "Intel RealSense深度カメラ向けのクロスプラットフォームSDKで、深度・カラー映像の取得やキャリブレーション情報の利用を可能にする。Viewer、サンプル、各種言語ラッパー、ビルドとテスト環境まで揃っている。",
+      "detail": "こいつは、Intel RealSense深度カメラをアプリケーションから扱うためのオープンソースSDKだな。中ではC++を中心に、深度とカラーのストリーミング、フレーム処理、内部・外部キャリブレーション情報の取得をまとめて提供してる。C++やPythonのAPI例に加えて、C、C#、Java、ROS 2などへつなぐラッパー、RealSense ViewerやDepth Quality Tool、サンプルと単体テストも用意されている。CMakeでソースから組み立てられ、Windows、Linux、macOS、Android、Jetson、Dockerなど複数環境を対象にしているのが特徴だ。Python向けには安定版とベータ版のpyrealsense2があり、masterにはベータリリースも入る方針らしい。ただし、ここはRealSenseAIへ移行された本家リポジトリのフォークなので、利用時は案内されている新しい参照先を確認した方がいい。",
+      "closingRemark": "深度を測るカメラのために、SDK側はViewerからROS 2までずいぶん広い視野を持っている。masterの扱いだけは少し落ち着かないな。",
       "features": [
-        "深度・カラー映像のストリーミング",
+        "深度・カラー映像のストリーミングとフレーム処理",
         "内部・外部キャリブレーション情報の取得",
-        "RealSense Viewerによる設定・録画・再生",
-        "Depth Quality Toolによる精度・充填率の測定",
-        "複数言語やROS 2向けのラッパー"
+        "RealSense Viewerによる表示・設定・録画・再生",
+        "Python、C#、ROS 2などのラッパーを提供",
+        "CMakeによるクロスプラットフォームなビルド"
       ],
       "technologies": [
         "C++",
-        "C",
         "CMake",
         "Python",
+        "pyrealsense2",
         "C#",
-        "Java",
-        "CUDA",
-        "ROS 2"
+        "ROS 2",
+        "GLFW",
+        "FastDDS"
       ],
       "categories": [
+        "ライブラリ",
         "SDK",
-        "深度カメラ",
         "コンピュータビジョン",
-        "ロボティクス"
+        "深度センシング"
       ],
-      "status": "ツール",
+      "status": "ライブラリ",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 908485559,
       "sourcePushedAt": "2026-06-15T08:32:08Z",
       "sourceDefaultBranch": "master",
@@ -2278,30 +2327,31 @@
         "language": "C++"
       },
       "sourceFingerprint": "ebe733e7ed3d239cdfff5311b1f15fd299451808e4fae1b856184250954ffc16",
-      "generatedAt": "2026-09-04T10:16:29.220Z"
+      "generatedAt": "2026-09-04T11:04:41.506Z"
     },
     "ackermann-designer": {
       "title": "アッカーマン操舵設計ツール",
-      "summary": "車両のアッカーマン操舵 geometry を確認するためのHTMLベースの計算ツール。ホイール間距離やトラック幅、旋回半径を使って、左右のタイヤ角度や関連する値を画面上で確かめられる。",
-      "detail": "こいつは、車両のアッカーマン操舵 geometry を設計・確認するための小さなブラウザツールだな。中ではホイール間の距離、トラック幅、旋回半径といった入力値を使い、旋回時に必要になるタイヤ角度を計算して表示しているらしい。最近の変更を見ると、現在のタイヤ角を表示する処理や、トラック幅を状態として扱う計算、旋回半径の表示ラベルが整えられている。要するに、ステアリング寸法を変えたとき左右の操舵角がどう変わるかを手早く確認するためのHTML製の計算ツールってところだ。ただ、READMEや実ファイルの中身は資料にないので、対応する入力項目の全体像や計算式の詳細までは判断できない。",
+      "summary": "車輪の距離やトラック幅などを入力し、アッカーマン式ステアリングの旋回半径と各タイヤの角度を確認するブラウザ向け計算ツールだ。単一のHTMLファイルで構成され、設計値の調整結果を画面上で見比べられる。",
+      "detail": "こいつは、車両の操舵 geometry を検討するときに、車輪配置から旋回の具合を確かめるための小さな設計ツールだな。中ではホイール間の距離やトラック幅といった入力値を使って旋回半径を計算し、現在の左右タイヤ角も算出して表示してる。値を変えれば、車輪の位置関係が内外輪の操舵角や曲がり方にどう影響するかをその場で確認できるってわけだ。実装はルートに置かれたindex.htmlだけで、READMEや追加の設定は見当たらないため、実際の計算式の細部や想定する車両条件までは資料だけでは判断できない。",
+      "closingRemark": "旋回半径だけでなく現在のタイヤ角まで出すあたり、曲がる話を数字だけで済ませる気はないらしいな。",
       "features": [
-        "ホイール間距離を使った操舵計算",
-        "トラック幅を状態として扱う計算",
-        "旋回半径の計算と表示",
-        "現在の左右タイヤ角度の表示",
-        "ブラウザで動く単一HTML構成"
+        "ホイール間距離を入力できる",
+        "トラック幅を使った計算に対応",
+        "旋回半径を算出して表示",
+        "現在の左右タイヤ角を計算して表示",
+        "単一のHTMLファイルで動く構成"
       ],
       "technologies": [
         "HTML"
       ],
       "categories": [
+        "計算ツール",
         "自動車設計",
-        "ステアリング",
-        "計算ツール"
+        "操舵シミュレーション"
       ],
       "status": "ツール",
       "confidence": "medium",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1151186740,
       "sourcePushedAt": "2026-05-31T16:50:34Z",
       "sourceDefaultBranch": "main",
@@ -2319,18 +2369,19 @@
         "language": "HTML"
       },
       "sourceFingerprint": "7a9ce16bf5e8760a3803f51bb44cfc59aac3c97572e10279abb857425e375570",
-      "generatedAt": "2026-09-04T10:16:43.898Z"
+      "generatedAt": "2026-09-04T11:04:57.569Z"
     },
     "2026_05_21_flutter_gsi_gnss_offline_map_monitor": {
-      "title": "GNSSオフライン地図モニター",
-      "summary": "SIMなしのAndroidスマホをESP32のWi-Fiアクセスポイントへ接続し、GNSSの現在位置や走行軌跡を地理院タイル上で確認するFlutterアプリ。IMU、衛星、SDログ、システム状態もまとめて監視でき、実機なしで試せるデモモードも備える。",
-      "detail": "こいつは、ESP32から受け取ったGNSS情報を、通信環境のない現場でもAndroidスマホ上で見られるようにする監視アプリだな。中ではESP32のWi-Fi APに接続し、`/api/status` を1秒周期でHTTP GETして、現在位置、走行軌跡、方位矢印を地理院タイルへ重ねて表示してる。GNSSだけでなく、BNO08Xの姿勢、衛星一覧、システム状態、SDログ情報と取得JSONも画面を分けて確認できるし、デモモードならESP32なしで地図移動や軌跡表示を試せる。地図はオフラインタイル優先で、未配置部分はプレースホルダーになる構成だ。現状はHTTPポーリングで、WebSocket化の拡張案はあるものの、タイルの大量自動取得やESP32側の変更まではこのアプリの仕事じゃない。",
+      "title": "GNSSオフライン地図監視アプリ",
+      "summary": "SIMなしAndroid端末でESP32のGNSS状態を受け取り、地理院タイル上に現在位置と走行軌跡を表示するFlutterアプリ。GNSS、BNO08X、システム、SDログ、衛星一覧を確認でき、実機がない場合はデモ走行にも切り替えられます。",
+      "detail": "こいつは、SIMなしのAndroidスマホをESP32のWi-Fiアクセスポイントへつなぎ、GNSSの現在位置と走行軌跡をオフライン地図で監視するFlutterアプリだ。中ではESP32のhttp://192.168.4.1/api/statusを1秒周期でHTTP GETし、GNSS、BNO08Xの姿勢、システム状態、SDログ、衛星一覧を画面ごとに分けて表示してる。位置情報が有効なときだけ地図のマーカーとPolylineを更新し、方位矢印や取得JSONログも確認できるってわけだ。地図は地理院タイルのPNGをassetsへ手動配置する方式で、未配置部分はプレースホルダーになる。ESP32側は変更せず、デモモードやAPI URL変更、軌跡リセットにも対応しているが、大量ダウンロードやWebSocket通信まではまだ実装されていない。",
+      "closingRemark": "7,135枚の地図を抱えたオフライン監視役だが、タイルの補充だけは人の手を待っている。",
       "features": [
-        "GNSS現在位置と走行軌跡を地図上に表示",
-        "SIMなしのESP32 Wi-Fi AP接続に対応",
-        "GNSS・IMU・衛星・SDログ・システム情報を監視",
-        "オフライン地図タイルを優先して表示",
-        "実機なしで確認できるデモモードを搭載"
+        "ESP32のGNSS位置と走行軌跡を地理院タイル上に表示",
+        "GNSS・BNO08X・システム・SDログ・衛星情報を画面別に確認",
+        "1秒周期のHTTPポーリングで/api/statusを取得",
+        "実機がなくてもダミーデータで地図表示を試せるデモモード",
+        "地図タイルをローカル配置してオフライン利用"
       ],
       "technologies": [
         "Flutter",
@@ -2339,18 +2390,18 @@
         "ESP32",
         "GNSS",
         "BNO08X",
-        "HTTP GET",
-        "地理院タイル"
+        "地理院タイル",
+        "Python"
       ],
       "categories": [
-        "モバイルアプリ",
+        "モニタリング",
+        "地図",
         "GNSS",
-        "オフライン地図",
-        "モニタリング"
+        "組み込み連携"
       ],
-      "status": "実験",
+      "status": "試作",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1246148671,
       "sourcePushedAt": "2026-05-21T23:25:06Z",
       "sourceDefaultBranch": "main",
@@ -2368,38 +2419,39 @@
         "language": "Dart"
       },
       "sourceFingerprint": "263094ed09250bacfe22d69268d8c5cd338b8bfeddcf6aa0bb436756747f2fc5",
-      "generatedAt": "2026-09-04T10:17:00.941Z"
+      "generatedAt": "2026-09-04T11:05:14.116Z"
     },
     "2026_05_21_cores3_vl53l5cx_distance_map": {
-      "title": "CoreS3距離マップ表示デモ",
-      "summary": "M5Stack CoreS3とVL53L5CX ToF測距センサをI2C接続し、8×8の距離情報をLCDへ色付きグリッドで表示するPlatformIOデモ。距離や有効状態を確認しながら、シリアル出力でも測定結果を追える。",
-      "detail": "こいつは、M5Stack CoreS3にVL53L5CX ToFレーザー測距センサをつないで、周囲の距離を8×8のマップとして確認するためのArduinoデモだな。中ではI2C経由でセンサを初期化して測距し、各ゾーンの距離をmm単位でLCDに描き、近い場所から遠い場所まで色を変えて表示してる。無効値や準有効値も区別され、FPS、更新周期、I2C速度、距離の最小・最大値、有効ゾーン数は画面とシリアルモニタの両方で追えるってわけだ。PlatformIOの設定からM5UnifiedとSparkFun VL53L5CX Arduino Libraryを導入でき、配線やI2Cアドレス0x29の確認、表示方向の反転設定も資料にまとまっている。ただしLPnやRSTは未接続の最小構成で、複数センサの制御や確実なハードウェアリセットまでは扱っていない。",
+      "title": "CoreS3距離マップデモ",
+      "summary": "M5Stack CoreS3とVL53L5CX系ToF測距センサをI2Cで接続し、8×8の距離情報をLCDへ色付きグリッドで表示するPlatformIO製Arduinoデモだ。距離や無効値、測定状態を画面とシリアルモニタの両方で確認できる。",
+      "detail": "こいつは、M5Stack CoreS3にVL53L5CX / VL53L5XのToFレーザー測距センサをつないで、周囲の距離分布を8×8のマップとして見るためのデモだな。中ではGrove I2C、つまりSDA=GPIO2とSCL=GPIO1を使い、SparkFunのVL53L5CX Arduino Library経由で測距している。LCDには距離をmm単位で表示し、0〜300mmの赤から3000mm以上の青まで色分けするほか、準有効値には*、無効値には--を付ける構成だ。FPSや更新周期、I2C速度、min/max距離、有効ゾーン数も確認でき、約1秒ごとにシリアルへ同じ8×8データを出す。LPnとRSTは最小構成のため未接続で、複数センサ制御や確実なハードウェアリセットまでは扱っていない。",
+      "closingRemark": "0x52ではなく0x29、保護フィルムも忘れずに。距離を測る前に、まず表示と配線の距離を詰めるデモだな。",
       "features": [
-        "8×8ゾーンの距離マップをLCD表示",
-        "距離範囲に応じた色分け表示",
-        "無効値・準有効値を区別して表示",
-        "FPSや有効ゾーン数などの状態表示",
-        "シリアルモニタへの距離マップ出力"
+        "8×8ゾーンの距離をLCDに色付きグリッド表示",
+        "距離をmm単位で各マスに表示",
+        "target statusごとに有効・準有効・無効を判定",
+        "FPSやI2C速度、距離範囲などの状態を表示",
+        "シリアルモニタへ約1秒ごとに距離マップを出力"
       ],
       "technologies": [
         "C++",
         "Arduino",
         "PlatformIO",
+        "ESP32",
         "M5Stack CoreS3",
         "M5Unified",
         "VL53L5CX",
-        "I2C",
-        "SparkFun VL53L5CX Arduino Library"
+        "I2C"
       ],
       "categories": [
         "組み込み",
-        "センサ",
+        "センサー",
         "距離測定",
         "デモ"
       ],
       "status": "実験",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1245273578,
       "sourcePushedAt": "2026-05-21T04:29:34Z",
       "sourceDefaultBranch": "main",
@@ -2417,38 +2469,39 @@
         "language": "C++"
       },
       "sourceFingerprint": "7e3af353d4be520f1f38dd3298ae108fd3074e8127ed172b4a4bf26653768574",
-      "generatedAt": "2026-09-04T10:17:17.475Z"
+      "generatedAt": "2026-09-04T11:05:32.711Z"
     },
     "2026_05_20_xiao_esp32s3_sense_gnss_bno08x_web_monitor": {
-      "title": "XIAO船載GNSS姿勢モニター",
-      "summary": "Seeed Studio XIAO ESP32S3 SenseでGNSSとBNO08Xの位置・姿勢情報を取得し、WiFi経由のWeb画面やJSON APIで監視する組み込みプロジェクトです。microSDへのCSVログ、衛星情報、オフライン軌跡表示にも対応しています。",
-      "detail": "こいつは、XIAO ESP32S3 Senseを使ってGNSSとBNO08Xの状態をまとめて確認するための船載マイコン用モニターだな。中ではNMEAのGGA/RMC/GSA/GSVを解析して位置や速度、衛星数、HDOPを取り出し、BNO08XからRoll・Pitch・Yawを取得している。WiFiアクセスポイントとWeb UI、`/api/status` JSON APIを備え、スマホやPCから状態を見られるうえ、microSDには起動ごとに別名のCSVログを残せる。地図は外部タイルに頼らないCanvas表示で、最初のFixを原点にGNSS軌跡を描き、North UpとHeading Upを切り替えられるのが特徴だ。ただし、ウェイポイント追従や制御側とのUART連携などは将来拡張の段階で、現状は計測・監視が中心ってところだ。",
+      "title": "XIAO船上センサWeb監視",
+      "summary": "Seeed Studio XIAO ESP32S3 SenseでGNSSとBNO08Xの状態を取得し、WiFi経由のWeb画面とJSON APIで監視するPlatformIOプロジェクト。SDカードへのCSV記録や、外部地図に頼らないGNSS軌跡表示にも対応しています。",
+      "detail": "こいつは、Seeed Studio XIAO ESP32S3 Senseを船上のセンサ監視役にするためのファームウェアでな。GNSSからGGA・RMC・GSA・GSVを解析し、BNO08XからRoll・Pitch・Yawを読み取りながら、WiFiアクセスポイント上のWeb UIと`/api/status`で状態を見せている。中では`millis()`による周期管理、BNO08Xの段階的な再初期化、SDカードへの1Hz CSVログ、衛星ごとの情報表示まで扱っていて、GNSSやIMUが一時的に使えなくても画面自体は継続する作りだ。地図は外部タイルを使わず、最初のFixを原点にしたCanvas上の相対軌跡で、North UpとHeading Upを切り替えられる。AP内DNSでスマホから到達しやすくしている一方、BNO08XのYawは磁北ではなく起動時姿勢基準なので、絶対方位までは分からない。",
+      "closingRemark": "外部地図を切り捨てても、軌跡はちゃんと残る。海の上では通信より、この割り切りのほうが頼もしいこともあるな。",
       "features": [
-        "GNSSのFix、位置、速度、進行方向、HDOP、衛星情報を表示",
-        "BNO08XのRoll・Pitch・Yawと再初期化診断を監視",
-        "WiFiアクセスポイントと1秒更新のWeb UIを提供",
-        "JSON APIとmicroSD CSVログで外部利用・記録に対応",
-        "外部地図なしで現在位置とGNSS軌跡を表示"
+        "GNSSとBNO08Xを同時取得しWeb画面で監視",
+        "Fix・衛星・位置・速度・姿勢などをJSON APIで提供",
+        "SDカードへ未使用名を選ぶCSVログを保存",
+        "外部地図不要の相対座標GNSS軌跡表示",
+        "センサ未接続時もWeb UIを継続し段階的に復旧"
       ],
       "technologies": [
-        "Seeed Studio XIAO ESP32S3 Sense",
-        "ESP32-S3",
-        "Arduino",
+        "C++",
         "PlatformIO",
-        "GNSS NMEA",
+        "Arduino",
+        "ESP32-S3",
+        "Seeed Studio XIAO ESP32S3 Sense",
         "BNO08X",
-        "AsyncTCP",
+        "GNSS",
         "ESPAsyncWebServer"
       ],
       "categories": [
         "組み込み",
-        "IoT",
+        "センサ監視",
         "GNSS",
-        "モニタリング"
+        "Webインターフェース"
       ],
       "status": "試作",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1244402746,
       "sourcePushedAt": "2026-05-20T10:36:14Z",
       "sourceDefaultBranch": "main",
@@ -2466,38 +2519,39 @@
         "language": "C++"
       },
       "sourceFingerprint": "da4bd683f3f1f69fc4c1cf275ee9f27b742e933ad269139a1c88f23d963223de",
-      "generatedAt": "2026-09-04T10:17:35.249Z"
+      "generatedAt": "2026-09-04T11:05:50.394Z"
     },
     "2026_05_20_xiao_esp32s3_bno08x_gpio4_gpio5_test": {
-      "title": "XIAO ESP32S3 BNO08X動作確認",
-      "summary": "Seeed Studio XIAO ESP32S3 SenseにBNO08X/BNO085をI2C接続し、初期化と姿勢データの取得を確認するPlatformIOプロジェクト。I2Cスキャンや再初期化、シリアル出力まで含む最小構成で、他の機能を加える前のセンサーテストに向いている。",
-      "detail": "こいつは、Seeed Studio XIAO ESP32S3 SenseでBNO08X/BNO085が正しく動くかを確かめるための小さなテストプロジェクトだ。中ではArduino frameworkとPlatformIOを使い、XIAOのD4/D5をSDA/SCL、D3をINT、D2をRSTとしてI2C通信を初期化してる。起動時にI2Cをスキャンし、0x4Aと0x4Bの候補を確認したうえで、quaternion、キャリブレーション済みジャイロ、加速度、INT状態を115200 baudのシリアルへ出力できる。データが止まった場合や初期化に失敗した場合も、ログを出しながら再試行する構成だな。SDカード、GNSS、UART送信は含まれず、I2Cは安定性を優先して100kHzに設定されている。",
+      "title": "XIAOでBNO08Xを試すI2C検証",
+      "summary": "Seeed Studio XIAO ESP32S3 SenseにBNO08X/BNO085をI2C接続し、センサーの初期化と姿勢データ取得を確認するPlatformIOプロジェクト。I2Cスキャンや再初期化、quaternion・ジャイロ・加速度のシリアル出力まで、組み込み前の動作確認に必要な範囲へ絞り込んでいる。",
+      "detail": "こいつは、Seeed Studio XIAO ESP32S3 SenseでBNO08X/BNO085が正しく動くかを確かめるための、Arduinoベースの小さな検証プロジェクトだな。中ではXIAOのD4/D5、つまりGPIO5/GPIO6をI2CのSDA/SCLに使い、D3をINT、D2をRSTとしてセンサーを初期化してる。起動時にはI2Cスキャンを行い、0x4Aと0x4Bの両方を確認したうえで、quaternion、calibrated gyroscope、加速度、INT状態、データ経過時間を115200bpsで出力できる。通信が止まった場合は再初期化を試すし、初期化に失敗しても停止せず定期的に再試行する構成だ。それでSDカードやGNSS、UART送信は含めず、後の大きなシステムへ組み込む前のセンサー単体テストに徹している。実機への書き込みや配線の確認までは、この資料だけでは判断できない。",
+      "closingRemark": "0x4Aを見つけても、センサーが黙れば再初期化。まずは配線に二度聞きする作りだな。",
       "features": [
-        "BNO08X/BNO085単体の初期化と姿勢データ確認",
-        "I2Cスキャンと0x4A/0x4Bのアドレス確認",
-        "Quaternion・ジャイロ・加速度のシリアル出力",
-        "通信停止時の再初期化と状態ログ",
-        "XIAOのピン表記に合わせた配線確認"
+        "XIAOのD2〜D5表記とESP32S3のGPIO番号を併記",
+        "I2Cアドレス0x4Aと0x4Bをスキャンして検出",
+        "quaternion・ジャイロ・加速度をシリアル出力",
+        "I2Cを100kHzに設定し安定性を優先",
+        "初期化失敗やデータ停止時に再試行"
       ],
       "technologies": [
         "C++",
         "PlatformIO",
-        "Arduino framework",
+        "Arduino",
         "ESP32S3",
         "Seeed Studio XIAO ESP32S3 Sense",
-        "BNO08X/BNO085",
-        "I2C",
-        "Adafruit BNO08x"
+        "BNO08X",
+        "BNO085",
+        "I2C"
       ],
       "categories": [
         "組み込み",
-        "センサーテスト",
-        "PlatformIO",
-        "ESP32"
+        "センサー",
+        "ハードウェア検証",
+        "姿勢計測"
       ],
       "status": "実験",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1244378453,
       "sourcePushedAt": "2026-05-20T07:58:42Z",
       "sourceDefaultBranch": "master",
@@ -2515,18 +2569,19 @@
         "language": "C++"
       },
       "sourceFingerprint": "75310b39a370d10fecf108403e14c42d24ec47ff14b509aa930c68a8e10114e9",
-      "generatedAt": "2026-09-04T10:17:52.355Z"
+      "generatedAt": "2026-09-04T11:06:08.117Z"
     },
     "2026_05_20_gnss_satellite_monitor_akizuki_xiao_esp32s3_sense": {
-      "title": "XIAO向けGNSS衛星モニター",
-      "summary": "秋月電子のGT-505GGBL5-DR-NをSeeed Studio XIAO ESP32S3 Senseで動作確認するPlatformIOプロジェクトです。GNSSの測位状態や衛星情報を画面ではなくSerial Monitorへ出力し、受信状況を手軽に確認できます。",
-      "detail": "こいつは、秋月電子のGNSSモジュールGT-505GGBL5-DR-NをSeeed Studio XIAO ESP32S3 Senseで試すための動作確認用プロジェクトだな。中ではArduinoのHardwareSerialでGNSSのNMEAデータを受け取り、1秒ごとにFix状態、緯度・経度、高度、速度、各種DOP、受信文字数などをSerial Monitorへ出力してる。衛星一覧も、使用中の衛星を優先しつつC/N0の高い順に並べて確認できる。M5Stack Core2向けの元プロジェクトから画面表示を外し、UARTとシリアル出力に絞って軽量化した構成ってわけだ。標準は115200bpsで、配線や電源、アンテナ、受信環境、9600bpsへの変更まで切り分けられるが、実際の測位精度まではこの資料だけでは分からない。",
+      "title": "XIAO ESP32S3 GNSS衛星モニター",
+      "summary": "秋月電子のGNSSモジュールGT-505GGBL5-DR-Nを、Seeed Studio XIAO ESP32S3 Senseで動作確認するためのPlatformIOプロジェクト。画面表示を省き、測位状態や衛星情報をシリアルモニターで軽量に確認できる。",
+      "detail": "こいつは、秋月電子のGNSSモジュールGT-505GGBL5-DR-NをSeeed Studio XIAO ESP32S3 Senseで動かし、受信状態を確かめるための実験用プロジェクトだ。中ではArduinoのHardwareSerial(1)でGPIO1・GPIO0を使ってGNSSを受信し、1秒ごとに測位状態、緯度経度、高度、速度、各種DOP、受信文字数などをSerial Monitorへ出している。衛星一覧もSYS、ID、C/N0、仰角、方位角つきで表示し、使用中の衛星と信号の強い衛星を優先して並べる仕組みだな。M5Stack Core2向け既存プロジェクトから画面処理を外してあり、115200bpsで手早く確認できる一方、実際の受信には配線、電源、アンテナ、空の見通しが効いてくる。標準は115200bpsだが、設定変更で9600bpsや生NMEAの確認にも対応できる。",
+      "closingRemark": "画面を捨てたぶん、衛星の機嫌は115200bpsの文字列から読むしかない。",
       "features": [
-        "GNSSのFix状態と測位情報を1秒ごとに表示",
-        "衛星の使用状況、C/N0、仰角、方位角を一覧化",
-        "使用中衛星を優先しC/N0順に並べ替え",
-        "NMEA受信遅延や受信文字数を確認可能",
-        "画面表示を省きSerial Monitorに特化"
+        "GT-505GGBL5-DR-Nの受信状態と測位情報を1秒ごとに表示",
+        "緯度・経度・高度・速度とHDOP、PDOP、VDOPを確認可能",
+        "SYS、ID、USE、C/N0、仰角、方位角を含む衛星一覧を表示",
+        "使用中かつC/N0の高い衛星を優先して並べ替え",
+        "画面表示を省いたSerial Monitor専用の軽量構成"
       ],
       "technologies": [
         "C++",
@@ -2535,18 +2590,18 @@
         "ESP32-S3",
         "Seeed Studio XIAO ESP32S3 Sense",
         "GT-505GGBL5-DR-N",
-        "HardwareSerial",
+        "UART",
         "NMEA"
       ],
       "categories": [
-        "組み込み",
         "GNSS",
+        "組み込み",
         "ハードウェア検証",
-        "シリアルモニター"
+        "シリアル通信"
       ],
       "status": "実験",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1244304445,
       "sourcePushedAt": "2026-05-20T06:31:50Z",
       "sourceDefaultBranch": "master",
@@ -2564,38 +2619,39 @@
         "language": "C++"
       },
       "sourceFingerprint": "b2152c833a7362a298866f62dbf64d62276f71bf7775447435df61b7840d8ac6",
-      "generatedAt": "2026-09-04T10:18:09.348Z"
+      "generatedAt": "2026-09-04T11:06:26.416Z"
     },
     "cores3-xiao-esp32s3-sense-uart-sd-logger": {
-      "title": "CoreS3・XIAO IMUロガー",
-      "summary": "M5Stack CoreS3の内蔵IMUデータをUARTでXIAO ESP32-S3 Senseへ送り、Webモニターで確認しながらmicroSDへCSV保存する二枚構成の組み込みツールだ。APモードの画面からCoreS3へJSONメッセージを返す機能も備えている。",
-      "detail": "こいつは、M5Stack CoreS3とSeeed Studio XIAO ESP32-S3 Senseをつないで、IMUデータを監視・記録するためのPlatformIOプロジェクトだ。CoreS3側が加速度とジャイロの値を読み、約100msごとにJSONをUARTへ送信し、XIAO Sense側がそれを受け取ってアクセスポイント上のWeb画面に最新値を表示してる。受信した有効なパケットはmicroSDへ新しいCSVファイルとして保存され、解析しやすい数値だけでなく元のJSONも残る。Web画面からCoreS3へメッセージJSONを送り返せるのも特徴だな。ただしカメラは使わず、RTCやNTPがなければ時刻はboot+millis形式になる。",
+      "title": "CoreS3・XIAO IMU記録橋",
+      "summary": "M5Stack CoreS3の内蔵IMUをXIAO ESP32-S3 SenseへUART転送し、Web画面で監視しながらmicroSDへCSV保存するPlatformIO構成だ。生JSONも残せるので、計測値の確認と後処理を一つの流れで扱える。",
+      "detail": "こいつは、M5Stack CoreS3とSeeed Studio XIAO ESP32-S3 Senseをつないで、IMUの値を運び、見て、記録するための二枚構成の試作だ。CoreS3側が加速度・ジャイロを読み、約100ミリ秒ごとにJSONをUARTへ送り、XIAO側がそれを受けてWi-Fiアクセスポイントと小さなWebモニターを立ち上げてる。Web画面では最新パケットやカウンターを確認でき、必要ならCoreS3へメッセージを返せるうえ、正常なデータは新しいCSVファイルへ保存され、raw_jsonも残るから後で解析しやすい。配線、115200 baudの設定、書き込み手順までREADMEとPORTS_AND_WIRING.mdにまとまっている。ただしカメラは使わず、RTCやNTPがなければ時刻はboot+millis扱いになり、起動直後はIMU未初期化のゼロ値が出ることもある。",
+      "closingRemark": "カメラを外しても働く一方、時計がなければ時刻だけは起動からの経過時間で数える仕組みだな。",
       "features": [
-        "CoreS3の加速度・ジャイロ値をUARTでストリーミング",
-        "XIAO SenseのWi-Fi AP上で最新IMU値をWeb表示",
-        "microSDへIMUデータをCSV記録",
-        "CSVに解析用の値と元のJSONを保存",
-        "Web画面からCoreS3へJSONメッセージを送信"
+        "CoreS3のIMUデータをUARTでJSON転送",
+        "XIAO SenseがアクセスポイントとWebモニターを提供",
+        "microSDへIMU値をCSV記録",
+        "元のJSONパケットもCSVに保存",
+        "Web画面からCoreS3へメッセージ送信可能"
       ],
       "technologies": [
-        "C++",
         "PlatformIO",
-        "M5Stack CoreS3",
-        "Seeed Studio XIAO ESP32-S3 Sense",
+        "C++",
         "ESP32-S3",
         "UART",
         "Wi-Fi AP",
-        "microSD"
+        "microSD",
+        "CSV",
+        "JSON"
       ],
       "categories": [
         "組み込み",
         "センサー",
-        "データロガー",
-        "Webモニター"
+        "データロギング",
+        "IoT"
       ],
-      "status": "ツール",
+      "status": "試作",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1242302971,
       "sourcePushedAt": "2026-05-18T10:39:42Z",
       "sourceDefaultBranch": "main",
@@ -2613,38 +2669,39 @@
         "language": "C++"
       },
       "sourceFingerprint": "79e585b1b19991d1725c2a7b4248761a975ee5377bde94a4b6e572c4370d36e5",
-      "generatedAt": "2026-09-04T10:18:25.750Z"
+      "generatedAt": "2026-09-04T11:06:44.560Z"
     },
     "xiao-cores3-imu-uart-web-bridge": {
       "title": "CoreS3・XIAO IMU通信ブリッジ",
-      "summary": "Seeed Studio XIAO ESP32S3とM5Stack CoreS3をUARTで接続し、CoreS3の内蔵IMUデータをXIAOへ中継するサンプルです。XIAOをWi-Fiアクセスポイントとして動かし、ブラウザで状態を監視したり、Web画面からCoreS3へメッセージを送ったりできます。",
-      "detail": "こいつは、Seeed Studio XIAO ESP32S3とM5Stack CoreS3の間で、IMUデータとメッセージをやり取りするためのサンプル構成だな。CoreS3側で内蔵IMUを読み取り、UART経由でXIAOへ送る一方、XIAO側ではWi-Fiアクセスポイントを立ち上げ、接続したブラウザから状態を監視できる。さらにWeb画面からCoreS3へメッセージを返せるので、センサー値の確認とボード間通信をまとめて試せるってわけだ。配線はCoreS3のG7/TXとXIAOのD7・GPIO44/RX、XIAOのD6・GPIO43/TXとCoreS3のG6/RXを交差させ、GNDも接続する。アクセスポイント名はESP32S3-IMU-Monitor、管理画面は192.168.4.1だが、IMUデータの具体的な表示形式やWeb画面の詳細までは、この資料だけでは分からない。",
+      "summary": "Seeed Studio XIAO ESP32S3とM5Stack CoreS3をUARTで接続し、CoreS3内蔵IMUの値を受け渡すサンプルだ。XIAOをWi-Fiアクセスポイント兼Webモニターとして動かし、ブラウザからCoreS3へメッセージも送れる。",
+      "detail": "こいつは、M5Stack CoreS3の内蔵IMUを読み取り、Seeed Studio XIAO ESP32S3へUARTで渡してブラウザから監視するためのサンプルペアだな。CoreS3側がIMUデータを扱い、XIAO側がUARTブリッジとWeb画面を受け持つ構成で、WebからCoreS3へメッセージを送る経路も用意されている。XIAOはESP32S3-IMU-Monitorというアクセスポイントを立ち上げ、接続後にhttp://192.168.4.1/を開けば確認できる。配線はTXとRXを交差させ、GND同士をつなぐ形で、UARTピンやメッセージ方向はPORTS_AND_WIRING.mdにまとまっている。サンプルとしての構成や動作範囲は追えるが、実際のWeb画面の細部やIMUライブラリまでは観察資料だけでは分からない。",
+      "closingRemark": "G7とG6を交差させ、最後は192.168.4.1へ向かう。配線を間違えると、橋は立派でも誰も渡れないな。",
       "features": [
         "CoreS3内蔵IMUの読み取り",
-        "XIAOとCoreS3間のUART通信",
+        "CoreS3とXIAO間のUART通信",
         "XIAOによるWi-Fiアクセスポイント運用",
-        "ブラウザからの状態監視",
+        "ブラウザからのIMU監視",
         "WebからCoreS3へのメッセージ送信"
       ],
       "technologies": [
         "C++",
-        "Seeed Studio XIAO ESP32S3",
-        "M5Stack CoreS3",
-        "IMU",
         "UART",
         "Wi-Fiアクセスポイント",
         "Webモニター",
-        "GPIO"
+        "M5Stack CoreS3",
+        "Seeed Studio XIAO ESP32S3",
+        "ESP32S3",
+        "IMU"
       ],
       "categories": [
         "組み込み",
-        "IoT",
-        "通信サンプル",
-        "センサー"
+        "通信",
+        "センサー",
+        "Webツール"
       ],
-      "status": "教材",
+      "status": "試作",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1238670979,
       "sourcePushedAt": "2026-05-14T10:43:20Z",
       "sourceDefaultBranch": "main",
@@ -2662,38 +2719,39 @@
         "language": "C++"
       },
       "sourceFingerprint": "7fb228e84db32348f343c9ea7503d4046e265b4416fccab5fa3604508b6f9104",
-      "generatedAt": "2026-09-04T10:18:42.153Z"
+      "generatedAt": "2026-09-04T11:07:01.672Z"
     },
     "MadgwickAHRS": {
       "title": "Arduino向け姿勢推定ライブラリ",
-      "summary": "加速度センサーとジャイロスコープの読み取り値から、物体の向きを推定するArduino用ライブラリ。MadgwickのIMUおよびAHRSアルゴリズムを公式実装に基づいて扱いやすくまとめ、サンプルやArduino向け設定も備えている。",
-      "detail": "こいつは、加速度センサーとジャイロスコープの値から物体の姿勢を求める、Arduino向けのMadgwickライブラリだな。中ではMadgwickのIMUおよびAHRSアルゴリズムの公式実装をラップしていて、センサーの読み取り値を姿勢推定に使える形へまとめてる。`src`に本体を置き、`examples`には動作確認用の例、`library.properties`や`keywords.txt`にはArduinoライブラリとして扱うための設定が入っている。Arduino向けのチェックとサンプルコンパイルをGitHub Actionsで確認できるのも特徴だ。これは公開されているArduinoライブラリのフォークらしいが、この資料だけでは独自変更の範囲までは分からない。",
+      "summary": "加速度センサーとジャイロスコープの読み取りから、物体の向きを推定するArduino用ライブラリ。MadgwickのIMU・AHRSアルゴリズムを公式実装に沿って扱え、サンプルのコンパイルやArduino環境での状態も自動確認できる。",
+      "detail": "こいつは、加速度センサーとジャイロスコープの値から物体の姿勢を求めるためのArduino用ライブラリでな。中ではMadgwickのIMUおよびAHRSアルゴリズムを包み込み、センサーの読み取りを姿勢推定へつなげている。Arduinoライブラリとして使える構成になっていて、examplesには動作例も置かれているから、対応環境での導入やサンプルの確認がしやすい。GitHub ActionsではArduino状態の確認、サンプルのコンパイル、スペルチェックまで回している。Arduino Libraries配下の実装をもとにしたフォークで、細かな対応ボードや推定結果の形式までは、この資料だけでは判断できないな。",
+      "closingRemark": "姿勢は推定できても、このフォークがどの机から旅立ったかまではREADMEに残っていない。",
       "features": [
-        "加速度とジャイロから物体の向きを推定",
-        "MadgwickのIMU・AHRSアルゴリズムを利用",
-        "Arduinoライブラリ形式で導入しやすい構成",
-        "動作確認用のサンプルを収録",
-        "GitHub ActionsでArduino互換性と例を検証"
+        "加速度と角速度から物体の向きを推定",
+        "MadgwickのIMU・AHRSアルゴリズムをArduino向けに提供",
+        "Arduinoライブラリ形式でexamplesを同梱",
+        "Arduino状態とサンプルのコンパイルをGitHub Actionsで確認",
+        "GPLv3で公開されたArduino Libraries系のフォーク"
       ],
       "technologies": [
-        "C++",
         "Arduino",
+        "C++",
+        "Processing",
         "MadgwickAHRS",
         "IMU",
         "AHRS",
         "加速度センサー",
-        "ジャイロスコープ",
-        "GitHub Actions"
+        "ジャイロスコープ"
       ],
       "categories": [
         "ライブラリ",
-        "Arduino",
-        "姿勢推定",
-        "センサー処理"
+        "組み込み",
+        "センサー処理",
+        "姿勢推定"
       ],
       "status": "ライブラリ",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 866309271,
       "sourcePushedAt": "2026-05-14T07:56:12Z",
       "sourceDefaultBranch": "master",
@@ -2711,38 +2769,39 @@
         "language": "C++"
       },
       "sourceFingerprint": "888dcd69ae8d8a6c599a123bbc557fcc9290d0c28a7c5426829bc5803cad9c7a",
-      "generatedAt": "2026-09-04T10:18:57.951Z"
+      "generatedAt": "2026-09-04T11:07:17.270Z"
     },
     "arduino-pico": {
       "title": "RP2040/RP2350向けArduinoコア",
-      "summary": "Raspberry Pi Pico系のRP2040・RP2350ボードでArduino開発を行うためのコア実装。USB、Bluetooth、Wi-Fi、Ethernet、ファイルシステム、マルチコアやFreeRTOSまで、組み込み用途に必要な機能を幅広く扱える。",
-      "detail": "こいつは、Raspberry Pi PicoやPico 2をはじめとするRP2040・RP2350ボードでArduinoのスケッチを動かすためのコア実装だ。中ではRaspberry Pi Pico SDKを土台に、Arduino APIとカスタムGCC 14.3／Newlib 4.5ツールチェーンを組み合わせ、ARMとRP2350のRISC-Vコアに対応してる。USB機器エミュレーション、Pico WのBluetoothやWi-Fi、Ethernet、SSL/TLS、LittleFS、OTA、マルチコア、FreeRTOS SMPなどを使えるほか、PIOでサーボやI2S、ソフトウェアUART・SPIのタイミングも整えられる。Arduino Boards ManagerやGit経由で導入し、対応ボードを選んでスケッチを転送する構成で、PicoprobeとOpenOCDによるデバッグにも対応する。多数のボード定義とライブラリを含むフォークだが、個別ボードの実機動作までは資料だけでは判断できないな。",
+      "summary": "Raspberry Pi Pico系ボードをArduino IDEから開発できるようにするArduinoコア。RP2040とRP2350、ARMとRISC-Vに対応し、USB、無線通信、ファイルシステム、マルチコア、OTAなど組み込み開発に必要な機能を幅広くまとめている。",
+      "detail": "こいつは、Raspberry Pi PicoやPico 2をArduinoの環境で扱うためのコア実装だな。中ではRaspberry Pi Pico SDKを土台に、ArduinoCore-APIと独自のGCC 14.3/Newlib 4.5ツールチェーンを組み合わせ、RP2040とRP2350のARMおよびRISC-Vコア向けにビルドできるようにしてる。USB機器エミュレーション、Pico WのWi-FiとBluetooth、Ethernet、HTTP/HTTPS、OTA、LittleFSやSD、FreeRTOS SMP、マルチコア処理まで、スケッチから使える機能がかなり広い。PIOステートマシンでサーボや音声、I2S、ソフトウェアUART・SPIをジッタなく動かす設計も特徴で、対応ボードは純正品から各社のRP2040/RP2350搭載基板まで多岐にわたる。Arduino Boards ManagerやGitで導入でき、デバッグ用にPicoprobe、OpenOCD、GDBも案内されているが、実際の回路や周辺機器の動作まではこのコードだけでは決まらない。",
+      "closingRemark": "Pico一枚の入口にしては、USBからFreeRTOSまでずいぶん荷が重い。対応ボード一覧も立派な酒の肴だな。",
       "features": [
-        "RP2040・RP2350向けArduino API",
-        "USB、Bluetooth、Wi-Fi、Ethernetに対応",
-        "LittleFS・SD/SDFSとOTA更新をサポート",
-        "マルチコアとFreeRTOS SMPに対応",
-        "PIOを使った低ジッターな周辺機能"
+        "RP2040とRP2350をArduino IDEから開発可能",
+        "USB、Wi-Fi、Bluetooth、Ethernet、HTTP/HTTPSに対応",
+        "LittleFSやSDなどのファイルシステムを利用可能",
+        "マルチコア処理とFreeRTOS SMPをサポート",
+        "PIOで音声、サーボ、ソフトウェア通信を制御"
       ],
       "technologies": [
         "Arduino",
         "Raspberry Pi Pico SDK",
         "RP2040",
         "RP2350",
-        "GCC 14.3",
-        "Newlib 4.5",
         "FreeRTOS",
-        "Adafruit TinyUSB"
+        "Adafruit TinyUSB",
+        "LittleFS",
+        "lwIP"
       ],
       "categories": [
-        "組み込み",
-        "Arduino",
+        "組み込み開発",
+        "Arduinoコア",
         "マイコン",
-        "開発基盤"
+        "開発ツール"
       ],
       "status": "ライブラリ",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 756658345,
       "sourcePushedAt": "2026-05-14T07:55:32Z",
       "sourceDefaultBranch": "master",
@@ -2760,38 +2819,39 @@
         "language": "C"
       },
       "sourceFingerprint": "24eff7ef01329cc4ae6a2a373c43b4ccebbcc3120006ebb4874dccd5441b41a9",
-      "generatedAt": "2026-09-04T10:19:16.497Z"
+      "generatedAt": "2026-09-04T11:07:35.711Z"
     },
     "2026_05_14_gnss_satellite_monitor_akizuki_m5stack_core2": {
       "title": "M5Stack GNSS衛星モニタ",
-      "summary": "M5Stack Core2と秋月電子のGT-505GGBL5-DR-NをUART接続し、NMEA文から測位状態や位置、精度、衛星ごとの受信状況を画面とSerial Monitorに表示するPlatformIOプロジェクトです。GGAとGSAの使用衛星数も分けて確認できます。",
-      "detail": "こいつは、M5Stack Core2で秋月電子のGNSSモジュールGT-505GGBL5-DR-Nを監視するためのモニタだ。中ではSerial2をGPIO13/14、115200 bpsで接続し、GGA・GSA・GSV・RMCのNMEA文を解析して、測位状態、緯度・経度・高度、HDOP・PDOP・VDOPを画面とSerial Monitorへ出してる。衛星ごとのシステム、ID、使用状態、CNO、仰角、方位角も見られるうえ、GGAの使用衛星数とGSAが測位計算に使う衛星ID数を分けて表示するのが要所だな。PlatformIOからビルドや書き込みができる構成で、PPS端子は今回は使っていない。実際の測位性能や運用機能までは、この資料だけでは判断できない。",
+      "summary": "M5Stack Core2と秋月電子のGT-505GGBL5-DR-NをUART接続し、NMEA文を解析して測位状態や衛星情報を画面とSerial Monitorへ表示するPlatformIOプロジェクト。緯度経度だけでなく、衛星ごとの受信状況や各種DOP値まで確認できます。",
+      "detail": "こいつは、M5Stack Core2で秋月電子のGNSSモジュールGT-505GGBL5-DR-Nを監視するためのモニタだな。中ではSerial2をGPIO13/14、115200bpsで接続し、GGA・GSA・GSV・RMCのNMEA文を解析して、画面とSerial Monitorへ測位状態、緯度・経度・高度、HDOP・PDOP・VDOPを出している。衛星ごとのシステム、ID、使用状態、CNO、仰角、方位角も追えるから、単に位置が取れたかだけでなく受信の内訳まで見られるってわけだ。特にUsedGGA、UsedGSA、Visible、GSVSeenを分けて表示し、秋月GNSSで使用衛星数が一致しない場合も切り分けやすくしている。PPS線は今回は使わず、PlatformIOとArduino、M5UnifiedでCore2へ書き込む構成だ。",
+      "closingRemark": "衛星数が合わないところまで正直に表示する、なかなか几帳面な監視役だな。",
       "features": [
-        "GGA・GSA・GSV・RMCのNMEA解析",
-        "測位状態と緯度・経度・高度の表示",
-        "HDOP・PDOP・VDOPによる測位精度の確認",
-        "衛星ごとの受信情報の表示",
-        "GGAとGSAの使用衛星数を分離表示"
+        "GGA・GSA・GSV・RMCを解析",
+        "測位状態と位置・高度を表示",
+        "HDOP・PDOP・VDOPを確認可能",
+        "衛星ごとの受信情報を表示",
+        "UsedGGAとUsedGSAなどの衛星数を分離表示"
       ],
       "technologies": [
         "C++",
-        "Arduino",
-        "PlatformIO",
-        "ESP32",
-        "M5Unified",
         "M5Stack Core2",
         "GT-505GGBL5-DR-N",
+        "PlatformIO",
+        "Arduino",
+        "M5Unified",
+        "UART",
         "NMEA"
       ],
       "categories": [
-        "ツール",
-        "GNSS",
         "組み込み",
-        "モニタリング"
+        "GNSS",
+        "モニタリング",
+        "ハードウェア"
       ],
       "status": "ツール",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1238418004,
       "sourcePushedAt": "2026-05-14T05:38:52Z",
       "sourceDefaultBranch": "main",
@@ -2818,38 +2878,39 @@
         "language": "C++"
       },
       "sourceFingerprint": "f745710719b139ad21ed8343ebfae85f377a28a535a2162d6c17290da68e2299",
-      "generatedAt": "2026-09-04T10:19:32.413Z"
+      "generatedAt": "2026-09-04T11:07:52.175Z"
     },
     "t265-runtime-api-showcase": {
       "title": "T265ランタイムAPI設計資料",
-      "summary": "Intel RealSense T265をLinux上で扱うためのruntime API設計と技術調査をまとめた公開ドキュメントです。queue処理や同期、座標系、検証方針を図とメモで確認できます。",
-      "detail": "こいつは、Intel RealSense T265をLinux上で扱うruntime APIについて、調査の進め方と設計判断を公開したショーケースだ。中では、libusbベースのアクセス方針、制御用のlatest stateとログ用のqueueの使い分け、複数台識別、画像の所有権、timestamp同期、終了処理までを設計資料とMermaid図で整理してる。API契約や検証観点も追えるから、同じ方向で再調査・再開発するときの案内図になるってわけだ。ただし実装ソース、firmware、実機固有設定、生ログ、完成済みSDKは含まれず、公式のIntel / RealSenseプロジェクトでもない。",
+      "summary": "Intel RealSense T265をLinuxで扱うための、runtime API設計と技術調査をまとめた公開ショーケースだ。libusbを軸に、用途別API、queue処理、同期、検証方針、公開範囲の切り分けを図と文書で確認できる。",
+      "detail": "こいつは、Intel RealSense T265をLinux上で扱うruntime APIについて、何を調べ、どう設計し、どこを検証するかを整理した公開用の設計資料だ。中ではT265をデータを出すUSBデバイスとして捉え、librealsenseだけに寄せずlibusbベースのAPI構成や、制御向けのlatest state、ログ向けのqueue、複数台用のserial / role識別を使い分けている。threading、syncer、画像の所有権、timestampと座標系、shutdown順序まで、実装で詰まりやすい境目をMermaid図と設計メモで追えるようにしてある。再開発なら研究マップやチェックリストから、全体像ならプロジェクトストーリーとアーキテクチャから読むとよい。ただし実装コード、firmware、実機固有設定、生ログは公開されておらず、動くSDKそのものではない。",
+      "closingRemark": "設計図は揃っているが、肝心の実装とfirmwareは酒場の裏口より先に置かれたままだな。",
       "features": [
         "T265 runtime APIの設計思想と調査観点を整理",
         "latest state・queue・multi-queue・syncerの用途を比較",
-        "threading、画像処理、shutdownの設計メモを掲載",
-        "timestampと座標系、API契約、検証方針を確認可能",
-        "Mermaid形式の構成図と公開範囲の判断基準を収録"
+        "threading・画像のlifetime・shutdown順序を検討",
+        "timestampと座標系、検証方法を文書化",
+        "Mermaidの構成図と匿名化した検証サマリを収録"
       ],
       "technologies": [
         "Intel RealSense T265",
         "Linux",
         "libusb",
         "librealsense",
-        "Mermaid",
         "USB",
-        "runtime API",
+        "Mermaid",
+        "queue",
         "syncer"
       ],
       "categories": [
-        "センサー",
-        "API設計",
+        "設計資料",
         "技術調査",
-        "ドキュメント"
+        "API設計",
+        "ロボティクス"
       ],
-      "status": "教材",
+      "status": "実験",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1231687933,
       "sourcePushedAt": "2026-05-07T09:27:02Z",
       "sourceDefaultBranch": "main",
@@ -2867,17 +2928,18 @@
         "language": "Mermaid"
       },
       "sourceFingerprint": "62233810286736c96a6f557a65999bafb8e3223ed0f02fee6628dd2774211931",
-      "generatedAt": "2026-09-04T10:19:48.056Z"
+      "generatedAt": "2026-09-04T11:08:09.930Z"
     },
     "M5stackcores3_BNO08x_roller485": {
-      "title": "CoreS3姿勢センサー試作",
-      "summary": "M5Stack CoreS3とBNO08xを使うらしい、C++製の組み込みプロジェクトだな。実装はcores3_bno08x_fixedディレクトリにまとめられているが、READMEや設定資料がなく、具体的な制御対象や動作までは確認できない。",
-      "detail": "こいつは、M5Stack CoreS3とBNO08xに関係する組み込み向けのC++コードを置いたプロジェクトらしい。中を見ると、ルートにはcores3_bno08x_fixedというディレクトリがあり、C++の実装が約118KBあるところまでは追える。名前にはroller485も含まれているが、観察できるファイル内容がないため、ローラー機構やRS-485通信を実際にどう扱っているのか、センサー値を何に使うのかまでは判断できないな。READMEもないので、現状は用途を断定できない試作コードとして見るのが妥当だ。",
+      "title": "CoreS3・BNO08x制御コード",
+      "summary": "M5Stack CoreS3とBNO08xに関係するC++コードを収めたリポジトリらしい。ルートには固定版を示すcores3_bno08x_fixedディレクトリがあるが、READMEや設定資料がなく、具体的な用途までは確認できない。",
+      "detail": "こいつは、M5Stack CoreS3とBNO08xに関係するC++コードを置いたリポジトリらしい。中を見ると、ルートにはcores3_bno08x_fixedというディレクトリがひとつあり、名前から姿勢センサー周りの固定版、あるいは調整済み実装を扱っている可能性は読める。C++のコード量は約118KBで、何らかの制御処理がまとまっているところまでは分かるな。ただ、READMEも説明文もなく、roller485が実際に実装されているのか、どんな入力や出力を扱うのか、ビルドや利用手順までは資料から判断できない。現状は構成と名称を手掛かりに、コードを直接読んで確かめる段階ってところだ。",
+      "closingRemark": "READMEがないぶん、CoreS3とBNO08xの関係はコードの中で黙って語らせるしかない。",
       "features": [
-        "C++で実装された組み込み向けコード",
-        "CoreS3とBNO08xに関係する構成とみられる",
-        "cores3_bno08x_fixedディレクトリに実装を集約",
-        "ローラーやRS-485の具体的な動作は未確認"
+        "CoreS3とBNO08xに関係する実装を収録",
+        "固定版を示すディレクトリ構成",
+        "C++コードを中心とした構成",
+        "READMEや利用手順は未確認"
       ],
       "technologies": [
         "C++",
@@ -2886,13 +2948,12 @@
       ],
       "categories": [
         "組み込み",
-        "センサー",
-        "C++",
-        "試作"
+        "センサー制御",
+        "C++"
       ],
       "status": "不明",
       "confidence": "low",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1151171903,
       "sourcePushedAt": "2026-02-06T06:14:56Z",
       "sourceDefaultBranch": "main",
@@ -2910,32 +2971,34 @@
         "language": "C++"
       },
       "sourceFingerprint": "6e190182368576aca3b56b4f331ed38ad9f921b7afa88bdbaa650359cdefb447",
-      "generatedAt": "2026-09-04T10:20:04.004Z"
+      "generatedAt": "2026-09-04T11:08:25.213Z"
     },
     "simple_cores3_roller485_bno055": {
-      "title": "CoreS3姿勢制御プロジェクト",
-      "summary": "CoreS3、Roller485、BNO055に関係するC++コードを収めた組み込み向けリポジトリらしい。READMEや設定情報は確認できないため、具体的な制御対象や利用方法までは判断できない。",
-      "detail": "こいつは、名前から見るとCoreS3を使い、Roller485とBNO055を組み合わせた組み込み向けのC++プロジェクトらしい。BNO055は姿勢や加速度を扱うセンサーとして使われるものだが、この資料ではコード以外の説明がなく、Roller485が機器名なのか通信対象なのかまでは分からない。C++のソースが約72KBあることは確認できるものの、何を制御し、どうビルドして動かすのかは判断できない。現状では、実験用か完成品かも含めて不明と見るのが妥当だな。",
+      "title": "CoreS3・BNO055関連C++コード",
+      "summary": "M5Stack CoreS3、Roller485、BNO055を思わせる名前を冠した、組み込み向けC++コードのリポジトリだな。READMEやファイル一覧は確認できないため、具体的な制御内容や使い方までは判断できない。",
+      "detail": "こいつは、リポジトリ名からM5Stack CoreS3、Roller485、BNO055に関わる組み込み用C++コードを置いているらしい。中身について観察できるのはC++が約72KBあることと、ルートに同名のディレクトリがあることだけで、どの機器をどう動かすものか、センサー値をどう扱うのかまでは追えない。READMEも設定ファイルも見当たらないから、実験用の制御コードなのか、特定機器向けのサンプルなのかも断定はできない。要するに、名前から接続先の手掛かりはあるが、動作の説明には実ファイルの確認が要るってところだな。",
+      "closingRemark": "BNO055の名前は見えるが、姿勢まで読める資料はまだ店の帳面に載っていない。",
       "features": [
-        "C++で実装された組み込み向けコード",
-        "CoreS3を中心とした構成らしい",
-        "BNO055センサーの利用が示唆されている",
-        "Roller485との連携が名前に含まれている"
+        "C++コードが約72KB確認できる",
+        "CoreS3・Roller485・BNO055を示すリポジトリ名",
+        "READMEや設定ファイルがなく詳細仕様は不明",
+        "ルートに同名ディレクトリがある"
       ],
       "technologies": [
         "C++",
-        "CoreS3",
-        "BNO055",
-        "Roller485"
+        "M5Stack CoreS3",
+        "Roller485",
+        "BNO055"
       ],
       "categories": [
         "組み込み",
         "センサー",
-        "制御"
+        "C++",
+        "ハードウェア制御"
       ],
       "status": "不明",
       "confidence": "low",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1144829479,
       "sourcePushedAt": "2026-01-29T05:07:03Z",
       "sourceDefaultBranch": "main",
@@ -2953,36 +3016,39 @@
         "language": "C++"
       },
       "sourceFingerprint": "2d4e6bbfe31638adf5526022032012f34699ca2df48b3811eff3b5fcf7ba9994",
-      "generatedAt": "2026-09-04T10:20:17.690Z"
+      "generatedAt": "2026-09-04T11:08:42.667Z"
     },
     "ahrs": {
-      "title": "Python姿勢推定アルゴリズム集",
-      "summary": "移動体の姿勢や方位を推定するための、純Python製アルゴリズム集です。加速度・角速度・地磁気を使う多様な推定器に加え、四元数、合成センサーデータ、測地計算まで扱えます。",
-      "detail": "こいつは、航空機やウェアラブル機器など、動くシステムの向きや方位を推定するためのPythonライブラリだ。中では加速度計・ジャイロスコープ・磁気センサーのデータを使い、Madgwick、Mahony、EKF、UKF、FKFなど複数の姿勢推定アルゴリズムから四元数を計算してる。Wahba問題による観測ベースの推定と、角速度を積分するデッドレコニングの両方を扱い、QuaternionやQuaternionArrayはNumPy配列としても使える。Sensorsで合成MARGデータを作ったり、測地座標の変換や評価指標を試したりできるから、試作・教育・テスト向けという位置づけだな。純Pythonゆえ性能最優先ではなく、I/Oやプロット機能はすでに外されている。この公開リポジトリはフォークだが、実装・ドキュメント・テストまで揃っている。",
+      "title": "Python姿勢推定ライブラリ",
+      "summary": "移動体の向きや方位を、ジャイロ・加速度・地磁気センサーのデータから推定するPythonライブラリ。複数の姿勢推定アルゴリズム、合成MARGセンサー、クォータニオン、測地計算を備え、試作や教育、検証に向いている。",
+      "detail": "こいつは、移動する機器の姿勢や方位をセンサーデータから推定するための、純粋なPythonライブラリだ。中ではジャイロの角速度を積分するデッドレコニングと、加速度・地磁気を基準ベクトルと比べるWahba問題を軸に、Madgwick、Mahony、EKF、UKF、FKF、TRIADなど複数の推定器を実装してる。センサーデータを渡せばクォータニオン列を得られ、QuaternionやQuaternionArrayはNumPy配列として扱えるほか、Sensorsで合成MARGデータを作り、geodesyで座標変換や測地計算も試せる。ドキュメントとユニットテストも揃っていて、速さより高速プロトタイピング、教育、テスト、モジュール性を重視した構成だな。ただし、最適化された実運用向け実装や、かつてのio・plotサブモジュールまではこの版には含まれていない。",
+      "closingRemark": "推定器は豊富だが、速さを競う酒場ではない。まず姿勢の仕組みを確かめる席ってところだな。",
       "features": [
-        "多様な姿勢推定アルゴリズムを収録",
-        "四元数と回転表現をNumPy配列として操作可能",
+        "19種類の姿勢推定アルゴリズムを収録",
+        "ジャイロ・加速度・地磁気に対応",
+        "Quaternion系オブジェクトをNumPy配列として利用可能",
         "合成MARGセンサーデータを生成可能",
-        "測地座標変換や評価指標を提供",
-        "ドキュメントとユニットテストを整備"
+        "測地計算と座標系変換のサブモジュールを提供"
       ],
       "technologies": [
         "Python",
         "NumPy",
-        "Jupyter Notebook",
+        "Hatch",
         "pytest",
         "Sphinx",
-        "Hatchling"
+        "Read the Docs",
+        "クォータニオン",
+        "カルマンフィルタ"
       ],
       "categories": [
         "ライブラリ",
+        "科学技術計算",
         "姿勢推定",
-        "センサーフュージョン",
-        "測地学"
+        "教育"
       ],
       "status": "ライブラリ",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1238535135,
       "sourcePushedAt": "2025-11-10T18:31:33Z",
       "sourceDefaultBranch": "master",
@@ -3000,18 +3066,19 @@
         "language": ""
       },
       "sourceFingerprint": "4546c0d34195726eca1d10071a84845edf035042b4b5d8e5779decd973b5c70e",
-      "generatedAt": "2026-09-04T10:20:35.211Z"
+      "generatedAt": "2026-09-04T11:09:01.603Z"
     },
     "2025_koudaisai_Robocon": {
-      "title": "工大際ロボコン無線操縦システム",
-      "summary": "AtomS3とAtom JoyStickで取得した操作入力をESP-NOWでCoreS3へ送り、Roller485を動かす工大際ロボコン向けの送受信プログラム。自動チャネル選択やハンドシェイク、LED・音楽の非ブロッキング制御にも対応しています。",
-      "detail": "こいつは、M5Stackを使ってロボコン機体を無線操縦するための送受信プログラムだな。送信側のAtomS3＋Atom JoyStickがスティックやボタン、バッテリ電圧を読み取り、ESP-NOWで受信側のCoreS3へ送ってる。中では起動時のパッシブスキャンで混雑の少ないチャネルを選び、ブロードキャストによる切替ハンドシェイクの後、ユニキャスト通信へ移行する構成だ。CoreS3は受け取った操作値をI2C接続のRoller485へ送り、LED演出やメロディーも通信を止めずに並行処理できる。V2パケットを基本に旧V1も暫定変換できるが、ESP-NOWは同一チャネル前提で、切替時の瞬断や混信までは完全には避けられない。",
+      "title": "工大祭ロボコン無線操縦基盤",
+      "summary": "AtomS3のジョイスティック操作をESP-NOWでCoreS3へ送り、I2C接続したRoller485を動かす2025年工大際ロボコン向けの送受信プログラムだ。混雑の少ない無線チャネルの自動選択、切替ハンドシェイク、旧パケット互換、LEDと音楽の非ブロッキング制御までまとめて扱う。",
+      "detail": "こいつは、2025年工大際ロボコンの機体を無線操縦するための送受信基盤でな。送信側のM5Stack AtomS3 + Atom JoyStickがスティックやボタン、バッテリ電圧を読み取り、ESP-NOWで受信側のM5Stack CoreS3へ送ってる。起動時は周辺アクセスポイントをパッシブスキャンしてチャネルを選び、SWITCH_REQ／ACKで同時に切り替えたあと、相手のMACアドレスによるユニキャストへ固定する構成だ。CoreS3はV2パケットを処理し、旧V1には警告を出して暫定マッピングを施しながら、I2Cの0x42・0x43・0x41に接続したRoller485へ速度や正逆転を指令できる。LED演出と約5秒のメロディー再生はFreeRTOSタスクやタイマで並行処理するが、ESP-NOWは同一チャネル前提で切替時の瞬断や混雑による干渉までは避けられないし、READMEの記載パスと実際のフォルダ名にも差があるな。",
+      "closingRemark": "チャネルは自動で選べても、配線とMACアドレスまでは現場で面倒を見る必要がある。無線操縦も最後は人の仕事ってわけだ。",
       "features": [
-        "AtomS3からCoreS3へのESP-NOW無線操縦",
-        "パッシブスキャンによる自動チャネル選択",
-        "ハンドシェイク後のユニキャスト通信",
-        "V2パケット対応と旧V1の暫定マッピング",
-        "LED・音楽・通信を止めない非ブロッキング処理"
+        "AtomS3からCoreS3へESP-NOWで操作状態を送信",
+        "パッシブスキャンとハンドシェイクによるチャネル自動選択",
+        "ブロードキャスト検出後にMAC指定ユニキャストへ切替",
+        "V2パケットを基本とし旧V1を暫定マッピングで受信",
+        "LED・音楽・通信を非ブロッキングで並行処理"
       ],
       "technologies": [
         "C++",
@@ -3020,18 +3087,18 @@
         "M5Stack CoreS3",
         "ESP-NOW",
         "M5Unified",
-        "FreeRTOS",
-        "Roller485"
+        "Roller485",
+        "I2C"
       ],
       "categories": [
-        "ロボット",
+        "ロボコン",
         "組み込み",
         "無線通信",
-        "ロボコン"
+        "ハードウェア制御"
       ],
       "status": "試作",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1078890770,
       "sourcePushedAt": "2025-10-18T16:50:34Z",
       "sourceDefaultBranch": "main",
@@ -3049,31 +3116,31 @@
         "language": "C++"
       },
       "sourceFingerprint": "0c7179d2dd6ada88f1ccd476794975c2c087c40f4035385216f706300332d4d1",
-      "generatedAt": "2026-09-04T10:20:51.669Z"
+      "generatedAt": "2026-09-04T11:09:20.871Z"
     },
     "AtomS3R_CAM-": {
-      "title": "AtomS3Rカメラ制御コード",
-      "summary": "AtomS3R_CAM-という名前のC++／C製コードを収めたリポジトリだ。中身はatoms3r_camディレクトリにまとめられているが、READMEや設定、実行方法は確認できず、具体的な機能までは断定できない。",
-      "detail": "こいつは、リポジトリ名からAtomS3Rに関係するカメラ用コードらしいところまでは読み取れる。中を見ると、ルートにはatoms3r_camディレクトリがあり、主な言語はC++とCだな。ただ、READMEもファイル抜粋もなく、どのカメラをどう扱うのか、対応するライブラリや実行環境までは資料がない。現時点では、AtomS3R向けの試作または制御コードと見るのが無難ってところだ。",
+      "title": "AtomS3R_CAM向けC/C++コード",
+      "summary": "AtomS3R_CAMという名前のディレクトリに、C++とCのソースコードを収めたリポジトリだな。READMEや説明、設定ファイルは確認できないため、何を制御・実現するものかは一覧情報だけでは判断できない。",
+      "detail": "こいつは、AtomS3R_CAMという名前のディレクトリを中心にC++とCのコードを置いたリポジトリだ。確認できるコード量はC++が約13万バイト、Cが約9万バイトで、実装そのものはある程度まとまっているらしい。ただ、READMEも概要説明もなく、ビルド方法や対象機器、カメラ処理を含むのか、別の制御を担うのかまでは資料から分からない。中身の目的を知るには、atoms3r_cam配下のソースと設定を直接読む必要があるな。",
+      "closingRemark": "コードは積まれているが、案内札はまだ掛かっていない。目的は中身を読んでからだな。",
       "features": [
-        "AtomS3R関連のカメラ用コードらしい構成",
-        "C++とCで実装",
-        "atoms3r_camディレクトリにコードを集約",
-        "READMEや利用手順は確認できない"
+        "atoms3r_camディレクトリに実装を集約",
+        "C++とCのソースコードを含む",
+        "READMEやリポジトリ説明がない",
+        "ビルド方法や利用手順は確認できない"
       ],
       "technologies": [
         "C++",
-        "C",
-        "AtomS3R"
+        "C"
       ],
       "categories": [
-        "組み込み",
-        "カメラ",
-        "試作"
+        "組み込み候補",
+        "ソースコード",
+        "資料不足"
       ],
       "status": "不明",
       "confidence": "low",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1075140952,
       "sourcePushedAt": "2025-10-13T05:16:26Z",
       "sourceDefaultBranch": "main",
@@ -3091,16 +3158,17 @@
         "language": "C++"
       },
       "sourceFingerprint": "37f8cf1a455349df02e14e07d1dfb3a6bc33d3c8ad932842d169b5ec9a5c9364",
-      "generatedAt": "2026-09-04T10:21:03.810Z"
+      "generatedAt": "2026-09-04T11:09:34.594Z"
     },
     "esp-now-simple-example": {
-      "title": "ESP-NOW通信入門サンプル",
-      "summary": "ESPマイコン2台の間で、ESP-NOWを使って変数を送受信する初心者向けサンプルです。送信側と受信側を分け、構造体でデータを扱う実装と詳しいコメントから、低遅延な直接通信の基本を学べます。フォーク由来の例です。",
-      "detail": "こいつは、ESPマイコン同士をESP-NOWで直接つなぎ、変数を送受信する基本を学ぶためのサンプルだな。中ではsimple_exampleフォルダのsendとreceiveに送信側・受信側のコードを分け、同じ構造体を使ってデータを直感的にやり取りしてる。送信先のMACアドレスやWi-Fiチャンネルを設定し、ボタン操作などの値をもう一方の機器へ届ける流れを確認できるわけだ。Wi-Fiルーターを介さず低遅延で通信でき、プログラム内のコメントにも解説があるため、センサーや電子工作へ応用する前の教材として扱いやすい。動作確認はM5Core2とM5FIREで行われているが、実際の対応範囲や通信の堅牢性までは、この資料だけでは判断できない。",
+      "title": "ESP-NOW通信の簡単な例",
+      "summary": "ESPマイコン同士でESP-NOWを使い、変数を送受信する基本的なサンプルだ。構造体を使った直感的な通信処理と、初心者向けの詳しいコメントで、低遅延な直接通信の仕組みを試せる。",
+      "detail": "こいつは、ESPマイコン同士をESP-NOWで直接つなぎ、送りたい変数をやり取りする基本例だな。中では送信側と受信側を分け、構造体にまとめたデータを使って通信する作りにしてあるから、複数の値をどう渡すかを追いやすい。simple_exampleの中にreceiveとsendがあり、それぞれのsrcにプログラムが置かれている。プログラムには通信処理の流れを説明するコメントも多く、WiFiのようにルーターを介さず低遅延で送れるESP-NOWの入口として使えるってわけだ。動作確認はM5Core2とM5FIREで行われているが、インターネット通信やスマートフォンとの直接接続まで面倒を見る例ではない。",
+      "closingRemark": "構造体ひとつでマイコン同士が話し始める。まずはその素直さを眺めるサンプルだな。",
       "features": [
         "ESP-NOWによるESPマイコン間の直接通信",
-        "sendとreceiveに分けたシンプルな構成",
-        "構造体を使った分かりやすいデータ送受信",
+        "構造体を使った直感的なデータ送受信",
+        "送信側と受信側を分けたシンプルな構成",
         "初心者向けの詳しいコードコメント",
         "M5Core2とM5FIREでの動作確認"
       ],
@@ -3108,21 +3176,19 @@
         "ESP-NOW",
         "ESP32",
         "ESP8266",
-        "C",
-        "C++",
+        "WiFi",
         "M5Core2",
-        "M5FIRE",
-        "Wi-Fi"
+        "M5FIRE"
       ],
       "categories": [
         "組み込み",
         "無線通信",
-        "電子工作",
-        "教材"
+        "ESPマイコン",
+        "サンプル"
       ],
       "status": "教材",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 856340756,
       "sourcePushedAt": "2025-10-09T03:04:01Z",
       "sourceDefaultBranch": "main",
@@ -3140,36 +3206,39 @@
         "language": "C"
       },
       "sourceFingerprint": "769a9a91049f81d9bf5195f90926a1fba7e8ed8d58a520590662364dd7cda238",
-      "generatedAt": "2026-09-04T10:21:19.727Z"
+      "generatedAt": "2026-09-04T11:09:51.128Z"
     },
     "StampFly_Workshop": {
       "title": "StampFly制御学習教材",
-      "summary": "小型マルチコプタStampFlyを題材に、モータ制御から送信機通信、LED表示、ミキシング、IMUによる姿勢推定、アクロモード飛行まで段階的に学ぶ教材です。Lessonごとのサンプルプログラムと講義資料へのリンクがまとまっています。",
-      "detail": "こいつは、小型マルチコプタStampFlyを実際に動かしながら、飛行制御の基礎を学ぶための教材だ。中ではLesson 0のサンプルから始めて、モータを回す処理、送信機データの受信、LED表示、モータ出力のミキシング、IMUデータの取得へと段階を進めている。さらに、重力加速度を使った姿勢推定とアクロモード飛行プログラムの設計・実装、解答サンプルまで扱う構成になってる。Cを中心にC++や組み込み向けのビルド設定が含まれ、各レッスンのコードを追えば機体制御の流れを確認できるってわけだ。Lesson 6と7は一覧に見当たらず、対応する内容やStampFlyの具体的なハードウェア構成までは、この資料だけでは判断できない。",
+      "summary": "小型マルチコプタStampFlyを題材に、モータ駆動から送信機通信、姿勢推定、アクロモード飛行までを段階的に学ぶ教材です。Lessonごとのサンプルを通じて、制御に必要な要素を順に確かめられます。",
+      "detail": "こいつは、StampFlyを実際に動かしながらマルチコプタ制御の基礎を学ぶための教材だな。中ではLesson 0のサンプルから始めて、モータを回し、送信機のデータを受け、LED表示やモータのミキシングを組み立てていく。さらにIMUデータの取得、重力加速度を使った姿勢推定へ進み、Lesson 9と10ではアクロモード飛行プログラムの設計と解答サンプルまで扱ってる。CとC++を中心にした組み込み向けの構成で、各段階のコードを追えば制御処理がどう積み上がるかを確認できるってわけだ。Lesson 6と7は一覧に見当たらず、個々のハードウェア構成やビルド手順まではこの資料だけでは分からない。",
+      "closingRemark": "モータを回すところからアクロモードまで進むが、Lesson番号には少し空中戦の跡が残ってるな。",
       "features": [
-        "Lesson形式で制御機能を段階的に学習",
-        "モータ制御と送信機データ受信を扱う",
-        "ミキシングとIMUデータ取得を確認できる",
-        "重力加速度を使った姿勢推定を実装",
-        "アクロモードの設計と解答例を収録"
+        "モータ駆動から飛行制御まで段階的に学べる",
+        "送信機データの受信とLED表示を扱う",
+        "モータミキシングで操縦入力を分配する",
+        "IMUと重力加速度から姿勢を推定する",
+        "アクロモードの設計と解答例を収録する"
       ],
       "technologies": [
         "C",
         "C++",
         "CMake",
         "Makefile",
+        "StampFly",
         "IMU",
-        "StampFly"
+        "Python",
+        "Shell"
       ],
       "categories": [
-        "教材",
         "組み込み",
         "マルチコプタ",
-        "制御"
+        "飛行制御",
+        "教材"
       ],
       "status": "教材",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 756621418,
       "sourcePushedAt": "2025-10-09T02:58:43Z",
       "sourceDefaultBranch": "main",
@@ -3187,38 +3256,39 @@
         "language": "C"
       },
       "sourceFingerprint": "0bf7b190881266eb001ceb9fd0081795c29c337ec3b92a9215f4af5646d1b4bd",
-      "generatedAt": "2026-09-04T10:21:36.724Z"
+      "generatedAt": "2026-09-04T11:10:08.182Z"
     },
     "ubuntu_realsenseT265": {
-      "title": "RealSense T265姿勢取得メモ",
-      "summary": "Ubuntu 22.04.5 LTSでIntel RealSense T265から位置・姿勢データを取得するための個人向けプログラムとメモをまとめたものです。librealsense 2.53.1での動作確認や、ビルド時の補足情報も収録しています。",
-      "detail": "こいつは、Intel RealSense T265をUbuntu環境で動かし、位置や姿勢のポーズデータを読み出すためのサンプルプログラムと検証メモをまとめたリポジトリだな。中ではlibrealsense v2.53.1を使い、T265を認識させたうえで、提供されているプログラムをビルドして実行する構成になってる。Cのソースが中心で、コンパイル時にはpkg-configによるrealsense2の設定を使う想定らしい。複数台のT265接続にも触れているが、実際の対応状況や詳しい処理内容までは資料だけでは判断できない。個人の動作確認に基づく内容で、手順の未整理な部分や最新環境での互換性には注意が必要だ。",
+      "title": "RealSense T265位置姿勢取得",
+      "summary": "Ubuntu 22.04.5 LTSでIntel RealSense T265から位置・姿勢データを取得するためのCプログラムとメモをまとめたリポジトリ。librealsense 2.53.1での動作確認環境やビルド時の手掛かりも確認できる。",
+      "detail": "こいつは、Intel RealSense T265をUbuntu上で動かし、位置と姿勢のデータを読み出すための個人的な検証用リポジトリだな。中ではCで書かれたサンプルプログラムと、実行環境やコンパイル方法を補うメモをまとめていて、librealsense 2.53.1を使った構成が基準になってる。realsense-viewerでデバイス認識を確認したうえで、pkg-configを使ったビルドや、必要に応じてpyrealsense2を利用する手掛かりも残されている。T265を複数接続できる可能性には触れているが、具体的な実装や検証結果までは資料から判断できない。個人の趣味による初公開の内容で、インストール手順の詳細や最新環境での正確性までは保証されていないってところだ。",
+      "closingRemark": "T265のポーズは読めるが、複数台運用の話はまだメモの段階。センサーより先に整理が必要らしいな。",
       "features": [
-        "T265の位置・姿勢データを読み出すサンプル",
-        "Ubuntu 22.04.5 LTSでの動作確認記録",
-        "librealsense 2.53.1向けの環境メモ",
-        "ビルド方法を補足するメモを収録",
-        "複数台接続の可能性にも言及"
+        "T265から位置・姿勢データを取得するサンプルプログラム",
+        "Ubuntu 22.04.5 LTSでの動作確認環境を明記",
+        "librealsense 2.53.1を前提にした構成",
+        "ビルド用コマンドを補うメモを収録",
+        "複数T265接続の可能性に言及"
       ],
       "technologies": [
         "C",
-        "Ubuntu 22.04.5 LTS",
         "Intel RealSense T265",
-        "librealsense",
-        "RealSense SDK 2.53.1",
+        "librealsense 2.53.1",
+        "RealSense SDK",
+        "Ubuntu 22.04.5 LTS",
         "realsense-viewer",
         "pkg-config",
-        "realsense2"
+        "pyrealsense2"
       ],
       "categories": [
-        "ツール",
-        "サンプル",
-        "コンピュータビジョン",
-        "センサー"
+        "位置推定",
+        "センサー",
+        "サンプルプログラム",
+        "ロボティクス"
       ],
       "status": "ツール",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1063232873,
       "sourcePushedAt": "2025-09-24T11:01:20Z",
       "sourceDefaultBranch": "main",
@@ -3236,38 +3306,39 @@
         "language": "C"
       },
       "sourceFingerprint": "1943eba487065915538846d890db0db044e2e413b0aff5c02e4ba49269052f04",
-      "generatedAt": "2026-09-04T10:21:53.508Z"
+      "generatedAt": "2026-09-04T11:10:26.597Z"
     },
     "-Mbps_M5cores3": {
-      "title": "複数基板向けシリアル通信スケッチ",
-      "summary": "ArduinoのSerial.inoをPlatformIO向けのC++プロジェクトへ移行したシリアル通信スケッチだ。Arduino UNO R4 Minima、Arduino UNO、M5Stack CoreS3の環境を切り替えてビルドや書き込み、シリアルモニターでの確認ができる。",
-      "detail": "こいつは、元のArduino用Serial.inoをPlatformIOで扱える形に移したシリアル通信プロジェクトだな。中ではArduinoフレームワークを使い、src/main.cppを各ボード向けにビルドできるようにしている。platformio.iniにはArduino UNO R4 Minima、Arduino UNO（ATmega328P）、M5Stack CoreS3（ESP32-S3）の3環境が定義され、115200 baudのシリアルモニターや、ビルド結果の書き込みにも対応してる。CoreS3ではM5Unifiedを依存ライブラリとして使う構成だ。ただし、実際に送受信するデータや処理内容は観察資料だけでは分からず、詳細はsrc/main.cppを読む必要がある。",
+      "title": "シリアル通信PlatformIOプロジェクト",
+      "summary": "Arduino系ボード向けのシリアル通信スケッチを、PlatformIOでビルド・書き込みできる形に移したプロジェクトだ。Arduino UNO R4 Minima、UNO、M5Stack CoreS3の3環境を切り替えて扱える。",
+      "detail": "こいつは、もともとのArduino用Serial.inoをPlatformIOプロジェクトへ移し、複数のボードでビルドや書き込みを試せるようにしたものだな。中ではArduinoフレームワークを使い、src/main.cppに元スケッチをC++として組み込み、platformio.iniでArduino UNO R4 Minima、Arduino UNO、M5Stack CoreS3の環境を定義してる。各環境に応じたpio runやupload、シリアルモニターの使い方もREADMEにまとまっているから、VS CodeとPlatformIOがあれば動作確認へ進めるってわけだ。CoreS3ではM5Unifiedも依存関係に指定されている。ただし、実際にどんなデータを送受信するのか、main.cpp内の通信処理がどうなっているかまでは、この観察資料だけでは判断できない。",
+      "closingRemark": "3種類のボードを並べた用意周到さに対して、通信の中身はまだ資料の奥に隠れているな。",
       "features": [
-        "PlatformIOプロジェクトとしてArduinoスケッチを管理",
-        "3種類のマイコン・ボード向け環境を切り替え可能",
-        "ビルド、ファームウェア書き込み、シリアルモニターに対応",
-        "共通のArduinoフレームワークと115200 baud設定を使用",
-        "元のSerial.inoをmain.cppへ移行"
+        "PlatformIOでビルドと書き込みを実行できる",
+        "UNO R4、UNO、CoreS3の3環境に対応",
+        "シリアルモニターの起動手順をREADMEに掲載",
+        "元のSerial.inoをsrc/main.cppへ移植",
+        "環境ごとにボードとプラットフォームを設定"
       ],
       "technologies": [
         "C++",
-        "Arduino",
         "PlatformIO",
+        "Arduino framework",
         "Arduino UNO R4 Minima",
         "Arduino UNO",
-        "ATmega328P",
         "M5Stack CoreS3",
+        "ESP32-S3",
         "M5Unified"
       ],
       "categories": [
         "組み込み",
         "シリアル通信",
-        "PlatformIO",
-        "マイコン"
+        "Arduino",
+        "PlatformIO"
       ],
       "status": "ツール",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1055460771,
       "sourcePushedAt": "2025-09-12T09:53:12Z",
       "sourceDefaultBranch": "main",
@@ -3285,38 +3356,39 @@
         "language": "C++"
       },
       "sourceFingerprint": "a948b621f22d855a2232d3170da26d90c10c5beee508ce374a751c00ee5b6f36",
-      "generatedAt": "2026-09-04T10:22:09.651Z"
+      "generatedAt": "2026-09-04T11:10:43.160Z"
     },
     "M5StampFly_skeleton": {
-      "title": "StampFly飛行制御ファーム骨格",
-      "summary": "M5StackのStampFlyとAtomJoyStick向けに、独自の飛行プログラムを組み込むためのファームウェア骨格を提供するフォーク。モータ、IMU、姿勢推定、ToFのAPIと400Hz制御周期、テレメトリーによるログ機能を備える。",
-      "detail": "こいつは、M5StackのStampFlyを自分の飛行制御プログラムで動かすためのファームウェアの骨組みだな。中ではモータ、IMU、姿勢推定、ToFセンサ向けのAPIを用意し、400Hzで呼ばれるloop_400Hz関数に独自の制御処理を追加できるようにしてる。センサ処理はsensor.cpp、制御の入口はmain_loop.cppから読み始めれば構成を追いやすい。AtomJoyStickと組み合わせればテレメトリー経由のログも扱えるほか、PlatformIOでESP32-S3向けにビルドし、カスタムファームウェアのバイナリも生成できる。オプティカルフローや気圧センサのAPI、詳しい使い方の資料は今後の課題で、完成済みの飛行制御そのものではないってところだ。",
+      "title": "StampFly飛行制御スケルトン",
+      "summary": "M5StackのStampFlyとAtomJoyStick向けに、飛行ファームウェアを組み立てるための骨組みを提供するリポジトリ。モータ、IMU、姿勢推定、ToFのAPIと400Hzの制御周期、テレメトリーによるログ機能を備え、独自の飛行プログラムを追加できる。",
+      "detail": "こいつは、M5StackのStampFlyを自分の飛行プログラムで動かすためのファームウェアの骨組みだな。中ではモータ、IMU、姿勢推定、ToF距離センサのAPIを用意し、400Hzで呼ばれるloop_400Hz関数に独自の制御処理を足せるようにしてる。AtomJoyStickと組み合わせればテレメトリーでログも取れるし、読み始めるならmain_loop.cpp、センサ周りを追うならsensor.cppという道筋も示されている。PlatformIOでESP32-S3向けにビルドし、カスタムのbinファームウェアを生成する構成だ。ただし、オプティカルフローや気圧センサのAPI、詳しい使い方の資料はまだ今後の課題として残っている。",
+      "closingRemark": "400Hzの入口はある。あとはそこへ、飛ばしたい制御だけを持ち込む段取りだな。",
       "features": [
-        "StampFly向け独自飛行プログラムの追加基盤",
-        "モータ、IMU、姿勢推定、ToFのAPIを提供",
-        "400Hzの制御周期関数を用意",
+        "StampFly向け飛行ファームウェアの骨組み",
+        "モータ・IMU・姿勢推定・ToFのAPIを提供",
+        "400Hzの制御周期関数に独自処理を追加可能",
         "AtomJoyStick経由のテレメトリーとログに対応",
-        "ESP32向けカスタムファームウェアを生成"
+        "カスタムbinファームウェアを生成"
       ],
       "technologies": [
         "ESP32-S3",
         "Arduino",
         "PlatformIO",
         "FastLED 3.6.0",
-        "INA3221",
-        "OneButton",
         "VL53L3CX",
-        "BMI270"
+        "BMI270",
+        "INA3221",
+        "OneButton"
       ],
       "categories": [
         "組み込み",
         "ドローン",
-        "ファームウェア",
-        "試作"
+        "飛行制御",
+        "ファームウェア"
       ],
       "status": "試作",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1072650413,
       "sourcePushedAt": "2025-06-24T09:12:43Z",
       "sourceDefaultBranch": "main",
@@ -3334,18 +3406,19 @@
         "language": ""
       },
       "sourceFingerprint": "222153555e84ac543e1a6e61509d8b04262b37078b507a87f3faa4649983e6d5",
-      "generatedAt": "2026-09-04T10:22:27.202Z"
+      "generatedAt": "2026-09-04T11:10:59.516Z"
     },
     "MKS-ESP32FOC": {
-      "title": "MKS ESP32 FOC V2.0基板",
-      "summary": "MKS ESP32 FOC V2.0用の資料と関連ファイルをまとめたリポジトリだな。SimpleFOCを基盤にしたESP32搭載の統合基板で、2台のモーターを制御できる点が主な特徴になっている。",
-      "detail": "こいつは、MKS ESP32 FOC V2.0というモーター制御基板の資料を確認するためのリポジトリだ。中を見ると、基板のハードウェア資料、テストコード、ユーザーマニュアル、製品画像が分けて置かれている。基板自体はESP32を使い、SimpleFOCをベースにした構成で、デュアルモーター制御に対応しているらしい。READMEにはV1.0との違いや、旧版向けブランチへの案内、購入先も載っているため、対象基板の世代を見分けながら導入資料をたどれるってわけだ。ただし、観察できる範囲では詳細な制御実装や接続手順までは確認できず、公開フォークとしての位置づけ以上の開発状況も判断できない。",
+      "title": "MKS ESP32デュアルFOC基板",
+      "summary": "MKS ESP32 FOC V2.0の回路資料やマニュアル、テストコードをまとめたリポジトリだ。SimpleFOCを基盤に、1枚のESP32搭載基板で2台のモーターを制御する構成と、V1.0との違いを確認できる。",
+      "detail": "こいつは、MKS ESP32 FOC V2.0というモーター制御基板を扱うためのリポジトリだな。中ではESP32を使った統合マザーボードと、SimpleFOCを土台にしたデュアルモーター制御の資料をまとめている。Hardware、Test Code、User Manualの各ディレクトリがあり、基板の情報から試験用コード、利用手順まで追える構成になってる。READMEではV2.0とV1.0を明確に区別し、旧版向けの案内も用意している。ただし、実際の制御アルゴリズムや対応モーター、ビルド手順の細部までは、この観察資料だけでは判断できない。",
+      "closingRemark": "V2.0とV1.0を取り違えないよう念を押すあたり、モーターより先に型番を回す基板らしい。",
       "features": [
-        "ESP32搭載のモーター制御用統合基板",
-        "SimpleFOCをベースにした設計",
-        "2台のモーターを制御可能",
-        "V1.0とV2.0を区別して案内",
-        "ハードウェア資料・テストコード・ユーザーマニュアルを収録"
+        "ESP32搭載の統合モーター制御基板",
+        "2台のモーターを同時に制御",
+        "SimpleFOCを基盤にした設計",
+        "Hardware・テストコード・ユーザーマニュアルを収録",
+        "V1.0とV2.0を明確に区別"
       ],
       "technologies": [
         "ESP32",
@@ -3354,14 +3427,14 @@
         "FOC（磁界方向制御）"
       ],
       "categories": [
-        "組み込み",
         "モーター制御",
+        "組み込み",
         "ハードウェア",
-        "試作"
+        "ESP32"
       ],
-      "status": "試作",
-      "confidence": "medium",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "status": "完成品",
+      "confidence": "high",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1085401798,
       "sourcePushedAt": "2024-11-19T10:04:37Z",
       "sourceDefaultBranch": "MKS-ESP32-FOC-V2.0",
@@ -3379,36 +3452,37 @@
         "language": ""
       },
       "sourceFingerprint": "8cf8c27201a678ba156fb53483963370dbc59899fb67c892b27e53881909b31f",
-      "generatedAt": "2026-09-04T10:22:43.775Z"
+      "generatedAt": "2026-09-04T11:11:15.166Z"
     },
     "touritusinsi1jiku": {
-      "title": "M5Stack Core2組み込みプロジェクト",
-      "summary": "M5Stack Core2上でArduinoフレームワークを使うC++組み込みプロジェクトだな。PlatformIOでビルドと書き込みの環境を整え、M5Core2ライブラリを依存関係として組み込んでいるが、具体的な用途は資料からは読み取れない。",
-      "detail": "こいつは、ESP32搭載のM5Stack Core2で動かす組み込みソフトウェアの土台らしい。中ではPlatformIOを使い、ArduinoフレームワークとM5Core2ライブラリを指定して、C++のコードをビルドする構成になってる。include、lib、src、testの各ディレクトリがあり、直近では2024年7月の`.ino`ファイル更新も確認できる。ただ、READMEがなく、画面表示やセンサー制御など何を実現するプロジェクトなのか、実装の詳しい振る舞いまでは資料だけでは判断できないな。",
+      "title": "M5Stack Core2制御試作",
+      "summary": "M5Stack Core2を使った組み込み制御の試作プロジェクトらしい。PlatformIOとArduinoフレームワークでC++コードを管理し、通常のソースに加えてライブラリやテスト用ディレクトリも備えている。",
+      "detail": "こいつは、M5Stack Core2を制御対象にした組み込み向けの試作コードだな。PlatformIOでEspressif32環境を組み、ArduinoフレームワークとM5Core2ライブラリを使ってC++のプログラムをビルドする構成になってる。コードはsrcを中心に、include、lib、testへ分けられていて、単一ファイルだけで試すよりは整理して検証する前提らしい。最近のコミット名には2024_7_03_siseiseigyo.inoの更新があるが、READMEがなく、姿勢制御の具体的な方式や接続機器、実際の操作方法まではこの資料だけでは判断できない。",
+      "closingRemark": "姿勢制御らしい更新名は残っているが、READMEは沈黙したままだ。まずはCore2を起動して、名前の続きを実装から読むしかないな。",
       "features": [
-        "M5Stack Core2向けのPlatformIOプロジェクト",
+        "M5Stack Core2向けのPlatformIO環境を定義",
         "ArduinoフレームワークでC++コードをビルド",
-        "M5Core2ライブラリを依存関係として利用",
-        "ソース・ライブラリ・テスト用の構成を持つ"
+        "src・include・lib・testに分けた構成",
+        "M5Core2ライブラリを依存関係として指定",
+        "姿勢制御を示唆するinoファイルの更新履歴"
       ],
       "technologies": [
         "C++",
         "PlatformIO",
         "Arduino",
         "Espressif32",
-        "ESP32",
         "M5Stack Core2",
         "M5Core2"
       ],
       "categories": [
         "組み込み",
-        "Arduino",
-        "ESP32",
-        "ハードウェア制御"
+        "制御",
+        "M5Stack",
+        "試作"
       ],
-      "status": "不明",
+      "status": "実験",
       "confidence": "low",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 823886148,
       "sourcePushedAt": "2024-07-04T00:50:00Z",
       "sourceDefaultBranch": "master",
@@ -3426,37 +3500,39 @@
         "language": "C++"
       },
       "sourceFingerprint": "e40e8684613ac8e34d2f0e43c32e8ba228217945122d673c2fd66fb332ab811c",
-      "generatedAt": "2026-09-04T10:22:59.343Z"
+      "generatedAt": "2026-09-04T11:11:31.947Z"
     },
     "M5-ProductExampleCodes": {
-      "title": "M5Stack製品サンプルコード集",
-      "summary": "M5Stackが提供する各種製品向けのサンプルコードをまとめたリポジトリです。Core、Unit、Module、Hatなど製品群ごとにC/C++中心の例やUIFlow用ファイルを収録していますが、現在はメンテナンスが停止されています。",
-      "detail": "こいつは、M5Stack製品を使った開発の出発点になるサンプルコードを製品群ごとに集めたリポジトリだな。中を見ると、Core、BasicExamples、Unit、Module、Hat、AtomBase、Accessoryなどのディレクトリに分かれ、主力はCとC++のコードで、PythonやMakefile、CMake関連のファイルも少し含まれている。UIFlowで使う.m5f形式の例もあり、KEYやLIMITといった製品の動かし方を確認できるってわけだ。M5Stack製品の機能を試したり、実装の参考にしたりする用途には向いている。ただし、このリポジトリはすでに停止していて、今後の製品例は個別のリポジトリか本体側の例題へ移される方針らしく、最新情報まではここだけでは分からない。",
+      "title": "M5Stack製品サンプル集",
+      "summary": "M5Stackが提供する各種製品のサンプルコードを集めたフォークです。CoreやUnit、Hat、Moduleなど製品群ごとに整理され、C/C++を中心にUIFlow用ファイルも含まれていますが、現在はメンテナンス停止となっています。",
+      "detail": "こいつは、M5Stack製品を使う開発者が対応するサンプルを探すためのコード集だな。中を見ると、Accessory、Core、Unit、Hat、Module、AtomBaseなど製品の系統ごとにディレクトリが分かれ、CとC++のコードを中心に、Pythonやビルド用の補助ファイルも置かれている。BasicExamplesやApplicationといった例題向けの場所に加え、UIFlow用の.m5fファイルもあり、コードだけでなくビジュアル開発側の例も確認できる構成だ。これはフォークとして公開されているが、READMEではリポジトリ自体の停止が明記され、今後の例は製品ドキュメントや別の公式リポジトリを参照するよう案内されている。過去製品の実例を横断して見る資料としては役立つものの、最新情報の置き場とまでは言えない。",
+      "closingRemark": "KEYの例が追加された記録は残っているが、倉庫そのものはすでに店じまいの札を下げているな。",
       "features": [
-        "M5Stack製品のサンプルコードを横断的に収録",
-        "Core、Unit、Module、Hatなど製品群別に整理",
-        "C/C++を中心にPythonやビルド関連ファイルも含む",
-        "UIFlow用の.m5fサンプルを収録",
-        "現在はメンテナンス停止済み"
+        "M5Stack製品群ごとにサンプルをディレクトリ整理",
+        "Core、Unit、Hat、Moduleなど幅広い分類を収録",
+        "UIFlow用の.m5fサンプルを含む",
+        "C/C++を中心に複数言語とビルド補助ファイルを収録",
+        "READMEでメンテナンス停止と後継の参照先を案内"
       ],
       "technologies": [
-        "M5Stack",
         "C",
         "C++",
         "Python",
         "UIFlow",
         "Makefile",
-        "CMake"
+        "CMake",
+        "Shell",
+        "M5Stack"
       ],
       "categories": [
         "組み込み",
-        "IoT",
         "サンプルコード",
-        "ハードウェア"
+        "M5Stack",
+        "教材"
       ],
       "status": "教材",
       "confidence": "high",
-      "summaryStyleVersion": "keeper-spoken-v4",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 774236769,
       "sourcePushedAt": "2022-07-21T01:05:46Z",
       "sourceDefaultBranch": "master",
@@ -3474,7 +3550,7 @@
         "language": ""
       },
       "sourceFingerprint": "b5ca5ad4b10fadbd08fc67fe7b464f90adfc712514915f84848d2054d96a107c",
-      "generatedAt": "2026-09-04T10:23:14.341Z"
+      "generatedAt": "2026-09-04T11:11:50.190Z"
     }
   },
   "repositoryCount": 72
