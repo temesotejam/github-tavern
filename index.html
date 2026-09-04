@@ -114,6 +114,10 @@
         <section class="evidence-panel" id="overviewSection">
           <div class="evidence-panel__title">概要 / OVERVIEW</div>
           <p id="detailDescription" style="margin:0;padding:16px 18px;color:#b7bdb8;font-size:13px;line-height:1.95;white-space:pre-line;"></p>
+          <div style="margin:0 18px 16px;padding:13px 0 0;border-top:1px dashed #343a35;display:grid;grid-template-columns:auto 1fr;gap:9px;align-items:start;">
+            <span style="color:var(--accent-hi);font-size:9px;letter-spacing:.12em;white-space:nowrap;">KEEPER&gt;</span>
+            <p id="keeperClosing" hidden style="margin:0;color:#8f9690;font-size:12px;line-height:1.8;"></p>
+          </div>
         </section>
 
         <section class="evidence-panel" id="featureSection" hidden>
@@ -141,6 +145,7 @@
 
   <script src="./app.js?v=20260904-1907" defer></script>
   <script src="./spoken-overview-client.js?v=20260904-1921" defer></script>
+  <script src="./keeper-closing-client.js?v=20260904-1929" defer></script>
   <script src="./public-pages-client.js?v=20260904-1702" defer></script>
   <script>
     window.addEventListener("load", function () {
