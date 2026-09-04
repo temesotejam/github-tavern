@@ -146,28 +146,58 @@
     els.techSection.hidden = !out.length;
     els.techList.innerHTML = out.map(function(x){return '<span class="tag">'+esc(x)+'</span>';}).join('');
   }
+
   var typingTimer=null;
-  function typeText(text) {
-    if (typingTimer) clearInterval(typingTimer);
-    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches){ els.keeperText.textContent=text; return; }
-    els.keeperText.textContent=''; var i=0;
-    typingTimer=setInterval(function(){ i+=2; els.keeperText.textContent=text.slice(0,i); if(i>=text.length) clearInterval(typingTimer); },10);
+  function typeDelay(ch) {
+    if (/[。！？!?]/.test(ch)) return 260;
+    if (/[、，,]/.test(ch)) return 130;
+    if (ch === '…') return 220;
+    return 58;
+  }
+  function typeInto(target,text) {
+    if (typingTimer) clearTimeout(typingTimer);
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches){ target.textContent=text; return; }
+    target.textContent='';
+    var i=0;
+    function tick(){
+      if(i>=text.length){ typingTimer=null; return; }
+      i+=1;
+      target.textContent=text.slice(0,i);
+      typingTimer=setTimeout(tick,typeDelay(text.charAt(i-1)));
+    }
+    typingTimer=setTimeout(tick,90);
+  }
+
+  function keeperOffer(repo,s) {
+    var title=s.title||repo.name;
+    if (s.confidence==='low') return '「'+title+'か。こいつは資料が薄い。分かってる範囲だけだ。」';
+    if (s.confidence==='medium') return '「'+title+'か。少し抜けはあるが、出せる分はある。」';
+    var lines=[
+      '「'+title+'か。公開されてる分なら揃ってるぜ。」',
+      '「'+title+'か。こいつの情報ならある。出せるぜ。」',
+      '「'+title+'か。ひと通り資料は揃ってる。」'
+    ];
+    return lines[String(repo.name||'').length%lines.length];
   }
   function openPrompt(repo) {
     var s=summaryFor(repo)||{}, c=categoryOf(repo), title=s.title||repo.name;
     state.pendingRepo=repo; applyTheme(c.id);
     els.confirmCategory.textContent='ARCHIVE / '+c.label;
     els.confirmTitle.textContent=title;
-    els.confirmText.textContent=s.confidence==='low'
-      ? '「'+title+'か。資料は少ない。分かってる範囲なら話せる。」'
-      : '「'+title+'か。その情報ならある。」';
+    typeInto(els.confirmText,keeperOffer(repo,s));
     els.confirmStage.hidden=false; els.detailStage.hidden=true;
     if (!els.dialog.open) els.dialog.showModal();
     setTimeout(function(){els.confirmYes.focus();},0);
   }
   function keeperDetail(repo,s) {
-    if (s.confidence==='low') return '「資料が少ない。分かってる範囲だけ話す。」';
-    var leads=['調べた限りじゃ、こういう記録だ。','要点だけ言うと、こうだ。','資料を追うと、こういう話になる。'];
+    if (s.confidence==='low') return '「資料が少ない。確かなところだけ出す。」';
+    var leads=[
+      '調べた限りじゃ、こういう記録だ。',
+      '要点だけ言うと、こうだ。',
+      '資料を追うと、こういう話になる。',
+      '公開されてる範囲なら、こうだ。',
+      '中身は少し込み入ってる。要点からいくぜ。'
+    ];
     return '「'+leads[String(repo.name||'').length%leads.length]+'」';
   }
   function detailText(repo,s) {
@@ -175,6 +205,7 @@
   }
   function showDetail(repo) {
     var s=summaryFor(repo)||{}, c=categoryOf(repo), idx=state.repos.findIndex(function(x){return x.id===repo.id;})+1;
+    if (typingTimer) clearTimeout(typingTimer);
     els.confirmStage.hidden=true; els.detailStage.hidden=false;
     els.detailBreadcrumb.textContent='ARCHIVE / '+c.label+' / RECORD';
     els.detailNumber.textContent='RECORD No.'+String(Math.max(idx,1)).padStart(3,'0');
@@ -185,10 +216,10 @@
     els.detailDescription.textContent=detailText(repo,s);
     meta(repo,s); features(s.features); tech(repo,s);
     els.summarySource.textContent=s.summary ? 'COPILOT ANALYSIS / '+fmtDate(s.generatedAt) : 'REPOSITORY METADATA';
-    typeText(keeperDetail(repo,s));
+    typeInto(els.keeperText,keeperDetail(repo,s));
   }
   function closeDialog() {
-    if (typingTimer) clearInterval(typingTimer);
+    if (typingTimer) clearTimeout(typingTimer);
     state.pendingRepo=null; if(els.dialog.open) els.dialog.close(); applyTheme(state.category);
   }
   function status(label) {
