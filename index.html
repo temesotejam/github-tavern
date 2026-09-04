@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#17110d">
+  <meta name="description" content="公開GitHubリポジトリを酒場の依頼書のように探せる個人ポータル。">
+  <title>Project Tavern</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="hero">
+    <div class="hero__inner">
+      <p class="eyebrow">PUBLIC REPOSITORY ARCHIVE</p>
+      <h1>PROJECT TAVERN</h1>
+      <p class="hero__jp">プロジェクト酒場</p>
+      <p class="hero__line">「さて、今日はどの記録を見に来た？」</p>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section class="counter" aria-label="検索と絞り込み">
+      <div class="search-wrap">
+        <span aria-hidden="true">⌕</span>
+        <input id="searchInput" type="search" autocomplete="off" placeholder="記録名・技術・説明から探す…" aria-label="リポジトリを検索">
+        <kbd>/</kbd>
+      </div>
+
+      <div class="toolbar">
+        <div id="categoryFilters" class="chips" aria-label="カテゴリ"></div>
+        <select id="sortSelect" aria-label="並び順">
+          <option value="updated">最近動きがあった順</option>
+          <option value="name">名前順</option>
+          <option value="stars">Star順</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="notice" id="notice" aria-live="polite">
+      <span class="notice__lamp" aria-hidden="true"></span>
+      <span id="noticeText">酒場の帳簿を開いています…</span>
+    </section>
+
+    <section class="ledger-heading">
+      <div>
+        <p class="eyebrow">REQUEST LEDGER</p>
+        <h2>依頼・記録一覧</h2>
+      </div>
+      <div class="count" id="repoCount">—</div>
+    </section>
+
+    <section id="repoGrid" class="repo-grid" aria-label="公開リポジトリ一覧"></section>
+    <div id="emptyState" class="empty" hidden>
+      <div class="empty__icon">☕</div>
+      <p>その条件に合う記録は見当たらない。</p>
+      <button id="clearFilters" class="text-button" type="button">条件をすべて戻す</button>
+    </div>
+  </main>
+
+  <dialog id="detailDialog" class="detail-dialog">
+    <article class="detail" id="detailContent">
+      <button class="detail__close" id="closeDialog" type="button" aria-label="閉じる">×</button>
+      <div class="detail__seal" aria-hidden="true">T</div>
+      <p class="detail__number" id="detailNumber"></p>
+      <h2 id="detailTitle"></h2>
+      <p class="detail__repo" id="detailRepo"></p>
+
+      <section class="keeper-box">
+        <div class="keeper-box__label">TAVERN KEEPER</div>
+        <p id="keeperText" class="keeper-text">記録を確認しています…</p>
+      </section>
+
+      <div class="detail__meta" id="detailMeta"></div>
+
+      <section class="detail-section" id="featureSection" hidden>
+        <h3>この記録で分かること</h3>
+        <ul id="featureList"></ul>
+      </section>
+
+      <section class="detail-section" id="techSection" hidden>
+        <h3>主な技術・手掛かり</h3>
+        <div id="techList" class="tag-list"></div>
+      </section>
+
+      <div class="detail__actions">
+        <a id="repoLink" class="button button--primary" target="_blank" rel="noreferrer">GitHubで記録を開く ↗</a>
+        <a id="pagesLink" class="button" target="_blank" rel="noreferrer" hidden>動いているページを見る ↗</a>
+      </div>
+      <p id="summarySource" class="summary-source"></p>
+    </article>
+  </dialog>
+
+  <footer>
+    GitHubの公開情報を表示しています。ファイルやリポジトリには変更を加えません。
+  </footer>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>
