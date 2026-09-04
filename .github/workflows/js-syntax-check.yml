@@ -6,6 +6,7 @@ on:
     branches: [main]
     paths:
       - "app.js"
+      - "spoken-overview-client.js"
       - "public-pages-client.js"
       - "index.html"
       - ".github/workflows/js-syntax-check.yml"
@@ -22,5 +23,7 @@ jobs:
           node-version: "24"
       - name: Check app.js syntax
         run: node --check app.js
+      - name: Check spoken-overview-client.js syntax
+        run: node --check spoken-overview-client.js
       - name: Check public-pages-client.js syntax
         run: node --check public-pages-client.js
