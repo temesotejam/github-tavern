@@ -1,43 +1,43 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-04T08:44:00.850Z",
+  "generatedAt": "2026-09-04T08:44:30.770Z",
   "repositories": {
     "github-tavern": {
-      "title": "Project Tavern公開リポジトリ酒場",
-      "summary": "GitHub APIから公開リポジトリを取得し、検索・分類・閲覧できる個人向けポータル。Copilot生成の日本語説明も表示する。",
-      "detail": "公開リポジトリを酒場風のUIで一覧化し、名前や説明、Topics、言語、分類、Copilot要約を横断検索できる。GitHub Pagesで静的に公開でき、未解析のリポジトリにはREADMEから暫定説明を補う。定期実行のGitHub Actionsが要約キャッシュを更新する構成だ。",
+      "title": "Project Tavern公開リポジトリ案内所",
+      "summary": "GitHub APIから公開リポジトリを集め、検索・分類・要約閲覧を酒場風の静的Web画面で提供する個人ポータル。",
+      "detail": "公開リポジトリをカード形式で並べ、名前や説明、Topics、言語、Copilot要約を横断検索できる。選んだカードの概要や技術要素を表示し、READMEから暫定説明を補う仕組みもある。GitHub Pagesで公開する前提のWebツールだ。",
       "features": [
         "GitHub APIから公開リポジトリを自動取得",
-        "名前・説明・Topics・言語・要約の横断検索",
-        "技術領域ごとの簡易分類とカード表示",
-        "README・構成・設定ファイルを根拠にした日本語要約",
-        "GitHub Pages向けの静的ホスティング"
+        "リポジトリ名・説明・Topics・言語・要約の横断検索",
+        "技術領域による簡易分類とカテゴリーフィルター",
+        "カード選択による概要・詳細表示",
+        "READMEを使った未解析リポジトリの暫定説明"
       ],
       "technologies": [
         "JavaScript",
         "HTML",
         "CSS",
         "GitHub API",
-        "GitHub Pages",
-        "GitHub Actions",
         "GitHub Copilot CLI",
-        "MutationObserver"
+        "GitHub Actions",
+        "GitHub Pages",
+        "Fetch API"
       ],
       "categories": [
-        "Webアプリ",
-        "ポータル",
-        "GitHubツール",
-        "自動化"
+        "Webツール",
+        "静的サイト",
+        "GitHub連携",
+        "個人ポータル"
       ],
       "status": "ツール",
       "confidence": "high",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-09-04T08:43:38Z",
+      "sourcePushedAt": "2026-09-04T08:44:02Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-09-04T08:43:38Z",
+        "pushedAt": "2026-09-04T08:44:02Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -47,8 +47,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "7180fb199e22ffcc68414feae3bd401ccbd12361b32ba6f9e32adeb551567b88",
-      "generatedAt": "2026-09-04T08:44:00.849Z"
+      "sourceFingerprint": "1256cef2b13dfc7f772fe836bad672774f5ed20dae981e92b6b3c2600399e99b",
+      "generatedAt": "2026-09-04T08:44:30.770Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状の減衰シミュレーター",
