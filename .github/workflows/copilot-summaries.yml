@@ -1,0 +1,66 @@
+name: Refresh Copilot summaries
+
+on:
+  workflow_dispatch:
+    inputs:
+      max_repos:
+        description: Maximum repositories to analyze in this run
+        required: false
+        default: "12"
+      force:
+        description: Re-analyze even when the repository has not changed
+        required: false
+        type: boolean
+        default: false
+  schedule:
+    - cron: "23 */6 * * *"
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/copilot-summaries.yml"
+      - ".github/agents/tavern-keeper.agent.md"
+      - "scripts/**"
+
+permissions:
+  contents: write
+  copilot-requests: write
+
+concurrency:
+  group: tavern-summary-refresh
+  cancel-in-progress: false
+
+jobs:
+  summarize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: "24"
+
+      - name: Install GitHub Copilot CLI
+        run: npm install -g @github/copilot
+
+      - name: Refresh changed repository summaries
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          TAVERN_OWNER: temesotejam
+          MAX_REPOS: ${{ github.event.inputs.max_repos || '8' }}
+          FORCE: ${{ github.event.inputs.force || 'false' }}
+        run: node scripts/update-summaries.mjs
+
+      - name: Commit refreshed summaries
+        run: |
+          if git diff --quiet -- data/summaries.json; then
+            echo "No summary changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/summaries.json
+          git commit -m "chore: refresh tavern summaries"
+          git push
