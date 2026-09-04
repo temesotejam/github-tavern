@@ -200,8 +200,35 @@
     ];
     return '「'+leads[String(repo.name||'').length%leads.length]+'」';
   }
+  function spokenizeLegacyDetail(text) {
+    var value=String(text||'').trim();
+    if (!value) return value;
+    value=value
+      .replace(/^このリポジトリは[、,]?\s*/, 'こいつは、')
+      .replace(/^このプロジェクトは[、,]?\s*/, 'こいつは、')
+      .replace(/^このツールは[、,]?\s*/, 'こいつは、')
+      .replace(/^Project Tavernは[、,]?\s*/, 'Project Tavernってのは、')
+      .replace(/ていない/g,'てない')
+      .replace(/ている/g,'てる')
+      .replace(/である/g,'だ')
+      .replace(/となっています/g,'になってる')
+      .replace(/になっています/g,'になってる')
+      .replace(/しています/g,'してる')
+      .replace(/されています/g,'されてる')
+      .replace(/できます/g,'できる')
+      .replace(/ありません/g,'ない')
+      .replace(/あります/g,'ある')
+      .replace(/と考えられます/g,'と考えられる')
+      .replace(/とみられます/g,'とみられる')
+      .replace(/と見られます/g,'と見られる')
+      .replace(/です。/g,'だ。')
+      .replace(/でした。/g,'だった。');
+    return value;
+  }
   function detailText(repo,s) {
-    return s.detail||s.summary||repo.description||'この件は、まだ説明に使える資料がほとんどない。';
+    var text=s.detail||s.summary||repo.description||'この件は、まだ説明に使える資料がほとんどない。';
+    if (s.summaryStyleVersion==='keeper-spoken-v4') return text;
+    return spokenizeLegacyDetail(text);
   }
   function showDetail(repo) {
     var s=summaryFor(repo)||{}, c=categoryOf(repo), idx=state.repos.findIndex(function(x){return x.id===repo.id;})+1;
