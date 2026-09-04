@@ -15,8 +15,9 @@
     confirmText: id('confirmText'), confirmTitle: id('confirmTitle'), confirmYes: id('confirmYes'), confirmNo: id('confirmNo'),
     detailStage: id('detailStage'), detailBreadcrumb: id('detailBreadcrumb'), detailNumber: id('detailNumber'),
     detailTitle: id('detailTitle'), detailRepo: id('detailRepo'), keeperText: id('keeperText'), detailMeta: id('detailMeta'),
-    featureSection: id('featureSection'), featureList: id('featureList'), techSection: id('techSection'),
-    techList: id('techList'), repoLink: id('repoLink'), pagesLink: id('pagesLink'), summarySource: id('summarySource')
+    detailDescription: id('detailDescription'), featureSection: id('featureSection'), featureList: id('featureList'),
+    techSection: id('techSection'), techList: id('techList'), repoLink: id('repoLink'), pagesLink: id('pagesLink'),
+    summarySource: id('summarySource')
   };
 
   var state = { repos: [], summaries: {}, category: 'all', query: '', sort: 'updated', selectedRow: 0, pendingRepo: null, liveApi: false };
@@ -165,10 +166,12 @@
     setTimeout(function(){els.confirmYes.focus();},0);
   }
   function keeperDetail(repo,s) {
-    var base=s.detail||s.summary||repo.description||'この件は、まだ説明に使える資料がほとんどない。';
-    if (s.confidence==='low') return '「資料が少ない。分かってる範囲だけ話す。\n'+base+'」';
+    if (s.confidence==='low') return '「資料が少ない。分かってる範囲だけ話す。」';
     var leads=['調べた限りじゃ、こういう記録だ。','要点だけ言うと、こうだ。','資料を追うと、こういう話になる。'];
-    return '「'+leads[String(repo.name||'').length%leads.length]+'\n'+base+'」';
+    return '「'+leads[String(repo.name||'').length%leads.length]+'」';
+  }
+  function detailText(repo,s) {
+    return s.detail||s.summary||repo.description||'この件は、まだ説明に使える資料がほとんどない。';
   }
   function showDetail(repo) {
     var s=summaryFor(repo)||{}, c=categoryOf(repo), idx=state.repos.findIndex(function(x){return x.id===repo.id;})+1;
@@ -179,6 +182,7 @@
     els.repoLink.href=repo.html_url||('https://github.com/'+OWNER+'/'+repo.name);
     els.pagesLink.hidden=true;
     els.pagesLink.removeAttribute('href');
+    els.detailDescription.textContent=detailText(repo,s);
     meta(repo,s); features(s.features); tech(repo,s);
     els.summarySource.textContent=s.summary ? 'COPILOT ANALYSIS / '+fmtDate(s.generatedAt) : 'REPOSITORY METADATA';
     typeText(keeperDetail(repo,s));
