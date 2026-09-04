@@ -103,10 +103,13 @@
   var tech = document.getElementById('techList');
   if (!closing || !description) return;
 
+  var sources = [title, repo, description, meta, features, tech].filter(Boolean);
   var busy = false;
+
   function update() {
     if (busy) return;
     busy = true;
+
     var source = [
       title && title.textContent,
       repo && repo.textContent,
@@ -115,17 +118,28 @@
       features && features.textContent,
       tech && tech.textContent
     ].filter(Boolean).join(' ');
+
     var value = closingFor(source, (repo && repo.textContent) || (title && title.textContent) || source);
-    closing.textContent = value ? '「' + value + '」' : '';
-    closing.hidden = !value;
+    var nextText = value ? '「' + value + '」' : '';
+    var nextHidden = !value;
+
+    // Do not rewrite the closing element unless its actual value changed.
+    // More importantly, never observe this element itself: that would create
+    // a MutationObserver -> textContent write -> MutationObserver feedback loop.
+    if (closing.textContent !== nextText) closing.textContent = nextText;
+    if (closing.hidden !== nextHidden) closing.hidden = nextHidden;
+
     busy = false;
   }
 
-  new MutationObserver(update).observe(document.getElementById('detailStage') || description, {
-    childList: true,
-    characterData: true,
-    subtree: true,
-    attributes: true
+  var observer = new MutationObserver(update);
+  sources.forEach(function (node) {
+    observer.observe(node, {
+      childList: true,
+      characterData: true,
+      subtree: true
+    });
   });
+
   update();
 }());
