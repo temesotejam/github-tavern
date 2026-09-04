@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#090b0d">
   <meta name="description" content="公開GitHubリポジトリを古い情報端末のように探索できるProject Tavern。">
   <title>Project Tavern // Archive Terminal</title>
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./styles.css?v=20260904-1547">
 </head>
 <body data-theme="all">
   <div class="scanlines" aria-hidden="true"></div>
@@ -134,6 +134,18 @@
     PROJECT TAVERN / PUBLIC DATA ONLY / READ-ONLY TERMINAL
   </footer>
 
-  <script src="./app.js" defer></script>
+  <script src="./app.js?v=20260904-1547" defer></script>
+  <script>
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        const notice = document.querySelector("#noticeText");
+        const count = document.querySelector("#repoCount");
+        if (notice && count && count.textContent.trim() === "—") {
+          notice.textContent = "端末プログラムの読み込みに失敗しました。ページを再読み込みしてください。";
+          document.querySelector("#notice")?.classList.add("is-error");
+        }
+      }, 12000);
+    });
+  </script>
 </body>
 </html>
