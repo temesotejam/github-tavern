@@ -1,17 +1,17 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-04T09:00:12.644Z",
+  "generatedAt": "2026-09-04T09:06:09.893Z",
   "repositories": {
     "github-tavern": {
-      "title": "Project Tavern",
-      "summary": "temesotejam所有の公開GitHubリポジトリを、酒場風の画面で検索・分類・閲覧する個人向けポータル。",
-      "detail": "公開リポジトリをGitHub APIから取得し、名前や説明、Topics、言語、要約を横断検索できる。技術領域ごとの分類やカード形式の詳細表示にも対応する。Copilot CLIでREADMEや構成を根拠にした日本語要約を定期更新し、GitHub Pagesで公開する構成だ。",
+      "title": "Project Tavern公開リポジトリ案内所",
+      "summary": "temesotejamの公開GitHubリポジトリを、酒場風の静的UIで検索・分類・閲覧する個人ポータル。",
+      "detail": "公開GitHub APIからリポジトリを取得し、名前や説明、Topics、言語、Copilot要約を横断検索できる。カード選択で概要や技術情報を表示し、READMEを使った暫定説明にも対応する。GitHub Actionsで要約キャッシュを定期更新し、GitHub Pagesで公開する構成だ。",
       "features": [
-        "GitHub APIから公開リポジトリを自動取得",
-        "名前・Description・Topics・言語・要約の横断検索",
-        "技術領域ごとの簡易分類とフィルター",
-        "カード選択によるリポジトリ詳細表示",
-        "Copilot CLIによる日本語要約の定期更新"
+        "公開リポジトリのGitHub API自動取得",
+        "名前・説明・Topics・言語・要約の横断検索",
+        "技術領域ごとの簡易分類とカード表示",
+        "Copilotによる日本語要約のキャッシュ表示",
+        "READMEからの暫定説明と公開ページへのリンク"
       ],
       "technologies": [
         "JavaScript",
@@ -19,24 +19,25 @@
         "CSS",
         "GitHub API",
         "GitHub Actions",
+        "GitHub Copilot CLI",
         "GitHub Pages",
-        "GitHub Copilot CLI"
+        "MutationObserver"
       ],
       "categories": [
-        "Web・ツール",
+        "Webツール",
         "静的サイト",
-        "GitHub",
-        "リポジトリ管理"
+        "GitHub連携",
+        "個人ポータル"
       ],
       "status": "ツール",
       "confidence": "high",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-09-04T08:59:45Z",
+      "sourcePushedAt": "2026-09-04T09:05:40Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-09-04T08:59:45Z",
+        "pushedAt": "2026-09-04T09:05:40Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -46,8 +47,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "5a9081bf0ff1fd4a2346f8b7f45928e1459662f3c52bbc113a8535a078050924",
-      "generatedAt": "2026-09-04T09:00:12.644Z"
+      "sourceFingerprint": "d43582b7077e6227e13c1531d4e468a5d11fe9322bf3a00634c941e90ddb5698",
+      "generatedAt": "2026-09-04T09:06:09.893Z"
     },
     "semicircle-decay-sim": {
       "title": "ロッキング機体減衰シミュレータ",
