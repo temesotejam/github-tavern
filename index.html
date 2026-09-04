@@ -134,17 +134,23 @@
     PROJECT TAVERN / PUBLIC DATA ONLY / READ-ONLY TERMINAL
   </footer>
 
-  <script src="./app.js?v=20260904-1547" defer></script>
+  <script src="./app.js?v=20260904-1616" defer></script>
   <script>
-    window.addEventListener("load", () => {
-      setTimeout(() => {
-        const notice = document.querySelector("#noticeText");
-        const count = document.querySelector("#repoCount");
-        if (notice && count && count.textContent.trim() === "—") {
-          notice.textContent = "端末プログラムの読み込みに失敗しました。ページを再読み込みしてください。";
-          document.querySelector("#notice")?.classList.add("is-error");
+    window.addEventListener("load", function () {
+      setTimeout(function () {
+        var notice = document.querySelector("#noticeText");
+        var count = document.querySelector("#repoCount");
+        var loaded = document.documentElement.getAttribute("data-app-loaded") === "1";
+        if (!loaded && notice) {
+          notice.textContent = "端末プログラムを開始できませんでした。JavaScriptの読み込みを確認してください。";
+          var box = document.querySelector("#notice");
+          if (box) box.classList.add("is-error");
+        } else if (loaded && notice && count && count.textContent.trim() === "—") {
+          notice.textContent = "端末は起動しましたが、記録データの取得に失敗しています。";
+          var box2 = document.querySelector("#notice");
+          if (box2) box2.classList.add("is-error");
         }
-      }, 12000);
+      }, 10000);
     });
   </script>
 </body>
