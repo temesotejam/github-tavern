@@ -1,18 +1,18 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-05T20:28:43.643Z",
+  "generatedAt": "2026-09-06T04:49:41.320Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ酒場ポータル",
-      "summary": "temesotejamが所有する公開GitHubリポジトリを、酒場の依頼記録のように検索・閲覧する個人向けポータル。GitHub APIとCopilot要約を使い、分類やREADME由来の暫定説明、公開ページへの導線までまとめて表示する。",
-      "detail": "こいつは、公開GitHubリポジトリを無機質な一覧ではなく、酒場の記録帳のように探して眺めるための個人ポータルだ。中ではGitHub APIからtemesotejamの公開リポジトリを取得し、名前やDescription、Topics、言語、Copilot要約を横断検索しながら、技術領域ごとの簡易分類を付けてる。カードを選べば概要や特徴、技術名を確認でき、解析済みの説明がなければREADMEから短い暫定説明を拾う仕組みだな。.github/workflows/copilot-summaries.ymlは6時間ごとに更新を調べ、変更のあったリポジトリだけを最大8件ずつ解析してdata/summaries.jsonへ蓄える。GitHub Pagesで静的に公開できる一方、対象は公開リポジトリに限られ、削除や変更、Issue作成といった書き込み操作までは行わない。",
-      "closingRemark": "要約は6時間ごとに更新されるが、酒場の帳簿もそう頻繁に書き換わるものじゃないな。",
+      "title": "Project Tavern公開リポジトリ酒場",
+      "summary": "temesotejamが所有する公開GitHubリポジトリを、酒場風の画面で探して閲覧する個人ポータル。GitHub APIから一覧を取得し、検索・分類・Copilotによる日本語要約で各プロジェクトの中身を眺められる。",
+      "detail": "こいつは、公開GitHubリポジトリを無機質な一覧ではなく、酒場の依頼や記録のように探せる個人向けポータルだ。中ではGitHub APIからtemesotejam所有の公開リポジトリを取得し、名前やDescription、Topics、使用言語、Copilot要約を横断検索できるようにしてる。技術領域ごとの簡易分類やカード形式の詳細表示もあり、Copilotが解析済みならREADMEや構成、設定ファイルを根拠にした日本語説明が出るし、未解析の新規リポジトリにはREADMEから暫定プレビューを補う仕組みだな。GitHub Actionsが6時間ごとに更新分を確認し、最大8件ずつ要約キャッシュを更新する。GitHub Pagesで静的に公開できる一方、扱うのは公開情報だけで、リポジトリの変更やIssue作成までは行わない。",
+      "closingRemark": "6時間ごとに記録は増えるが、酒場が扱うのは公開情報だけだ。鍵のかかった棚は最初から数えていない。",
       "features": [
-        "temesotejamの公開リポジトリをGitHub APIから自動取得",
-        "名前・Description・Topics・言語・Copilot要約を横断検索",
-        "学習・制御・センサ・画像・Webなどの簡易分類",
-        "Copilot未解析時はREADMEからカード用の暫定説明を生成",
-        "GitHub Pagesで静的公開でき、確認済みの公開ページへ移動可能"
+        "GitHub APIから公開リポジトリ一覧を自動取得",
+        "名前・説明・Topics・言語・Copilot要約を横断検索",
+        "技術領域による簡易分類とカード形式の詳細表示",
+        "Copilot要約とREADME暫定プレビューの使い分け",
+        "GitHub Actionsで更新済みリポジトリだけ定期解析"
       ],
       "technologies": [
         "JavaScript",
@@ -21,25 +21,24 @@
         "GitHub API",
         "GitHub Copilot CLI",
         "GitHub Actions",
-        "GitHub Pages",
-        "MutationObserver"
+        "GitHub Pages"
       ],
       "categories": [
         "Web・ツール",
+        "GitHub",
         "静的サイト",
-        "GitHub連携",
-        "個人ポータル"
+        "自動化"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-09-05T15:20:30Z",
+      "sourcePushedAt": "2026-09-05T20:28:45Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-09-05T15:20:30Z",
+        "pushedAt": "2026-09-05T20:28:45Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -49,8 +48,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "d412c24529b205d0a355289f2660182a3545f82bd9c74d7cd00d7ef0f51f33ff",
-      "generatedAt": "2026-09-05T20:28:43.643Z"
+      "sourceFingerprint": "0eab05adbc34189709a21df08966e9f52ff694dd3a3fe9a7b9a4d0b19062b249",
+      "generatedAt": "2026-09-06T04:49:41.320Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -1897,42 +1896,42 @@
     },
     "pico-copter-uf2-builder": {
       "title": "Pico Copter UF2ビルダー",
-      "summary": "Raspberry Pi Pico向けPico CopterファームウェアをGitHub Actionsでビルドし、生成したUF2をGitHub Pagesから配布する仕組みだ。ファームウェアを単独で持ち出せる構成に分け、Pull Requestでは公開せずコンパイル確認だけ行う。",
-      "detail": "こいつは、Raspberry Pi Picoで動かすPico Copterのファームウェアを、GitHub上でビルドしてUF2として配布するためのリポジトリだな。中ではfirmware/pico_copterにプログラム本体と独立したCMakeLists.txt、ビルド手順をまとめ、GitHub ActionsがPico SDKとEigenを使ってコンパイルしてる。mainへの変更や手動実行が成功すれば、UF2とハッシュ、サイズ情報、ログ類を生成し、最後に成功したUF2をGitHub Pagesへ公開するという流れだ。C++17、Pico SDK 2.3.0、Eigen 3.4.0を固定し、SDKやEigen、ccacheもキャッシュするから、継続的な編集と配布に向いている。元リポジトリとのサブモジュール連携や自動同期はなく、Pull Requestではビルド確認まででPages公開は行わない。",
-      "closingRemark": "最後に成功したUF2だけがPagesに残る。失敗作はログの中で静かに余生を送るわけだな。",
+      "summary": "Raspberry Pi Pico向けPico CopterファームウェアをGitHub Actionsでビルドし、生成したUF2をGitHub Pagesから配布する仕組みだ。ファームウェアを単独で持ち出せる構成も特徴になっている。",
+      "detail": "こいつは、Raspberry Pi Picoで動くPico Copterのファームウェアを、GitHub上で編集・ビルド・配布するためのリポジトリだな。中ではfirmware/pico_copterに制御、センサー、無線、PWM、EKFなどのコードと独立したCMake設定をまとめ、GitHub ActionsがPico SDKとEigenを使ってUF2を生成してる。mainへの変更や手動実行ではビルド後にGitHub Pagesへ公開し、Pull Requestではコンパイル確認だけを行う仕組みだ。ccacheや依存関係のキャッシュ、ビルドログやmanifestも用意されていて、github.devで編集してPicoへ書き込むところまで流れがつながっている。ただし、元リポジトリとの自動同期やサブモジュール連携はなく、ファームウェアはこの場所で管理する設計だ。",
+      "closingRemark": "持ち出し可能なファームウェアを包むために、ビルド所と配布所まで同じ棚に収めてある。",
       "features": [
-        "GitHub ActionsでPico Copterを自動ビルド",
-        "成功したUF2をGitHub Pagesで配布",
-        "ファームウェアフォルダを単独で共有・ビルド可能",
-        "Pull Requestではコンパイル確認のみ実行",
-        "Pico SDK・Eigen・ccacheをキャッシュ"
+        "Pico Copterのファームウェアを単独フォルダに分離",
+        "GitHub ActionsでUF2を自動ビルド",
+        "GitHub Pagesで最後に成功したUF2を配布",
+        "Pull Requestでは公開せずコンパイル確認のみ実施",
+        "Pico SDKやEigen、ccacheをキャッシュしてビルドを高速化"
       ],
       "technologies": [
+        "C",
+        "C++17",
+        "CMake",
         "Raspberry Pi Pico",
         "Pico SDK 2.3.0",
-        "C++17",
         "Eigen 3.4.0",
-        "CMake",
         "GitHub Actions",
-        "GitHub Pages",
-        "ccache"
+        "GitHub Pages"
       ],
       "categories": [
         "組み込み",
         "ファームウェア",
-        "CI/CD",
-        "ビルドツール"
+        "自動ビルド",
+        "ツール"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1315717800,
-      "sourcePushedAt": "2026-07-29T23:56:20Z",
+      "sourcePushedAt": "2026-09-06T02:18:42Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1315717800,
         "name": "pico-copter-uf2-builder",
-        "pushedAt": "2026-07-29T23:56:20Z",
+        "pushedAt": "2026-09-06T02:18:42Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -1942,8 +1941,8 @@
         "fork": false,
         "language": "C"
       },
-      "sourceFingerprint": "ed68fdc925fb11934085611140d0da72ff02155ecc37da5fb0c050e3833ccbcb",
-      "generatedAt": "2026-09-04T11:02:24.264Z"
+      "sourceFingerprint": "f91b4c7bfd3cc79d4794660f485c596037f8ac79cea64463ae156b19d67c739c",
+      "generatedAt": "2026-09-06T04:49:29.583Z"
     },
     "pico-uf2-web-builder": {
       "title": "Pico向けUF2ビルダー",
@@ -3551,7 +3550,57 @@
       },
       "sourceFingerprint": "b5ca5ad4b10fadbd08fc67fe7b464f90adfc712514915f84848d2054d96a107c",
       "generatedAt": "2026-09-04T11:11:50.190Z"
+    },
+    "i26-pico-firmware": {
+      "title": "I-26 Pico飛行制御ファームウェア",
+      "summary": "I-26向けにRaspberry Pi Picoで動かすフライトコントローラを開発するファームウェアです。GitHub ActionsでUF2を書き出し、GitHub Pagesから配布できるほか、プログラム本体だけを分離して渡せます。",
+      "detail": "こいつは、I-26（伊-26）用のRaspberry Pi Picoフライトコントローラ・ファームウェアだな。中では無線入力、センサー処理、EKF、制御計算、PWM出力などを分けて実装し、RP2040上で機体を動かす構成になっている。GitHub上でfirmware/i26を編集してプッシュすると、GitHub ActionsがPico SDK 2.3.0とEigen 3.4.0を使ってUF2を書き出し、GitHub Pagesの配布ページも更新する仕組みだ。UF2だけでなく、ソースZIP、ハッシュ、ビルドログも取得できるから、書き込みと再ビルドの両方に対応している。対象ボードはRaspberry Pi Picoに固定されており、PWMピンやスティック範囲、ESCキャリブレーションを調整している段階なので、完成品というより実機向けの試作 firmware と見るのがよさそうだ。",
+      "closingRemark": "UF2を焼く手順は整っているが、飛び方の最終調整はまだPWMとスティックの先に残っている。",
+      "features": [
+        "GitHub ActionsによるRaspberry Pi Pico向けUF2自動ビルド",
+        "GitHub PagesでUF2とソースZIPを配布",
+        "プログラム本体をfirmware/i26に分離",
+        "無線入力・センサー・EKF・PWM制御を分割構成",
+        "ビルドログやSHA-256ハッシュも生成"
+      ],
+      "technologies": [
+        "C",
+        "C++17",
+        "CMake",
+        "Raspberry Pi Pico",
+        "RP2040",
+        "Pico SDK 2.3.0",
+        "Eigen 3.4.0",
+        "LSM9DS1"
+      ],
+      "categories": [
+        "組み込み",
+        "フライトコントローラ",
+        "ファームウェア",
+        "GitHub Actions"
+      ],
+      "status": "試作",
+      "confidence": "high",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
+      "sourceRepositoryId": 1358716397,
+      "sourcePushedAt": "2026-09-06T04:43:13Z",
+      "sourceDefaultBranch": "main",
+      "sourceMetadata": {
+        "repositoryId": 1358716397,
+        "name": "i26-pico-firmware",
+        "pushedAt": "2026-09-06T04:43:13Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "C"
+      },
+      "sourceFingerprint": "2f6b2f512f692ee130b1ee4f71492f20c53dc5bf33f4064c1b0411f6691f15ed",
+      "generatedAt": "2026-09-06T04:49:19.712Z"
     }
   },
-  "repositoryCount": 72
+  "repositoryCount": 73
 }
