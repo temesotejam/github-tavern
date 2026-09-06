@@ -1,44 +1,45 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-06T04:49:41.320Z",
+  "generatedAt": "2026-09-06T11:06:14.613Z",
   "repositories": {
     "github-tavern": {
-      "title": "Project Tavern公開リポジトリ酒場",
-      "summary": "temesotejamが所有する公開GitHubリポジトリを、酒場風の画面で探して閲覧する個人ポータル。GitHub APIから一覧を取得し、検索・分類・Copilotによる日本語要約で各プロジェクトの中身を眺められる。",
-      "detail": "こいつは、公開GitHubリポジトリを無機質な一覧ではなく、酒場の依頼や記録のように探せる個人向けポータルだ。中ではGitHub APIからtemesotejam所有の公開リポジトリを取得し、名前やDescription、Topics、使用言語、Copilot要約を横断検索できるようにしてる。技術領域ごとの簡易分類やカード形式の詳細表示もあり、Copilotが解析済みならREADMEや構成、設定ファイルを根拠にした日本語説明が出るし、未解析の新規リポジトリにはREADMEから暫定プレビューを補う仕組みだな。GitHub Actionsが6時間ごとに更新分を確認し、最大8件ずつ要約キャッシュを更新する。GitHub Pagesで静的に公開できる一方、扱うのは公開情報だけで、リポジトリの変更やIssue作成までは行わない。",
-      "closingRemark": "6時間ごとに記録は増えるが、酒場が扱うのは公開情報だけだ。鍵のかかった棚は最初から数えていない。",
+      "title": "公開リポジトリ案内酒場",
+      "summary": "temesotejamが所有する公開GitHubリポジトリを、酒場風の画面で検索・分類・閲覧する個人向けポータル。GitHub APIとCopilot生成の日本語要約を組み合わせ、各リポジトリの目的や特徴を一覧から追える。",
+      "detail": "こいつは、temesotejamが所有する公開GitHubリポジトリを、無機質な一覧ではなく酒場風の画面から探して読むための静的ポータルだな。中ではGitHub APIからリポジトリ情報を取得し、名前や説明、Topics、言語、Copilot要約を横断検索しながら、学習・制御・センサ・画像・Webといった簡易分類を付けてる。カードを選べば概要や技術、カテゴリを確認でき、Copilot解析済みの説明がない新規リポジトリにはREADMEから短い暫定表示も補う構成だ。6時間ごとのGitHub Actionsが更新済みのリポジトリだけを調べ、data/summaries.jsonに説明を蓄積するから、GitHub Pagesだけでも閲覧できる。Private Repositoryや書き込み操作は対象外で、APIやREADMEが返す範囲を越えた中身までは分からないってわけだ。",
+      "closingRemark": "要約は酒場に並ぶ札、実物のコードは各リポジトリの奥に残してある。",
       "features": [
-        "GitHub APIから公開リポジトリ一覧を自動取得",
-        "名前・説明・Topics・言語・Copilot要約を横断検索",
-        "技術領域による簡易分類とカード形式の詳細表示",
-        "Copilot要約とREADME暫定プレビューの使い分け",
-        "GitHub Actionsで更新済みリポジトリだけ定期解析"
+        "公開リポジトリの検索・並べ替え・カテゴリ絞り込み",
+        "READMEや構成を根拠にした日本語のCopilot要約",
+        "未解析リポジトリ向けREADME暫定プレビュー",
+        "GitHub Pagesで動く静的ポータル",
+        "公開APIのみを使い書き込み操作を行わない設計"
       ],
       "technologies": [
         "JavaScript",
         "HTML",
         "CSS",
         "GitHub API",
-        "GitHub Copilot CLI",
+        "GitHub Pages",
         "GitHub Actions",
-        "GitHub Pages"
+        "GitHub Copilot CLI",
+        "MutationObserver"
       ],
       "categories": [
         "Web・ツール",
         "GitHub",
-        "静的サイト",
-        "自動化"
+        "開発者ポータル",
+        "静的サイト"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-09-05T20:28:45Z",
+      "sourcePushedAt": "2026-09-06T05:08:33Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-09-05T20:28:45Z",
+        "pushedAt": "2026-09-06T05:08:33Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -48,8 +49,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "0eab05adbc34189709a21df08966e9f52ff694dd3a3fe9a7b9a4d0b19062b249",
-      "generatedAt": "2026-09-06T04:49:41.320Z"
+      "sourceFingerprint": "0e4cd7f8fd91ca4ed1a22d18d58d0a17b9a1cfab6a6031da4007decb73c1636f",
+      "generatedAt": "2026-09-06T11:06:14.612Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -3552,16 +3553,16 @@
       "generatedAt": "2026-09-04T11:11:50.190Z"
     },
     "i26-pico-firmware": {
-      "title": "I-26 Pico飛行制御ファームウェア",
-      "summary": "I-26向けにRaspberry Pi Picoで動かすフライトコントローラを開発するファームウェアです。GitHub ActionsでUF2を書き出し、GitHub Pagesから配布できるほか、プログラム本体だけを分離して渡せます。",
-      "detail": "こいつは、I-26（伊-26）用のRaspberry Pi Picoフライトコントローラ・ファームウェアだな。中では無線入力、センサー処理、EKF、制御計算、PWM出力などを分けて実装し、RP2040上で機体を動かす構成になっている。GitHub上でfirmware/i26を編集してプッシュすると、GitHub ActionsがPico SDK 2.3.0とEigen 3.4.0を使ってUF2を書き出し、GitHub Pagesの配布ページも更新する仕組みだ。UF2だけでなく、ソースZIP、ハッシュ、ビルドログも取得できるから、書き込みと再ビルドの両方に対応している。対象ボードはRaspberry Pi Picoに固定されており、PWMピンやスティック範囲、ESCキャリブレーションを調整している段階なので、完成品というより実機向けの試作 firmware と見るのがよさそうだ。",
-      "closingRemark": "UF2を焼く手順は整っているが、飛び方の最終調整はまだPWMとスティックの先に残っている。",
+      "title": "I-26 Picoフライト制御基盤",
+      "summary": "I-26（伊-26）向けに、Raspberry Pi Picoで動くフライトコントローラをビルド・配布するためのファームウェア基盤だ。GitHub ActionsでUF2を書き出し、GitHub Pagesから配布できるほか、制御プログラムだけを切り離して単独ビルドできる。",
+      "detail": "こいつはI-26（伊-26）用のRaspberry Pi Picoフライトコントローラ・ファームウェアだな。中ではセンサー、無線、PWM、制御、EKF、それにLSM9DS1のレジスタ処理を分けた構成になっていて、機体を飛ばすためのプログラム本体をfirmware/i26/へまとめている。GitHub上で編集してコミットすれば、GitHub ActionsがPico向けにビルドし、書き込み用UF2、ハッシュ、ソースZIP、ログ類を生成する。GitHub Pagesを使えばUF2とソースZIPの配布ページも自動更新できるし、Pico SDK 2.3.0、RP2040、C++17、Eigen 3.4.0という条件で別環境から単独ビルドも可能だ。ただし、実際の飛行性能や機体側の構成までは、この資料だけでは判断できない。",
+      "closingRemark": "飛行制御の中身は分離され、成果物はUF2に固まる。あとはBOOTSELが黙って受け取るだけだな。",
       "features": [
-        "GitHub ActionsによるRaspberry Pi Pico向けUF2自動ビルド",
-        "GitHub PagesでUF2とソースZIPを配布",
-        "プログラム本体をfirmware/i26に分離",
-        "無線入力・センサー・EKF・PWM制御を分割構成",
-        "ビルドログやSHA-256ハッシュも生成"
+        "GitHub ActionsによるRaspberry Pi Pico向け自動ビルド",
+        "UF2・SHA-256・ソースZIP・ビルドログの生成",
+        "GitHub Pagesでのファームウェア配布",
+        "firmware/i26/だけを切り離した単独ビルド",
+        "センサー・無線・PWM・制御処理のモジュール分離"
       ],
       "technologies": [
         "C",
@@ -3577,18 +3578,18 @@
         "組み込み",
         "フライトコントローラ",
         "ファームウェア",
-        "GitHub Actions"
+        "自動ビルド"
       ],
       "status": "試作",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1358716397,
-      "sourcePushedAt": "2026-09-06T04:43:13Z",
+      "sourcePushedAt": "2026-09-06T10:04:30Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1358716397,
         "name": "i26-pico-firmware",
-        "pushedAt": "2026-09-06T04:43:13Z",
+        "pushedAt": "2026-09-06T10:04:30Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -3598,8 +3599,8 @@
         "fork": false,
         "language": "C"
       },
-      "sourceFingerprint": "2f6b2f512f692ee130b1ee4f71492f20c53dc5bf33f4064c1b0411f6691f15ed",
-      "generatedAt": "2026-09-06T04:49:19.712Z"
+      "sourceFingerprint": "f9f685a3f370d90d69f20e4cfeeb5bae6cc2f6e0233139f8bc5e29dd77fd08df",
+      "generatedAt": "2026-09-06T11:06:02.226Z"
     }
   },
   "repositoryCount": 73
