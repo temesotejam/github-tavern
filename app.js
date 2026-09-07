@@ -2,6 +2,7 @@
   'use strict';
 
   var OWNER = 'temesotejam';
+  var SELF_REPO = 'github-tavern';
   var API = 'https://api.github.com';
   var SUMMARY_URL = './data/summaries.json';
   var TIMEOUT = 8000;
@@ -17,10 +18,11 @@
     detailTitle: id('detailTitle'), detailRepo: id('detailRepo'), keeperText: id('keeperText'), detailMeta: id('detailMeta'),
     detailDescription: id('detailDescription'), featureSection: id('featureSection'), featureList: id('featureList'),
     techSection: id('techSection'), techList: id('techList'), repoLink: id('repoLink'), pagesLink: id('pagesLink'),
-    summarySource: id('summarySource')
+    summarySource: id('summarySource'), selfSummary: id('selfSummary'), selfUpdated: id('selfUpdated'),
+    selfSource: id('selfSource'), selfKeeperRow: id('selfKeeperRow'), selfKeeper: id('selfKeeper'), selfRepoLink: id('selfRepoLink')
   };
 
-  var state = { repos: [], summaries: {}, category: 'all', query: '', sort: 'updated', selectedRow: 0, pendingRepo: null, liveApi: false };
+  var state = { repos: [], selfRepo: null, summaries: {}, category: 'all', query: '', sort: 'updated', selectedRow: 0, pendingRepo: null, liveApi: false };
 
   var RULES = [
     { id: 'learning', label: '学習・AI', words: ['reinforcement','learning','ppo','sac','td3','acrobot','cartpole','強化学習','機械学習',' ai '] },
@@ -55,6 +57,29 @@
     return fetch(url, opts).finally(function(){ clearTimeout(timer); });
   }
   function summaryFor(repo) { return state.summaries[repo.name] || null; }
+  function setRepos(list) {
+    var archive = [];
+    var self = null;
+    (list || []).forEach(function(repo){
+      if (repo && repo.name === SELF_REPO) self = repo;
+      else if (repo) archive.push(repo);
+    });
+    if (self) state.selfRepo = self;
+    state.repos = archive;
+  }
+  function renderSelf() {
+    var s = state.summaries[SELF_REPO] || {};
+    var repo = state.selfRepo || {};
+    var summary = s.summary || repo.description || 'Project Tavernは、公開GitHubリポジトリを古い情報端末のように探索するためのアーカイブ端末だ。';
+    var updated = repo.pushed_at || repo.updated_at || s.sourcePushedAt || s.generatedAt || '';
+    els.selfSummary.textContent = summary;
+    els.selfUpdated.textContent = 'UPDATED ' + fmtDate(updated);
+    els.selfSource.textContent = s.summary ? 'COPILOT ANALYSIS / ' + fmtDate(s.generatedAt) : 'REPOSITORY METADATA';
+    els.selfRepoLink.href = repo.html_url || ('https://github.com/' + OWNER + '/' + SELF_REPO);
+    var closing = String(s.closingRemark || '').trim();
+    els.selfKeeperRow.hidden = !closing;
+    els.selfKeeper.textContent = closing;
+  }
   function textFor(repo) {
     var s = summaryFor(repo) || {};
     return [repo.name, repo.description, repo.language].concat(repo.topics || [], [s.title,s.summary,s.detail], s.technologies || [], s.categories || []).filter(Boolean).join(' ').toLowerCase();
@@ -297,14 +322,14 @@
     var liveError=null;
     var livePromise=fetchLive().catch(function(e){liveError=e;return null;});
     fetchCache().then(function(data){
-      state.summaries=data.repositories||{}; state.repos=reposFromCache(data); status('CACHE'); renderRepos();
+      state.summaries=data.repositories||{}; setRepos(reposFromCache(data)); renderSelf(); status('CACHE'); renderRepos();
       return livePromise;
     }).then(function(live){
-      if(live&&live.length){state.repos=live;state.liveApi=true;status('LIVE API');renderRepos();}
+      if(live&&live.length){setRepos(live);state.liveApi=true;renderSelf();status('LIVE API');renderRepos();}
       else if(state.repos.length){status(liveError&&liveError.name==='AbortError'?'API TIMEOUT / CACHE':'API UNAVAILABLE / CACHE');}
     }).catch(function(err){
       livePromise.then(function(live){
-        if(live&&live.length){state.repos=live;state.liveApi=true;status('LIVE API / SUMMARY unavailable');renderRepos();}
+        if(live&&live.length){setRepos(live);state.liveApi=true;renderSelf();status('LIVE API / SUMMARY unavailable');renderRepos();}
         else {els.notice.classList.add('is-error');els.noticeText.textContent='記録を取得できませんでした: '+err.message;els.count.textContent='0 RECORDS';els.grid.innerHTML='';}
       });
     });
