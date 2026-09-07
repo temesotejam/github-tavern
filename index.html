@@ -7,6 +7,7 @@
   <meta name="description" content="公開GitHubリポジトリを古い情報端末のように探索できるProject Tavern。">
   <title>Project Tavern // Archive Terminal</title>
   <link rel="stylesheet" href="./styles.css?v=20260904-1547">
+  <link rel="stylesheet" href="./self-terminal.css?v=20260907-1625">
 </head>
 <body data-theme="all">
   <div class="scanlines" aria-hidden="true"></div>
@@ -23,6 +24,33 @@
   </header>
 
   <main class="terminal-shell">
+    <section class="self-window" aria-labelledby="selfTitle">
+      <div class="window-titlebar">
+        <span>ABOUT THIS TERMINAL / SELF RECORD</span>
+        <span class="self-order-note">SELF / 一覧の並び順対象外</span>
+      </div>
+      <div class="self-window__body">
+        <div class="self-sigil" aria-hidden="true">SYS<br>00</div>
+        <div class="self-copy">
+          <p class="self-kicker">ARCHIVE TERMINAL / github-tavern</p>
+          <h2 id="selfTitle">PROJECT TAVERN <span class="self-repo-name">github-tavern</span></h2>
+          <p id="selfSummary" class="self-summary">この端末自体の情報を読み込んでいます…</p>
+          <p class="self-order-copy">この端末自身の記録は、下の公開リポジトリ一覧の検索・並び替えには含めていません。</p>
+          <div class="self-meta">
+            <span id="selfUpdated">UPDATED —</span>
+            <span id="selfSource">SELF RECORD</span>
+          </div>
+          <div id="selfKeeperRow" class="self-keeper-row" hidden>
+            <span>KEEPER&gt;</span>
+            <p id="selfKeeper"></p>
+          </div>
+        </div>
+        <div class="self-actions">
+          <a id="selfRepoLink" class="terminal-link terminal-link--primary" href="https://github.com/temesotejam/github-tavern" target="_blank" rel="noreferrer">この端末のGitHub ↗</a>
+        </div>
+      </div>
+    </section>
+
     <section class="control-window" aria-label="検索と分類">
       <div class="window-titlebar">
         <span>RECORD SEARCH / INDEX</span>
@@ -143,7 +171,7 @@
     PROJECT TAVERN / PUBLIC DATA ONLY / READ-ONLY TERMINAL
   </footer>
 
-  <script src="./app.js?v=20260904-1907" defer></script>
+  <script src="./app.js?v=20260907-1625" defer></script>
   <script src="./spoken-overview-client.js?v=20260904-1921" defer></script>
   <script src="./keeper-closing-client.js?v=20260904-1949" defer></script>
   <script src="./public-pages-client.js?v=20260904-1702" defer></script>
