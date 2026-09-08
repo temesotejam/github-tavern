@@ -1,18 +1,18 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-08T11:28:26.452Z",
+  "generatedAt": "2026-09-08T16:43:44.398Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ酒場",
-      "summary": "公開GitHubリポジトリを、古い情報端末を思わせる画面で検索・選択・閲覧する個人ポータル。GitHub APIで一覧を取得し、Copilotによる日本語要約やREADME由来の暫定説明、技術領域別の分類を表示する。",
-      "detail": "こいつは、temesotejamが所有する公開GitHubリポジトリを、無機質な一覧ではなく酒場の依頼記録のように探すための静的ポータルだな。中ではGitHub APIからリポジトリ情報を取り寄せ、名前やDescription、Topics、使用言語、Copilot要約を横断検索し、技術領域ごとの簡易分類も行ってる。カードを選べば、READMEや構成、設定ファイルを根拠にした日本語の概要・特徴・技術情報を確認でき、Copilot未解析の新規リポジトリにはREADMEから短い暫定説明を補う仕組みだ。6時間ごとのGitHub Actionsが更新分だけを解析してdata/summaries.jsonへ蓄積し、GitHub Pagesでそのまま公開できる。公開APIの読み取り専用で、Private Repositoryや削除・変更・Issue作成までは扱わない。",
-      "closingRemark": "要約の更新は酒場の仕込みと同じで、変わった棚だけを見に行く仕組みらしい。",
+      "title": "Project Tavern公開リポジトリ酒場",
+      "summary": "temesotejamが所有する公開GitHubリポジトリを、酒場風の画面で検索・分類・閲覧する個人ポータル。GitHub APIとCopilot生成要約を組み合わせ、解析済みなら詳しい日本語説明、未解析ならREADME由来の暫定説明を表示する。",
+      "detail": "こいつは、公開GitHubリポジトリを無機質な一覧ではなく、酒場の依頼記録のように探せる個人ポータルだな。中ではGitHub APIからtemesotejamの公開リポジトリを取得し、名前や説明、Topics、言語、Copilot要約を横断検索しながら、学習・制御・センサ・画像・Webといった領域に分類してる。カードを選べば概要や特徴、技術、公開ページへのリンクを確認でき、解析済みデータがなければREADMEから短い暫定説明を作る仕組みもある。GitHub Actionsは6時間ごとに更新済みのリポジトリだけを見直し、初回や大量更新では最大8件ずつ要約を生成する。GitHub Pagesで静的に公開できる一方、対象は公開リポジトリに限られ、削除や変更、Issue作成のような書き込み操作までは行わない。",
+      "closingRemark": "要約係は6時間ごとに巡回するが、酒場に運べる依頼は一度に8件までらしい。",
       "features": [
-        "GitHub APIから公開リポジトリを自動取得",
+        "GitHub APIから所有する公開リポジトリを自動取得",
         "名前・説明・Topics・言語・要約を横断検索",
         "技術領域ごとの簡易分類とカード表示",
-        "Copilot解析済みの日本語説明を表示",
-        "未解析リポジトリにはREADMEの暫定説明を補完"
+        "Copilot解析済みの日本語概要・特徴・技術情報を表示",
+        "未解析リポジトリにはREADME由来の暫定説明を表示"
       ],
       "technologies": [
         "JavaScript",
@@ -26,20 +26,20 @@
       ],
       "categories": [
         "Web・ツール",
-        "GitHub",
         "静的サイト",
+        "GitHub連携",
         "自動化"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-09-08T04:49:50Z",
+      "sourcePushedAt": "2026-09-08T11:28:28Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-09-08T04:49:50Z",
+        "pushedAt": "2026-09-08T11:28:28Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -49,8 +49,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "2795ef561fcfd4630405e98bd5daebdb608577e33fca989dcb0a3003065e1dd3",
-      "generatedAt": "2026-09-08T11:28:26.452Z"
+      "sourceFingerprint": "a3e5b46688ce7c3ad16ccbdb181c43b758e4e468da1fc708f3bec38ff2438cbb",
+      "generatedAt": "2026-09-08T16:43:44.398Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
