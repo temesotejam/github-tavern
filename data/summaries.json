@@ -1,23 +1,23 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-09T04:52:26.212Z",
+  "generatedAt": "2026-09-09T11:34:11.511Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ探索酒場",
-      "summary": "temesotejamが所有する公開GitHubリポジトリを、酒場風の古い情報端末UIで検索・閲覧する静的ポータル。GitHub APIの情報とCopilot生成要約を組み合わせ、分類やREADME由来の暫定説明、公開ページへの導線まで一つの画面にまとめている。",
-      "detail": "こいつは、公開GitHubリポジトリを無機質な一覧ではなく、酒場の依頼記録のように探すための個人向けポータルだな。中ではGitHub APIからtemesotejam所有の公開リポジトリを取得し、名前や説明、Topics、言語、Copilot要約を横断検索して、技術領域ごとに分類してる。カードを選べば概要や特徴、技術情報を確認でき、解析済みの要約がない新入りにはREADMEから短い説明を補う仕組みもある。6時間ごとのGitHub Actionsが更新済みのリポジトリだけを調べ、data/summaries.jsonに結果を蓄積する構成だ。GitHub Pagesで静的に公開できる一方、Private Repositoryは扱わず、削除や変更、Issue作成などの書き込み操作まではしない。",
-      "closingRemark": "6時間ごとに棚を見回り、要約が追いつかない新入りにはREADMEの短文を添える酒場だな。",
+      "title": "公開リポジトリ酒場ポータル",
+      "summary": "所有する公開GitHubリポジトリを、酒場風の静的ポータルで検索・分類・閲覧するための個人向けツール。GitHub APIの情報とCopilot生成の日本語説明を組み合わせ、READMEしかない新規リポジトリにも暫定表示を用意しています。",
+      "detail": "こいつは、temesotejamが所有する公開GitHubリポジトリを、無機質な一覧ではなく酒場の依頼記録のように探すための個人ポータルだ。中ではGitHub APIからリポジトリ情報を取得し、名前やDescription、Topics、言語、Copilot要約を横断検索できるようにして、技術領域ごとの簡易分類やカードからの詳細表示も行ってる。Copilot解析済みならREADMEや構成、設定ファイルを根拠にした日本語説明を出し、未解析の新規リポジトリにはREADMEから短い暫定説明を補う仕組みだな。.github/workflows/copilot-summaries.ymlが6時間ごとに更新を確認し、変更のないものは再解析しない。GitHub Pagesで静的に公開できる一方、対象は公開リポジトリに限られ、削除や変更、Issue作成などの書き込み操作までは行わない。",
+      "closingRemark": "READMEだけの新顔にも席は用意するが、詳しい身元調査はCopilotの順番待ちってわけだ。",
       "features": [
         "GitHub APIから公開リポジトリを自動取得",
-        "名前・説明・Topics・言語・要約を横断検索",
-        "技術領域ごとの簡易カテゴリ分類",
-        "Copilot要約とREADME由来の暫定説明を表示",
-        "GitHub Pagesで静的ホスティング可能"
+        "名前・説明・Topics・言語・Copilot要約を横断検索",
+        "技術領域ごとの簡易分類とカード形式の詳細表示",
+        "READMEや構成を根拠にした日本語説明を表示",
+        "GitHub Pagesで静的に公開可能"
       ],
       "technologies": [
         "JavaScript",
-        "HTML",
         "CSS",
+        "HTML",
         "GitHub API",
         "GitHub Copilot CLI",
         "GitHub Actions",
@@ -26,20 +26,20 @@
       ],
       "categories": [
         "Web・ツール",
-        "静的サイト",
-        "GitHub活用",
-        "AI活用"
+        "GitHub",
+        "ポータル",
+        "自動化"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-09-08T21:16:02Z",
+      "sourcePushedAt": "2026-09-09T04:52:27Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-09-08T21:16:02Z",
+        "pushedAt": "2026-09-09T04:52:27Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -49,8 +49,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "e4285c756e094696fa5c2b62e57daa5f3b47b28ffbabe304c5b4175d9b48a1c3",
-      "generatedAt": "2026-09-09T04:52:26.211Z"
+      "sourceFingerprint": "4354f9f116070aa85be94e93b72e3195ca15166211ea10f96ec5222c9c5d0d71",
+      "generatedAt": "2026-09-09T11:34:11.511Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -3651,7 +3651,57 @@
       },
       "sourceFingerprint": "09ec9c45f5050a40b8d0fb1ff8149b3bf7b67a0201dedbb4dbfb93a6a7136c6b",
       "generatedAt": "2026-09-09T04:52:13.755Z"
+    },
+    "cores3-lite-goplus2-touchless": {
+      "title": "CoreS3環境の実機適格性検証",
+      "summary": "M5Stack CoreS3 LiteとGoPlus2を組み合わせ、I2Cアドレス0x38の競合回避とサーボ動作を実機で段階検証するPlatformIOプロジェクト。依存関係を固定し、操作ログと測定証拠を残せる一方、DCモータ・GNSS・同時負荷は未完了です。",
+      "detail": "こいつは、CoreS3 LiteとGoPlus2を接続した構成で、タッチ用FT6336UやGoPlus2のI2Cアドレス0x38が干渉しないかを、実機で段階的に確かめるための試験用ファームウェアだ。中では起動時にRESETを保持し、LCD個体情報の保存、単体180秒試験、I2C監視、GoPlus2のHUB入力確認、全4サーボの機能試験を順に制限しながら実行する。M5GFXへローカルパッチを適用し、依存ライブラリのcommitと差分を固定、JSONLログやevidenceとして測定結果を残せるのが特徴だな。Phase 6はServo 0の1000指令とServo 1〜3の各40指令、目視確認までPASSしている。ただしDCモータ、同時負荷、GNSS、電気的な起動波形は未完了で、全体判定はまだNOT QUALIFIEDだ。",
+      "closingRemark": "サーボは通ったが、合格証まで通ったわけじゃない。残りの試験が、まだ机の上で待っている。",
+      "features": [
+        "0x38通信を明示的な試験以外で遮断・記録",
+        "Phase 0〜8を段階管理し失敗時はFAIL_LATCHED",
+        "依存ライブラリのcommitとM5GFX差分を固定",
+        "サーボ全4チャンネルの機能試験と目視結果を記録",
+        "実機ログ・ホスト模擬試験・測定証拠を保存"
+      ],
+      "technologies": [
+        "C++",
+        "Python",
+        "PlatformIO",
+        "Arduino-ESP32",
+        "M5GFX",
+        "M5Unified",
+        "ESP32-S3",
+        "I2C"
+      ],
+      "categories": [
+        "組み込み",
+        "実機検証",
+        "ファームウェア",
+        "ハードウェア試験"
+      ],
+      "status": "実験",
+      "confidence": "high",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
+      "sourceRepositoryId": 1362533376,
+      "sourcePushedAt": "2026-09-09T11:24:40Z",
+      "sourceDefaultBranch": "main",
+      "sourceMetadata": {
+        "repositoryId": 1362533376,
+        "name": "cores3-lite-goplus2-touchless",
+        "pushedAt": "2026-09-09T11:24:40Z",
+        "description": "Touchless CoreS3 Lite + GoPlus2 I2C 0x38 qualification: local M5GFX patch, reproducible firmware, and measured test evidence.",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "C++"
+      },
+      "sourceFingerprint": "2a57a1d9b1e535e4c5add63d1395112b9941f52a18b656a8a44ce016de7a6cc1",
+      "generatedAt": "2026-09-09T11:33:57.509Z"
     }
   },
-  "repositoryCount": 74
+  "repositoryCount": 75
 }
