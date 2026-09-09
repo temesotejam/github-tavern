@@ -1,45 +1,45 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-08T21:16:01.206Z",
+  "generatedAt": "2026-09-09T04:52:26.212Z",
   "repositories": {
     "github-tavern": {
-      "title": "Project Tavern公開リポジトリ案内所",
-      "summary": "temesotejamが所有する公開GitHubリポジトリを、古い情報端末風の画面で探して読める個人向けポータル。GitHub APIから一覧を取得し、検索・分類・Copilotによる日本語要約やREADME由来の暫定説明まで一つの画面で確認できます。",
-      "detail": "こいつは、temesotejamが所有する公開GitHubリポジトリを、酒場の依頼記録のように探して読むための静的ポータルだ。中ではGitHub APIから一覧を取得し、名前やDescription、Topics、使用言語、Copilot要約を横断検索できるほか、技術領域ごとの簡易分類とカードからの詳細表示もしてる。新規リポジトリにはREADMEから短い暫定説明を補い、Copilotの解析結果があれば構成や設定ファイルを根拠にした日本語の概要、特徴、技術名、締めの一言まで表示する仕組みだ。GitHub Actionsが6時間ごとに更新分だけを解析し、GitHub Pagesで公開できる。ただし対象は公開リポジトリに限られ、削除や変更、Issue作成などの書き込み操作は行わない。",
-      "closingRemark": "6時間ごとに記録は更新されるが、酒場そのものは静的なまま――そこがこの端末の堅実なところだな。",
+      "title": "公開リポジトリ探索酒場",
+      "summary": "temesotejamが所有する公開GitHubリポジトリを、酒場風の古い情報端末UIで検索・閲覧する静的ポータル。GitHub APIの情報とCopilot生成要約を組み合わせ、分類やREADME由来の暫定説明、公開ページへの導線まで一つの画面にまとめている。",
+      "detail": "こいつは、公開GitHubリポジトリを無機質な一覧ではなく、酒場の依頼記録のように探すための個人向けポータルだな。中ではGitHub APIからtemesotejam所有の公開リポジトリを取得し、名前や説明、Topics、言語、Copilot要約を横断検索して、技術領域ごとに分類してる。カードを選べば概要や特徴、技術情報を確認でき、解析済みの要約がない新入りにはREADMEから短い説明を補う仕組みもある。6時間ごとのGitHub Actionsが更新済みのリポジトリだけを調べ、data/summaries.jsonに結果を蓄積する構成だ。GitHub Pagesで静的に公開できる一方、Private Repositoryは扱わず、削除や変更、Issue作成などの書き込み操作まではしない。",
+      "closingRemark": "6時間ごとに棚を見回り、要約が追いつかない新入りにはREADMEの短文を添える酒場だな。",
       "features": [
-        "公開リポジトリをGitHub APIから自動取得",
-        "名前・説明・Topics・言語・要約の横断検索",
-        "技術領域ごとの簡易分類とカード詳細表示",
-        "Copilot解析またはREADME由来の日本語説明",
-        "GitHub Pagesで静的に公開可能"
+        "GitHub APIから公開リポジトリを自動取得",
+        "名前・説明・Topics・言語・要約を横断検索",
+        "技術領域ごとの簡易カテゴリ分類",
+        "Copilot要約とREADME由来の暫定説明を表示",
+        "GitHub Pagesで静的ホスティング可能"
       ],
       "technologies": [
         "JavaScript",
-        "CSS",
         "HTML",
+        "CSS",
         "GitHub API",
-        "GitHub Actions",
         "GitHub Copilot CLI",
+        "GitHub Actions",
         "GitHub Pages",
         "MutationObserver"
       ],
       "categories": [
         "Web・ツール",
         "静的サイト",
-        "GitHub連携",
-        "AI要約"
+        "GitHub活用",
+        "AI活用"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-09-08T16:43:45Z",
+      "sourcePushedAt": "2026-09-08T21:16:02Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-09-08T16:43:45Z",
+        "pushedAt": "2026-09-08T21:16:02Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -49,8 +49,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "292ada7a02a68ebe2207ae347e05e3db6ea5260b9f7af92f5f1081b6f16fc27e",
-      "generatedAt": "2026-09-08T21:16:01.205Z"
+      "sourceFingerprint": "e4285c756e094696fa5c2b62e57daa5f3b47b28ffbabe304c5b4175d9b48a1c3",
+      "generatedAt": "2026-09-09T04:52:26.211Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -3603,16 +3603,16 @@
       "generatedAt": "2026-09-06T11:06:02.226Z"
     },
     "rw-walker-digital-twin": {
-      "title": "リアクションホイール歩行実験基盤",
-      "summary": "リアクションホイールで左右に揺れる準受動二脚歩行機を、ブラウザ内の3D物理環境で検証するための実験基盤だ。動力学の観測、入力の分岐、パラメータ探索、CSV比較まで一つの画面で扱える。",
-      "detail": "こいつは、リアクションホイールで左右揺動を作る準受動二脚歩行機を、ブラウザ上で観察・検証するための環境だな。中ではThree.jsとcannon.jsを使って3D物理状態を動かし、足の接触や荷重、摩擦、COP、滑り、指令Qと実電流、機械的角運動量まで同期して見られる。再生速度の変更や物理step、リプレイからの入力分岐、CSVとの誤差比較、25条件のパラメータ探索、全状態のJSON保存にも対応してる。WebGLが使えない場合はソフトウェア投影へ移れるし、20件の自動テストや複数の計算周波数による感度評価も用意されている。ただし、実機に同定済みのDigital Twinでも継続歩行を実証したモデルでもなく、3Dの中央通過速度は既存1DOF Baselineと大きく異なる。そこを隠さず記録しているのが、この環境の役目ってところだ。",
-      "closingRemark": "歩けるかどうかより、歩けない差分を27.4°/sとして残したところに、この実験基盤の几帳面さが出てるな。",
+      "title": "反応輪二脚歩行実験環境",
+      "summary": "反応ホイールで左右に揺れる準受動二脚歩行機を、ブラウザ内の3D物理環境で検証する実験基盤だ。動力学の観測、入力の分岐、CSV比較、25条件の探索、結果の保存までを一通り扱える。",
+      "detail": "こいつは、リアクションホイールで揺動を作る準受動二脚歩行機の挙動を、ブラウザ内で調べるための実験環境だな。中ではThree.jsとcannon.jsを使った3D物理モデルを動かし、脚の接触、足荷重、摩擦、COP、滑り、指令Qと実電流、機械的角運動量まで観測できる。再生速度や物理stepを変えたり、リプレイから入力を分岐したり、CSVとの誤差比較、25条件のパラメータ探索、JSONでの全状態保存も可能だ。WebGLが使えない環境ではソフトウェア投影へ移行する。ただし、実機に同定済みのDigital Twinでも継続歩行を実証したモデルでもなく、3Dの中央通過速度は既存1DOF Baselineと大きく異なり、動的Cross Validationはまだ未達という記録まで含めて検証する作りになっている。",
+      "closingRemark": "歩けるモデルを装うより、27.4°/sと60.20°/sの差をそのまま残すほうを選んだ実験場だな。",
       "features": [
-        "ブラウザ内で準受動二脚機の3D物理状態を観測",
-        "接触・荷重・摩擦・COP・滑り・角運動量を可視化",
-        "リプレイ、入力分岐、CSV比較、揺動角Ghostに対応",
+        "反応ホイール式準受動二脚の3D物理実験",
+        "接触・荷重・摩擦・COP・滑りの同期観測",
+        "入力分岐、CSV比較、揺動角Ghost表示",
         "25条件のパラメータ探索と候補順位付け",
-        "自動テスト、感度評価、JSON保存・復元を実装"
+        "実験条件と時系列をJSONで保存・復元"
       ],
       "technologies": [
         "Python",
@@ -3625,21 +3625,21 @@
         "GitHub Pages"
       ],
       "categories": [
-        "ロボット",
-        "物理シミュレーション",
-        "ブラウザアプリ",
-        "実験基盤"
+        "シミュレーション",
+        "ロボティクス",
+        "物理実験",
+        "ブラウザアプリ"
       ],
       "status": "実験",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1359922870,
-      "sourcePushedAt": "2026-09-07T23:37:20Z",
+      "sourcePushedAt": "2026-09-09T04:44:52Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1359922870,
         "name": "rw-walker-digital-twin",
-        "pushedAt": "2026-09-07T23:37:20Z",
+        "pushedAt": "2026-09-09T04:44:52Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -3649,8 +3649,8 @@
         "fork": false,
         "language": "Python"
       },
-      "sourceFingerprint": "ce73a6088a87509c91a9763b48df3fbe85baa148f8097343c01a38f2c0675f14",
-      "generatedAt": "2026-09-08T04:49:38.912Z"
+      "sourceFingerprint": "09ec9c45f5050a40b8d0fb1ff8149b3bf7b67a0201dedbb4dbfb93a6a7136c6b",
+      "generatedAt": "2026-09-09T04:52:13.755Z"
     }
   },
   "repositoryCount": 74
