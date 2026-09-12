@@ -1,18 +1,18 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-12T04:44:11.232Z",
+  "generatedAt": "2026-09-12T10:57:16.019Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ酒場端末",
-      "summary": "公開GitHubリポジトリを酒場の依頼記録のように探せる、個人向けの静的ポータルだ。GitHub APIから一覧を取得し、名前や説明、Topics、言語、Copilot要約を横断検索しながら、分類付きのカードで内容を確認できる。",
-      "detail": "こいつは、temesotejamが所有する公開GitHubリポジトリを、無機質な一覧ではなく酒場風の画面から探すための個人ポータルだな。中ではブラウザのJavaScriptがGitHub APIから一覧を読み込み、リポジトリ名やDescription、Topics、使用言語、保存されたCopilot要約を検索対象にして、学習・制御・センサ・画像・Webといった簡易カテゴリへ振り分けてる。カードを選べば概要や技術情報を表示でき、解析済みならREADMEや構成、設定ファイルを根拠にした日本語説明も読めるし、未解析の新規リポジトリにはREADMEから暫定表示を補う仕組みもある。GitHub Actionsは6時間ごとに更新を確認し、変更のあったものだけを最大8件ずつ解析してdata/summaries.jsonへ反映する。GitHub Pagesで静的に公開できる一方、Private Repositoryは扱わず、削除や変更、Issue作成のような書き込み操作までは行わない構成だ。",
-      "closingRemark": "6時間ごとに記録は更新されるが、酒場そのものは静かなままだ。書き込みはしない主義らしい。",
+      "title": "Project Tavern公開リポジトリ酒場",
+      "summary": "temesotejamが所有する公開GitHubリポジトリを、酒場風の端末UIで検索・分類・閲覧する個人ポータルだ。GitHub APIの情報とCopilot生成の日本語説明を組み合わせ、各リポジトリの概要や技術要素を手早く確認できる。",
+      "detail": "こいつは、公開GitHubリポジトリを無機質な一覧ではなく、酒場の依頼記録のように探せる個人向けポータルだ。中ではGitHub APIからtemesotejam所有の公開リポジトリを取得し、名前やDescription、Topics、使用言語、Copilot要約を横断検索できるようにしてる。技術領域ごとの簡易分類に加えて、カードから概要や特徴、技術名を確認でき、解析前の新しいリポジトリにはREADMEから暫定説明も補う構成だな。6時間ごとのGitHub Actionsが更新済みの対象だけを選び、GitHub Copilot CLIでdata/summaries.jsonを更新する。GitHub Pagesで静的に公開できる一方、対象は公開情報に限られ、リポジトリの変更やIssue作成までは行わない。",
+      "closingRemark": "READMEを読む前に、酒場の端末が先に要点を差し出してくる。解析済みなら、だがな。",
       "features": [
-        "GitHub APIから公開リポジトリ一覧を自動取得",
+        "GitHub APIから公開リポジトリを自動取得",
         "名前・説明・Topics・言語・Copilot要約を横断検索",
-        "学習・制御・センサ・画像・Webなどに簡易分類",
-        "解析済み要約とREADME由来の暫定説明を表示",
-        "GitHub Actionsで変更済みリポジトリだけ定期解析"
+        "技術領域ごとの簡易分類とカード表示",
+        "Copilot解析済みの日本語概要・特徴・技術情報を表示",
+        "READMEから未解析リポジトリの暫定説明を生成"
       ],
       "technologies": [
         "JavaScript",
@@ -20,26 +20,26 @@
         "CSS",
         "GitHub API",
         "GitHub Actions",
-        "GitHub Pages",
         "GitHub Copilot CLI",
+        "GitHub Pages",
         "MutationObserver"
       ],
       "categories": [
         "Web・ツール",
         "静的サイト",
         "GitHub連携",
-        "個人ポータル"
+        "自動解析"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-09-11T21:03:58Z",
+      "sourcePushedAt": "2026-09-12T05:10:08Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-09-11T21:03:58Z",
+        "pushedAt": "2026-09-12T05:10:08Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -49,8 +49,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "4ae58eaa36b74532be6fe5a5eaae096a6e2ba76fbb4149f4eb59887d91430cc7",
-      "generatedAt": "2026-09-12T04:44:11.232Z"
+      "sourceFingerprint": "bb54e41c00713aed89e1e445db41ccd06987c9d704ceccf8beb0d3cd5bf48797",
+      "generatedAt": "2026-09-12T10:57:16.019Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -152,43 +152,43 @@
       "generatedAt": "2026-09-04T10:51:50.295Z"
     },
     "realsense-web-viewer": {
-      "title": "RealSense深度カメラのブラウザビューア",
-      "summary": "Intel RealSenseの深度・トラッキングカメラを、ブラウザ中心で可視化する実験的なビューアだ。D400系の深度映像をgetUserMediaとWebGL2で直接扱い、T265はWebUSBやネイティブブリッジを使ってブラウザ対応の可能性を探っている。",
-      "detail": "こいつは、Intel RealSenseの深度カメラやトラッキングカメラをブラウザから観察するための実験的なビューアだ。D400系ではRealSenseのDepth入力をgetUserMediaで開き、WebGL2のR32F経路から16ビット相当のZ16値を保ったままGPUで色付けしてる。映像の検出、UVCやWebUSBの診断ページも分かれていて、マウス位置の生Z16値や深度スケール換算の距離まで確認できる。T265についてはMovidiusのブートデバイスをWebUSBで調べつつ、SDKを使うPythonのネイティブブリッジもフォールバックとして残してある。まだv0.2の試験段階で、深度単位の機種別検証やRGB同時表示、T265の姿勢取得などは未実装だし、表示距離も実測校正なしには測定値と扱えないな。",
-      "closingRemark": "ブラウザだけで深度は見えてきたが、T265の姿勢まではまだUSBの向こう側だな。",
+      "title": "RealSenseブラウザビューア",
+      "summary": "Intel RealSenseの深度カメラとトラッキングカメラを、ブラウザ上で可視化・診断する実験的なビューア。D400系の深度映像をWebUSBやgetUserMediaで直接扱い、T265ではWebUSBによる起動転送と将来の姿勢取得を検証している。",
+      "detail": "こいつは、Intel RealSenseのD400系深度カメラとT265トラッキングカメラを、できるだけブラウザだけで扱うための実験用ビューアだな。D400ではgetUserMedia()でDepth入力を開き、WebGL2のR32F経路でZ16相当の値を保ったままGPUカラー化し、表示範囲や深度スケール、ポインタ位置の生Z16値と距離を確認できる。T265側はWebUSBでMovidiusのブートデバイスへユーザー指定のmvcmdイメージを送り、再列挙後のインターフェースを調べるところまで実装してるが、実機での起動転送やランタイム姿勢デコードはまだ未検証だ。診断用HTMLページ群と、librealsense／pyrealsense2を使うWebSocketネイティブブリッジも用意されている。ただし深度単位は既定値を手入力で調整する段階で、点群や6DoF軌跡の直接取得までは完成していない。",
+      "closingRemark": "ブラウザは深度までは覗けたが、T265の姿勢まではまだ入口で靴を脱いでいるところだ。",
       "features": [
-        "D400系のDepth入力をブラウザから直接検出・開始・停止できる",
-        "WebGL2のR32F経路でZ16深度値を保持してGPU色付けする",
-        "マウス位置の生Z16値と深度スケール換算距離を確認できる",
-        "UVC・WebUSB・深度精度を個別の診断ページで検証できる",
-        "GitHub Pagesの静的フロントエンドとローカルネイティブブリッジに対応する"
+        "D400系Depth入力のブラウザ直接ストリーミング",
+        "WebGL2によるGPU深度カラー化とZ16プローブ",
+        "T265のWebUSBブート転送・再列挙診断",
+        "WebUSB・UVC・深度精度を分けて試せる診断ページ",
+        "GitHub Pagesで動く静的ビューアとネイティブブリッジ"
       ],
       "technologies": [
         "JavaScript",
         "HTML",
-        "CSS",
+        "Python",
         "WebGL2",
         "WebUSB",
-        "getUserMedia",
-        "Python",
+        "getUserMedia()",
+        "librealsense",
         "pyrealsense2"
       ],
       "categories": [
         "コンピュータビジョン",
-        "ブラウザアプリ",
-        "深度センシング",
+        "WebUSB",
+        "深度カメラ",
         "ハードウェア実験"
       ],
       "status": "実験",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1354330504,
-      "sourcePushedAt": "2026-09-02T05:59:22Z",
+      "sourcePushedAt": "2026-09-12T07:56:28Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1354330504,
         "name": "realsense-web-viewer",
-        "pushedAt": "2026-09-02T05:59:22Z",
+        "pushedAt": "2026-09-12T07:56:28Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -198,8 +198,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "369e6a87584a0c49ec357b0d25e313d26be8f8c25cac34d1d2557140ba5ac2fd",
-      "generatedAt": "2026-09-04T10:52:08.854Z"
+      "sourceFingerprint": "863f40080cb03c62047f4c1d24e1d143520f8b044839860631aacb7fb4314b3d",
+      "generatedAt": "2026-09-12T10:56:56.931Z"
     },
     "youtube-video-fetcher": {
       "title": "YouTube映像搬送Fetcher",
@@ -3754,22 +3754,22 @@
     },
     "atoms3r-6dof-mekf": {
       "title": "AtomS3R姿勢推定ファームウェア",
-      "summary": "M5Stack AtomS3R向けに、加速度計とジャイロだけで姿勢を推定する6軸MEKFファームウェア。動的加速度を検出して加速度補正を弱めたり止めたりでき、ブラウザからの書き込みとシリアル監視にも対応している。",
-      "detail": "こいつは、M5Stack AtomS3R-M12を主な対象に、加速度計とジャイロから機体の姿勢を推定する6軸MEKFファームウェアだ。中ではクォータニオンで姿勢を伝播し、ジャイロバイアスも推定しながら、加速度の大きさと重力方向との残差を見て補正の信頼度を調整してる。移動中に加速度を重力と誤認しないよう、条件が悪ければ加速度更新を滑らかに弱め、さらに外せる仕組みになっているわけだ。PlatformIOでビルドしてUSBから書き込めるほか、GitHub PagesのWebツールでESP32-S3への書き込み、115200bpsのライブ監視、CSVログ保存まで扱える。6軸構成なのでロールとピッチは重力を基準にできるが、ヨーの絶対方位は分からず、起動時を0度として徐々にドリフトする点は押さえておきたい。",
-      "closingRemark": "加速度を疑う仕組みはあるが、ヨーの迷子までは磁石なしでは迎えに行けない。",
+      "summary": "M5Stack AtomS3R向けに、加速度計とジャイロだけで姿勢を推定する6軸MEKFファームウェア。加速度の信頼度に応じた補正拒否、Y180取り付け変換、ブラウザからの書き込みとシリアル監視まで一体で扱える。",
+      "detail": "こいつは、M5Stack AtomS3Rで動的な姿勢を推定するための、直接書き込み可能な6軸MEKFファームウェアだな。中ではジャイロでクォータニオン姿勢を伝播し、ジャイロバイアスも推定しながら、加速度の大きさと重力方向との残差から補正の信頼度を調整してる。並進加速度で「加速度イコール重力」の前提が崩れたときは、補正を弱めたり拒否したりできるわけだ。標準のY180取り付け変換、CSVテレメトリ、PlatformIO設定に加えて、GitHub PagesのWeb flasherとWeb Serial監視画面も用意され、Roll・Pitch・Yawやacc_conf、acc_usedをブラウザで確認できる。ただし磁気センサは使わないため、Yawは起動時を基準にゆっくりドリフトし、絶対方位までは分からない。",
+      "closingRemark": "Y180で姿勢は整うが、磁気センサを眠らせたままではYawだけが少しずつ旅に出る。",
       "features": [
-        "6状態MEKFによる姿勢とジャイロバイアスの推定",
-        "加速度の大きさと方向残差を使う適応的な加速度拒否",
-        "USBシリアルでのCSVテレメトリ出力",
-        "GitHub Pagesからのブラウザ書き込みとライブ監視",
-        "ロール・ピッチ・ヨー、補正信頼度、更新採用状況の表示"
+        "6状態のMEKFで姿勢誤差とジャイロバイアスを推定",
+        "加速度の大きさと方向から補正信頼度を適応的に調整",
+        "Y180取り付け向けの車体座標変換を適用",
+        "Web flasherとWeb Serialで書き込み・ライブ監視",
+        "CSV形式で姿勢・バイアス・加速度判定を記録"
       ],
       "technologies": [
         "C++",
-        "ESP32-S3",
-        "PlatformIO",
-        "Arduino",
         "M5Unified",
+        "PlatformIO",
+        "ESP32-S3",
+        "M5Stack AtomS3R-M12",
         "BMI270",
         "Web Serial API",
         "GitHub Actions"
@@ -3780,16 +3780,16 @@
         "センサー処理",
         "ファームウェア"
       ],
-      "status": "実験",
+      "status": "試作",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1366920045,
-      "sourcePushedAt": "2026-09-12T04:12:39Z",
+      "sourcePushedAt": "2026-09-12T05:22:51Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1366920045,
         "name": "atoms3r-6dof-mekf",
-        "pushedAt": "2026-09-12T04:12:39Z",
+        "pushedAt": "2026-09-12T05:22:51Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -3799,9 +3799,59 @@
         "fork": false,
         "language": "C++"
       },
-      "sourceFingerprint": "4426aaa37c452d9fe5f53ac3f97e20425e4a8eba2354ddd469d3c4f59534b358",
-      "generatedAt": "2026-09-12T04:43:51.172Z"
+      "sourceFingerprint": "f895a4dbe69767a9d3f77f2f5b922d96f4877147e5aba2dbee606f9f9fcf4ade",
+      "generatedAt": "2026-09-12T10:57:07.057Z"
+    },
+    "atoms3r-mekf-dynamic-validation": {
+      "title": "AtomS3R動的姿勢推定",
+      "summary": "M5Stack AtomS3R向けに、加速度の信頼度を動的に判断する6軸MEKF姿勢推定ファームウェアだ。PlatformIOで書き込み、ブラウザからファームウェア更新や姿勢・加速度ログの確認まで行える。",
+      "detail": "こいつは、M5Stack AtomS3R-M12を主な検証対象にした、動的な動きでも姿勢を追い続ける6軸MEKFファームウェアだな。中ではBMI270の加速度計とジャイロだけを使い、クォータニオンで姿勢を伝播しながら、ジャイロバイアスも推定してる。加速度の大きさが1 gから外れたか、重力方向との角度が合っているかを見て、補正の信頼度を滑らかに下げ、必要なら更新そのものを止める仕組みが特徴だ。Y180の搭載変換や起動時バイアス初期化にも対応し、USBシリアルへCSVを出力できるほか、GitHub Pagesの画面から書き込みとRoll・Pitch・Yaw、補正状況を確認できる。ただし磁気センサーを使わないため、Yawは起動時基準の相対値で、長時間の絶対方位までは分からない。",
+      "closingRemark": "加速度を疑う仕組みはあるが、Yawの迷子までは引き受けない。そこは磁気センサーの出番だな。",
+      "features": [
+        "加速度の大きさと重力方向から信頼度を計算し、動的加速度による誤補正を抑制",
+        "6状態のMEKFで姿勢誤差とジャイロバイアスを推定",
+        "Y180搭載変換と起動時のジャイロバイアス初期化に対応",
+        "Web Serialで姿勢・補正状態をライブ表示し、CSVログをダウンロード可能",
+        "GitHub Actionsでビルドし、GitHub Pagesから書き込み用ファームウェアを配布"
+      ],
+      "technologies": [
+        "C++",
+        "M5Unified",
+        "PlatformIO",
+        "ESP32-S3",
+        "Arduino",
+        "BMI270",
+        "ESP Web Tools",
+        "Web Serial API"
+      ],
+      "categories": [
+        "組み込み",
+        "姿勢推定",
+        "センサー処理",
+        "ファームウェア"
+      ],
+      "status": "実験",
+      "confidence": "high",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
+      "sourceRepositoryId": 1366981980,
+      "sourcePushedAt": "2026-09-12T08:35:30Z",
+      "sourceDefaultBranch": "main",
+      "sourceMetadata": {
+        "repositoryId": 1366981980,
+        "name": "atoms3r-mekf-dynamic-validation",
+        "pushedAt": "2026-09-12T08:35:30Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "C++"
+      },
+      "sourceFingerprint": "d6e06e78788bd5cb9df45923ab679dd58e2077a4541e5de6ec1964226ef8d438",
+      "generatedAt": "2026-09-12T10:56:46.075Z"
     }
   },
-  "repositoryCount": 77
+  "repositoryCount": 78
 }
