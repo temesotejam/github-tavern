@@ -1,45 +1,45 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-11T21:03:56.749Z",
+  "generatedAt": "2026-09-12T04:44:11.232Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ酒場ポータル",
-      "summary": "公開GitHubリポジトリを、酒場の依頼記録のような画面で検索・閲覧する個人向けポータル。GitHub APIの情報とCopilot生成の日本語要約を組み合わせ、分類や公開ページの確認まで一つの静的サイトで行える。",
-      "detail": "こいつは、temesotejamが所有する公開GitHubリポジトリを、無機質な一覧ではなく酒場の記録として探すための個人ポータルだな。中ではGitHub APIからリポジトリ情報を取得し、名前・Description・Topics・使用言語・Copilot要約を横断検索して、技術領域ごとに簡易分類してる。カードを選べばREADMEや構成、設定ファイルを根拠にした日本語の概要と特徴を読めて、解析前の新規リポジトリにはREADMEから暫定説明を補う仕組みもある。Copilot CLIを使うGitHub Actionsは6時間ごとに更新を確認し、変更のないものを再解析せず、要約キャッシュを更新する。GitHub Pagesで静的に公開できる一方、対象は公開リポジトリに限られ、削除・変更・Issue作成のような書き込み操作までは行わない。",
-      "closingRemark": "要約は更新を覚えているが、酒場そのものは静的なまま――記録係としては筋が通ってる。",
+      "title": "公開リポジトリ酒場端末",
+      "summary": "公開GitHubリポジトリを酒場の依頼記録のように探せる、個人向けの静的ポータルだ。GitHub APIから一覧を取得し、名前や説明、Topics、言語、Copilot要約を横断検索しながら、分類付きのカードで内容を確認できる。",
+      "detail": "こいつは、temesotejamが所有する公開GitHubリポジトリを、無機質な一覧ではなく酒場風の画面から探すための個人ポータルだな。中ではブラウザのJavaScriptがGitHub APIから一覧を読み込み、リポジトリ名やDescription、Topics、使用言語、保存されたCopilot要約を検索対象にして、学習・制御・センサ・画像・Webといった簡易カテゴリへ振り分けてる。カードを選べば概要や技術情報を表示でき、解析済みならREADMEや構成、設定ファイルを根拠にした日本語説明も読めるし、未解析の新規リポジトリにはREADMEから暫定表示を補う仕組みもある。GitHub Actionsは6時間ごとに更新を確認し、変更のあったものだけを最大8件ずつ解析してdata/summaries.jsonへ反映する。GitHub Pagesで静的に公開できる一方、Private Repositoryは扱わず、削除や変更、Issue作成のような書き込み操作までは行わない構成だ。",
+      "closingRemark": "6時間ごとに記録は更新されるが、酒場そのものは静かなままだ。書き込みはしない主義らしい。",
       "features": [
-        "GitHub APIから公開リポジトリを自動取得",
-        "名前・説明・Topics・言語・要約を横断検索",
-        "技術領域による簡易分類とカード閲覧",
-        "Copilot根拠付きの日本語説明を表示",
-        "READMEによる未解析リポジトリの暫定説明"
+        "GitHub APIから公開リポジトリ一覧を自動取得",
+        "名前・説明・Topics・言語・Copilot要約を横断検索",
+        "学習・制御・センサ・画像・Webなどに簡易分類",
+        "解析済み要約とREADME由来の暫定説明を表示",
+        "GitHub Actionsで変更済みリポジトリだけ定期解析"
       ],
       "technologies": [
         "JavaScript",
-        "CSS",
         "HTML",
+        "CSS",
         "GitHub API",
-        "GitHub Copilot CLI",
         "GitHub Actions",
         "GitHub Pages",
+        "GitHub Copilot CLI",
         "MutationObserver"
       ],
       "categories": [
         "Web・ツール",
-        "GitHub連携",
         "静的サイト",
-        "AI要約"
+        "GitHub連携",
+        "個人ポータル"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-09-11T16:35:44Z",
+      "sourcePushedAt": "2026-09-11T21:03:58Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-09-11T16:35:44Z",
+        "pushedAt": "2026-09-11T21:03:58Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -49,8 +49,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "2190a3d28346e49fe501ce060fe82642bffa044965018def22e99ca13b7368df",
-      "generatedAt": "2026-09-11T21:03:56.749Z"
+      "sourceFingerprint": "4ae58eaa36b74532be6fe5a5eaae096a6e2ba76fbb4149f4eb59887d91430cc7",
+      "generatedAt": "2026-09-12T04:44:11.232Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -3553,16 +3553,16 @@
       "generatedAt": "2026-09-04T11:11:50.190Z"
     },
     "i26-pico-firmware": {
-      "title": "I-26 Picoフライトコントローラ",
-      "summary": "I-26用のRaspberry Pi Picoフライトコントローラ・ファームウェアで、GitHub上の編集からGitHub ActionsによるUF2ビルド、配布ページ公開までを自動化する。プログラム本体を分離して単独ビルドでき、センサー診断用ファームウェアも用意されている。",
-      "detail": "こいつは、I-26を動かすRaspberry Pi Pico向けフライトコントローラのファームウェアだな。中ではセンサー処理、EKF、制御、PWM、無線通信、それにLSM9DS1用のレジスタ処理を分担し、GitHub ActionsでPico用のUF2を書き出してる。編集してCommit & Pushすればビルドが走り、UF2とSHA-256、ソースZIP、ログ類をArtifactやGitHub Pagesから受け取れる仕組みだ。実装本体はfirmware/i26に切り離されているから、Pico SDK 2.3.0とEigen 3.4.0を指定して別環境でも単独ビルドできる。LSM9DS1のSPI診断や独立したソフトウェアI2Cテストも追加されているが、実機全体の飛行性能まではこの資料だけでは判断できない。",
-      "closingRemark": "ビルドからUF2配布まで整っている一方、最後に飛ぶかどうかはPicoとセンサーの機嫌次第ってところだな。",
+      "title": "I-26 Pico飛行制御ファームウェア",
+      "summary": "I-26用のRaspberry Pi Picoフライトコントローラを、GitHub上で編集して自動ビルド・配布するためのファームウェア基盤だ。UF2書き込み用ファイルに加え、分離したソース一式やハッシュ、ビルドログも取得できる。",
+      "detail": "こいつは、I-26の飛行制御をRaspberry Pi Picoで動かすためのファームウェアと、その配布までをまとめたリポジトリだな。中ではセンサー、無線、PWM、制御計算、EKF、それにLSM9DS1用ドライバを組み合わせ、最近の変更ではToFによる高度制御も取り込んでいる。GitHub上でfirmware/i26を編集してCommit & Pushすれば、GitHub ActionsがPico向けのUF2をビルドし、GitHub Pagesで書き込み用ファイルとソースZIPを公開する仕組みだ。Pico SDK 2.3.0、RP2040、C++17、Eigen 3.4.0を固定していて、特定PCの環境に依存せず単独ビルドできるよう整理されている。ただし、実機での飛行性能や制御の安全性までは、この資料だけでは判断できない。",
+      "closingRemark": "ToFで高度を見て、最後はUF2をRPI-RP2へ渡す。空の話も、書き込み手順はずいぶん地上向きだな。",
       "features": [
-        "GitHub ActionsでRaspberry Pi Pico用UF2を自動ビルド",
-        "GitHub PagesでUF2とソースZIPを配布",
+        "GitHub ActionsによるRaspberry Pi Pico向け自動ビルド",
+        "UF2、SHA-256、ソースZIP、ビルドログをまとめて配布",
         "firmware/i26だけを切り離して単独ビルド可能",
-        "LSM9DS1のSPI・ソフトウェアI2C診断に対応",
-        "UF2のSHA-256とビルドログを生成"
+        "GitHub Pagesで生成物を公開",
+        "LSM9DS1やToFを使ったセンサー診断・高度制御"
       ],
       "technologies": [
         "C",
@@ -3572,7 +3572,7 @@
         "RP2040",
         "Pico SDK 2.3.0",
         "Eigen 3.4.0",
-        "LSM9DS1"
+        "GitHub Actions"
       ],
       "categories": [
         "組み込み",
@@ -3584,12 +3584,12 @@
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1358716397,
-      "sourcePushedAt": "2026-09-11T11:20:24Z",
+      "sourcePushedAt": "2026-09-12T03:17:52Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1358716397,
         "name": "i26-pico-firmware",
-        "pushedAt": "2026-09-11T11:20:24Z",
+        "pushedAt": "2026-09-12T03:17:52Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -3599,8 +3599,8 @@
         "fork": false,
         "language": "C"
       },
-      "sourceFingerprint": "4ab6fe49d588f36d7cb93a9c14f100e856614bed7faa78806a7f2cd78235b5c9",
-      "generatedAt": "2026-09-11T11:32:16.598Z"
+      "sourceFingerprint": "8b73fb85cc1f043ba17a6297b23d2df104af2bf1a74814972cce1c3f20175a7e",
+      "generatedAt": "2026-09-12T04:43:59.916Z"
     },
     "rw-walker-digital-twin": {
       "title": "反応輪二脚歩行実験環境",
@@ -3751,7 +3751,57 @@
       },
       "sourceFingerprint": "e91f655501bb7b754de7e0951c81e69ee0674e17f36705075bd9a6e68f92b55e",
       "generatedAt": "2026-09-11T11:32:41.000Z"
+    },
+    "atoms3r-6dof-mekf": {
+      "title": "AtomS3R姿勢推定ファームウェア",
+      "summary": "M5Stack AtomS3R向けに、加速度計とジャイロだけで姿勢を推定する6軸MEKFファームウェア。動的加速度を検出して加速度補正を弱めたり止めたりでき、ブラウザからの書き込みとシリアル監視にも対応している。",
+      "detail": "こいつは、M5Stack AtomS3R-M12を主な対象に、加速度計とジャイロから機体の姿勢を推定する6軸MEKFファームウェアだ。中ではクォータニオンで姿勢を伝播し、ジャイロバイアスも推定しながら、加速度の大きさと重力方向との残差を見て補正の信頼度を調整してる。移動中に加速度を重力と誤認しないよう、条件が悪ければ加速度更新を滑らかに弱め、さらに外せる仕組みになっているわけだ。PlatformIOでビルドしてUSBから書き込めるほか、GitHub PagesのWebツールでESP32-S3への書き込み、115200bpsのライブ監視、CSVログ保存まで扱える。6軸構成なのでロールとピッチは重力を基準にできるが、ヨーの絶対方位は分からず、起動時を0度として徐々にドリフトする点は押さえておきたい。",
+      "closingRemark": "加速度を疑う仕組みはあるが、ヨーの迷子までは磁石なしでは迎えに行けない。",
+      "features": [
+        "6状態MEKFによる姿勢とジャイロバイアスの推定",
+        "加速度の大きさと方向残差を使う適応的な加速度拒否",
+        "USBシリアルでのCSVテレメトリ出力",
+        "GitHub Pagesからのブラウザ書き込みとライブ監視",
+        "ロール・ピッチ・ヨー、補正信頼度、更新採用状況の表示"
+      ],
+      "technologies": [
+        "C++",
+        "ESP32-S3",
+        "PlatformIO",
+        "Arduino",
+        "M5Unified",
+        "BMI270",
+        "Web Serial API",
+        "GitHub Actions"
+      ],
+      "categories": [
+        "組み込み",
+        "姿勢推定",
+        "センサー処理",
+        "ファームウェア"
+      ],
+      "status": "実験",
+      "confidence": "high",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
+      "sourceRepositoryId": 1366920045,
+      "sourcePushedAt": "2026-09-12T04:12:39Z",
+      "sourceDefaultBranch": "main",
+      "sourceMetadata": {
+        "repositoryId": 1366920045,
+        "name": "atoms3r-6dof-mekf",
+        "pushedAt": "2026-09-12T04:12:39Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "C++"
+      },
+      "sourceFingerprint": "4426aaa37c452d9fe5f53ac3f97e20425e4a8eba2354ddd469d3c4f59534b358",
+      "generatedAt": "2026-09-12T04:43:51.172Z"
     }
   },
-  "repositoryCount": 76
+  "repositoryCount": 77
 }
