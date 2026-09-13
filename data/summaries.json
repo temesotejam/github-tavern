@@ -1,45 +1,45 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-12T20:39:38.724Z",
+  "generatedAt": "2026-09-13T04:57:53.939Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ探索酒場",
-      "summary": "temesotejamが所有する公開GitHubリポジトリを、酒場の依頼記録のような画面で検索・閲覧できる個人ポータル。GitHub APIとCopilotによる日本語要約を使い、技術分野や構成を手早く見比べられる。",
-      "detail": "こいつは、temesotejamが所有する公開GitHubリポジトリを、無機質な一覧ではなく古い情報端末風の画面で探すための個人ポータルだな。中ではGitHub APIからリポジトリ情報を取得し、名前やDescription、Topics、使用言語、Copilot要約を横断検索できるようにしてる。技術領域ごとの簡易分類やカードからの詳細表示もあり、解析済みならREADMEや構成、設定ファイルを根拠にした日本語説明を読めるし、未解析の新規リポジトリにはREADMEから暫定説明を補う仕組みもある。GitHub Actionsが6時間ごとに更新を確認し、変更のあったものを最大8件ずつCopilot CLIで解析してキャッシュを更新する。GitHub Pagesで静的に公開できる一方、対象は公開リポジトリに限られ、削除や変更、Issue作成などの書き込み操作までは行わない。",
-      "closingRemark": "6時間ごとに記録を更新する酒場だが、依頼を受けて書き換えるほど世話焼きではない。",
+      "title": "Project Tavern公開リポジトリ酒場",
+      "summary": "temesotejamが所有する公開GitHubリポジトリを、酒場風の画面で検索・分類・閲覧する個人ポータル。GitHub APIとCopilot解析を使い、概要や技術情報を一覧から確認できる。",
+      "detail": "こいつは、temesotejamが所有する公開GitHubリポジトリを、無機質な一覧ではなく酒場風の画面から探すための個人ポータルだな。中ではGitHub APIからリポジトリを取得し、名前や説明、Topics、使用言語、Copilotの要約を横断検索できるようにしてる。カードを選べば概要や特徴、技術情報をその場で確認でき、未解析の新しいリポジトリにはREADMEから暫定説明を補う仕組みもある。GitHub Actionsが6時間ごとに更新分だけを解析してdata/summaries.jsonへ蓄えるから、GitHub Pagesの静的サイトとしてそのまま公開できるわけだ。ただし対象は公開リポジトリに限られ、削除やIssue作成などの書き込み操作までは行わない。",
+      "closingRemark": "6時間ごとに記録は更新されるが、酒場そのものは静的なまま。動くのは要約のほうってわけだな。",
       "features": [
-        "公開リポジトリの横断検索と並び替え",
-        "技術領域ごとの簡易カテゴリ分類",
-        "Copilot根拠付きの日本語概要表示",
-        "未解析リポジトリへのREADME暫定説明",
-        "GitHub Pagesでの静的公開"
+        "公開リポジトリの横断検索と技術領域別の簡易分類",
+        "カード選択による概要・特徴・技術情報の表示",
+        "Copilot解析済み要約とREADME由来の暫定説明に対応",
+        "更新済みリポジトリだけを定期解析するキャッシュ運用",
+        "GitHub Pagesで公開できる静的サイト構成"
       ],
       "technologies": [
         "JavaScript",
         "HTML",
         "CSS",
         "GitHub API",
+        "GitHub Pages",
         "GitHub Actions",
         "GitHub Copilot CLI",
-        "GitHub Pages",
-        "MutationObserver"
+        "README"
       ],
       "categories": [
-        "Webツール",
+        "Web・ツール",
         "GitHub",
-        "静的サイト",
-        "自動要約"
+        "ポータル",
+        "自動化"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-09-12T15:37:38Z",
+      "sourcePushedAt": "2026-09-12T20:39:40Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-09-12T15:37:38Z",
+        "pushedAt": "2026-09-12T20:39:40Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -49,8 +49,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "da186569ab9d25991b8cd89b2eb905af28034959adc22d69dad11161a08e9758",
-      "generatedAt": "2026-09-12T20:39:38.723Z"
+      "sourceFingerprint": "40287302ef00577ef3a527caea2dc889f2b897d7770b4a5bbcb93d07f666231a",
+      "generatedAt": "2026-09-13T04:57:53.939Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -153,42 +153,42 @@
     },
     "realsense-web-viewer": {
       "title": "RealSenseブラウザビューア",
-      "summary": "Intel RealSenseの深度カメラとトラッキングカメラを、ブラウザ上で可視化・診断する実験的なビューア。D400系の深度映像をWebUSBやgetUserMediaで直接扱い、T265ではWebUSBによる起動転送と将来の姿勢取得を検証している。",
-      "detail": "こいつは、Intel RealSenseのD400系深度カメラとT265トラッキングカメラを、できるだけブラウザだけで扱うための実験用ビューアだな。D400ではgetUserMedia()でDepth入力を開き、WebGL2のR32F経路でZ16相当の値を保ったままGPUカラー化し、表示範囲や深度スケール、ポインタ位置の生Z16値と距離を確認できる。T265側はWebUSBでMovidiusのブートデバイスへユーザー指定のmvcmdイメージを送り、再列挙後のインターフェースを調べるところまで実装してるが、実機での起動転送やランタイム姿勢デコードはまだ未検証だ。診断用HTMLページ群と、librealsense／pyrealsense2を使うWebSocketネイティブブリッジも用意されている。ただし深度単位は既定値を手入力で調整する段階で、点群や6DoF軌跡の直接取得までは完成していない。",
-      "closingRemark": "ブラウザは深度までは覗けたが、T265の姿勢まではまだ入口で靴を脱いでいるところだ。",
+      "summary": "Intel RealSenseのD400系深度カメラとT265追跡カメラを、ブラウザから直接扱う実験的ビューア。WebUSBやgetUserMedia()で深度・6DoF姿勢を取得し、GPU描画や3D軌跡表示まで行えるほか、SDK利用向けのネイティブ橋渡しも備える。",
+      "detail": "こいつは、Intel RealSenseの深度カメラと追跡カメラを、できるだけブラウザだけで動かして観察するためのビューアだな。D400/D405ではgetUserMedia()でDepth映像を開き、WebGL2のR32F経路でZ16相当の値を保ちながら、色付け表示やマウス位置の生データ確認、深度スケール調整までできる。T265ではWebUSBを使い、ブート機器へのファームウェア転送、再列挙後のTM2通信、104バイトの6DoF姿勢パケット受信を一続きで処理し、位置・姿勢・速度・信頼度と3D軌跡を表示する仕組みだ。ファームウェアは同梱せず、サイズとSHA-256を照合したコミット固定ミラーだけを使うので、出所を無条件には信用していない。診断用ページやlibrealsense／pyrealsense2向けのローカルブリッジも残っているが、深度単位の機種別確認やCSV記録、RGB同時表示などはまだ未完了ってところだ。",
+      "closingRemark": "ブラウザだけでT265を起こせる一方、ファームウェアはきっちり指紋を取ってから通す。慎重な酒場だな。",
       "features": [
-        "D400系Depth入力のブラウザ直接ストリーミング",
-        "WebGL2によるGPU深度カラー化とZ16プローブ",
-        "T265のWebUSBブート転送・再列挙診断",
-        "WebUSB・UVC・深度精度を分けて試せる診断ページ",
-        "GitHub Pagesで動く静的ビューアとネイティブブリッジ"
+        "D400系Depth入力の直接取得とGPU深度カラー化",
+        "Z16相当の生深度値をマウス位置で確認",
+        "T265のブートから6DoF姿勢表示まで自動処理",
+        "約200Hzの姿勢受信と表示レート分離",
+        "WebUSB・UVCの診断ページとネイティブブリッジ"
       ],
       "technologies": [
         "JavaScript",
         "HTML",
-        "Python",
         "WebGL2",
         "WebUSB",
         "getUserMedia()",
+        "GitHub Pages",
         "librealsense",
         "pyrealsense2"
       ],
       "categories": [
-        "コンピュータビジョン",
-        "WebUSB",
-        "深度カメラ",
-        "ハードウェア実験"
+        "実験",
+        "可視化",
+        "ブラウザツール",
+        "コンピュータビジョン"
       ],
       "status": "実験",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1354330504,
-      "sourcePushedAt": "2026-09-12T07:56:28Z",
+      "sourcePushedAt": "2026-09-13T04:56:31Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1354330504,
         "name": "realsense-web-viewer",
-        "pushedAt": "2026-09-12T07:56:28Z",
+        "pushedAt": "2026-09-13T04:56:31Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -198,8 +198,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "863f40080cb03c62047f4c1d24e1d143520f8b044839860631aacb7fb4314b3d",
-      "generatedAt": "2026-09-12T10:56:56.931Z"
+      "sourceFingerprint": "5bbee2374ffbcfd20fb4ae4faa3e0d87af8481a047f97aaae4df6752aaea34f5",
+      "generatedAt": "2026-09-13T04:57:42.376Z"
     },
     "youtube-video-fetcher": {
       "title": "YouTube映像搬送Fetcher",
@@ -3803,43 +3803,43 @@
       "generatedAt": "2026-09-12T10:57:07.057Z"
     },
     "atoms3r-mekf-dynamic-validation": {
-      "title": "AtomS3R動的姿勢推定",
-      "summary": "M5Stack AtomS3R向けに、加速度の信頼度を動的に判断する6軸MEKF姿勢推定ファームウェアだ。PlatformIOで書き込み、ブラウザからファームウェア更新や姿勢・加速度ログの確認まで行える。",
-      "detail": "こいつは、M5Stack AtomS3R-M12を主な検証対象にした、動的な動きでも姿勢を追い続ける6軸MEKFファームウェアだな。中ではBMI270の加速度計とジャイロだけを使い、クォータニオンで姿勢を伝播しながら、ジャイロバイアスも推定してる。加速度の大きさが1 gから外れたか、重力方向との角度が合っているかを見て、補正の信頼度を滑らかに下げ、必要なら更新そのものを止める仕組みが特徴だ。Y180の搭載変換や起動時バイアス初期化にも対応し、USBシリアルへCSVを出力できるほか、GitHub Pagesの画面から書き込みとRoll・Pitch・Yaw、補正状況を確認できる。ただし磁気センサーを使わないため、Yawは起動時基準の相対値で、長時間の絶対方位までは分からない。",
-      "closingRemark": "加速度を疑う仕組みはあるが、Yawの迷子までは引き受けない。そこは磁気センサーの出番だな。",
+      "title": "MEKF比較検証のQ1実験FW",
+      "summary": "AtomS3向けの姿勢制御検証ファームウェアだ。MEKFと動的ベータMadgwickを並列に走らせ、Q1のシャドー計算をモーター停止のまま記録して、制御判断と比較をログから見られる。",
+      "detail": "こいつは、姿勢制御の検証用ファームウェアだな。中では6状態MEKFとdynamic-beta Madgwickを並列で走らせて、制御に使うMEKFと比較用のMadgwickを分けてる。Q1のシャドー計算も入っていて、モーターは止めたまま次ピーク予測やQ要求の記録だけを残す。RWLOGをCSVに変換して、ゼロクロスやq1_shadow_events、q_ident_eventsを動画のピークと照らし合わせる流れだ。だから、ただ動いたかじゃなくて、どの判断がどうズレたかを見られるってわけだ。ただし、これは実験器向けの検証ビルドで、READMEにある条件とログ仕様はその時点の実測前提だ。",
+      "closingRemark": "Q1がモーターを止めたまま、逆に証拠を残すのがこのリポジトリの癖だな。ログが命令を代替するんじゃなくて、命令が起きなかった証拠を残す、という妙な仕事をしてる。",
       "features": [
-        "加速度の大きさと重力方向から信頼度を計算し、動的加速度による誤補正を抑制",
-        "6状態のMEKFで姿勢誤差とジャイロバイアスを推定",
-        "Y180搭載変換と起動時のジャイロバイアス初期化に対応",
-        "Web Serialで姿勢・補正状態をライブ表示し、CSVログをダウンロード可能",
-        "GitHub Actionsでビルドし、GitHub Pagesから書き込み用ファームウェアを配布"
+        "6状態MEKFと動的ベータMadgwickの並列比較",
+        "Q1シャドー計算のモーター停止記録",
+        "RWLOGからCSVへの変換と動画比較対応",
+        "Q_IDENT固定Q出力の検証",
+        "LED同期アンカー付きの時系列ログ"
       ],
       "technologies": [
         "C++",
-        "M5Unified",
         "PlatformIO",
-        "ESP32-S3",
-        "Arduino",
-        "BMI270",
-        "ESP Web Tools",
-        "Web Serial API"
+        "ESP32",
+        "M5Stack AtomS3",
+        "MEKF",
+        "dynamic-beta Madgwick",
+        "RWLOG",
+        "Python"
       ],
       "categories": [
-        "組み込み",
-        "姿勢推定",
-        "センサー処理",
-        "ファームウェア"
+        "ファームウェア",
+        "制御検証",
+        "実験ログ",
+        "ツール"
       ],
       "status": "実験",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1366981980,
-      "sourcePushedAt": "2026-09-12T08:35:30Z",
+      "sourcePushedAt": "2026-09-13T04:56:38Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1366981980,
         "name": "atoms3r-mekf-dynamic-validation",
-        "pushedAt": "2026-09-12T08:35:30Z",
+        "pushedAt": "2026-09-13T04:56:38Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -3849,8 +3849,8 @@
         "fork": false,
         "language": "C++"
       },
-      "sourceFingerprint": "d6e06e78788bd5cb9df45923ab679dd58e2077a4541e5de6ec1964226ef8d438",
-      "generatedAt": "2026-09-12T10:56:46.075Z"
+      "sourceFingerprint": "c61b646dda5ce4dc9e5bc02f03fac3a966e299961e662ec3ef10de6200cc1ed9",
+      "generatedAt": "2026-09-13T04:57:31.925Z"
     }
   },
   "repositoryCount": 78
