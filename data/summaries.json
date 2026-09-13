@@ -1,45 +1,45 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-13T04:57:53.939Z",
+  "generatedAt": "2026-09-13T12:02:46.119Z",
   "repositories": {
     "github-tavern": {
-      "title": "Project Tavern公開リポジトリ酒場",
-      "summary": "temesotejamが所有する公開GitHubリポジトリを、酒場風の画面で検索・分類・閲覧する個人ポータル。GitHub APIとCopilot解析を使い、概要や技術情報を一覧から確認できる。",
-      "detail": "こいつは、temesotejamが所有する公開GitHubリポジトリを、無機質な一覧ではなく酒場風の画面から探すための個人ポータルだな。中ではGitHub APIからリポジトリを取得し、名前や説明、Topics、使用言語、Copilotの要約を横断検索できるようにしてる。カードを選べば概要や特徴、技術情報をその場で確認でき、未解析の新しいリポジトリにはREADMEから暫定説明を補う仕組みもある。GitHub Actionsが6時間ごとに更新分だけを解析してdata/summaries.jsonへ蓄えるから、GitHub Pagesの静的サイトとしてそのまま公開できるわけだ。ただし対象は公開リポジトリに限られ、削除やIssue作成などの書き込み操作までは行わない。",
-      "closingRemark": "6時間ごとに記録は更新されるが、酒場そのものは静的なまま。動くのは要約のほうってわけだな。",
+      "title": "公開リポジトリ酒場ポータル",
+      "summary": "公開GitHubリポジトリを酒場の依頼記録のように探せる個人向けポータル。GitHub APIから一覧を取得し、名前や説明、Topics、言語、Copilot要約を横断検索して、詳細な日本語案内まで表示する。",
+      "detail": "こいつは、公開GitHubリポジトリを無機質な一覧ではなく、古い情報端末風の画面から探すための個人ポータルだな。中ではGitHub APIからtemesotejam所有の公開リポジトリを取得し、名前・Description・Topics・使用言語・Copilot要約をまとめて検索できるようにしてる。カードを選べば概要や技術情報を確認でき、解析済みならREADMEや構成、設定ファイルを根拠にした日本語説明が出るし、未解析のものにはREADMEから暫定説明を補う仕組みもある。6時間ごとのGitHub Actionsが更新済みのリポジトリだけを選んで要約キャッシュを更新し、GitHub Pagesで静的に公開できる構成だ。ただし対象は公開リポジトリに限られ、削除や変更、Issue作成のような書き込み操作までは行わない。",
+      "closingRemark": "要約は更新されても、酒場そのものはリポジトリを書き換えずに記録だけを増やしていく。",
       "features": [
-        "公開リポジトリの横断検索と技術領域別の簡易分類",
-        "カード選択による概要・特徴・技術情報の表示",
-        "Copilot解析済み要約とREADME由来の暫定説明に対応",
-        "更新済みリポジトリだけを定期解析するキャッシュ運用",
-        "GitHub Pagesで公開できる静的サイト構成"
+        "GitHub APIから公開リポジトリを自動取得",
+        "名前・説明・Topics・言語・要約を横断検索",
+        "技術領域ごとの簡易分類とカード表示",
+        "Copilot解析済みの日本語説明を詳細画面に表示",
+        "READMEを使った未解析リポジトリの暫定説明"
       ],
       "technologies": [
         "JavaScript",
-        "HTML",
         "CSS",
+        "HTML",
         "GitHub API",
-        "GitHub Pages",
-        "GitHub Actions",
         "GitHub Copilot CLI",
-        "README"
+        "GitHub Actions",
+        "GitHub Pages",
+        "MutationObserver"
       ],
       "categories": [
         "Web・ツール",
         "GitHub",
-        "ポータル",
-        "自動化"
+        "静的サイト",
+        "AI要約"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-09-12T20:39:40Z",
+      "sourcePushedAt": "2026-09-13T05:24:59Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-09-12T20:39:40Z",
+        "pushedAt": "2026-09-13T05:24:59Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -49,8 +49,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "40287302ef00577ef3a527caea2dc889f2b897d7770b4a5bbcb93d07f666231a",
-      "generatedAt": "2026-09-13T04:57:53.939Z"
+      "sourceFingerprint": "e8c469ca292110eef43c5283eb2fb9a9dd79b1e9bfc77ac7122af993eb65cb9f",
+      "generatedAt": "2026-09-13T12:02:36.644Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -152,43 +152,43 @@
       "generatedAt": "2026-09-04T10:51:50.295Z"
     },
     "realsense-web-viewer": {
-      "title": "RealSenseブラウザビューア",
-      "summary": "Intel RealSenseのD400系深度カメラとT265追跡カメラを、ブラウザから直接扱う実験的ビューア。WebUSBやgetUserMedia()で深度・6DoF姿勢を取得し、GPU描画や3D軌跡表示まで行えるほか、SDK利用向けのネイティブ橋渡しも備える。",
-      "detail": "こいつは、Intel RealSenseの深度カメラと追跡カメラを、できるだけブラウザだけで動かして観察するためのビューアだな。D400/D405ではgetUserMedia()でDepth映像を開き、WebGL2のR32F経路でZ16相当の値を保ちながら、色付け表示やマウス位置の生データ確認、深度スケール調整までできる。T265ではWebUSBを使い、ブート機器へのファームウェア転送、再列挙後のTM2通信、104バイトの6DoF姿勢パケット受信を一続きで処理し、位置・姿勢・速度・信頼度と3D軌跡を表示する仕組みだ。ファームウェアは同梱せず、サイズとSHA-256を照合したコミット固定ミラーだけを使うので、出所を無条件には信用していない。診断用ページやlibrealsense／pyrealsense2向けのローカルブリッジも残っているが、深度単位の機種別確認やCSV記録、RGB同時表示などはまだ未完了ってところだ。",
-      "closingRemark": "ブラウザだけでT265を起こせる一方、ファームウェアはきっちり指紋を取ってから通す。慎重な酒場だな。",
+      "title": "RealSenseブラウザ映像ビューア",
+      "summary": "Intel RealSenseのD400系深度カメラとT265トラッキングカメラを、ブラウザ中心で可視化する実験的ビューア。WebUSBやgetUserMedia()で深度・姿勢を直接扱い、必要に応じてlibrealsenseのローカルブリッジも使える。",
+      "detail": "こいつは、Intel RealSenseのD400系深度カメラとT265を、できるだけブラウザだけで扱うためのビューアだな。D400ではgetUserMedia()からDepth映像を取り込み、WebGL2のR32F経路でZ16相当の値を保ちながら、色付け表示や深度スケール、マウス位置の生値確認ができる。T265ではWebUSBでブート機器を見つけ、Cloudflare Worker経由でIntel公式ファームウェアを取得し、サイズとSHA-256を検証してから転送、再列挙後にTM2の6DoF姿勢を約200Hzで受け取って3D軌跡にしている。GitHub Pages上のメイン画面に加えて、ブート転送やUSB記述子、UVC、深度精度を調べる診断ページも揃い、通常経路の確認材料まで残してある。現状は実験的なv0.4で、D400の機器固有の深度単位やRGB同時表示、3D変換などは未完で、librealsenseを使うローカルブリッジは比較・参照用という位置づけだ。",
+      "closingRemark": "T265のファームウェアは同梱せず、9MB超の一枚を検証してから送り込む。ブラウザも、なかなか慎重な仕事をするな。",
       "features": [
-        "D400系Depth入力の直接取得とGPU深度カラー化",
-        "Z16相当の生深度値をマウス位置で確認",
-        "T265のブートから6DoF姿勢表示まで自動処理",
-        "約200Hzの姿勢受信と表示レート分離",
-        "WebUSB・UVCの診断ページとネイティブブリッジ"
+        "D400系のブラウザ直接深度表示とGPUカラー化",
+        "T265のWebUSBブートから6DoF姿勢表示までの一貫経路",
+        "ファームウェアのサイズ・SHA-256検証と公式CDNリレー",
+        "約200Hzの姿勢受信と表示用3D軌跡",
+        "USB・UVC・深度精度を調べる診断ページ群"
       ],
       "technologies": [
         "JavaScript",
         "HTML",
-        "WebGL2",
         "WebUSB",
         "getUserMedia()",
+        "WebGL2",
+        "Cloudflare Workers",
         "GitHub Pages",
-        "librealsense",
-        "pyrealsense2"
+        "librealsense"
       ],
       "categories": [
-        "実験",
-        "可視化",
+        "コンピュータビジョン",
+        "深度カメラ",
         "ブラウザツール",
-        "コンピュータビジョン"
+        "ロボティクス"
       ],
       "status": "実験",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1354330504,
-      "sourcePushedAt": "2026-09-13T04:56:31Z",
+      "sourcePushedAt": "2026-09-13T05:21:10Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1354330504,
         "name": "realsense-web-viewer",
-        "pushedAt": "2026-09-13T04:56:31Z",
+        "pushedAt": "2026-09-13T05:21:10Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -198,19 +198,19 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "5bbee2374ffbcfd20fb4ae4faa3e0d87af8481a047f97aaae4df6752aaea34f5",
-      "generatedAt": "2026-09-13T04:57:42.376Z"
+      "sourceFingerprint": "98d835460df05d07915c7330efdd730ff8754073b8dcadbe9be9e59499e16609",
+      "generatedAt": "2026-09-13T12:02:46.119Z"
     },
     "youtube-video-fetcher": {
-      "title": "YouTube映像搬送Fetcher",
-      "summary": "YouTube動画や指定区間を取得し、GitHub ActionsのArtifact経由でChatGPTなどの後段解析へ渡すためのFetcher。映像そのものを中心に、メタデータや解析依頼もまとめて受け渡せます。",
-      "detail": "こいつは、YouTubeの動画を解析側まで確実に運ぶためのFetcherだな。中ではrequest.jsonやworkflow_dispatchを入口にして、Windows x64のself-hosted runnerでyt-dlp、Deno、FFmpegを用意し、全編または指定区間の動画を取得してる。動画本体に加えてmetadata、ログ、manifest、ユーザーの質問をArtifactへまとめるから、ChatGPT側で必要な時刻のフレームを直接確認し、映像理解や時系列比較へ進められるってわけだ。字幕取得は補助経路、faster-whisperによる独立ASRは実験経路で、主役はあくまでMP4そのものになっている。Artifactの保持は1日で、publicリポジトリのself-hosted runnerには第三者コードを流さない、非公開URLや秘密情報を入れないといった運用上の制約も明記されている。",
-      "closingRemark": "字幕を主役にせず、MP4を一日だけArtifactの棚に置く。映像解析の前口上としては、ずいぶん実務的だな。",
+      "title": "YouTube動画解析用Fetcher",
+      "summary": "YouTube動画や指定区間を取得し、GitHub ActionsのArtifact経由でChatGPTなどの後段解析へ渡すためのFetcherだ。Windowsのself-hosted runner上でyt-dlpやFFmpegを準備し、動画本体と解析依頼をまとめて扱える。",
+      "detail": "こいつは、YouTubeの動画をAI解析側まで確実に運ぶためのFetcherでな。中ではrequest.jsonやworkflow_dispatchを入口にして、Windows x64のself-hosted runner上でyt-dlp、Deno、FFmpegを用意し、全編または指定区間を取得している。動画本体にmetadata、取得ログ、manifest、ユーザーの質問を添え、保持期間1日のGitHub Actions Artifactとして渡すから、後段では字幕だけでなくフレームを直接見て映像理解や時系列比較ができるってわけだ。字幕取得は補助経路、faster-whisperによる音声認識は実験経路で、主役はあくまで動画取得とArtifact連携にある。ただしpublicリポジトリに接続したself-hosted runnerを使う構成なので、第三者コードや非公開URLを扱う運用には明確な制約が残るな。",
+      "closingRemark": "字幕を主役にせず、MP4を丸ごと後段へ渡すあたりがこのFetcherの割り切りだな。",
       "features": [
-        "全編または指定区間のYouTube動画取得",
-        "request.json更新とworkflow_dispatchによる実行",
-        "動画・メタデータ・解析依頼をArtifactへ同梱",
-        "ChatGPT側で動画から直接フレーム解析",
+        "YouTube動画の全編または指定区間を取得",
+        "request.json更新とworkflow_dispatchの両方に対応",
+        "動画・metadata・ログ・解析依頼をArtifactに集約",
+        "ChatGPT側で取得MP4を直接フレーム解析",
         "字幕取得と独立ASRを補助・実験経路として分離"
       ],
       "technologies": [
@@ -221,24 +221,24 @@
         "Deno",
         "FFmpeg",
         "faster-whisper",
-        "OpenCV"
+        "Whisper"
       ],
       "categories": [
         "動画処理",
         "GitHub Actions",
-        "AI連携",
+        "AI解析支援",
         "自動化ツール"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1351374820,
-      "sourcePushedAt": "2026-08-30T14:43:39Z",
+      "sourcePushedAt": "2026-09-13T10:19:15Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1351374820,
         "name": "youtube-video-fetcher",
-        "pushedAt": "2026-08-30T14:43:39Z",
+        "pushedAt": "2026-09-13T10:19:15Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -248,8 +248,8 @@
         "fork": false,
         "language": "Python"
       },
-      "sourceFingerprint": "283768d3410ea1ad63a17a064384a5546d73826885aa26c83da4a76444dc2c29",
-      "generatedAt": "2026-09-04T10:52:25.445Z"
+      "sourceFingerprint": "8cd15c8c66443b25670206c355e8ae0fcb22b87e0ebcef3f682d1d9ad2bf9102",
+      "generatedAt": "2026-09-13T12:02:14.778Z"
     },
     "marker-angle-recorder": {
       "title": "機体角度・RWLOG記録ツール",
@@ -3803,43 +3803,43 @@
       "generatedAt": "2026-09-12T10:57:07.057Z"
     },
     "atoms3r-mekf-dynamic-validation": {
-      "title": "MEKF比較検証のQ1実験FW",
-      "summary": "AtomS3向けの姿勢制御検証ファームウェアだ。MEKFと動的ベータMadgwickを並列に走らせ、Q1のシャドー計算をモーター停止のまま記録して、制御判断と比較をログから見られる。",
-      "detail": "こいつは、姿勢制御の検証用ファームウェアだな。中では6状態MEKFとdynamic-beta Madgwickを並列で走らせて、制御に使うMEKFと比較用のMadgwickを分けてる。Q1のシャドー計算も入っていて、モーターは止めたまま次ピーク予測やQ要求の記録だけを残す。RWLOGをCSVに変換して、ゼロクロスやq1_shadow_events、q_ident_eventsを動画のピークと照らし合わせる流れだ。だから、ただ動いたかじゃなくて、どの判断がどうズレたかを見られるってわけだ。ただし、これは実験器向けの検証ビルドで、READMEにある条件とログ仕様はその時点の実測前提だ。",
-      "closingRemark": "Q1がモーターを止めたまま、逆に証拠を残すのがこのリポジトリの癖だな。ログが命令を代替するんじゃなくて、命令が起きなかった証拠を残す、という妙な仕事をしてる。",
+      "title": "MEKF動的検証ファームウェア",
+      "summary": "M5Stack ATOMS3向けに、6状態MEKFと動的ベータMadgwickを同期記録して姿勢推定を検証する実験用ファームウェア。Q1の次ピーク予測やQ_IDENTの固定Q出力手順も含むが、Q1はモーターを一切駆動しない。",
+      "detail": "こいつは、ローラー機構の姿勢推定と次のピーク予測を、実機ログと動画で突き合わせるための検証用ファームウェアだな。中では6状態MEKFがゼロクロス検出やピーク判定、Autonomous V7の角度依存判断を担当し、動的ベータMadgwickは比較用にオンライン記録するだけで制御には入らない。加速度・ジャイロ、生の積分値、加速度だけのatan2、MEKFの加速度信頼度までRWLOGへ保存し、GPIO38のLED同期パターンで動画と対応づけられる。Q1は手動の自由減衰から次の絶対ピークと必要Qを計算する影の記録器で、要求値はメタデータに留まり、モーター指令は常にゼロだ。別枠のQ_IDENTには固定Qの実出力手順もあるが、電池電圧や速度、パルス幅の条件外では代替や繰り上げをせず無効記録にする構成で、資料上はアップロードを行わずビルドとオフライン評価までを扱っている。",
+      "closingRemark": "MEKFが操舵を握り、Madgwickは横で帳面をつける。Q1に至っては、必要な電流まで計算して一度も流さない念の入れようだ。",
       "features": [
-        "6状態MEKFと動的ベータMadgwickの並列比較",
-        "Q1シャドー計算のモーター停止記録",
-        "RWLOGからCSVへの変換と動画比較対応",
-        "Q_IDENT固定Q出力の検証",
-        "LED同期アンカー付きの時系列ログ"
+        "MEKFを制御用、動的ベータMadgwickを比較用として同期記録",
+        "RWLOG v46で姿勢・センサー・加速度信頼度を保存",
+        "GPIO38のLEDアンカーで動画との時系列比較に対応",
+        "Q1が次ピークと必要Qを予測するがモーターは完全停止",
+        "Q_IDENTで電池・速度・パルス幅条件を守った固定Q実出力を検証"
       ],
       "technologies": [
         "C++",
+        "Python",
         "PlatformIO",
+        "Arduino",
         "ESP32",
-        "M5Stack AtomS3",
-        "MEKF",
-        "dynamic-beta Madgwick",
-        "RWLOG",
-        "Python"
+        "M5Stack ATOMS3",
+        "M5Unified",
+        "Adafruit AHRS"
       ],
       "categories": [
-        "ファームウェア",
-        "制御検証",
-        "実験ログ",
-        "ツール"
+        "組み込み",
+        "姿勢推定",
+        "モーション制御",
+        "実験"
       ],
       "status": "実験",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1366981980,
-      "sourcePushedAt": "2026-09-13T04:56:38Z",
+      "sourcePushedAt": "2026-09-13T09:42:42Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1366981980,
         "name": "atoms3r-mekf-dynamic-validation",
-        "pushedAt": "2026-09-13T04:56:38Z",
+        "pushedAt": "2026-09-13T09:42:42Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -3849,8 +3849,8 @@
         "fork": false,
         "language": "C++"
       },
-      "sourceFingerprint": "c61b646dda5ce4dc9e5bc02f03fac3a966e299961e662ec3ef10de6200cc1ed9",
-      "generatedAt": "2026-09-13T04:57:31.925Z"
+      "sourceFingerprint": "9fc1ad9b30172a8e7d978fed5343089f180b22b0753815af32a7db3177b4f52c",
+      "generatedAt": "2026-09-13T12:02:26.971Z"
     }
   },
   "repositoryCount": 78
