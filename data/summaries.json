@@ -1,45 +1,45 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-13T20:56:18.068Z",
+  "generatedAt": "2026-09-14T05:07:59.262Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ酒場",
-      "summary": "temesotejamが所有する公開GitHubリポジトリを、酒場風の画面で検索・閲覧する個人向けポータル。GitHub APIの情報とCopilotによる日本語要約を組み合わせ、技術分野や構成を一覧から追える。",
-      "detail": "こいつは、公開GitHubリポジトリを無機質な一覧ではなく、酒場の依頼記録のように探せる個人ポータルだな。中ではGitHub APIからtemesotejam所有の公開リポジトリを取得し、名前やDescription、Topics、言語、Copilot要約を横断検索できるようにしてる。カードを選べば概要や特徴、技術名を確認でき、Copilot未解析の新規リポジトリにはREADMEから暫定説明を補う仕組みもある。6時間ごとのGitHub Actionsが更新済みのものだけを最大8件ずつ解析し、GitHub Pagesで静的に公開できる構成だ。ただし、Private Repositoryの閲覧やリポジトリへの書き込み操作までは扱わない。",
-      "closingRemark": "READMEの一行から暫定説明まで拾うあたり、酒場の帳簿もずいぶん自動化されたものだな。",
+      "title": "Project Tavern 公開リポジトリ酒場",
+      "summary": "temesotejamが所有する公開GitHubリポジトリを、酒場風の画面で検索・分類・閲覧する個人ポータル。GitHub APIとCopilot生成の日本語要約を使い、READMEを根拠にした暫定説明や公開ページへの導線もまとめている。",
+      "detail": "こいつは、無機質なGitHub一覧を酒場の依頼帳のように眺めるための静的ポータルだな。中ではGitHub APIからtemesotejamの公開リポジトリを取得し、名前や説明、Topics、言語、Copilot要約を横断検索して、技術領域ごとに分類してる。カードを選べばREADMEや構成を根拠にした日本語の概要、特徴、技術名を確認でき、Copilot未解析のものにはブラウザ側でREADMEの短い暫定説明を補う仕組みもある。6時間ごとのGitHub Actionsが更新済みのリポジトリだけを見直し、data/summaries.jsonへ結果を蓄積する構成だ。GitHub Pagesで公開できる一方、対象は公開リポジトリに限られ、削除や変更、Issue作成といった書き込み操作までは行わない。",
+      "closingRemark": "6時間ごとに記録は更新されるが、酒場そのものは静的なまま――動くのは一覧のほうだけだな。",
       "features": [
-        "GitHub APIによる公開リポジトリの自動取得",
+        "GitHub APIから公開リポジトリを自動取得",
         "名前・説明・Topics・言語・要約の横断検索",
-        "技術領域ごとの簡易分類とカード表示",
-        "Copilot要約とREADME由来の暫定説明",
-        "GitHub Pagesで動く静的ポータル"
+        "技術領域ごとの簡易分類とカード式の詳細表示",
+        "Copilot要約とREADME由来の暫定説明を使い分け",
+        "GitHub Pagesで静的サイトとして公開可能"
       ],
       "technologies": [
         "JavaScript",
         "HTML",
         "CSS",
         "GitHub API",
-        "GitHub Copilot CLI",
         "GitHub Actions",
+        "GitHub Copilot CLI",
         "GitHub Pages",
         "MutationObserver"
       ],
       "categories": [
         "Web・ツール",
-        "GitHub連携",
         "静的サイト",
-        "自動要約"
+        "GitHub連携",
+        "AI要約"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-09-13T16:27:11Z",
+      "sourcePushedAt": "2026-09-13T20:56:19Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-09-13T16:27:11Z",
+        "pushedAt": "2026-09-13T20:56:19Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -49,8 +49,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "5bdeb1824ee2b8729b0dda8f730bde63b004bffe597c2e6bc8049e02b78a399f",
-      "generatedAt": "2026-09-13T20:56:18.068Z"
+      "sourceFingerprint": "d4c80d7c5bae75e80d37e8d828e6174bba73de5af4437ba70779c9fdf336d048",
+      "generatedAt": "2026-09-14T05:07:59.262Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -202,16 +202,16 @@
       "generatedAt": "2026-09-13T12:02:46.119Z"
     },
     "youtube-video-fetcher": {
-      "title": "YouTube動画解析用Fetcher",
-      "summary": "YouTube動画や指定区間を取得し、GitHub ActionsのArtifact経由でChatGPTなどの後段解析へ渡すためのFetcherだ。Windowsのself-hosted runner上でyt-dlpやFFmpegを準備し、動画本体と解析依頼をまとめて扱える。",
-      "detail": "こいつは、YouTubeの動画をAI解析側まで確実に運ぶためのFetcherでな。中ではrequest.jsonやworkflow_dispatchを入口にして、Windows x64のself-hosted runner上でyt-dlp、Deno、FFmpegを用意し、全編または指定区間を取得している。動画本体にmetadata、取得ログ、manifest、ユーザーの質問を添え、保持期間1日のGitHub Actions Artifactとして渡すから、後段では字幕だけでなくフレームを直接見て映像理解や時系列比較ができるってわけだ。字幕取得は補助経路、faster-whisperによる音声認識は実験経路で、主役はあくまで動画取得とArtifact連携にある。ただしpublicリポジトリに接続したself-hosted runnerを使う構成なので、第三者コードや非公開URLを扱う運用には明確な制約が残るな。",
-      "closingRemark": "字幕を主役にせず、MP4を丸ごと後段へ渡すあたりがこのFetcherの割り切りだな。",
+      "title": "YouTube映像取得・解析連携基盤",
+      "summary": "YouTube動画や指定区間をWindowsのself-hosted runnerで取得し、GitHub Actions Artifactとして後段のChatGPTやAIエージェントへ渡すFetcherだ。字幕に頼らず映像本体を扱い、メタデータや解析目的も一緒に保存できる。",
+      "detail": "こいつは、YouTubeの動画をAIによる映像解析へ運ぶためのFetcherでな。URLと解析目的をrequest.jsonに入れるか、GitHub画面からWorkflowを手動実行すると、Windowsのself-hosted runnerが動画全編または指定区間を取得する。中ではWorkflow実行時にyt-dlp、Deno、FFmpegを用意し、動画本体にメタデータ、取得ログ、manifest、解析依頼を添えてArtifactへまとめてるわけだ。後段ではChatGPTがMP4からフレームを抽出し、部品やUIの確認、時系列比較、画像計測などを行う。YouTube字幕は補助経路、faster-whisperによる音声認識は実験経路で、Fetcher自身はAI解析をしない。ただしpublic repositoryにself-hosted runnerを接続する構成なので、実行トリガーや非公開URLの扱いには注意が要るな。",
+      "closingRemark": "動画を運ぶ仕事に徹して、見る仕事はArtifactの向こうへ預けている。字幕はあくまで控えだな。",
       "features": [
-        "YouTube動画の全編または指定区間を取得",
-        "request.json更新とworkflow_dispatchの両方に対応",
-        "動画・metadata・ログ・解析依頼をArtifactに集約",
-        "ChatGPT側で取得MP4を直接フレーム解析",
-        "字幕取得と独立ASRを補助・実験経路として分離"
+        "全編または指定区間のYouTube動画取得",
+        "GitHub Actions Artifactを介した後段AI解析連携",
+        "request.jsonによる質問・解析目的の同梱",
+        "yt-dlp・Deno・FFmpegのWorkflow内準備",
+        "字幕取得と独立ASRの補助・実験経路"
       ],
       "technologies": [
         "Python",
@@ -221,24 +221,24 @@
         "Deno",
         "FFmpeg",
         "faster-whisper",
-        "Whisper"
+        "ChatGPT"
       ],
       "categories": [
         "動画処理",
+        "AI連携",
         "GitHub Actions",
-        "AI解析支援",
-        "自動化ツール"
+        "開発ツール"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1351374820,
-      "sourcePushedAt": "2026-09-13T10:19:15Z",
+      "sourcePushedAt": "2026-09-14T02:35:49Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1351374820,
         "name": "youtube-video-fetcher",
-        "pushedAt": "2026-09-13T10:19:15Z",
+        "pushedAt": "2026-09-14T02:35:49Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -248,8 +248,8 @@
         "fork": false,
         "language": "Python"
       },
-      "sourceFingerprint": "8cd15c8c66443b25670206c355e8ae0fcb22b87e0ebcef3f682d1d9ad2bf9102",
-      "generatedAt": "2026-09-13T12:02:14.778Z"
+      "sourceFingerprint": "12c64efcb000b4b64d8fef0a92909917fb05c008f656151559c6462ff7387eab",
+      "generatedAt": "2026-09-14T05:07:43.496Z"
     },
     "marker-angle-recorder": {
       "title": "機体角度・RWLOG記録ツール",
@@ -3804,42 +3804,42 @@
     },
     "atoms3r-mekf-dynamic-validation": {
       "title": "MEKF動的検証ファームウェア",
-      "summary": "M5Stack ATOMS3向けに、6状態MEKFと動的ベータMadgwickを同期記録して姿勢推定を検証する実験用ファームウェア。Q1の次ピーク予測やQ_IDENTの固定Q出力手順も含むが、Q1はモーターを一切駆動しない。",
-      "detail": "こいつは、ローラー機構の姿勢推定と次のピーク予測を、実機ログと動画で突き合わせるための検証用ファームウェアだな。中では6状態MEKFがゼロクロス検出やピーク判定、Autonomous V7の角度依存判断を担当し、動的ベータMadgwickは比較用にオンライン記録するだけで制御には入らない。加速度・ジャイロ、生の積分値、加速度だけのatan2、MEKFの加速度信頼度までRWLOGへ保存し、GPIO38のLED同期パターンで動画と対応づけられる。Q1は手動の自由減衰から次の絶対ピークと必要Qを計算する影の記録器で、要求値はメタデータに留まり、モーター指令は常にゼロだ。別枠のQ_IDENTには固定Qの実出力手順もあるが、電池電圧や速度、パルス幅の条件外では代替や繰り上げをせず無効記録にする構成で、資料上はアップロードを行わずビルドとオフライン評価までを扱っている。",
-      "closingRemark": "MEKFが操舵を握り、Madgwickは横で帳面をつける。Q1に至っては、必要な電流まで計算して一度も流さない念の入れようだ。",
+      "summary": "M5Stack ATOMS3上で姿勢推定とロータ制御系を検証する実験用ファームウェア。6状態MEKFを制御側に採用し、動的β Madgwickや生IMU値を比較記録するほか、モーター停止のQ1影推定とQ_IDENT実機出力も扱う。",
+      "detail": "こいつは、M5Stack ATOMS3で姿勢推定とリアクションホイール系の判断を検証するための実験用ファームウェアだ。中では6状態MEKFがゼロクロス検出やピーク検出、角度依存の制御判断を受け持ち、dynamic-beta Madgwickはモーターを動かさず比較用にオンライン記録してる。Q1では次のピークと必要なQを計算するが、常にモーター停止で影の要求として残す構成だな。一方、Q_IDENTには固定Qを実際に出力する電池電圧・電流・パルス幅の検証手順があり、RWLOG v46やCSV変換ツールで動画同期と時系列を後から調べられる。PlatformIOでビルドする資料はあるものの、アップロード自体はこのプロジェクトの手順に含まれていない。",
+      "closingRemark": "MEKFが舵を取り、Madgwickは記録係。Q1に至っては最後までモーターを触らない。",
       "features": [
-        "MEKFを制御用、動的ベータMadgwickを比較用として同期記録",
-        "RWLOG v46で姿勢・センサー・加速度信頼度を保存",
-        "GPIO38のLEDアンカーで動画との時系列比較に対応",
-        "Q1が次ピークと必要Qを予測するがモーターは完全停止",
-        "Q_IDENTで電池・速度・パルス幅条件を守った固定Q実出力を検証"
+        "6状態MEKFを制御・検出側の採用推定器として使用",
+        "dynamic-beta Madgwickや生IMU値を比較用に同時記録",
+        "Q1の次ピーク予測と逆要求をモーター停止で検証",
+        "Q_IDENTで固定Qの実機出力条件と安全境界を検証",
+        "RWLOGとLED同期アンカーによる動画・ログ比較"
       ],
       "technologies": [
         "C++",
         "Python",
         "PlatformIO",
-        "Arduino",
         "ESP32",
         "M5Stack ATOMS3",
+        "Arduino",
         "M5Unified",
         "Adafruit AHRS"
       ],
       "categories": [
         "組み込み",
         "姿勢推定",
-        "モーション制御",
-        "実験"
+        "制御検証",
+        "データロギング"
       ],
       "status": "実験",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1366981980,
-      "sourcePushedAt": "2026-09-13T09:42:42Z",
+      "sourcePushedAt": "2026-09-14T03:48:30Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1366981980,
         "name": "atoms3r-mekf-dynamic-validation",
-        "pushedAt": "2026-09-13T09:42:42Z",
+        "pushedAt": "2026-09-14T03:48:30Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -3849,8 +3849,8 @@
         "fork": false,
         "language": "C++"
       },
-      "sourceFingerprint": "9fc1ad9b30172a8e7d978fed5343089f180b22b0753815af32a7db3177b4f52c",
-      "generatedAt": "2026-09-13T12:02:26.971Z"
+      "sourceFingerprint": "377f1fa35b650adaf190ab2b6624ea6e187bd42c0d169326ee6decd1c2c656be",
+      "generatedAt": "2026-09-14T05:07:29.877Z"
     }
   },
   "repositoryCount": 78
