@@ -1,18 +1,18 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-14T21:54:28.564Z",
+  "generatedAt": "2026-09-15T05:02:44.150Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ酒場ポータル",
-      "summary": "公開GitHubリポジトリを、酒場の依頼記録のように検索・分類・閲覧できる個人向けポータル。GitHub APIで一覧を取得し、Copilotの日本語要約やREADME由来の暫定説明もカード上で確認できます。",
-      "detail": "こいつは、公開GitHubリポジトリを無機質な一覧ではなく、酒場の記録をめくる感覚で探すための静的ポータルだ。中ではGitHub APIからtemesotejam所有の公開リポジトリを取得し、名前やDescription、Topics、使用言語、Copilot要約を横断検索できるようにしてる。技術領域ごとの簡易分類、カードからの詳細表示、解析済みならREADMEや構成を根拠にした日本語説明、未解析ならREADMEからの短い暫定説明まで用意されている。説明データはGitHub Actionsで6時間ごとに更新され、変更のないリポジトリは再解析せず、初回や更新時も一度に最大8件ずつ処理する仕組みだな。ただし対象は公開リポジトリに限られ、GitHubへの書き込み操作は行わない。",
-      "closingRemark": "6時間ごとに最大8件ずつ記録を増やす酒場だ。急がないあたりが、むしろ堅実ってところだな",
+      "title": "公開リポジトリ酒場案内",
+      "summary": "temesotejamが所有する公開GitHubリポジトリを、酒場風の画面から検索・分類・閲覧する個人向けポータル。GitHub APIとCopilot解析による日本語説明を組み合わせ、更新されたリポジトリだけを定期的に再解析する。",
+      "detail": "こいつは、無機質なGitHubの一覧を酒場の依頼記録らしく眺めるための、個人向け静的ポータルだな。中ではGitHub APIからtemesotejamの公開リポジトリを取得し、名前やDescription、Topics、使用言語、Copilot要約を横断検索できるようにしてる。技術領域ごとの簡易分類やカード上の概要表示に加えて、READMEから未解析リポジトリの暫定説明も補う構成だ。GitHub Actionsが6時間ごとに更新状況を確認し、READMEや構成、設定ファイルを根拠にdata/summaries.jsonを更新する。GitHub Pagesで公開できるが、Private Repositoryは扱わず、削除や変更、Issue作成といった書き込み操作まではしない。",
+      "closingRemark": "GitHubの棚卸しを酒場仕立てにしたが、帳簿の更新は6時間ごとに来るらしい。",
       "features": [
-        "GitHub APIから公開リポジトリを自動取得",
-        "名前・説明・Topics・言語・要約を横断検索",
-        "技術領域ごとの簡易カテゴリ分類",
-        "Copilot生成の日本語説明とREADME暫定説明に対応",
-        "GitHub Pagesで静的サイトとして公開可能"
+        "公開リポジトリをGitHub APIから自動取得",
+        "名前・説明・Topics・言語・Copilot要約を横断検索",
+        "技術領域ごとの簡易分類とカード詳細表示",
+        "READMEを使った未解析リポジトリの暫定説明",
+        "GitHub Actionsによる差分ベースの定期解析"
       ],
       "technologies": [
         "JavaScript",
@@ -21,24 +21,25 @@
         "GitHub API",
         "GitHub Actions",
         "GitHub Copilot CLI",
-        "GitHub Pages"
+        "GitHub Pages",
+        "MutationObserver"
       ],
       "categories": [
         "Web・ツール",
         "静的サイト",
         "GitHub連携",
-        "AI要約"
+        "個人ポータル"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-09-14T13:23:57Z",
+      "sourcePushedAt": "2026-09-14T21:54:29Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-09-14T13:23:57Z",
+        "pushedAt": "2026-09-14T21:54:29Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -48,8 +49,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "54c3ba666fe04c220380a71663f25f53df225195c80e86781b037f61eba585bf",
-      "generatedAt": "2026-09-14T21:54:28.563Z"
+      "sourceFingerprint": "42f1908dae3b6ac07f516ebe515abf7cc7afab80c7386d30c7464f224f9e019a",
+      "generatedAt": "2026-09-15T05:02:44.150Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -3802,16 +3803,16 @@
       "generatedAt": "2026-09-12T10:57:07.057Z"
     },
     "atoms3r-mekf-dynamic-validation": {
-      "title": "MEKF動的検証ファームウェア",
-      "summary": "ESP32搭載機でMEKFを主制御用の姿勢推定器として検証し、動的β Madgwickや生IMU値と比較する実験用ファームウェア。Q1のモータ停止シャドウ記録と固定Q出力試験、RWLOG解析まで含む。",
-      "detail": "こいつは、ESP32搭載の小型機で6状態MEKFを実際の制御判断に使い、その妥当性を動的β Madgwickなどと突き合わせる検証用ファームウェアだな。中ではMEKFがゼロクロスやピーク検出、Autonomous V7の角度依存判断を受け持ち、Madgwick、ジャイロ積分、加速度だけのatan2、生のIMU値は比較と後処理のために記録してる。Q1では次の絶対ピークと必要なQを推定するが、モータ指令は常にゼロに固定され、別系統のQ_IDENTでは固定Qの実出力を電圧・電流・パルス幅の条件付きで試せる。GPIO38のLED同期、v46の追記型RWLOG、Python変換ツールで動画とログを照合できる構成だ。ただしQ1の要求値は実現結果ではなく、実際にピークへ効いたかは別の固定Q試験とオフライン評価で確かめる必要がある。",
-      "closingRemark": "Q1は精密に要求値を出しても、最後までモータを一度も動かさない。検証としては、ずいぶん律儀な見張り役だな。",
+      "title": "MEKF姿勢推定検証ファームウェア",
+      "summary": "M5Stack AtomS3上で、6状態MEKFを使った姿勢推定と動的ベータMadgwickの比較検証を行う実験用ファームウェア。モータを動かさないQ1影追跡ログと、固定Qの実出力を測るQ_IDENTを備え、RWLOGを動画同期やオフライン解析に利用できます。",
+      "detail": "こいつは、回転運動の姿勢推定とモータ出力の検証を、同じログ上で切り分けるための実験用ファームウェアだな。中では6状態MEKFがゼロクロス検出やピーク判定、Autonomous V7の角度依存判断を担当し、動的ベータMadgwickはモータを指令せず比較用にオンライン記録してる。生の加速度・ジャイロ、ジャイロ積分、加速度だけのatan2も残り、GPIO38のLED同期パターンとv46形式のRWLOGを使って動画やCSVと突き合わせられる。さらにQ1では次のピークに必要なQを計算するだけのモータOFF検証を行い、Q_IDENTでは固定Qを実際に出力して電圧・電流・パルス幅・失敗理由を記録する構成だ。ただし、Q1の要求値が実現したことを示すモードではなく、アップロード手順も資料上は実行せず、ビルドとオフライン評価までを確認する立場に留まっている。",
+      "closingRemark": "Q1は精密に要求値を計算するが、モータは最後まで沈黙したままだ。実測の役目はQ_IDENTに預けてある。",
       "features": [
-        "MEKFを制御用の採用姿勢推定器として運用",
-        "動的β Madgwickや複数の基準値を同時記録",
-        "Q1シャドウ計算をモータ停止で検証",
-        "固定Qの実出力試験に安全条件と無効理由を記録",
-        "LED同期付きv46 RWLOGをPythonでCSV化"
+        "6状態MEKFを制御・検出側の採用姿勢推定器として使用",
+        "動的ベータMadgwickを比較用に並行記録し、モータ指令から分離",
+        "Q1で次ピークの要求Qを計算するモータOFF影ログを収録",
+        "Q_IDENTで固定Qの実出力と電圧・パルス幅・失敗理由を記録",
+        "LED同期付きRWLOGをCSV化し、動画やオフライン解析と照合可能"
       ],
       "technologies": [
         "C++",
@@ -3820,25 +3821,25 @@
         "M5Stack ATOMS3",
         "Arduino",
         "PlatformIO",
-        "MEKF",
-        "Madgwick"
+        "M5Unified",
+        "Adafruit AHRS"
       ],
       "categories": [
         "組み込み",
         "姿勢推定",
-        "制御検証",
-        "データロギング"
+        "センサー検証",
+        "モータ制御"
       ],
       "status": "実験",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1366981980,
-      "sourcePushedAt": "2026-09-14T10:32:24Z",
+      "sourcePushedAt": "2026-09-15T03:31:23Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1366981980,
         "name": "atoms3r-mekf-dynamic-validation",
-        "pushedAt": "2026-09-14T10:32:24Z",
+        "pushedAt": "2026-09-15T03:31:23Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -3848,47 +3849,47 @@
         "fork": false,
         "language": "C++"
       },
-      "sourceFingerprint": "34297db48db2af6320322d2befbfcccdeb73226c2d0a0aa78885f3824c3d7aa9",
-      "generatedAt": "2026-09-14T13:01:04.782Z"
+      "sourceFingerprint": "c81d276f30a22be9bbd2b89cc149e9883ed144166ad4162512c7ea382d7bb476",
+      "generatedAt": "2026-09-15T05:02:23.190Z"
     },
     "atoms3r-visual-pose-tracker": {
-      "title": "AtomS3R向け映像姿勢トラッカー",
-      "summary": "M5Stack AtomS3R-CAMで2枚のArUcoマーカーを追跡し、カメラ姿勢とIMU情報を制御系へ渡す小規模な組み込みビジョン基盤だ。予測ROIで処理を軽くしつつ、200 HzのBMI270タスクを映像処理から守る構成になっている。",
-      "detail": "こいつは、M5Stack AtomS3R-CAM上で2枚の既知マーカーを追跡し、機構の位置や姿勢を制御に利用するための小さなビジョンパイプラインだな。GC0308のQVGAグレースケール画像からOpenCV ArUcoのDICT_4X4_50、ID 0と1だけを見て、初回は設定した垂直レーン、取得後は速度予測つきの局所ROIを検索する。見失えばROIを広げ、最終的にレーン取得へ戻るから、毎フレーム全画面探索は避けている。4隅の抽出、ホモグラフィーによるセル判定、軽量な平面姿勢推定を行い、921600 baudのJSONテレメトリで映像処理時間やマーカー状態、近似XYZ・オイラー角を確認できる。BMI270の200 Hzタスクと制御フックは映像処理から独立しているが、3D姿勢は未校正のカメラ内部パラメータに基づく近似値で、現時点では計測級の精度までは保証されない。",
-      "closingRemark": "映像が迷子になっても制御ループは走り続ける。まずはマーカーを隠して、設計どおり戻ってくるかを見るところからだな。",
+      "title": "AtomS3R視覚ポーズ追跡",
+      "summary": "M5Stack AtomS3R-CAMで、2枚のArUcoマーカーを追跡し、水平移動の位置や姿勢情報を取得する小規模な組み込み画像処理パイプライン。視覚処理と200HzのIMU・制御タスクを分離し、ブラウザ書き込みや印刷用マーカーも用意されている。",
+      "detail": "こいつは、M5Stack AtomS3R-CAM上で2枚のArUcoマーカーを追跡し、主に水平方向へ動く機構の位置計測に使う小さなビジョンパイプラインだ。中ではGC0308のQVGAグレースケール画像からID 0とID 1を別々に探し、最初は上下の取得帯、その後は速度予測に基づく局所ROIを使って処理量を抑えてる。4隅の抽出、ホモグラフィによるセル判定、軽量な角点補正を経て、中心位置や制約付きXYZ、姿勢の診断値を921600 baudのJSONで出力する仕組みだな。BMI270の200Hzタスクと制御フックは視覚処理から独立していて、遅いフレームが制御ループを止めない構成になっている。現状の主な観測値は画像上のcenter_x_pxで、カメラ内部パラメータ未校正のため、3D姿勢や距離はまだ校正級ではない。",
+      "closingRemark": "視覚が迷ってもIMUの200Hzは止まらない。止まるのは、まだ校正されていない3D推定の自信だけだな。",
       "features": [
-        "ID 0とID 1の2枚を独立追跡",
-        "予測ROIとレーン復帰による軽量探索",
-        "200 Hz IMU・制御タスクとの分離",
-        "処理時間や姿勢をJSONでテレメトリ出力",
-        "GitHub Pagesからブラウザ書き込み可能"
+        "上下2帯と予測ROIを使う2マーカー追跡",
+        "見失い時の拡大リカバリーと帯探索への復帰",
+        "200Hz IMU・制御タスクと視覚処理の分離",
+        "中心位置を重視した水平機構向けの制約付き推定",
+        "GitHub PagesとESP Web Toolsによるブラウザ書き込み"
       ],
       "technologies": [
-        "C++17",
+        "M5Stack AtomS3R-CAM",
+        "GC0308",
+        "ESP32-S3",
+        "OpenCV ArUco",
+        "BMI270",
         "PlatformIO",
         "Arduino",
-        "ESP32-S3",
-        "M5Unified",
-        "GC0308",
-        "BMI270",
-        "OpenCV ArUco"
+        "ESP Web Tools"
       ],
       "categories": [
         "組み込み",
         "コンピュータビジョン",
         "ロボティクス",
-        "試作"
+        "実験"
       ],
-      "status": "試作",
+      "status": "実験",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1369512147,
-      "sourcePushedAt": "2026-09-14T10:03:38Z",
+      "sourcePushedAt": "2026-09-15T03:14:47Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1369512147,
         "name": "atoms3r-visual-pose-tracker",
-        "pushedAt": "2026-09-14T10:03:38Z",
+        "pushedAt": "2026-09-15T03:14:47Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -3898,8 +3899,8 @@
         "fork": false,
         "language": "C++"
       },
-      "sourceFingerprint": "1895fe600c30854f16a72916b341e34cd15012bb43a13995bce5e1eba0299d08",
-      "generatedAt": "2026-09-14T13:01:19.898Z"
+      "sourceFingerprint": "d60b8df1771bbd2d2e0d0fa3fd2bdb08d103515be1897ceb0f1f3d18b61bcf89",
+      "generatedAt": "2026-09-15T05:02:33.830Z"
     }
   },
   "repositoryCount": 79
