@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-14T13:23:54.178Z",
-  "repositoryCount": 79,
-  "pageCount": 40,
+  "generatedAt": "2026-09-16T12:10:28.005Z",
+  "repositoryCount": 80,
+  "pageCount": 41,
   "pages": {
     "2026_8_5_3": {
       "url": "https://temesotejam.github.io/2026_8_5_3/",
@@ -71,6 +71,11 @@
     },
     "inertial-perception-sim": {
       "url": "https://temesotejam.github.io/inertial-perception-sim/",
+      "source": "github-pages",
+      "status": 200
+    },
+    "M5stackCORES3I2CdemoUWB": {
+      "url": "https://temesotejam.github.io/M5stackCORES3I2CdemoUWB/",
       "source": "github-pages",
       "status": 200
     },
