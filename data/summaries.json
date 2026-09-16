@@ -1,44 +1,45 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-16T04:57:22.532Z",
+  "generatedAt": "2026-09-16T11:47:56.755Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ酒場ポータル",
-      "summary": "公開GitHubリポジトリを、古い情報端末風の画面から検索・分類・閲覧する個人向けポータルだ。GitHub APIとCopilotの要約を使い、READMEや構成を根拠にした説明や公開ページへの導線もまとめている。",
-      "detail": "こいつは、temesotejamが所有する公開GitHubリポジトリを、無機質な一覧ではなく酒場の依頼記録のように探すための静的ポータルだな。中ではGitHub APIからリポジトリを取得し、名前やDescription、Topics、言語、Copilot要約を横断検索しながら、学習・制御・センサ・画像・Webといった簡易カテゴリで絞り込める。カードを選べば概要や特徴、技術名を確認でき、解析済みの説明はREADME・設定・ファイル構成などを根拠に表示する。未解析のリポジトリにはREADMEから短い説明を補い、公開ページの一覧も別データから安全に差し込む構成だ。6時間ごとのGitHub Actionsが更新済みのリポジトリだけを最大8件ずつCopilot CLIで解析するが、Private Repositoryの閲覧やGitHub上への書き込みまでは扱わない。",
-      "closingRemark": "酒場の棚卸しは自動化されているが、棚に並ぶのはあくまで公開情報だけってわけだ。",
+      "title": "公開リポジトリ酒場",
+      "summary": "temesotejamが所有する公開GitHubリポジトリを、酒場風の画面で検索・分類・閲覧する個人ポータルだ。GitHub APIとCopilotの要約を使い、READMEや構成を根拠にした日本語の概要もカードから確認できる。",
+      "detail": "こいつは、公開GitHubリポジトリを無機質な一覧ではなく、酒場の依頼記録のように探すための個人ポータルだな。中ではGitHub APIからtemesotejamの公開リポジトリを取得し、名前やDescription、Topics、使用言語、Copilot要約を横断検索できるようにしてる。技術領域ごとの簡易分類や並べ替えに加えて、カードを選べばREADMEや構成を根拠にした日本語の概要、確認できる技術や特徴を表示する。Copilot未解析の新規リポジトリにはREADMEから暫定説明を出し、GitHub Actionsが6時間ごとに更新分だけを再解析する仕組みだ。GitHub Pagesで静的に公開できる一方、Private Repositoryや書き込み操作は扱わず、公開APIの範囲を越えた情報までは分からない。",
+      "closingRemark": "公開APIだけで酒場を開けるが、店内に置けるのは公開された記録だけだな",
       "features": [
-        "公開リポジトリの検索・並べ替え・カテゴリ絞り込み",
-        "CopilotによるREADMEや構成根拠の日本語説明",
-        "未解析リポジトリへのREADME暫定プレビュー",
-        "確認済みの公開ページへのリンク表示",
-        "GitHub Pagesで動かせる静的ポータル"
+        "公開リポジトリを酒場風UIで検索・選択・閲覧",
+        "名前・説明・Topics・言語・要約を横断検索",
+        "技術領域ごとの簡易分類と並べ替え",
+        "READMEや構成を根拠にした日本語のCopilot要約",
+        "未解析リポジトリにはREADME由来の暫定説明を表示"
       ],
       "technologies": [
         "JavaScript",
         "HTML",
         "CSS",
         "GitHub API",
+        "GitHub Pages",
         "GitHub Actions",
         "GitHub Copilot CLI",
-        "GitHub Pages"
+        "MutationObserver"
       ],
       "categories": [
         "Web・ツール",
-        "静的サイト",
-        "GitHub連携",
-        "情報整理"
+        "GitHub",
+        "自動化",
+        "静的サイト"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-09-15T21:29:15Z",
+      "sourcePushedAt": "2026-09-16T04:57:23Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-09-15T21:29:15Z",
+        "pushedAt": "2026-09-16T04:57:23Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -48,8 +49,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "420100a958407fd0dd3270c050dfb2d38c57026823dac5a8cefc61179782504e",
-      "generatedAt": "2026-09-16T04:57:22.532Z"
+      "sourceFingerprint": "495afe63b0445c7fa79a12321d7ce3c2587fcc0577f7095bf8287c2a8d05cffe",
+      "generatedAt": "2026-09-16T11:47:56.755Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -3900,7 +3901,57 @@
       },
       "sourceFingerprint": "edac24a72926454b5238934c1aa70d67656d21c7158dee57e5331cecc5e3a28f",
       "generatedAt": "2026-09-15T11:53:24.737Z"
+    },
+    "M5stackCORES3I2CdemoUWB": {
+      "title": "CoreS3・Type2DK I2C試験器",
+      "summary": "M5Stack CoreS3からType2DKへI2C接続し、16バイト応答の通信状態とフレーム整合性を確認する試験アプリだ。100/400kHz試験、連番欠落、診断ログ、ブラウザ書き込みまで揃っている。",
+      "detail": "こいつは、M5Stack CoreS3と別配布のType2DK_I2C_Test_v1を接続し、Type2DKが返す16バイトの応答を検査するための試験アプリだな。中では7ビットアドレス0x42を直接読み取り、2DKIヘッダや固定値、カウンタ、XORを確認しながら、OK・通信失敗・形式不一致・連番欠落を集計してる。100/400kHzの手動試験に加え、各速度500回を自動確認するAUTO、ACKだけを見るPROBE、ESP-IDFのI2C診断ログも用意され、USBへ毎秒状態を出力できる。ブラウザのESP Web ToolsからCoreS3へ書き込めるのも扱いやすいところだ。ただし測距や距離表示、波形・電気特性、UWB同時動作まで保証するものではなく、実機での解決状況も診断版では未確認だ。",
+      "closingRemark": "AUTOがPASSしても、波形までは合格にしてくれない。そこは実機とオシロスコープの仕事だな。",
+      "features": [
+        "Type2DKの16バイトI2C応答とXORを検証",
+        "100/400kHzの手動試験と各500回のAUTO試験",
+        "OK・IO・BAD・GAP・処理時間を画面とUSBで確認",
+        "ACK確認用PROBEとESP-IDFエラー診断に対応",
+        "ブラウザのESP Web ToolsからCoreS3へ書き込み可能"
+      ],
+      "technologies": [
+        "C++",
+        "PlatformIO",
+        "ESP32-S3",
+        "M5Stack CoreS3",
+        "M5Unified",
+        "M5GFX",
+        "I2C",
+        "ESP-IDF"
+      ],
+      "categories": [
+        "組み込み",
+        "ハードウェア検証",
+        "I2C",
+        "開発ツール"
+      ],
+      "status": "ツール",
+      "confidence": "high",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
+      "sourceRepositoryId": 1372866913,
+      "sourcePushedAt": "2026-09-16T11:27:28Z",
+      "sourceDefaultBranch": "main",
+      "sourceMetadata": {
+        "repositoryId": 1372866913,
+        "name": "M5stackCORES3I2CdemoUWB",
+        "pushedAt": "2026-09-16T11:27:28Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "C++"
+      },
+      "sourceFingerprint": "63ab4e9db5fe63b51a620bf57e17dff20e8e7058124b293b8adc614c9ffac1e6",
+      "generatedAt": "2026-09-16T11:47:43.474Z"
     }
   },
-  "repositoryCount": 79
+  "repositoryCount": 80
 }
