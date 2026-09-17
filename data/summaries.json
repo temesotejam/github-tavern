@@ -1,45 +1,45 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-17T05:01:22.208Z",
+  "generatedAt": "2026-09-17T11:51:53.203Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ酒場",
-      "summary": "公開GitHubリポジトリを、古い情報端末風の画面から検索・分類・閲覧する個人ポータル。GitHub APIの情報とCopilot解析による日本語説明をカード形式でまとめ、未解析のリポジトリにはREADMEから暫定表示を用意している。",
-      "detail": "こいつは、temesotejamが所有する公開GitHubリポジトリを、酒場の依頼書のように探して眺めるための静的ポータルだな。中ではGitHub APIから一覧を取得し、名前やDescription、Topics、使用言語、Copilot要約を横断検索しながら、学習・制御・センサ・画像・Webなどの簡易分類を付けている。カードを選べば、READMEや構成、設定ファイルを根拠にした日本語の概要、特徴、技術名を確認でき、Copilot未解析ならREADMEの短いプレビューで補う仕組みだ。6時間ごとのGitHub Actionsが更新済みリポジトリだけを最大8件ずつ解析し、data/summaries.jsonへ蓄積する。GitHub Pagesで静的に公開できる一方、対象は公開リポジトリに限られ、削除や変更、Issue作成のような書き込み操作までは行わない。",
-      "closingRemark": "6時間ごとに棚を見回るが、変更のないリポジトリは起こさない。酒場というより、かなり几帳面な監視台だな。",
+      "title": "GitHub公開リポジトリ酒場",
+      "summary": "temesotejam が所有する公開GitHubリポジトリを、酒場の依頼記録のような画面で検索・閲覧する個人ポータル。GitHub APIの情報とCopilot生成の日本語要約を組み合わせ、分類や公開ページへの導線もまとめて確認できる。",
+      "detail": "こいつは、temesotejam が所有する公開GitHubリポジトリを、無機質な一覧ではなく酒場の記録として探せる静的ポータルだな。中ではGitHub APIからリポジトリ情報を読み出し、名前やDescription、Topics、使用言語、Copilot要約を横断検索しながら、技術領域ごとの簡易分類を付けている。カードを選べば概要や特徴、技術名、根拠になった説明を確認でき、解析前の新規リポジトリにはREADMEから短い暫定説明を補う仕組みもある。6時間ごとのGitHub Actionsが更新分だけをCopilot CLIで解析し、静的なGitHub Pagesとして公開する構成だ。ただし対象は公開リポジトリに限られ、書き込み操作やPrivate Repositoryの閲覧までは扱わない。",
+      "closingRemark": "GitHub APIとREADMEの拾い読みで酒場を回している。記録係は6時間ごとに更新されるらしい。",
       "features": [
-        "GitHub APIから公開リポジトリを自動取得",
-        "名前・説明・Topics・言語・要約を横断検索",
-        "技術領域ごとの簡易分類とカード表示",
-        "Copilot解析済みの日本語概要を表示",
-        "未解析リポジトリはREADMEから暫定説明"
+        "GitHub APIから所有する公開リポジトリを自動取得",
+        "名前・説明・Topics・言語・Copilot要約を横断検索",
+        "技術領域ごとの簡易カテゴリ分類",
+        "Copilot解析済みの日本語概要・特徴・技術情報を表示",
+        "未解析リポジトリにはREADME由来の暫定説明を表示"
       ],
       "technologies": [
         "JavaScript",
         "HTML",
         "CSS",
         "GitHub API",
-        "GitHub Copilot CLI",
         "GitHub Actions",
+        "GitHub Copilot CLI",
         "GitHub Pages",
-        "Fetch API"
+        "MutationObserver"
       ],
       "categories": [
         "Web・ツール",
-        "GitHub",
-        "自動化",
-        "静的サイト"
+        "静的サイト",
+        "GitHub連携",
+        "リポジトリ検索"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-09-16T21:24:54Z",
+      "sourcePushedAt": "2026-09-17T05:30:56Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-09-16T21:24:54Z",
+        "pushedAt": "2026-09-17T05:30:56Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -49,8 +49,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "7f57fe487b32228e321b3325a6721fa8ad2101bfd642d5e6696b13d3f1b1f33e",
-      "generatedAt": "2026-09-17T05:01:22.208Z"
+      "sourceFingerprint": "38c58b5a522e7ed601e50a4be8228b44b78c0e5e62d0fc6d73bee577d05b265d",
+      "generatedAt": "2026-09-17T11:51:53.203Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -3953,35 +3953,43 @@
       "generatedAt": "2026-09-17T05:00:54.242Z"
     },
     "type2dk-uwb-uart": {
-      "title": "type2dk UWB-UART資料",
-      "summary": "type2dk-uwb-uartという名前の公開リポジトリだが、説明、README、ファイル一覧、使用技術、コミット情報はいずれも確認できない。UWBとUARTに関係する可能性は名前から読めるものの、目的や実装内容までは判断できない。",
-      "detail": "こいつは、リポジトリ名にtype2dk、UWB、UARTという語を含んでいるところまでは確認できる。ただ、説明文もREADMEもなく、ルートのファイル一覧や使用言語、コミット情報も資料に出ていないから、何を作るためのものか、中でどんな通信や処理をしているのかは追えない。UWB測距やUART接続を扱う実装らしいと見る余地はあるが、そこから先は推測の域を出ないな。",
-      "closingRemark": "名前には通信の気配があるが、肝心の中身はまだ無線の向こう側だな。",
+      "title": "Type2DK UWB測距UART連携",
+      "summary": "Murata Type2DKで測った19・21・22間の距離と通信診断情報を、M5Stack CoreS3へUARTで渡して表示・記録する実機向けプロジェクト。書き込み用GUIや固定BIN、検証ログまで揃っている。",
+      "detail": "こいつは、Murata Type2DKのUWB測距結果をM5Stack CoreS3へ送り、距離と通信状態を確認するための実機向けプロジェクトだな。19番のType2DKが21・22との2距離、nLos生値、測距結果コード、失敗累計などを96バイト形式でまとめ、38400 bpsの送信専用UARTで毎秒およそ5回CoreS3へ渡してる。CoreS3側は受信値を画面に表示し、RANGE_STATやRANGE_DATAとしてログに出すほか、任意のBINを書き込めるWindows用GUIも用意されている。PlatformIOによるCoreS3の再ビルド、Type2DK用BINのSHA256検証、配線手順、旧版の実機ログまで追える構成だ。ただし、2DK測距版の再ビルドに必要なSR040 SDKは含まれず、SR040でのnLos判定性能や21–22間の距離転送までは確認対象になっていない。",
+      "closingRemark": "距離だけでなく失敗回数までUARTに流すあたり、測れない時間もきちんと記録する作りだな。",
       "features": [
-        "リポジトリ名にtype2dk・UWB・UARTを含む",
-        "公開説明がない",
-        "READMEを確認できない",
-        "ファイル構成とコミット情報が不明"
+        "19番Type2DKから21・22までの距離を取得",
+        "nLosや失敗累計などの通信診断情報を記録",
+        "CoreS3へ38400 bpsのUARTで毎秒約5回送信",
+        "任意のBINを書き込めるWindows用GUIを収録",
+        "固定BIN、SHA256、実機ログ、配線手順を保存"
       ],
       "technologies": [
-        "UWB",
-        "UART"
+        "C",
+        "C++",
+        "Python",
+        "PlatformIO",
+        "Arduino",
+        "M5Unified",
+        "M5GFX",
+        "GNU Arm"
       ],
       "categories": [
-        "通信",
         "組み込み",
-        "不明"
+        "UWB測距",
+        "UART通信",
+        "ハードウェア検証"
       ],
-      "status": "不明",
-      "confidence": "low",
+      "status": "試作",
+      "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1373952427,
-      "sourcePushedAt": "2026-09-17T04:57:23Z",
+      "sourcePushedAt": "2026-09-17T07:19:29Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1373952427,
         "name": "type2dk-uwb-uart",
-        "pushedAt": "2026-09-17T04:57:23Z",
+        "pushedAt": "2026-09-17T07:19:29Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -3989,10 +3997,10 @@
         "archived": false,
         "disabled": false,
         "fork": false,
-        "language": ""
+        "language": "C"
       },
-      "sourceFingerprint": "762474f676b31c8d6b366bc1fa79c2855a168ab18739473181b917a1a6643063",
-      "generatedAt": "2026-09-17T05:00:42.649Z"
+      "sourceFingerprint": "cc4a397517e5b231781e06f97c56b05bf42bce7177ec8e4628b1554775ab62e9",
+      "generatedAt": "2026-09-17T11:51:41.755Z"
     },
     "type2dk-uwb-ranging": {
       "title": "Type2DK UWB三点測距ファームウェア",
@@ -4043,7 +4051,57 @@
       },
       "sourceFingerprint": "c8893896b719ccc2ea2e86d90791cbdf02d71d717ba5c7ef83ad0c5dd8c22bc3",
       "generatedAt": "2026-09-17T05:01:05.933Z"
+    },
+    "type2dk-uwb-uart2": {
+      "title": "Type2DKデュアルUWB測距基盤",
+      "summary": "2台のType2DKから独立した測距結果を2本のUARTでCoreS3へ集め、共通のマイクロ秒時計で記録・表示する試作基盤だ。CRCや欠落検出、USBログ、ブラウザ書き込みにも対応するが、現在の配布BINは配線確認用の合成データ送信に限られる。",
+      "detail": "こいつは、機体上のType2DK-A/Bが固定Type2BP群とそれぞれ測距し、その結果をM5Stack CoreS3で同時に受けるための試作基盤だな。2DK側は測距通知を非同期キューへ送り、結果や送信開始時刻、UCI連番、失敗・nLos rawを48バイトのフレームにしてPIO_13から出す。CoreS3側では2本のハードウェアUARTを受信割り込みで処理し、共通のµs時計、CRC、欠落・再起動・接続先違いの検出、画面表示とUSBログまでまとめている。ブラウザからCoreS3を書き込めるのも扱いやすいところだが、最初の配布BINはUART TEST用で実距離は出ない。固定2BPの設定は未確認で、複数局の同時測距や遅延、位置姿勢推定まではまだ検証範囲に入っていない。",
+      "closingRemark": "UARTの配線は細かく見ているが、肝心の実距離はまだ画面に現れない。まずは信号が迷子にならないところからだな。",
+      "features": [
+        "2台のType2DKを独立したUART受信系で処理",
+        "受信バイトを共通のマイクロ秒時計で記録",
+        "CRC、欠落、再起動、接続先違いを検出",
+        "画面表示とUSBログに対応",
+        "ブラウザからCoreS3へファームウェアを書き込み"
+      ],
+      "technologies": [
+        "C",
+        "C++",
+        "Python",
+        "PlatformIO",
+        "ESP32-S3",
+        "M5Unified",
+        "M5GFX",
+        "NXP UWBIOT SDK"
+      ],
+      "categories": [
+        "組み込み",
+        "UWB",
+        "測距",
+        "ファームウェア"
+      ],
+      "status": "試作",
+      "confidence": "high",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
+      "sourceRepositoryId": 1374250075,
+      "sourcePushedAt": "2026-09-17T11:17:59Z",
+      "sourceDefaultBranch": "main",
+      "sourceMetadata": {
+        "repositoryId": 1374250075,
+        "name": "type2dk-uwb-uart2",
+        "pushedAt": "2026-09-17T11:17:59Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "C"
+      },
+      "sourceFingerprint": "53f3603132f569baa8049d9f26869acb94ff73b578e10962d90a94861e23a0ac",
+      "generatedAt": "2026-09-17T11:51:29.957Z"
     }
   },
-  "repositoryCount": 82
+  "repositoryCount": 83
 }
