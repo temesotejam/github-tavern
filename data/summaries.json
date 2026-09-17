@@ -1,18 +1,18 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-17T11:51:53.203Z",
+  "generatedAt": "2026-09-17T17:08:45.270Z",
   "repositories": {
     "github-tavern": {
-      "title": "GitHub公開リポジトリ酒場",
-      "summary": "temesotejam が所有する公開GitHubリポジトリを、酒場の依頼記録のような画面で検索・閲覧する個人ポータル。GitHub APIの情報とCopilot生成の日本語要約を組み合わせ、分類や公開ページへの導線もまとめて確認できる。",
-      "detail": "こいつは、temesotejam が所有する公開GitHubリポジトリを、無機質な一覧ではなく酒場の記録として探せる静的ポータルだな。中ではGitHub APIからリポジトリ情報を読み出し、名前やDescription、Topics、使用言語、Copilot要約を横断検索しながら、技術領域ごとの簡易分類を付けている。カードを選べば概要や特徴、技術名、根拠になった説明を確認でき、解析前の新規リポジトリにはREADMEから短い暫定説明を補う仕組みもある。6時間ごとのGitHub Actionsが更新分だけをCopilot CLIで解析し、静的なGitHub Pagesとして公開する構成だ。ただし対象は公開リポジトリに限られ、書き込み操作やPrivate Repositoryの閲覧までは扱わない。",
-      "closingRemark": "GitHub APIとREADMEの拾い読みで酒場を回している。記録係は6時間ごとに更新されるらしい。",
+      "title": "公開リポジトリ酒場",
+      "summary": "temesotejamの公開GitHubリポジトリを、酒場風の画面で検索・分類・閲覧する個人ポータル。GitHub APIとCopilot解析の日本語要約を使い、README由来の暫定説明や公開ページも確認できる。",
+      "detail": "こいつは、temesotejamが所有する公開GitHubリポジトリを、無機質な一覧ではなく酒場風の画面から探すための個人ポータルだな。中ではGitHub APIからリポジトリを取得し、名前やDescription、Topics、使用言語、Copilot要約を横断検索できるようにしてる。技術領域ごとの簡易分類に加えて、カードを選べばREADMEや構成を根拠にした日本語の概要、特徴、技術名、締めの一言まで表示する仕組みだ。Copilot解析前の新規リポジトリにはREADMEから暫定説明を補い、確認済みの公開ページがあればリンクも出せる。GitHub Pagesで静的に動き、6時間ごとのActionsが更新分だけ要約を再生成するが、Private Repositoryの取得やGitHubへの書き込み操作までは扱わない。",
+      "closingRemark": "酒場の棚卸しは6時間ごとに進むが、棚から消えた依頼を追いかける仕組みではないようだ。",
       "features": [
-        "GitHub APIから所有する公開リポジトリを自動取得",
+        "GitHub APIから公開リポジトリを自動取得",
         "名前・説明・Topics・言語・Copilot要約を横断検索",
-        "技術領域ごとの簡易カテゴリ分類",
-        "Copilot解析済みの日本語概要・特徴・技術情報を表示",
-        "未解析リポジトリにはREADME由来の暫定説明を表示"
+        "技術領域ごとの簡易分類とカード形式の詳細表示",
+        "READMEを使った未解析リポジトリの暫定説明",
+        "確認済みの公開ページへのリンク表示"
       ],
       "technologies": [
         "JavaScript",
@@ -28,18 +28,18 @@
         "Web・ツール",
         "静的サイト",
         "GitHub連携",
-        "リポジトリ検索"
+        "AI要約"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-09-17T05:30:56Z",
+      "sourcePushedAt": "2026-09-17T12:11:16Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-09-17T05:30:56Z",
+        "pushedAt": "2026-09-17T12:11:16Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -49,8 +49,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "38c58b5a522e7ed601e50a4be8228b44b78c0e5e62d0fc6d73bee577d05b265d",
-      "generatedAt": "2026-09-17T11:51:53.203Z"
+      "sourceFingerprint": "553981fcc70b16fc123476965a1f849340f1b013b7669ea4d01e16be77f07097",
+      "generatedAt": "2026-09-17T17:08:34.140Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -4053,43 +4053,43 @@
       "generatedAt": "2026-09-17T05:01:05.933Z"
     },
     "type2dk-uwb-uart2": {
-      "title": "Type2DKデュアルUWB測距基盤",
-      "summary": "2台のType2DKから独立した測距結果を2本のUARTでCoreS3へ集め、共通のマイクロ秒時計で記録・表示する試作基盤だ。CRCや欠落検出、USBログ、ブラウザ書き込みにも対応するが、現在の配布BINは配線確認用の合成データ送信に限られる。",
-      "detail": "こいつは、機体上のType2DK-A/Bが固定Type2BP群とそれぞれ測距し、その結果をM5Stack CoreS3で同時に受けるための試作基盤だな。2DK側は測距通知を非同期キューへ送り、結果や送信開始時刻、UCI連番、失敗・nLos rawを48バイトのフレームにしてPIO_13から出す。CoreS3側では2本のハードウェアUARTを受信割り込みで処理し、共通のµs時計、CRC、欠落・再起動・接続先違いの検出、画面表示とUSBログまでまとめている。ブラウザからCoreS3を書き込めるのも扱いやすいところだが、最初の配布BINはUART TEST用で実距離は出ない。固定2BPの設定は未確認で、複数局の同時測距や遅延、位置姿勢推定まではまだ検証範囲に入っていない。",
-      "closingRemark": "UARTの配線は細かく見ているが、肝心の実距離はまだ画面に現れない。まずは信号が迷子にならないところからだな。",
+      "title": "Type2DK双系統UWB測距記録",
+      "summary": "Type2DK-A/Bから別々のUARTで測距結果を受け、M5Stack CoreS3が共通のマイクロ秒時計で記録・表示・USB出力する試作基盤。CRCや欠落検出、ブラウザ書き込み、ログ検査まで揃え、まずは2系統同時受信の検証に重点を置いている。",
+      "detail": "こいつは、2台のType2DKがそれぞれ固定2BP群と測距し、その結果をM5Stack CoreS3へ独立して渡すための試作基盤だな。2DK側は測距通知を48バイトの非同期キューに積み、取得時刻や送信開始時刻、UCI連番、失敗・nLos情報を含めてPIO_13から送信する。CoreS3ではPORT Aの2本のハードウェアUARTを受信割り込みで処理し、共通のµs時計、CRC、欠落・再起動・接続先違いの検出、画面表示とUSBログ出力まで受け持っている。ブラウザからCoreS3を書き込め、Pythonの検査スクリプトでTera Termのバイナリログも確認できる。ただし現在の試験BINは合成UART TESTを送るだけで実距離は出ず、固定2BPの設定や同時測距、無線の時間配分、遅延、位置姿勢推定まではまだ検証されていない。",
+      "closingRemark": "UARTの二本立ては確認済みだが、距離の本番はまだ設定ファイルの向こう側にいる。",
       "features": [
-        "2台のType2DKを独立したUART受信系で処理",
-        "受信バイトを共通のマイクロ秒時計で記録",
-        "CRC、欠落、再起動、接続先違いを検出",
-        "画面表示とUSBログに対応",
-        "ブラウザからCoreS3へファームウェアを書き込み"
+        "A/B独立UARTの同時受信と共通µs時刻記録",
+        "CRC・欠落・再起動・接続先違いの検出",
+        "画面表示とUSBログによる受信状態の確認",
+        "ブラウザからCoreS3へファームウェアを書き込み",
+        "Pythonスクリプトによるバイナリログ検査"
       ],
       "technologies": [
         "C",
-        "C++",
         "Python",
+        "C++",
         "PlatformIO",
         "ESP32-S3",
-        "M5Unified",
-        "M5GFX",
-        "NXP UWBIOT SDK"
+        "M5Stack CoreS3",
+        "Type2DK",
+        "UWB"
       ],
       "categories": [
         "組み込み",
-        "UWB",
-        "測距",
+        "UWB測距",
+        "UART通信",
         "ファームウェア"
       ],
       "status": "試作",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1374250075,
-      "sourcePushedAt": "2026-09-17T11:17:59Z",
+      "sourcePushedAt": "2026-09-17T12:01:44Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1374250075,
         "name": "type2dk-uwb-uart2",
-        "pushedAt": "2026-09-17T11:17:59Z",
+        "pushedAt": "2026-09-17T12:01:44Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -4099,8 +4099,8 @@
         "fork": false,
         "language": "C"
       },
-      "sourceFingerprint": "53f3603132f569baa8049d9f26869acb94ff73b578e10962d90a94861e23a0ac",
-      "generatedAt": "2026-09-17T11:51:29.957Z"
+      "sourceFingerprint": "bc1d0fe81cdfe1c1d10c838f7ab1fbca1653507ff6d5b4720f0b4436be0021aa",
+      "generatedAt": "2026-09-17T17:08:45.270Z"
     }
   },
   "repositoryCount": 83
