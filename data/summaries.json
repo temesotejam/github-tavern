@@ -1,18 +1,18 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-16T21:24:53.391Z",
+  "generatedAt": "2026-09-17T05:01:22.208Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ酒場ポータル",
-      "summary": "公開GitHubリポジトリを、古い情報端末風の画面で検索・分類・閲覧する個人向けポータル。GitHub APIから一覧を取得し、Copilotの日本語要約やREADME由来の暫定説明、動作確認済みの公開ページをカードごとに案内する。",
-      "detail": "こいつは、temesotejamが所有する公開GitHubリポジトリを、無機質な一覧ではなく酒場の依頼記録のように探すための静的ポータルだな。中ではGitHub APIからリポジトリ情報を取得し、名前やDescription、Topics、使用言語、Copilot要約を横断検索しながら、学習・制御・センサ・画像・Webといった簡易分類を付けてる。カードを選べばREADMEや構成、設定ファイルを根拠にした日本語の概要、特徴、技術名を確認でき、要約がまだないものにはブラウザ側でREADMEの短い説明を補う仕組みもある。6時間ごとのGitHub Actionsが変更済みのリポジトリだけを最大8件ずつ解析し、GitHub Pagesで公開できる構成だ。ただし対象は公開リポジトリに限られ、削除や変更、Issue作成といった書き込み操作までは行わない。",
-      "closingRemark": "要約を更新する酒場の裏方までActionsに任せて、店員は静的ページに収まっている。",
+      "title": "公開リポジトリ酒場",
+      "summary": "公開GitHubリポジトリを、古い情報端末風の画面から検索・分類・閲覧する個人ポータル。GitHub APIの情報とCopilot解析による日本語説明をカード形式でまとめ、未解析のリポジトリにはREADMEから暫定表示を用意している。",
+      "detail": "こいつは、temesotejamが所有する公開GitHubリポジトリを、酒場の依頼書のように探して眺めるための静的ポータルだな。中ではGitHub APIから一覧を取得し、名前やDescription、Topics、使用言語、Copilot要約を横断検索しながら、学習・制御・センサ・画像・Webなどの簡易分類を付けている。カードを選べば、READMEや構成、設定ファイルを根拠にした日本語の概要、特徴、技術名を確認でき、Copilot未解析ならREADMEの短いプレビューで補う仕組みだ。6時間ごとのGitHub Actionsが更新済みリポジトリだけを最大8件ずつ解析し、data/summaries.jsonへ蓄積する。GitHub Pagesで静的に公開できる一方、対象は公開リポジトリに限られ、削除や変更、Issue作成のような書き込み操作までは行わない。",
+      "closingRemark": "6時間ごとに棚を見回るが、変更のないリポジトリは起こさない。酒場というより、かなり几帳面な監視台だな。",
       "features": [
-        "GitHub APIから公開リポジトリ一覧を自動取得",
-        "名前・説明・Topics・言語・Copilot要約を横断検索",
-        "技術領域ごとの簡易分類とカード形式の詳細表示",
-        "Copilot未解析時はREADMEから暫定説明を生成",
-        "公開ページの動作確認済みリンクをリポジトリ別に表示"
+        "GitHub APIから公開リポジトリを自動取得",
+        "名前・説明・Topics・言語・要約を横断検索",
+        "技術領域ごとの簡易分類とカード表示",
+        "Copilot解析済みの日本語概要を表示",
+        "未解析リポジトリはREADMEから暫定説明"
       ],
       "technologies": [
         "JavaScript",
@@ -22,24 +22,24 @@
         "GitHub Copilot CLI",
         "GitHub Actions",
         "GitHub Pages",
-        "MutationObserver"
+        "Fetch API"
       ],
       "categories": [
         "Web・ツール",
-        "静的サイト",
-        "GitHub連携",
-        "AI要約"
+        "GitHub",
+        "自動化",
+        "静的サイト"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-09-16T17:07:46Z",
+      "sourcePushedAt": "2026-09-16T21:24:54Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-09-16T17:07:46Z",
+        "pushedAt": "2026-09-16T21:24:54Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -49,8 +49,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "d1018eb9c8fa835a71ad16f9f45ed8e3ce8e6260101a35f0badb038ad39c3d60",
-      "generatedAt": "2026-09-16T21:24:53.391Z"
+      "sourceFingerprint": "7f57fe487b32228e321b3325a6721fa8ad2101bfd642d5e6696b13d3f1b1f33e",
+      "generatedAt": "2026-09-17T05:01:22.208Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -3903,43 +3903,43 @@
       "generatedAt": "2026-09-15T11:53:24.737Z"
     },
     "M5stackCORES3I2CdemoUWB": {
-      "title": "CoreS3・Type2DK I2C診断アプリ",
-      "summary": "M5Stack CoreS3とType2DK診断版をI2Cで接続し、16バイト応答の通信状態を検証する試験アプリ。100/400kHzの手動試験や自動判定、USBログ、書き込み用GitHub Pagesまで揃っている。",
-      "detail": "こいつは、M5Stack CoreS3からType2DK診断版v4へI2Cアクセスし、16バイトの固定フレームを正しく読めるか確かめる試験アプリだ。中ではCoreS3側がSCLを作り、7ビットアドレス0x42へレジスタ書き込みなしでREADを行い、応答形式・XOR・連番の欠落を分けて集計してる。100/400kHzの切り替え、PROBE、PAUSE/RUN、500回ずつのAUTO判定に加え、115200bpsのUSBシリアルへSTATやDIAGを出せるため、配線やACK、タイムアウトの切り分けにも使える。PlatformIOでビルドでき、ESP Web Tools用の統合BINとSHA256を生成してGitHub PagesからCoreS3へ書き込める構成だな。ただし測距や距離表示はせず、AUTO PASSも波形・電気特性・UWB同時動作までは保証しないし、診断版の実機での解決も未確認だ。",
-      "closingRemark": "16バイトは読めても、波形まではUSBログに収まらない。そこは測定器の出番ってわけだ。",
+      "title": "CoreS3・Type2DK通信診断",
+      "summary": "M5Stack CoreS3とNXP QN9090搭載Type2DKのI2C通信を検証する試験用ファームウェア。16バイト応答の形式や連番、ACK、配線・電圧条件を記録し、UART診断やUWB測距データ送信にも対応する。",
+      "detail": "こいつは、M5Stack CoreS3とType2DK診断版v5の間でI2C通信が成立しているかを切り分けるための試験アプリだな。中ではCoreS3がマスターとして7ビットアドレス0x42から16バイトを読み、2DKI形式、XOR、連番の不連続、通信失敗を分けて集計してる。100 kHzと400 kHzの切替、PROBE、AUTO試験、USBシリアルのSTAT出力があり、SDA/SCLの入力観測や外付けプルアップを含む配線・電源条件も検証できる。さらにUART経由の診断版と、2DKから得た距離や加速度を送るUWB測距版も用意されている。ただし、100 kHzの受信確認はあるものの、400 kHzや測距併用版の実機試験、波形や電気特性までの保証はまだ資料上確認できない。",
+      "closingRemark": "16バイトを読めても、配線と電圧の機嫌までは読めない。そこを記録するための一式だな。",
       "features": [
-        "I2Cの16バイト応答を形式・XOR・連番まで検証",
-        "100kHzと400kHzの手動試験および500回のAUTO判定",
-        "ACK、タイムアウト、初期化失敗などをDIAGで分類",
-        "USBシリアルへ毎秒STAT・PROBE・DIAGを出力",
-        "ESP Web Tools用ファームウェアと公開ページを生成"
+        "I2CのOK・IO・BAD・GAPを分離集計",
+        "100 kHz／400 kHz切替とAUTO試験",
+        "0x42へのPROBEとUSBシリアル診断",
+        "外付けプルアップやTP18電圧を前提にした配線検証",
+        "UART診断版とUWB測距データ送信版を収録"
       ],
       "technologies": [
-        "C++",
-        "PlatformIO",
-        "ESP32-S3",
         "M5Stack CoreS3",
-        "Type2DK",
+        "ESP32-S3",
+        "NXP QN9090",
         "I2C",
+        "UART",
+        "PlatformIO",
         "M5Unified",
-        "ESP-IDF I2C API"
+        "ESP-IDF I2Cドライバ"
       ],
       "categories": [
         "組み込み",
-        "I2C診断",
-        "ハードウェア試験",
-        "ファームウェア"
+        "通信診断",
+        "I2C",
+        "UWB"
       ],
-      "status": "実験",
+      "status": "試作",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1372866913,
-      "sourcePushedAt": "2026-09-16T15:49:56Z",
+      "sourcePushedAt": "2026-09-17T04:36:12Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1372866913,
         "name": "M5stackCORES3I2CdemoUWB",
-        "pushedAt": "2026-09-16T15:49:56Z",
+        "pushedAt": "2026-09-17T04:36:12Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -3947,11 +3947,103 @@
         "archived": false,
         "disabled": false,
         "fork": false,
-        "language": "C++"
+        "language": "C"
       },
-      "sourceFingerprint": "2eec81b732ab81821debc2506c3793e7abd1523040035dcbab94aafb26d18558",
-      "generatedAt": "2026-09-16T17:07:30.785Z"
+      "sourceFingerprint": "378083767ba553ac9014f37427f9db84fe56643564cd12e46696cf15ec5b7e5f",
+      "generatedAt": "2026-09-17T05:00:54.242Z"
+    },
+    "type2dk-uwb-uart": {
+      "title": "type2dk UWB-UART資料",
+      "summary": "type2dk-uwb-uartという名前の公開リポジトリだが、説明、README、ファイル一覧、使用技術、コミット情報はいずれも確認できない。UWBとUARTに関係する可能性は名前から読めるものの、目的や実装内容までは判断できない。",
+      "detail": "こいつは、リポジトリ名にtype2dk、UWB、UARTという語を含んでいるところまでは確認できる。ただ、説明文もREADMEもなく、ルートのファイル一覧や使用言語、コミット情報も資料に出ていないから、何を作るためのものか、中でどんな通信や処理をしているのかは追えない。UWB測距やUART接続を扱う実装らしいと見る余地はあるが、そこから先は推測の域を出ないな。",
+      "closingRemark": "名前には通信の気配があるが、肝心の中身はまだ無線の向こう側だな。",
+      "features": [
+        "リポジトリ名にtype2dk・UWB・UARTを含む",
+        "公開説明がない",
+        "READMEを確認できない",
+        "ファイル構成とコミット情報が不明"
+      ],
+      "technologies": [
+        "UWB",
+        "UART"
+      ],
+      "categories": [
+        "通信",
+        "組み込み",
+        "不明"
+      ],
+      "status": "不明",
+      "confidence": "low",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
+      "sourceRepositoryId": 1373952427,
+      "sourcePushedAt": "2026-09-17T04:57:23Z",
+      "sourceDefaultBranch": "main",
+      "sourceMetadata": {
+        "repositoryId": 1373952427,
+        "name": "type2dk-uwb-uart",
+        "pushedAt": "2026-09-17T04:57:23Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": ""
+      },
+      "sourceFingerprint": "762474f676b31c8d6b366bc1fa79c2855a168ab18739473181b917a1a6643063",
+      "generatedAt": "2026-09-17T05:00:42.649Z"
+    },
+    "type2dk-uwb-ranging": {
+      "title": "Type2DK UWB三点測距ファームウェア",
+      "summary": "Murata Type2DK EVK 3台を使い、COM19を中心にCOM21・COM22までの距離をUWBで継続取得するファームウェアだ。切断からの復帰、無効値の管理、BIN検証とWindows向け書き込みまで、実機運用に必要な流れをまとめている。",
+      "detail": "こいつは、Murata Type2DK EVK Rev.4.1を3台使って、COM19からCOM21とCOM22までの距離を測るためのファームウェアだな。COM19が2セッションのResponderとして距離を出し、COM21とCOM22がそれぞれInitiatorになる固定構成で、各測距は200ms周期、表示はおよそ100ms周期で続く。片方の基板が切れてももう一方を測り続け、停滞したセッションの再起動や相手復帰後の再取得、3秒経過した古い値の無効化、UWB API異常時の基板再起動まで入っている。COM19は3,000,000bpsのCSVログを出し、DVやAGEを見れば距離の有効性も判断できるってわけだ。v1.0.0のBIN、SHA256検査付きのWindows書き込みスクリプト、GitHub Actionsとホスト上の模擬試験も揃うが、21–22間の測距や実機への自動書き込み、長期運転と精度保証までは含まれない。",
+      "closingRemark": "三台の役割分担は明快だが、COM番号と実機の取り違えだけは人間の仕事として残っている。",
+      "features": [
+        "COM19–21とCOM19–22を200ms周期で直接測距",
+        "片側切断中も他方の測距を継続し、復帰時に再取得",
+        "3秒超の古い距離を無効化し、DVとAGEで状態を通知",
+        "UWB API異常や停滞セッションから自動復旧",
+        "BIN検査、GitHub Actions、Windows書き込み手順を提供"
+      ],
+      "technologies": [
+        "C",
+        "Python",
+        "PowerShell",
+        "UWB",
+        "Murata Type2DK EVK",
+        "NXP DK6ProductionFlashProgrammer",
+        "RTOS",
+        "Arm GNU Toolchain 13.2.Rel1"
+      ],
+      "categories": [
+        "組み込み",
+        "無線測距",
+        "ファームウェア",
+        "実験"
+      ],
+      "status": "試作",
+      "confidence": "high",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
+      "sourceRepositoryId": 1373842176,
+      "sourcePushedAt": "2026-09-17T02:47:14Z",
+      "sourceDefaultBranch": "main",
+      "sourceMetadata": {
+        "repositoryId": 1373842176,
+        "name": "type2dk-uwb-ranging",
+        "pushedAt": "2026-09-17T02:47:14Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "C"
+      },
+      "sourceFingerprint": "c8893896b719ccc2ea2e86d90791cbdf02d71d717ba5c7ef83ad0c5dd8c22bc3",
+      "generatedAt": "2026-09-17T05:01:05.933Z"
     }
   },
-  "repositoryCount": 80
+  "repositoryCount": 82
 }
