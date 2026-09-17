@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-17T05:30:54.311Z",
-  "repositoryCount": 82,
-  "pageCount": 42,
+  "generatedAt": "2026-09-17T12:11:12.261Z",
+  "repositoryCount": 83,
+  "pageCount": 43,
   "pages": {
     "2026_8_5_3": {
       "url": "https://temesotejam.github.io/2026_8_5_3/",
@@ -176,6 +176,11 @@
     },
     "type2dk-uwb-uart": {
       "url": "https://temesotejam.github.io/type2dk-uwb-uart/",
+      "source": "github-pages",
+      "status": 200
+    },
+    "type2dk-uwb-uart2": {
+      "url": "https://temesotejam.github.io/type2dk-uwb-uart2/",
       "source": "github-pages",
       "status": 200
     },
