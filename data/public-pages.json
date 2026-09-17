@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-16T12:10:28.005Z",
-  "repositoryCount": 80,
-  "pageCount": 41,
+  "generatedAt": "2026-09-17T05:30:54.311Z",
+  "repositoryCount": 82,
+  "pageCount": 42,
   "pages": {
     "2026_8_5_3": {
       "url": "https://temesotejam.github.io/2026_8_5_3/",
@@ -171,6 +171,11 @@
     },
     "splitsend-web": {
       "url": "https://temesotejam.github.io/splitsend-web/",
+      "source": "github-pages",
+      "status": 200
+    },
+    "type2dk-uwb-uart": {
+      "url": "https://temesotejam.github.io/type2dk-uwb-uart/",
       "source": "github-pages",
       "status": 200
     },
