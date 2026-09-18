@@ -1,45 +1,45 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-18T04:53:52.072Z",
+  "generatedAt": "2026-09-18T11:27:34.107Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ案内酒場",
-      "summary": "公開GitHubリポジトリを、古い情報端末のような酒場UIで検索・選択・閲覧する個人向けポータル。GitHub APIの情報とREADME、Copilotによる日本語要約をまとめ、技術領域ごとの分類や公開ページへの導線も用意している。",
-      "detail": "こいつは、temesotejamが所有する公開GitHubリポジトリを、無機質な一覧ではなく酒場の依頼記録のように探すための静的ポータルだな。中ではGitHub APIからリポジトリ情報を取得し、名前やDescription、Topics、使用言語、Copilot要約を横断検索できるようにしてる。カードを選べば概要や特徴、技術名を確認でき、解析済みならREADMEや構成、設定ファイルを根拠にした日本語説明も出るし、未解析のものにはREADMEから短い暫定説明を補う仕組みだ。技術領域の簡易分類、動作確認済み公開ページへのリンク、GitHub Pagesでの静的公開にも対応している。6時間ごとのGitHub Actionsが更新済みのリポジトリだけを最大8件ずつ解析するが、対象は公開リポジトリに限られ、書き込み操作は行わない。",
-      "closingRemark": "READMEだけでなく設定や構成まで酒場の帳面に写すが、非公開の依頼までは受け付けない仕組みだな。",
+      "title": "公開リポジトリ酒場",
+      "summary": "temesotejamが所有する公開GitHubリポジトリを、古い情報端末風の画面で検索・分類・閲覧する個人ポータル。GitHub APIとCopilotの要約を使い、各リポジトリの概要や技術情報を一覧から確かめられる。",
+      "detail": "こいつは、temesotejamが所有する公開GitHubリポジトリを、無機質な一覧ではなく酒場の依頼記録のように探すための個人ポータルだな。中ではGitHub APIからリポジトリを取得し、名前やDescription、Topics、使用言語、Copilotの日本語要約を横断検索できるようにしてる。カードを選べば概要や分類、技術名に加えて、動作確認済みの公開ページがあればそこへ移れるし、Copilot未解析の新規リポジトリにはREADMEから暫定説明を補う仕組みもある。6時間ごとのGitHub Actionsが更新済みのものだけを見直し、要約をキャッシュする構成だ。GitHub Pagesで静的に公開できる一方、公開APIの読み取り専用で、非公開リポジトリや書き込み操作までは扱わない。",
+      "closingRemark": "6時間ごとに記録を更新するが、酒場そのものは静かな静的ページのままだな。",
       "features": [
-        "GitHub APIから公開リポジトリを自動取得",
-        "名前・説明・Topics・言語・Copilot要約を横断検索",
-        "技術領域ごとの簡易分類とカード式の詳細表示",
-        "READMEから未解析リポジトリの暫定説明を生成",
-        "GitHub Pagesや動作確認済み公開ページに対応"
+        "公開リポジトリの検索・並べ替え・カテゴリ分類",
+        "READMEや構成を根拠にした日本語Copilot要約",
+        "未解析リポジトリへのREADME暫定説明",
+        "確認済み公開ページへのリンク表示",
+        "GitHub Pagesでの静的ホスティング"
       ],
       "technologies": [
         "JavaScript",
-        "CSS",
         "HTML",
+        "CSS",
         "GitHub API",
         "GitHub Actions",
-        "GitHub Pages",
         "GitHub Copilot CLI",
+        "GitHub Pages",
         "MutationObserver"
       ],
       "categories": [
         "Web・ツール",
         "静的サイト",
         "GitHub連携",
-        "AI要約"
+        "個人ポータル"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-09-17T21:29:41Z",
+      "sourcePushedAt": "2026-09-18T04:53:53Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-09-17T21:29:41Z",
+        "pushedAt": "2026-09-18T04:53:53Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -49,8 +49,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "b868661851bf4ee0a71e0d63215d9a6dbffdcca6097cf9b16de54e142e46558e",
-      "generatedAt": "2026-09-18T04:53:52.072Z"
+      "sourceFingerprint": "7f1dfb1258def76a3938300bde85c471bc9af7b174a479a3cd34ba3731ff6154",
+      "generatedAt": "2026-09-18T11:27:34.107Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -3804,42 +3804,42 @@
     },
     "atoms3r-mekf-dynamic-validation": {
       "title": "MEKF動的検証ファームウェア",
-      "summary": "M5Stack ATOMS3向けに、6状態MEKFを制御判断へ組み込み、動的β Madgwickなど複数推定器を比較検証する実験用ファームウェア。モーター停止のQ1影検証と、固定Qの実出力識別試験、RWLOG解析まで扱う。",
-      "detail": "こいつは、M5Stack ATOMS3上で姿勢推定とローラー制御の検証を進めるための実験用ファームウェアだな。中では6状態MEKFがゼロクロスやピーク検出、角度依存の判断を受け持ち、動的β Madgwickはモーターを動かさず比較用に記録している。Q1では手動の自由減衰を観測し、次のピークと必要な電流積分量を予測するが、出力は完全にモーター停止のままだ。一方、Q_IDENTでは固定Qを実際にパルス出力して電池電圧、電流、幅、状態異常を含む実出力を識別できる。RWLOG v46/v43の記録をPythonでCSV化し、LED同期映像と照合する構成だが、これは完成品というより、厳しい範囲チェックと無出力条件を確認しながら段階的に試すための検証基盤ってところだ。",
-      "closingRemark": "Q1は計算しても一度もモーターを動かさない。まず黙って記録するあたりが、この実験の慎重なところだな。",
+      "summary": "M5Stack ATOMS3上でMEKFを制御用姿勢推定器として動かし、動的β Madgwickや生のIMUデータと同期比較する検証用ファームウェアだ。Q1のモータ停止ログと、固定Qを実際に出力するQ_IDENTの評価記録にも対応している。",
+      "detail": "こいつは、ロータリー系の姿勢推定とモータ出力を、動画とログで細かく突き合わせるための検証用ファームウェアだな。中では6状態MEKFがゼロクロス検出やピーク判定、Autonomous V7の判断を受け持ち、動的β Madgwickはモータを動かさず比較用に記録してる。Q1では次のピークに必要な電流を計算するだけのモータ停止モードを使い、別のQ_IDENTでは固定Qを実機出力して、電池電圧やパルス幅、状態異常までイベントとして残せる。GPIO38のLED同期とv46のRWLOG、Python変換ツールで動画との照合やオフライン評価もできるわけだ。ただしQ1の要求値が実現したとは主張できず、アップロードを実行するプロジェクトでもない。",
+      "closingRemark": "MEKFは操縦席に座るが、Madgwickは記録係のまま――Q1ではモータも最後まで沈黙してる。",
       "features": [
-        "6状態MEKFを制御・検出用の採用姿勢推定器として使用",
-        "動的β Madgwick、加速度・ジャイロ系の値を比較用に並行記録",
-        "Q1の次ピーク予測と必要Qをモーター停止で検証",
-        "Q_IDENTで固定Qの実パルス出力を電圧・電流条件付きで識別",
-        "RWLOGをCSV化しLED同期動画と時系列を照合"
+        "MEKFを制御・検出用、動的β Madgwickを比較記録用に分離",
+        "Q1で次ピークの必要電流を計算するモータ停止検証",
+        "Q_IDENTで固定Qの実出力と電池・パルス異常を記録",
+        "GPIO38のLEDアンカーで動画とRWLOGを同期",
+        "RWLOGをCSVへ変換しQ1イベントやQ_IDENTイベントを評価"
       ],
       "technologies": [
         "C++",
         "Python",
-        "PlatformIO",
-        "Arduino framework",
-        "ESP32",
         "M5Stack ATOMS3",
+        "ESP32",
+        "Arduino",
+        "PlatformIO",
         "M5Unified",
         "Adafruit AHRS"
       ],
       "categories": [
+        "実験",
         "組み込み",
         "姿勢推定",
-        "制御実験",
-        "データ解析"
+        "ファームウェア"
       ],
       "status": "実験",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1366981980,
-      "sourcePushedAt": "2026-09-15T09:02:27Z",
+      "sourcePushedAt": "2026-09-18T11:16:23Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1366981980,
         "name": "atoms3r-mekf-dynamic-validation",
-        "pushedAt": "2026-09-15T09:02:27Z",
+        "pushedAt": "2026-09-18T11:16:23Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -3849,8 +3849,8 @@
         "fork": false,
         "language": "C++"
       },
-      "sourceFingerprint": "73d7fdc22563b13af99db045250d833faa49d062598f9fae25017d38140af851",
-      "generatedAt": "2026-09-15T11:53:10.759Z"
+      "sourceFingerprint": "4c32be162f368a469265d21d36652ada3662042a5df1161a26ca3df23d9f9cd4",
+      "generatedAt": "2026-09-18T11:27:16.725Z"
     },
     "atoms3r-visual-pose-tracker": {
       "title": "AtomS3R視覚ポーズ追跡",
@@ -4053,43 +4053,43 @@
       "generatedAt": "2026-09-17T05:01:05.933Z"
     },
     "type2dk-uwb-uart2": {
-      "title": "Type2DK二系統UWB測距基盤",
-      "summary": "2台のType2DKが固定側のType2BP群とUWB測距し、結果を別々のUARTでCoreS3へ送る実験用ファームウェアです。共通µs時計でA/Bの距離とnLosを記録し、最大7台の固定側を一覧表示できます。",
-      "detail": "こいつは、機体上のType2DK-A/Bから固定されたType2BP群までの距離を、CoreS3でまとめて記録・表示するための実験用ファームウェアだ。中ではA/Bがそれぞれ独立した1対多のUWB測距セッションを動かし、PIO_13のソフトウェアUART二本から結果を送り、CoreS3が共通のµs時計で受け取っている。AはMAC 0x8888・Ch5、Bは0x9999・Ch9を使い、1111から7777まで最大7台ぶんの距離とnLosを7行×A/Bで確認できる。USBログの保持・再試行やブラウザ書き込みページも用意されているが、新しい無線構成と7台同時測距はまだ実機未確認で、SDKと各種パッチも別途必要になる。",
-      "closingRemark": "7台を並べて測れるが、肝心の7台同時運転はまだ現場の返事待ちってところだな。",
+      "title": "8局対応UWB測距システム",
+      "summary": "Type2DK-A/BとM5Stack CoreS3を組み合わせ、既存局1111〜6666を変更せずに、1111〜8888の8局との距離を取得する実験用ファームウェアです。2本のUARTでA/Bを同時受信し、ブラウザからCoreS3を書き込めます。",
+      "detail": "こいつは、既存のUWB固定局を入れ替えずに8局測距へ拡張するための実験版でな。移動側のType2DK-A/Bから出るUARTをCoreS3の2本の受信系で同時に読み取り、1111〜8888の距離を画面とUSBログへ出してる。7777にはType2BP、8888にはType2DKを追加し、A/Bにはログ識別ID0050/0051を付けているのが要点だ。無線設定はlegacy_8anchor.jsonを正本とし、既存局に合わせたcontroller、session、Ch9、50ms周期を使う一方、A/Bの同時RF動作はまだ実機未確認となっている。CoreS3はPlatformIOとブラウザ書き込みページで更新できるが、UWB基板のSDKやBINは別途用意する必要がある。",
+      "closingRemark": "既存6局には触れず、25msのずれで新しい2局を足す。無線の本番確認だけが、まだ現場待ちだな。",
       "features": [
-        "Type2DK-A/Bの独立したUWB測距",
-        "固定Type2BP最大7台への1対多セッション",
-        "2本のUART受信と共通µs時計による記録",
-        "CoreS3画面への距離・nLos表示",
-        "USBログの128行保持と再試行"
+        "既存1111〜6666の固定局ファームウェアを変更せず8局化",
+        "Type2DK-A/BのUARTをCoreS3の2系統で同時受信",
+        "1111〜8888の距離を8行表示しUSBログにも出力",
+        "A/Bをlegacy controllerとsession IDに合わせて運用",
+        "CoreS3のみブラウザからファームウェアを書き込み可能"
       ],
       "technologies": [
         "C",
-        "Python",
         "C++",
+        "Python",
         "PlatformIO",
-        "ESP32-S3",
+        "Arduino",
+        "ESP32",
         "M5Stack CoreS3",
-        "NXP UWBIOT_SR040 SDK",
-        "Type2BP SR150 SDK"
+        "UWB"
       ],
       "categories": [
+        "実験",
         "組み込み",
-        "UWB測距",
-        "ファームウェア",
-        "実験"
+        "無線測距",
+        "ファームウェア"
       ],
-      "status": "試作",
+      "status": "実験",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1374250075,
-      "sourcePushedAt": "2026-09-18T04:53:08Z",
+      "sourcePushedAt": "2026-09-18T07:35:14Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1374250075,
         "name": "type2dk-uwb-uart2",
-        "pushedAt": "2026-09-18T04:53:08Z",
+        "pushedAt": "2026-09-18T07:35:14Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -4099,8 +4099,8 @@
         "fork": false,
         "language": "C"
       },
-      "sourceFingerprint": "b989bafc6337abaa913e9ff9a8808a37f037491ec5e617493e8b4a54a518f656",
-      "generatedAt": "2026-09-18T04:53:43.193Z"
+      "sourceFingerprint": "5629326c67c070652839d0a748cdfc9976fefc73a407c6c11cc2b6681b1a1dd8",
+      "generatedAt": "2026-09-18T11:27:25.593Z"
     }
   },
   "repositoryCount": 83
