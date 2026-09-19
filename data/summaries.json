@@ -1,45 +1,45 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-19T04:45:14.803Z",
+  "generatedAt": "2026-09-19T11:11:06.369Z",
   "repositories": {
     "github-tavern": {
-      "title": "Project Tavern公開リポジトリ案内所",
-      "summary": "公開GitHubリポジトリを、酒場の依頼記録のような画面で検索・閲覧する個人向けポータル。GitHub APIの情報とCopilot生成の日本語要約を使い、分類やREADME由来の暫定説明も交えて各リポジトリを案内する。",
-      "detail": "こいつは、temesotejamが所有する公開GitHubリポジトリを、無機質な一覧ではなく古い情報端末風の画面で探すための静的ポータルだな。中ではGitHub APIからリポジトリ情報を取得し、名前やDescription、Topics、使用言語、それにCopilotがREADMEや構成ファイルを根拠に作った日本語要約を横断検索できるようにしてる。カードを選べば概要や特徴、技術、分類を確認でき、まだ解析されていない新規リポジトリにはREADMEから短い暫定説明を補う仕組みもある。要約の更新はGitHub Actionsが6時間ごとに行い、変更のないリポジトリは再解析しない。ただし対象は公開リポジトリに限られ、削除や変更、Issue作成といった書き込み操作まではしない構成だ。",
-      "closingRemark": "6時間ごとに記録は更新されるが、酒場の棚そのものを動かす権限は持たせていないらしい。",
+      "title": "公開リポジトリ酒場ポータル",
+      "summary": "temesotejamが所有する公開GitHubリポジトリを、酒場風の画面から検索・分類・閲覧できる個人ポータル。GitHub APIとCopilotの日本語要約を組み合わせ、各リポジトリの概要や技術要素を一覧から追える。",
+      "detail": "こいつは、公開GitHubリポジトリを無機質な一覧ではなく、酒場の依頼記録のように探すための静的ポータルだな。中ではGitHub APIからtemesotejam所有の公開リポジトリを取得し、名前やDescription、Topics、使用言語、Copilot要約を横断検索しながら、技術領域ごとに簡易分類してる。カードを選べば概要や特徴、技術名に加えて、確認済みの公開ページも開ける構成だ。Copilot解析済みの説明はdata/summaries.jsonから読み出し、未解析のものにはREADMEを取得して短い暫定説明を補う。6時間ごとのGitHub Actionsが更新済みのリポジトリだけを最大8件ずつ再解析するが、対象は公開情報に限られ、リポジトリの変更やIssue作成までは行わない。",
+      "closingRemark": "6時間ごとに記録を更新する酒場だが、注文を受けて書き換える権限までは持たない。",
       "features": [
         "GitHub APIから公開リポジトリを自動取得",
-        "名前・説明・Topics・言語・Copilot要約の横断検索",
-        "技術領域ごとの簡易分類とカード形式の詳細表示",
-        "Copilot未解析のリポジトリはREADMEから暫定説明を生成",
-        "変更のあったリポジトリだけを定期的に再解析"
+        "名前・説明・Topics・言語・要約を横断検索",
+        "技術領域ごとの簡易カテゴリ分類",
+        "Copilot要約とREADME暫定説明の表示",
+        "確認済みの公開ページへのリンク表示"
       ],
       "technologies": [
         "JavaScript",
-        "HTML",
         "CSS",
+        "HTML",
         "GitHub API",
-        "GitHub Copilot CLI",
         "GitHub Actions",
+        "GitHub Copilot CLI",
         "GitHub Pages",
         "MutationObserver"
       ],
       "categories": [
         "Web・ツール",
-        "GitHub連携",
         "静的サイト",
-        "自動要約"
+        "GitHub連携",
+        "ポータル"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-09-18T20:59:26Z",
+      "sourcePushedAt": "2026-09-19T04:45:16Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-09-18T20:59:26Z",
+        "pushedAt": "2026-09-19T04:45:16Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -49,8 +49,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "299c59828de11c2d2d662499ee34bd709244bc5f8ac088bf5c1cfcb4540502a0",
-      "generatedAt": "2026-09-19T04:45:14.803Z"
+      "sourceFingerprint": "091e38325218382209d287dbb3285032487b91b8f27c1649cd07e8374de2e9f9",
+      "generatedAt": "2026-09-19T11:11:06.369Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -3803,43 +3803,43 @@
       "generatedAt": "2026-09-12T10:57:07.057Z"
     },
     "atoms3r-mekf-dynamic-validation": {
-      "title": "ATOMS3姿勢制御の動的検証",
-      "summary": "M5Stack ATOMS3で姿勢推定と振り子状の動きを検証する実機ファームウェアです。MEKFを制御・ピーク検出に使い、Madgwickとの比較ログ、遅延補償の掃引、モーター停止のQ1影評価、RWLOG変換まで一連の測定を支えます。",
-      "detail": "こいつは、M5Stack ATOMS3上で姿勢推定と動的なロール制御を検証するための実機ファームウェアだな。中では6状態MEKFを採用フィルタとして動かし、ゼロクロスやピーク検出、Autonomous V7の角度依存判断に使っている一方、dynamic-beta Madgwickや生のIMU値も比較用に記録してる。現在のV46adでは遅延補償を0、3、6、9 msから選び、設定値をRun単位でRWLOGへ保存できるほか、Q1の次ピーク予測と必要電流の影計算もモーターを動かさずに試せる。ログにはMEKFの加速度信頼度、Q1イベント、動画同期用GPIO38アンカーなどが残り、Python変換ツールでCSV化して固定ホライズン動画と照合する構成だ。ただし、Q1はあくまでmotor-offの影評価で、実機での最適遅延や制御効果は測定結果を比較して確かめる段階にある。",
-      "closingRemark": "0〜9 msの遅延を選べても、Q1の影は最後までモーターを回さない。測ることに関しては、かなり用心深い実験機だな。",
+      "title": "Atoms3R姿勢制御検証ファームウェア",
+      "summary": "M5Stack ATOMS3上で、MEKFを使った姿勢推定と動的な次ピーク予測を実機検証するファームウェア。モーター制御、ピーク検出、RWLOG記録、動画同期、Pythonによるログ変換まで、測定手順を含めて管理している。",
+      "detail": "こいつは、M5Stack ATOMS3でローラー系の姿勢推定と次ピーク予測を実機検証するための作業用ファームウェアだな。中では6状態のMEKFを制御側の姿勢推定に採用し、ゼロクロスやピーク検出、Autonomous V7の角度依存判断まで受け持たせている一方、dynamic-beta Madgwickは比較用に記録するだけでモーターは動かさない。現行のV46aiでは、ゼロクロス時の角速度から次ピークを予測する式に統一し、Q1の影制御ログやQ_IDENTの固定Q実出力検証、3 ms先読み、Qゲイン、300 mA・最大100 msの安全条件を扱える。RWLOG v46などのバイナリ記録には推定値、加速度信頼度、制御判断、イベント情報を残し、Python変換ツールとLED同期で動画との突き合わせもできる。実機の全域性能はこれからの測定で確認する段階で、Q1はモーターオフ専用、ログを取っただけでは予測出力の実現までは証明できない。",
+      "closingRemark": "式は次のピークを読むが、実機の答えはまだ次の30秒測定待ちだな。",
       "features": [
-        "6状態MEKFを制御・ゼロクロス・ピーク検出に採用",
-        "dynamic-beta Madgwickや生IMU値を比較用に同時記録",
-        "遅延補償0/3/6/9 msの実機測定をRun単位で管理",
-        "Q1の次ピーク予測と必要電流をモーター停止で評価",
-        "RWLOGをCSV化し動画同期やイベント結果をオフライン検証"
+        "6状態MEKFを制御用姿勢推定として採用",
+        "Madgwickを比較用に並行記録し、モーター制御から分離",
+        "次ピーク予測とQ1影制御イベントを詳細にログ化",
+        "Q_IDENTで固定Qの実出力と電池電圧条件を検証",
+        "RWLOG・LED同期・動画でオフライン評価可能"
       ],
       "technologies": [
         "C++",
         "Python",
-        "PlatformIO",
-        "Arduino",
         "ESP32",
         "M5Stack ATOMS3",
+        "PlatformIO",
+        "Arduino",
         "M5Unified",
         "Adafruit AHRS"
       ],
       "categories": [
-        "実験",
-        "試作",
         "組み込み",
-        "姿勢推定"
+        "姿勢推定",
+        "制御検証",
+        "データロギング"
       ],
       "status": "実験",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1366981980,
-      "sourcePushedAt": "2026-09-19T04:01:56Z",
+      "sourcePushedAt": "2026-09-19T10:16:31Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1366981980,
         "name": "atoms3r-mekf-dynamic-validation",
-        "pushedAt": "2026-09-19T04:01:56Z",
+        "pushedAt": "2026-09-19T10:16:31Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -3849,8 +3849,8 @@
         "fork": false,
         "language": "C++"
       },
-      "sourceFingerprint": "879aed732cf14bbf9e98601efe1f2ef51c48eb058c71ca9ef655f56bc67e2576",
-      "generatedAt": "2026-09-19T04:45:05.023Z"
+      "sourceFingerprint": "862be0b8fa12d6ca5f9fb2d840644594da1b260acef3d7fe9e32d93245b30690",
+      "generatedAt": "2026-09-19T11:10:56.744Z"
     },
     "atoms3r-visual-pose-tracker": {
       "title": "AtomS3R視覚ポーズ追跡",
@@ -4101,7 +4101,57 @@
       },
       "sourceFingerprint": "5629326c67c070652839d0a748cdfc9976fefc73a407c6c11cc2b6681b1a1dd8",
       "generatedAt": "2026-09-18T11:27:25.593Z"
+    },
+    "atoms3r-m12-vio": {
+      "title": "AtomS3R-M12向けVIOファームウェア",
+      "summary": "M5Stack AtomS3R-M12内蔵のカメラとIMUだけで、外部マーカーなしの相対移動推定を試す研究用ファームウェア。光学フロー、姿勢伝播、静止検出、USBシリアルへのCSV出力に加え、WebSerial経由の書き込みにも対応している。",
+      "detail": "こいつは、M5Stack AtomS3R-M12の中にあるOV3660カメラとBMI270 IMU、それにESP32-S3だけで相対移動を推定するための研究用ファームウェアだ。中ではIMUを200Hzで読み、起動時のジャイロバイアスを補正しながら姿勢を伝播し、カメラの軽量な疎ブロックマッチング光学フローで動きや静止状態を見ている。静止時にはゼロ速度更新をかけ、姿勢・速度・実験的な慣性位置、フロー値や追跡数をPOSE形式のCSVでUSBシリアルへ出せるってわけだ。GitHub PagesのWebSerialフラッシャー、GitHub Actionsのビルド、QQVGA化や二段ピラミッド追跡、診断機能も確認できる。ただし位置はまだ完全な単眼VIOによる尺度付き推定ではなく、README上は基盤段階の実験値に留まっている。",
+      "closingRemark": "カメラはもう動きを見ているが、位置の確かさまではまだ見抜けない。まずは機体とログの機嫌取りからだな。",
+      "features": [
+        "OV3660とBMI270による内蔵センサーだけの相対移動推定",
+        "200Hz IMU姿勢伝播と起動時ジャイロバイアス補正",
+        "疎ブロックマッチング光学フローによる動き・静止検出",
+        "POSE形式のCSVテレメトリとSTATUS・RESET_POSE操作",
+        "GitHub PagesのWebSerialフラッシャー"
+      ],
+      "technologies": [
+        "C++",
+        "C",
+        "ESP32-S3",
+        "PSRAM",
+        "OV3660",
+        "BMI270",
+        "光学フロー",
+        "GitHub Actions"
+      ],
+      "categories": [
+        "実験",
+        "組み込み",
+        "コンピュータビジョン",
+        "センサー融合"
+      ],
+      "status": "実験",
+      "confidence": "high",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
+      "sourceRepositoryId": 1376940622,
+      "sourcePushedAt": "2026-09-19T10:56:27Z",
+      "sourceDefaultBranch": "main",
+      "sourceMetadata": {
+        "repositoryId": 1376940622,
+        "name": "atoms3r-m12-vio",
+        "pushedAt": "2026-09-19T10:56:27Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "C++"
+      },
+      "sourceFingerprint": "b155213da01bafb3366d1cf5d61968a5df212aed17f18506a8fdba1665bd3240",
+      "generatedAt": "2026-09-19T11:10:43.659Z"
     }
   },
-  "repositoryCount": 83
+  "repositoryCount": 84
 }
