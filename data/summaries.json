@@ -1,45 +1,45 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-19T11:11:06.369Z",
+  "generatedAt": "2026-09-19T15:58:14.130Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ酒場ポータル",
-      "summary": "temesotejamが所有する公開GitHubリポジトリを、酒場風の画面から検索・分類・閲覧できる個人ポータル。GitHub APIとCopilotの日本語要約を組み合わせ、各リポジトリの概要や技術要素を一覧から追える。",
-      "detail": "こいつは、公開GitHubリポジトリを無機質な一覧ではなく、酒場の依頼記録のように探すための静的ポータルだな。中ではGitHub APIからtemesotejam所有の公開リポジトリを取得し、名前やDescription、Topics、使用言語、Copilot要約を横断検索しながら、技術領域ごとに簡易分類してる。カードを選べば概要や特徴、技術名に加えて、確認済みの公開ページも開ける構成だ。Copilot解析済みの説明はdata/summaries.jsonから読み出し、未解析のものにはREADMEを取得して短い暫定説明を補う。6時間ごとのGitHub Actionsが更新済みのリポジトリだけを最大8件ずつ再解析するが、対象は公開情報に限られ、リポジトリの変更やIssue作成までは行わない。",
-      "closingRemark": "6時間ごとに記録を更新する酒場だが、注文を受けて書き換える権限までは持たない。",
+      "title": "公開リポジトリ案内ポータル",
+      "summary": "temesotejamが所有する公開GitHubリポジトリを、酒場を思わせる画面で探して閲覧する個人向けポータル。GitHub APIの情報やCopilot生成の日本語説明を使い、検索・分類・詳細確認までを静的サイト上でまとめている。",
+      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、無機質な一覧ではなく酒場風の画面から探して読むための個人ポータルだな。中ではGitHub APIからリポジトリ情報を取得し、名前やDescription、Topics、使用言語、Copilot要約を横断検索できるようにしてる。技術領域ごとの簡易分類やカード形式の詳細表示もあり、解析済みならREADMEや構成、設定ファイルを根拠にした日本語説明を見られるし、未解析のものにはREADMEから短い暫定説明を補う仕組みまである。説明データはGitHub Actionsから6時間ごとに更新され、変更のないリポジトリは再解析しない。GitHub Pagesで静的に公開できる一方、対象は公開リポジトリだけで、削除やIssue作成などの書き込み操作までは行わない構成だ。",
+      "closingRemark": "6時間ごとに酒場の名簿は更新されるが、書き込み用の鍵は最初から預かっていない。",
       "features": [
         "GitHub APIから公開リポジトリを自動取得",
         "名前・説明・Topics・言語・要約を横断検索",
-        "技術領域ごとの簡易カテゴリ分類",
-        "Copilot要約とREADME暫定説明の表示",
-        "確認済みの公開ページへのリンク表示"
+        "技術領域ごとの簡易分類とカード式詳細表示",
+        "Copilot解析済みの日本語説明を表示",
+        "GitHub Actionsで要約キャッシュを定期更新"
       ],
       "technologies": [
         "JavaScript",
-        "CSS",
         "HTML",
+        "CSS",
         "GitHub API",
-        "GitHub Actions",
         "GitHub Copilot CLI",
+        "GitHub Actions",
         "GitHub Pages",
         "MutationObserver"
       ],
       "categories": [
         "Web・ツール",
-        "静的サイト",
-        "GitHub連携",
-        "ポータル"
+        "ポータル",
+        "GitHub",
+        "自動化"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-09-19T04:45:16Z",
+      "sourcePushedAt": "2026-09-19T11:37:43Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-09-19T04:45:16Z",
+        "pushedAt": "2026-09-19T11:37:43Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -49,8 +49,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "091e38325218382209d287dbb3285032487b91b8f27c1649cd07e8374de2e9f9",
-      "generatedAt": "2026-09-19T11:11:06.369Z"
+      "sourceFingerprint": "d54b16ac82125c011ea7c54e1e7c949ed20883c3beecf9ce62e9d888766411e2",
+      "generatedAt": "2026-09-19T15:58:14.130Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -3803,43 +3803,43 @@
       "generatedAt": "2026-09-12T10:57:07.057Z"
     },
     "atoms3r-mekf-dynamic-validation": {
-      "title": "Atoms3R姿勢制御検証ファームウェア",
-      "summary": "M5Stack ATOMS3上で、MEKFを使った姿勢推定と動的な次ピーク予測を実機検証するファームウェア。モーター制御、ピーク検出、RWLOG記録、動画同期、Pythonによるログ変換まで、測定手順を含めて管理している。",
-      "detail": "こいつは、M5Stack ATOMS3でローラー系の姿勢推定と次ピーク予測を実機検証するための作業用ファームウェアだな。中では6状態のMEKFを制御側の姿勢推定に採用し、ゼロクロスやピーク検出、Autonomous V7の角度依存判断まで受け持たせている一方、dynamic-beta Madgwickは比較用に記録するだけでモーターは動かさない。現行のV46aiでは、ゼロクロス時の角速度から次ピークを予測する式に統一し、Q1の影制御ログやQ_IDENTの固定Q実出力検証、3 ms先読み、Qゲイン、300 mA・最大100 msの安全条件を扱える。RWLOG v46などのバイナリ記録には推定値、加速度信頼度、制御判断、イベント情報を残し、Python変換ツールとLED同期で動画との突き合わせもできる。実機の全域性能はこれからの測定で確認する段階で、Q1はモーターオフ専用、ログを取っただけでは予測出力の実現までは証明できない。",
-      "closingRemark": "式は次のピークを読むが、実機の答えはまだ次の30秒測定待ちだな。",
+      "title": "Atoms3姿勢推定検証ファームウェア",
+      "summary": "M5Stack ATOMS3上で、MEKFを中心とした姿勢推定と動的な次ピーク予測を実機検証するファームウェア。モーター停止のQ1影計測、Q_IDENTの固定Q出力、RWLOG記録と動画同期まで、推定値と制御判断を細かく比較できる構成だ。",
+      "detail": "こいつは、M5Stack ATOMS3で姿勢推定と次の振れ幅予測を実機検証するためのファームウェアだな。現在のV46aiでは6状態MEKFを制御側の正式な推定器に据え、ZEROクロス、ピーク検出、角度依存の判断をまとめて受け持たせている。中では角速度から次ピークを予測し、3 ms先読みやQゲイン、Ki、300 mA・最大100 msの制限を維持しながら、加速度の信頼度やMadgwick推定値、ジャイロ積分などもRWLOGへ記録して後から比較できる。Q1はモーターを完全に止めたまま必要なQを影計算し、別のQ_IDENTモードでは固定Qの実出力と電池電圧、パルス幅を検証する構成ってわけだ。PlatformIOでビルドし、変換ツールでログをCSV化して、LED同期動画と突き合わせる流れまで用意されている。ただし資料は検証ビルドの記録が中心で、製品向けの完成版とまでは言えない。",
+      "closingRemark": "MEKFが判断し、Madgwickが横で見守り、ログだけが一番よく働いている。",
       "features": [
-        "6状態MEKFを制御用姿勢推定として採用",
-        "Madgwickを比較用に並行記録し、モーター制御から分離",
-        "次ピーク予測とQ1影制御イベントを詳細にログ化",
-        "Q_IDENTで固定Qの実出力と電池電圧条件を検証",
-        "RWLOG・LED同期・動画でオフライン評価可能"
+        "V46aiの角速度ベース次ピーク予測",
+        "6状態MEKFによる制御用姿勢推定",
+        "Madgwickや生IMU値を含む比較ログ",
+        "Q1モーター停止影計測とQ_IDENT固定Q実験",
+        "RWLOG・CSV変換・LED動画同期"
       ],
       "technologies": [
         "C++",
         "Python",
-        "ESP32",
-        "M5Stack ATOMS3",
         "PlatformIO",
         "Arduino",
+        "ESP32",
+        "M5Stack ATOMS3",
         "M5Unified",
         "Adafruit AHRS"
       ],
       "categories": [
-        "組み込み",
+        "実機検証",
         "姿勢推定",
-        "制御検証",
-        "データロギング"
+        "組み込み",
+        "ファームウェア"
       ],
       "status": "実験",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1366981980,
-      "sourcePushedAt": "2026-09-19T10:16:31Z",
+      "sourcePushedAt": "2026-09-19T11:52:23Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1366981980,
         "name": "atoms3r-mekf-dynamic-validation",
-        "pushedAt": "2026-09-19T10:16:31Z",
+        "pushedAt": "2026-09-19T11:52:23Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -3849,8 +3849,8 @@
         "fork": false,
         "language": "C++"
       },
-      "sourceFingerprint": "862be0b8fa12d6ca5f9fb2d840644594da1b260acef3d7fe9e32d93245b30690",
-      "generatedAt": "2026-09-19T11:10:56.744Z"
+      "sourceFingerprint": "4045ba783b07b1b821f672fc9ecb70ab5c4e2b50a54efc741163778ecd292c55",
+      "generatedAt": "2026-09-19T15:57:54.045Z"
     },
     "atoms3r-visual-pose-tracker": {
       "title": "AtomS3R視覚ポーズ追跡",
@@ -4151,7 +4151,57 @@
       },
       "sourceFingerprint": "b155213da01bafb3366d1cf5d61968a5df212aed17f18506a8fdba1665bd3240",
       "generatedAt": "2026-09-19T11:10:43.659Z"
+    },
+    "reaction-wheel-v58-experiment-firmware": {
+      "title": "リアクションホイールV58実験基盤",
+      "summary": "リアクションホイール機体で、モータ入力による速度変化と自然減速を切り分けるための実験ファームウェア。300 mAのPROBEと0 mAのCOASTを同じ時間軸で比較し、Q50や速度ログを解析できる。",
+      "detail": "こいつは、歩行制御へ戻す前に、リアクションホイールの速度変化へモータ入力がどれだけ効いているかを測るためのV58実験ファームウェアだ。M5Stack AtomS3CAM上で動き、±300 mAを加えるPROBEと、Current Mode 0 mAで観測するCOASTを近い初期状態で一対一に対応させる。開始後0〜50 msの速度点や電流を記録し、Q50の台形積分、CRC、電流gap、実速度領域などをPythonツールで監査できるほか、C++の状態遷移試験と合成RWLOGによるオフライン解析も用意されている。ソース、PlatformIOビルド設定、操作ガイド、研究経緯、生成物のハッシュや受渡しmanifestまで揃えて、再現と引継ぎを意識した構成だな。ただし、ソフト検証とビルドは済んでいるものの、V58の実機書込み・実測はまだで、歩行制御へ自動反映する仕組みでもない。",
+      "closingRemark": "ここで測るのは歩行の成功ではなく、まず車輪が自然に減速した分を帳簿から外す仕事だ。",
+      "features": [
+        "300 mA PROBEと0 mA COASTの対照測定",
+        "0〜50 msの速度変化とQ50を主解析",
+        "PROBE/COASTを実速度領域などで一対一対応",
+        "RWLOGのオフライン解析とC++状態遷移試験",
+        "ビルド・試験・受渡し証跡を分離保存"
+      ],
+      "technologies": [
+        "C++",
+        "Python",
+        "Arduino",
+        "PlatformIO",
+        "ESP32-S3",
+        "M5Stack AtomS3CAM",
+        "NumPy",
+        "Matplotlib"
+      ],
+      "categories": [
+        "実験",
+        "ファームウェア",
+        "組み込み",
+        "計測・解析"
+      ],
+      "status": "実験",
+      "confidence": "high",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
+      "sourceRepositoryId": 1377084226,
+      "sourcePushedAt": "2026-09-19T11:50:22Z",
+      "sourceDefaultBranch": "main",
+      "sourceMetadata": {
+        "repositoryId": 1377084226,
+        "name": "reaction-wheel-v58-experiment-firmware",
+        "pushedAt": "2026-09-19T11:50:22Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "C++"
+      },
+      "sourceFingerprint": "71ad7822e7d16b41f1ba83fd03f65db41a5a92497e8fb9d969b91874319355f1",
+      "generatedAt": "2026-09-19T15:58:03.721Z"
     }
   },
-  "repositoryCount": 84
+  "repositoryCount": 85
 }
