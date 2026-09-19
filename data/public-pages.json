@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-17T12:11:12.261Z",
-  "repositoryCount": 83,
-  "pageCount": 43,
+  "generatedAt": "2026-09-19T11:37:41.376Z",
+  "repositoryCount": 84,
+  "pageCount": 44,
   "pages": {
     "2026_8_5_3": {
       "url": "https://temesotejam.github.io/2026_8_5_3/",
@@ -31,6 +31,11 @@
     },
     "atoms3r-6dof-mekf": {
       "url": "https://temesotejam.github.io/atoms3r-6dof-mekf/",
+      "source": "github-pages",
+      "status": 200
+    },
+    "atoms3r-m12-vio": {
+      "url": "https://temesotejam.github.io/atoms3r-m12-vio/",
       "source": "github-pages",
       "status": 200
     },
