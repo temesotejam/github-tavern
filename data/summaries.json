@@ -1,45 +1,45 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-19T20:49:39.316Z",
+  "generatedAt": "2026-09-20T05:01:24.868Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ酒場ポータル",
-      "summary": "temesotejamが所有する公開GitHubリポジトリを、酒場風の画面で検索・分類・閲覧する個人ポータル。GitHub APIの情報にCopilot解析やREADME由来の説明を重ね、一覧から各プロジェクトの概要や公開ページへ辿れる。",
-      "detail": "こいつは、temesotejamが所有する公開GitHubリポジトリを、無機質な一覧ではなく酒場の依頼帳のように探すための静的ポータルだな。中ではGitHub APIからリポジトリの名前、説明、Topics、使用言語、更新日時を取得し、検索語や技術領域の簡易分類で絞り込める。選んだカードでは、data/summaries.jsonに保存されたCopilot解析の日本語説明、特徴、技術、締めの一言を表示し、未解析のものにはREADMEから短い暫定説明を補う仕組みだ。GitHub Pagesでそのまま公開でき、確認済みの公開ページが登録されていれば詳細画面から開ける。Private Repositoryの取得やGitHubへの書き込みは行わず、APIやREADMEが返す情報の範囲を超えたことまでは分からない。",
-      "closingRemark": "READMEが沈黙していても、カードだけは酒場の灯りの下へ並べられる。",
+      "title": "Project Tavern 公開リポジトリ酒場",
+      "summary": "公開GitHubリポジトリを、酒場の依頼記録のような画面で検索・閲覧する個人向けポータル。GitHub APIから一覧を取得し、Copilotによる日本語要約や分類、READMEを使った暫定説明まで表示する。",
+      "detail": "こいつは、temesotejamが所有する公開GitHubリポジトリを、無機質な一覧ではなく酒場風の画面で探すための静的ポータルだな。中ではGitHub APIからリポジトリ情報を取得し、名前や説明、Topics、言語、Copilot要約を横断検索できるようにしてる。カードを選べば概要や技術、分類を確認でき、Copilot解析済みならREADMEや構成、設定ファイルを根拠にした日本語説明が出るし、未解析のものにはREADMEから短い暫定説明を補う仕組みもある。6時間ごとのGitHub Actionsが更新済みのリポジトリだけを見て、data/summaries.jsonを刷新する構成だ。GitHub Pagesで公開できる一方、対象は公開リポジトリに限られ、削除や変更、Issue作成といった書き込み操作までは行わない。",
+      "closingRemark": "6時間ごとに記録を更新する酒場だが、扱うのは公開資料だけという手堅い店構えだな。",
       "features": [
-        "GitHub APIから公開リポジトリを自動取得",
-        "名前・説明・Topics・言語・要約を横断検索",
-        "技術領域による簡易カテゴリ分類",
-        "Copilot解析済みの日本語概要と特徴を表示",
-        "未解析のリポジトリにはREADMEの暫定説明を表示"
+        "公開リポジトリの検索・選択・詳細表示",
+        "名前・説明・Topics・言語・要約の横断検索",
+        "技術領域ごとの簡易分類",
+        "Copilot生成要約とREADME由来の暫定説明",
+        "GitHub Pagesでの静的公開"
       ],
       "technologies": [
         "JavaScript",
-        "CSS",
         "HTML",
+        "CSS",
         "GitHub API",
         "GitHub Actions",
         "GitHub Pages",
         "GitHub Copilot CLI",
-        "README"
+        "MutationObserver"
       ],
       "categories": [
         "Web・ツール",
-        "静的サイト",
-        "GitHub連携",
-        "個人ポータル"
+        "GitHub",
+        "ポータル",
+        "自動化"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-09-19T16:06:54Z",
+      "sourcePushedAt": "2026-09-19T20:49:40Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-09-19T16:06:54Z",
+        "pushedAt": "2026-09-19T20:49:40Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -49,8 +49,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "38987f689547b232fff546eed404ee647e2edd81793d0af2722e2f1b154a7873",
-      "generatedAt": "2026-09-19T20:49:39.315Z"
+      "sourceFingerprint": "4f0f6282c734ae8fe4eada5d742f6ec8edba177e52c2965313f089cc1ff0d464",
+      "generatedAt": "2026-09-20T05:01:24.868Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -3803,43 +3803,43 @@
       "generatedAt": "2026-09-12T10:57:07.057Z"
     },
     "atoms3r-mekf-dynamic-validation": {
-      "title": "Atoms3姿勢推定検証ファームウェア",
-      "summary": "M5Stack ATOMS3上で、MEKFを中心とした姿勢推定と動的な次ピーク予測を実機検証するファームウェア。モーター停止のQ1影計測、Q_IDENTの固定Q出力、RWLOG記録と動画同期まで、推定値と制御判断を細かく比較できる構成だ。",
-      "detail": "こいつは、M5Stack ATOMS3で姿勢推定と次の振れ幅予測を実機検証するためのファームウェアだな。現在のV46aiでは6状態MEKFを制御側の正式な推定器に据え、ZEROクロス、ピーク検出、角度依存の判断をまとめて受け持たせている。中では角速度から次ピークを予測し、3 ms先読みやQゲイン、Ki、300 mA・最大100 msの制限を維持しながら、加速度の信頼度やMadgwick推定値、ジャイロ積分などもRWLOGへ記録して後から比較できる。Q1はモーターを完全に止めたまま必要なQを影計算し、別のQ_IDENTモードでは固定Qの実出力と電池電圧、パルス幅を検証する構成ってわけだ。PlatformIOでビルドし、変換ツールでログをCSV化して、LED同期動画と突き合わせる流れまで用意されている。ただし資料は検証ビルドの記録が中心で、製品向けの完成版とまでは言えない。",
-      "closingRemark": "MEKFが判断し、Madgwickが横で見守り、ログだけが一番よく働いている。",
+      "title": "MEKF検証用実験機",
+      "summary": "AtomS3向けの制御検証用ファームウェアだ。MEKFとMadgwickの角度推定を同時に比較し、Q1やQ_IDENTの実験条件をRWLOGと動画で確認できる。遅延補償やゼロクロス判定の調整を繰り返して、実機での動きと推定のズレを見てる。",
+      "detail": "こいつは、AtomS3で動く制御・推定の検証用ファームウェアだな。中ではMEKFを本命の角度推定として使い、比較用にdynamic-beta Madgwickや生の加速度・角速度を同時にログに残してる。Q1はモーターを動かさずに次ピークを予測し、Q_IDENTは固定Qの実出力を特定条件で確認するための実験モードってわけだ。RWLOGと動画の同期、ゼロクロスの判定、遅延補償の微調整をセットで見ることで、推定が実機の制御にどう影響するかを切り分けられる。要するに、制御が合ってるかじゃなくて、どの推定がどこでズレるかを見てる作りだ。まだこのリポジトリは実験用の記録と検証手順が中心で、アップロード手順までは一般向けにまとめてない。",
+      "closingRemark": "結局、このリポジトリの肝は推定の名前じゃなく、どの条件でRWLOGと動画が揃ってるかだな。",
       "features": [
-        "V46aiの角速度ベース次ピーク予測",
-        "6状態MEKFによる制御用姿勢推定",
-        "Madgwickや生IMU値を含む比較ログ",
-        "Q1モーター停止影計測とQ_IDENT固定Q実験",
-        "RWLOG・CSV変換・LED動画同期"
+        "MEKFとMadgwickの同時比較ログ",
+        "Q1のmotor-off次ピーク予測検証",
+        "Q_IDENTの固定Q出力条件検証",
+        "RWLOGからCSVへの変換と評価",
+        "Web flasherと日本語ドキュメント"
       ],
       "technologies": [
         "C++",
         "Python",
         "PlatformIO",
-        "Arduino",
         "ESP32",
-        "M5Stack ATOMS3",
-        "M5Unified",
-        "Adafruit AHRS"
+        "M5Stack AtomS3",
+        "Arduino",
+        "BMI270",
+        "MEKF"
       ],
       "categories": [
-        "実機検証",
-        "姿勢推定",
         "組み込み",
-        "ファームウェア"
+        "制御工学",
+        "計測検証",
+        "実験支援"
       ],
       "status": "実験",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1366981980,
-      "sourcePushedAt": "2026-09-19T11:52:23Z",
+      "sourcePushedAt": "2026-09-20T03:22:48Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1366981980,
         "name": "atoms3r-mekf-dynamic-validation",
-        "pushedAt": "2026-09-19T11:52:23Z",
+        "pushedAt": "2026-09-20T03:22:48Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -3849,8 +3849,8 @@
         "fork": false,
         "language": "C++"
       },
-      "sourceFingerprint": "4045ba783b07b1b821f672fc9ecb70ab5c4e2b50a54efc741163778ecd292c55",
-      "generatedAt": "2026-09-19T15:57:54.045Z"
+      "sourceFingerprint": "f069f612a90a3041b41676070247622b3b1ebee1d5dec387d6a2c324a4e1ec36",
+      "generatedAt": "2026-09-20T05:01:12.057Z"
     },
     "atoms3r-visual-pose-tracker": {
       "title": "AtomS3R視覚ポーズ追跡",
