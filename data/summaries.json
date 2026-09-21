@@ -1,45 +1,44 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-21T05:07:38.586Z",
+  "generatedAt": "2026-09-21T13:00:41.569Z",
   "repositories": {
     "github-tavern": {
-      "title": "Project Tavern公開リポジトリ酒場",
-      "summary": "temesotejamが公開するGitHubリポジトリを、酒場風の静的ポータルで検索・分類・閲覧するためのJavaScript製ツール。GitHub APIとCopilot生成の日本語要約を組み合わせ、READMEや公開ページも確認できます。",
-      "detail": "こいつは、無機質なGitHubの一覧を、酒場の依頼記録のように探せる個人向けポータルだな。中ではGitHub APIからtemesotejam所有の公開リポジトリを取得し、名前やDescription、Topics、使用言語、Copilot要約を横断検索できるようにしてる。技術領域を学習・AI、制御・ロボット、センサ・組込み、画像・映像、Web・ツールなどに分類し、カードを選べば概要や特徴、技術名をその場で読める。Copilot解析済みならREADMEや構成を根拠にした説明を表示し、未解析の新規リポジトリにはREADMEの短いプレビューを補う仕組みだ。GitHub Pagesで静的に公開できる一方、対象は公開リポジトリだけで、削除や変更といった書き込み操作までは行わない。",
-      "closingRemark": "要約を更新する酒場自身も、6時間ごとの巡回で記録を整えている。店番まで自動化済みってわけだな",
+      "title": "公開リポジトリ酒場ポータル",
+      "summary": "temesotejamが所有する公開GitHubリポジトリを、酒場風の画面で検索・分類・閲覧する個人ポータル。GitHub APIとCopilot解析を使い、READMEや構成を根拠にした日本語説明も表示する。",
+      "detail": "こいつは、公開GitHubリポジトリを無機質な一覧ではなく、酒場の依頼記録のように探せる個人ポータルだな。中ではGitHub APIからtemesotejam所有の公開リポジトリを取得し、名前やDescription、Topics、使用言語、Copilot要約を横断検索できるようにしてる。技術領域ごとの分類やカード形式の詳細表示に加えて、解析済みならREADME・構成・設定ファイルを根拠にした日本語説明を出し、未解析の新規リポジトリにはREADMEから短い暫定説明を補う仕組みだ。6時間ごとのGitHub Actionsが更新済みのものだけを最大8件ずつ解析し、GitHub Pagesで静的に公開できる。Private Repositoryや書き込み操作は対象外で、説明の正確さは保存された解析結果と公開情報の範囲に限られるってところだ。",
+      "closingRemark": "READMEが空でも、酒場のカードだけは先に並ぶ。説明の出どころは、ちゃんと公開情報の範囲内だな。",
       "features": [
         "GitHub APIから公開リポジトリを自動取得",
         "名前・説明・Topics・言語・要約を横断検索",
         "技術領域ごとの簡易分類とカード表示",
-        "Copilot解析とREADMEプレビューによる日本語説明",
-        "GitHub Pagesで静的公開可能"
+        "Copilot解析による根拠付き日本語説明",
+        "未解析リポジトリにはREADMEの暫定説明を表示"
       ],
       "technologies": [
         "JavaScript",
-        "CSS",
         "HTML",
+        "CSS",
         "GitHub API",
-        "GitHub Copilot CLI",
         "GitHub Actions",
         "GitHub Pages",
-        "README"
+        "GitHub Copilot CLI"
       ],
       "categories": [
         "Web・ツール",
-        "静的サイト",
         "GitHub連携",
-        "AI"
+        "静的サイト",
+        "AI・自動化"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-09-20T20:55:26Z",
+      "sourcePushedAt": "2026-09-21T05:07:39Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-09-20T20:55:26Z",
+        "pushedAt": "2026-09-21T05:07:39Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -49,8 +48,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "b4ecbfea2e9db11aaaf688d53ea67fb926a6f92c1af3c1cbe412ab3493c6455e",
-      "generatedAt": "2026-09-21T05:07:38.586Z"
+      "sourceFingerprint": "b236f8b6b05894df3e3e54e88730b746f3f849977df965e12bef13278ca94694",
+      "generatedAt": "2026-09-21T13:00:41.569Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -3853,43 +3852,43 @@
       "generatedAt": "2026-09-20T11:35:53.016Z"
     },
     "atoms3r-visual-pose-tracker": {
-      "title": "AtomS3Rマーカー姿勢追跡",
-      "summary": "M5Stack AtomS3R-CAMで2枚のArUcoマーカーを追跡し、主に水平方向の位置と姿勢を計測する組み込みファームウェアだ。200HzのIMU制御を止めない軽量な画像処理、JSON telemetry、ブラウザ書き込みまで揃えている。",
-      "detail": "こいつは、M5Stack AtomS3R-CAM上で2枚のArUcoマーカーを追跡し、機構の水平方向の動きを測るための小さなビジョン・ファームウェアだな。中ではGC0308の320×240グレースケール画像を上下の取得帯に分け、既知の6×6パターンを使った全幅の1次元探索を主経路にしてる。追跡が怪しくなれば局所1D、二段階探索、ArUco再取得へ段階的に切り替え、別コアのBMI270による200Hz IMU・制御タスクは画像処理で止めない。921600 baudのJSON telemetryでは、画素位置、追跡経路、処理時間、IMUの遅延、しきい値や信頼度まで確認でき、PagesのESP Web Toolsから書き込みもできる。ただしカメラ内部パラメータはまだ概算で、3D位置やロール・ピッチは校正前の診断値に留まるってところだ。",
-      "closingRemark": "6mmの黒い印を二枚追いながら、制御ループだけは律儀に200Hzを守る。視覚のほうが少し慌ただしいな。",
+      "title": "AtomS3R白マーカー姿勢追跡",
+      "summary": "M5Stack AtomS3R-CAMで、黒い機体上の上下2つの白マーカーを高速に追跡する組み込みビジョン基盤だ。疎な水平走査とBMI270の200Hz計測を組み合わせ、位置計測や足・脚角度のキャリブレーション用ログを取得できる。",
+      "detail": "こいつは、M5Stack AtomS3R-CAMで黒い機体上の白マーカー2つを追跡し、足や脚の角度を調べるための小さなビジョンパイプラインだ。中ではGC0308のQVGAグレースケール画像から、上側と下側に決めた水平走査線だけを読み、白い帯と黒い胴体の明るさの差を平滑化してX座標を重心として求めてる。ArUcoのID認識や前フレーム保存を使わないので、現在の機構なら高速移動時にも単純な白い領域を測れるってわけだ。BMI270は別タスクで200Hz動作し、画像時刻とIMU時刻、姿勢推定、検出状態を921600 baudのJSON telemetryとして出力する。実動画では262フレーム中262フレームで両マーカーを検出できているが、角度の符号やゼロ点はまだ実験で決める段階で、旧来のArUco関連コードは比較・巻き戻し用に残されている。",
+      "closingRemark": "白い印を読むだけで262フレーム完走、あとは角度の名前を実験で決める番だな。",
       "features": [
-        "上下の水平バンドを使う2マーカー同時追跡",
-        "全幅の制約付き1次元探索と複数の追跡フォールバック",
-        "200Hz IMU・制御タスクと画像処理の分離",
-        "詳細なJSON telemetryとWeb Serialモニター",
-        "GitHub Pages経由のブラウザ書き込みと印刷用マーカー"
+        "白マーカーA・Bを上下の固定レーンとして識別",
+        "5本の白走査線と3本の黒基準線による疎な1D検出",
+        "±35pxの重み付き重心でX座標を推定",
+        "画像と200Hz IMUの時刻・処理時間をJSON出力",
+        "足・脚角度向けの静止姿勢キャリブレーションログ"
       ],
       "technologies": [
+        "C++17",
         "M5Stack AtomS3R-CAM",
         "ESP32-S3",
-        "PlatformIO",
-        "Arduino",
-        "OpenCV ArUco",
         "GC0308",
         "BMI270",
-        "ESP Web Tools"
+        "Arduino",
+        "PlatformIO",
+        "GitHub Pages"
       ],
       "categories": [
         "組み込み",
         "コンピュータビジョン",
         "ロボティクス",
-        "試作"
+        "キャリブレーション"
       ],
       "status": "試作",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1369512147,
-      "sourcePushedAt": "2026-09-21T05:06:50Z",
+      "sourcePushedAt": "2026-09-21T09:11:20Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1369512147,
         "name": "atoms3r-visual-pose-tracker",
-        "pushedAt": "2026-09-21T05:06:50Z",
+        "pushedAt": "2026-09-21T09:11:20Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -3899,8 +3898,8 @@
         "fork": false,
         "language": "C++"
       },
-      "sourceFingerprint": "de2065263f0898a396aa5143c406523fc13004bfac01fe6f9492749151a45e61",
-      "generatedAt": "2026-09-21T05:07:20.822Z"
+      "sourceFingerprint": "8ff1b08e09dc8ac38403f917742931b394562b03246603e3a8c04a531a46ee0d",
+      "generatedAt": "2026-09-21T13:00:18.973Z"
     },
     "M5stackCORES3I2CdemoUWB": {
       "title": "CoreS3・Type2DK通信診断",
@@ -4204,42 +4203,42 @@
     },
     "atoms3r-amplitude-control-development": {
       "title": "AtomS3R振幅制御開発",
-      "summary": "AtomS3Rの振幅制御を改善するための開発リポジトリだ。MEKFとRWLOGを使って、次ピーク予測やQ決定、制御則を実機と動画の差分で検証してる。",
-      "detail": "こいつは、AtomS3Rのリアクションホイールで振幅制御の改善を進めるための開発リポジトリだな。中では、6-state MEKFで姿勢推定とゼロクロス、ピーク検出を行い、RWLOGの時系列ログを使って動画と制御のズレを見てる。次ピークの予測や入力Qの決定、補正条件、目標振幅への収束を差分管理しながら試してるってわけだ。Web flasherやPython変換ツールも揃っていて、実機運用と検証の両輪になってる。だが、ここは実験の記録と比較の場であって、最終製品や一般向けライブラリではない。",
-      "closingRemark": "新しい制御はWeb flasherで配るが、最終的な正しさは実機のRWLOGと動画で決まる。",
+      "summary": "AtomS3Rのリアクションホイール系で、目標振幅へ揃える制御の改善を検証するファームウェア開発リポジトリだ。6-state MEKFとRWLOGを土台に、ZEROクロスからの次ピーク予測や入力Qの決定を実機ログと動画で比較できる。",
+      "detail": "こいつは、AtomS3Rのリアクションホイールを使った機体を目標振幅へ収束させる制御を改善するための開発リポジトリだな。中では6-state MEKFで姿勢を推定し、3 ms固定のZEROクロス補償、ピーク検出、角速度を使った次ピーク予測を経て、入力Qとモータ出力を決めている。現在のV46al-R2では、V46akのrate-only予測に直前ピークの残差補正を加え、target=8°・t>=10 s・side別の測定範囲だけで有効にし、それ以外は従来方式へ戻す構成だ。RWLOG v51の時系列や動画同期を保ったまま実機との差を追え、Web flasherから現行版を書き込める。過去にはモータを動かさないQ1 shadowや固定Qの識別モードも記録されているが、実験範囲外の条件まで性能が分かるわけではない。",
+      "closingRemark": "3 msの遅れは固定されたまま、予測だけが少し賢くなった。あとは実機がその差を認めるかだな。",
       "features": [
-        "6-state MEKFで姿勢推定とゼロクロス検出",
-        "RWLOGから時系列データをCSVへ変換して比較",
-        "動画と制御のピーク差を定量評価",
-        "Web flasherで実機へビルドを配布",
-        "V46系のベースラインと改良履歴を並べて管理"
+        "6-state MEKFによる姿勢推定を制御系に採用",
+        "ZEROクロスから次ピーク振幅を予測",
+        "直前ピーク残差補正を測定範囲内で適用",
+        "RWLOGと動画を使った実機検証に対応",
+        "GitHub PagesのWeb flasherで現行版を書き込み"
       ],
       "technologies": [
-        "AtomS3R",
         "C++",
         "Python",
-        "MEKF",
-        "RWLOG",
         "PlatformIO",
+        "Arduino",
         "ESP32",
-        "M5Unified"
+        "M5Unified",
+        "Adafruit AHRS",
+        "M5Stack AtomS3R"
       ],
       "categories": [
+        "組み込み",
+        "制御",
         "ロボティクス",
-        "制御工学",
-        "実験用ファームウェア",
-        "データ解析"
+        "実験"
       ],
       "status": "実験",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1377999754,
-      "sourcePushedAt": "2026-09-21T04:56:27Z",
+      "sourcePushedAt": "2026-09-21T09:54:45Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1377999754,
         "name": "atoms3r-amplitude-control-development",
-        "pushedAt": "2026-09-21T04:56:27Z",
+        "pushedAt": "2026-09-21T09:54:45Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -4249,9 +4248,109 @@
         "fork": false,
         "language": "C++"
       },
-      "sourceFingerprint": "32b4e080d148b131a48d2159c1d874ca179d1a9307ca25ed357e3277c4c6fb77",
-      "generatedAt": "2026-09-21T05:07:30.422Z"
+      "sourceFingerprint": "1a2ae3ac96c82134b12184873d540a37c420757217de052989b160582fbd982a",
+      "generatedAt": "2026-09-21T12:59:54.347Z"
+    },
+    "atoms3r-foot-angle-tracker": {
+      "title": "AtomS3R足角度トラッカー",
+      "summary": "AtomS3R-CAMで、足に固定した2つの白マーカーを追跡し、胴体に対する足の相対角度をリアルタイム計測するファームウェア。校正済みのA/Bマーカーを使い、JSON telemetryとブラウザ画面で角度や検出状態を確認できる。",
+      "detail": "こいつは、AtomS3R-CAMを使って足・脚リンクの胴体に対する相対角度を測るファームウェアだな。中ではQVGAのグレースケール映像から、上側と下側に置いた白ベタマーカーを1次元で検出し、それぞれのX位置を校正式へ通して角度に変換してる。前フレームやArUco、テンプレートマッチングに頼らない軽い構成で、BMI270の独立200 Hzタスクと、10 Hz・921600 baudのJSON telemetryを並行して動かす仕組みだ。Web Serialの画面ではA/Bの角度や検出状態を見られ、GitHub Pagesから書き込みもできる。初期静止区間を0度としたCalibration v1の実測範囲外は外挿になるため、そこから先の精度まではこの資料だけでは保証していない。",
+      "closingRemark": "白い印を二つ追うだけで足の角度を読む。範囲を外れると、数字のほうが先に無理をする仕組みだな。",
+      "features": [
+        "2つの白マーカーから胴体基準の足角度を同時推定",
+        "前フレーム不要の軽量な1次元マーカー検出",
+        "校正式によるA/B別の角度変換",
+        "JSON telemetryで検出品質と処理時間を出力",
+        "Web Serial表示とGitHub Pages書き込みに対応"
+      ],
+      "technologies": [
+        "C++17",
+        "PlatformIO",
+        "ESP32-S3",
+        "Arduino",
+        "M5Unified",
+        "AtomS3R-CAM",
+        "GC0308",
+        "BMI270"
+      ],
+      "categories": [
+        "組み込み",
+        "コンピュータビジョン",
+        "モーション計測",
+        "ロボティクス"
+      ],
+      "status": "試作",
+      "confidence": "high",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
+      "sourceRepositoryId": 1379448412,
+      "sourcePushedAt": "2026-09-21T09:45:08Z",
+      "sourceDefaultBranch": "main",
+      "sourceMetadata": {
+        "repositoryId": 1379448412,
+        "name": "atoms3r-foot-angle-tracker",
+        "pushedAt": "2026-09-21T09:45:08Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "C++"
+      },
+      "sourceFingerprint": "9b7989a3c8aa280e70e871c6ecee917fdaa0996eaf63deab753290aced7b38b9",
+      "generatedAt": "2026-09-21T13:00:06.162Z"
+    },
+    "atoms3r-amplitude-control-v46ak-stable": {
+      "title": "AtomS3R振幅制御開発",
+      "summary": "AtomS3Rのリアクションホイール機構を目標振幅へ収束させるため、6状態MEKFによる姿勢推定を土台に、次ピーク予測や入力Q、制御則を検証するファームウェア開発リポジトリだ。実機ログと動画を突き合わせ、推定誤差と制御誤差を分けて評価できる。",
+      "detail": "こいつは、AtomS3Rのリアクションホイール制御で、揺れの振幅をどう予測し、目標へどう揃えるかを改良するための開発リポジトリだな。中では6状態MEKFで姿勢を推定し、ZEROクロスを3 ms先へ補償して、角速度から次ピークを見積もるほか、入力Qの選択や出力上限も扱っている。V46akでは入力直前の実測電流とRoller485のホイール速度をログへ追加したが、それらはまだ制御には使わない。Q1の影制御はモーターを動かさず、Q_IDENTでは固定Qを実機出力して、RWLOGと動画の対応からモデルを検証する構成だ。V46aiの実測ではピーク69個が一対一で対応し、推定差RMSE約0.103度まで確認できているが、新しい制御則の効果まではまだ評価途中ってところだ。",
+      "closingRemark": "推定はかなり揃った。残る仕事は、揺れを測ることと揺れを揃えることを、ログの上で取り違えないことだな。",
+      "features": [
+        "6状態MEKFを使った姿勢推定とZEROクロス判定",
+        "3 ms固定の遅延補償と角速度ベースの次ピーク予測",
+        "実測電流・ホイール速度を含むRWLOG記録",
+        "モーター停止のQ1影評価と固定QのQ_IDENT実機検証",
+        "動画とファームウェアのピークを突き合わせる検証手順"
+      ],
+      "technologies": [
+        "C++",
+        "PlatformIO",
+        "Arduino",
+        "ESP32",
+        "M5Stack AtomS3",
+        "M5Unified",
+        "Adafruit AHRS",
+        "6-state MEKF"
+      ],
+      "categories": [
+        "実験",
+        "組み込み",
+        "制御工学",
+        "ファームウェア"
+      ],
+      "status": "実験",
+      "confidence": "high",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
+      "sourceRepositoryId": 1379382121,
+      "sourcePushedAt": "2026-09-21T08:52:48Z",
+      "sourceDefaultBranch": "main",
+      "sourceMetadata": {
+        "repositoryId": 1379382121,
+        "name": "atoms3r-amplitude-control-v46ak-stable",
+        "pushedAt": "2026-09-21T08:52:48Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "C++"
+      },
+      "sourceFingerprint": "297d7c29e5d934dfe08134e621ac0ece3f8ceab404cc97247553c072575e1557",
+      "generatedAt": "2026-09-21T13:00:29.829Z"
     }
   },
-  "repositoryCount": 86
+  "repositoryCount": 88
 }
