@@ -1,18 +1,18 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-20T20:55:25.569Z",
+  "generatedAt": "2026-09-21T05:07:38.586Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ酒場ポータル",
-      "summary": "temesotejamが所有する公開GitHubリポジトリを、酒場風の画面から検索・分類・閲覧する個人向けポータル。GitHub APIで一覧を取得し、Copilot生成の日本語要約やREADME由来の暫定説明、公開ページへの導線までまとめて見られる。",
-      "detail": "こいつは、公開GitHubリポジトリを無機質な一覧ではなく、古い情報端末めいた酒場UIから探すための個人ポータルだ。中ではGitHub APIからtemesotejam所有の公開リポジトリを取得し、名前やDescription、Topics、使用言語、Copilot要約を横断検索できるようにしてる。カードを選べば分類、概要、特徴、技術名を確認でき、解析済みならREADMEや構成ファイルを根拠にした日本語説明が出るし、未解析のものにはREADMEから短い暫定説明を補う仕組みもある。GitHub Actionsが6時間ごとに更新済みのリポジトリだけを最大8件ずつ解析し、GitHub Pagesで静的に公開できる構成だな。ただし対象は公開リポジトリに限られ、削除や変更、Issue作成といった書き込み操作までは行わない。",
-      "closingRemark": "6時間ごとに記録を更新する酒場だが、未解析の札にはREADMEの一行を貼って待たせるらしい。",
+      "title": "Project Tavern公開リポジトリ酒場",
+      "summary": "temesotejamが公開するGitHubリポジトリを、酒場風の静的ポータルで検索・分類・閲覧するためのJavaScript製ツール。GitHub APIとCopilot生成の日本語要約を組み合わせ、READMEや公開ページも確認できます。",
+      "detail": "こいつは、無機質なGitHubの一覧を、酒場の依頼記録のように探せる個人向けポータルだな。中ではGitHub APIからtemesotejam所有の公開リポジトリを取得し、名前やDescription、Topics、使用言語、Copilot要約を横断検索できるようにしてる。技術領域を学習・AI、制御・ロボット、センサ・組込み、画像・映像、Web・ツールなどに分類し、カードを選べば概要や特徴、技術名をその場で読める。Copilot解析済みならREADMEや構成を根拠にした説明を表示し、未解析の新規リポジトリにはREADMEの短いプレビューを補う仕組みだ。GitHub Pagesで静的に公開できる一方、対象は公開リポジトリだけで、削除や変更といった書き込み操作までは行わない。",
+      "closingRemark": "要約を更新する酒場自身も、6時間ごとの巡回で記録を整えている。店番まで自動化済みってわけだな",
       "features": [
         "GitHub APIから公開リポジトリを自動取得",
         "名前・説明・Topics・言語・要約を横断検索",
         "技術領域ごとの簡易分類とカード表示",
-        "Copilot解析とREADME由来の暫定説明を使い分け",
-        "GitHub Pagesで静的公開できる"
+        "Copilot解析とREADMEプレビューによる日本語説明",
+        "GitHub Pagesで静的公開可能"
       ],
       "technologies": [
         "JavaScript",
@@ -28,18 +28,18 @@
         "Web・ツール",
         "静的サイト",
         "GitHub連携",
-        "情報ポータル"
+        "AI"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-09-20T16:15:19Z",
+      "sourcePushedAt": "2026-09-20T20:55:26Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-09-20T16:15:19Z",
+        "pushedAt": "2026-09-20T20:55:26Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -49,8 +49,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "7c22fa311ab3fef3b9573b68195f321c3cc67b51d6ea6a4a40315cb3be952e0a",
-      "generatedAt": "2026-09-20T20:55:25.568Z"
+      "sourceFingerprint": "b4ecbfea2e9db11aaaf688d53ea67fb926a6f92c1af3c1cbe412ab3493c6455e",
+      "generatedAt": "2026-09-21T05:07:38.586Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -3853,24 +3853,24 @@
       "generatedAt": "2026-09-20T11:35:53.016Z"
     },
     "atoms3r-visual-pose-tracker": {
-      "title": "AtomS3R視覚ポーズ追跡",
-      "summary": "M5Stack AtomS3R-CAMで、2枚のArUcoマーカーを水平移動向けに軽量追跡する組み込みビジョン基盤だ。200 HzのBMI270制御ループを止めず、JSON telemetryやブラウザ書き込みまで含めて実機検証を進められる。",
-      "detail": "こいつは、M5Stack AtomS3R-CAM上で2枚のArUcoマーカーから機構の視覚位置を取り出す、小さな組み込みビジョン基盤だな。GC0308のQVGAグレースケール画像を上下の取得帯に分け、最初はDICT_4X4_50のID 0と1を検出し、ロック後は予測ROI内を3本の画素列でX方向だけ追跡して負荷を抑えてる。失敗すればブロック追跡、さらに必要ならArUco再取得へ戻り、別コアではBMI270の200 Hzタスクと制御フックを視覚処理から独立して動かす構成だ。921600 baudのJSON telemetryで追跡元や失敗原因、画像座標、姿勢推定を確認でき、PlatformIOのビルドとGitHub Pages経由のブラウザ書き込みにも対応している。ただしカメラ内部パラメータはまだ概算で、raw姿勢やメートル単位の値は校正済みの精度ではなく、tilt_reliableも条件が整うまで無効のままだ。",
-      "closingRemark": "3本の行で marker を追う省エネ設計だが、カメラの癖まではまだ節電してくれない。",
+      "title": "AtomS3Rマーカー姿勢追跡",
+      "summary": "M5Stack AtomS3R-CAMで2枚のArUcoマーカーを追跡し、主に水平方向の位置と姿勢を計測する組み込みファームウェアだ。200HzのIMU制御を止めない軽量な画像処理、JSON telemetry、ブラウザ書き込みまで揃えている。",
+      "detail": "こいつは、M5Stack AtomS3R-CAM上で2枚のArUcoマーカーを追跡し、機構の水平方向の動きを測るための小さなビジョン・ファームウェアだな。中ではGC0308の320×240グレースケール画像を上下の取得帯に分け、既知の6×6パターンを使った全幅の1次元探索を主経路にしてる。追跡が怪しくなれば局所1D、二段階探索、ArUco再取得へ段階的に切り替え、別コアのBMI270による200Hz IMU・制御タスクは画像処理で止めない。921600 baudのJSON telemetryでは、画素位置、追跡経路、処理時間、IMUの遅延、しきい値や信頼度まで確認でき、PagesのESP Web Toolsから書き込みもできる。ただしカメラ内部パラメータはまだ概算で、3D位置やロール・ピッチは校正前の診断値に留まるってところだ。",
+      "closingRemark": "6mmの黒い印を二枚追いながら、制御ループだけは律儀に200Hzを守る。視覚のほうが少し慌ただしいな。",
       "features": [
-        "ID 0とID 1を上下の水平取得帯で個別追跡",
-        "通常時は予測ROI内の軽量なX方向1D追跡",
-        "追跡失敗時にブロック追跡とArUco再取得へ段階的に切り替え",
-        "200 HzのIMU・制御ループを視覚処理から分離",
-        "JSON telemetry、ブラウザ書き込み、印刷用マーカーを提供"
+        "上下の水平バンドを使う2マーカー同時追跡",
+        "全幅の制約付き1次元探索と複数の追跡フォールバック",
+        "200Hz IMU・制御タスクと画像処理の分離",
+        "詳細なJSON telemetryとWeb Serialモニター",
+        "GitHub Pages経由のブラウザ書き込みと印刷用マーカー"
       ],
       "technologies": [
-        "C++17",
-        "PlatformIO",
-        "ESP32-S3",
         "M5Stack AtomS3R-CAM",
-        "GC0308",
+        "ESP32-S3",
+        "PlatformIO",
+        "Arduino",
         "OpenCV ArUco",
+        "GC0308",
         "BMI270",
         "ESP Web Tools"
       ],
@@ -3884,12 +3884,12 @@
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1369512147,
-      "sourcePushedAt": "2026-09-20T08:48:43Z",
+      "sourcePushedAt": "2026-09-21T05:06:50Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1369512147,
         "name": "atoms3r-visual-pose-tracker",
-        "pushedAt": "2026-09-20T08:48:43Z",
+        "pushedAt": "2026-09-21T05:06:50Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -3899,8 +3899,8 @@
         "fork": false,
         "language": "C++"
       },
-      "sourceFingerprint": "f2590e71e573160f68ca80102b046eb83649f720913ecec5469d025442d503b1",
-      "generatedAt": "2026-09-20T11:35:32.499Z"
+      "sourceFingerprint": "de2065263f0898a396aa5143c406523fc13004bfac01fe6f9492749151a45e61",
+      "generatedAt": "2026-09-21T05:07:20.822Z"
     },
     "M5stackCORES3I2CdemoUWB": {
       "title": "CoreS3・Type2DK通信診断",
@@ -4204,42 +4204,42 @@
     },
     "atoms3r-amplitude-control-development": {
       "title": "AtomS3R振幅制御開発",
-      "summary": "AtomS3Rのリアクションホイール機構で、目標振幅へ安定して収束させる制御則を検証する開発リポジトリ。6-state MEKFを基盤に、次ピーク予測、入力Q、実機RWLOGと動画の照合を段階的に進めている。",
-      "detail": "こいつは、AtomS3Rのリアクションホイール系で振幅制御を改善するための開発リポジトリだ。中ではV46ajの6-state MEKF、3 ms固定のZEROクロス遅延補償、ピーク判定とrate-only予測を凍結したベースラインにして、次ピーク振幅の予測、入力Qの決め方、目標振幅へ揃える制御則を比較できる形で育てている。実機のRWLOGと動画を使った検証では、69個のピークが一対一で対応し、MEKFと動画の差もRMSE約0.103°まで確認されている。現在のV46akは入力直前の実測電流とRoller485ホイール速度を観測ログへ加える版で、制御そのものには使わない。Web flasherや変換ツールもあるが、Q1はモーター停止専用で、実機書き込みまで自動で行うものではない。",
-      "closingRemark": "姿勢はかなり細かく測れるようになったが、狙った8度へ揃える仕事はまだ別勘定らしい。",
+      "summary": "AtomS3Rの振幅制御を改善するための開発リポジトリだ。MEKFとRWLOGを使って、次ピーク予測やQ決定、制御則を実機と動画の差分で検証してる。",
+      "detail": "こいつは、AtomS3Rのリアクションホイールで振幅制御の改善を進めるための開発リポジトリだな。中では、6-state MEKFで姿勢推定とゼロクロス、ピーク検出を行い、RWLOGの時系列ログを使って動画と制御のズレを見てる。次ピークの予測や入力Qの決定、補正条件、目標振幅への収束を差分管理しながら試してるってわけだ。Web flasherやPython変換ツールも揃っていて、実機運用と検証の両輪になってる。だが、ここは実験の記録と比較の場であって、最終製品や一般向けライブラリではない。",
+      "closingRemark": "新しい制御はWeb flasherで配るが、最終的な正しさは実機のRWLOGと動画で決まる。",
       "features": [
-        "V46ajを凍結ベースラインにした段階的な制御開発",
-        "6-state MEKFによる姿勢推定とZEROクロス・ピーク判定",
-        "次ピーク予測と入力Qのモデル比較",
-        "実機RWLOGと動画ピークの照合検証",
-        "モーター停止専用Q1シャドーロガーとV46ak観測ログ"
+        "6-state MEKFで姿勢推定とゼロクロス検出",
+        "RWLOGから時系列データをCSVへ変換して比較",
+        "動画と制御のピーク差を定量評価",
+        "Web flasherで実機へビルドを配布",
+        "V46系のベースラインと改良履歴を並べて管理"
       ],
       "technologies": [
+        "AtomS3R",
         "C++",
         "Python",
+        "MEKF",
+        "RWLOG",
         "PlatformIO",
-        "Arduino",
         "ESP32",
-        "M5Stack ATOMS3R",
-        "M5Unified",
-        "Adafruit AHRS"
+        "M5Unified"
       ],
       "categories": [
-        "実験",
-        "組み込み",
+        "ロボティクス",
         "制御工学",
-        "姿勢推定"
+        "実験用ファームウェア",
+        "データ解析"
       ],
       "status": "実験",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1377999754,
-      "sourcePushedAt": "2026-09-20T08:12:01Z",
+      "sourcePushedAt": "2026-09-21T04:56:27Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1377999754,
         "name": "atoms3r-amplitude-control-development",
-        "pushedAt": "2026-09-20T08:12:01Z",
+        "pushedAt": "2026-09-21T04:56:27Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -4249,8 +4249,8 @@
         "fork": false,
         "language": "C++"
       },
-      "sourceFingerprint": "dde2d5f4357751d031c65f2d443f87b4a1419e409b53110191b5e92cc49d52be",
-      "generatedAt": "2026-09-20T11:35:41.843Z"
+      "sourceFingerprint": "32b4e080d148b131a48d2159c1d874ca179d1a9307ca25ed357e3277c4c6fb77",
+      "generatedAt": "2026-09-21T05:07:30.422Z"
     }
   },
   "repositoryCount": 86
