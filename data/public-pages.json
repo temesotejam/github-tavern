@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-20T11:51:32.204Z",
-  "repositoryCount": 86,
-  "pageCount": 45,
+  "generatedAt": "2026-09-21T13:23:45.915Z",
+  "repositoryCount": 88,
+  "pageCount": 47,
   "pages": {
     "2026_8_5_3": {
       "url": "https://temesotejam.github.io/2026_8_5_3/",
@@ -36,6 +36,16 @@
     },
     "atoms3r-amplitude-control-development": {
       "url": "https://temesotejam.github.io/atoms3r-amplitude-control-development/",
+      "source": "github-pages",
+      "status": 200
+    },
+    "atoms3r-amplitude-control-v46ak-stable": {
+      "url": "https://temesotejam.github.io/atoms3r-amplitude-control-v46ak-stable/",
+      "source": "github-pages",
+      "status": 200
+    },
+    "atoms3r-foot-angle-tracker": {
+      "url": "https://temesotejam.github.io/atoms3r-foot-angle-tracker/",
       "source": "github-pages",
       "status": 200
     },
