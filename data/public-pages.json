@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-21T13:23:45.915Z",
-  "repositoryCount": 88,
-  "pageCount": 47,
+  "generatedAt": "2026-09-22T05:27:47.627Z",
+  "repositoryCount": 91,
+  "pageCount": 50,
   "pages": {
     "2026_8_5_3": {
       "url": "https://temesotejam.github.io/2026_8_5_3/",
@@ -44,8 +44,18 @@
       "source": "github-pages",
       "status": 200
     },
+    "atoms3r-amplitude-control-v46al-r2-stable": {
+      "url": "https://temesotejam.github.io/atoms3r-amplitude-control-v46al-r2-stable/",
+      "source": "github-pages",
+      "status": 200
+    },
     "atoms3r-foot-angle-tracker": {
       "url": "https://temesotejam.github.io/atoms3r-foot-angle-tracker/",
+      "source": "github-pages",
+      "status": 200
+    },
+    "atoms3r-free-foot-amplitude-control": {
+      "url": "https://temesotejam.github.io/atoms3r-free-foot-amplitude-control/",
       "source": "github-pages",
       "status": 200
     },
@@ -126,6 +136,11 @@
     },
     "realsense-web-viewer": {
       "url": "https://temesotejam.github.io/realsense-web-viewer/",
+      "source": "github-pages",
+      "status": 200
+    },
+    "research-break-arcade": {
+      "url": "https://temesotejam.github.io/research-break-arcade/",
       "source": "github-pages",
       "status": 200
     },
