@@ -1,44 +1,45 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-23T04:53:41.469Z",
+  "generatedAt": "2026-09-23T11:50:02.967Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ酒場",
-      "summary": "公開GitHubリポジトリを、古い情報端末のような酒場UIで探して読む個人向けポータル。GitHub APIから一覧を取得し、検索・分類・詳細表示に加えて、CopilotがREADMEや構成を根拠に作る日本語説明も確認できる。",
-      "detail": "こいつは、temesotejamが所有する公開GitHubリポジトリを、無機質な一覧ではなく酒場の依頼記録のように探すための静的ポータルだな。中ではGitHub APIからリポジトリ情報を取得し、名前やDescription、Topics、使用言語、Copilot要約を横断検索しながら、技術領域ごとの簡易分類と詳細表示を行ってる。Copilot解析済みならREADMEやファイル構成、設定ファイルを根拠にした日本語の概要・特徴・技術情報を見られ、未解析の新規リポジトリにはREADMEから短い暫定説明を補う仕組みもある。6時間ごとのGitHub Actionsで更新済みのものだけを再解析し、GitHub Pagesでそのまま公開できる構成だ。ただし対象は公開リポジトリに限られ、削除や変更、Issue作成などの書き込み操作は行わない。",
-      "closingRemark": "6時間ごとに記録を更新する酒場だが、注文を取りに行くのはGitHub APIのほうらしい。",
+      "title": "公開リポジトリ酒場ポータル",
+      "summary": "temesotejamが所有する公開GitHubリポジトリを、酒場の依頼記録を思わせる画面で探せる個人向けポータルだ。GitHub APIから一覧を取得し、検索・分類・Copilotによる日本語説明や公開ページ確認までまとめて扱う。",
+      "detail": "こいつは、temesotejamが所有する公開GitHubリポジトリを、無機質な一覧ではなく古い情報端末風の酒場UIから探すための静的ポータルだな。中ではGitHub APIからリポジトリの名前、説明、Topics、使用言語などを取得し、検索語や技術領域ごとの簡易分類で絞り込めるようにしてる。カードを選べば、READMEや構成を根拠にしたCopilot生成の日本語概要、特徴、技術情報を表示でき、解析前の新規リポジトリにはREADMEから短い暫定説明を補う仕組みもある。GitHub Actionsが6時間ごとに更新を確認し、変更されたものだけを最大8件ずつ解析してdata/summaries.jsonへ蓄えるから、GitHub Pagesだけで公開できる構成ってわけだ。ただし対象は公開リポジトリに限られ、サイトから削除やIssue作成などの書き込み操作は行わない。",
+      "closingRemark": "6時間ごとに棚を見回るが、秘蔵の非公開案件までは酒場に並ばない。",
       "features": [
         "GitHub APIから公開リポジトリ一覧を自動取得",
         "名前・説明・Topics・言語・Copilot要約を横断検索",
-        "技術領域ごとの簡易分類とカード選択式の詳細表示",
-        "READMEや構成を根拠にした日本語の自動説明",
-        "GitHub Actionsで更新済みリポジトリだけを定期解析"
+        "技術領域ごとの簡易分類とカード形式の詳細表示",
+        "Copilot解析済みの日本語説明とREADME由来の暫定説明",
+        "GitHub Pagesで公開できる静的構成"
       ],
       "technologies": [
         "JavaScript",
         "HTML",
         "CSS",
         "GitHub API",
-        "GitHub Copilot CLI",
         "GitHub Actions",
-        "GitHub Pages"
+        "GitHub Copilot CLI",
+        "GitHub Pages",
+        "MutationObserver"
       ],
       "categories": [
         "Web・ツール",
-        "GitHub",
         "静的サイト",
-        "自動化"
+        "GitHub連携",
+        "AI要約"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-09-22T21:27:53Z",
+      "sourcePushedAt": "2026-09-23T05:15:50Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-09-22T21:27:53Z",
+        "pushedAt": "2026-09-23T05:15:50Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -48,8 +49,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "765f59e15d5acecbd7c3009d1035f265c70c52d55ac5ab03b05107d10f233614",
-      "generatedAt": "2026-09-23T04:53:41.468Z"
+      "sourceFingerprint": "42f1f3cc246a26516b4cab9407bfdc2ca0305106f14aaebfdf4d9d00c4349977",
+      "generatedAt": "2026-09-23T11:50:02.967Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -4352,16 +4353,16 @@
       "generatedAt": "2026-09-21T13:00:29.829Z"
     },
     "research-break-arcade": {
-      "title": "研究休憩ブラウザゲーム集",
-      "summary": "研究の合間に1〜2分で遊べる軽量ブラウザゲームと、自律ロボットや2勢力の戦況を眺めるCanvasシミュレーションをまとめた作品集だ。外部ライブラリやビルド処理なしで動き、Local Storageによる記録やGitHub Pages公開にも対応している。",
-      "detail": "こいつは、研究の合間に短く遊んで頭を切り替えるためのブラウザゲーム集でな。Tiny Lander、Night Fishing、Stack Tower、One Button Drift、Orbit Slingの5本は、いずれも90秒前後の操作に絞られ、PCとモバイルの両方で遊べる。中を見ると、標準のHTML Canvas 2DとJavaScriptだけで、着陸、釣り、積み上げ、ドリフト、重力スリングをそれぞれ描画・制御してる。さらに、見た場所だけを記憶して成長する自律ロボットや、性格・補給・拠点能力を持つEMBERとAZUREの勢力戦も収録され、単純なミニゲーム集より観察要素が厚い。外部ライブラリ、ビルド処理、サーバーは不要で、Local Storageに進行やベストスコアを保存し、GitHub Pagesへ静的に公開できる構成だな。",
-      "closingRemark": "90秒の休憩を五本用意したうえで、ロボットと勢力戦は止まらない。研究より粘り強い休憩所ってわけだ。",
+      "title": "研究ブレイク用ブラウザ遊戯場",
+      "summary": "研究の合間に1〜2分で遊べる軽量ブラウザゲーム集。着陸、釣り、積み上げ、ドリフト、軌道操作に加え、自律ロボット探索と2勢力のAI戦闘シミュレーションまで、外部ライブラリなしで楽しめる。",
+      "detail": "こいつは、研究の合間に短い区切りを入れるための軽量ブラウザゲーム集だな。Tiny LanderやNight Fishingなど、90秒で終わる1ボタン系のゲームを中心に、ブラウザのCanvas 2DとLocal Storageだけで動かしてる。さらに、64×64の手続き生成世界を自律ロボットが探索するRoverと、EMBER・AZUREが性格や補給、拠点能力をもとに戦況を判断するTwo Factionsも入っていて、単なる反射神経勝負に留まらない。各ゲームはHTML・CSS・JavaScriptの静的ファイルとして個別に公開でき、GitHub Pagesにも対応している。複雑なAIの内部判断や、実際の勝敗の傾向まではコードを動かして確認する必要があるが、短時間の遊びと簡易シミュレーションを同じ棚に並べた構成ははっきりしてる。",
+      "closingRemark": "90秒の気晴らしから、拠点を奪い合うAI戦まで入っている。休憩の規模だけが、少し本気だな。",
       "features": [
-        "90秒前後で遊べる5種類の軽量ミニゲーム",
-        "Canvas 2Dによる自律ロボット探索シミュレーション",
-        "性格とUtility判断を持つ2勢力の戦況シミュレーション",
-        "Local Storageによるスコア・進行・記憶の保存",
-        "外部ライブラリやビルド処理なしで静的公開可能"
+        "90秒で遊べる5種類の短時間ブラウザゲーム",
+        "自律ロボットによる記憶・探索・自己アップグレード",
+        "性格とUtility AIで判断する2勢力戦闘シミュレーション",
+        "Canvas 2Dによる独自描画と手続き生成ワールド",
+        "Local Storageによるベストスコアや進行状況の保存"
       ],
       "technologies": [
         "JavaScript",
@@ -4369,26 +4370,25 @@
         "CSS",
         "HTML Canvas 2D",
         "Local Storage",
-        "GitHub Actions",
         "GitHub Pages",
         "requestAnimationFrame"
       ],
       "categories": [
         "ブラウザゲーム",
         "シミュレーション",
-        "Canvas",
-        "作品集"
+        "AI",
+        "実験"
       ],
-      "status": "試作",
+      "status": "完成品",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1380844336,
-      "sourcePushedAt": "2026-09-23T04:35:45Z",
+      "sourcePushedAt": "2026-09-23T10:28:04Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1380844336,
         "name": "research-break-arcade",
-        "pushedAt": "2026-09-23T04:35:45Z",
+        "pushedAt": "2026-09-23T10:28:04Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -4398,47 +4398,47 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "63fd430ec9394615da04041f2d6361ec07864b2c322c54285591dbef74a3cd45",
-      "generatedAt": "2026-09-23T04:53:31.790Z"
+      "sourceFingerprint": "d8466d0ce225be4c12c0e8e690722db555402d07f96ec649d18d0b442dc69e3d",
+      "generatedAt": "2026-09-23T11:49:51.137Z"
     },
     "atoms3r-free-foot-amplitude-control": {
-      "title": "AtomS3R振幅制御開発",
-      "summary": "AtomS3Rとリアクションホイールを使い、姿勢推定を土台に揺れの振幅を目標値へ近づける制御則を検証する開発リポジトリ。MEKF、ZEROクロスからの次ピーク予測、RWLOG解析、実機測定、Web flasherまで一通り揃っている。",
-      "detail": "こいつは、AtomS3Rのリアクションホイール系で、揺れの振幅を狙った値へ収束させる制御を実機で検証するための開発リポジトリだな。中では6-state MEKFによる姿勢推定と3 ms固定のZEROクロス遅延補償を土台に、角速度や直前ピークから次のピーク振幅を予測し、その結果を既存のQ決定へ渡している。現在のV46al-R2では、V46akのrate-only予測に直前ピークの残差補正を加え、条件外では従来モデルへフォールバックする構成だ。RWLOG v51の時系列や実機動画との照合、Q1のモーターオフ影計測、Q_IDENTの固定Q出力検証も記録され、Python変換ツールやWeb flasherから確認・書き込みができる。姿勢推定の誤差と制御誤差を分けて評価するのが狙いで、実機の揺れ全般を説明するものではないところは押さえておきたい。",
-      "closingRemark": "69個のピークを一つずつ照合した先で、今度はその次の一振れを外さない算段を立てている。",
+      "title": "AtomS3R振幅制御ファームウェア",
+      "summary": "AtomS3Rを使ったリアクションホイール系の姿勢推定と振幅制御を検証する開発用ファームウェアだ。MEKF制御、カメラによる左右足マーカー観測、診断ログ、Web flasherをまとめ、実機で制御則と検出精度を確かめる構成になっている。",
+      "detail": "こいつは、M5Stack AtomS3R上でリアクションホイールの揺れを目標振幅へ近づける制御を検証する開発リポジトリだな。中では6-state MEKFによる姿勢推定を土台に、ZEROクロスやピークを検出し、V46al-R2の予測とQ決定へつないでいる。現行版では制御とは別に左右の足角度を観測し、カメラ画像から消えたマーカーを上下±32ピクセルまで再探索する仕組み、検出理由や処理時間を含む診断、PSRAM保存とCRC検証付き再開可能なRWLOG出力も備える。Web flasherやUSB診断手順、ログ変換ツールがあり、実験結果を動画やCSVと突き合わせられる。ただし、マーカー復旧の実画像精度と制御期限、長時間の安定性までは現行資料だけでは確定しておらず、統合実機検証は pending というわけだ。",
+      "closingRemark": "足を見失ってもログは残る。あとは実機が、今度は制御を見失わないかを確かめる番だな。",
       "features": [
-        "V46aj系の6-state MEKF姿勢推定を基準にした振幅制御検証",
-        "ZEROクロスから次ピーク振幅を予測しQ入力を決める制御則",
-        "V46al-R2の直前ピーク残差補正と条件外フォールバック",
-        "RWLOG・実機動画・Python変換ツールによる検証",
-        "AtomS3R向けWeb flasherと安全条件・ESTOPを備えた実機構成"
+        "6-state MEKFを使った姿勢推定と振幅制御",
+        "カメラ画像による左右足マーカーの観測と垂直ずれ復旧",
+        "検出理由・品質・処理時間を含む詳細診断",
+        "PSRAMイベント保存とCRC検証付き再開可能RWLOG出力",
+        "Web flasher、USB診断、RWLOGからCSVへの変換"
       ],
       "technologies": [
         "C++",
         "Python",
         "PlatformIO",
-        "Arduino framework",
+        "Arduino",
         "ESP32",
-        "AtomS3R",
-        "6-state MEKF",
-        "M5Unified"
+        "M5Stack AtomS3R",
+        "M5Unified",
+        "Adafruit AHRS"
       ],
       "categories": [
-        "実験",
         "組み込み",
-        "制御工学",
-        "姿勢推定"
+        "制御",
+        "姿勢推定",
+        "実験"
       ],
-      "status": "実験",
+      "status": "試作",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1380859177,
-      "sourcePushedAt": "2026-09-23T04:52:11Z",
+      "sourcePushedAt": "2026-09-23T11:06:15Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1380859177,
         "name": "atoms3r-free-foot-amplitude-control",
-        "pushedAt": "2026-09-23T04:52:11Z",
+        "pushedAt": "2026-09-23T11:06:15Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -4448,8 +4448,8 @@
         "fork": false,
         "language": "C++"
       },
-      "sourceFingerprint": "8d97ae0beb53e55e23a5c627ea78f21bff9e9d6fc415ab4154d8c33e64096569",
-      "generatedAt": "2026-09-23T04:53:12.489Z"
+      "sourceFingerprint": "54e72a97d1cb0b8daacccb5fe726d3a23922255d72ab3cc4bcd0b101fcd759f2",
+      "generatedAt": "2026-09-23T11:49:38.680Z"
     },
     "atoms3r-amplitude-control-v46al-r2-stable": {
       "title": "AtomS3R振幅制御ファームウェア",
