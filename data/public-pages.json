@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-23T05:15:46.228Z",
-  "repositoryCount": 92,
-  "pageCount": 51,
+  "generatedAt": "2026-09-24T12:18:49.734Z",
+  "repositoryCount": 93,
+  "pageCount": 52,
   "pages": {
     "2026_8_5_3": {
       "url": "https://temesotejam.github.io/2026_8_5_3/",
@@ -136,6 +136,11 @@
     },
     "reaction-wheel-rocking-sim": {
       "url": "https://temesotejam.github.io/reaction-wheel-rocking-sim/",
+      "source": "github-pages",
+      "status": 200
+    },
+    "realsense-browser-slam": {
+      "url": "https://temesotejam.github.io/realsense-browser-slam/",
       "source": "github-pages",
       "status": 200
     },
