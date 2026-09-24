@@ -1,23 +1,23 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-24T05:02:51.049Z",
+  "generatedAt": "2026-09-24T11:58:12.931Z",
   "repositories": {
     "github-tavern": {
-      "title": "Project Tavern公開リポジトリ酒場",
-      "summary": "temesotejamが所有する公開GitHubリポジトリを、酒場風の画面で検索・分類・閲覧する個人ポータル。GitHub APIの情報とCopilot生成の日本語説明を組み合わせ、README未解析の新規リポジトリには暫定表示も用意している。",
-      "detail": "こいつは、公開GitHubリポジトリを無機質な一覧ではなく、酒場の依頼記録のように探すための個人ポータルだな。中ではGitHub APIからtemesotejamの公開リポジトリを取得し、名前やDescription、Topics、言語、Copilot要約を横断検索して、技術領域ごとに簡易分類してる。カードを選べば概要や特徴、技術名を確認でき、Copilot解析済みならREADMEや構成、設定ファイルを根拠にした日本語説明が出るし、未解析の新規リポジトリにはREADMEから短い暫定説明を補う仕組みもある。説明データは6時間ごとのGitHub Actionsで更新され、変更のないリポジトリは再解析しない。GitHub Pagesで静的に公開できる一方、対象は公開情報だけで、リポジトリの変更やIssue作成までは行わないってところだ。",
-      "closingRemark": "6時間ごとに棚卸しはするが、酒場そのものは静的ページのまま。騒がず更新するのがここの流儀らしい。",
+      "title": "公開リポジトリ案内酒場",
+      "summary": "temesotejamが所有する公開GitHubリポジトリを、古い情報端末風の画面で探して読める個人ポータル。GitHub APIの情報とCopilot生成の日本語要約を使い、検索・分類・詳細表示までまとめて行える。",
+      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、無機質な一覧ではなく酒場の依頼記録のように探すための個人ポータルだな。中ではGitHub APIからリポジトリを取得し、名前やDescription、Topics、使用言語、Copilot要約を横断検索できるようにしてる。カードを選べば概要や特徴、技術要素を確認でき、Copilot解析済みならREADMEや構成、設定ファイルを根拠にした日本語説明が出るし、未解析の新規リポジトリにはREADMEから暫定説明を補う仕組みもある。分類は学習・AI、制御・ロボット、センサ・組込み、画像・映像、Web・ツールなどの簡易判定で、GitHub Pagesとして静的に公開できる。ただし対象は公開リポジトリだけで、削除や変更、Issue作成のような書き込み操作までは行わない。",
+      "closingRemark": "GitHubを読むだけの端末だが、要約の更新にはちゃんと6時間ごとの見回りが入ってる。",
       "features": [
-        "GitHub APIによる公開リポジトリの自動取得",
-        "名前・説明・Topics・言語・要約の横断検索",
+        "公開リポジトリをGitHub APIから自動取得",
+        "名前・説明・Topics・言語・Copilot要約を横断検索",
         "技術領域ごとの簡易分類とカード表示",
-        "Copilot生成の日本語概要・特徴・技術情報",
-        "README未解析リポジトリへの暫定説明表示"
+        "READMEや構成を根拠にした日本語要約",
+        "未解析リポジトリにはREADMEの暫定説明を表示"
       ],
       "technologies": [
         "JavaScript",
-        "HTML",
         "CSS",
+        "HTML",
         "GitHub API",
         "GitHub Copilot CLI",
         "GitHub Actions",
@@ -28,18 +28,18 @@
         "Web・ツール",
         "静的サイト",
         "GitHub連携",
-        "AI要約"
+        "個人ポータル"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-09-23T21:35:19Z",
+      "sourcePushedAt": "2026-09-24T05:02:52Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-09-23T21:35:19Z",
+        "pushedAt": "2026-09-24T05:02:52Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -49,8 +49,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "dacebb43d607154c4e088f4fa0795d9f908d64246f8aec8a38eb310224e5b90c",
-      "generatedAt": "2026-09-24T05:02:51.049Z"
+      "sourceFingerprint": "e8e2096048485a6319323b3b6c2cd9c620958d351a10b0ac4bdc7f2f0383f7b2",
+      "generatedAt": "2026-09-24T11:58:12.931Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -4353,43 +4353,43 @@
       "generatedAt": "2026-09-21T13:00:29.829Z"
     },
     "research-break-arcade": {
-      "title": "研究休憩ブラウザゲーム集",
-      "summary": "研究の合間に1〜2分で遊べる、軽量なブラウザゲームと自律シミュレーションの集まり。着陸、釣り、積み上げ、ドリフト、軌道操作に加え、探索ロボットや2勢力の戦況もCanvas 2Dで動かせる。",
-      "detail": "こいつは、研究の合間に短く遊んで区切りをつけるためのブラウザゲーム集だな。中には90秒制のTiny LanderやNight Fishing、Stack Tower、One Button Drift、Orbit Slingがあり、キーボードとモバイル操作の両方に対応してる。さらに、64×64の手続き生成ワールドをロボットが視界と記憶だけで探索する自律シミュレーションと、EMBER・AZUREが性格や補給、拠点能力をもとに戦う勢力シミュレーションも入っている。外部ライブラリやビルド処理は使わず、HTML・CSS・JavaScriptとCanvas 2Dだけで動き、スコアや進行はLocal Storageに保存される。静的ファイルをそのまま配信できる一方、PAUSE機能はなく、非表示タブでは復帰時に論理時間を追いつかせる作りだ。",
-      "closingRemark": "64×64の世界を記憶しながら歩くロボットまで、研究休憩の一分半に押し込んである。",
+      "title": "研究ブレイク用ブラウザゲーム集",
+      "summary": "研究の合間に1〜2分で遊べる軽量ブラウザゲームと、長く眺められる自律シミュレーションをまとめた作品集だ。着陸、釣り、積み上げ、ドリフト、軌道飛行に加え、探索ロボットや2勢力の戦況も楽しめる。",
+      "detail": "こいつは、研究の合間に短時間で区切りを付けるためのブラウザゲーム集だな。Tiny LanderやNight Fishing、Stack Tower、One Button Drift、Orbit Slingは、それぞれ90秒前後で遊べる操作の絞られたミニゲームとして作られている。中を見ると、標準のHTML Canvas 2DとJavaScriptだけで描画とゲーム進行を組み、ベストスコアや進行状況はLocal Storageへ保存してる。それとは別に、64×64の地形を視界から記憶しながら進む自律ロボットと、性格・補給・拠点能力を使って戦うEMBER／AZUREの勢力シミュレーションも入っていて、短時間の操作と放置観察の両方に対応する。外部ライブラリやビルド処理はなく、静的ファイルを開くだけで動く構成だが、各ゲームの細かなバランスや長期的な勝敗までは資料だけでは判断できない。",
+      "closingRemark": "90秒の気晴らしの隣で、ロボットは記憶を蓄え、勢力は砲撃まで始めている。休憩の規模が少し大きいな。",
       "features": [
-        "90秒で遊べる5種類のミニゲーム",
-        "視界と記憶を使う自律探索ロボット",
-        "性格とUtility AIで動く2勢力戦争",
-        "Local Storageによるスコア・進行保存",
-        "GitHub Pages向けの静的配信構成"
+        "90秒前後で遊べる5種類の短時間ミニゲーム",
+        "視界と記憶マップを使う自律ロボット探索",
+        "性格とUtility AIで判断する2勢力シミュレーション",
+        "Canvas 2Dによる軽量な独自描画",
+        "Local Storageによるスコア・進行状況の保存"
       ],
       "technologies": [
         "JavaScript",
         "HTML",
         "CSS",
-        "Canvas 2D",
+        "HTML Canvas 2D",
         "Local Storage",
-        "requestAnimationFrame",
+        "GitHub Actions",
         "GitHub Pages",
-        "静的HTTPサーバー"
+        "requestAnimationFrame"
       ],
       "categories": [
         "ブラウザゲーム",
         "シミュレーション",
-        "ミニゲーム",
-        "JavaScript"
+        "自律AI",
+        "プロシージャル生成"
       ],
       "status": "完成品",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1380844336,
-      "sourcePushedAt": "2026-09-24T04:36:27Z",
+      "sourcePushedAt": "2026-09-24T05:15:53Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1380844336,
         "name": "research-break-arcade",
-        "pushedAt": "2026-09-24T04:36:27Z",
+        "pushedAt": "2026-09-24T05:15:53Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -4399,47 +4399,47 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "a2e183e97d6c37ef4eb3f8fff8e176932c0d749095df3aa6413528a2230d29da",
-      "generatedAt": "2026-09-24T05:02:20.284Z"
+      "sourceFingerprint": "65653bfa7741081a0c8794b4733067bc4339d7dc08fb3c673f40489d148f3f7e",
+      "generatedAt": "2026-09-24T11:58:03.542Z"
     },
     "atoms3r-free-foot-amplitude-control": {
-      "title": "自由足振幅制御と観測診断",
-      "summary": "自由足の姿勢と振幅を見ながら、制御のズレがどこから来るかを切り分ける実験用ファームウェアだ。MEKF・RWLOG・WebUIの診断画像を組み合わせて、左右の足角やゼロ点の違いを確認できるのが主眼だな。",
-      "detail": "こいつは、AtomS3Rの自由足で、姿勢推定と振幅制御のズレを見極めるための実験用リポジトリだ。中では MEKF で姿勢を推定し、ゼロクロスやピーク検出、RWLOG の保存、WebUI からの診断画像取得をまとめて回してる。WebUI には候補点、理由、ゼロ位置、範囲の可視化が入っていて、左右の足角や白線候補の選び方を比較しやすい。要するに、ただ動かすより、観測と制御の境界を見抜くための道具ってわけだ。現状は 0.47.5 の診断強化が入っていて、実機観測とソフト側の不整合を明確にしようとしてる。ただ、最終的な角度精度や制御の締切は、ハード側の確認がまだ必要だな。",
-      "closingRemark": "診断画像と RWLOG が揃うと、制御が崩れた場所が一番見えやすくなるな。",
+      "title": "自由脚振幅制御と診断の実験基盤",
+      "summary": "AtomS3R向けの自由脚振幅制御を、MEKF計測と診断ログで切り分けるための実験基盤だ。WebUIとRWLOGで姿勢・ゼロ判定・制御の証拠を残しながら、ハードウェア確認がまだ先の診断ビルドってわけだ。",
+      "detail": "こいつは、AtomS3Rの自由脚振幅をどう制御してるかを、姿勢推定とログの観測から見直すための診断用ファームウェアだな。中ではMEKFで体の傾きと足角を推定し、ZEROクロス・ピーク検出・RWLOG保存までを一つの制御ループに乗せてる。WebUIからは静止姿勢比較、画像診断、計測範囲の確認までできて、制御の妥当性を常に可視化してるってわけだ。だが、READMEでは「実機での解決は未検証」って明言していて、カメラフレームレートや制御デッドラインまではテストだけでは断定できない。要するに、このリポジトリは理論やログの整理を前提に、ハードウェアでちゃんと収束するかを探る現場用の試作だ。",
+      "closingRemark": "結局、ログのメタデータが増えたのは、再現条件を揃えるためだな。診断が進むほど、動画だけじゃ足りないってのがよく分かる。",
       "features": [
-        "MEKFベースの姿勢推定",
-        "ゼロクロス・ピーク検出と振幅予測",
-        "RWLOG/診断JSONによる時系列保存",
-        "WebUIで候補点とゼロ位置を可視化",
-        "左右足の範囲・不整合診断"
+        "自由脚の足角と体傾きの観測",
+        "MEKFベースのZEROクロスとピーク判定",
+        "WebUIでの静止姿勢比較と画像診断",
+        "CRC検証付きRWLOGの保存と再現",
+        "制御・計測の範囲と制約をログで可視化"
       ],
       "technologies": [
         "C++",
         "PlatformIO",
-        "ESP32 / AtomS3R",
-        "MEKF",
-        "PSRAM",
+        "ESP32",
+        "AtomS3R",
         "M5Unified",
-        "Adafruit AHRS",
-        "Python"
+        "BMI270",
+        "MEKF",
+        "PSRAM"
       ],
       "categories": [
         "ロボット制御",
-        "姿勢推定",
         "計測診断",
-        "Webツール"
+        "組み込み開発",
+        "WebUI"
       ],
-      "status": "実験",
-      "confidence": "high",
+      "status": "試作",
+      "confidence": "medium",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1380859177,
-      "sourcePushedAt": "2026-09-24T04:32:27Z",
+      "sourcePushedAt": "2026-09-24T09:55:20Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1380859177,
         "name": "atoms3r-free-foot-amplitude-control",
-        "pushedAt": "2026-09-24T04:32:27Z",
+        "pushedAt": "2026-09-24T09:55:20Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -4449,8 +4449,8 @@
         "fork": false,
         "language": "C++"
       },
-      "sourceFingerprint": "8848c0137c0139c79e440b0012f4d59eed83f2407db4ad3ca31c12c77255d19c",
-      "generatedAt": "2026-09-24T05:02:41.989Z"
+      "sourceFingerprint": "340c55dbf4e09baff6a3d24a26eeeaa095a31357bba0cab8c91b953b1bbb3291",
+      "generatedAt": "2026-09-24T11:57:50.691Z"
     },
     "atoms3r-amplitude-control-v46al-r2-stable": {
       "title": "AtomS3R振幅制御ファームウェア",
@@ -4551,7 +4551,57 @@
       },
       "sourceFingerprint": "7dc8296482f209d60ad7578f1f4f9dcfc8583bf8f151703ea7fd6a248b77a311",
       "generatedAt": "2026-09-23T04:53:21.222Z"
+    },
+    "realsense-browser-slam": {
+      "title": "D435ブラウザSLAM実験",
+      "summary": "Intel RealSense D435の移動を、専用SDKやROSなしでブラウザから6DoF推定する実験プロジェクトだ。WebGL2とWeb WorkerでDepth ICPを処理し、軌跡やループ補正、追跡品質をGitHub Pages上で確認できる。",
+      "detail": "こいつは、Intel RealSense D435を動かしたときの位置と姿勢を、GitHub Pages上のブラウザだけで推定するための実験だ。Depth映像をgetUserMediaで取り込み、WebGL2で表示と縮小を行い、Web Worker内のmulti-scale projective point-to-plane ICPで6DoFの移動を追っている。keyframeとDepth descriptor、RGBが使える場合のBRIEF-like descriptorで場所候補を探し、Depth ICPでループを検証して軌跡のdriftを軽量補正するほか、追跡を失った際のrelocalizationも用意されてる。処理中に次フレームを捨てるback-pressureやベンチマーク、FPS・RMSE・inliersなどの診断表示もあり、実機を動かす前に端末性能を確認できる。D435にはIMUがなく、厳密なRGB/Depth同期や完全なpose-graph最適化までは扱わないので、現状は実機精度を詰める前段の構成ってところだな。",
+      "closingRemark": "地図を描くより、まずD435がどこまで歩いたかをブラウザだけで追う。軽量補正の潔さが、この実験の持ち味だな。",
+      "features": [
+        "GitHub PagesとブラウザだけでD435の6DoF移動を推定",
+        "Web WorkerによるDepth ICPとUI処理の分離",
+        "keyframe、ループ検証、drift補正、relocalizationに対応",
+        "FPS、SLAM Hz、RMSE、inliers、ドロップフレームを常時表示",
+        "synthetic ICPで実機前にブラウザ性能を測定可能"
+      ],
+      "technologies": [
+        "Intel RealSense D435",
+        "WebGL2",
+        "Web Worker",
+        "getUserMedia",
+        "multi-scale projective point-to-plane ICP",
+        "Depth descriptor",
+        "BRIEF-like descriptor",
+        "GitHub Pages"
+      ],
+      "categories": [
+        "SLAM",
+        "コンピュータビジョン",
+        "ブラウザ",
+        "位置推定"
+      ],
+      "status": "実験",
+      "confidence": "high",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
+      "sourceRepositoryId": 1385139407,
+      "sourcePushedAt": "2026-09-24T10:30:46Z",
+      "sourceDefaultBranch": "main",
+      "sourceMetadata": {
+        "repositoryId": 1385139407,
+        "name": "realsense-browser-slam",
+        "pushedAt": "2026-09-24T10:30:46Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "HTML"
+      },
+      "sourceFingerprint": "f5c3a28c09a2f09e531a42f5ffaffb9be1643ac0bbd15a1ad4b86c4d80dd769b",
+      "generatedAt": "2026-09-24T11:57:26.019Z"
     }
   },
-  "repositoryCount": 92
+  "repositoryCount": 93
 }
