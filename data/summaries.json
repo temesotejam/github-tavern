@@ -1,45 +1,44 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-25T05:06:26.870Z",
+  "generatedAt": "2026-09-25T11:59:44.091Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ酒場ポータル",
-      "summary": "temesotejamが所有する公開GitHubリポジトリを、酒場風の静的ポータルで検索・閲覧するためのサイト。GitHub APIの一覧とCopilot要約を組み合わせ、分類や公開ページ、未解析リポジトリのREADME由来の暫定説明も確認できる。",
-      "detail": "こいつは、temesotejamが所有する公開GitHubリポジトリを、無機質な一覧ではなく酒場風の画面から探すための個人ポータルだ。中ではGitHub APIからリポジトリを取得し、名前や説明、Topics、使用言語、Copilot要約を横断検索して、技術領域ごとに分類してる。カードを選べば概要や特徴、技術名を見られるし、解析済みならREADMEや構成、設定ファイルを根拠にした日本語説明が出る。Copilot未解析の新規リポジトリにはREADMEから短い暫定説明を補い、確認済みの公開ページがあればリンクも添える構成だな。6時間ごとのGitHub Actions更新とGitHub Pagesで動く静的サイトで、公開APIを読むだけだから、非公開リポジトリの取得や書き込み操作までは扱わない。",
-      "closingRemark": "6時間ごとに棚を見回るが、非公開の酒瓶には最初から手を出さない仕組みだな。",
+      "title": "公開リポジトリ酒場",
+      "summary": "公開GitHubリポジトリを、古い情報端末風の酒場UIで探して読む個人ポータル。GitHub APIから一覧を取得し、名前や説明、Topics、言語、Copilot要約を横断検索でき、未解析のリポジトリにはREADME由来の暫定説明も補います。",
+      "detail": "こいつは、temesotejamが所有する公開GitHubリポジトリを、無機質な一覧ではなく酒場の依頼帳のように探すための静的ポータルだ。中ではGitHub APIから一覧を読み込み、リポジトリ名やDescription、Topics、使用言語、分類、Copilot要約をまとめて検索・絞り込みし、カードから概要や技術情報を開ける。Copilotの解析結果はdata/summaries.jsonに蓄えられ、READMEや構成、設定ファイルを根拠にした日本語説明と締めの一言まで表示する。未解析の新規リポジトリにはブラウザ側がREADMEを取得して短いプレビューを差し込むし、確認済みの公開ページへのリンクも出せる。GitHub Actionsが6時間ごとに更新を確認するが、対象は公開リポジトリだけで、削除や変更などの書き込み操作はしないってわけだ。",
+      "closingRemark": "解析済みなら締めの一言まで保存するあたり、一覧表にも店員を置く念の入れようだな。",
       "features": [
         "GitHub APIから公開リポジトリを自動取得",
-        "名前・説明・Topics・言語・要約を横断検索",
-        "技術領域ごとの簡易分類とカード表示",
-        "Copilotによる根拠付き日本語説明の表示",
-        "未解析リポジトリにはREADME由来の暫定説明を補完"
+        "名前・Description・Topics・言語・Copilot要約を横断検索",
+        "技術領域による簡易分類とカード絞り込み",
+        "READMEや構成を根拠にした日本語概要の表示",
+        "未解析リポジトリへのREADME暫定プレビュー"
       ],
       "technologies": [
         "JavaScript",
         "HTML",
         "CSS",
         "GitHub API",
-        "GitHub Copilot CLI",
-        "GitHub Actions",
         "GitHub Pages",
-        "MutationObserver"
+        "GitHub Actions",
+        "GitHub Copilot CLI"
       ],
       "categories": [
         "Web・ツール",
-        "GitHub連携",
         "静的サイト",
-        "個人ポータル"
+        "GitHub連携",
+        "ポータル"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-09-24T21:36:29Z",
+      "sourcePushedAt": "2026-09-25T05:06:28Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-09-24T21:36:29Z",
+        "pushedAt": "2026-09-25T05:06:28Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -49,8 +48,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "3dc9fdf1ecad36e137c22789d9fd2c04bdb6a368770f07c8c3266403141183e1",
-      "generatedAt": "2026-09-25T05:06:26.870Z"
+      "sourceFingerprint": "5e584bf62c598b1a7be5ac2779fc689355e4700548e23cbb9fa4330d57e2fa36",
+      "generatedAt": "2026-09-25T11:59:44.090Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -152,43 +151,43 @@
       "generatedAt": "2026-09-04T10:51:50.295Z"
     },
     "realsense-web-viewer": {
-      "title": "RealSenseブラウザ映像ビューア",
-      "summary": "Intel RealSenseのD400系深度カメラとT265トラッキングカメラを、ブラウザ中心で可視化する実験的ビューア。WebUSBやgetUserMedia()で深度・姿勢を直接扱い、必要に応じてlibrealsenseのローカルブリッジも使える。",
-      "detail": "こいつは、Intel RealSenseのD400系深度カメラとT265を、できるだけブラウザだけで扱うためのビューアだな。D400ではgetUserMedia()からDepth映像を取り込み、WebGL2のR32F経路でZ16相当の値を保ちながら、色付け表示や深度スケール、マウス位置の生値確認ができる。T265ではWebUSBでブート機器を見つけ、Cloudflare Worker経由でIntel公式ファームウェアを取得し、サイズとSHA-256を検証してから転送、再列挙後にTM2の6DoF姿勢を約200Hzで受け取って3D軌跡にしている。GitHub Pages上のメイン画面に加えて、ブート転送やUSB記述子、UVC、深度精度を調べる診断ページも揃い、通常経路の確認材料まで残してある。現状は実験的なv0.4で、D400の機器固有の深度単位やRGB同時表示、3D変換などは未完で、librealsenseを使うローカルブリッジは比較・参照用という位置づけだ。",
-      "closingRemark": "T265のファームウェアは同梱せず、9MB超の一枚を検証してから送り込む。ブラウザも、なかなか慎重な仕事をするな。",
+      "title": "ブラウザで見るRealSense",
+      "summary": "ブラウザだけでRealSenseの深度と6DoFを見て、同じサイト内の別ページへ配信までできる実験用ビューアだ。T265はWebUSBで直接起動し、D400はgetUserMediaで深度を拾う、そこが一番大きな特徴だな。",
+      "detail": "こいつは、ブラウザからIntel RealSenseの深度と姿勢を直接見られるようにした実験用ビューアだ。中ではT265のWebUSB接続、ファームウェアの取得とSHA-256検証、6DoFの生座標受信、D400/D405のgetUserMedia経由深度表示をまとめてやってる。要するに、Pythonやローカルサーバーなしで、ブラウザ側だけでセンサーを起動して視覚化する仕組みってわけだ。さらにルートビューアがSensor Hubになって、T265の姿勢とD435の深度を同一オリジンの別ページへ配信できる。ここが面白いところだな。たしかに主経路の検証はかなり進んでるが、正式な製品化や広い環境対応まではまだ実験段階だ。",
+      "closingRemark": "ブラウザでファームウェアを落として、サイズとSHA-256を自分で見てからUSBへ流す。そこまでやってるのに、ただの可視化じゃないな。",
       "features": [
-        "D400系のブラウザ直接深度表示とGPUカラー化",
-        "T265のWebUSBブートから6DoF姿勢表示までの一貫経路",
-        "ファームウェアのサイズ・SHA-256検証と公式CDNリレー",
-        "約200Hzの姿勢受信と表示用3D軌跡",
-        "USB・UVC・深度精度を調べる診断ページ群"
+        "T265のWebUSB直接接続",
+        "D400/D405の深度可視化",
+        "6DoF姿勢の3D軌跡表示",
+        "Sensor Hub APIによる同一オリジン配信",
+        "ファームウェア整合性チェック"
       ],
       "technologies": [
         "JavaScript",
-        "HTML",
         "WebUSB",
-        "getUserMedia()",
         "WebGL2",
-        "Cloudflare Workers",
-        "GitHub Pages",
+        "BroadcastChannel",
+        "RealSense T265",
+        "RealSense D400",
+        "Cloudflare Worker",
         "librealsense"
       ],
       "categories": [
-        "コンピュータビジョン",
-        "深度カメラ",
-        "ブラウザツール",
-        "ロボティクス"
+        "Webアプリ",
+        "センサー可視化",
+        "USB制御",
+        "実験ツール"
       ],
       "status": "実験",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1354330504,
-      "sourcePushedAt": "2026-09-13T05:21:10Z",
+      "sourcePushedAt": "2026-09-25T10:12:33Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1354330504,
         "name": "realsense-web-viewer",
-        "pushedAt": "2026-09-13T05:21:10Z",
+        "pushedAt": "2026-09-25T10:12:33Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -198,8 +197,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "98d835460df05d07915c7330efdd730ff8754073b8dcadbe9be9e59499e16609",
-      "generatedAt": "2026-09-13T12:02:46.119Z"
+      "sourceFingerprint": "1e3bf4ebf4e1c1cb8d6a87a60d5b8c2c934e55e63191b0486828c575548e73bc",
+      "generatedAt": "2026-09-25T11:59:26.810Z"
     },
     "youtube-video-fetcher": {
       "title": "YouTube映像取得・解析連携基盤",
@@ -4353,43 +4352,43 @@
       "generatedAt": "2026-09-21T13:00:29.829Z"
     },
     "research-break-arcade": {
-      "title": "研究ブレイク用ブラウザゲーム集",
-      "summary": "研究の合間に1〜2分で遊べる軽量ブラウザゲームと、長く眺められる自律シミュレーションをまとめた作品集だ。着陸、釣り、積み上げ、ドリフト、軌道飛行に加え、探索ロボットや2勢力の戦況も楽しめる。",
-      "detail": "こいつは、研究の合間に短時間で区切りを付けるためのブラウザゲーム集だな。Tiny LanderやNight Fishing、Stack Tower、One Button Drift、Orbit Slingは、それぞれ90秒前後で遊べる操作の絞られたミニゲームとして作られている。中を見ると、標準のHTML Canvas 2DとJavaScriptだけで描画とゲーム進行を組み、ベストスコアや進行状況はLocal Storageへ保存してる。それとは別に、64×64の地形を視界から記憶しながら進む自律ロボットと、性格・補給・拠点能力を使って戦うEMBER／AZUREの勢力シミュレーションも入っていて、短時間の操作と放置観察の両方に対応する。外部ライブラリやビルド処理はなく、静的ファイルを開くだけで動く構成だが、各ゲームの細かなバランスや長期的な勝敗までは資料だけでは判断できない。",
-      "closingRemark": "90秒の気晴らしの隣で、ロボットは記憶を蓄え、勢力は砲撃まで始めている。休憩の規模が少し大きいな。",
+      "title": "研究休憩向けブラウザゲーム集",
+      "summary": "研究の合間に1〜2分で遊べる軽量ブラウザゲーム集。着陸、釣り、タワー積み、ドリフト、軌道移動に加え、自律ロボット探索と2勢力の戦略シミュレーションも収録している。",
+      "detail": "こいつは、研究の合間に短く遊んで区切りを付けるための、複数の軽量ブラウザゲーム集だな。中ではCanvas 2Dを使ったTiny LanderやNight Fishing、Stack Tower、One Button Drift、Orbit Slingを動かし、90秒のセッションとLocal Storageによるベスト記録を用意してる。それだけでなく、視界に入った地形だけを記憶しながら進む自律ロボット探索と、EMBER / AZUREの2勢力が補給・医療・指揮・生産・砲撃・防衛を判断する戦略シミュレーションも含まれる。外部ライブラリやビルド処理はなく、index.htmlを開くだけでも遊べて、GitHub Pagesにも静的配信できる構成だ。派手な勝敗を人間が操作するというより、短時間の操作と自律的な挙動を眺めるための実験場ってところだな。",
+      "closingRemark": "90秒の休憩用に始めても、ロボットと勢力AIの都合で観察時間のほうが延びそうだな。",
       "features": [
-        "90秒前後で遊べる5種類の短時間ミニゲーム",
-        "視界と記憶マップを使う自律ロボット探索",
-        "性格とUtility AIで判断する2勢力シミュレーション",
-        "Canvas 2Dによる軽量な独自描画",
-        "Local Storageによるスコア・進行状況の保存"
+        "5種類の短時間ワンボタン系ゲームを収録",
+        "自律ロボットが視認情報だけで探索し自己アップグレードする",
+        "2勢力が性格とUtility AIで方針や拠点建設を変える",
+        "Local Storageでスコアやシミュレーション進行を保存",
+        "静的ファイル בלבדでブラウザやGitHub Pagesから実行可能"
       ],
       "technologies": [
         "JavaScript",
         "HTML",
         "CSS",
-        "HTML Canvas 2D",
+        "Canvas 2D",
         "Local Storage",
+        "requestAnimationFrame",
         "GitHub Actions",
-        "GitHub Pages",
-        "requestAnimationFrame"
+        "GitHub Pages"
       ],
       "categories": [
         "ブラウザゲーム",
         "シミュレーション",
-        "自律AI",
-        "プロシージャル生成"
+        "人工知能",
+        "実験"
       ],
-      "status": "完成品",
+      "status": "実験",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1380844336,
-      "sourcePushedAt": "2026-09-24T05:15:53Z",
+      "sourcePushedAt": "2026-09-25T11:47:01Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1380844336,
         "name": "research-break-arcade",
-        "pushedAt": "2026-09-24T05:15:53Z",
+        "pushedAt": "2026-09-25T11:47:01Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -4399,47 +4398,47 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "65653bfa7741081a0c8794b4733067bc4339d7dc08fb3c673f40489d148f3f7e",
-      "generatedAt": "2026-09-24T11:58:03.542Z"
+      "sourceFingerprint": "5c87ee33fc0bd332ce54905a82c3004d6e77259edae15a5742c92bb256086bad",
+      "generatedAt": "2026-09-25T11:58:53.763Z"
     },
     "atoms3r-free-foot-amplitude-control": {
-      "title": "AtomS3R振幅制御開発",
-      "summary": "M5Stack AtomS3Rを使い、リアクションホイール系の振幅を目標値へ近づける制御と、その実機検証を進める開発リポジトリ。MEKF姿勢推定、カメラによる左右の足観測、WebUI診断、CRC検証付きログ出力を統合し、制御精度と処理時間を追跡している。",
-      "detail": "こいつは、AtomS3R上でリアクションホイール系の揺れを計測し、目標振幅へ制御するためのファームウェア開発リポジトリだな。中では6状態MEKFによる姿勢推定、カメラからの左右の足角観測、V46系コントローラ、3 msのZEROクロス補償を組み合わせ、PSRAMへイベントを蓄積してCRC検証付きのRWLOGとして書き出している。WebUIでは静止姿勢の比較や160×120画像付き診断、USB経由の状態確認ができ、Web flasherも用意されている。0.47.13では258バイトのログ行エンコードを最適化し、過去実装との24,000件の一致を確認済みだ。実機では30秒走行とデータ欠落のない取得を達成している一方、2.5 ms期限超過や足の観測差、カメラの安定性はまだ検証途中ってところだ。",
-      "closingRemark": "ログは整ってきたが、2.5 msの締切だけはまだ律儀に遅れてくる。次の実機走行が本番だな。",
+      "title": "自由足振幅制御ファームウェア",
+      "summary": "M5Stack AtomS3系のカメラ付き機体で、左右の足の画像観測とIMU姿勢推定を組み合わせ、足の振幅を制御する組み込みファームウェアだ。MEKF、WebUI、CRC検証付きログ出力を備え、実機走行の計測と制御処理を継続的に改善している。",
+      "detail": "こいつは、足を固定しない状態で左右の足の動きを観測し、姿勢推定と合わせて振幅制御を試すための実機向けファームウェアだな。中ではM5Stack AtomS3のカメラから足のマーカーを追い、IMUをMEKFで推定し、その結果をV46al-R2コントローラへ渡している。WebUIでは静止姿勢の比較や診断を確認でき、PSRAMにイベントを蓄えながらCRC検証付きのRWLOGとして書き出せる。0.47.17では制御計算の再利用で候補評価数を減らし、複数回の30秒実機走行でもキュー欠落や配信の連番欠損を抑えている。ただし2.5ミリ秒の厳しい処理期限はまだ完全には守れておらず、変更後の指令遅延や実際の足の動きまでは追加のハードウェア検証が要る。",
+      "closingRemark": "計算はかなり節約できたが、2.5ミリ秒の門番はまだ納得していないらしい。",
       "features": [
-        "6状態MEKFとカメラ足観測を使った姿勢・振幅制御",
+        "カメラによる左右の足マーカー観測と支持範囲チェック",
+        "MEKFによる姿勢・バイアス推定と制御への利用",
+        "WebUIでの静止姿勢比較・診断・画像確認",
         "PSRAMイベント保存とCRC検証付きRWLOGエクスポート",
-        "静止姿勢比較や画像付き診断に対応するデバイスWebUI",
-        "Web flasherとUSB診断手順を含む実機検証環境",
-        "処理段階別のタイミング計測とハードウェア結果の継続記録"
+        "実機30秒走行の処理時間・キュー・連番監査"
       ],
       "technologies": [
         "C++",
         "Python",
         "JavaScript",
-        "PlatformIO",
         "Arduino",
         "ESP32",
+        "M5Stack AtomS3",
         "M5Unified",
-        "Adafruit AHRS"
+        "Adafruit AHRS 2.4.0"
       ],
       "categories": [
         "組み込み",
         "ロボット制御",
         "姿勢推定",
-        "実機検証"
+        "コンピュータビジョン"
       ],
-      "status": "実験",
+      "status": "試作",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1380859177,
-      "sourcePushedAt": "2026-09-25T04:50:43Z",
+      "sourcePushedAt": "2026-09-25T11:38:21Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1380859177,
         "name": "atoms3r-free-foot-amplitude-control",
-        "pushedAt": "2026-09-25T04:50:43Z",
+        "pushedAt": "2026-09-25T11:38:21Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -4449,8 +4448,8 @@
         "fork": false,
         "language": "C++"
       },
-      "sourceFingerprint": "77b5d62fa990cd3e462835d836191056d3282f85d8885666911891a3af387027",
-      "generatedAt": "2026-09-25T05:06:14.407Z"
+      "sourceFingerprint": "17d3e49db7025a1ac153d4d00db5139841fbc6d7b60467d6560e20a703dee440",
+      "generatedAt": "2026-09-25T11:59:05.890Z"
     },
     "atoms3r-amplitude-control-v46al-r2-stable": {
       "title": "AtomS3R振幅制御ファームウェア",
@@ -4553,43 +4552,43 @@
       "generatedAt": "2026-09-23T04:53:21.222Z"
     },
     "realsense-browser-slam": {
-      "title": "D435ブラウザSLAM実験",
-      "summary": "Intel RealSense D435の深度映像をブラウザだけで処理し、6DoFの位置・姿勢を推定する実験プロジェクト。GPU縮小、Web Worker内のICP、キーフレームと軽量なループ補正までをGitHub Pages上で動かします。",
-      "detail": "こいつは、Intel RealSense D435を動かしたときの位置と姿勢を、RealSense SDKやROSなしでブラウザから推定するための実験だ。中では深度をWebGL2で320×240へ縮小し、Web Worker内のmulti-scale projective point-to-plane ICPで6DoFの追跡を行ってる。キーフレームとDepth descriptorで候補を探し、RGBが使える場合はBRIEF-like descriptorも加えて、Depth ICPでループを検証しながら軌跡のドリフトを軽く補正する仕組みだな。ChromeまたはEdgeでGitHub Pagesを開き、USB接続したD435の入力を選べば、X/Y/Z、Roll/Pitch/Yaw、RMSE、inliers、処理速度や取りこぼしを確認できる。もっとも、IMUはなく、ブラウザ経由のRGB/Depth同期も限定的で、完全なpose graph最適化や実機での誤差評価まではまだ済んでいない。",
-      "closingRemark": "GitHub Pagesだけでここまで追う一方、最後の精度確認はまだ実機の仕事として残っている。",
+      "title": "ブラウザD435・T265 SLAM実験",
+      "summary": "Intel RealSense D435のDepth映像をブラウザだけで処理し、6DoF移動量を推定する実験プロジェクト。WebGL2とWeb WorkerのICPに、RGB特徴による場所認識とT265の相対姿勢を組み合わせ、地図上の再定位やループ補正まで検証する。",
+      "detail": "こいつは、RealSense D435をUSB接続し、GitHub Pages上のChromeやEdgeだけでカメラの6DoF移動を推定するための実験だな。中ではDepthをWebGL2で320×240へ縮小し、Web Worker上のmulti-scale projective point-to-plane ICPでフレーム間の姿勢を求めてる。RGBが使える場合はBRIEF-like特徴で場所候補を探し、Depth ICPで検証したうえで、キーフレームやループ閉鎖、再定位、軽量な軌跡補正まで行う。Build 27ではT265の絶対値を地図そのものにはせず、セッション内の原点基準の事前情報と整合性チェックとして使い、誤った地図ロックや停止中の再定位を抑えている。現状は実機の定常ドリフトや誤差評価、完全なpose graph最適化までは未完で、急旋回や特徴の乏しい場所では不安定になり得るってところだ。",
+      "closingRemark": "D435の地図をT265に任せず、T265にも地図の身元確認だけをさせている。役割分担はかなり慎重だな。",
       "features": [
-        "D435のDepth UVC入力をブラウザから直接取得",
-        "WebGL2とWeb Workerで表示とSLAM計算を分離",
-        "multi-scale ICPによるローカル6DoF追跡",
-        "RGB補助の場所認識とDepth ICPによるループ検証",
-        "ブラウザ上のベンチマークと追跡診断表示"
+        "GitHub Pagesとブラウザ標準APIだけでD435のDepthを取得",
+        "Web Workerによるmulti-scale Depth ICPと6DoF姿勢推定",
+        "RGB特徴とDepth ICPを使った場所認識・ループ検証",
+        "キーフレーム再定位と軽量な累積ドリフト補正",
+        "T265の絶対マップ事前情報による誤ロック抑制と診断"
       ],
       "technologies": [
         "JavaScript",
         "HTML",
         "WebGL2",
         "Web Worker",
-        "WebRTC getUserMedia",
         "Intel RealSense D435",
-        "projective point-to-plane ICP",
-        "GitHub Pages"
+        "Intel RealSense T265",
+        "WebUSB",
+        "getUserMedia"
       ],
       "categories": [
         "コンピュータビジョン",
         "SLAM",
-        "ブラウザ実験",
-        "RealSense"
+        "ブラウザ技術",
+        "センサー融合"
       ],
       "status": "実験",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1385139407,
-      "sourcePushedAt": "2026-09-25T05:04:28Z",
+      "sourcePushedAt": "2026-09-25T11:38:14Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1385139407,
         "name": "realsense-browser-slam",
-        "pushedAt": "2026-09-25T05:04:28Z",
+        "pushedAt": "2026-09-25T11:38:14Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -4599,8 +4598,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "cf2fbf69a3a5853b6ca2ab8051f6edf823ffae8b29db01b2598ed234d2c1f806",
-      "generatedAt": "2026-09-25T05:06:02.446Z"
+      "sourceFingerprint": "468c1850f0519f7a9e689914b30d4bd4ca40d40fef79247a9f039ec91348885b",
+      "generatedAt": "2026-09-25T11:59:16.198Z"
     }
   },
   "repositoryCount": 93
