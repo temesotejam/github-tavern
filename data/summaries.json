@@ -1,43 +1,43 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-25T21:40:41.083Z",
+  "generatedAt": "2026-09-26T05:09:21.061Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ探索酒場",
-      "summary": "temesotejamの公開GitHubリポジトリを、酒場風の画面で検索・分類・閲覧する個人ポータル。Copilot CLIがREADMEや構成をもとに日本語説明を定期更新し、解析前のリポジトリにはREADME由来の仮説明を添える。",
-      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、酒場の依頼帳のような画面から探して読むための個人ポータルだ。中ではGitHub APIからリポジトリを取得し、名前・説明・Topics・言語・Copilot要約を横断検索しながら、技術分野ごとにも絞り込める。カードを選べば概要や特徴、技術情報を確認でき、Copilot解析がまだないものにはREADMEから短い仮説明を添える。別のActionsワークフローは6時間ごとに更新を確認し、変更のあったリポジトリを最大8件ずつCopilot CLIで解析して説明データに反映する仕組みだ。GitHub Pagesで静的に公開でき、サイトは公開APIを読むだけで、非公開リポジトリや書き込み操作は扱わない。つまり、一覧の手入れまで自動化した閲覧端末ってところだな。",
-      "closingRemark": "pushed_atが変わらないリポジトリは再解析せず、未解析ならREADMEから仮説明を添える。帳簿の更新も、必要な分だけってわけだ。",
+      "title": "公開リポジトリ探索ポータル",
+      "summary": "GitHub APIから temesotejam の公開リポジトリを取得し、古い情報端末風の画面で探して内容を確認する個人向けポータル。名前や説明、Topics、言語、Copilot要約を横断検索でき、READMEの暫定プレビューやカテゴリ分類も備える。",
+      "detail": "こいつは、temesotejam が公開しているGitHubリポジトリを探し、概要を確かめるための個人向けポータルだ。中ではGitHub APIから一覧を取得し、リポジトリ名や説明、Topics、言語、Copilot要約をまとめて検索できるようにしてる。カードを選べば詳細を見られ、Copilotの解析前でもREADMEから短いプレビューを表示する仕組みだ。説明データはGitHub Actionsが6時間ごとに確認し、更新のあったものをCopilot CLIで解析して保存する。GitHub Pagesで静的に公開でき、対象は公開リポジトリのみ。サイトから変更や書き込みはしないってわけだ。",
+      "closingRemark": "6時間ごとに見回り、更新分だけを最大8件ずつ記録する。酒場の帳簿としては、なかなか几帳面だな。",
       "features": [
-        "GitHub APIから所有する公開リポジトリを取得",
-        "名前・説明・Topics・言語・要約を横断検索",
-        "技術領域での分類とカード選択による詳細表示",
-        "Copilot CLIで説明を定期更新",
-        "未解析リポジトリにはREADME由来の仮説明を表示"
+        "所有者の公開リポジトリをGitHub APIから取得",
+        "名前・説明・Topics・言語・Copilot要約を横断検索",
+        "カテゴリ分類とカードからの詳細表示",
+        "READMEから未解析リポジトリの暫定プレビューを生成",
+        "更新分を定期解析して説明データを更新"
       ],
       "technologies": [
         "JavaScript",
-        "CSS",
         "HTML",
+        "CSS",
         "GitHub API",
-        "GitHub Pages",
         "GitHub Actions",
-        "GitHub Copilot CLI"
+        "GitHub Copilot CLI",
+        "GitHub Pages"
       ],
       "categories": [
         "Web・ツール",
         "GitHub",
-        "リポジトリ閲覧"
+        "AI・自動化"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-09-25T17:19:17Z",
+      "sourcePushedAt": "2026-09-25T21:40:42Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-09-25T17:19:17Z",
+        "pushedAt": "2026-09-25T21:40:42Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -47,8 +47,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "50eeaefb65e3826e8ac560f3b8de474aa5faf3e5ef3a7524d56eb6a7346dd8a2",
-      "generatedAt": "2026-09-25T21:40:41.082Z"
+      "sourceFingerprint": "e05ba9524ebc99f62a283b01f43fcd86a2ee28583d0dd58eb879fa8d4e6563ae",
+      "generatedAt": "2026-09-26T05:09:21.060Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -4401,43 +4401,43 @@
       "generatedAt": "2026-09-25T11:58:53.763Z"
     },
     "atoms3r-free-foot-amplitude-control": {
-      "title": "自由足振幅制御ファームウェア",
-      "summary": "M5Stack AtomS3系のカメラ付き機体で、左右の足の画像観測とIMU姿勢推定を組み合わせ、足の振幅を制御する組み込みファームウェアだ。MEKF、WebUI、CRC検証付きログ出力を備え、実機走行の計測と制御処理を継続的に改善している。",
-      "detail": "こいつは、足を固定しない状態で左右の足の動きを観測し、姿勢推定と合わせて振幅制御を試すための実機向けファームウェアだな。中ではM5Stack AtomS3のカメラから足のマーカーを追い、IMUをMEKFで推定し、その結果をV46al-R2コントローラへ渡している。WebUIでは静止姿勢の比較や診断を確認でき、PSRAMにイベントを蓄えながらCRC検証付きのRWLOGとして書き出せる。0.47.17では制御計算の再利用で候補評価数を減らし、複数回の30秒実機走行でもキュー欠落や配信の連番欠損を抑えている。ただし2.5ミリ秒の厳しい処理期限はまだ完全には守れておらず、変更後の指令遅延や実際の足の動きまでは追加のハードウェア検証が要る。",
-      "closingRemark": "計算はかなり節約できたが、2.5ミリ秒の門番はまだ納得していないらしい。",
+      "title": "自由脚振幅制御ファームウェア",
+      "summary": "自由脚を動かす制御と、IMU・カメラによる足の観測を統合したAtomS3向けファームウェア。制御計算や記録を継続的に改善しており、最新版では振幅モデルからパルス幅を求める計算を見直している。",
+      "detail": "こいつは、足を固定しない状態での動きを観測しながら、自由脚の振幅を制御する組み込みファームウェアだ。中ではIMUの情報をMEKFで推定し、カメラで左右の足を追いながら、制御出力と実行ログを扱ってる。最新版の0.47.18では、振幅モデルから要求電荷を求め、電流や制約を考慮して整数ミリ秒のパルス幅に変換する計算を改めた。ブラウザから書き込むWebフラッシャーもあり、ログや実行結果を確認できる。過去の版では30秒の実機運転を複数回完了している一方、2.5ミリ秒の処理期限超過は残っていて、最新版の計算変更も実機での動きやタイミングが確認されたとは書かれていない。",
+      "closingRemark": "計算の誤差は詰めても、最後は実機の足取りを見ないと話が終わらないらしい。",
       "features": [
-        "カメラによる左右の足マーカー観測と支持範囲チェック",
-        "MEKFによる姿勢・バイアス推定と制御への利用",
-        "WebUIでの静止姿勢比較・診断・画像確認",
-        "PSRAMイベント保存とCRC検証付きRWLOGエクスポート",
-        "実機30秒走行の処理時間・キュー・連番監査"
+        "IMUによる姿勢推定とカメラによる左右の足の観測を統合",
+        "自由脚の振幅制御とパルス幅計算",
+        "PSRAMを使ったイベント記録とCRC検証付きRWLOG出力",
+        "ブラウザから使えるWebフラッシャー",
+        "制御時間や観測結果を記録し、実機試験を版ごとに比較"
       ],
       "technologies": [
         "C++",
         "Python",
         "JavaScript",
-        "Arduino",
+        "PlatformIO",
         "ESP32",
-        "M5Stack AtomS3",
+        "Arduino",
         "M5Unified",
-        "Adafruit AHRS 2.4.0"
+        "M5GFX"
       ],
       "categories": [
+        "ロボティクス",
         "組み込み",
-        "ロボット制御",
-        "姿勢推定",
-        "コンピュータビジョン"
+        "制御",
+        "ファームウェア"
       ],
-      "status": "試作",
+      "status": "実験",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1380859177,
-      "sourcePushedAt": "2026-09-25T11:38:21Z",
+      "sourcePushedAt": "2026-09-26T03:19:14Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1380859177,
         "name": "atoms3r-free-foot-amplitude-control",
-        "pushedAt": "2026-09-25T11:38:21Z",
+        "pushedAt": "2026-09-26T03:19:14Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -4447,8 +4447,8 @@
         "fork": false,
         "language": "C++"
       },
-      "sourceFingerprint": "17d3e49db7025a1ac153d4d00db5139841fbc6d7b60467d6560e20a703dee440",
-      "generatedAt": "2026-09-25T11:59:05.890Z"
+      "sourceFingerprint": "be8c1cdfa22e76efdb695b26737cd431f6b10be49b56a48db71c77e49cf538d7",
+      "generatedAt": "2026-09-26T05:09:11.781Z"
     },
     "atoms3r-amplitude-control-v46al-r2-stable": {
       "title": "AtomS3R振幅制御ファームウェア",
@@ -4551,43 +4551,43 @@
       "generatedAt": "2026-09-23T04:53:21.222Z"
     },
     "realsense-browser-slam": {
-      "title": "ブラウザD435・T265 SLAM実験",
-      "summary": "Intel RealSense D435のDepth映像をブラウザだけで処理し、6DoF移動量を推定する実験プロジェクト。WebGL2とWeb WorkerのICPに、RGB特徴による場所認識とT265の相対姿勢を組み合わせ、地図上の再定位やループ補正まで検証する。",
-      "detail": "こいつは、RealSense D435をUSB接続し、GitHub Pages上のChromeやEdgeだけでカメラの6DoF移動を推定するための実験だな。中ではDepthをWebGL2で320×240へ縮小し、Web Worker上のmulti-scale projective point-to-plane ICPでフレーム間の姿勢を求めてる。RGBが使える場合はBRIEF-like特徴で場所候補を探し、Depth ICPで検証したうえで、キーフレームやループ閉鎖、再定位、軽量な軌跡補正まで行う。Build 27ではT265の絶対値を地図そのものにはせず、セッション内の原点基準の事前情報と整合性チェックとして使い、誤った地図ロックや停止中の再定位を抑えている。現状は実機の定常ドリフトや誤差評価、完全なpose graph最適化までは未完で、急旋回や特徴の乏しい場所では不安定になり得るってところだ。",
-      "closingRemark": "D435の地図をT265に任せず、T265にも地図の身元確認だけをさせている。役割分担はかなり慎重だな。",
+      "title": "RealSenseブラウザSLAM実験",
+      "summary": "Intel RealSense D435とT265を使い、Desktop Chrome / Edge上で6DoF自己位置推定と再ローカライズを試す実験システム。Depth・RGB・T265の情報を役割分担させ、Persistent Mapとの照合や追跡状態をブラウザで確認できる。",
+      "detail": "こいつは、D435とT265を使った自己位置推定や、見失った場所への再ローカライズがブラウザだけでどこまでできるか試す実験システムだ。中ではSensor HubからDepthとT265の姿勢を受け取り、D435のRGBは場所の識別に使ってる。短時間の回転はT265、移動量はDepth ICPを主に見て、長期の座標はPersistent RGB-D Mapを基準にする仕組みだな。複数の照合条件や連続確認で誤ったMap補正を抑え、追跡状態やICPの誤差、Keyframe数なども画面で確認できる。基準版はbuild 27で、初期の静止動作までは実機確認済みだが、複数回の往復での誤ロック抑制はまだ評価中。厳密なカメラ間キャリブレーションや完全なpose graph最適化も、ここにはない。",
+      "closingRemark": "T265の原点をそのまま地図の住所にしない慎重さはある。あとは複数往復でも、その判断が崩れないかだな。",
       "features": [
-        "GitHub Pagesとブラウザ標準APIだけでD435のDepthを取得",
-        "Web Workerによるmulti-scale Depth ICPと6DoF姿勢推定",
-        "RGB特徴とDepth ICPを使った場所認識・ループ検証",
-        "キーフレーム再定位と軽量な累積ドリフト補正",
-        "T265の絶対マップ事前情報による誤ロック抑制と診断"
+        "D435のDepth・RGBとT265の姿勢を組み合わせた6DoF追跡",
+        "Persistent RGB-D Mapを使った再ローカライズ",
+        "誤補正を抑える複数条件の照合と連続確認",
+        "追跡状態やICP誤差などの診断情報を表示",
+        "GitHub Pagesとブラウザで動作し、ネイティブSDKやローカルサーバーを要求しない"
       ],
       "technologies": [
-        "JavaScript",
-        "HTML",
-        "WebGL2",
-        "Web Worker",
         "Intel RealSense D435",
         "Intel RealSense T265",
         "WebUSB",
-        "getUserMedia"
+        "BroadcastChannel",
+        "WebGL2",
+        "Browser UVC",
+        "Depth ICP",
+        "GitHub Pages"
       ],
       "categories": [
-        "コンピュータビジョン",
         "SLAM",
-        "ブラウザ技術",
-        "センサー融合"
+        "自己位置推定",
+        "センサーフュージョン",
+        "ブラウザ実験"
       ],
       "status": "実験",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1385139407,
-      "sourcePushedAt": "2026-09-25T11:38:14Z",
+      "sourcePushedAt": "2026-09-26T04:14:09Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1385139407,
         "name": "realsense-browser-slam",
-        "pushedAt": "2026-09-25T11:38:14Z",
+        "pushedAt": "2026-09-26T04:14:09Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -4597,8 +4597,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "468c1850f0519f7a9e689914b30d4bd4ca40d40fef79247a9f039ec91348885b",
-      "generatedAt": "2026-09-25T11:59:16.198Z"
+      "sourceFingerprint": "75fc73cc3bdbd8cb76a8b4efbbca0c525cbb1a4cd3e3ffd21256f770a0859b03",
+      "generatedAt": "2026-09-26T05:09:02.165Z"
     }
   },
   "repositoryCount": 93
