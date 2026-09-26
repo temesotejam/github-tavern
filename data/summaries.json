@@ -1,18 +1,18 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-26T05:09:21.061Z",
+  "generatedAt": "2026-09-26T11:34:11.527Z",
   "repositories": {
     "github-tavern": {
       "title": "公開リポジトリ探索ポータル",
-      "summary": "GitHub APIから temesotejam の公開リポジトリを取得し、古い情報端末風の画面で探して内容を確認する個人向けポータル。名前や説明、Topics、言語、Copilot要約を横断検索でき、READMEの暫定プレビューやカテゴリ分類も備える。",
-      "detail": "こいつは、temesotejam が公開しているGitHubリポジトリを探し、概要を確かめるための個人向けポータルだ。中ではGitHub APIから一覧を取得し、リポジトリ名や説明、Topics、言語、Copilot要約をまとめて検索できるようにしてる。カードを選べば詳細を見られ、Copilotの解析前でもREADMEから短いプレビューを表示する仕組みだ。説明データはGitHub Actionsが6時間ごとに確認し、更新のあったものをCopilot CLIで解析して保存する。GitHub Pagesで静的に公開でき、対象は公開リポジトリのみ。サイトから変更や書き込みはしないってわけだ。",
-      "closingRemark": "6時間ごとに見回り、更新分だけを最大8件ずつ記録する。酒場の帳簿としては、なかなか几帳面だな。",
+      "summary": "公開GitHubリポジトリを、古い情報端末風の画面から検索・選択して閲覧する個人ポータル。GitHub APIで一覧を取り込み、Copilotによる日本語概要や、未解析リポジトリ向けのREADMEからの暫定説明を表示する。",
+      "detail": "こいつは、temesotejamの公開リポジトリを酒場の依頼帳のような画面から探し、中身を確かめる個人用ポータルだ。中ではGitHub APIからリポジトリを取り込み、名前や説明、Topics、言語、Copilot要約を横断検索できるようにしてる。カードを選ぶと概要が開き、Copilot未解析ならREADMEから短い暫定説明を拾って表示する。説明データはActionsが6時間ごとに更新を確認し、前回確認時からpushed_atが変わったリポジトリをCopilot CLIで解析する仕組みで、定期実行は最大8件ずつだ。GitHub Pagesで静的に公開でき、サイト側は公開情報の読み取りだけで、リポジトリへの書き込みや非公開データの取得はしない。検索から説明の更新までをまとめた閲覧端末ってわけだな。",
+      "closingRemark": "自分自身のリポジトリは一覧から外して別枠で案内する。店主の帳簿だけは、少し扱いが違うらしい。",
       "features": [
-        "所有者の公開リポジトリをGitHub APIから取得",
+        "GitHub APIから公開リポジトリを自動取得",
         "名前・説明・Topics・言語・Copilot要約を横断検索",
-        "カテゴリ分類とカードからの詳細表示",
-        "READMEから未解析リポジトリの暫定プレビューを生成",
-        "更新分を定期解析して説明データを更新"
+        "技術領域による分類とリポジトリの詳細表示",
+        "Copilot未解析時はREADMEから短い説明を表示",
+        "変更のあったリポジトリの概要を定期更新"
       ],
       "technologies": [
         "JavaScript",
@@ -26,18 +26,18 @@
       "categories": [
         "Web・ツール",
         "GitHub",
-        "AI・自動化"
+        "開発者向け"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-09-25T21:40:42Z",
+      "sourcePushedAt": "2026-09-26T05:09:22Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-09-25T21:40:42Z",
+        "pushedAt": "2026-09-26T05:09:22Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -47,8 +47,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "e05ba9524ebc99f62a283b01f43fcd86a2ee28583d0dd58eb879fa8d4e6563ae",
-      "generatedAt": "2026-09-26T05:09:21.060Z"
+      "sourceFingerprint": "33c96df155ccf31a70ce8e6df1544846484f92ce57e3d9eec2e1f11aca12df60",
+      "generatedAt": "2026-09-26T11:34:11.527Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -4401,43 +4401,43 @@
       "generatedAt": "2026-09-25T11:58:53.763Z"
     },
     "atoms3r-free-foot-amplitude-control": {
-      "title": "自由脚振幅制御ファームウェア",
-      "summary": "自由脚を動かす制御と、IMU・カメラによる足の観測を統合したAtomS3向けファームウェア。制御計算や記録を継続的に改善しており、最新版では振幅モデルからパルス幅を求める計算を見直している。",
-      "detail": "こいつは、足を固定しない状態での動きを観測しながら、自由脚の振幅を制御する組み込みファームウェアだ。中ではIMUの情報をMEKFで推定し、カメラで左右の足を追いながら、制御出力と実行ログを扱ってる。最新版の0.47.18では、振幅モデルから要求電荷を求め、電流や制約を考慮して整数ミリ秒のパルス幅に変換する計算を改めた。ブラウザから書き込むWebフラッシャーもあり、ログや実行結果を確認できる。過去の版では30秒の実機運転を複数回完了している一方、2.5ミリ秒の処理期限超過は残っていて、最新版の計算変更も実機での動きやタイミングが確認されたとは書かれていない。",
-      "closingRemark": "計算の誤差は詰めても、最後は実機の足取りを見ないと話が終わらないらしい。",
+      "title": "自由脚の振幅制御システム",
+      "summary": "M5Stack AtomS3上で、足を固定しない状態の振幅制御と左右の足の観測を行う組み込みプロジェクト。カメラ、姿勢推定、制御、ログ記録を統合し、実機での動作や処理時間を版ごとに検証している。",
+      "detail": "こいつは、足を固定しない状態での振幅制御を実機で動かし、観測と制御の両立を確かめるためのプロジェクトだ。中ではM5Stack AtomS3上で、IMUのデータから姿勢を推定するMEKF、カメラによる左右の足の観測、V46al-R2制御器を組み合わせてる。実行ログにはサンプルの受け渡しや処理時間、足の検出状況が残り、版ごとの実機試験や制御計算の回帰検証も重ねている。0.47.19の5回試験では2.5 ms超過が減った一方、期限超過は残っており、振幅の正確さが改善した証拠とも限らない。現行READMEはWi-FiとHTTPを止めたオフライン実行を掲げ、USB診断は任意としている。",
+      "closingRemark": "処理時間の数字は細かく追えても、振幅の非対称まではまだ片づいていない。ログは正直だな。",
       "features": [
-        "IMUによる姿勢推定とカメラによる左右の足の観測を統合",
-        "自由脚の振幅制御とパルス幅計算",
-        "PSRAMを使ったイベント記録とCRC検証付きRWLOG出力",
-        "ブラウザから使えるWebフラッシャー",
-        "制御時間や観測結果を記録し、実機試験を版ごとに比較"
+        "MEKF・カメラ観測・制御を統合した実機ランタイム",
+        "左右の足の検出と支持範囲の検証",
+        "IMUサンプルの受け渡しや処理期限の計測",
+        "CRC検証付きRWLOGの記録・エクスポート",
+        "オフライン実行と任意のUSB診断"
       ],
       "technologies": [
         "C++",
         "Python",
         "JavaScript",
         "PlatformIO",
-        "ESP32",
-        "Arduino",
+        "Arduino framework",
+        "M5Stack AtomS3",
         "M5Unified",
-        "M5GFX"
+        "Adafruit AHRS"
       ],
       "categories": [
-        "ロボティクス",
+        "ロボット制御",
         "組み込み",
-        "制御",
-        "ファームウェア"
+        "実機実験",
+        "データ記録"
       ],
       "status": "実験",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1380859177,
-      "sourcePushedAt": "2026-09-26T03:19:14Z",
+      "sourcePushedAt": "2026-09-26T09:39:59Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1380859177,
         "name": "atoms3r-free-foot-amplitude-control",
-        "pushedAt": "2026-09-26T03:19:14Z",
+        "pushedAt": "2026-09-26T09:39:59Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -4447,8 +4447,8 @@
         "fork": false,
         "language": "C++"
       },
-      "sourceFingerprint": "be8c1cdfa22e76efdb695b26737cd431f6b10be49b56a48db71c77e49cf538d7",
-      "generatedAt": "2026-09-26T05:09:11.781Z"
+      "sourceFingerprint": "cef8209387cd74f1c1a8388e00ad38f5d2d58f8c0c2168e3b9f25942bd304373",
+      "generatedAt": "2026-09-26T11:33:58.313Z"
     },
     "atoms3r-amplitude-control-v46al-r2-stable": {
       "title": "AtomS3R振幅制御ファームウェア",
