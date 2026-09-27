@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-24T12:18:49.734Z",
-  "repositoryCount": 93,
-  "pageCount": 52,
+  "generatedAt": "2026-09-27T12:30:35.462Z",
+  "repositoryCount": 94,
+  "pageCount": 53,
   "pages": {
     "2026_8_5_3": {
       "url": "https://temesotejam.github.io/2026_8_5_3/",
@@ -61,6 +61,11 @@
     },
     "atoms3r-free-foot-amplitude-control": {
       "url": "https://temesotejam.github.io/atoms3r-free-foot-amplitude-control/",
+      "source": "github-pages",
+      "status": 200
+    },
+    "atoms3r-free-foot-amplitude-control-04725-stable": {
+      "url": "https://temesotejam.github.io/atoms3r-free-foot-amplitude-control-04725-stable/",
       "source": "github-pages",
       "status": 200
     },
