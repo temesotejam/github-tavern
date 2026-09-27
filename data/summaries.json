@@ -1,43 +1,43 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-26T21:17:26.276Z",
+  "generatedAt": "2026-09-27T05:26:57.722Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ探索酒場",
-      "summary": "個人所有の公開GitHubリポジトリを、酒場風の画面から検索・閲覧する静的ポータル。GitHub APIで一覧を取り込み、分類や横断検索に加え、Copilotの日本語概要やREADMEから作る暫定説明を確認できる。",
-      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、酒場風の画面から探して中身をつかむための個人ポータルだ。ブラウザ側でGitHub APIから一覧を取り込み、名前・説明・Topics・言語・要約を横断検索できるほか、技術領域で絞り込んだり、カードから詳細を開いたりできる。説明はREADMEや構成、設定ファイル、直近コミットなどをもとにCopilot CLIが日本語で生成し、data/summaries.jsonに蓄える仕組みだな。解析前のリポジトリにはREADMEから短い暫定説明を出し、Actionsが6時間ごとに確認して、更新・新規分を定期実行では最大8件ずつ処理する。GitHub Pagesで静的公開できるが、対象は公開リポジトリだけで、サイトから変更操作はしない。長期PATをPagesに置かない構成も押さえてある。",
-      "closingRemark": "6時間ごとに最大8件ずつ棚卸しするあたり、酒場の帳簿も一晩で全部は片づけないらしいな。",
+      "title": "公開リポジトリ案内端末",
+      "summary": "所有する公開GitHubリポジトリを検索・閲覧するための個人ポータル。GitHub APIから情報を取得し、CopilotがREADMEや設定ファイルなどをもとに作る日本語説明と、未解析時のREADME暫定表示を備えている。",
+      "detail": "こいつは、所有する公開GitHubリポジトリを検索して、気になるものを選べる個人用の案内端末だ。中ではGitHub APIから一覧を取り、名前や説明、Topics、言語、Copilot要約を横断検索し、技術領域ごとの分類やカード上での概要表示もしてる。説明はGitHub Actionsから定期実行するCopilot CLIが、READMEや設定ファイル、最近のコミットなどを見て生成し、data/summaries.jsonに蓄える仕組みだ。未解析のリポジトリにはREADMEから作る短い暫定説明も出せるし、GitHub Pagesで静的に公開できる。ただし対象は公開リポジトリだけで、サイトから削除や更新などの書き込みはしない。",
+      "closingRemark": "更新分は定期実行で一度に最大8件。公開リポジトリの記録係も、順番待ちだけはきっちり決めてある。",
       "features": [
-        "公開リポジトリ一覧をGitHub APIから取得",
+        "GitHub APIから所有する公開リポジトリを取得",
         "名前・説明・Topics・言語・要約を横断検索",
-        "技術領域での分類とカードからの詳細表示",
-        "Copilot CLIによる日本語概要の生成とキャッシュ",
-        "解析前はREADMEから暫定説明を表示"
+        "技術領域ごとの分類とカードでの概要表示",
+        "Copilot CLIで要約を定期生成し、JSONに保存",
+        "未解析時はREADMEから短い暫定説明を表示"
       ],
       "technologies": [
         "JavaScript",
-        "HTML",
         "CSS",
+        "HTML",
         "GitHub API",
-        "GitHub Copilot CLI",
         "GitHub Actions",
+        "GitHub Copilot CLI",
         "GitHub Pages"
       ],
       "categories": [
-        "Webツール",
-        "GitHubリポジトリ検索",
-        "個人ポータル"
+        "Web・ツール",
+        "リポジトリ検索",
+        "静的サイト"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-09-26T16:30:57Z",
+      "sourcePushedAt": "2026-09-26T21:17:27Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-09-26T16:30:57Z",
+        "pushedAt": "2026-09-26T21:17:27Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -47,8 +47,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "472c70289bcf12d752b8637fb6bf43dfe8cb3e75c6c4e7abd13956367f3adcf4",
-      "generatedAt": "2026-09-26T21:17:26.276Z"
+      "sourceFingerprint": "27dbd6dba7f7087e02a8c2b90157fb012a3a7c0a0b43e47643c37f534433141e",
+      "generatedAt": "2026-09-27T05:26:57.722Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -4401,43 +4401,43 @@
       "generatedAt": "2026-09-25T11:58:53.763Z"
     },
     "atoms3r-free-foot-amplitude-control": {
-      "title": "自由脚の振幅制御システム",
-      "summary": "M5Stack AtomS3上で、足を固定しない状態の振幅制御と左右の足の観測を行う組み込みプロジェクト。カメラ、姿勢推定、制御、ログ記録を統合し、実機での動作や処理時間を版ごとに検証している。",
-      "detail": "こいつは、足を固定しない状態での振幅制御を実機で動かし、観測と制御の両立を確かめるためのプロジェクトだ。中ではM5Stack AtomS3上で、IMUのデータから姿勢を推定するMEKF、カメラによる左右の足の観測、V46al-R2制御器を組み合わせてる。実行ログにはサンプルの受け渡しや処理時間、足の検出状況が残り、版ごとの実機試験や制御計算の回帰検証も重ねている。0.47.19の5回試験では2.5 ms超過が減った一方、期限超過は残っており、振幅の正確さが改善した証拠とも限らない。現行READMEはWi-FiとHTTPを止めたオフライン実行を掲げ、USB診断は任意としている。",
-      "closingRemark": "処理時間の数字は細かく追えても、振幅の非対称まではまだ片づいていない。ログは正直だな。",
+      "title": "Free-foot振幅制御ファームウェア",
+      "summary": "AtomS3系の機体で、足を固定しない状態の振幅制御と動作観察を行う組み込みファームウェア。IMUとカメラの情報を使い、制御・記録・ログ回収まで統合していますが、厳しい処理時間目標はまだ課題として残っています。",
+      "detail": "こいつは、足を固定しない機体を動かしながら、振幅制御と足の動きを確かめるためのファームウェアだ。中ではESP32上でIMUの読み取りと姿勢推定を行い、制御計算に加えてカメラによる左右の足の観測も動かしてる。計測結果はPSRAMに蓄え、CRC検証付きのRWLOGとして後から回収できる仕組みだ。現行の0.47.23では実行中もWi-Fi接続を保ちつつHTTPを一時停止し、終了後にログをダウンロードできる。実機で30秒の統合動作を複数回確認した記録がある一方、2.5ミリ秒の処理期限超過は過去の計測で残っており、最新変更がそれを解消したかまでは資料から確認できない。",
+      "closingRemark": "Wi-FiはつないだままHTTPだけ休ませる、なかなか現場寄りの折り合いだな。処理期限のほうは、まだ休ませてもらえないらしい。",
       "features": [
-        "MEKF・カメラ観測・制御を統合した実機ランタイム",
-        "左右の足の検出と支持範囲の検証",
-        "IMUサンプルの受け渡しや処理期限の計測",
-        "CRC検証付きRWLOGの記録・エクスポート",
-        "オフライン実行と任意のUSB診断"
+        "IMUを使った姿勢推定と振幅制御",
+        "カメラによる左右の足の観測",
+        "PSRAMへのイベント記録とCRC検証付きRWLOG出力",
+        "実機での複数回の30秒動作計測を記録",
+        "実行中はHTTPを停止し、終了後にログを回収"
       ],
       "technologies": [
         "C++",
-        "Python",
-        "JavaScript",
+        "ESP32",
+        "Arduino",
         "PlatformIO",
-        "Arduino framework",
-        "M5Stack AtomS3",
         "M5Unified",
-        "Adafruit AHRS"
+        "M5GFX",
+        "Adafruit AHRS",
+        "MEKF"
       ],
       "categories": [
-        "ロボット制御",
         "組み込み",
-        "実機実験",
-        "データ記録"
+        "ロボティクス",
+        "制御システム",
+        "ファームウェア"
       ],
       "status": "実験",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1380859177,
-      "sourcePushedAt": "2026-09-26T09:39:59Z",
+      "sourcePushedAt": "2026-09-27T04:33:07Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1380859177,
         "name": "atoms3r-free-foot-amplitude-control",
-        "pushedAt": "2026-09-26T09:39:59Z",
+        "pushedAt": "2026-09-27T04:33:07Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -4447,8 +4447,8 @@
         "fork": false,
         "language": "C++"
       },
-      "sourceFingerprint": "cef8209387cd74f1c1a8388e00ad38f5d2d58f8c0c2168e3b9f25942bd304373",
-      "generatedAt": "2026-09-26T11:33:58.313Z"
+      "sourceFingerprint": "4d012cb4b1bfe4e35a67efe4d7047c13da90d6f4c9d740ec256e9a94f8ad2ff7",
+      "generatedAt": "2026-09-27T05:26:47.738Z"
     },
     "atoms3r-amplitude-control-v46al-r2-stable": {
       "title": "AtomS3R振幅制御ファームウェア",
