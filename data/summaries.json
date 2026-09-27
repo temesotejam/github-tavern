@@ -1,18 +1,18 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-27T05:26:57.722Z",
+  "generatedAt": "2026-09-27T12:12:48.454Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ案内端末",
-      "summary": "所有する公開GitHubリポジトリを検索・閲覧するための個人ポータル。GitHub APIから情報を取得し、CopilotがREADMEや設定ファイルなどをもとに作る日本語説明と、未解析時のREADME暫定表示を備えている。",
-      "detail": "こいつは、所有する公開GitHubリポジトリを検索して、気になるものを選べる個人用の案内端末だ。中ではGitHub APIから一覧を取り、名前や説明、Topics、言語、Copilot要約を横断検索し、技術領域ごとの分類やカード上での概要表示もしてる。説明はGitHub Actionsから定期実行するCopilot CLIが、READMEや設定ファイル、最近のコミットなどを見て生成し、data/summaries.jsonに蓄える仕組みだ。未解析のリポジトリにはREADMEから作る短い暫定説明も出せるし、GitHub Pagesで静的に公開できる。ただし対象は公開リポジトリだけで、サイトから削除や更新などの書き込みはしない。",
-      "closingRemark": "更新分は定期実行で一度に最大8件。公開リポジトリの記録係も、順番待ちだけはきっちり決めてある。",
+      "title": "公開リポジトリ探索酒場",
+      "summary": "temesotejamの公開GitHubリポジトリを、酒場風の画面から探して概要を読む個人向けポータル。GitHub APIで一覧を取得し、名前・説明・Topics・言語・Copilot要約を横断検索でき、未解析のものはREADMEから短い説明を補います。",
+      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、酒場風の画面で探して中身を選ぶための個人ポータルだ。中ではブラウザからGitHub APIで一覧を取り、名前やDescription、Topics、言語、Copilot要約をまとめて検索・分類し、選んだカードに概要を表示してる。説明はCopilot CLIがREADMEや設定、ファイル構成などを見て作り、6時間ごとのActionsで新規・更新分を最大8件ずつ反映する仕組みだ。解析前のものもREADMEが見つかれば暫定説明を補う。GitHub Pagesで静的に動かせて、対象は公開リポジトリだけ。削除やIssue作成などの書き込みはしない。要するに、個人の公開作業を探しやすく並べる棚ってところだな。",
+      "closingRemark": "更新分を6時間ごとに最大8件ずつ確認する。酒場の棚も、手入れの順番まで決まってるらしいな。",
       "features": [
-        "GitHub APIから所有する公開リポジトリを取得",
-        "名前・説明・Topics・言語・要約を横断検索",
-        "技術領域ごとの分類とカードでの概要表示",
-        "Copilot CLIで要約を定期生成し、JSONに保存",
-        "未解析時はREADMEから短い暫定説明を表示"
+        "公開リポジトリ一覧をGitHub APIから取得",
+        "名前・説明・Topics・言語・Copilot要約を横断検索",
+        "技術領域ごとに分類し、選んだリポジトリの概要を表示",
+        "Copilot未解析ならREADMEから暫定説明を表示",
+        "Actionsで新規・更新分の要約を定期更新"
       ],
       "technologies": [
         "JavaScript",
@@ -24,20 +24,20 @@
         "GitHub Pages"
       ],
       "categories": [
-        "Web・ツール",
-        "リポジトリ検索",
+        "Webアプリ",
+        "GitHubリポジトリ検索",
         "静的サイト"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-09-26T21:17:27Z",
+      "sourcePushedAt": "2026-09-27T05:26:59Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-09-26T21:17:27Z",
+        "pushedAt": "2026-09-27T05:26:59Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -47,8 +47,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "27dbd6dba7f7087e02a8c2b90157fb012a3a7c0a0b43e47643c37f534433141e",
-      "generatedAt": "2026-09-27T05:26:57.722Z"
+      "sourceFingerprint": "8f61e19790789d61f1054f5703216e44be7d0eb4e0c035c46b44046ec9fe94ec",
+      "generatedAt": "2026-09-27T12:12:48.454Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -4401,43 +4401,43 @@
       "generatedAt": "2026-09-25T11:58:53.763Z"
     },
     "atoms3r-free-foot-amplitude-control": {
-      "title": "Free-foot振幅制御ファームウェア",
-      "summary": "AtomS3系の機体で、足を固定しない状態の振幅制御と動作観察を行う組み込みファームウェア。IMUとカメラの情報を使い、制御・記録・ログ回収まで統合していますが、厳しい処理時間目標はまだ課題として残っています。",
-      "detail": "こいつは、足を固定しない機体を動かしながら、振幅制御と足の動きを確かめるためのファームウェアだ。中ではESP32上でIMUの読み取りと姿勢推定を行い、制御計算に加えてカメラによる左右の足の観測も動かしてる。計測結果はPSRAMに蓄え、CRC検証付きのRWLOGとして後から回収できる仕組みだ。現行の0.47.23では実行中もWi-Fi接続を保ちつつHTTPを一時停止し、終了後にログをダウンロードできる。実機で30秒の統合動作を複数回確認した記録がある一方、2.5ミリ秒の処理期限超過は過去の計測で残っており、最新変更がそれを解消したかまでは資料から確認できない。",
-      "closingRemark": "Wi-FiはつないだままHTTPだけ休ませる、なかなか現場寄りの折り合いだな。処理期限のほうは、まだ休ませてもらえないらしい。",
+      "title": "自由足振幅制御ランタイム",
+      "summary": "M5Stack ATOMS3で、固定しない足の観測とIMU姿勢推定を使い、目標振幅に合わせたモータ制御を実機検証するシステムだ。制御の高速化、期限超過の計測、CRC付きログ回収まで一体で扱っている。",
+      "detail": "こいつは、自由に動く足を持つ実験機で、IMUとカメラの足観測を使いながら目標振幅へ制御するためのファームウェアと検証基盤だな。中ではESP32系のM5Stack ATOMS3上で、Core 1のIMU取得と制御、Core 0のモータI/Oやカメラ処理を分け、MEKFと比較用Madgwick、直接Q逆算によるパルス幅選択を動かしてる。0.47.25では30秒運転を5回完走し、読取完了から制御完了までの2.5 ms超過ゼロを確認しているほか、Web画面、RWLOG、足CSV、CRC検証付きの再開可能な転送も備える。IRAM配置やPSRAM保存、HTTP休止など、実機の締切を守るための改善履歴が細かく残っている。ただし、別の運動条件での最悪実行時間、姿勢や足角度の外部基準精度、横倒しを含む任意の転倒検出までは保証していない。",
+      "closingRemark": "5回の締切は守ったが、電流の取得間隔にはまだ超過が残る。時計が合っても、現場はそう簡単に静かにならないな。",
       "features": [
-        "IMUを使った姿勢推定と振幅制御",
-        "カメラによる左右の足の観測",
-        "PSRAMへのイベント記録とCRC検証付きRWLOG出力",
-        "実機での複数回の30秒動作計測を記録",
-        "実行中はHTTPを停止し、終了後にログを回収"
+        "IMU取得・制御・モータI/Oをコア分離",
+        "2.5 ms制御期限の実機監査と版別比較",
+        "MEKFと比較用Madgwickによる姿勢推定",
+        "カメラによる左右の足観測とCSV記録",
+        "CRC検証付きRWLOGの再開可能な回収"
       ],
       "technologies": [
         "C++",
-        "ESP32",
-        "Arduino",
+        "Python",
         "PlatformIO",
+        "Arduino framework",
+        "ESP32",
+        "M5Stack ATOMS3",
         "M5Unified",
-        "M5GFX",
-        "Adafruit AHRS",
-        "MEKF"
+        "Adafruit AHRS"
       ],
       "categories": [
-        "組み込み",
         "ロボティクス",
-        "制御システム",
-        "ファームウェア"
+        "組み込み",
+        "モーション制御",
+        "実機検証"
       ],
       "status": "実験",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1380859177,
-      "sourcePushedAt": "2026-09-27T04:33:07Z",
+      "sourcePushedAt": "2026-09-27T07:27:21Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1380859177,
         "name": "atoms3r-free-foot-amplitude-control",
-        "pushedAt": "2026-09-27T04:33:07Z",
+        "pushedAt": "2026-09-27T07:27:21Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -4447,8 +4447,8 @@
         "fork": false,
         "language": "C++"
       },
-      "sourceFingerprint": "4d012cb4b1bfe4e35a67efe4d7047c13da90d6f4c9d740ec256e9a94f8ad2ff7",
-      "generatedAt": "2026-09-27T05:26:47.738Z"
+      "sourceFingerprint": "2f42becb27dd2939ea9bd2d499304f7ad3f8f63a22ad79d6c5a2601fafe878a0",
+      "generatedAt": "2026-09-27T12:12:36.971Z"
     },
     "atoms3r-amplitude-control-v46al-r2-stable": {
       "title": "AtomS3R振幅制御ファームウェア",
@@ -4599,7 +4599,57 @@
       },
       "sourceFingerprint": "75fc73cc3bdbd8cb76a8b4efbbca0c525cbb1a4cd3e3ffd21256f770a0859b03",
       "generatedAt": "2026-09-26T05:09:02.165Z"
+    },
+    "atoms3r-free-foot-amplitude-control-04725-stable": {
+      "title": "ATOMS3足振幅制御ファーム",
+      "summary": "M5Stack ATOMS3を使い、IMUとカメラで機体姿勢・左右の足を観測しながら、足の振幅を制御する実機向けファームウェアです。0.47.25では30秒運転を5回完走し、制御完了2.5 ms超過ゼロとCRC付きログ回収を確認しています。",
+      "detail": "こいつは、M5Stack ATOMS3上でIMUとカメラを使い、足を固定しない状態の振幅制御を実機で検証するファームウェアだな。中ではESP32のコアを役割分担させ、IMU取得、MEKFによる姿勢推定、比較用Madgwick、左右の足観測、モータへのパルス制御を並行して動かしてる。目標振幅から必要なQを逆算して電流とパルス幅を選び、PSRAMへイベントを蓄えながら、RWLOGと足CSVをCRC付きで保存・再開可能な形で回収できる。0.47.25では30秒運転を5回、60,708件すべて2.5 ms以内に完了し、HTTPを運転中だけ休止して無線APは維持する構成まで確認済みだ。ただし、別の振幅や長時間運転での期限、姿勢・足角度の外部基準精度、任意の3D転倒検知、電流取得間隔の問題までは解決したとはしていない。",
+      "closingRemark": "2.5 msの門は抜けたが、電流の時計まではまだ少し気難しいようだな。",
+      "features": [
+        "MEKFと比較用Madgwickによる姿勢推定",
+        "カメラによる左右の足観測と足CSV記録",
+        "目標振幅からQを逆算するパルス制御",
+        "RWLOGのCRC検証と中断再開対応のログ回収",
+        "運転中のHTTP休止と姿勢による前後STOP"
+      ],
+      "technologies": [
+        "C++",
+        "Python",
+        "JavaScript",
+        "PlatformIO",
+        "ESP32",
+        "M5Stack ATOMS3",
+        "M5Unified",
+        "Adafruit AHRS"
+      ],
+      "categories": [
+        "試作",
+        "ロボット制御",
+        "組み込み",
+        "実機検証"
+      ],
+      "status": "試作",
+      "confidence": "high",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
+      "sourceRepositoryId": 1390391742,
+      "sourcePushedAt": "2026-09-27T07:44:43Z",
+      "sourceDefaultBranch": "main",
+      "sourceMetadata": {
+        "repositoryId": 1390391742,
+        "name": "atoms3r-free-foot-amplitude-control-04725-stable",
+        "pushedAt": "2026-09-27T07:44:43Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "C++"
+      },
+      "sourceFingerprint": "bc917ff11cf237033497820d5625b8743b0d52540d61dab3642cf8e1853d5cd6",
+      "generatedAt": "2026-09-27T12:12:26.996Z"
     }
   },
-  "repositoryCount": 93
+  "repositoryCount": 94
 }
