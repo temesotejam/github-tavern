@@ -1,18 +1,18 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-28T14:10:33.306Z",
+  "generatedAt": "2026-09-28T23:22:36.376Z",
   "repositories": {
     "github-tavern": {
       "title": "公開リポジトリ探索酒場",
-      "summary": "temesotejamが公開しているGitHubリポジトリを、酒場風の画面から検索・閲覧する個人ポータル。CopilotがREADMEや構成をもとに日本語の概要を用意し、未解析のものはREADMEから暫定説明を表示します。",
-      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、古い情報端末のような画面から探して中身を確かめる個人ポータルだ。中ではGitHub APIから一覧を取得し、名前や説明、Topics、言語、Copilotの要約をまとめて検索できる。カードを選べば概要が開き、解析済みならREADMEや設定ファイルなどを根拠にした日本語説明が読めるし、まだ解析されていないものにはREADMEから短い暫定説明を添える。6時間ごとのGitHub Actionsが新規・更新分をCopilot CLIで解析し、通常は一度に最大8件ずつ要約データを更新する仕組みだ。公開リポジトリだけを扱い、GitHub Pagesで静的に公開できる一方、削除やIssue作成といった書き込み操作はしない。",
-      "closingRemark": "要約の更新は一度に最大8件。酒場の記録係も、棚卸しは少しずつ進めるらしい。",
+      "summary": "自分が所有する公開GitHubリポジトリを、検索・分類して閲覧する個人向けポータル。GitHub APIで情報を取得し、CopilotがREADMEや設定ファイルをもとに作る日本語の概要も表示します。",
+      "detail": "こいつは、temesotejamが所有する公開リポジトリを、古い情報端末風の画面から探して読むための個人ポータルだ。中ではGitHub APIから一覧を取得し、名前や説明、Topics、言語、Copilot要約を横断検索できる。技術領域ごとの分類やカード選択時の詳細表示もあり、Copilotの解析がまだないリポジトリにはREADMEから短い説明を補う仕組みも用意されてる。6時間ごとのActionsが新規・更新分を最大8件ずつ解析し、概要をキャッシュする。GitHub Pagesで静的に公開できる一方、対象は公開リポジトリだけで、閲覧以外の書き込み操作はしない作りだ。",
+      "closingRemark": "更新分だけを拾い、定期実行では一度に8件まで。酒場の帳簿も、なかなか堅実な運び方だな。",
       "features": [
-        "所有者の公開リポジトリ一覧をGitHub APIから取得",
-        "名前・説明・Topics・言語・要約を横断検索",
-        "カテゴリ別の簡易分類と選択中リポジトリの概要表示",
-        "Copilot CLIで新規・更新リポジトリの説明を自動生成",
-        "未解析リポジトリはREADMEから暫定説明を表示"
+        "公開リポジトリをGitHub APIから自動取得",
+        "名前・説明・Topics・言語・Copilot要約を横断検索",
+        "技術領域ごとの分類とリポジトリ詳細表示",
+        "READMEから未解析リポジトリの短い説明を生成",
+        "Copilot CLIによる定期解析とGitHub Pagesでの公開"
       ],
       "technologies": [
         "JavaScript",
@@ -24,20 +24,21 @@
         "GitHub Pages"
       ],
       "categories": [
-        "Web・ツール",
-        "GitHub",
-        "リポジトリ検索"
+        "Webアプリ",
+        "リポジトリ検索",
+        "GitHub Pages",
+        "自動要約"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-09-28T05:34:22Z",
+      "sourcePushedAt": "2026-09-28T14:10:34Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-09-28T05:34:22Z",
+        "pushedAt": "2026-09-28T14:10:34Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -47,8 +48,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "54309419a84bb8c4124889a089c851736ba9356e5298f290f21e0f50ab5a158e",
-      "generatedAt": "2026-09-28T14:10:33.306Z"
+      "sourceFingerprint": "77e5bd6f066dbad5c49f4ff9c90a5ba674a16b111ff33513689a237493f76147",
+      "generatedAt": "2026-09-28T23:22:36.375Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
