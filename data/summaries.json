@@ -1,44 +1,43 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-29T05:52:22.827Z",
+  "generatedAt": "2026-09-29T13:06:16.536Z",
   "repositories": {
     "github-tavern": {
       "title": "公開リポジトリ探索ポータル",
-      "summary": "temesotejamが公開しているGitHubリポジトリを、酒場風の画面から検索・閲覧する個人ポータル。GitHub APIで一覧を取得し、技術分野ごとの絞り込みや詳細表示に対応するほか、CopilotがREADMEや構成をもとに作る日本語要約も確認できる。未解析のリポジトリにはREADMEから暫定説明を補う。",
-      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを酒場風の画面から探し、選んで中身の概要を読むための個人ポータルだ。画面ではGitHub APIから一覧を取得し、名前や説明、Topics、言語、Copilot要約を横断検索できるほか、技術領域での絞り込みやカード上での詳細表示も用意してる。説明の生成はGitHub Actionsで6時間ごとに走り、更新のあったものや新規分をCopilot CLIが解析してdata/summaries.jsonへ保存する仕組みだ。初回の負荷を抑えるため定期実行は最大8件ずつで、未解析のリポジトリにはREADMEから短い暫定説明を補う。GitHub Pagesで静的に公開でき、対象は公開リポジトリのみ、削除や変更などの書き込み操作は行わない。",
-      "closingRemark": "6時間ごとに最大8件ずつ棚卸しする帳簿だ。非公開の棚には手を出さないあたり、店の作法は堅実だな。",
+      "summary": "公開リポジトリを古い情報端末風の画面で探し、選んで内容を読める個人向けポータル。GitHub APIから情報を取得し、名前・説明・Topics・言語を横断検索できるほか、Copilotの日本語解説や、未解析時のREADME暫定説明も表示する。",
+      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、無機質な一覧ではなく酒場の記録のように探すための個人ポータルだ。中では公開GitHub APIから一覧を取り、名前・Description・Topics・言語・Copilot要約を検索したり、技術領域の簡易分類で絞ったりしてる。カードを選べば概要や特徴、技術情報がその場で読めて、Copilot未解析のものにはREADMEから短い暫定説明を出す。説明データはActionsのworkflowが6時間ごとに確認し、前回の更新から変化があったリポジトリを最大8件ずつCopilot CLIで解析してキャッシュする仕組みだ。GitHub Pagesで静的に公開できる一方、対象は公開リポジトリだけで、サイトから削除や変更などの書き込みはしない。要するに、読むための端末であって管理画面じゃないってわけだ。",
+      "closingRemark": "6時間ごとに最大8件ずつ帳簿を更新するあたり、酒場の記録も一晩で全部は書き換えないらしい。",
       "features": [
-        "公開リポジトリをGitHub APIから取得",
+        "公開GitHubリポジトリを自動取得",
         "名前・説明・Topics・言語・要約を横断検索",
-        "技術領域での分類と絞り込み",
-        "Copilot CLIによる日本語要約の定期更新",
-        "未解析分はREADMEから暫定説明を表示"
+        "技術領域による簡易分類",
+        "カード選択で概要や技術情報を表示",
+        "Copilot解析とREADMEからの暫定説明"
       ],
       "technologies": [
         "JavaScript",
         "CSS",
         "HTML",
         "GitHub API",
-        "GitHub Copilot CLI",
         "GitHub Actions",
+        "GitHub Copilot CLI",
         "GitHub Pages"
       ],
       "categories": [
-        "Webポータル",
-        "リポジトリ検索",
-        "静的サイト",
-        "自動要約"
+        "Web・ツール",
+        "GitHub",
+        "リポジトリ検索"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-09-28T23:22:37Z",
+      "sourcePushedAt": "2026-09-29T05:52:24Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-09-28T23:22:37Z",
+        "pushedAt": "2026-09-29T05:52:24Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -48,8 +47,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "4712b931299aba26795f276abeffca1dfc51032b2c3796675f351c1e89e039b6",
-      "generatedAt": "2026-09-29T05:52:22.826Z"
+      "sourceFingerprint": "672492aa337a793636796e9635025cb9a803094389e0768febf86fe3f1322d96",
+      "generatedAt": "2026-09-29T13:06:16.536Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -201,43 +200,43 @@
       "generatedAt": "2026-09-25T11:59:26.810Z"
     },
     "youtube-video-fetcher": {
-      "title": "YouTube映像取得・解析連携基盤",
-      "summary": "YouTube動画や指定区間をWindowsのself-hosted runnerで取得し、GitHub Actions Artifactとして後段のChatGPTやAIエージェントへ渡すFetcherだ。字幕に頼らず映像本体を扱い、メタデータや解析目的も一緒に保存できる。",
-      "detail": "こいつは、YouTubeの動画をAIによる映像解析へ運ぶためのFetcherでな。URLと解析目的をrequest.jsonに入れるか、GitHub画面からWorkflowを手動実行すると、Windowsのself-hosted runnerが動画全編または指定区間を取得する。中ではWorkflow実行時にyt-dlp、Deno、FFmpegを用意し、動画本体にメタデータ、取得ログ、manifest、解析依頼を添えてArtifactへまとめてるわけだ。後段ではChatGPTがMP4からフレームを抽出し、部品やUIの確認、時系列比較、画像計測などを行う。YouTube字幕は補助経路、faster-whisperによる音声認識は実験経路で、Fetcher自身はAI解析をしない。ただしpublic repositoryにself-hosted runnerを接続する構成なので、実行トリガーや非公開URLの扱いには注意が要るな。",
-      "closingRemark": "動画を運ぶ仕事に徹して、見る仕事はArtifactの向こうへ預けている。字幕はあくまで控えだな。",
+      "title": "YouTube動画取得・解析連携ツール",
+      "summary": "YouTube動画や指定区間を取得し、GitHub Actions Artifact経由でChatGPTなどの解析側へ渡すFetcherだ。Windowsのself-hosted runnerに加え、Cloudflare Browser Runを使ったPC不要の取得経路も確認されている。",
+      "detail": "こいつは、YouTube動画を全編または指定区間で取得し、後段のChatGPTなどが映像を直接解析できるよう渡すFetcherだ。中ではGitHub Actionsがリクエストを受け、yt-dlpやFFmpegで動画を用意し、動画・メタデータ・質問などをArtifactにまとめてる。取得経路はWindows self-hosted runnerのほか、Cloudflare Browser Runを使うPC不要の経路もあり、後者では動画を最大16 MiBずつ分けて取得する仕組みだ。字幕取得やfaster-whisperによる音声認識も用意されているが、どちらも補助・実験経路で、映像の内容を解析するのはFetcherではなく後段の役目。Artifactの保持は1日で、公開リポジトリのためリクエストに秘密情報を入れない運用も大事なところだな。",
+      "closingRemark": "Browser Runの新規セッション制限には、16 MiBずつ分けて20秒待つ。動画相手にも、順番待ちはあるらしい。",
       "features": [
-        "全編または指定区間のYouTube動画取得",
-        "GitHub Actions Artifactを介した後段AI解析連携",
-        "request.jsonによる質問・解析目的の同梱",
-        "yt-dlp・Deno・FFmpegのWorkflow内準備",
-        "字幕取得と独立ASRの補助・実験経路"
+        "動画全編または指定区間を取得",
+        "動画や解析用リクエスト情報をGitHub Actions Artifactに保存",
+        "Windows self-hosted runnerとCloudflare Browser Runの取得経路",
+        "Web UI/APIからジョブを投入し、実行状況を確認",
+        "字幕取得と独立ASRは補助・実験機能として提供"
       ],
       "technologies": [
+        "JavaScript",
         "Python",
         "GitHub Actions",
-        "Windows self-hosted runner",
         "yt-dlp",
-        "Deno",
         "FFmpeg",
-        "faster-whisper",
-        "ChatGPT"
+        "Deno",
+        "Cloudflare Browser Run",
+        "faster-whisper"
       ],
       "categories": [
-        "動画処理",
-        "AI連携",
+        "動画取得",
         "GitHub Actions",
-        "開発ツール"
+        "Cloudflare",
+        "AI解析連携"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1351374820,
-      "sourcePushedAt": "2026-09-14T02:35:49Z",
+      "sourcePushedAt": "2026-09-29T11:50:43Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1351374820,
         "name": "youtube-video-fetcher",
-        "pushedAt": "2026-09-14T02:35:49Z",
+        "pushedAt": "2026-09-29T11:50:43Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -245,10 +244,10 @@
         "archived": false,
         "disabled": false,
         "fork": false,
-        "language": "Python"
+        "language": "JavaScript"
       },
-      "sourceFingerprint": "12c64efcb000b4b64d8fef0a92909917fb05c008f656151559c6462ff7387eab",
-      "generatedAt": "2026-09-14T05:07:43.496Z"
+      "sourceFingerprint": "bb962e713b697a6bd73eb2f2a7016cdea7e6de034147f28778de3262cb1cc34f",
+      "generatedAt": "2026-09-29T13:05:56.789Z"
     },
     "marker-angle-recorder": {
       "title": "機体角度・RWLOG記録ツール",
@@ -4649,7 +4648,86 @@
       },
       "sourceFingerprint": "bc917ff11cf237033497820d5625b8743b0d52540d61dab3642cf8e1853d5cd6",
       "generatedAt": "2026-09-27T12:12:26.996Z"
+    },
+    "youtube-video-fetcher-windows": {
+      "title": "内容未確認のリポジトリ",
+      "summary": "リポジトリ名はyoutube-video-fetcher-windowsですが、説明やトピック、使用言語の情報はありません。READMEやファイル一覧も確認できないため、何を取得する仕組みなのかは判断できません。",
+      "detail": "手元の資料で確認できるのは、リポジトリ名がyoutube-video-fetcher-windowsということくらいだ。説明文やトピックはなく、README、ファイル一覧、コミット情報も確認できない。名前から用途を決めつけるわけにはいかないので、中で何をしているのかや使っている技術までは分からないな。",
+      "closingRemark": "READMEもファイル一覧もないとなると、名前の先にある話はまだ聞けそうにない。",
+      "features": [],
+      "technologies": [],
+      "categories": [],
+      "status": "不明",
+      "confidence": "low",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
+      "sourceRepositoryId": 1395149648,
+      "sourcePushedAt": "2026-09-29T12:06:15Z",
+      "sourceDefaultBranch": "main",
+      "sourceMetadata": {
+        "repositoryId": 1395149648,
+        "name": "youtube-video-fetcher-windows",
+        "pushedAt": "2026-09-29T12:06:15Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": ""
+      },
+      "sourceFingerprint": "a7bd158c25eb816c59c3529bcec94379b3f61d930a36dc6e1b3456b6eedde909",
+      "generatedAt": "2026-09-29T13:05:26.711Z"
+    },
+    "atoms3r-zero-cross-fixed-100ms-test": {
+      "title": "ZEROクロス固定パルス試験",
+      "summary": "自由に動く足の振幅変化を調べるため、物理ピーク確認後の受理済みZEROクロスごとに300 mA・100 msの固定パルスを与える試験用ファームウェアだ。30秒の計測ログで次ピークや左右足角度を追える一方、8°・10°・12°は記録用で、パルス幅には使わない。",
+      "detail": "こいつは、自由に動く足で固定100 msの電流指令が振幅にどう効くかを確かめる実験用ファームウェアだ。始動パルスも300 mA・100 msで、物理ピーク確認後に受理したZEROクロスごと同じ指令を出す。中ではMEKFによる角度推定と30秒計測を続け、実測電流から積分したQ、正負ピーク、左右足角度、ZEROクロス角速度などをRWLOG v53へ記録する。8°・10°・12°は比較用にログへ残すだけで幅選択には使わず、モデル異常時は指令しない。振幅が増え続ける可能性に備えてMEKF角度の絶対値16°でESTOPするが、機械停止の保証ではないため、手動停止と給電遮断を前提にした試験ってところだ。",
+      "closingRemark": "8°・10°・12°の選択欄は、今回は操縦桿じゃなく記録係ってわけだ。",
+      "features": [
+        "受理済みZEROクロス後に300 mA・100 msの固定パルスを出力",
+        "30秒計測で次ピーク、左右足角度、電流積分Qなどを記録",
+        "8°・10°・12°は比較用に保存し、パルス幅の決定には不使用",
+        "モデル異常時は指令を見送り、MEKF角度の絶対値16°でESTOP",
+        "Web書き込みページとRWLOG v53のログ保存に対応"
+      ],
+      "technologies": [
+        "C++",
+        "Python",
+        "JavaScript",
+        "ESP32-S3",
+        "PlatformIO",
+        "M5Unified",
+        "M5GFX",
+        "Adafruit AHRS"
+      ],
+      "categories": [
+        "組み込み",
+        "制御実験",
+        "ロボティクス"
+      ],
+      "status": "実験",
+      "confidence": "high",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
+      "sourceRepositoryId": 1395119115,
+      "sourcePushedAt": "2026-09-29T12:00:04Z",
+      "sourceDefaultBranch": "main",
+      "sourceMetadata": {
+        "repositoryId": 1395119115,
+        "name": "atoms3r-zero-cross-fixed-100ms-test",
+        "pushedAt": "2026-09-29T12:00:04Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "C++"
+      },
+      "sourceFingerprint": "5b218dbbdb1889c3fa28621eccc89fad93aa646a625c07ffd8ccf8cfcbad04e0",
+      "generatedAt": "2026-09-29T13:05:46.898Z"
     }
   },
-  "repositoryCount": 94
+  "repositoryCount": 96
 }
