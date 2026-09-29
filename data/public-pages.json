@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-27T12:30:35.462Z",
-  "repositoryCount": 94,
-  "pageCount": 53,
+  "generatedAt": "2026-09-29T13:22:52.753Z",
+  "repositoryCount": 96,
+  "pageCount": 54,
   "pages": {
     "2026_8_5_3": {
       "url": "https://temesotejam.github.io/2026_8_5_3/",
@@ -81,6 +81,11 @@
     },
     "atoms3r-visual-pose-tracker": {
       "url": "https://temesotejam.github.io/atoms3r-visual-pose-tracker/",
+      "source": "github-pages",
+      "status": 200
+    },
+    "atoms3r-zero-cross-fixed-100ms-test": {
+      "url": "https://temesotejam.github.io/atoms3r-zero-cross-fixed-100ms-test/",
       "source": "github-pages",
       "status": 200
     },
