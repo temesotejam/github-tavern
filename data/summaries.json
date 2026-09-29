@@ -1,44 +1,44 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-28T23:22:36.376Z",
+  "generatedAt": "2026-09-29T05:52:22.827Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ探索酒場",
-      "summary": "自分が所有する公開GitHubリポジトリを、検索・分類して閲覧する個人向けポータル。GitHub APIで情報を取得し、CopilotがREADMEや設定ファイルをもとに作る日本語の概要も表示します。",
-      "detail": "こいつは、temesotejamが所有する公開リポジトリを、古い情報端末風の画面から探して読むための個人ポータルだ。中ではGitHub APIから一覧を取得し、名前や説明、Topics、言語、Copilot要約を横断検索できる。技術領域ごとの分類やカード選択時の詳細表示もあり、Copilotの解析がまだないリポジトリにはREADMEから短い説明を補う仕組みも用意されてる。6時間ごとのActionsが新規・更新分を最大8件ずつ解析し、概要をキャッシュする。GitHub Pagesで静的に公開できる一方、対象は公開リポジトリだけで、閲覧以外の書き込み操作はしない作りだ。",
-      "closingRemark": "更新分だけを拾い、定期実行では一度に8件まで。酒場の帳簿も、なかなか堅実な運び方だな。",
+      "title": "公開リポジトリ探索ポータル",
+      "summary": "temesotejamが公開しているGitHubリポジトリを、酒場風の画面から検索・閲覧する個人ポータル。GitHub APIで一覧を取得し、技術分野ごとの絞り込みや詳細表示に対応するほか、CopilotがREADMEや構成をもとに作る日本語要約も確認できる。未解析のリポジトリにはREADMEから暫定説明を補う。",
+      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを酒場風の画面から探し、選んで中身の概要を読むための個人ポータルだ。画面ではGitHub APIから一覧を取得し、名前や説明、Topics、言語、Copilot要約を横断検索できるほか、技術領域での絞り込みやカード上での詳細表示も用意してる。説明の生成はGitHub Actionsで6時間ごとに走り、更新のあったものや新規分をCopilot CLIが解析してdata/summaries.jsonへ保存する仕組みだ。初回の負荷を抑えるため定期実行は最大8件ずつで、未解析のリポジトリにはREADMEから短い暫定説明を補う。GitHub Pagesで静的に公開でき、対象は公開リポジトリのみ、削除や変更などの書き込み操作は行わない。",
+      "closingRemark": "6時間ごとに最大8件ずつ棚卸しする帳簿だ。非公開の棚には手を出さないあたり、店の作法は堅実だな。",
       "features": [
-        "公開リポジトリをGitHub APIから自動取得",
-        "名前・説明・Topics・言語・Copilot要約を横断検索",
-        "技術領域ごとの分類とリポジトリ詳細表示",
-        "READMEから未解析リポジトリの短い説明を生成",
-        "Copilot CLIによる定期解析とGitHub Pagesでの公開"
+        "公開リポジトリをGitHub APIから取得",
+        "名前・説明・Topics・言語・要約を横断検索",
+        "技術領域での分類と絞り込み",
+        "Copilot CLIによる日本語要約の定期更新",
+        "未解析分はREADMEから暫定説明を表示"
       ],
       "technologies": [
         "JavaScript",
         "CSS",
         "HTML",
         "GitHub API",
-        "GitHub Actions",
         "GitHub Copilot CLI",
+        "GitHub Actions",
         "GitHub Pages"
       ],
       "categories": [
-        "Webアプリ",
+        "Webポータル",
         "リポジトリ検索",
-        "GitHub Pages",
+        "静的サイト",
         "自動要約"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-09-28T14:10:34Z",
+      "sourcePushedAt": "2026-09-28T23:22:37Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-09-28T14:10:34Z",
+        "pushedAt": "2026-09-28T23:22:37Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -48,8 +48,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "77e5bd6f066dbad5c49f4ff9c90a5ba674a16b111ff33513689a237493f76147",
-      "generatedAt": "2026-09-28T23:22:36.375Z"
+      "sourceFingerprint": "4712b931299aba26795f276abeffca1dfc51032b2c3796675f351c1e89e039b6",
+      "generatedAt": "2026-09-29T05:52:22.826Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -4402,16 +4402,16 @@
       "generatedAt": "2026-09-25T11:58:53.763Z"
     },
     "atoms3r-free-foot-amplitude-control": {
-      "title": "足振幅制御と旋回応答計測",
-      "summary": "AtomS3搭載機の足振幅を制御し、目標角の左右差が旋回にどう影響するかを実機で確かめるファームウェアとWeb操作画面だ。30秒の測定ログを保存でき、RWLOG変換や制御時間の検証ツールも揃っている。",
-      "detail": "こいつは、AtomS3搭載機の足振幅を制御しながら、左右の目標角の差が旋回にどう表れるかを測るためのファームウェアだ。中ではIMUの取得、姿勢推定、振幅制御、カメラによる足の観測を動かし、測定後にRWLOGと足CSVを回収できる。最新版ではyaw自動補正を休止し、30秒の測定中に片側目標を交互に±0.2°変えて応答を確認する構成で、Web画面から操作する。ログ変換やCRC、制御時間を調べるPythonツールと、ESP32-S3向けのビルド設定も含まれている。ただし、最新版の実機応答と処理時間はまだ次回測定待ちで、角度の精度や旋回改善量までは確認されていない。",
-      "closingRemark": "前版の期限測定は良好でも、今回の旋回応答はまだ記録待ちだ。ログの席は空けてある。",
+      "title": "自由足振幅制御ファームウェア",
+      "summary": "AtomS3系の機体で揺れの片側振幅を制御し、測定ログを記録・検証するファームウェア。目標角を選んで30秒測定でき、最新の0.47.31では固定足の測定データをもとに次ピーク予測を調整している。",
+      "detail": "こいつは、自由足ランタイムで機体の揺れを目標振幅へ近づけ、動作とログを検証するファームウェアだ。中ではIMUの値をMEKFで推定し、目標角から必要なQを逆算して電流パルスを決めるほか、カメラによる足の観測も記録してる。Web画面から8°・10°・12°を選んで30秒測定し、RWLOGや足CSVを保存して後から確認できる。最新の0.47.31では固定足の8°・10°・12°測定を使って次ピーク予測係数を調整した一方、yaw制御は停止中で左右同じ目標だ。ただし、予測誤差の改善は閉ループの実機振幅精度を示すものではなく、更新後の実機結果は次の測定待ちだな。",
+      "closingRemark": "204イベントの予測RMSEは0.319°まで下がったが、実機の振幅誤差はまだ次の測定待ち。式のほうが先に落ち着いたようだな。",
       "features": [
-        "8°・10°・12°の目標角を選んで30秒測定",
-        "片側目標を交互に変える旋回応答の実機確認",
-        "RWLOG v53と足CSVの保存・回収",
-        "Pythonによるログ変換、CRC・制御時間の検証",
-        "HTTP休止中もWi-Fi APを維持し、測定後にログを回収"
+        "目標振幅を8°・10°・12°から選んで30秒測定",
+        "MEKF推定とQ逆算による電流パルス制御",
+        "カメラによる足観測とRWLOG・足CSVの記録",
+        "HTTP休止中もWi-Fi APを維持し、測定後にログを回収",
+        "最新版本では固定足の測定から次ピーク予測係数を再調整"
       ],
       "technologies": [
         "C++",
@@ -4419,26 +4419,25 @@
         "JavaScript",
         "ESP32-S3",
         "PlatformIO",
-        "Arduino",
         "M5Unified",
+        "Adafruit AHRS",
         "MEKF"
       ],
       "categories": [
-        "組み込み",
-        "ロボット制御",
-        "実験",
-        "計測ツール"
+        "組込みファームウェア",
+        "振幅制御",
+        "計測・ログ解析"
       ],
       "status": "実験",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1380859177,
-      "sourcePushedAt": "2026-09-28T11:59:06Z",
+      "sourcePushedAt": "2026-09-29T02:59:49Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1380859177,
         "name": "atoms3r-free-foot-amplitude-control",
-        "pushedAt": "2026-09-28T11:59:06Z",
+        "pushedAt": "2026-09-29T02:59:49Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -4448,8 +4447,8 @@
         "fork": false,
         "language": "C++"
       },
-      "sourceFingerprint": "944ea6b2c2e1377543c360aa6277eff49552e58d895c878c53c1f30b3f800377",
-      "generatedAt": "2026-09-28T14:10:19.593Z"
+      "sourceFingerprint": "fd4349ef16171298cf3716778ebc75a3f4849208e8ca4009d448eaa84295dfb0",
+      "generatedAt": "2026-09-29T05:52:09.075Z"
     },
     "atoms3r-amplitude-control-v46al-r2-stable": {
       "title": "AtomS3R振幅制御ファームウェア",
