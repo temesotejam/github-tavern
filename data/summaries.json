@@ -1,44 +1,44 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-29T22:23:44.700Z",
+  "generatedAt": "2026-09-30T05:42:46.793Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ案内端末",
-      "summary": "公開GitHubリポジトリを取得し、検索・分類して、酒場風の画面から選べる個人向けポータル。Copilot CLIがREADMEや設定ファイルなどをもとに日本語の概要を定期生成し、未解析のリポジトリにはREADMEから短い説明を補います。",
-      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを探して中身を確かめるための、GitHub Pages対応の個人ポータルだ。中ではGitHub APIからリポジトリ情報を取得し、名前や説明、Topics、言語、Copilot要約を横断検索して、技術領域ごとに絞り込める。カードを選ぶと概要や確認済みの公開ページへ進めて、Copilot要約がまだない場合はREADMEから短い説明を補う仕組みもある。説明の生成はGitHub Actionsで6時間ごとに確認し、更新のあったリポジトリをCopilot CLIで解析する。対象は公開リポジトリだけで、サイトから変更や書き込みはしない。要するに、一覧を眺めるだけでなく、根拠のある説明まで添えて個人の公開リポジトリを案内する端末ってところだ。",
-      "closingRemark": "6時間ごとに棚を確かめるが、並ぶのは公開リポジトリだけ。鍵のかかった依頼は最初から帳簿に載らない。",
+      "title": "公開リポジトリ探索ポータル",
+      "summary": "公開GitHubリポジトリを古い情報端末風の画面で探し、選んで概要を読める個人ポータル。GitHub APIから一覧を取得し、横断検索や技術分類、Copilotの日本語説明を備え、新しいリポジトリにはREADMEから暫定紹介を補います。",
+      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、酒場の記録をめくるように探して概要を読むための個人ポータルだ。中ではGitHub APIから一覧を取り、名前・説明・Topics・言語・Copilot要約をまとめて検索し、技術領域ごとの分類やカード選択時の詳細表示につないでる。Copilot未解析の新しい項目にはREADMEから短い説明を拾い、解析済みならREADMEや設定ファイル、コミットなどを根拠にした日本語の要約を表示する。要約の更新はActionsで6時間ごとに確認し、更新のあったものを通常1回最大8件ずつ処理する仕組みだ。GitHub Pagesで静的に公開でき、公開データの閲覧に限っていて、非公開リポジトリや書き込み操作は扱わない。",
+      "closingRemark": "pushed_atが変わった分だけを拾い、更新も一度に最大8件。帳簿をめくる手つきまで、なかなか堅実だな。",
       "features": [
-        "GitHub APIから所有者の公開リポジトリを取得",
-        "名前・説明・Topics・言語・要約を横断検索し、技術領域で分類",
-        "Copilot CLIがREADMEや設定ファイルなどをもとに日本語要約を生成",
-        "未解析のリポジトリはREADMEから短い説明を自動表示",
-        "GitHub Pagesで静的ホスティングでき、確認済みの公開ページも案内"
+        "GitHub APIから所有する公開リポジトリを取得",
+        "名前・説明・Topics・言語・要約を横断検索",
+        "技術領域ごとの分類とカードからの詳細表示",
+        "Copilot CLIで日本語説明を定期更新",
+        "未解析のリポジトリはREADMEから暫定紹介"
       ],
       "technologies": [
         "JavaScript",
         "CSS",
         "HTML",
         "GitHub API",
-        "GitHub Actions",
         "GitHub Copilot CLI",
+        "GitHub Actions",
         "GitHub Pages"
       ],
       "categories": [
         "Webアプリ",
-        "GitHubツール",
-        "リポジトリ検索",
+        "GitHubリポジトリ閲覧",
+        "検索・分類",
         "静的サイト"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-09-29T13:23:00Z",
+      "sourcePushedAt": "2026-09-29T22:23:46Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-09-29T13:23:00Z",
+        "pushedAt": "2026-09-29T22:23:46Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -48,8 +48,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "b0c53ef4cfb5780f9c76134d373a7059dedc8d8d2ccd381ed3b3c0dfd5382b11",
-      "generatedAt": "2026-09-29T22:23:44.700Z"
+      "sourceFingerprint": "82eb497fe27b21b721748ab5879e448c55d3e36870b01d399e031f43613cb50c",
+      "generatedAt": "2026-09-30T05:42:46.793Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -4650,73 +4650,44 @@
       "sourceFingerprint": "bc917ff11cf237033497820d5625b8743b0d52540d61dab3642cf8e1853d5cd6",
       "generatedAt": "2026-09-27T12:12:26.996Z"
     },
-    "youtube-video-fetcher-windows": {
-      "title": "内容未確認のリポジトリ",
-      "summary": "リポジトリ名はyoutube-video-fetcher-windowsですが、説明やトピック、使用言語の情報はありません。READMEやファイル一覧も確認できないため、何を取得する仕組みなのかは判断できません。",
-      "detail": "手元の資料で確認できるのは、リポジトリ名がyoutube-video-fetcher-windowsということくらいだ。説明文やトピックはなく、README、ファイル一覧、コミット情報も確認できない。名前から用途を決めつけるわけにはいかないので、中で何をしているのかや使っている技術までは分からないな。",
-      "closingRemark": "READMEもファイル一覧もないとなると、名前の先にある話はまだ聞けそうにない。",
-      "features": [],
-      "technologies": [],
-      "categories": [],
-      "status": "不明",
-      "confidence": "low",
-      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
-      "sourceRepositoryId": 1395149648,
-      "sourcePushedAt": "2026-09-29T12:06:15Z",
-      "sourceDefaultBranch": "main",
-      "sourceMetadata": {
-        "repositoryId": 1395149648,
-        "name": "youtube-video-fetcher-windows",
-        "pushedAt": "2026-09-29T12:06:15Z",
-        "description": "",
-        "topics": [],
-        "homepage": "",
-        "defaultBranch": "main",
-        "archived": false,
-        "disabled": false,
-        "fork": false,
-        "language": ""
-      },
-      "sourceFingerprint": "a7bd158c25eb816c59c3529bcec94379b3f61d930a36dc6e1b3456b6eedde909",
-      "generatedAt": "2026-09-29T13:05:26.711Z"
-    },
     "atoms3r-zero-cross-fixed-100ms-test": {
-      "title": "ZEROクロス固定パルス試験",
-      "summary": "自由に動く足の振幅変化を調べるため、物理ピーク確認後の受理済みZEROクロスごとに300 mA・100 msの固定パルスを与える試験用ファームウェアだ。30秒の計測ログで次ピークや左右足角度を追える一方、8°・10°・12°は記録用で、パルス幅には使わない。",
-      "detail": "こいつは、自由に動く足で固定100 msの電流指令が振幅にどう効くかを確かめる実験用ファームウェアだ。始動パルスも300 mA・100 msで、物理ピーク確認後に受理したZEROクロスごと同じ指令を出す。中ではMEKFによる角度推定と30秒計測を続け、実測電流から積分したQ、正負ピーク、左右足角度、ZEROクロス角速度などをRWLOG v53へ記録する。8°・10°・12°は比較用にログへ残すだけで幅選択には使わず、モデル異常時は指令しない。振幅が増え続ける可能性に備えてMEKF角度の絶対値16°でESTOPするが、機械停止の保証ではないため、手動停止と給電遮断を前提にした試験ってところだ。",
-      "closingRemark": "8°・10°・12°の選択欄は、今回は操縦桿じゃなく記録係ってわけだ。",
+      "title": "AtomS3自由足振幅制御試験",
+      "summary": "自由に動く足の振幅制御を調べるESP32-S3向けファームウェアで、現在は物理ZEROクロスのたびに1 Aを100 ms固定で指令する試験版。30秒の測定で実電流や足角度を記録し、MEKFによる16°停止も備えるが、1 Aでの予測モデルは未検証だ。",
+      "detail": "こいつは、自由に動く足の振幅制御を実機で確かめるためのAtomS3向けファームウェアだ。現在の版では始動時と受理済みの物理ZEROクロスで、方向に応じて1 Aを100 ms固定で指令し、30秒間の測定で実電流や足角度を記録する。中ではIMUの取得と制御を分け、MEKFで見た左右角度が絶対値16°に達すると停止する仕組みだ。記録した実電流から積分したQや正負ピーク、ZEROクロス角速度を見て、入力と振幅の関係を比較できる。ただし、既存の電流応答・次ピーク予測モデルは1 Aでは未検証で、予測値は参考扱いだし、16°停止も機械的な停止を保証するものではない。",
+      "closingRemark": "1 Aの予測はまだ未検証、という但し書きまで含めて試験の本番だな。まずは実測ログが答えを出す。",
       "features": [
-        "受理済みZEROクロス後に300 mA・100 msの固定パルスを出力",
-        "30秒計測で次ピーク、左右足角度、電流積分Qなどを記録",
-        "8°・10°・12°は比較用に保存し、パルス幅の決定には不使用",
-        "モデル異常時は指令を見送り、MEKF角度の絶対値16°でESTOP",
-        "Web書き込みページとRWLOG v53のログ保存に対応"
+        "ZEROクロスごとに1 A・100 msの固定入力",
+        "始動キックと30秒測定を実施",
+        "MEKFの左右角度が絶対値16°で停止",
+        "実電流・足角度・ピークなどを記録",
+        "1 Aで未検証の予測値は参考扱い"
       ],
       "technologies": [
         "C++",
         "Python",
         "JavaScript",
-        "ESP32-S3",
         "PlatformIO",
+        "ESP32-S3",
+        "Arduino",
         "M5Unified",
-        "M5GFX",
         "Adafruit AHRS"
       ],
       "categories": [
         "組み込み",
-        "制御実験",
-        "ロボティクス"
+        "ファームウェア",
+        "モーター制御",
+        "実機試験"
       ],
       "status": "実験",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1395119115,
-      "sourcePushedAt": "2026-09-29T12:00:04Z",
+      "sourcePushedAt": "2026-09-30T04:19:46Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1395119115,
         "name": "atoms3r-zero-cross-fixed-100ms-test",
-        "pushedAt": "2026-09-29T12:00:04Z",
+        "pushedAt": "2026-09-30T04:19:46Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -4726,9 +4697,9 @@
         "fork": false,
         "language": "C++"
       },
-      "sourceFingerprint": "5b218dbbdb1889c3fa28621eccc89fad93aa646a625c07ffd8ccf8cfcbad04e0",
-      "generatedAt": "2026-09-29T13:05:46.898Z"
+      "sourceFingerprint": "bb9a4449bd38682dd0f99b6c7d4581d116de93e3d3b710808f84ca985e8a5b29",
+      "generatedAt": "2026-09-30T05:42:33.450Z"
     }
   },
-  "repositoryCount": 96
+  "repositoryCount": 95
 }
