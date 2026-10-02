@@ -1,18 +1,18 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-02T05:51:32.897Z",
+  "generatedAt": "2026-10-02T12:49:49.759Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ探索端末",
-      "summary": "temesotejamの公開GitHubリポジトリを、古い情報端末風の画面から検索・閲覧する個人向けポータル。CopilotがREADMEや設定、構成をもとに日本語の概要を定期生成し、未解析のリポジトリにはREADMEから暫定説明を表示します。",
-      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、酒場の依頼帳のように探して眺めるための個人ポータルだ。中ではGitHub APIからリポジトリ情報を取り込み、名前や説明、Topics、言語、Copilotの要約を横断検索できるようにしてる。カードを選ぶと概要を表示し、未解析のものはREADMEから短い説明を補う仕組みもある。さらにGitHub Actionsが6時間ごとに更新を確認し、新規または変更されたリポジトリをCopilot CLIで解析して、説明データを更新するんだ。GitHub Pagesで静的に公開できる一方、対象は公開リポジトリだけで、削除や変更などの書き込み操作はしない。",
-      "closingRemark": "要約は一度に最大8件ずつ。酒場の帳面も、更新が多い日は順番待ちってわけだ。",
+      "title": "公開リポジトリ探索酒場",
+      "summary": "公開GitHubリポジトリを検索・閲覧し、カードから概要まで確認できる個人向けポータル。CopilotがREADMEや設定ファイルなどをもとに日本語説明を更新し、未解析のリポジトリにはREADMEから暫定説明を表示します。",
+      "detail": "こいつは、temesotejamが所有する公開GitHubリポジトリを検索して、酒場の記録を選ぶように閲覧するための個人向けポータルだ。中ではGitHub APIから一覧を取得し、名前や説明、Topics、言語、Copilot要約を横断検索できるようにしてる。リポジトリを選ぶと概要が表示され、Copilot未解析ならREADMEから短い説明を補う仕組みもある。6時間ごとのActionsが前回の更新以降に変化したリポジトリを解析し、定期実行では一度に最大8件ずつ要約を更新する。GitHub Pagesで静的に公開できる一方、対象は公開リポジトリだけで、サイトから変更やIssue作成はしない構成だ。",
+      "closingRemark": "更新のない記録は読み直さず、定期便も一度に八件まで。酒場の帳面にしては、なかなか几帳面だな。",
       "features": [
-        "GitHub APIから所有者の公開リポジトリを取得",
+        "公開リポジトリをGitHub APIから自動取得",
         "名前・説明・Topics・言語・要約を横断検索",
-        "カード選択で概要を表示し、READMEから暫定説明を補完",
-        "Copilot CLIで要約を定期更新し、結果をJSONに保存",
-        "GitHub Pagesで静的ホスティング可能"
+        "リポジトリ選択時に概要や詳細を表示",
+        "Copilotが更新対象を解析し、日本語要約をキャッシュ",
+        "未解析時はREADMEから暫定説明を表示"
       ],
       "technologies": [
         "JavaScript",
@@ -24,21 +24,20 @@
         "GitHub Pages"
       ],
       "categories": [
-        "Webアプリ",
-        "リポジトリ検索",
-        "個人ポータル",
-        "AI要約"
+        "Web・ツール",
+        "GitHub",
+        "リポジトリ検索"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-10-01T22:46:40Z",
+      "sourcePushedAt": "2026-10-02T05:51:34Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-10-01T22:46:40Z",
+        "pushedAt": "2026-10-02T05:51:34Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -48,8 +47,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "53372198e9ace2586664f791ce43290611769aba986d0e3949c6cdbb51b64049",
-      "generatedAt": "2026-10-02T05:51:32.897Z"
+      "sourceFingerprint": "dcbce57614d9b0f70734314d9529307278f0ddb8634ddcb49e83ced79eb9b6a1",
+      "generatedAt": "2026-10-02T12:49:49.759Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -4699,7 +4698,54 @@
       },
       "sourceFingerprint": "bb9a4449bd38682dd0f99b6c7d4581d116de93e3d3b710808f84ca985e8a5b29",
       "generatedAt": "2026-09-30T05:42:33.450Z"
+    },
+    "robot-core-arena": {
+      "title": "ブラウザ向け3Dロボット対戦ゲーム",
+      "summary": "ブラウザで遊ぶ3Dロボット対戦ゲームの試作版で、味方と敵の人数を選んで1対1から3対3までの戦闘を試せます。多数の武器や装甲、技、操作設定に加え、トレーニングや構成の保存・バックアップも備えています。",
+      "detail": "こいつは、ブラウザでロボット同士の3D戦闘を試すためのゲーム試作版だ。味方と敵の人数を選び、1対1から3対3までの戦闘をCPU相手に遊べる。中ではThree.jsを使って描画し、武器や装甲、スキル、戦闘スタイルを選んで機体を組み立てるほか、LPやテンション、弾数、状態異常などを扱っている。キーボード・マウスとゲームパッドに対応し、操作割り当ては変更してブラウザ内に保存できる。トレーニングやJSONバックアップも用意されているが、READMEでは試作版とされ、暫定実装や制約は別資料に記載されている。",
+      "closingRemark": "近接攻撃の入力バッファや武器ごとの手の構えまで調整中らしい。ロボットの喧嘩も、握りの確認から始まるわけだな。",
+      "features": [
+        "1対1から3対3まで人数を選べるCPU対戦",
+        "3ステージ、3段階のCPU難易度、5種類の戦闘スタイル",
+        "5部位の装甲、19武器種、盾と武器別76技",
+        "キー・マウス・ゲームパッドの操作割り当て変更と自動保存",
+        "トレーニング、ブラウザ内保存、JSONバックアップに対応"
+      ],
+      "technologies": [
+        "JavaScript",
+        "HTML",
+        "Three.js",
+        "WebGL",
+        "Node.js"
+      ],
+      "categories": [
+        "3Dゲーム",
+        "ロボット対戦",
+        "ブラウザゲーム",
+        "ゲーム試作"
+      ],
+      "status": "試作",
+      "confidence": "high",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
+      "sourceRepositoryId": 1401394108,
+      "sourcePushedAt": "2026-10-02T12:49:25Z",
+      "sourceDefaultBranch": "main",
+      "sourceMetadata": {
+        "repositoryId": 1401394108,
+        "name": "robot-core-arena",
+        "pushedAt": "2026-10-02T12:49:25Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "JavaScript"
+      },
+      "sourceFingerprint": "f07f357a73b0b265ebf1ce555d4086fe21623f5814cdb2afaf71577b01424479",
+      "generatedAt": "2026-10-02T12:49:38.350Z"
     }
   },
-  "repositoryCount": 95
+  "repositoryCount": 96
 }
