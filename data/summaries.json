@@ -1,44 +1,43 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-04T12:32:22.152Z",
+  "generatedAt": "2026-10-04T21:38:11.790Z",
   "repositories": {
     "github-tavern": {
       "title": "公開リポジトリ探索酒場",
-      "summary": "temesotejamが公開するGitHubリポジトリを、酒場風の画面から探して内容を確かめる個人向けポータル。GitHub APIで一覧を取得し、名前や説明、Topics、言語、Copilot要約を横断検索でき、未解析のものはREADMEから暫定紹介を表示します。",
-      "detail": "こいつは、temesotejamが公開しているリポジトリを、無機質な一覧ではなく酒場の依頼帳のように探して読むための個人ポータルだ。中ではGitHubの公開APIから一覧を取り、名前・Description・Topics・使用言語・Copilot要約をまとめて検索し、技術領域ごとの分類やカード選択から詳細確認までつないでる。Copilot要約はActionsが6時間ごとに更新を見て、変更のあったリポジトリを最大8件ずつ解析して保存し、未解析のものにはREADMEから短い暫定説明も出す。GitHub Pagesで静的に公開でき、Private Repositoryは対象外、サイトからリポジトリへの書き込みもしない。閲覧端末としての仕事に絞っていて、説明の詳しさは解析済みかどうかで変わるってところだな。",
-      "closingRemark": "6時間ごとに最大8件ずつ帳面を更新する仕組みだ。一度に全員分を載せる気はないらしい。",
+      "summary": "公開GitHubリポジトリを、検索や分類を使って酒場風の画面から探せる個人ポータル。CopilotがREADMEや構成をもとに日本語の概要を作り、未解析のものはREADMEから短い説明を補います。",
+      "detail": "こいつは、temesotejamが所有する公開GitHubリポジトリを、酒場風の画面から探して中身を眺めるための個人ポータルだ。中ではGitHub APIから一覧を取得し、名前や説明、Topics、使用言語、Copilot要約を横断検索できる。カードを選ぶと概要が開き、解析済みならREADMEやファイル構成などを根拠にした日本語説明が読めるし、まだ要約がないものにはREADMEから短い紹介を添える。要約の更新はGitHub Actions経由で6時間ごとに確認し、変更のあったリポジトリをCopilot CLIで解析する仕組みで、定期実行では一度に最大8件までだ。公開APIだけを使う静的サイトで、非公開リポジトリの閲覧や書き込み操作はしないってわけだ。",
+      "closingRemark": "更新分を一度に片づけず最大8件ずつ。酒場の帳簿も、どうやら急がせない主義らしい。",
       "features": [
-        "公開リポジトリをGitHub APIから自動取得",
+        "公開リポジトリをGitHub APIから取得",
         "名前・説明・Topics・言語・要約を横断検索",
-        "技術領域での簡易分類とカード形式の詳細表示",
-        "Copilot CLIが変更のあったリポジトリを定期解析",
-        "未解析のリポジトリにはREADME由来の暫定説明を表示"
+        "技術領域ごとの簡易分類とカード形式の詳細表示",
+        "Copilot CLIによる変更リポジトリの定期要約",
+        "未解析リポジトリはREADMEから短い説明を表示"
       ],
       "technologies": [
         "JavaScript",
         "CSS",
         "HTML",
         "GitHub API",
-        "GitHub Copilot CLI",
         "GitHub Actions",
+        "GitHub Copilot CLI",
         "GitHub Pages"
       ],
       "categories": [
-        "Webアプリ",
-        "検索ツール",
+        "Web・ツール",
         "GitHub",
-        "静的サイト"
+        "検索・アーカイブ"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-10-04T06:03:07Z",
+      "sourcePushedAt": "2026-10-04T12:32:23Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-10-04T06:03:07Z",
+        "pushedAt": "2026-10-04T12:32:23Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -48,8 +47,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "eaa70f2e40fbbeb09482a8d7cb69d5c89c67d7c756443f260a9a9edeac7c94fe",
-      "generatedAt": "2026-10-04T12:32:22.151Z"
+      "sourceFingerprint": "315a25e0fbd49ec4fa31f092dc23bdc2da77908c9b7f1d8576d2392805725894",
+      "generatedAt": "2026-10-04T21:38:11.790Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -4701,41 +4700,40 @@
       "generatedAt": "2026-09-30T05:42:33.450Z"
     },
     "robot-core-arena": {
-      "title": "3Dロボット対戦ゲーム",
-      "summary": "ブラウザで遊ぶ3Dロボット対戦ゲームの試作版。1対1から3対3まで人数を選べ、機体の装備や操作設定を整えながら、CPU戦やトレーニングで近接戦闘や武器ごとの技を試せる。",
-      "detail": "こいつは、機体を組み上げてCPUや敵チームと戦う、ブラウザ向けの3Dロボット対戦ゲームだ。1対1から3対3まで味方と敵の人数を選べて、ステージやCPU難易度、戦闘スタイルも切り替えられる。中では、5部位の装甲や19種類の武器、スキルを組み合わせ、武器配置用のマス目や保存構成を使って機体を整えてる。戦闘では、命中状況で派生が変わる近接コンボやテンション管理があり、空振りも無駄には済まない。キーボード・マウスとゲームパッドに対応し、スマートフォン向けのタッチ操作も表示される。Three.jsを同梱していて外部CDNは不要だが、遊ぶにはWebGL対応ブラウザが必要な試作版だな。",
-      "closingRemark": "19種類の武器を積んでも、空振りのテンション消費は帳消しにならない。そこは妙に現実的だな。",
+      "title": "ロボットコアアリーナ",
+      "summary": "ブラウザでロボット同士の3D対戦を楽しむ試作ゲームで、1対1から3対3まで人数を選べます。装甲や武器、スキルを組み替え、CPU戦やトレーニングで近接攻撃や操作感を確かめられるのが特徴です。",
+      "detail": "こいつは、機体を組み替えながらロボット同士の3D対戦を楽しむブラウザゲームの試作版だ。味方と敵の人数をそれぞれ選べて、1対1から3対3までの戦闘に対応してる。中では装甲や武器、スキルを選んで機体を組み、近接攻撃のコンボやチャージ、ガード、ロックオンを使って戦う。CPUの難易度や戦闘スタイルも選べるほか、トレーニングで操作を試せるってわけだ。JavaScriptと同梱のThree.jsで動き、実行時のパッケージ導入や外部CDNへの接続は不要。操作割り当てや機体構成はブラウザに保存でき、JSONでバックアップもできる。確定仕様と暫定実装・制約は別の資料に整理されているから、細かな仕様を詰めるならそちらも見ておくといい。",
+      "closingRemark": "武器は19種、技は76種類。操作割り当ても保存できるから、戦う前の整備にもちゃんと出番があるな。",
       "features": [
-        "1対1から3対3までの対戦人数設定",
-        "5部位の装甲、19種類の武器、盾、スキルによる機体構成",
-        "CPU難易度や戦闘スタイル、3ステージを選択可能",
-        "キーボード・マウス、ゲームパッド、タッチ操作に対応",
-        "ブラウザ内自動保存とJSONバックアップ"
+        "1対1から3対3までのチーム戦",
+        "装甲・武器・スキルを選んで機体を構成",
+        "CPU難易度と戦闘スタイルを選択可能",
+        "トレーニングモードを搭載",
+        "操作割り当てと構成を保存し、JSONでバックアップ可能"
       ],
       "technologies": [
         "JavaScript",
-        "HTML",
         "Three.js",
-        "Node.js",
+        "HTML",
         "WebGL",
-        "GitHub Actions"
+        "Node.js"
       ],
       "categories": [
-        "ゲーム",
-        "3D",
+        "ブラウザゲーム",
+        "3Dゲーム",
         "ロボット対戦",
-        "ブラウザゲーム"
+        "ゲーム試作"
       ],
       "status": "試作",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1401394108,
-      "sourcePushedAt": "2026-10-04T12:05:52Z",
+      "sourcePushedAt": "2026-10-04T16:23:20Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1401394108,
         "name": "robot-core-arena",
-        "pushedAt": "2026-10-04T12:05:52Z",
+        "pushedAt": "2026-10-04T16:23:20Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -4745,8 +4743,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "95ecd38190d6d7c257eb14b38fd21ffd3d00438e447810e886bc3e800234a1b2",
-      "generatedAt": "2026-10-04T12:32:08.465Z"
+      "sourceFingerprint": "c2dab508f073864b1f5bae808d2d968206491c3a75cb2c5d71a6a6e403eb739d",
+      "generatedAt": "2026-10-04T21:38:02.606Z"
     }
   },
   "repositoryCount": 96
