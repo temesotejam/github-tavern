@@ -1,43 +1,43 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-03T21:27:04.169Z",
+  "generatedAt": "2026-10-04T06:03:06.127Z",
   "repositories": {
     "github-tavern": {
       "title": "公開リポジトリ探索酒場",
-      "summary": "公開GitHubリポジトリを酒場の依頼帳のように検索・閲覧する、個人向けの静的ポータル。GitHub APIで情報を取得し、Copilotの日本語説明やREADMEからの暫定紹介をカードと詳細画面に表示します。",
-      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、古い情報端末風の画面から探して眺めるための個人ポータルだ。中ではGitHub APIから公開情報を取り込み、名前や説明、Topics、言語、Copilot要約を横断検索できるようにしてる。カードを選べば概要や確認済みの公開ページへのリンクが見られ、Copilotの説明がまだないものにはREADMEから短い紹介を補う仕組みだな。別のGitHub Actionsワークフローが6時間ごとに更新状況を確認し、変化のあったリポジトリだけをCopilot CLIで解析して説明データを更新する。GitHub Pagesで静的に公開できる一方、対象は公開リポジトリに限られ、サイトから変更や書き込みはしない。",
-      "closingRemark": "説明の更新は一度に最大8件。酒場の帳面も、急いで書けば字が荒れるってところか。",
+      "summary": "公開GitHubリポジトリを、酒場風の画面から探して内容を確かめる個人ポータル。名前や説明、Topics、言語、Copilot要約を横断検索でき、定期更新される日本語の概要やREADME由来の暫定説明も見られる。",
+      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、古い情報端末めいた酒場の画面で探し、選んで読むための個人ポータルだ。中ではGitHub APIから公開リポジトリを取得し、名前・説明・Topics・言語・Copilot要約をまとめて検索できるほか、技術領域でも絞り込める。カードを選べば概要や特徴を確認でき、解析済みならREADMEや構成、設定ファイルなどを根拠にした日本語説明が出る。Copilot CLIを使うActionsが6時間ごとに新規・更新分を調べ、定期実行では最大8件ずつ要約を更新し、未解析ならREADMEから暫定説明を補う仕組みだ。扱うのは公開情報だけで、Private Repositoryや削除・変更などの書き込み操作は対象外、という線引きもはっきりしてる。",
+      "closingRemark": "6時間ごとに最大8件ずつ要約を足す帳面だ。未解析の札にはREADMEの暫定説明が先に付く。",
       "features": [
-        "公開リポジトリをGitHub APIから取得して検索",
+        "GitHub APIから所有する公開リポジトリを自動取得",
         "名前・説明・Topics・言語・Copilot要約を横断検索",
-        "カード選択で日本語の概要を表示",
-        "Copilot未解析時はREADMEから短い紹介を補完",
-        "更新のあったリポジトリの説明を定期的に再生成"
+        "技術領域での簡易分類と絞り込み",
+        "READMEや設定ファイルを根拠にした日本語説明",
+        "未解析リポジトリにはREADMEから暫定説明を表示"
       ],
       "technologies": [
         "JavaScript",
         "HTML",
         "CSS",
         "GitHub API",
-        "GitHub Copilot CLI",
         "GitHub Actions",
+        "GitHub Copilot CLI",
         "GitHub Pages"
       ],
       "categories": [
         "Web・ツール",
-        "GitHub",
-        "ポートフォリオ"
+        "GitHub連携",
+        "開発者向け"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-10-03T16:30:38Z",
+      "sourcePushedAt": "2026-10-03T21:27:05Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-10-03T16:30:38Z",
+        "pushedAt": "2026-10-03T21:27:05Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -47,8 +47,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "39b62a15863198009648ccc60caee637bd0cd5e050fb908a8c02ced55099e85a",
-      "generatedAt": "2026-10-03T21:27:04.169Z"
+      "sourceFingerprint": "84f6c53d8062b211aa9fd6507a8b8d8846bd97cb00f8131f2413fbe224b6d43e",
+      "generatedAt": "2026-10-04T06:03:06.127Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -4700,42 +4700,40 @@
       "generatedAt": "2026-09-30T05:42:33.450Z"
     },
     "robot-core-arena": {
-      "title": "3Dロボット対戦アリーナ",
-      "summary": "ブラウザで遊ぶ3Dロボット対戦ゲームの試作版。1対1から3対3まで人数を選べて、武器や装甲、スキルを組み合わせた戦闘を楽しめます。歩行や攻撃の動きにも手が入り、トレーニングや構成保存にも対応しています。",
-      "detail": "こいつは、ブラウザでロボット同士の3D対戦を試せるゲームの試作版だ。味方と敵の人数をそれぞれ選べて、CPUの難易度や戦闘スタイルも切り替えられる。中では武器や装甲、スキル、テンションなどを組み合わせた戦闘を扱い、Three.jsで機体や攻撃の動きを描いてる。歩行では足運びに腰や上半身を連動させ、剣のコンボや踏み込み攻撃にも動作上の条件があるのが特徴だな。装備構成の保存やトレーニングもあり、キーボード・マウスとゲームパッドで遊べる。ただし確定仕様と暫定実装の制約は分けて記録されているから、細部は実装資料も見ておくのがよさそうだ。",
-      "closingRemark": "空振りでもテンションは減るし、歩行には足運びまである。ロボットも振り回す前に、少し考える必要があるらしい。",
+      "title": "3Dロボット対戦ゲーム",
+      "summary": "ブラウザで遊ぶ3Dロボット対戦ゲームの試作版で、1対1から3対3まで人数を選べる。武器や装甲、スキルを組み合わせ、CPU戦やトレーニングで戦闘を試せる。",
+      "detail": "こいつは、ブラウザでロボット同士の3D対戦を試すためのゲームだ。味方と敵の人数を1対1から3対3まで選べて、CPUの難易度や戦闘スタイルも切り替えられる。中では近接コンボやチャージ、テンション管理、弾数とリロード、ロックオンなどを扱い、装甲・武器・スキルを組み合わせて機体を組み立てる仕組みになってる。歩行では足を接地させ、腰や胸、腕も連動させる一方、ダッシュはブースト滑走として描き分けている。キーボードとゲームパッドに対応し、トレーニングやブラウザ内の自動保存、JSONバックアップも使える。まだ試作版で、確定仕様と暫定実装の制約は別々の資料に整理されているな。",
+      "closingRemark": "CPUがテンション切れで距離を取るあたり、機体の整備より先に息切れの管理が要るらしい。",
       "features": [
         "1対1から3対3まで選べるロボット対戦",
-        "3ステージ、CPU難易度3段階、戦闘スタイル5種類",
-        "5部位の装甲、19武器種、盾やスキルの組み合わせ",
-        "歩行や攻撃に連動した機体モーション",
-        "ブラウザ内の自動保存、JSONバックアップ、トレーニング"
+        "装甲・武器・スキルを組み合わせた機体構成",
+        "近接コンボやテンション管理を含む戦闘システム",
+        "歩行とブースト滑走を描き分ける機体動作",
+        "トレーニング、自動保存、JSONバックアップ"
       ],
       "technologies": [
         "JavaScript",
         "HTML",
         "Three.js",
-        "Node.js",
         "WebGL",
-        "JSON",
-        "GitHub Actions"
+        "Node.js"
       ],
       "categories": [
         "ゲーム",
-        "ブラウザ",
         "3D",
-        "ロボット"
+        "ロボット",
+        "ブラウザ"
       ],
       "status": "試作",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1401394108,
-      "sourcePushedAt": "2026-10-03T17:02:15Z",
+      "sourcePushedAt": "2026-10-04T05:57:23Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1401394108,
         "name": "robot-core-arena",
-        "pushedAt": "2026-10-03T17:02:15Z",
+        "pushedAt": "2026-10-04T05:57:23Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -4745,8 +4743,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "c4e7d637d116d4c718ad42205108dff19f722e8a62c38b84c9c147b761a3de29",
-      "generatedAt": "2026-10-03T21:26:51.546Z"
+      "sourceFingerprint": "472f9a63f8885da53c081e5084dbff170349604d83c83e2f49a38cfc51d5af6b",
+      "generatedAt": "2026-10-04T06:02:51.713Z"
     }
   },
   "repositoryCount": 96
