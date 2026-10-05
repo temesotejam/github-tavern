@@ -1,43 +1,44 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-04T21:38:11.790Z",
+  "generatedAt": "2026-10-05T05:53:16.035Z",
   "repositories": {
     "github-tavern": {
       "title": "公開リポジトリ探索酒場",
-      "summary": "公開GitHubリポジトリを、検索や分類を使って酒場風の画面から探せる個人ポータル。CopilotがREADMEや構成をもとに日本語の概要を作り、未解析のものはREADMEから短い説明を補います。",
-      "detail": "こいつは、temesotejamが所有する公開GitHubリポジトリを、酒場風の画面から探して中身を眺めるための個人ポータルだ。中ではGitHub APIから一覧を取得し、名前や説明、Topics、使用言語、Copilot要約を横断検索できる。カードを選ぶと概要が開き、解析済みならREADMEやファイル構成などを根拠にした日本語説明が読めるし、まだ要約がないものにはREADMEから短い紹介を添える。要約の更新はGitHub Actions経由で6時間ごとに確認し、変更のあったリポジトリをCopilot CLIで解析する仕組みで、定期実行では一度に最大8件までだ。公開APIだけを使う静的サイトで、非公開リポジトリの閲覧や書き込み操作はしないってわけだ。",
-      "closingRemark": "更新分を一度に片づけず最大8件ずつ。酒場の帳簿も、どうやら急がせない主義らしい。",
+      "summary": "temesotejamが所有する公開GitHubリポジトリを、酒場風の画面から検索・閲覧する個人向けポータル。Copilotの日本語要約やREADMEからの暫定説明も使い、リポジトリの概要をカード上で確かめられます。",
+      "detail": "こいつは、temesotejamが所有する公開GitHubリポジトリを、古い情報端末を思わせる画面から探すための個人ポータルだ。中ではGitHub APIから一覧を取得し、名前や説明、Topics、使用言語、Copilot要約を横断検索できる。カードを選べば概要や技術情報が見られて、Copilotの解析前ならREADMEから短い説明を組み立てる仕組みもある。説明データはGitHub Actionsが6時間ごとに更新を確認し、新規または更新されたものを最大8件ずつ解析する。GitHub Pagesで静的に公開できる一方、対象は公開リポジトリだけで、削除や更新などの書き込み操作はしない構成だ。",
+      "closingRemark": "一覧を酒場に見立てても、帳簿の更新は6時間ごと。新顔が一度に押し寄せないよう、解析は8件ずつだ。",
       "features": [
-        "公開リポジトリをGitHub APIから取得",
-        "名前・説明・Topics・言語・要約を横断検索",
-        "技術領域ごとの簡易分類とカード形式の詳細表示",
-        "Copilot CLIによる変更リポジトリの定期要約",
-        "未解析リポジトリはREADMEから短い説明を表示"
+        "GitHub APIから所有する公開リポジトリを取得",
+        "名前・説明・Topics・言語・Copilot要約を横断検索",
+        "技術領域ごとの簡易分類とカード上での概要表示",
+        "Copilot未解析のリポジトリはREADMEから暫定説明を生成",
+        "Actionsで要約を定期更新し、GitHub Pagesで公開可能"
       ],
       "technologies": [
         "JavaScript",
         "CSS",
         "HTML",
         "GitHub API",
-        "GitHub Actions",
         "GitHub Copilot CLI",
+        "GitHub Actions",
         "GitHub Pages"
       ],
       "categories": [
         "Web・ツール",
         "GitHub",
-        "検索・アーカイブ"
+        "検索",
+        "リポジトリアーカイブ"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-10-04T12:32:23Z",
+      "sourcePushedAt": "2026-10-04T21:38:12Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-10-04T12:32:23Z",
+        "pushedAt": "2026-10-04T21:38:12Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -47,8 +48,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "315a25e0fbd49ec4fa31f092dc23bdc2da77908c9b7f1d8576d2392805725894",
-      "generatedAt": "2026-10-04T21:38:11.790Z"
+      "sourceFingerprint": "553ccbf3a1594f1062d8af2fdd03c5cec601e8d8b04dcac92b0bcac16cab531a",
+      "generatedAt": "2026-10-05T05:53:16.035Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -4650,43 +4651,42 @@
       "generatedAt": "2026-09-27T12:12:26.996Z"
     },
     "atoms3r-zero-cross-fixed-100ms-test": {
-      "title": "AtomS3自由足振幅制御試験",
-      "summary": "自由に動く足の振幅制御を調べるESP32-S3向けファームウェアで、現在は物理ZEROクロスのたびに1 Aを100 ms固定で指令する試験版。30秒の測定で実電流や足角度を記録し、MEKFによる16°停止も備えるが、1 Aでの予測モデルは未検証だ。",
-      "detail": "こいつは、自由に動く足の振幅制御を実機で確かめるためのAtomS3向けファームウェアだ。現在の版では始動時と受理済みの物理ZEROクロスで、方向に応じて1 Aを100 ms固定で指令し、30秒間の測定で実電流や足角度を記録する。中ではIMUの取得と制御を分け、MEKFで見た左右角度が絶対値16°に達すると停止する仕組みだ。記録した実電流から積分したQや正負ピーク、ZEROクロス角速度を見て、入力と振幅の関係を比較できる。ただし、既存の電流応答・次ピーク予測モデルは1 Aでは未検証で、予測値は参考扱いだし、16°停止も機械的な停止を保証するものではない。",
-      "closingRemark": "1 Aの予測はまだ未検証、という但し書きまで含めて試験の本番だな。まずは実測ログが答えを出す。",
+      "title": "自由脚振幅制御の実機試験",
+      "summary": "ATOM S3搭載機の自由に動く足を、MEKFで推定した角度とモーター電流から制御し、30秒間の動きや電流を記録する実験用ファームウェアだ。直近の同側ピークに対する入力位置をWebUIで調整でき、実機の挙動と制御ログを照らし合わせられる。",
+      "detail": "こいつは、自由に動く左右の足の振幅を調整し、実機で制御の効き方を確かめるためのファームウェアだな。中ではMEKFで推定した角度を使い、各側の直前ピークに対する割合を基準に入力位置を決めて、1 A・100 msの指令を出してる。割合はWebUIで0〜100%に設定でき、START時に確定する仕組みだ。30秒の測定中は設定変更を受け付けず、RWLOGには設定やイベント、実電流などを残す。左右角度が16°に達すると停止するが、これは機械的な停止を保証する値じゃない。入力タイミングや振幅モデルも実機での確認が続いており、予測値は未検証の参考値として扱われている。",
+      "closingRemark": "1 Aを100 ms入れる条件は固定のまま、入力位置だけをピーク比で動かす。ログでは、その小さな違いも半周期ごとに追えるわけだ。",
       "features": [
-        "ZEROクロスごとに1 A・100 msの固定入力",
-        "始動キックと30秒測定を実施",
-        "MEKFの左右角度が絶対値16°で停止",
-        "実電流・足角度・ピークなどを記録",
-        "1 Aで未検証の予測値は参考扱い"
+        "直前の同側ピークに対する入力割合をWebUIで設定",
+        "入力は1 A・100 ms固定、時間予測による先行なし",
+        "MEKFの左右角度が16°に達すると緊急停止",
+        "30秒測定の設定・イベント・実電流をRWLOGに記録",
+        "Wi-Fi APを維持し、測定中はHTTPを休止"
       ],
       "technologies": [
         "C++",
         "Python",
         "JavaScript",
         "PlatformIO",
-        "ESP32-S3",
         "Arduino",
+        "ESP32-S3",
         "M5Unified",
         "Adafruit AHRS"
       ],
       "categories": [
-        "組み込み",
-        "ファームウェア",
-        "モーター制御",
-        "実機試験"
+        "組込み制御",
+        "ロボティクス",
+        "実験・計測"
       ],
       "status": "実験",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1395119115,
-      "sourcePushedAt": "2026-09-30T04:19:46Z",
+      "sourcePushedAt": "2026-10-05T05:49:06Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1395119115,
         "name": "atoms3r-zero-cross-fixed-100ms-test",
-        "pushedAt": "2026-09-30T04:19:46Z",
+        "pushedAt": "2026-10-05T05:49:06Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -4696,8 +4696,8 @@
         "fork": false,
         "language": "C++"
       },
-      "sourceFingerprint": "bb9a4449bd38682dd0f99b6c7d4581d116de93e3d3b710808f84ca985e8a5b29",
-      "generatedAt": "2026-09-30T05:42:33.450Z"
+      "sourceFingerprint": "6d7e330c977f2864f7a7b3b09ada4caacd937885cd741a6d0beff1c369821d67",
+      "generatedAt": "2026-10-05T05:52:54.876Z"
     },
     "robot-core-arena": {
       "title": "ロボットコアアリーナ",
@@ -4745,7 +4745,55 @@
       },
       "sourceFingerprint": "c2dab508f073864b1f5bae808d2d968206491c3a75cb2c5d71a6a6e403eb739d",
       "generatedAt": "2026-10-04T21:38:02.606Z"
+    },
+    "smart-annotator": {
+      "title": "ブラウザ画像アノテーションツール",
+      "summary": "画像にBounding BoxやPolygonを付け、クラスごとに整理して書き出す軽量ツール。複数画像をブラウザ内で扱い、Project JSON、COCO JSON、YOLO形式のZIPに出力できる。",
+      "detail": "こいつは、画像に物体の位置や形を付けて、学習用データとして書き出すための軽量ツールだ。中では画像をブラウザに読み込み、Canvas上でBounding BoxやPolygonを描いて、クラスごとに色分けして管理してる。複数画像のドラッグ＆ドロップやファイル選択に対応し、注釈の選択・削除・Undoも使える。仕上げたデータはProject JSON、COCO JSON、YOLO形式のZIPに出力できるうえ、画像自体をサーバーへ送らずに処理するのが特徴だな。GitHub Pagesで公開できる構成だが、Project JSONの再読込やモデルによる自動セグメンテーションは今後の予定で、現状は手動で注釈を付ける道具ってところだ。",
+      "closingRemark": "画像は外へ出さず、成果物は三つの形式で持ち出せる。あとは注釈する手間と相談だな。",
+      "features": [
+        "複数画像をドラッグ＆ドロップまたはファイル選択で読み込み",
+        "Bounding BoxとPolygonによる画像注釈",
+        "クラスの追加・切り替えと色分け",
+        "選択・削除・Undoに対応",
+        "Project JSON、COCO JSON、YOLO形式ZIPへ出力"
+      ],
+      "technologies": [
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Canvas API",
+        "GitHub Pages",
+        "COCO JSON",
+        "YOLO"
+      ],
+      "categories": [
+        "画像アノテーション",
+        "機械学習データ作成",
+        "ブラウザツール"
+      ],
+      "status": "ツール",
+      "confidence": "high",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
+      "sourceRepositoryId": 1405152901,
+      "sourcePushedAt": "2026-10-05T05:03:50Z",
+      "sourceDefaultBranch": "main",
+      "sourceMetadata": {
+        "repositoryId": 1405152901,
+        "name": "smart-annotator",
+        "pushedAt": "2026-10-05T05:03:50Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "JavaScript"
+      },
+      "sourceFingerprint": "b6603235ccd785ea3fef8aa1ace0039b803078c798e1c6f5b18e588a845ac83f",
+      "generatedAt": "2026-10-05T05:53:04.903Z"
     }
   },
-  "repositoryCount": 96
+  "repositoryCount": 97
 }
