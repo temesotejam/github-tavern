@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-02T13:14:11.400Z",
-  "repositoryCount": 96,
-  "pageCount": 55,
+  "generatedAt": "2026-10-05T06:18:33.373Z",
+  "repositoryCount": 97,
+  "pageCount": 56,
   "pages": {
     "2026_8_5_3": {
       "url": "https://temesotejam.github.io/2026_8_5_3/",
@@ -206,6 +206,11 @@
     },
     "semicircle-decay-sim": {
       "url": "https://temesotejam.github.io/semicircle-decay-sim/",
+      "source": "github-pages",
+      "status": 200
+    },
+    "smart-annotator": {
+      "url": "https://temesotejam.github.io/smart-annotator/",
       "source": "github-pages",
       "status": 200
     },
