@@ -1,43 +1,44 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-06T00:09:19.078Z",
+  "generatedAt": "2026-10-06T06:32:13.678Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ探索ポータル",
-      "summary": "temesotejamが所有する公開GitHubリポジトリを、古い情報端末風の画面から探して内容を確認する個人ポータル。名前や説明、言語などで横断検索でき、CopilotがREADMEや設定ファイルをもとに作る日本語概要も読める。",
-      "detail": "こいつは、temesotejamが所有する公開GitHubリポジトリを探して、中身を手早く確かめるための個人ポータルだ。画面ではGitHub APIから取得した一覧を、リポジトリ名や説明、Topics、言語、Copilot要約で検索できる。カードを選ぶと概要が開き、解析済みならREADMEや構成、設定ファイルなどを根拠にした日本語説明が読める。説明は6時間ごとのActions実行で更新され、新規または変更されたものをCopilot CLIが調べてJSONに保存する仕組みだ。未解析のものにはREADMEから短い説明を出すが、対象は公開リポジトリだけで、サイトから削除や変更などの書き込みはしない。",
-      "closingRemark": "定期解析は1回最大8件。帳簿が増えた日も、順番待ちはきちんと発生するらしい。",
+      "title": "公開リポジトリ探索酒場",
+      "summary": "公開GitHubリポジトリを、古い情報端末風の画面で探して選び、概要まで読める個人ポータル。名前や説明、Topics、言語に加えてCopilot要約も横断検索でき、新しいリポジトリにはREADMEから暫定説明を補います。",
+      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、酒場の依頼札を選ぶように探して読むための個人ポータルだ。中ではGitHubの公開APIから一覧を取得し、名前・説明・Topics・言語・Copilot要約を検索できるようにしてる。カードを選べば概要を読めて、動作確認済みの公開ページがあるものはリンクも表示される。説明データはActionsが6時間ごとに更新を確認し、変更のあったリポジトリをCopilot CLIで解析してキャッシュする仕組みで、未解析ならREADMEから短い暫定説明を出す。GitHub Pagesで静的に配信でき、Private Repositoryは対象外、閲覧側からリポジトリの変更やIssue作成などはしない。定期実行の解析は1回最大8件だから、記録の更新は一気にとはいかないな。",
+      "closingRemark": "更新確認は6時間ごと、解析は一度に最大8件。急かしても、記録係の手はそのくらいの速さってわけだ。",
       "features": [
-        "所有する公開リポジトリをGitHub APIから取得",
-        "名前・説明・Topics・言語・要約を横断検索",
-        "カードから日本語の概要や確認済み公開ページを表示",
-        "Copilot CLIが新規・更新リポジトリの説明を定期生成",
-        "未解析リポジトリにはREADME由来の短い説明を表示"
+        "公開リポジトリをGitHub APIから取得",
+        "リポジトリ情報やCopilot要約を横断検索",
+        "選んだリポジトリの概要と確認済み公開ページを表示",
+        "未解析のリポジトリにはREADME由来の暫定説明を表示",
+        "Actionsで更新を確認し、Copilot CLIで説明を生成"
       ],
       "technologies": [
         "JavaScript",
-        "CSS",
         "HTML",
+        "CSS",
         "GitHub API",
-        "GitHub Copilot CLI",
         "GitHub Actions",
+        "GitHub Copilot CLI",
         "GitHub Pages"
       ],
       "categories": [
         "Web・ツール",
-        "GitHub",
-        "検索・アーカイブ"
+        "GitHub連携",
+        "静的サイト",
+        "リポジトリ閲覧"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-10-05T14:57:04Z",
+      "sourcePushedAt": "2026-10-06T00:09:20Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-10-05T14:57:04Z",
+        "pushedAt": "2026-10-06T00:09:20Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -47,8 +48,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "1bbc98cca0f982c7ad9896436fe491cb4b21f25f63cfe7348d3c7c8c1afed49b",
-      "generatedAt": "2026-10-06T00:09:19.077Z"
+      "sourceFingerprint": "bc562d5316b84c0f781778591b75f04cfd63fc5fd69328abd99429385f1e2b9b",
+      "generatedAt": "2026-10-06T06:32:13.678Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -4650,43 +4651,43 @@
       "generatedAt": "2026-09-27T12:12:26.996Z"
     },
     "atoms3r-zero-cross-fixed-100ms-test": {
-      "title": "AtomS3自由足振幅制御",
-      "summary": "AtomS3上で自由に動く足の振幅を制御し、運動や電流応答を測定・記録する試験用ファームウェア。WebUIから指令電流とピーク角に対する入力位置を設定でき、15秒の測定結果をRWLOGなどに残せます。",
-      "detail": "こいつは、AtomS3で自由に動く足の振幅制御を試し、そのときの動きや電流応答を記録するファームウェアだ。中ではMEKFで姿勢を推定し、直前に確認した同じ側のピーク角を基準に入力位置を決めて、Roller485へ100 msの電流指令を出してる。WebUIでは指令電流を100〜1200 mA、ピーク角に対する入力位置を0〜100%で設定でき、測定開始時に条件を確定して状態表示やRWLOGへ残す。測定は15秒で、左右角度が16°に達すると停止する仕組みだ。zero_crossというログ名でも、入力位置が0%でなければ実際のZEROクロスとは限らず、指令値も実電流の到達を保証しない。ここは実機ログで確かめるための試験台ってところだな。",
-      "closingRemark": "設定できるのは指令電流までで、実電流はログを開くまでのお楽しみというわけだ。",
+      "title": "自由脚振幅制御の実験ファーム",
+      "summary": "自由に動く足へ短い電流パルスを与え、振幅や応答を調べるための実験ファームウェアだ。AtomS3上で姿勢推定と制御を行い、WebUIの設定やRWLOGで測定条件・結果を確認できる。",
+      "detail": "こいつは、自由に動く足へパルス入力を与えたとき、振幅や実電流がどう変わるかを調べる実験ファームウェアだ。中ではIMUのデータからMEKFで姿勢を推定し、制御タスクがモータ指令や足角度の観測、ログ記録を受け持ってる。WebUIから指令電流や直前ピークに対する入力位置を設定でき、測定条件やイベントはRWLOGへ保存される。最新の記録には胴体角速度の山を受けて固定パルスを出す変更もあり、測定は15秒、角度16°で停止する設定だ。Python変換器は旧形式のログにも対応するが、指令電流は実電流の到達値を保証せず、角度停止も機械的な安全停止を保証するものではない。",
+      "closingRemark": "ログにはMEKFのrollと加速度由来のroll診断値が別々に残る。似た名前でも、そこは混ぜない作りだな。",
       "features": [
-        "WebUIで指令電流を100〜1200 mA、10 mA刻みで設定",
-        "直前の同側ピーク角に対する入力位置を0〜100%で設定",
-        "100 ms固定パルスで15秒間の測定を実施",
-        "MEKFによる姿勢推定と、16°到達時の停止処理",
-        "条件やイベントをRWLOGに記録"
+        "WebUIから指令電流と直前ピークに対する入力位置を設定",
+        "MEKFによる姿勢推定と足角度観測",
+        "RWLOGへの測定条件・イベント記録",
+        "Python変換器で旧形式ログも読み込み",
+        "16°での角度監視停止"
       ],
       "technologies": [
         "C++",
-        "ESP32",
-        "M5Stack AtomS3",
+        "Python",
+        "JavaScript",
+        "ESP32-S3",
+        "M5Stack ATOMS3",
         "M5Unified",
-        "M5GFX",
         "Adafruit AHRS",
-        "MEKF",
         "PlatformIO"
       ],
       "categories": [
-        "組み込み",
-        "ロボティクス",
-        "制御実験",
-        "計測"
+        "組み込み制御",
+        "ロボット実験",
+        "センサ計測",
+        "データロギング"
       ],
       "status": "実験",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1395119115,
-      "sourcePushedAt": "2026-10-05T09:46:36Z",
+      "sourcePushedAt": "2026-10-06T02:50:02Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1395119115,
         "name": "atoms3r-zero-cross-fixed-100ms-test",
-        "pushedAt": "2026-10-05T09:46:36Z",
+        "pushedAt": "2026-10-06T02:50:02Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -4696,8 +4697,8 @@
         "fork": false,
         "language": "C++"
       },
-      "sourceFingerprint": "c9be4d68ba87f6e6bff13bd18aa0bc08d38d76a19168ff7b1581fa329c1e06a3",
-      "generatedAt": "2026-10-05T14:56:47.441Z"
+      "sourceFingerprint": "8da5bbe9d192eaf925e0c568dcea8fc54aac0d413faca6b26e879153bc251ec2",
+      "generatedAt": "2026-10-06T06:31:58.383Z"
     },
     "robot-core-arena": {
       "title": "ロボットコアアリーナ",
@@ -4748,42 +4749,40 @@
     },
     "smart-annotator": {
       "title": "ブラウザ画像アノテーションツール",
-      "summary": "画像にBounding BoxやPolygonを付け、Project JSON・COCO JSON・YOLO形式で書き出せるブラウザ完結型のアノテーションツール。SAM2による自動セグメンテーションも実装されており、画像データはサーバーへ送らずに処理する。",
-      "detail": "こいつは、画像に物体の位置や輪郭を付けて、学習用データとして書き出すためのアノテーションツールだ。画像をブラウザに読み込み、クラスを切り替えながらBounding BoxやPolygonを描いて、選択・削除・Undoで手直しできる。中ではSAM2 Hiera TinyをONNX Runtime Webで動かし、クリックやボックスの指定からマスクを作って輪郭候補を出す仕組みもある。結果はProject JSON、COCO JSON、YOLO形式で出力でき、READMEによれば画像データはサーバーへ送らずブラウザ内で処理する。GitHub Pagesで公開できる構成だが、READMEではSAM系機能を今後の予定としている一方、コードと最近のコミットにはSAM2実装が見える。説明書の更新が実装に追いついていないところは、先に知っておくといいな。",
-      "closingRemark": "READMEはSAMをこれからの話にしているが、コミット履歴ではもうSAM2の輪郭を画像の端へ寄せている。書類のほうが少し遅れてるな。",
+      "summary": "画像に物体の位置や輪郭を付け、学習用データとして書き出すブラウザ完結型の注釈ツールだ。複数画像の管理や矩形・ポリゴン編集に加え、SAM2による自動セグメンテーションも実装され、画像自体はサーバーへ送らずに扱える。",
+      "detail": "こいつは、画像に物体の位置や輪郭を付けて、機械学習向けのデータにまとめるツールだ。複数画像を読み込み、クラスを切り替えながら矩形やポリゴンを編集できる。中ではSAM2 Hiera Tinyのfp16モデルをONNX Runtime Webで動かし、クリックした点や指定したボックスを手がかりにマスクを推定して、輪郭を画像の端に沿うよう補正してる。画像はブラウザ内で処理し、Project JSON・COCO JSON・YOLO形式のZIPとして書き出せる。GitHub Pagesでの公開を想定している一方、READMEではSAM系モデルを今後の予定としており、Project JSONの再読込も予定扱いのままだな。",
+      "closingRemark": "READMEの予定表だけは、SAM2の実装より一歩遅れてる。現状を追うなら、コードも合わせて見るのがよさそうだな。",
       "features": [
-        "複数画像の読み込みとクラス管理",
-        "Bounding Box・Polygonの作成、選択、削除、Undo",
-        "SAM2によるクリック・ボックス指定の自動セグメンテーション",
-        "Project JSON・COCO JSON・YOLO形式での書き出し",
-        "ブラウザ内で画像を処理し、GitHub Pagesで公開可能"
+        "複数画像のドラッグ＆ドロップやファイル選択",
+        "クラス管理と矩形・ポリゴン注釈の編集",
+        "SAM2の点・ボックス指定による自動セグメンテーション",
+        "Project JSON・COCO JSON・YOLO形式ZIPへの書き出し",
+        "画像データをサーバーへ送らずブラウザ内で処理"
       ],
       "technologies": [
         "JavaScript",
-        "HTML",
-        "CSS",
         "SAM2 Hiera Tiny",
         "ONNX Runtime Web",
-        "WebGPU",
-        "WebAssembly",
-        "d3-contour"
+        "d3-contour",
+        "HTML",
+        "CSS",
+        "GitHub Pages"
       ],
       "categories": [
-        "アノテーション",
-        "画像処理",
-        "機械学習データ作成",
+        "画像アノテーション",
+        "機械学習",
         "ブラウザツール"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1405152901,
-      "sourcePushedAt": "2026-10-05T10:32:10Z",
+      "sourcePushedAt": "2026-10-06T03:01:53Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1405152901,
         "name": "smart-annotator",
-        "pushedAt": "2026-10-05T10:32:10Z",
+        "pushedAt": "2026-10-06T03:01:53Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -4793,8 +4792,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "a9bda1cd1303e946b8719e415a0a47a71382983c37d8764e2d0ed5ea8b48103f",
-      "generatedAt": "2026-10-05T14:56:34.185Z"
+      "sourceFingerprint": "c78bfd8cd94d7ab2164df064a5d50bcfa4151b2c9300ac066f6ccaf652ab3e6d",
+      "generatedAt": "2026-10-06T06:31:41.613Z"
     }
   },
   "repositoryCount": 97
