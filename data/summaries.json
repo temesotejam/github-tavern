@@ -1,44 +1,43 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-07T06:10:32.531Z",
+  "generatedAt": "2026-10-07T13:36:29.054Z",
   "repositories": {
     "github-tavern": {
       "title": "公開リポジトリ探索酒場",
-      "summary": "所有する公開GitHubリポジトリを、酒場風の画面から探して内容を確かめる個人向けポータル。GitHub APIで一覧を取得し、横断検索や分類、詳細表示に対応するほか、Copilot生成の説明とREADMEからの暫定紹介を使い分ける。",
-      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、古い情報端末を模した酒場の画面から探して読むための個人向けポータルだ。中ではGitHub APIから一覧を取得し、名前や説明、Topics、言語、Copilot要約をまとめて検索できるようにしてる。領域別の簡易分類もあり、カードを選べばリポジトリの概要を確かめられる。説明はCopilot CLIがREADMEや構成、設定、直近コミットなどを根拠に生成し、変更のないものは再解析せず、6時間ごとに最大8件ずつ更新する仕組みだ。新しいリポジトリにはREADMEから暫定説明を補うが、対象は公開リポジトリだけで、閲覧以外の書き込みはしない。",
-      "closingRemark": "変更のないリポジトリは何度も調べない。酒場の帳簿にしては、なかなか几帳面だな。",
+      "summary": "所有する公開GitHubリポジトリを、酒場風の画面から検索・閲覧する個人ポータル。GitHub APIで一覧を取得し、Copilotの日本語要約やREADMEの暫定説明を使って、各リポジトリの概要までたどれます。",
+      "detail": "こいつは、temesotejamが所有する公開GitHubリポジトリを、酒場風の画面から探して中身を確かめるための個人ポータルだ。中ではGitHub APIから一覧を取り、名前や説明、Topics、言語、Copilot要約をまとめて検索できるようにしてる。カードを選べば概要が開き、Copilotの解析がまだないものにはREADMEから短い暫定説明を出す仕組みだ。Copilot CLIによる要約は6時間ごとに更新を確認し、定期実行では一度に最大8件を扱う。GitHub Pagesで静的に公開できる一方、対象は公開リポジトリだけで、サイトから変更や書き込みはしない。",
+      "closingRemark": "要約は一度に8件ずつ、書き込みは一切なし。酒場の帳簿としては、ずいぶん慎重な作りだな。",
       "features": [
-        "GitHub APIから所有する公開リポジトリを取得",
-        "名前・説明・Topics・言語・要約を横断検索",
-        "技術領域ごとの簡易分類とカード形式の詳細表示",
-        "Copilot CLIで説明を生成し、変更があった分を定期更新",
-        "未解析リポジトリはREADMEから暫定説明を表示"
+        "公開リポジトリをGitHub APIから自動取得",
+        "名前・説明・Topics・言語・Copilot要約を横断検索",
+        "技術領域ごとの簡易分類とカード選択による概要表示",
+        "Copilot未解析のリポジトリはREADMEから暫定説明を生成",
+        "GitHub Pagesで静的ホスティング可能"
       ],
       "technologies": [
         "JavaScript",
         "CSS",
         "HTML",
-        "GitHub API",
-        "GitHub Pages",
+        "GitHub REST API",
+        "GitHub Copilot CLI",
         "GitHub Actions",
-        "GitHub Copilot CLI"
+        "GitHub Pages"
       ],
       "categories": [
-        "Webアプリ",
-        "静的サイト",
-        "検索・閲覧ツール",
-        "GitHub連携"
+        "Web・ツール",
+        "リポジトリ検索",
+        "個人ポータル"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-10-06T18:28:40Z",
+      "sourcePushedAt": "2026-10-07T06:10:33Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-10-06T18:28:40Z",
+        "pushedAt": "2026-10-07T06:10:33Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -48,8 +47,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "b06675dc1f60cd00bcdcafa4cc30c29d1fcd0a3fe39e7612e0aa75aa46826c4f",
-      "generatedAt": "2026-10-07T06:10:32.531Z"
+      "sourceFingerprint": "9e677033871677df23636876acf3aaad767cfc0f9b1608f1f598a0a064cf5d17",
+      "generatedAt": "2026-10-07T13:36:29.054Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -4651,43 +4650,43 @@
       "generatedAt": "2026-09-27T12:12:26.996Z"
     },
     "atoms3r-zero-cross-fixed-100ms-test": {
-      "title": "自由脚振幅制御の実験ファーム",
-      "summary": "自由に動く足へ短い電流パルスを与え、振幅や応答を調べるための実験ファームウェアだ。AtomS3上で姿勢推定と制御を行い、WebUIの設定やRWLOGで測定条件・結果を確認できる。",
-      "detail": "こいつは、自由に動く足へパルス入力を与えたとき、振幅や実電流がどう変わるかを調べる実験ファームウェアだ。中ではIMUのデータからMEKFで姿勢を推定し、制御タスクがモータ指令や足角度の観測、ログ記録を受け持ってる。WebUIから指令電流や直前ピークに対する入力位置を設定でき、測定条件やイベントはRWLOGへ保存される。最新の記録には胴体角速度の山を受けて固定パルスを出す変更もあり、測定は15秒、角度16°で停止する設定だ。Python変換器は旧形式のログにも対応するが、指令電流は実電流の到達値を保証せず、角度停止も機械的な安全停止を保証するものではない。",
-      "closingRemark": "ログにはMEKFのrollと加速度由来のroll診断値が別々に残る。似た名前でも、そこは混ぜない作りだな。",
+      "title": "AtomS3自由脚振幅制御試験",
+      "summary": "M5Stack AtomS3で自由に動く足の振幅とモータ電流応答を測る制御実験だ。WebUIで指令電流と直前ピークに対する入力位置を設定し、15秒の測定結果をRWLOGなどに記録できる。",
+      "detail": "こいつは、自由に動く足へモータ入力を与え、振幅や電流応答を調べるためのAtomS3向け制御ファームウェアだ。中ではMEKFで姿勢を推定し、起動時は左右pitch軸の重力方向差や静止状態を確かめて足のゼロ点を決めてる。WebUIから指令電流と直前に確認した同じ側のピークに対する入力位置を設定でき、100 msパルスを使って15秒測定し、MEKFの左右角度が16°に達すると停止する。結果はRWLOG v54や足角度の記録に残り、Python変換器は旧形式も読み取れる。指令電流は実電流の到達値を保証せず、16°停止も機械的な停止を保証するものじゃない。測定モデルの一部は現行条件で未検証の参考値として扱われている。",
+      "closingRemark": "zero_crossというイベント名でも、設定位置が0%でなければ実際のゼロ通過とは限らない。ログを見るときは名前より条件だな。",
       "features": [
-        "WebUIから指令電流と直前ピークに対する入力位置を設定",
-        "MEKFによる姿勢推定と足角度観測",
-        "RWLOGへの測定条件・イベント記録",
-        "Python変換器で旧形式ログも読み込み",
-        "16°での角度監視停止"
+        "WebUIで指令電流とピーク基準の入力位置を設定",
+        "MEKF姿勢推定とpitch基準の足ゼロ点取得",
+        "16°角度監視と緊急停止",
+        "RWLOG v54と足角度データの記録",
+        "Python変換器で旧RWLOG形式も読み込み"
       ],
       "technologies": [
         "C++",
         "Python",
-        "JavaScript",
+        "PlatformIO",
+        "Arduino",
         "ESP32-S3",
-        "M5Stack ATOMS3",
+        "M5Stack AtomS3",
         "M5Unified",
-        "Adafruit AHRS",
-        "PlatformIO"
+        "Adafruit AHRS"
       ],
       "categories": [
-        "組み込み制御",
-        "ロボット実験",
-        "センサ計測",
-        "データロギング"
+        "組み込み",
+        "ロボティクス",
+        "制御実験",
+        "データ計測"
       ],
       "status": "実験",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1395119115,
-      "sourcePushedAt": "2026-10-06T02:50:02Z",
+      "sourcePushedAt": "2026-10-07T08:03:29Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1395119115,
         "name": "atoms3r-zero-cross-fixed-100ms-test",
-        "pushedAt": "2026-10-06T02:50:02Z",
+        "pushedAt": "2026-10-07T08:03:29Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -4697,8 +4696,8 @@
         "fork": false,
         "language": "C++"
       },
-      "sourceFingerprint": "8da5bbe9d192eaf925e0c568dcea8fc54aac0d413faca6b26e879153bc251ec2",
-      "generatedAt": "2026-10-06T06:31:58.383Z"
+      "sourceFingerprint": "0667d716c325ece09cc1fc28c976bd92aae857e566fa3ff8a7f008d95c427b5e",
+      "generatedAt": "2026-10-07T13:36:16.569Z"
     },
     "robot-core-arena": {
       "title": "ロボットコアアリーナ",
