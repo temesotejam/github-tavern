@@ -1,43 +1,44 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-07T23:11:28.033Z",
+  "generatedAt": "2026-10-08T06:18:18.990Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ探索酒場",
-      "summary": "個人が公開しているGitHubリポジトリを、酒場風の画面から検索・閲覧する静的ポータル。GitHub APIで一覧を取り込み、Copilotの日本語解説やREADME由来の暫定説明を添えて、技術領域や更新状況から探せる。",
-      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、酒場の依頼帳になぞらえた画面から探して読むための個人ポータルだ。中ではブラウザがGitHub APIから公開リポジトリを取得し、名前や説明、Topics、言語、Copilot要約を横断検索できるようにしてる。カードを選ぶと概要が開き、解析済みならREADMEや設定、構成などを根拠にした日本語説明を表示し、未解析ならREADMEから短い暫定説明を作る。別のGitHub Actionsワークフローが6時間ごとに更新を確認し、前回のpush以降に変化したものをCopilot CLIで最大8件ずつ要約してJSONへ保存する仕組みだ。GitHub Pagesで静的公開でき、サイト側は公開APIの読み取りだけで、非公開リポジトリや書き込み操作は扱わない。",
-      "closingRemark": "6時間おきに最大8件ずつ紹介文を仕込むあたり、酒場の帳簿も一晩では埋まらないらしい。",
+      "title": "Project Tavern リポジトリ案内所",
+      "summary": "公開リポジトリを酒場風の画面から探し、選んだものの概要を読める個人向けポータル。GitHub APIで一覧を取得し、名前や説明、言語などで横断検索できるほか、Copilotの日本語要約とREADME由来の暫定説明も表示します。",
+      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、酒場風の画面で探して概要を読むための個人ポータルだ。ブラウザ側ではGitHub APIから一覧を取得し、名前・Description・Topics・言語・要約を横断検索できるほか、技術領域ごとの簡易分類や選んだリポジトリの詳細表示もしてる。詳細説明はCopilot CLIがREADMEや設定、ファイル構成、最近のコミットなどを見て日本語で作り、6時間ごとのActionsで新規・更新分を最大8件ずつ summaries.json に記録する仕組みだ。要約がまだないカードにはREADMEから短いプレビューを出すので、解析待ちでも手掛かりは残る。閲覧画面は公開APIを読むだけで、対象も公開リポジトリに限るってところだな。",
+      "closingRemark": "6時間ごとに8件ずつの聞き込みか。急がず記録を増やす酒場らしい段取りだな。",
       "features": [
-        "公開リポジトリをGitHub APIから取得",
+        "GitHub APIから所有者の公開リポジトリ一覧を取得",
         "名前・説明・Topics・言語・要約を横断検索",
-        "技術領域ごとに簡易分類",
-        "Copilot生成の日本語解説とREADME由来の暫定説明",
-        "更新のあったリポジトリを定期解析して要約を更新"
+        "技術領域ごとの簡易分類とリポジトリ詳細表示",
+        "Copilot CLIで日本語要約を生成し、変更分を定期更新",
+        "要約がないカードにはREADME由来の短い説明を表示"
       ],
       "technologies": [
         "JavaScript",
         "CSS",
         "HTML",
         "GitHub API",
-        "GitHub Actions",
         "GitHub Copilot CLI",
+        "GitHub Actions",
         "GitHub Pages"
       ],
       "categories": [
         "Web・ツール",
         "GitHub",
-        "リポジトリ検索"
+        "検索・閲覧",
+        "自動要約"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-10-07T13:36:30Z",
+      "sourcePushedAt": "2026-10-07T23:11:29Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-10-07T13:36:30Z",
+        "pushedAt": "2026-10-07T23:11:29Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -47,8 +48,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "02803f7e21dc777d31dac53d2be72566cd937f8375d34434e8d63bd88f23b858",
-      "generatedAt": "2026-10-07T23:11:28.033Z"
+      "sourceFingerprint": "663bcdc3dd104a6aca83bb2746092daefa924598e8cb7edd90e58b61e2dde27d",
+      "generatedAt": "2026-10-08T06:18:18.990Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -300,29 +301,29 @@
       "generatedAt": "2026-09-04T10:52:42.974Z"
     },
     "spike-rt-web-toolkit": {
-      "title": "SPIKE-RT書き込み・ログ確認ツール",
-      "summary": "SPIKE Prime Hub向けのSPIKE-RTアプリを、github.devで編集してGitHub Actionsでビルドし、GitHub PagesからWebUSBで書き込めるツールキットだ。Web Serialによる実行ログ確認や、Windows向けDFU初回設定の導線も備えている。",
-      "detail": "こいつは、SPIKE-RTアプリの編集から実機への書き込み、実行ログの確認までをブラウザ中心でつなぐためのWebツールキットだな。中ではapps以下のCアプリをGitHub ActionsでSPIKE-RT v0.2.0向けに一括ビルドし、生成したasp.binをGitHub PagesからWebUSBとDfuSeでSPIKE Prime Hubへ転送してる。書き込み後はHubを再起動してアプリを実行でき、ChromeやEdgeのWeb Serial APIで115200 bpsのUSBシリアルログも確認できる。SHA-256検証、DFU状態や転送サイズの確認、Windows向けWinUSBセットアップへの案内まで含むのが特徴だ。myappやbutton、LED、モーターのサンプルも収録されているが、WinUSB未設定PCへの新規ドライバ割り当て経路は最終実機確認待ちとなっている。",
-      "closingRemark": "ブラウザで書き込み、COMポートは手で選ぶ。自動化の手前に、まだ一手だけ残してあるな。",
+      "title": "SPIKE-RT開発・書き込みツール",
+      "summary": "SPIKE Prime Hub向けのSPIKE-RTアプリを、ブラウザで編集・ビルド・書き込みし、実行ログまで確認するためのツールキット。アプリを追加しやすい構成で、WebUSBとWeb Serialを使った一連の作業をGitHub Pagesから行えます。",
+      "detail": "こいつは、SPIKE Prime Hubで動くSPIKE-RTアプリの編集から実機確認までをつなぐWebツールキットだ。apps/以下にCファイルを置くと、GitHub ActionsがSPIKE-RT v0.2.0でビルドし、GitHub PagesからWebUSB経由でDFU書き込みできる。書き込み後はWeb Serialで115200 bpsのログをブラウザに表示でき、ポートはVID/PIDで絞らず利用者が選ぶ仕組みになってる。ボタンやLED、モーターを試すサンプルアプリも収録されていて、基本の流れはREADMEにまとまっている。Windows向けWinUSBセットアップは別リポジトリのReleaseから案内する形で、新規ドライバー割り当て経路の実機確認はまだ残っているな。",
+      "closingRemark": "シリアルポートはVID/PIDで決め打ちせず、最後はブラウザの選択画面に任せる。そこは利用者の目利きというわけだ。",
       "features": [
-        "github.devでCソースを編集して自動ビルド",
-        "apps/<app>/<app>.c中心の簡潔なアプリ追加構成",
-        "GitHub PagesからWebUSBでDFU書き込み",
-        "SHA-256・転送サイズ・DFU状態を確認",
-        "Web Serialで実行中のUSBシリアルログを表示"
+        "GitHub ActionsでSPIKE-RT v0.2.0のアプリを一括ビルド",
+        "GitHub PagesからWebUSB・DfuSeでHubへ書き込み",
+        "Web Serialで115200 bpsのUSBシリアルログを表示",
+        "apps/にCファイルを置く最小構成でアプリを追加可能",
+        "ボタン・LED・モーターなどのサンプルアプリを収録"
       ],
       "technologies": [
-        "JavaScript",
         "C",
-        "SPIKE-RT v0.2.0",
-        "WebUSB",
-        "Web Serial API",
-        "DfuSe",
+        "JavaScript",
+        "SPIKE-RT",
         "GitHub Actions",
-        "GitHub Pages"
+        "GitHub Pages",
+        "WebUSB",
+        "DfuSe",
+        "Web Serial API"
       ],
       "categories": [
-        "ツール",
+        "開発ツール",
         "組み込み",
         "Webアプリ",
         "ロボット"
@@ -331,12 +332,12 @@
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1341511616,
-      "sourcePushedAt": "2026-08-25T09:46:58Z",
+      "sourcePushedAt": "2026-10-08T05:20:21Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1341511616,
         "name": "spike-rt-web-toolkit",
-        "pushedAt": "2026-08-25T09:46:58Z",
+        "pushedAt": "2026-10-08T05:20:21Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -344,10 +345,10 @@
         "archived": false,
         "disabled": false,
         "fork": false,
-        "language": "JavaScript"
+        "language": "C"
       },
-      "sourceFingerprint": "3488cdaa79347c7fa6c907979e875573ae8144bb1f18a5c3d07c3d9b7aa5dd84",
-      "generatedAt": "2026-09-04T10:52:59.062Z"
+      "sourceFingerprint": "b0c79c05833550a9fa5fc724a6293540d0ac66d2b90f382fa0604be54c8787f4",
+      "generatedAt": "2026-10-08T06:18:01.295Z"
     },
     "reaction-wheel-rocker-baseline-sim": {
       "title": "反応ホイール機体の基準シミュレータ",
