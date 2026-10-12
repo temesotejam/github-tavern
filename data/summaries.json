@@ -1,18 +1,18 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-12T06:09:53.604Z",
+  "generatedAt": "2026-10-12T15:43:33.251Z",
   "repositories": {
     "github-tavern": {
       "title": "公開リポジトリ探索酒場",
-      "summary": "所有する公開GitHubリポジトリを、古い情報端末風の画面で検索・閲覧する個人ポータル。言語やトピックで絞り込めるほか、Copilotによる日本語の概要とREADMEからの暫定説明も確認できます。",
-      "detail": "こいつは、所有する公開GitHubリポジトリを一覧から探し、内容を確かめるための個人ポータルだ。古い情報端末を思わせる画面でGitHub APIから情報を取得し、名前や説明、トピック、言語、Copilot要約を横断検索できる。カードを選ぶと概要が開き、解析済みならREADMEや設定ファイルなどを根拠にした説明が読める。中ではGitHub Actionsが6時間ごとに更新を確認し、変更のあったリポジトリをCopilot CLIで順次解析して説明データを更新してる。GitHub Pagesで静的に公開できる一方、対象は公開リポジトリだけで、削除や変更などの書き込み操作はしない作りだ。",
-      "closingRemark": "更新対象は一度に最大8件。酒場の帳面も、急がず少しずつ書き換えるらしい。",
+      "summary": "temesotejamの公開GitHubリポジトリを、酒場風の画面から探して内容を確認する個人向けポータル。GitHub APIで一覧を取り込み、横断検索や分類に加え、Copilotの日本語説明とREADME由来の暫定表示で各リポジトリの概要へ案内する。",
+      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、古い情報端末風の画面から探して読むための個人ポータルだ。中ではGitHub APIから公開一覧を取り込み、名前や説明、Topics、言語、Copilot要約をまとめて検索し、技術領域ごとの分類やカード選択からの概要表示につなげてる。説明が用意されていればREADMEや設定、ファイル構成などを根拠にした日本語要約を出し、未解析ならREADMEから短い暫定説明を作る。要約更新はActions上のCopilot CLIが6時間ごとに変更済みのリポジトリを確認し、定期実行では最大8件ずつ処理する仕組みだ。GitHub Pagesで静的公開でき、公開APIを読むだけでPrivate Repositoryや書き込み操作は扱わない。",
+      "closingRemark": "6時間ごとに最大8件ずつ説明を磨く仕組みか。酒場の記録係も、急ぎすぎない方針らしいな。",
       "features": [
-        "公開リポジトリをGitHub APIから取得",
-        "名前・説明・トピック・言語・要約を横断検索",
-        "技術領域ごとの簡易分類とカード形式の詳細表示",
-        "Copilot CLIで説明を定期更新し、JSONに保存",
-        "未解析の場合はREADMEから暫定説明を表示"
+        "公開リポジトリをGitHub APIから自動取得",
+        "名前・説明・Topics・言語・Copilot要約を横断検索",
+        "技術領域ごとの簡易分類とカードからの概要表示",
+        "Copilot未解析の場合はREADMEから暫定説明を表示",
+        "変更のあったリポジトリをCopilot CLIで定期要約"
       ],
       "technologies": [
         "JavaScript",
@@ -24,20 +24,21 @@
         "GitHub Pages"
       ],
       "categories": [
-        "Web・ツール",
-        "GitHub",
-        "リポジトリ検索"
+        "Webアプリ",
+        "GitHubリポジトリ検索",
+        "ポートフォリオ",
+        "AI要約"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-10-11T22:07:44Z",
+      "sourcePushedAt": "2026-10-12T06:09:55Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-10-11T22:07:44Z",
+        "pushedAt": "2026-10-12T06:09:55Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -47,8 +48,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "e4a7c7fd46e027bd4f6aaba0fc744db36b10391bcd1634e1fe6d3abe2a67ab2e",
-      "generatedAt": "2026-10-12T06:09:53.604Z"
+      "sourceFingerprint": "46ba5081376cfddc98875795f3c1824c9d39ad33728ae9d670e73735f242ae68",
+      "generatedAt": "2026-10-12T15:43:33.251Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -4650,43 +4651,43 @@
       "generatedAt": "2026-09-27T12:12:26.996Z"
     },
     "atoms3r-zero-cross-fixed-100ms-test": {
-      "title": "AtomS3自由脚振幅制御試験",
-      "summary": "M5Stack AtomS3で自由に動く足の振幅とモータ電流応答を測る制御実験だ。WebUIで指令電流と直前ピークに対する入力位置を設定し、15秒の測定結果をRWLOGなどに記録できる。",
-      "detail": "こいつは、自由に動く足へモータ入力を与え、振幅や電流応答を調べるためのAtomS3向け制御ファームウェアだ。中ではMEKFで姿勢を推定し、起動時は左右pitch軸の重力方向差や静止状態を確かめて足のゼロ点を決めてる。WebUIから指令電流と直前に確認した同じ側のピークに対する入力位置を設定でき、100 msパルスを使って15秒測定し、MEKFの左右角度が16°に達すると停止する。結果はRWLOG v54や足角度の記録に残り、Python変換器は旧形式も読み取れる。指令電流は実電流の到達値を保証せず、16°停止も機械的な停止を保証するものじゃない。測定モデルの一部は現行条件で未検証の参考値として扱われている。",
-      "closingRemark": "zero_crossというイベント名でも、設定位置が0%でなければ実際のゼロ通過とは限らない。ログを見るときは名前より条件だな。",
+      "title": "自由脚振幅制御の実機試験FW",
+      "summary": "自由に動く左右の脚へ短いモーターパルスを与え、揺れの振幅や実電流、姿勢の変化を実機で記録・検証するファームウェア。WebUIで指令電流や入力位置を調整でき、MEKFの推定値とRWLOGを使って条件ごとの結果を比較できる。",
+      "detail": "こいつは、自由に動く左右の脚へパルスを与え、揺れの振幅やモーター電流の応答を実機で確かめる試験用ファームウェアだ。中ではESP32-S3上でIMUの取得、MEKFによる姿勢推定、制御、モーターI/Oを分けて動かし、足の観測値やイベントをRWLOGへ記録してる。WebUIから指令電流と直前ピークに対する入力位置を設定できる一方、パルス幅は100 ms、測定は15秒、MEKFの左右角度16°での停止は固定だ。最新変更では前後逆向きに取り付けたモーターに合わせ、ドライバーへ送る電流符号を反転している。指令電流どおりの実電流や機械的な停止は保証されず、実機で方向と安全条件を確かめる必要があるな。",
+      "closingRemark": "100 msの入力を保ったまま、取り付け向きに合わせて電流の符号を反転。論理上の揺れ方向とは分けて記録するあたり、ログにも用心深さが出てるな。",
       "features": [
-        "WebUIで指令電流とピーク基準の入力位置を設定",
-        "MEKF姿勢推定とpitch基準の足ゼロ点取得",
-        "16°角度監視と緊急停止",
-        "RWLOG v54と足角度データの記録",
-        "Python変換器で旧RWLOG形式も読み込み"
+        "WebUIから指令電流と入力位置の割合を設定",
+        "足の角度・実電流・MEKF姿勢やイベントを記録",
+        "Python変換器で旧版を含むRWLOGをCSV等へ変換",
+        "左右pitch基準と静止条件で足のゼロ点を決定",
+        "16°のソフトウェア停止条件を備える"
       ],
       "technologies": [
         "C++",
         "Python",
+        "JavaScript",
         "PlatformIO",
         "Arduino",
         "ESP32-S3",
-        "M5Stack AtomS3",
         "M5Unified",
-        "Adafruit AHRS"
+        "MEKF"
       ],
       "categories": [
         "組み込み",
-        "ロボティクス",
-        "制御実験",
-        "データ計測"
+        "ロボット制御",
+        "実機試験",
+        "データ記録"
       ],
       "status": "実験",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1395119115,
-      "sourcePushedAt": "2026-10-07T08:03:29Z",
+      "sourcePushedAt": "2026-10-12T06:59:52Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1395119115,
         "name": "atoms3r-zero-cross-fixed-100ms-test",
-        "pushedAt": "2026-10-07T08:03:29Z",
+        "pushedAt": "2026-10-12T06:59:52Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -4696,8 +4697,8 @@
         "fork": false,
         "language": "C++"
       },
-      "sourceFingerprint": "0667d716c325ece09cc1fc28c976bd92aae857e566fa3ff8a7f008d95c427b5e",
-      "generatedAt": "2026-10-07T13:36:16.569Z"
+      "sourceFingerprint": "41128c5c8ce0a5b03ae8f2eaebd6c06e039d14bf9e6dd2e398912162d4968010",
+      "generatedAt": "2026-10-12T15:43:19.637Z"
     },
     "robot-core-arena": {
       "title": "ロボットコアアリーナ",
