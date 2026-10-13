@@ -1,45 +1,44 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-13T00:49:55.059Z",
+  "generatedAt": "2026-10-13T14:23:52.663Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ案内端末",
-      "summary": "temesotejamの公開GitHubリポジトリを、古い情報端末風の画面で探して閲覧する個人ポータル。名前・説明・Topics・言語・Copilot要約を横断検索でき、更新されたリポジトリの日本語説明を定期的に作成して蓄えます。",
-      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、古い情報端末風の画面から探して眺めるための個人ポータルだ。中ではGitHub APIから公開リポジトリを取得し、名前や説明、Topics、言語、Copilot要約をまとめて検索できるようにしてる。分類フィルターや並べ替えを使い、カードを選べば概要や関連リンクを確認できる。Copilot解析済みならREADMEや構成などを根拠にした日本語説明が出て、未解析のものにはREADMEから短い暫定説明を補う仕掛けだ。GitHub Actionsが6時間ごとに更新を確認し、変更分を最大8件ずつCopilot CLIで解析してJSONに蓄える。GitHub Pagesで静的に公開できる一方、扱うのは公開情報だけで、リポジトリの変更やIssue作成はしない。",
-      "closingRemark": "酒場仕立ての画面でも、見られるのは公開棚だけ。鍵のかかった戸を開けにいく仕組みじゃない。",
+      "title": "公開リポジトリ探索酒場",
+      "summary": "個人所有の公開GitHubリポジトリを、酒場風の画面から探して概要を読むための静的ポータル。GitHub APIで一覧を取得し、横断検索や分類に加え、Copilot生成の日本語説明とREADME由来の暫定紹介を表示します。",
+      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、古い情報端末を思わせる酒場風UIから探して中身を確かめるための個人ポータルだ。ブラウザ側でGitHub APIから一覧を取り、名前・説明・Topics・言語やCopilot要約を横断検索し、技術領域で絞り込める。カードを選ぶと詳細が開き、解析済みならREADMEや構成などを根拠にした日本語概要が読めるし、未解析ならREADMEから短い紹介を補う。裏ではActionsが6時間ごとに一覧を確認し、更新分をCopilot CLIで解析してJSONへ蓄積する仕組みだ。GitHub Pagesで静的に公開でき、対象は公開リポジトリのみで、閲覧側から変更やIssue作成はしない。定期解析も一度に最大8件なので、全件がまとめて更新されるわけじゃない。",
+      "closingRemark": "6時間ごとに最大8件ずつ説明を磨くあたり、酒場の帳簿も一晩では埋まらないらしい。",
       "features": [
-        "公開リポジトリをGitHub APIから取得",
-        "名前・説明・Topics・言語・Copilot要約を横断検索",
-        "カテゴリで絞り込み、更新順などで並べ替え",
-        "未解析のリポジトリにはREADME由来の短い説明を表示",
-        "更新分を定期解析し、日本語説明をJSONに保存"
+        "GitHub APIから所有者の公開リポジトリ一覧を取得",
+        "名前・説明・Topics・言語・要約を横断検索",
+        "技術領域での簡易分類とカードからの詳細表示",
+        "Copilot CLIで更新分の日本語説明を定期生成",
+        "未解析リポジトリにはREADME由来の暫定紹介を表示"
       ],
       "technologies": [
         "JavaScript",
-        "CSS",
         "HTML",
+        "CSS",
         "GitHub API",
         "GitHub Actions",
         "GitHub Copilot CLI",
-        "GitHub Pages",
-        "JSON"
+        "GitHub Pages"
       ],
       "categories": [
         "Webアプリ",
-        "GitHubリポジトリ閲覧",
-        "検索・分類",
-        "自動要約"
+        "リポジトリ閲覧",
+        "検索ツール",
+        "静的サイト"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-10-12T15:43:34Z",
+      "sourcePushedAt": "2026-10-13T00:49:56Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-10-12T15:43:34Z",
+        "pushedAt": "2026-10-13T00:49:56Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -49,8 +48,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "42dddef905f796618fc6a717ee6f258a5b732d7f4ffb8ed81e39297a569c5bff",
-      "generatedAt": "2026-10-13T00:49:55.058Z"
+      "sourceFingerprint": "2f584ae0ecd00583ea42a733a451261a06b0c9611b1a733926591f72e891d955",
+      "generatedAt": "2026-10-13T14:23:52.663Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -4652,43 +4651,43 @@
       "generatedAt": "2026-09-27T12:12:26.996Z"
     },
     "atoms3r-zero-cross-fixed-100ms-test": {
-      "title": "自由脚振幅制御の実機試験FW",
-      "summary": "自由に動く左右の脚へ短いモーターパルスを与え、揺れの振幅や実電流、姿勢の変化を実機で記録・検証するファームウェア。WebUIで指令電流や入力位置を調整でき、MEKFの推定値とRWLOGを使って条件ごとの結果を比較できる。",
-      "detail": "こいつは、自由に動く左右の脚へパルスを与え、揺れの振幅やモーター電流の応答を実機で確かめる試験用ファームウェアだ。中ではESP32-S3上でIMUの取得、MEKFによる姿勢推定、制御、モーターI/Oを分けて動かし、足の観測値やイベントをRWLOGへ記録してる。WebUIから指令電流と直前ピークに対する入力位置を設定できる一方、パルス幅は100 ms、測定は15秒、MEKFの左右角度16°での停止は固定だ。最新変更では前後逆向きに取り付けたモーターに合わせ、ドライバーへ送る電流符号を反転している。指令電流どおりの実電流や機械的な停止は保証されず、実機で方向と安全条件を確かめる必要があるな。",
-      "closingRemark": "100 msの入力を保ったまま、取り付け向きに合わせて電流の符号を反転。論理上の揺れ方向とは分けて記録するあたり、ログにも用心深さが出てるな。",
+      "title": "自由足振動計測ファームウェア",
+      "summary": "AtomS3搭載機で自由に動く足の振動を測り、IMUやモータ電流、制御イベントを記録する実機試験用ファームウェア。WebUIから指令電流や入力位置を調整でき、足カメラが使えない場合も測定を始められます。",
+      "detail": "こいつは、自由に動く足を持つ機体の振動制御を実機で試し、その応答を測るためのファームウェアだ。中ではESP32-S3上でIMUの姿勢推定と制御を動かし、Unit Roller485への電流指令や実電流、制御イベントをRWLOGへ記録してる。WebUIでは指令電流や直前ピークに対する入力位置を設定でき、測定は15秒、パルス幅は100 ms固定で、MEKFの左右角度が16°に達すると停止する。開始にはIMUの健全性や直立姿勢などを確認する一方、足カメラは必須ではなく、足角度は取得できる区間だけ記録する。実機での安全確認が前提で、指令電流が設定値どおり実電流に到達する保証や、あらゆる条件での動作保証までは示されていない。",
+      "closingRemark": "足カメラが見失っても測定は始まるが、足角度の記録までは無理をさせない作りだな。",
       "features": [
-        "WebUIから指令電流と入力位置の割合を設定",
-        "足の角度・実電流・MEKF姿勢やイベントを記録",
-        "Python変換器で旧版を含むRWLOGをCSV等へ変換",
-        "左右pitch基準と静止条件で足のゼロ点を決定",
-        "16°のソフトウェア停止条件を備える"
+        "IMU姿勢推定を使った自由足の振動制御・実機測定",
+        "WebUIから指令電流と入力位置を設定",
+        "IMU、電流、制御イベントをRWLOGに記録",
+        "足カメラ未検出でも測定を開始可能",
+        "MEKF角度16°での停止監視"
       ],
       "technologies": [
         "C++",
-        "Python",
-        "JavaScript",
+        "ESP32-S3",
         "PlatformIO",
         "Arduino",
-        "ESP32-S3",
         "M5Unified",
-        "MEKF"
+        "Adafruit AHRS",
+        "MEKF",
+        "Unit Roller485"
       ],
       "categories": [
         "組み込み",
-        "ロボット制御",
+        "制御",
         "実機試験",
-        "データ記録"
+        "計測"
       ],
       "status": "実験",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1395119115,
-      "sourcePushedAt": "2026-10-12T06:59:52Z",
+      "sourcePushedAt": "2026-10-13T03:27:50Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1395119115,
         "name": "atoms3r-zero-cross-fixed-100ms-test",
-        "pushedAt": "2026-10-12T06:59:52Z",
+        "pushedAt": "2026-10-13T03:27:50Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -4698,8 +4697,8 @@
         "fork": false,
         "language": "C++"
       },
-      "sourceFingerprint": "41128c5c8ce0a5b03ae8f2eaebd6c06e039d14bf9e6dd2e398912162d4968010",
-      "generatedAt": "2026-10-12T15:43:19.637Z"
+      "sourceFingerprint": "d15847b831d7f3ca3b1a9092eebe5b00435001fa6a0a843f2d7252b3a29cb76e",
+      "generatedAt": "2026-10-13T14:23:34.421Z"
     },
     "robot-core-arena": {
       "title": "ロボットコアアリーナ",
@@ -4795,7 +4794,57 @@
       },
       "sourceFingerprint": "c78bfd8cd94d7ab2164df064a5d50bcfa4151b2c9300ac066f6ccaf652ab3e6d",
       "generatedAt": "2026-10-06T06:31:41.613Z"
+    },
+    "atoms3r-lateral-energy-control": {
+      "title": "AtomS3R左右揺動制御",
+      "summary": "AtomS3RとUnit Roller485、リアクションホイールを使い、左右揺動を抑える制御を実機で試すファームウェア。MEKFで姿勢を推定し、ZEROクロスごとに入力を計算、RWLOGで計算値と実測電流を照合できます。",
+      "detail": "こいつは、AtomS3RとUnit Roller485、リアクションホイールを使って左右揺動を制御する試験用ファームウェアだ。中ではMEKFで姿勢を推定し、物理ピークとZEROクロスを見つけて、次のピークを目標角へ近づける電流とパルス幅を計算してる。入力しない場合の残りエネルギーや実効損失も見積もり、設定や予測、実測電流をRWLOG v54へ記録する仕組みだな。測定区間は15秒で、現在の符号確認版では通常入力の電流符号を反転している。ただ、係数は予測値を含む固定脚データ由来で、反転後の係数も実機での閉ループ性能もまだ検証されていない。",
+      "closingRemark": "まずは300 mAで符号と角速度の向きをRWLOGで見比べる段階だ。係数の答え合わせは、そのあとだな。",
+      "features": [
+        "MEKFの推定姿勢から左右の物理ピークとZEROクロスを検出",
+        "次のピーク角に応じてリアクションホイールの電流とパルス幅を計算",
+        "設定・予測・MEKF状態・実測電流をRWLOG v54に記録",
+        "16°の左右角制限と既存の異常停止を維持",
+        "符号確認版で通常入力のモーター電流符号を反転"
+      ],
+      "technologies": [
+        "AtomS3R",
+        "Unit Roller485",
+        "リアクションホイール",
+        "MEKF",
+        "RWLOG v54",
+        "Arduino",
+        "PlatformIO",
+        "Python"
+      ],
+      "categories": [
+        "組み込み",
+        "制御",
+        "ロボティクス",
+        "実験"
+      ],
+      "status": "実験",
+      "confidence": "high",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
+      "sourceRepositoryId": 1416789371,
+      "sourcePushedAt": "2026-10-13T11:56:10Z",
+      "sourceDefaultBranch": "main",
+      "sourceMetadata": {
+        "repositoryId": 1416789371,
+        "name": "atoms3r-lateral-energy-control",
+        "pushedAt": "2026-10-13T11:56:10Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "C++"
+      },
+      "sourceFingerprint": "8216c7d5f427d305f521b44571e55d5d65c53131932ba54e9b65a7774c8fea90",
+      "generatedAt": "2026-10-13T14:23:18.942Z"
     }
   },
-  "repositoryCount": 97
+  "repositoryCount": 98
 }
