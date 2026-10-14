@@ -1,18 +1,18 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-13T22:55:29.513Z",
+  "generatedAt": "2026-10-14T05:03:36.658Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ探索ポータル",
-      "summary": "個人が所有する公開GitHubリポジトリを、検索・分類して概要を確認できるポータルだ。READMEからの暫定説明に加え、更新分をCopilot CLIで解析した日本語要約も表示する。",
-      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを探して、中身の概要を確かめるためのポータルだ。中ではGitHub APIから一覧を取得し、名前や説明、Topics、言語、Copilot要約を横断検索できるようにしてる。カードを選べば概要が見られ、解析前のものにはREADMEから短い説明を組み立てる仕組みもある。更新のあったリポジトリはGitHub Actions経由でCopilot CLIが調べ、要約をJSONに保存する。GitHub Pagesで動く静的サイトで、対象は公開リポジトリのみ、削除やIssue作成のような書き込み操作はしない構成だ。",
-      "closingRemark": "定期便は一度に最大8件。大きな棚卸しも、少しずつなら手堅く進むってわけだ。",
+      "title": "公開リポジトリ探索酒場",
+      "summary": "temesotejamの公開GitHubリポジトリを、古い情報端末風の画面から検索・閲覧する個人向けポータル。CopilotがREADMEや設定ファイルなどをもとに日本語の概要を作り、未解析のものはREADMEから暫定説明を表示します。",
+      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、古い端末風の画面から探して眺める個人向けポータルだ。中ではGitHub APIから公開リポジトリを取り込み、名前や説明、Topics、言語、Copilot要約を横断検索して、簡易分類やカード選択後の概要表示につないでる。概要はREADMEや構成、設定ファイル、直近コミットなどを根拠にCopilot CLIで生成してキャッシュし、6時間ごとのActionsが更新分を拾う。まだ解析されていないリポジトリには、READMEから短い暫定説明を出す仕組みもある。GitHub Pagesで静的に公開できる一方、対象は公開情報だけで、Private Repositoryの取得やリポジトリへの書き込みはしない。定期解析は1回最大8件、というところも覚えておくといい。",
+      "closingRemark": "更新のたびに全件を読み直すんじゃなく、変化のあったものを最大8件ずつ。酒場の帳面にしては、堅実な回し方だな。",
       "features": [
         "公開リポジトリをGitHub APIから自動取得",
-        "リポジトリ情報や日本語要約を横断検索",
-        "技術領域ごとの分類とカード形式の概要表示",
-        "未解析リポジトリはREADMEから暫定説明を生成",
-        "更新分をCopilot CLIで解析し、要約をJSONに保存"
+        "名前・説明・Topics・言語・Copilot要約を横断検索",
+        "技術領域で簡易分類し、選んだリポジトリの概要を表示",
+        "Copilot未解析のリポジトリはREADMEから暫定説明を生成",
+        "GitHub Pagesで静的に公開可能"
       ],
       "technologies": [
         "JavaScript",
@@ -25,19 +25,19 @@
       ],
       "categories": [
         "Web・ツール",
-        "GitHub",
-        "リポジトリ管理"
+        "GitHubリポジトリ検索",
+        "静的サイト"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-10-13T14:37:14Z",
+      "sourcePushedAt": "2026-10-13T22:55:30Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-10-13T14:37:14Z",
+        "pushedAt": "2026-10-13T22:55:30Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -47,8 +47,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "00989f50673db5d404630a8e0bf0121135508eb110b544456e9e0cf9d6a33662",
-      "generatedAt": "2026-10-13T22:55:29.512Z"
+      "sourceFingerprint": "cd99befb05ccaec0fc492301f74e8904bb80b041751387a82c5f8b15bb358691",
+      "generatedAt": "2026-10-14T05:03:36.658Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -4795,43 +4795,43 @@
       "generatedAt": "2026-10-06T06:31:41.613Z"
     },
     "atoms3r-lateral-energy-control": {
-      "title": "AtomS3R左右揺動制御",
-      "summary": "AtomS3RとUnit Roller485、リアクションホイールを使い、左右揺動を抑える制御を実機で試すファームウェア。MEKFで姿勢を推定し、ZEROクロスごとに入力を計算、RWLOGで計算値と実測電流を照合できます。",
-      "detail": "こいつは、AtomS3RとUnit Roller485、リアクションホイールを使って左右揺動を制御する試験用ファームウェアだ。中ではMEKFで姿勢を推定し、物理ピークとZEROクロスを見つけて、次のピークを目標角へ近づける電流とパルス幅を計算してる。入力しない場合の残りエネルギーや実効損失も見積もり、設定や予測、実測電流をRWLOG v54へ記録する仕組みだな。測定区間は15秒で、現在の符号確認版では通常入力の電流符号を反転している。ただ、係数は予測値を含む固定脚データ由来で、反転後の係数も実機での閉ループ性能もまだ検証されていない。",
-      "closingRemark": "まずは300 mAで符号と角速度の向きをRWLOGで見比べる段階だ。係数の答え合わせは、そのあとだな。",
+      "title": "AtomS3R左右揺動エネルギー制御",
+      "summary": "AtomS3Rとリアクションホイールを使い、左右に揺れる機体の次のピーク角を目標へ近づける試験用ファームウェアだ。姿勢推定と実機ログをもとに、ZEROクロス後の入力方向とパルス幅を左右別に計算する。",
+      "detail": "こいつはAtomS3RとUnit Roller485、リアクションホイールで左右揺動を制御する試験用ファームウェアだ。中ではMEKFで姿勢を推定し、左右のピークとZEROクロスを見て、入力しなかった場合に次のピークへ残るエネルギーを予測してる。目標角は8・10・12度から選び、必要エネルギーとの差に応じてZEROクロス後の入力方向とパルス幅を決める仕組みだ。設定や予測値、実測電流などはRWLOGに残り、同じ試行内で予測誤差を補正する機能もある。ただし係数は限られた実機ログから作った暫定値で、閉ループ性能は自動試験だけでは確認できない。始動キックは100 ms固定のまま、通常入力だけを可変にしているってところだな。",
+      "closingRemark": "正側の無入力記録がなく、負側の逆入力も効果を切り分けられていない。まずはRWLOGに次のピークを語ってもらう段階だな。",
       "features": [
-        "MEKFの推定姿勢から左右の物理ピークとZEROクロスを検出",
-        "次のピーク角に応じてリアクションホイールの電流とパルス幅を計算",
-        "設定・予測・MEKF状態・実測電流をRWLOG v54に記録",
-        "16°の左右角制限と既存の異常停止を維持",
-        "符号確認版で通常入力のモーター電流符号を反転"
+        "MEKFで左右角を推定し、物理ピークとZEROクロスを検出",
+        "左右別の予測係数から次のピークの残存エネルギーを算出",
+        "エネルギー差に応じて入力方向と電流パルス幅を調整",
+        "同一試行内の予測誤差を条件別に補正",
+        "設定・予測・姿勢・実測電流をRWLOGへ記録"
       ],
       "technologies": [
         "AtomS3R",
         "Unit Roller485",
         "リアクションホイール",
         "MEKF",
-        "RWLOG v54",
-        "Arduino",
         "PlatformIO",
-        "Python"
+        "Arduino",
+        "M5Unified",
+        "RWLOG"
       ],
       "categories": [
         "組み込み",
-        "制御",
-        "ロボティクス",
+        "制御工学",
+        "ファームウェア",
         "実験"
       ],
       "status": "実験",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1416789371,
-      "sourcePushedAt": "2026-10-13T11:56:10Z",
+      "sourcePushedAt": "2026-10-14T04:38:56Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1416789371,
         "name": "atoms3r-lateral-energy-control",
-        "pushedAt": "2026-10-13T11:56:10Z",
+        "pushedAt": "2026-10-14T04:38:56Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -4841,9 +4841,59 @@
         "fork": false,
         "language": "C++"
       },
-      "sourceFingerprint": "8216c7d5f427d305f521b44571e55d5d65c53131932ba54e9b65a7774c8fea90",
-      "generatedAt": "2026-10-13T14:23:18.942Z"
+      "sourceFingerprint": "9349cfb0a76a067b87451f3fe23e88836d3dfa2e82a051d72a1e075472108746",
+      "generatedAt": "2026-10-14T05:03:07.373Z"
+    },
+    "pico-copter-fc": {
+      "title": "Pico向けクアッドコプター制御",
+      "summary": "Raspberry Pi Pico向けのクアッドコプター用ファームウェアを管理し、GitHub ActionsでビルドしたUF2をGitHub Pagesから配布する。SBUS受信断時のフェイルセーフや、CH5操作中だけ最大約10秒を記録するRAMログも備えている。",
+      "detail": "こいつは、Raspberry Pi Picoで動かすクアッドコプターの飛行制御ファームウェアと、UF2を作って配る仕組みをまとめたものだ。中ではPico SDKとEigenを使ったC/C++の制御・推定処理をビルドし、mainへの変更時にはGitHub Actionsでコンパイル、成功したUF2をGitHub Pagesへ公開してる。SBUSの受信が途絶えたりフェイルセーフフラグが立ったりすると、最小ESC指令でディスアームし、通信復帰後も条件を確認してから再アームを求める。CH5をONにした間だけ100 Hzで38項目をリングバッファへ記録し、直近約10秒分をUSBシリアルへ出力できるのも特徴だな。i-26由来の変更を移しつつ、Yaw補正の符号は元のPico Copterに合わせている。ただしログはRAM上なので電源断で消え、停止指令もモータの電源遮断ではない。飛行安全や実機での動作を保証するものじゃない。",
+      "closingRemark": "CH5が覚えているのは直近約10秒、しかも電源を切ればきれいに忘れる。記録係としては、ずいぶん割り切りがいいな。",
+      "features": [
+        "GitHub ActionsでUF2をビルドし、成功時にGitHub Pagesへ公開",
+        "SBUS受信断やフェイルセーフフラグに対応したディスアーム処理",
+        "CH5操作中のみ100 Hzで38項目をリングバッファに記録",
+        "ファームウェアを単独ビルド・共有できるフォルダ構成",
+        "i-26由来の変更を移植し、Yaw補正の符号は元のPico Copterを維持"
+      ],
+      "technologies": [
+        "Raspberry Pi Pico",
+        "Pico SDK 2.3.0",
+        "C",
+        "C++17",
+        "Eigen 3.4.0",
+        "SBUS",
+        "GitHub Actions",
+        "GitHub Pages"
+      ],
+      "categories": [
+        "組み込み",
+        "飛行制御",
+        "ファームウェア",
+        "CI/CD"
+      ],
+      "status": "試作",
+      "confidence": "high",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
+      "sourceRepositoryId": 1418263649,
+      "sourcePushedAt": "2026-10-14T03:51:30Z",
+      "sourceDefaultBranch": "main",
+      "sourceMetadata": {
+        "repositoryId": 1418263649,
+        "name": "pico-copter-fc",
+        "pushedAt": "2026-10-14T03:51:30Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "C"
+      },
+      "sourceFingerprint": "7f1c94bf3ff728bb72b8eaa799c923e4f561a21d7a3880c4ff1a7c85ff86a75c",
+      "generatedAt": "2026-10-14T05:03:21.690Z"
     }
   },
-  "repositoryCount": 98
+  "repositoryCount": 99
 }
