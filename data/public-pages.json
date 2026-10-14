@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-13T14:37:12.542Z",
-  "repositoryCount": 98,
-  "pageCount": 57,
+  "generatedAt": "2026-10-14T05:29:06.858Z",
+  "repositoryCount": 99,
+  "pageCount": 58,
   "pages": {
     "2026_8_5_3": {
       "url": "https://temesotejam.github.io/2026_8_5_3/",
@@ -136,6 +136,11 @@
     },
     "mediapipe-hand-demo": {
       "url": "https://temesotejam.github.io/mediapipe-hand-demo/",
+      "source": "github-pages",
+      "status": 200
+    },
+    "pico-copter-fc": {
+      "url": "https://temesotejam.github.io/pico-copter-fc/",
       "source": "github-pages",
       "status": 200
     },
