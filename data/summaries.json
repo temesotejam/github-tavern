@@ -1,44 +1,44 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-15T11:43:04.172Z",
+  "generatedAt": "2026-10-15T17:10:13.340Z",
   "repositories": {
     "github-tavern": {
       "title": "公開リポジトリ探索酒場",
-      "summary": "temesotejamが公開しているGitHubリポジトリを、酒場風の画面から検索・閲覧する個人ポータル。名前や説明、技術情報に加え、CopilotがREADMEや構成をもとに作る日本語概要も確認できます。",
-      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、古い情報端末を思わせる画面から探して眺めるための個人ポータルだ。中ではGitHub APIから公開リポジトリを取得し、名前や説明、Topics、使用言語、Copilot要約を横断検索できるようにしてる。カードを選べば概要が開き、Copilotの解析がまだないものにはREADMEから短い説明を補う仕組みもある。説明の更新はGitHub Actionsで6時間ごとに確認し、変更や新規追加があったものを最大8件ずつCopilot CLIで解析して、JSONのキャッシュに記録する。GitHub Pagesで静的に公開できる一方、Private Repositoryは対象外で、サイトからリポジトリを書き換えることもしない構成だ。",
-      "closingRemark": "6時間ごとに最大8件ずつ説明を整える仕組みか。酒場の帳面も、まとめて一気に書くわけじゃないらしいな。",
+      "summary": "個人所有の公開GitHubリポジトリを、酒場風の画面から探して概要を読むための静的ポータル。GitHub APIで情報を取得し、横断検索や技術分類に加え、Copilot生成の日本語説明とREADME由来の暫定紹介を表示する。",
+      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、酒場を模した画面から探して中身を確かめるための個人ポータルだ。中ではGitHub APIから公開リポジトリを取得し、名前・説明・Topics・言語・Copilot要約をまとめて検索できるようにしてる。選んだカードでは概要を開けて、技術領域ごとの簡易分類も使えるほか、解析前の新しいリポジトリにはREADMEから短い紹介を補う。6時間ごとのGitHub Actionsが更新分をCopilot CLIで解析し、結果をJSONに蓄積する仕組みで、定期実行は一度に最大8件までだ。GitHub Pagesで静的に公開できる一方、扱うのは公開リポジトリだけで、削除やIssue作成のような書き込み操作はしない。",
+      "closingRemark": "6時間おきに最大8件ずつ棚卸しする仕組みなら、酒場の帳簿も急かされずに済むらしい。",
       "features": [
-        "公開リポジトリをGitHub APIから取得",
+        "GitHub APIから所有者の公開リポジトリを取得",
         "名前・説明・Topics・言語・要約を横断検索",
-        "技術領域ごとの簡易分類",
-        "Copilot CLIで日本語概要を定期更新",
-        "未解析のリポジトリにはREADME由来の短い説明を表示"
+        "技術領域ごとの簡易分類とカード形式の概要表示",
+        "Copilot CLIが更新分を定期解析し、JSONに保存",
+        "未解析のリポジトリにはREADME由来の暫定紹介を表示"
       ],
       "technologies": [
         "JavaScript",
-        "HTML",
         "CSS",
+        "HTML",
         "GitHub API",
-        "GitHub Copilot CLI",
         "GitHub Actions",
+        "GitHub Copilot CLI",
         "GitHub Pages"
       ],
       "categories": [
-        "Webツール",
-        "GitHub",
-        "リポジトリ検索",
-        "静的サイト"
+        "検索ポータル",
+        "静的Webアプリ",
+        "GitHubリポジトリ管理",
+        "AI要約"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-10-15T04:51:55Z",
+      "sourcePushedAt": "2026-10-15T11:43:05Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-10-15T04:51:55Z",
+        "pushedAt": "2026-10-15T11:43:05Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -48,8 +48,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "7d4e557138f5a1142cabe39564c876e58d99e394f3fd8a98eaf8e67bf5f81a86",
-      "generatedAt": "2026-10-15T11:43:04.172Z"
+      "sourceFingerprint": "8fa45c0625fdec4ba9e62939198dacffc23ba1bb3429eb6ecc91e6f0fcb7ad9c",
+      "generatedAt": "2026-10-15T17:10:13.340Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -4796,43 +4796,43 @@
       "generatedAt": "2026-10-06T06:31:41.613Z"
     },
     "atoms3r-lateral-energy-control": {
-      "title": "AtomS3R左右揺動制御",
-      "summary": "AtomS3Rとリアクションホイールを使い、左右に揺れる機体の次のピーク角を目標へ近づける試験用ファームウェア。姿勢推定と実機ログをもとに入力の方向・パルス幅を調整し、Web画面から条件設定や直立基準の保存もできる。",
-      "detail": "こいつはAtomS3RとUnit Roller485、リアクションホイールを使って、機体の左右揺動を目標角へ近づける試験用ファームウェアだ。中ではMEKFで姿勢を推定し、ピークとZEROクロスを見て、次のピークに必要なエネルギーから電流入力の方向と時間を計算してる。目標角は8・10・12度、入力電流は100〜1200mAから選べて、Web画面では直立基準の保存や負側ブレーキ条件の比較もできる。設定、予測、実測電流やMEKFの状態はRWLOGに記録され、左右別の補正や予測誤差の学習も試せる構成だ。ただし係数は限られた実機ログに基づく暫定値で、実機の閉ループ性能までは自動試験で確認できない。",
-      "closingRemark": "始動キックは100ms固定、その後は計算で加減する。肝心の係数はまだ暫定と、記録には正直なところだ。",
+      "title": "AtomS3R左右揺動エネルギー制御",
+      "summary": "AtomS3Rとリアクションホイールで左右に揺れる機体を制御する、実機試験用ファームウェア。揺れのピークやZEROクロスから次の目標角に必要な入力を計算し、比較用の制御式や測定ログも確認できます。",
+      "detail": "こいつは、AtomS3RとUnit Roller485、リアクションホイールを使って左右揺動を抑える試験用ファームウェアだ。中ではMEKFで姿勢を推定し、物理ピークとZEROクロスを見つけて、次のピークを目標角へ近づける電流入力時間を計算してる。制御式は、旧版の到達角予測を位置エネルギーへ換算する方式と、従来の二次エネルギー式を選べる。後者では左右別の予測誤差補正やブレーキ条件も比較でき、設定・予測・実測電流などはRWLOGに記録される。直立基準の保存や15秒の測定区間も用意されているが、現行基準での実機振幅や閉ループ性能はまだ確認できていない。",
+      "closingRemark": "旧到達角予測をエネルギーに換えても、逆入力の応答まではまだ帳簿に載っていない。そこは次の実機ログ待ちだな。",
       "features": [
-        "ピーク角とZEROクロスから入力方向・パルス幅を算出",
-        "8・10・12度の目標角と100〜1200mAの電流設定",
-        "本体に保存できる直立基準とWeb画面での条件設定",
-        "RWLOGに予測値、MEKF状態、実測電流などを記録",
-        "左右別の係数・予測誤差補正を使った比較試験"
+        "MEKFによる姿勢推定と、物理ピーク・ZEROクロスの検出",
+        "旧到達角予測を位置エネルギーへ換算する制御方式",
+        "二次エネルギー式との比較と、左右別の予測誤差補正",
+        "直立基準を本体に保存し、測定開始時も維持",
+        "予測値や実測電流などをRWLOGへ記録"
       ],
       "technologies": [
+        "C++",
+        "Python",
+        "JavaScript",
+        "PlatformIO",
+        "ESP32",
         "AtomS3R",
         "Unit Roller485",
-        "リアクションホイール",
-        "MEKF",
-        "RWLOG",
-        "PlatformIO",
-        "Arduino",
-        "M5Unified"
+        "MEKF"
       ],
       "categories": [
         "組み込み",
+        "制御工学",
         "ロボティクス",
-        "姿勢制御",
-        "ファームウェア"
+        "実機試験"
       ],
       "status": "実験",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1416789371,
-      "sourcePushedAt": "2026-10-14T10:54:14Z",
+      "sourcePushedAt": "2026-10-15T12:13:25Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1416789371,
         "name": "atoms3r-lateral-energy-control",
-        "pushedAt": "2026-10-14T10:54:14Z",
+        "pushedAt": "2026-10-15T12:13:25Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -4842,8 +4842,8 @@
         "fork": false,
         "language": "C++"
       },
-      "sourceFingerprint": "d10a67fe613e521394b2f54317a4579d5be2c46f136096778a835f900bea245a",
-      "generatedAt": "2026-10-14T12:05:27.708Z"
+      "sourceFingerprint": "ea8d4186da02d0bd864e40f2a4556797ad98298c011f4db5e57483fd88821b0a",
+      "generatedAt": "2026-10-15T17:09:58.139Z"
     },
     "pico-copter-fc": {
       "title": "Picoコプター制御ファームウェア",
