@@ -1,43 +1,44 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-15T04:51:54.555Z",
+  "generatedAt": "2026-10-15T11:43:04.172Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ探索ポータル",
-      "summary": "temesotejamが所有する公開GitHubリポジトリを、酒場風の画面から探して選べる個人ポータル。名前や説明、Topics、言語、Copilot要約を横断検索でき、選んだリポジトリの概要もその場で確認できます。",
-      "detail": "こいつは、temesotejamが所有する公開GitHubリポジトリを、酒場の依頼帳のように探して読める個人ポータルだ。中ではGitHub APIから一覧を取得し、名前や説明、Topics、使用言語、Copilot要約をまとめて検索できるようにしてる。カードを選べば概要が開き、Copilotの説明がまだない新しいリポジトリにはREADMEから短い暫定説明を添える仕組みだな。説明データはGitHub Actionsが6時間ごとに確認し、更新のあったものをCopilot CLIで解析してキャッシュする。GitHub Pagesで静的に公開でき、サイトから行うのは公開情報の読み取りだけで、リポジトリへの書き込みはしない。",
-      "closingRemark": "公開情報を読むだけで、説明の帳簿は6時間ごとに更新。慎重だが、なかなか働き者の店だな。",
+      "title": "公開リポジトリ探索酒場",
+      "summary": "temesotejamが公開しているGitHubリポジトリを、酒場風の画面から検索・閲覧する個人ポータル。名前や説明、技術情報に加え、CopilotがREADMEや構成をもとに作る日本語概要も確認できます。",
+      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、古い情報端末を思わせる画面から探して眺めるための個人ポータルだ。中ではGitHub APIから公開リポジトリを取得し、名前や説明、Topics、使用言語、Copilot要約を横断検索できるようにしてる。カードを選べば概要が開き、Copilotの解析がまだないものにはREADMEから短い説明を補う仕組みもある。説明の更新はGitHub Actionsで6時間ごとに確認し、変更や新規追加があったものを最大8件ずつCopilot CLIで解析して、JSONのキャッシュに記録する。GitHub Pagesで静的に公開できる一方、Private Repositoryは対象外で、サイトからリポジトリを書き換えることもしない構成だ。",
+      "closingRemark": "6時間ごとに最大8件ずつ説明を整える仕組みか。酒場の帳面も、まとめて一気に書くわけじゃないらしいな。",
       "features": [
         "公開リポジトリをGitHub APIから取得",
-        "リポジトリ情報とCopilot要約を横断検索",
-        "カード選択で概要を表示",
-        "未解析リポジトリにはREADME由来の暫定説明を表示",
-        "更新分の要約をGitHub Actionsで定期生成"
+        "名前・説明・Topics・言語・要約を横断検索",
+        "技術領域ごとの簡易分類",
+        "Copilot CLIで日本語概要を定期更新",
+        "未解析のリポジトリにはREADME由来の短い説明を表示"
       ],
       "technologies": [
         "JavaScript",
-        "CSS",
         "HTML",
+        "CSS",
         "GitHub API",
-        "GitHub Actions",
         "GitHub Copilot CLI",
+        "GitHub Actions",
         "GitHub Pages"
       ],
       "categories": [
-        "Webアプリ",
-        "検索ツール",
-        "GitHub"
+        "Webツール",
+        "GitHub",
+        "リポジトリ検索",
+        "静的サイト"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-10-14T21:48:28Z",
+      "sourcePushedAt": "2026-10-15T04:51:55Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-10-14T21:48:28Z",
+        "pushedAt": "2026-10-15T04:51:55Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -47,8 +48,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "5eb36a74dd8e968dfb67753c710db306b9ba68d914481f01817c9037c6ae986b",
-      "generatedAt": "2026-10-15T04:51:54.555Z"
+      "sourceFingerprint": "7d4e557138f5a1142cabe39564c876e58d99e394f3fd8a98eaf8e67bf5f81a86",
+      "generatedAt": "2026-10-15T11:43:04.172Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -300,43 +301,43 @@
       "generatedAt": "2026-09-04T10:52:42.974Z"
     },
     "spike-rt-web-toolkit": {
-      "title": "SPIKE-RT開発・書き込みツール",
-      "summary": "SPIKE-RTアプリをブラウザで編集・ビルドし、GitHub PagesからSPIKE Prime Hubへ書き込むためのツールキット。複数アプリの一括ビルドに加え、Web Serialで実行ログも確認できます。",
-      "detail": "こいつは、SPIKE-RTアプリの編集からビルド、SPIKE Prime Hubへの書き込み、実行ログの確認までをブラウザ中心でつなぐツールキットだ。中ではGitHub ActionsがSPIKE-RT v0.2.0で複数アプリをビルドし、GitHub PagesからWebUSBとDfuSeでDFUモードのHubへ書き込んでる。アプリは基本的にapps/<app>/<app>.cを置けば追加でき、SHA-256確認や転送状態のチェックも行う。書き込み後はWeb Serialを115200 bpsで開き、syslog()の出力をブラウザで見られるってわけだ。Windows向けWinUSBセットアップの案内もあるが、新規ドライバ割り当て経路は最終実機確認待ちで、変数のグラフ表示などは今後の拡張に挙がってる。",
-      "closingRemark": "書き込み後のログ確認までブラウザに収めた一方、Windowsの新規ドライバ割り当てだけは、まだ実機の返事待ちだな。",
+      "title": "SPIKE-RTブラウザ開発キット",
+      "summary": "SPIKE Prime Hub向けのSPIKE-RTアプリを、ブラウザで編集・ビルドして書き込むためのツールキット。GitHub Actionsでの一括ビルドやWebUSBでのDFU書き込み、Web Serialでのログ確認までつながっています。",
+      "detail": "こいつは、SPIKE Prime Hub向けのSPIKE-RTアプリをブラウザ中心で編集・ビルド・書き込み・確認するための道具立てだ。中ではGitHub Actionsがapps/以下のCアプリをSPIKE-RT v0.2.0でまとめてビルドし、GitHub Pagesから選んだasp.binをSHA-256で確認してから、WebUSBとDFUでHubへ送る。書き込み先とDFU終了時のブート先も指定されていて、起動後はWeb Serialを115200 bpsで開き、syslog()の出力を見られる。アプリ追加は基本的に同名フォルダとCファイルだけで済み、サンプルから課題を作るworkflowや、DFU用WinUSBのWindows案内も揃ってる。LED countdownの起動まで実機で確認済みだが、WinUSB未設定PCへの新規割り当て経路は最終実機確認待ちで、ログのグラフ化などは今後の拡張だな。",
+      "closingRemark": "LED countdownの起動までは実機で通った。あとはWindowsの未設定PCでも、案内どおりに準備が整うかを確かめるところだな。",
       "features": [
-        "apps/以下の複数アプリをGitHub Actionsで一括ビルド",
-        "GitHub PagesからWebUSBでDFUモードのHubへ書き込み",
-        "SHA-256とUSB転送サイズ、DFU状態を確認",
-        "Web Serialで115200 bpsのUSBシリアルログを表示",
-        "Windows向けWinUSBセットアップへの導線を提供"
+        "GitHub Actionsでapps/以下の複数アプリを一括ビルド",
+        "GitHub Pagesからアプリを選び、SHA-256確認後にWebUSBでDFU書き込み",
+        "Web SerialでSPIKE-RTのUSBシリアルログを115200 bpsで表示",
+        "サンプルから課題アプリを複製するworkflowを用意",
+        "DFU用WinUSBセットアップへのWindows向け案内を提供"
       ],
       "technologies": [
         "C",
         "JavaScript",
-        "SPIKE-RT v0.2.0",
+        "SPIKE-RT",
         "GitHub Actions",
         "GitHub Pages",
         "WebUSB",
-        "DfuSe",
-        "Web Serial API"
+        "Web Serial",
+        "DFU"
       ],
       "categories": [
-        "開発ツール",
-        "組み込み",
-        "ロボット",
-        "教育"
+        "組み込み開発",
+        "ブラウザツール",
+        "教育・課題",
+        "ファームウェア"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1341511616,
-      "sourcePushedAt": "2026-10-15T04:45:19Z",
+      "sourcePushedAt": "2026-10-15T06:57:41Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1341511616,
         "name": "spike-rt-web-toolkit",
-        "pushedAt": "2026-10-15T04:45:19Z",
+        "pushedAt": "2026-10-15T06:57:41Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -346,8 +347,8 @@
         "fork": false,
         "language": "C"
       },
-      "sourceFingerprint": "e6be22ede2a6317fd799614f6d42c7d5a11fd421f74457ce74aa2e75ee7f87b2",
-      "generatedAt": "2026-10-15T04:51:45.091Z"
+      "sourceFingerprint": "b74a2abc99bf4183c6a7ce58e4ce844019cd8602222e08f3334970d64e7a2a20",
+      "generatedAt": "2026-10-15T11:42:52.559Z"
     },
     "reaction-wheel-rocker-baseline-sim": {
       "title": "反応ホイール機体の基準シミュレータ",
@@ -4845,43 +4846,43 @@
       "generatedAt": "2026-10-14T12:05:27.708Z"
     },
     "pico-copter-fc": {
-      "title": "Pico用クアッドコプター制御FW",
-      "summary": "Raspberry Pi PicoとPico 2でクアッドコプターを制御するファームウェアです。SBUSのフェイルセーフや飛行ログ、DShotの診断機能を備え、GitHub Actionsで基板別のUF2をビルドしてPagesから配布できます。",
-      "detail": "こいつは、Raspberry Pi Pico（RP2040）とPico 2（RP2350）でクアッドコプターを制御するファームウェアで、UF2を配る仕組みも一緒に持ってる。中では400 Hzの姿勢制御と100 HzのEKFを動かし、SBUSの受信途絶やフェイルセーフを検知すると最小ESC指令へ移してアームを解除する。飛行ログはCH5をONにした間だけ100 Hzで38項目をRAMへ記録し、直近約10秒分をUSBシリアルで取り出せる。双方向DShot300のeRPMも診断用に読めるが、制御には使わない。GitHub Actionsが2種類の基板向けUF2を別々にビルドし、成功版をPagesで配布する構成で、ファームウェア単体でもビルドできるわけだ。ただし実機での制御周期やDShot受信、飛行安全性は未検証で、停止指令もモータの電源遮断ではない。まずプロペラを外して確認する必要があるな。",
-      "closingRemark": "eRPMは表示しても制御には使わず、ログは電源を切れば消える。記録係としては慎重だが、保存先はなかなか潔いな。",
+      "title": "Picoコプター制御ファームウェア",
+      "summary": "Raspberry Pi Pico／Pico 2向けのコプターファームウェアをビルドし、UF2を配布するためのリポジトリ。SBUSのフェイルセーフや一方向DShot300、CH5操作による飛行ログ記録を備え、GitHub ActionsからビルドとPages公開まで行えます。",
+      "detail": "こいつは、Raspberry Pi PicoとPico 2で動くコプター制御ファームウェアを開発し、書き込み用UF2まで配布する仕組みだ。中ではPIDとEKFで姿勢を制御し、SBUSの通信断やフェイルセーフを検知するとアームを解除してモーターへ停止指令を送る。一方向DShot300で4基のモーターを駆動し、CH5をONにした間だけ制御情報38項目を100 HzでRAMに記録する。GitHub Actionsが両ボード向けに別々のビルドを行い、成功したUF2をPagesで配布する構成だ。ただし実機での通信や飛行安全性は未検証で、通常のDShotなのでモーターから回転数の応答も取得しない。",
+      "closingRemark": "CH5を入れなければ記録は始まらず、電源を切ればログも消える。記録係には少々気難しい職場だな。",
       "features": [
-        "RP2040とRP2350向けのUF2を個別にビルド・配布",
-        "400 Hzの制御と100 Hzの姿勢推定・ログ記録",
-        "SBUSの通信断やフェイルセーフを検知してアーム解除",
-        "CH5操作で直近約10秒分の飛行データをRAMに記録",
-        "双方向DShot300のeRPMとUSB診断ログに対応"
+        "PicoとPico 2向けに別々のUF2をビルド",
+        "SBUSの通信断・フェイルセーフ時にアーム解除",
+        "一方向DShot300で4基のモーターを制御",
+        "CH5操作中のみ38項目を100 Hzで記録するリングバッファ",
+        "GitHub Actionsでビルドし、GitHub PagesからUF2を配布"
       ],
       "technologies": [
-        "Raspberry Pi Pico（RP2040）",
-        "Raspberry Pi Pico 2（RP2350）",
-        "C/C++17",
-        "Pico SDK 2.3.0",
-        "Eigen 3.4.0",
-        "CMake",
+        "C",
+        "C++17",
+        "Raspberry Pi Pico",
+        "Raspberry Pi Pico 2",
+        "Pico SDK",
+        "Eigen",
         "SBUS",
-        "双方向DShot300"
+        "DShot300"
       ],
       "categories": [
         "組み込み",
-        "飛行制御",
+        "フライトコントローラー",
         "ファームウェア",
-        "ビルド・配布"
+        "ビルド・配布ツール"
       ],
       "status": "試作",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1418263649,
-      "sourcePushedAt": "2026-10-14T10:46:59Z",
+      "sourcePushedAt": "2026-10-15T09:32:07Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1418263649,
         "name": "pico-copter-fc",
-        "pushedAt": "2026-10-14T10:46:59Z",
+        "pushedAt": "2026-10-15T09:32:07Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -4891,8 +4892,8 @@
         "fork": false,
         "language": "C"
       },
-      "sourceFingerprint": "00f6cc593f9dd0c90c99ca800dda552c2568376547f837941676b7d5dd9584ea",
-      "generatedAt": "2026-10-14T12:05:45.633Z"
+      "sourceFingerprint": "f190f6e8b8d35e3fb343c66d8f43f3fd5b92efc200823918000525a7333f71f2",
+      "generatedAt": "2026-10-15T11:42:37.203Z"
     }
   },
   "repositoryCount": 99
