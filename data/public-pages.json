@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-14T05:29:06.858Z",
-  "repositoryCount": 99,
-  "pageCount": 58,
+  "generatedAt": "2026-10-16T11:56:50.098Z",
+  "repositoryCount": 100,
+  "pageCount": 59,
   "pages": {
     "2026_8_5_3": {
       "url": "https://temesotejam.github.io/2026_8_5_3/",
@@ -81,6 +81,11 @@
     },
     "atoms3r-mekf-dynamic-validation": {
       "url": "https://temesotejam.github.io/atoms3r-mekf-dynamic-validation/",
+      "source": "github-pages",
+      "status": 200
+    },
+    "atoms3r-motor-inertia-test": {
+      "url": "https://temesotejam.github.io/atoms3r-motor-inertia-test/",
       "source": "github-pages",
       "status": 200
     },
