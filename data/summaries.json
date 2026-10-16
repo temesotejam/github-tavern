@@ -1,44 +1,44 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-16T04:42:35.342Z",
+  "generatedAt": "2026-10-16T11:37:02.340Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ酒場",
-      "summary": "公開GitHubリポジトリを古い情報端末風の画面で探し、個人の開発記録を酒場の依頼帳のように眺める静的ポータル。GitHub APIで一覧を取得し、横断検索や分類、カード内の概要表示に加え、CopilotがREADMEや構成を根拠に作る日本語説明も確認できる。",
-      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、古い情報端末風の画面から探して読むための個人ポータルだ。中ではGitHubの公開APIから一覧を取り、名前や説明、Topics、言語、Copilot要約をまとめて検索できるようにしてる。技術領域ごとの簡易分類もあり、カードを選べば概要がその場に出る。説明はCopilot CLIがREADMEや設定、ファイル構成などを見て生成し、6時間ごとのActions実行で更新分を最大8件ずつ処理する仕組みだ。未解析のものはREADMEから短い暫定説明を出すが、Private Repositoryは対象外で、サイトから変更やIssue作成も行わない。GitHub Pagesに置ける静的構成ってところだな。",
-      "closingRemark": "READMEの暫定案内とCopilotの調査票が並ぶあたり、酒場の帳簿としてはなかなか正直だな。",
+      "title": "公開リポジトリ探索酒場",
+      "summary": "temesotejamが公開するGitHubリポジトリを、古い情報端末風の画面から検索・閲覧する個人ポータル。Copilot生成の日本語概要やREADME由来の暫定紹介も表示し、技術領域ごとの分類やリポジトリ詳細をその場で確認できます。",
+      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、酒場の依頼帳のような画面から探して読むための個人ポータルだ。中ではGitHub APIから公開リポジトリを取得し、名前・説明・Topics・言語・Copilot要約を横断検索できるようにしてる。カードを選べば概要や技術情報を確認でき、Copilotの説明がないものにはREADMEから短い暫定紹介を出す仕組みもある。説明データはActionsが6時間ごとに更新を確認し、変更のあったリポジトリをCopilot CLIで解析して保存する。定期実行では一度に最大8件ずつ扱う。GitHub Pagesで静的公開でき、サイト側は公開APIを読むだけで、書き込み操作や非公開リポジトリには触れない。初回のPages設定手順はREADMEにあるが、実際の運用状況まではこの資料だけでは断定できない。",
+      "closingRemark": "定期便は6時間ごとに最大8件。棚卸しも一度に抱え込まないあたり、なかなか堅実な酒場だな。",
       "features": [
-        "公開リポジトリ一覧をGitHub APIから取得",
+        "所有する公開リポジトリをGitHub APIから取得",
         "名前・説明・Topics・言語・Copilot要約を横断検索",
-        "技術領域ごとの簡易分類とカード内の概要表示",
-        "未解析リポジトリにはREADME由来の暫定説明を表示",
-        "Copilot CLIが更新分を定期解析し、日本語説明をキャッシュ"
+        "技術領域ごとに簡易分類",
+        "カード選択で概要や技術情報を表示",
+        "READMEから未解析リポジトリの暫定紹介を生成"
       ],
       "technologies": [
         "JavaScript",
         "CSS",
         "HTML",
-        "GitHub REST API",
+        "GitHub API",
         "GitHub Actions",
         "GitHub Copilot CLI",
         "GitHub Pages"
       ],
       "categories": [
-        "Webアプリ",
-        "開発者ツール",
+        "Web・ツール",
+        "検索",
         "GitHub",
-        "静的サイト"
+        "アーカイブ"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-10-15T21:31:20Z",
+      "sourcePushedAt": "2026-10-16T04:42:36Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-10-15T21:31:20Z",
+        "pushedAt": "2026-10-16T04:42:36Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -48,8 +48,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "deddb07d301e1729f7fa075c18c1fc2d663b8ae23e8f29510254c28880bc3fef",
-      "generatedAt": "2026-10-16T04:42:35.341Z"
+      "sourceFingerprint": "1646fca46846c281cab0713b9f570bef8e1c6adbe717dc301a1a1f44eae48ff9",
+      "generatedAt": "2026-10-16T11:37:02.339Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -4797,42 +4797,42 @@
     },
     "atoms3r-lateral-energy-control": {
       "title": "AtomS3R左右揺動エネルギー制御",
-      "summary": "AtomS3Rとリアクションホイールで左右に揺れる機体を制御する、実機試験用ファームウェア。揺れのピークやZEROクロスから次の目標角に必要な入力を計算し、比較用の制御式や測定ログも確認できます。",
-      "detail": "こいつは、AtomS3RとUnit Roller485、リアクションホイールを使って左右揺動を抑える試験用ファームウェアだ。中ではMEKFで姿勢を推定し、物理ピークとZEROクロスを見つけて、次のピークを目標角へ近づける電流入力時間を計算してる。制御式は、旧版の到達角予測を位置エネルギーへ換算する方式と、従来の二次エネルギー式を選べる。後者では左右別の予測誤差補正やブレーキ条件も比較でき、設定・予測・実測電流などはRWLOGに記録される。直立基準の保存や15秒の測定区間も用意されているが、現行基準での実機振幅や閉ループ性能はまだ確認できていない。",
-      "closingRemark": "旧到達角予測をエネルギーに換えても、逆入力の応答まではまだ帳簿に載っていない。そこは次の実機ログ待ちだな。",
+      "summary": "AtomS3Rとリアクションホイールを使い、左右揺動の次ピークを目標角へ近づける制御を実機で試すファームウェア。MEKFによる姿勢推定、複数のエネルギー制御方式、RWLOG記録とブラウザ解析を備えるが、係数や実機性能の検証は継続中だ。",
+      "detail": "こいつはAtomS3Rとリアクションホイールで左右に揺れる機体を動かし、次のピーク角を目標へ近づける試験用ファームウェアだ。MEKFで姿勢を推定し、物理ピークとZEROクロスを見つけて、左右別の暫定エネルギー予測から電流と入力時間を決めている。二次エネルギー式と、旧到達角予測をエネルギーに換算する方式を比較でき、Web画面から目標角や電流、補正設定などを調整できる。RWLOGには制御値や機体状態に加え、ホイールの速度・位置と時刻も記録し、ブラウザで仕事を解析する仕組みだ。負側へ向かうZEROクロスで固定幅300 mAを与える試験モードもある。ただ、係数は限られた実機ログ由来の暫定値で、閉ループ性能や逆入力の効果はまだ確認できていない。",
+      "closingRemark": "仕事の計算には位置記録を使い、速度読み値で欠測を埋めない。測定値の扱いまで慎重なあたり、まだ結論を急ぐ段階じゃないな。",
       "features": [
-        "MEKFによる姿勢推定と、物理ピーク・ZEROクロスの検出",
-        "旧到達角予測を位置エネルギーへ換算する制御方式",
-        "二次エネルギー式との比較と、左右別の予測誤差補正",
-        "直立基準を本体に保存し、測定開始時も維持",
-        "予測値や実測電流などをRWLOGへ記録"
+        "左右別のピーク角予測からリアクションホイールの電流と入力時間を算出",
+        "二次エネルギー式と旧到達角予測由来の制御方式を比較",
+        "Web画面で目標角、指令電流、学習補正などを設定",
+        "RWLOGにホイールの速度・位置と時刻を記録し、ブラウザで仕事を解析",
+        "負側ZEROクロスで固定幅300 mAを与える試験モードを搭載"
       ],
       "technologies": [
         "C++",
-        "Python",
-        "JavaScript",
         "PlatformIO",
         "ESP32",
+        "Arduino",
         "AtomS3R",
-        "Unit Roller485",
-        "MEKF"
+        "M5Unified",
+        "Adafruit AHRS",
+        "リアクションホイール"
       ],
       "categories": [
         "組み込み",
         "制御工学",
         "ロボティクス",
-        "実機試験"
+        "実験"
       ],
       "status": "実験",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1416789371,
-      "sourcePushedAt": "2026-10-15T12:13:25Z",
+      "sourcePushedAt": "2026-10-16T10:46:20Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1416789371,
         "name": "atoms3r-lateral-energy-control",
-        "pushedAt": "2026-10-15T12:13:25Z",
+        "pushedAt": "2026-10-16T10:46:20Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -4842,47 +4842,47 @@
         "fork": false,
         "language": "C++"
       },
-      "sourceFingerprint": "ea8d4186da02d0bd864e40f2a4556797ad98298c011f4db5e57483fd88821b0a",
-      "generatedAt": "2026-10-15T17:09:58.139Z"
+      "sourceFingerprint": "272b92ffbf68bccd069fb6e18699bed6830cc28150e997278c681d436d51ec3b",
+      "generatedAt": "2026-10-16T11:36:12.713Z"
     },
     "pico-copter-fc": {
-      "title": "Picoコプター制御ファームウェア",
-      "summary": "Raspberry Pi Pico／Pico 2向けのコプターファームウェアをビルドし、UF2を配布するためのリポジトリ。SBUSのフェイルセーフや一方向DShot300、CH5操作による飛行ログ記録を備え、GitHub ActionsからビルドとPages公開まで行えます。",
-      "detail": "こいつは、Raspberry Pi PicoとPico 2で動くコプター制御ファームウェアを開発し、書き込み用UF2まで配布する仕組みだ。中ではPIDとEKFで姿勢を制御し、SBUSの通信断やフェイルセーフを検知するとアームを解除してモーターへ停止指令を送る。一方向DShot300で4基のモーターを駆動し、CH5をONにした間だけ制御情報38項目を100 HzでRAMに記録する。GitHub Actionsが両ボード向けに別々のビルドを行い、成功したUF2をPagesで配布する構成だ。ただし実機での通信や飛行安全性は未検証で、通常のDShotなのでモーターから回転数の応答も取得しない。",
-      "closingRemark": "CH5を入れなければ記録は始まらず、電源を切ればログも消える。記録係には少々気難しい職場だな。",
+      "title": "Pico向けクアッドコプター制御",
+      "summary": "Raspberry Pi Pico／Pico 2向けのクアッドコプターファームウェアを開発し、GitHub ActionsでビルドしてUF2を配布する仕組みだ。SBUSのフェイルセーフや双方向DShot、飛行ログ・USB診断を備える一方、実機検証の範囲には限りがある。",
+      "detail": "こいつは、Raspberry Pi PicoやPico 2でクアッドコプターを制御するファームウェアと、そのUF2をビルド・配布する仕組みをまとめたものだ。中ではSBUS入力を受け、PIDとEKFで姿勢を扱いながら、400 Hzでモーター指令を出している。通信が途切れたときのアーム解除や、CH5操作中だけ記録する約10秒分のリングログも用意されてる。モーター通信は速度を選べる双方向DShotで、eRPM返信がなくても制御送信を止めず、USB診断で状態を確認できる。GitHub Actionsはmain更新時にUF2を作ってPagesへ公開するが、実機で確認できたのは初代PicoのDShot300とモーター1基の返信までで、4基同時のeRPMや飛行安定性、Pico 2の受信は未検証だ。プロペラを外して試すのが前提で、飛行安全性を保証するものではない。",
+      "closingRemark": "返信がなくても指令は送り続けるが、4基そろったeRPMと飛行の話はまだ先の記録に残ってる。",
       "features": [
-        "PicoとPico 2向けに別々のUF2をビルド",
-        "SBUSの通信断・フェイルセーフ時にアーム解除",
-        "一方向DShot300で4基のモーターを制御",
-        "CH5操作中のみ38項目を100 Hzで記録するリングバッファ",
-        "GitHub Actionsでビルドし、GitHub PagesからUF2を配布"
+        "Pico／Pico 2向けのフライトコントローラーファームウェア",
+        "SBUSの受信タイムアウトとフェイルセーフを処理",
+        "CH5操作中に100 Hzで最大約10秒のログをRAMへ記録",
+        "双方向DShotの速度を150〜1200 kbit/sから設定",
+        "GitHub ActionsでUF2をビルドし、Pagesへ公開"
       ],
       "technologies": [
         "C",
         "C++17",
-        "Raspberry Pi Pico",
-        "Raspberry Pi Pico 2",
-        "Pico SDK",
-        "Eigen",
+        "Raspberry Pi Pico（RP2040）",
+        "Pico 2",
+        "Pico SDK 2.3.0",
+        "Eigen 3.4.0",
         "SBUS",
-        "DShot300"
+        "双方向DShot"
       ],
       "categories": [
-        "組み込み",
+        "ドローン",
         "フライトコントローラー",
-        "ファームウェア",
-        "ビルド・配布ツール"
+        "組み込み",
+        "ファームウェア"
       ],
-      "status": "試作",
+      "status": "実験",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1418263649,
-      "sourcePushedAt": "2026-10-15T09:32:07Z",
+      "sourcePushedAt": "2026-10-16T07:51:54Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1418263649,
         "name": "pico-copter-fc",
-        "pushedAt": "2026-10-15T09:32:07Z",
+        "pushedAt": "2026-10-16T07:51:54Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -4892,9 +4892,58 @@
         "fork": false,
         "language": "C"
       },
-      "sourceFingerprint": "f190f6e8b8d35e3fb343c66d8f43f3fd5b92efc200823918000525a7333f71f2",
-      "generatedAt": "2026-10-15T11:42:37.203Z"
+      "sourceFingerprint": "74f2da5f520fc89e5a273dff03b101cab7d60cf33e03581b3034adeb7cb0fd11",
+      "generatedAt": "2026-10-16T11:36:26.596Z"
+    },
+    "atoms3r-motor-inertia-test": {
+      "title": "AtomS3Rモーター応答測定",
+      "summary": "AtomS3RからRoller485へ電流パルスを与え、ホイールと重りを付けた実機の回転応答を記録する実験用ファームウェア。位置・速度・実電流などをCSVに保存し、Pythonで解析できますが、この試験だけで絶対慣性を同定するものではありません。",
+      "detail": "こいつは、ホイールと重りを付けたまま機体を固定し、Roller485モーターの電流パルスに対する実機の回転応答を調べるファームウェアだ。AtomS3Rが位置レジスタ、速度、実電流を読み取り、取得時刻や電圧・温度などと一緒にCSVへ記録する。最新の測定モードでは300 mAの30・50・100・200 msパルスを正逆各3回、計24回与え、入力後も出力を切った状態で記録を続ける。Web書き込みページから導入でき、Pythonの解析ツールで位置変化と速度読み値の時間差や、条件を満たすデータの応答係数を調べられる。メーカー仕様からの換算は仮定付きで、絶対慣性を独立に測ったことにはならないし、実機への書き込みと測定もまだ未実施だ。",
+      "closingRemark": "24発分のCSVが揃っても、絶対慣性は別勘定。そこを取り違えないのが、この試験の肝だな。",
+      "features": [
+        "WebページからAtomS3Rへファームウェアを書き込める",
+        "正逆の電流パルスで位置・速度・実電流などを記録",
+        "各レジスタの取得時刻や取得失敗もCSVに保存",
+        "Pythonツールで位置応答や回転応答を解析",
+        "実機測定は未実施で、絶対慣性の同定は目的外"
+      ],
+      "technologies": [
+        "AtomS3R",
+        "ESP32-S3",
+        "Roller485",
+        "PlatformIO",
+        "Arduino",
+        "M5Unified",
+        "Python",
+        "NumPy"
+      ],
+      "categories": [
+        "モーター測定",
+        "組み込み",
+        "実験用ファームウェア"
+      ],
+      "status": "実験",
+      "confidence": "high",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
+      "sourceRepositoryId": 1421688897,
+      "sourcePushedAt": "2026-10-16T07:11:20Z",
+      "sourceDefaultBranch": "main",
+      "sourceMetadata": {
+        "repositoryId": 1421688897,
+        "name": "atoms3r-motor-inertia-test",
+        "pushedAt": "2026-10-16T07:11:20Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "C++"
+      },
+      "sourceFingerprint": "27870ec06113223148f3010f6c2d0992a4d61f4e1caab0a42a3feea7ada833e5",
+      "generatedAt": "2026-10-16T11:36:42.827Z"
     }
   },
-  "repositoryCount": 99
+  "repositoryCount": 100
 }
