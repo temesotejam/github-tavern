@@ -1,27 +1,27 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-16T21:21:51.637Z",
+  "generatedAt": "2026-10-17T04:40:03.394Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ探索酒場",
-      "summary": "公開GitHubリポジトリを古い情報端末風の画面から探し、選んで概要を読める個人ポータル。名前や説明、Topics、言語を横断検索でき、Copilotの解析がない場合はREADMEから短い案内を補います。",
-      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、古い情報端末風の画面から探して選ぶための個人ポータルだ。中ではGitHub APIから公開情報を取得し、名前や説明、Topics、言語、Copilot要約を横断検索しながら、分野ごとの分類や詳細表示につないでる。Copilotの説明はREADMEや設定、構成などを根拠に生成してキャッシュし、6時間ごとのActionsで新規・更新分を最大8件ずつ更新する仕組みだな。未解析のリポジトリにはREADMEから短い暫定説明を表示できるので、解析待ちでも一覧を案内できる。GitHub Pagesで静的に公開できる一方、対象は公開リポジトリだけで、削除やIssue作成などの書き込みはしない。",
-      "closingRemark": "READMEの短い案内とCopilotの調査記録、二段構えとは気が利いてる。調査対象は公開棚だけだがな。",
+      "title": "GitHub酒場ポータル",
+      "summary": "Project Tavernは、temesotejamの公開GitHubリポジトリを、古い情報端末風の画面で探して詳しく見るための個人ポータルだ。名前や説明、言語、Topics、Copilot要約を横断検索でき、解析前のリポジトリにはREADMEから短い紹介を補う。",
+      "detail": "こいつは、temesotejamが所有する公開GitHubリポジトリを、酒場の依頼帳めいた画面で探して読むための個人ポータルだ。中ではGitHub APIから一覧を取り、名前・Description・Topics・言語・Copilot要約をまとめて検索できる。カードを選ぶと概要が表示され、確認済みの公開ページがあればそこへも移れる。Copilotの説明は6時間ごとのActionsで新規・更新分だけを解析し、1回最大8件ずつsummaries.jsonに蓄える仕組みだな。解析前でもREADMEが見つかれば短い紹介を補える。ただし対象は公開リポジトリだけで、サイトから変更や書き込みはしない。",
+      "closingRemark": "自分自身は検索一覧から外し、専用の紹介枠に置いてある。店主だけは棚卸しの対象外、という扱いだな。",
       "features": [
-        "GitHub APIから所有する公開リポジトリを自動取得",
-        "リポジトリ名・説明・Topics・言語・Copilot要約を横断検索",
-        "技術領域ごとの分類と、選んだリポジトリの概要表示",
-        "未解析のリポジトリにはREADMEから短い説明を表示",
-        "Copilot CLIとGitHub Actionsで要約を定期更新"
+        "GitHub APIから所有者の公開リポジトリ一覧を取得",
+        "名前・説明・Topics・言語・Copilot要約を横断検索",
+        "Copilot CLIで新規・更新リポジトリの説明を定期生成",
+        "READMEがあれば解析前のカードにも短い紹介を表示",
+        "公開リポジトリのみを扱い、閲覧専用で運用"
       ],
       "technologies": [
         "JavaScript",
         "CSS",
         "HTML",
         "GitHub API",
-        "GitHub Pages",
         "GitHub Actions",
-        "GitHub Copilot CLI"
+        "GitHub Copilot CLI",
+        "GitHub Pages"
       ],
       "categories": [
         "Web・ツール",
@@ -32,12 +32,12 @@
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-10-16T16:46:32Z",
+      "sourcePushedAt": "2026-10-16T21:21:53Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-10-16T16:46:32Z",
+        "pushedAt": "2026-10-16T21:21:53Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -47,8 +47,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "f1399268f258dd897f7908a28905d17b767f25ac5b1923609617becd04fee6f2",
-      "generatedAt": "2026-10-16T21:21:51.637Z"
+      "sourceFingerprint": "7b9430587cd4ebf88c04d3875c3ce392e796a817b957c06e332cced1741b2280",
+      "generatedAt": "2026-10-17T04:40:03.394Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -4846,42 +4846,42 @@
     },
     "pico-copter-fc": {
       "title": "Pico向けクアッドコプター制御",
-      "summary": "Raspberry Pi Pico／Pico 2向けのクアッドコプターファームウェアを開発し、GitHub ActionsでビルドしてUF2を配布する仕組みだ。SBUSのフェイルセーフや双方向DShot、飛行ログ・USB診断を備える一方、実機検証の範囲には限りがある。",
-      "detail": "こいつは、Raspberry Pi PicoやPico 2でクアッドコプターを制御するファームウェアと、そのUF2をビルド・配布する仕組みをまとめたものだ。中ではSBUS入力を受け、PIDとEKFで姿勢を扱いながら、400 Hzでモーター指令を出している。通信が途切れたときのアーム解除や、CH5操作中だけ記録する約10秒分のリングログも用意されてる。モーター通信は速度を選べる双方向DShotで、eRPM返信がなくても制御送信を止めず、USB診断で状態を確認できる。GitHub Actionsはmain更新時にUF2を作ってPagesへ公開するが、実機で確認できたのは初代PicoのDShot300とモーター1基の返信までで、4基同時のeRPMや飛行安定性、Pico 2の受信は未検証だ。プロペラを外して試すのが前提で、飛行安全性を保証するものではない。",
-      "closingRemark": "返信がなくても指令は送り続けるが、4基そろったeRPMと飛行の話はまだ先の記録に残ってる。",
+      "summary": "Raspberry Pi Pico／Pico 2向けのクアッドコプター飛行制御ファームウェアをビルド・配布するプロジェクト。SBUSフェイルセーフやCH5操作の飛行ログ、DShot設定を備え、GitHub ActionsでUF2を生成してPagesから公開する。",
+      "detail": "こいつはRaspberry Pi PicoとPico 2向けのクアッドコプター飛行制御ファームウェアと、そのUF2をビルドして配る仕組みだ。中では400 Hzの制御・モータ指令と100 Hzの姿勢制御を行い、SBUSの受信断やフェイルセーフ信号を検出するとアーム解除へ移る。飛行ログはCH5をONにした間だけ100 Hzで記録し、最大約10秒分をRAMに保持して、停止後にUSBシリアルへ出力できる。DShotの速度や双方向・単方向はビルド時に選べ、GitHub ActionsがUF2を生成してPagesで公開するほか、Eigenを含むファームウェアソースZIPも用意されてる。ただし、実機確認の記録は初代PicoでのDShot300・モータ1基に限られ、4基同時のeRPMや飛行安定性、Pico 2での双方向受信は未検証だ。DShotの既定値はREADMEの記載と最近のコミット要約が食い違っているため、設定を確認したいところだな。",
+      "closingRemark": "CH5のログは約10秒分、しかも電源を切れば消える。飛行の記録も、取り出す段取りまでが仕事ってわけだ。",
       "features": [
-        "Pico／Pico 2向けのフライトコントローラーファームウェア",
-        "SBUSの受信タイムアウトとフェイルセーフを処理",
-        "CH5操作中に100 Hzで最大約10秒のログをRAMへ記録",
-        "双方向DShotの速度を150〜1200 kbit/sから設定",
-        "GitHub ActionsでUF2をビルドし、Pagesへ公開"
+        "400 Hzの制御・モータ指令と100 Hzの姿勢制御",
+        "SBUS受信断やフェイルセーフ信号への対応",
+        "CH5操作中だけ記録する約10秒分のリングバッファログ",
+        "DShot速度と双方向・単方向をビルド時に選択",
+        "GitHub ActionsによるUF2生成とPages公開、ソースZIP配布"
       ],
       "technologies": [
         "C",
         "C++17",
-        "Raspberry Pi Pico（RP2040）",
+        "Raspberry Pi Pico",
         "Pico 2",
-        "Pico SDK 2.3.0",
-        "Eigen 3.4.0",
         "SBUS",
-        "双方向DShot"
+        "DShot",
+        "Eigen 3.4.0",
+        "CMake"
       ],
       "categories": [
-        "ドローン",
-        "フライトコントローラー",
         "組み込み",
-        "ファームウェア"
+        "飛行制御",
+        "ファームウェア",
+        "ビルド・配布"
       ],
       "status": "実験",
-      "confidence": "high",
+      "confidence": "medium",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1418263649,
-      "sourcePushedAt": "2026-10-16T07:51:54Z",
+      "sourcePushedAt": "2026-10-17T03:59:33Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1418263649,
         "name": "pico-copter-fc",
-        "pushedAt": "2026-10-16T07:51:54Z",
+        "pushedAt": "2026-10-17T03:59:33Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -4891,8 +4891,8 @@
         "fork": false,
         "language": "C"
       },
-      "sourceFingerprint": "74f2da5f520fc89e5a273dff03b101cab7d60cf33e03581b3034adeb7cb0fd11",
-      "generatedAt": "2026-10-16T11:36:26.596Z"
+      "sourceFingerprint": "423d6f5ee936da79cba686fbf0c7d1e987b6a3c24b496266ec2c4af1c8b06212",
+      "generatedAt": "2026-10-17T04:39:49.058Z"
     },
     "atoms3r-motor-inertia-test": {
       "title": "AtomS3Rモーター応答測定",
