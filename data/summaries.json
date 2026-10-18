@@ -1,44 +1,43 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-18T11:22:04.652Z",
+  "generatedAt": "2026-10-18T15:58:51.218Z",
   "repositories": {
     "github-tavern": {
       "title": "公開リポジトリ探索酒場",
-      "summary": "個人所有の公開GitHubリポジトリを、酒場風の画面から探して中身を確かめるための静的ポータルだ。GitHub APIで一覧を取得し、横断検索や分類、CopilotがREADMEや設定を基に作る日本語概要の表示ができる。",
-      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、酒場風の画面から探して選ぶための個人ポータルだ。中ではGitHub APIから一覧を取り込み、名前や説明、Topics、言語、Copilot要約をまとめて検索できるようにしてる。カードを選べば概要や公開ページへのリンクを確認でき、Copilot未解析のものにはREADMEから暫定説明を出す仕組みもある。説明の更新はGitHub Actionsが6時間ごとにリポジトリの変更を確認し、GitHub Copilot CLIで新規・更新分を解析してキャッシュする。サイトはGitHub Pagesで静的に動き、対象は公開リポジトリだけで、読み取り以外の操作はしないってわけだ。",
-      "closingRemark": "定期便は一度に最大8件まで。棚が混んだら、手動実行で店番を少し急がせることもできる。",
+      "summary": "公開GitHubリポジトリを検索し、酒場風の画面で選んで概要を読める個人向けポータル。リポジトリ情報はGitHub APIから取得し、Copilotによる日本語説明やREADMEからの暫定説明も表示します。",
+      "detail": "こいつは、temesotejamが所有する公開GitHubリポジトリを、酒場風の画面から探して内容を確かめるための個人ポータルだ。中ではGitHub APIから一覧を取り、リポジトリ名や説明、Topics、言語、Copilot要約を横断検索できる。分類で絞り込み、カードを選べば概要や公開ページへのリンクも確認できる仕組みだな。説明はREADMEや設定ファイルなどを根拠にCopilot CLIで生成して保存し、未解析のものにはREADMEから短い暫定説明を出す。6時間ごとの更新確認では変更のあったものを最大8件ずつ扱う。GitHub Pagesで静的に公開できる一方、対象は公開リポジトリだけで、サイトから書き込み操作はしない。",
+      "closingRemark": "6時間ごとに最大8件ずつ説明を整える仕組みだ。酒場の帳簿も、まとめて書き換えるよりは堅実らしい。",
       "features": [
         "公開リポジトリをGitHub APIから取得",
-        "名前・説明・Topics・言語・Copilot要約を横断検索",
-        "技術領域ごとの簡易分類",
-        "カードから概要や公開ページを確認",
-        "Copilot要約を定期更新し、未解析分はREADMEから暫定表示"
+        "名前・説明・Topics・言語・要約を横断検索",
+        "技術領域による分類とカード形式の詳細表示",
+        "Copilot CLIで日本語説明を生成し、JSONに保存",
+        "未解析のリポジトリにはREADME由来の暫定説明を表示"
       ],
       "technologies": [
         "JavaScript",
         "CSS",
         "HTML",
         "GitHub API",
-        "GitHub Actions",
         "GitHub Copilot CLI",
+        "GitHub Actions",
         "GitHub Pages"
       ],
       "categories": [
-        "Webツール",
+        "Web・ツール",
         "GitHub",
-        "検索",
-        "リポジトリ管理"
+        "リポジトリ検索"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-10-18T04:45:25Z",
+      "sourcePushedAt": "2026-10-18T11:22:05Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-10-18T04:45:25Z",
+        "pushedAt": "2026-10-18T11:22:05Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -48,8 +47,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "34855d9481fff55ffc3e8840526bf42dbc97e16bab5ae508f40b1e72f0c98c50",
-      "generatedAt": "2026-10-18T11:22:04.652Z"
+      "sourceFingerprint": "42e5f33269417642f335c87ccc35326e6ac32d83f48ab29c3e9214ead732b97f",
+      "generatedAt": "2026-10-18T15:58:51.218Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -4943,7 +4942,56 @@
       },
       "sourceFingerprint": "27870ec06113223148f3010f6c2d0992a4d61f4e1caab0a42a3feea7ada833e5",
       "generatedAt": "2026-10-16T11:36:42.827Z"
+    },
+    "hydrofoil-boat-control-archive": {
+      "title": "水中翼ボート制御プログラム保存版",
+      "summary": "報告書で参照された水中翼ボートの1日目・2日目の通信側／制御側プログラムを、原典のまま保存して書き込みや再ビルドに使えるようにしたもの。ブラウザ書き込みと基板別ZIPに対応し、原典コミットやファイルのSHA-256も検証できます。",
+      "detail": "こいつは、報告書で参照された水中翼ボートの1日目・2日目の制御プログラムを保存し、基板へ書き込めるようにしたアーカイブだ。各日の通信側と制御側を原典コミットのまま収録し、XIAO ESP32S3向けにPlatformIOでビルドできる。公開ページではESP Web Toolsを使ったブラウザ書き込みのほか、2台分や基板別のソースZIPも取得できる仕組みだな。archive.jsonに原典コミットと全ファイルのSHA-256を記録し、生成時に検証するので、保存内容の確認にも使える。ただし、2日目の始動確認時間の問題は修正されておらず、一部ホストテストは不整合やスタブ不足で除外されている。実機での書き込み試験も自動テストには含まれない。",
+      "closingRemark": "2日目の始動確認設定まで原典どおり。SHA-256は確かめられても、当日の判断までは巻き戻せないな。",
+      "features": [
+        "1日目・2日目の通信側／制御側ソースを原典コミットのまま収録",
+        "原典コミットと全ファイルのSHA-256を記録・検証",
+        "ブラウザからの基板書き込みと、2台分・基板別ZIPの取得に対応",
+        "4種類のファームウェアをビルドし、GitHub Pagesへ公開",
+        "既知のテスト不整合を明示し、実機書き込み試験は自動化対象外"
+      ],
+      "technologies": [
+        "C++",
+        "Python",
+        "PlatformIO",
+        "XIAO ESP32S3",
+        "ESP Web Tools",
+        "GitHub Actions",
+        "GitHub Pages"
+      ],
+      "categories": [
+        "組み込み",
+        "ファームウェア",
+        "アーカイブ",
+        "水中翼ボート"
+      ],
+      "status": "ツール",
+      "confidence": "high",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
+      "sourceRepositoryId": 1424479545,
+      "sourcePushedAt": "2026-10-18T14:54:06Z",
+      "sourceDefaultBranch": "main",
+      "sourceMetadata": {
+        "repositoryId": 1424479545,
+        "name": "hydrofoil-boat-control-archive",
+        "pushedAt": "2026-10-18T14:54:06Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "C++"
+      },
+      "sourceFingerprint": "4f2fd20115a306051040209f43f023605df37799800b555e02f52786675fb1ef",
+      "generatedAt": "2026-10-18T15:58:40.789Z"
     }
   },
-  "repositoryCount": 100
+  "repositoryCount": 101
 }
