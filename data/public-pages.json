@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-16T11:56:50.098Z",
-  "repositoryCount": 100,
-  "pageCount": 59,
+  "generatedAt": "2026-10-18T16:09:39.823Z",
+  "repositoryCount": 101,
+  "pageCount": 60,
   "pages": {
     "2026_8_5_3": {
       "url": "https://temesotejam.github.io/2026_8_5_3/",
@@ -116,6 +116,11 @@
     },
     "github-tavern": {
       "url": "https://temesotejam.github.io/github-tavern/",
+      "source": "github-pages",
+      "status": 200
+    },
+    "hydrofoil-boat-control-archive": {
+      "url": "https://temesotejam.github.io/hydrofoil-boat-control-archive/",
       "source": "github-pages",
       "status": 200
     },
