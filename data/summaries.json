@@ -1,44 +1,43 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-19T04:53:41.985Z",
+  "generatedAt": "2026-10-19T13:36:40.150Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ酒場端末",
-      "summary": "temesotejam所有の公開GitHubリポジトリを、酒場風の画面から探して内容を確認する個人ポータル。GitHub APIで情報を取得し、検索・分類できるほか、CopilotがREADMEや構成をもとに作る日本語説明も表示します。",
-      "detail": "こいつは、temesotejamが所有する公開GitHubリポジトリを、古い情報端末を思わせる画面から探して記録を眺めるための個人ポータルだ。中ではGitHub APIから一覧を取得し、名前や説明、Topics、言語、Copilotの要約を横断検索できるようにしてる。カテゴリで絞り込んだり、カードを選んで概要や確認済みの公開ページを開いたりもできる。説明文はREADMEやファイル構成などを根拠にCopilot CLIが作り、6時間ごとに更新を確認して、定期実行では一度に最大8件ずつ処理する仕組みだ。GitHub Pagesで静的に公開でき、対象は公開リポジトリだけで、削除やIssue作成といった書き込み操作はしない。",
-      "closingRemark": "6時間ごとに記録を見直すが、店に並ぶのは公開リポジトリだけだ。裏口の帳簿は扱ってない。",
+      "title": "公開リポジトリ探索端末",
+      "summary": "所有する公開GitHubリポジトリを、酒場風の画面から検索・閲覧する個人向けポータル。言語や技術領域で絞り込み、カードから概要を確認できるほか、Copilotの説明は定期更新され、未解析のものはREADMEから暫定紹介されます。",
+      "detail": "こいつは、temesotejamが所有する公開GitHubリポジトリを、古い情報端末を思わせる酒場風の画面から探すための個人ポータルだ。中ではGitHub APIから公開リポジトリを取得し、名前や説明、Topics、言語、Copilot要約を横断検索できるようにしてる。カードを選べばその場で概要を読めて、技術領域ごとの分類や確認済みの公開ページへのリンクも使える。説明文はGitHub Actionsで6時間ごとに更新を確認し、変更のあったものをCopilot CLIで解析する仕組みで、1回の定期実行では最大8件までだ。まだ解析されていないリポジトリにはREADMEから短い説明を出すが、対象は公開リポジトリに限られ、サイトから変更や書き込みはしない。",
+      "closingRemark": "定期更新は一度に最大8件。棚が増える速さと、案内札が付く速さは別勘定らしいな。",
       "features": [
-        "所有する公開リポジトリをGitHub APIから取得",
-        "リポジトリ名・説明・Topics・言語・要約を横断検索",
-        "技術領域による分類とカードからの概要表示",
-        "Copilot CLIがREADMEや構成をもとに日本語説明を生成",
-        "GitHub Pagesで静的ホスティング可能"
+        "GitHub APIから所有する公開リポジトリを取得",
+        "名前・説明・Topics・言語・Copilot要約を横断検索",
+        "技術領域ごとの分類とカード上での概要表示",
+        "Copilot CLIによる説明文の定期更新",
+        "未解析時はREADMEから短い暫定説明を表示"
       ],
       "technologies": [
         "JavaScript",
         "CSS",
         "HTML",
         "GitHub API",
-        "GitHub Actions",
         "GitHub Copilot CLI",
+        "GitHub Actions",
         "GitHub Pages"
       ],
       "categories": [
         "Web・ツール",
         "GitHub",
-        "検索",
-        "自動化"
+        "リポジトリ検索"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-10-18T20:53:37Z",
+      "sourcePushedAt": "2026-10-19T04:53:42Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-10-18T20:53:37Z",
+        "pushedAt": "2026-10-19T04:53:42Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -48,8 +47,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "e1b083296e17261ebf6d5388df671d038913e9b00a874b81564878fa227e05e4",
-      "generatedAt": "2026-10-19T04:53:41.985Z"
+      "sourceFingerprint": "97cdfdefbf9f1a49626df3f03d191084cfab97c17c2215267a74765b296e1f69",
+      "generatedAt": "2026-10-19T13:36:40.150Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -4945,43 +4944,43 @@
       "generatedAt": "2026-10-16T11:36:42.827Z"
     },
     "hydrofoil-boat-control-archive": {
-      "title": "水中翼ボート制御プログラム保存庫",
-      "summary": "報告書で参照された水中翼ボートの1日目・2日目の制御側／通信側ファームウェアを保存し、原典との一致も検証するアーカイブだ。ブラウザからの書き込みや、基板別・日別のソースZIP取得にも対応している。",
-      "detail": "こいつは、報告書で参照された水中翼ボートの1日目・2日目の制御プログラムを保存し、参照元と照らし合わせられるようにしたアーカイブだ。中には通信側と制御側のC++ソースがあり、読みやすさのために書式だけを整えて、処理や設定値は変えていない。原典と整形後のハッシュを記録し、ビルド時には空白やコメントを除いたコードの一致も確かめる。公開ページからはXIAO ESP32S3向けの書き込みや、日別・基板別のZIP取得ができ、GitHub Actionsで検証とビルド、Pagesへの公開まで行う仕組みだ。ただし、外部電源を使った実機書き込みは自動テストの対象外で、2日目の一部テストは原典由来の不整合のため合格扱いにしていない。",
-      "closingRemark": "コードの空白は整えても、2日目の始動確認時間は原典のまま。保存版としては、なかなか筋が通ってるな。",
+      "title": "水中翼ボート制御プログラム保存版",
+      "summary": "水中翼ボートの1日目・2日目に使われた制御プログラムを、通信側と制御側の組で保存し、ブラウザから書き込めるようにしたリポジトリです。日ごとの制御方式や設定の違いに加え、コードの来歴と一致検証の手順も確認できます。",
+      "detail": "こいつは、水中翼ボートで使った1日目と2日目の制御プログラムを、通信側・制御側の組で保存し、書き込みや再ビルドに使えるようにしたものだ。中を見ると、1日目はBNO08XのIMU方位、2日目はGNSSから求めた移動方向で舵の向きを制御していて、LPFや状態通知の間隔にも違いがある。ブラウザの公開ページから使用日を選び、基板ごとの書き込み用データやソース一式のZIPを取得できる。両日とも11点のコースを連続追従し、自動航行の基準要求は1.00だが、加速処理や電源保護、停止処理は残してあり、Dutyは回転数の割合ではない。指定版と保存元の来歴は分けて記録され、スクリプトでコードの一致も検証する一方、実機への書き込み試験と再ビルド結果の完全な再現性までは保証していない。",
+      "closingRemark": "自動航行の目標Dutyは100%まで戻したが、実機への書き込み確認は別勘定。そこは慎重な保存版だな。",
       "features": [
-        "1日目・2日目それぞれの通信側／制御側ソースを保存",
-        "原典と整形後のSHA-256およびコードトークンの一致を検証",
-        "XIAO ESP32S3向けのブラウザ書き込みページを生成",
-        "日別・基板別に選べるソースZIPを提供",
-        "GitHub Actionsで検証・ビルドし、GitHub Pagesへ公開"
+        "1日目・2日目の通信側と制御側の使用版を保存",
+        "日ごとに異なる方向制御方式、LPF、状態通知間隔を記録",
+        "ブラウザから基板への書き込みと、用途別ZIPの取得に対応",
+        "使用版の指定と保存元の来歴を分けて記録",
+        "指定スナップショットとのコード一致を検証するスクリプトを収録"
       ],
       "technologies": [
         "C++",
         "Python",
+        "JavaScript",
         "PlatformIO",
         "XIAO ESP32S3",
-        "ESP Web Tools",
-        "GitHub Actions",
-        "GitHub Pages",
-        "SparkFun VL53L5CX"
+        "GNSS",
+        "BNO08X",
+        "VESC"
       ],
       "categories": [
+        "組み込み",
+        "ロボティクス",
         "ファームウェア",
-        "組み込みシステム",
-        "ソースアーカイブ",
-        "書き込みツール"
+        "アーカイブ"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1424479545,
-      "sourcePushedAt": "2026-10-19T01:36:05Z",
+      "sourcePushedAt": "2026-10-19T08:31:45Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1424479545,
         "name": "hydrofoil-boat-control-archive",
-        "pushedAt": "2026-10-19T01:36:05Z",
+        "pushedAt": "2026-10-19T08:31:45Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -4991,8 +4990,8 @@
         "fork": false,
         "language": "C++"
       },
-      "sourceFingerprint": "3e7224e5bee26b334330ac9deeb1eefbf688c222375e6ed5afeb368719f8e9d2",
-      "generatedAt": "2026-10-19T04:53:31.055Z"
+      "sourceFingerprint": "382aacee26733c9fe5964ff36e185609dfb8b1caa0aa69665204f79a660d83e8",
+      "generatedAt": "2026-10-19T13:36:25.403Z"
     }
   },
   "repositoryCount": 101
