@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-18T16:09:39.823Z",
-  "repositoryCount": 101,
-  "pageCount": 60,
+  "generatedAt": "2026-10-20T12:18:08.318Z",
+  "repositoryCount": 102,
+  "pageCount": 61,
   "pages": {
     "2026_8_5_3": {
       "url": "https://temesotejam.github.io/2026_8_5_3/",
@@ -151,6 +151,11 @@
     },
     "pico-copter-fc": {
       "url": "https://temesotejam.github.io/pico-copter-fc/",
+      "source": "github-pages",
+      "status": 200
+    },
+    "pico-copter-fc-esc-telemetry": {
+      "url": "https://temesotejam.github.io/pico-copter-fc-esc-telemetry/",
       "source": "github-pages",
       "status": 200
     },
