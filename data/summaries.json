@@ -1,18 +1,18 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-20T05:00:38.111Z",
+  "generatedAt": "2026-10-20T11:50:27.063Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ探索酒場",
-      "summary": "所有する公開GitHubリポジトリを、酒場を模した画面から検索・分類して閲覧する個人向けポータル。CopilotがREADMEや構成をもとに日本語の概要を作り、未解析のリポジトリはREADMEから暫定説明を表示します。",
-      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、酒場を模した画面から探して内容を確かめるための個人ポータルだ。中ではGitHub APIから一覧を取得し、名前や説明、トピック、言語、Copilot要約を横断検索したり、技術領域で絞り込んだりできる。カードを選べばその場で概要が開き、Copilot解析済みならREADMEやファイル構成などを根拠にした日本語の説明も読める。未解析のリポジトリにはREADMEから短い暫定説明を出す仕組みもある。説明の更新は6時間ごとのActionsで行い、変更のあったものを対象に1回最大8件ずつ処理する。対象は公開リポジトリだけで、サイトから削除や変更などの書き込みはしないってわけだ。",
-      "closingRemark": "6時間ごとに最大8件ずつ記録を整える酒場だ。急ぎの新顔には、まずREADMEの短い紹介が出る。",
+      "title": "公開リポジトリ探索ポータル",
+      "summary": "temesotejamの公開GitHubリポジトリを、古い情報端末風の画面から探して詳しく見るための個人ポータル。名前や説明、Topics、言語、Copilot要約を横断検索でき、未解析のリポジトリにはREADMEから短い説明を補う。",
+      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、古い情報端末風の画面から探して中身を確かめるための個人ポータルだ。中ではGitHub APIから公開リポジトリを取得し、名前や説明、Topics、使用言語、Copilot要約をまとめて検索できる。リポジトリを選ぶと概要が表示され、Copilot未解析のものにはREADMEから短い説明を作ってカードに補う仕組みもある。別のワークフローが6時間ごとに一覧を確認し、新規または更新されたものを最大8件ずつ解析して説明データを更新する。GitHub Pagesで動く静的サイトで、対象は公開リポジトリのみ、閲覧側から変更やIssue作成はしない。",
+      "closingRemark": "帳面の更新は6時間ごと、しかも一度に最大8件。急がないあたりも、酒場の記録らしいな。",
       "features": [
-        "公開リポジトリをGitHub APIから自動取得",
-        "名前・説明・トピック・言語・Copilot要約を横断検索",
-        "技術領域ごとの分類とカード形式の詳細表示",
-        "CopilotがREADMEや構成を根拠に日本語説明を生成",
-        "未解析のリポジトリにはREADME由来の暫定説明を表示"
+        "所有する公開リポジトリをGitHub APIから取得",
+        "名前・説明・Topics・言語・要約を横断検索",
+        "技術領域ごとの簡易分類とリポジトリ詳細表示",
+        "Copilot CLIで説明を定期更新し、未解析分はREADMEから補足",
+        "GitHub Pagesで静的ホスティング可能"
       ],
       "technologies": [
         "JavaScript",
@@ -24,20 +24,21 @@
         "GitHub Pages"
       ],
       "categories": [
-        "Web・ツール",
+        "Webツール",
+        "リポジトリ検索",
         "GitHub",
-        "検索・アーカイブ"
+        "自動要約"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-10-19T22:28:25Z",
+      "sourcePushedAt": "2026-10-20T05:00:39Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-10-19T22:28:25Z",
+        "pushedAt": "2026-10-20T05:00:39Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -47,8 +48,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "9da9d8fc00eb50d37bf2daa1698687bdda1fd936a1469454401cd17c3bf3836b",
-      "generatedAt": "2026-10-20T05:00:38.111Z"
+      "sourceFingerprint": "fb313cb6a2c4f3a05ecf68a5701babe6371d8917289494a9cbef41c629c94e33",
+      "generatedAt": "2026-10-20T11:50:27.063Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -4992,7 +4993,57 @@
       },
       "sourceFingerprint": "382aacee26733c9fe5964ff36e185609dfb8b1caa0aa69665204f79a660d83e8",
       "generatedAt": "2026-10-19T13:36:25.403Z"
+    },
+    "pico-copter-fc-esc-telemetry": {
+      "title": "Pico Copter ESCテレメトリ",
+      "summary": "Raspberry Pi Pico系のクアッドコプター用ファームウェアに、BLHeli_32 ESCの専用TXパッドから温度・電圧・電流・回転数などを読む機能を加えた構成だ。ESCの応答確認には双方向DShotを使い、Arduino UNO R3向けの4-way HEX書き込みページも備える。",
+      "detail": "こいつは、Pico Copterのモーター制御を保ちながら、BLHeli_32 ESCの専用TXパッドから診断情報を読むためのファームウェアだ。中では双方向DShotの有効なeRPM返信でESCを認識し、認識した相手にだけGPIO5（UART1 RX）経由で別系統のテレメトリを要求してる。USBには温度、電圧、電流、消費mAh、電気回転数を表示し、返信が途切れてもモーター指令とは切り離して扱う。ブラウザーにはUNO R3向けの4-way HEX書き込みと読み戻し検証もあるが、HEXやESC用ファームウェアは同梱せず、ESC設定も変更しない。なお、特定のMAD ESC TXパッドでの受信確認はまだで、飛行試験済みのリリースではない。",
+      "closingRemark": "DShotの返信だけでESCを見分ける仕組みは整ったが、肝心の専用TXパッドでの受信確認はこれからだ。",
+      "features": [
+        "双方向DShotの有効なeRPM返信からESCを自動認識",
+        "GPIO5のUART1 RXでESC専用TXテレメトリを受信",
+        "温度・電圧・電流・mAh・電気回転数をUSB表示",
+        "ESCテレメトリの有無にかかわらず4基のモーター出力を維持",
+        "ブラウザーからUNO R3へ4-way HEXを書き込み、読み戻し検証"
+      ],
+      "technologies": [
+        "Raspberry Pi Pico",
+        "RP2040",
+        "C",
+        "C++",
+        "双方向DShot300",
+        "BLHeli_32",
+        "UART1",
+        "Web Serial"
+      ],
+      "categories": [
+        "ドローン",
+        "フライトコントローラー",
+        "ESCテレメトリ",
+        "組み込みファームウェア"
+      ],
+      "status": "実験",
+      "confidence": "high",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
+      "sourceRepositoryId": 1426713369,
+      "sourcePushedAt": "2026-10-20T10:23:14Z",
+      "sourceDefaultBranch": "main",
+      "sourceMetadata": {
+        "repositoryId": 1426713369,
+        "name": "pico-copter-fc-esc-telemetry",
+        "pushedAt": "2026-10-20T10:23:14Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "C"
+      },
+      "sourceFingerprint": "fbef83998689f52377e7f1818f4902cde0b75f095550a3f9b56a7156f41c62f6",
+      "generatedAt": "2026-10-20T11:50:10.812Z"
     }
   },
-  "repositoryCount": 101
+  "repositoryCount": 102
 }
