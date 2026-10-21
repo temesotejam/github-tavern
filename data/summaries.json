@@ -1,43 +1,43 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-20T21:43:25.882Z",
+  "generatedAt": "2026-10-21T05:00:33.430Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ案内端末",
-      "summary": "自分が公開しているGitHubリポジトリを、古い情報端末風の画面で検索・選択し、概要まで読める個人向けポータル。GitHub APIで一覧を取得し、README由来の暫定説明やCopilotが生成した日本語要約も表示する。",
-      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、酒場の依頼帳のような画面から探して読むための個人ポータルだ。中ではGitHub APIから一覧を取り込み、名前・説明・Topics・言語・要約を横断検索し、技術領域ごとの分類やカード選択後の詳細表示につなげてる。Copilot CLIの解析結果があれば、READMEや設定、ファイル構成などを根拠にした日本語概要を出し、未解析ならREADMEから短い暫定説明を補う。6時間ごとのGitHub Actionsが更新分を最大8件ずつ解析し、結果をJSONに保存する仕組みで、GitHub Pagesにも静的サイトとして置ける。扱うのは公開リポジトリだけで、サイトから変更やIssue作成はしない。",
-      "closingRemark": "Copilotがまだ読んでいない相手にも、READMEから短い札を用意する。入口で無言のまま立たせておく気はないらしい。",
+      "title": "公開リポジトリ探索酒場",
+      "summary": "temesotejamが公開しているGitHubリポジトリを、酒場風の画面から検索・閲覧する個人ポータル。GitHub APIで情報を集め、Copilotの説明やREADMEからの暫定紹介も使って、各リポジトリの概要を確かめられます。",
+      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、酒場風の画面から探して眺めるための個人ポータルだ。中ではGitHub APIから一覧を取り、名前や説明、Topics、言語、Copilotの要約をまとめて検索できるようにしてる。カードを選べば概要が開き、Copilotの解析がまだないものにはREADMEから短い紹介を補う仕組みもある。別の処理では6時間ごとに更新状況を見て、変更や新規のリポジトリを最大8件ずつ解析し、説明をキャッシュしてる。GitHub Pagesで動かせる静的サイトで、対象は公開リポジトリのみ、サイトから変更や書き込みはしないってわけだ。",
+      "closingRemark": "解析は一度に最大8件。酒場の帳簿も、更新分から順に片づけるらしい。",
       "features": [
-        "GitHub APIから所有者の公開リポジトリを自動取得",
-        "名前・説明・Topics・言語・要約を横断検索",
-        "技術領域で分類し、選んだリポジトリの概要を表示",
-        "Copilot CLIで更新分を定期解析し、日本語要約を保存",
-        "未解析のリポジトリにはREADME由来の暫定説明を表示"
+        "GitHub APIから所有者の公開リポジトリ一覧を取得",
+        "名前・説明・Topics・言語・Copilot要約を横断検索",
+        "カテゴリ分類や並べ替え、カードからの概要表示",
+        "Copilot未解析のリポジトリにはREADME由来の暫定紹介を表示",
+        "更新・新規リポジトリの説明を定期生成してキャッシュ"
       ],
       "technologies": [
         "JavaScript",
         "CSS",
         "HTML",
         "GitHub API",
-        "GitHub Copilot CLI",
         "GitHub Actions",
+        "GitHub Copilot CLI",
         "GitHub Pages"
       ],
       "categories": [
         "Web・ツール",
-        "開発者ポータル",
-        "GitHub"
+        "GitHub",
+        "ポータル"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-10-20T17:19:00Z",
+      "sourcePushedAt": "2026-10-20T21:43:27Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-10-20T17:19:00Z",
+        "pushedAt": "2026-10-20T21:43:27Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -47,8 +47,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "2b2e99804f4d5ba83f1c510839f69c266b0b2dbf0354957a45c82d123fa17ea1",
-      "generatedAt": "2026-10-20T21:43:25.881Z"
+      "sourceFingerprint": "9f8b461503adf138b8db2fcd26eeb07d2d1e4c05ee756a1b3753cd1894e1913e",
+      "generatedAt": "2026-10-21T05:00:33.430Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -4795,43 +4795,43 @@
       "generatedAt": "2026-10-06T06:31:41.613Z"
     },
     "atoms3r-lateral-energy-control": {
-      "title": "AtomS3R左右揺動エネルギー制御",
-      "summary": "AtomS3Rとリアクションホイールを使い、左右揺動の次ピークを目標角へ近づける制御を実機で試すファームウェア。MEKFによる姿勢推定、複数のエネルギー制御方式、RWLOG記録とブラウザ解析を備えるが、係数や実機性能の検証は継続中だ。",
-      "detail": "こいつはAtomS3Rとリアクションホイールで左右に揺れる機体を動かし、次のピーク角を目標へ近づける試験用ファームウェアだ。MEKFで姿勢を推定し、物理ピークとZEROクロスを見つけて、左右別の暫定エネルギー予測から電流と入力時間を決めている。二次エネルギー式と、旧到達角予測をエネルギーに換算する方式を比較でき、Web画面から目標角や電流、補正設定などを調整できる。RWLOGには制御値や機体状態に加え、ホイールの速度・位置と時刻も記録し、ブラウザで仕事を解析する仕組みだ。負側へ向かうZEROクロスで固定幅300 mAを与える試験モードもある。ただ、係数は限られた実機ログ由来の暫定値で、閉ループ性能や逆入力の効果はまだ確認できていない。",
-      "closingRemark": "仕事の計算には位置記録を使い、速度読み値で欠測を埋めない。測定値の扱いまで慎重なあたり、まだ結論を急ぐ段階じゃないな。",
+      "title": "AtomS3R左右揺動制御",
+      "summary": "AtomS3Rとリアクションホイールを使い、機体の左右揺動を抑える制御を実機で試すファームウェアだ。姿勢やZEROクロスから入力を調整し、詳細なRWLOGを記録するほか、取得後の仕事量解析や条件別の比較にも対応している。",
+      "detail": "こいつは、AtomS3Rとリアクションホイールで左右に揺れる機体を制御し、その応答を実機で調べるためのファームウェアだ。中ではMEKFで推定した姿勢から左右の物理ピークとZEROクロスを見つけ、次のピークを目標角に近づけるよう、ホイールへ流す電流と時間を計算してる。二次エネルギー式など複数の制御モードを選べて、入力条件や予測値、実測電流、機体の状態をRWLOGへ記録できる。ホイールの位置や回転速度を使った反作用の仕事はログ取得後にブラウザで解析し、CSVにも保存できるが、その仕事を制御へ戻す仕組みではない。ただし係数は限られた実機ログに基づく暫定値で、閉ループ性能も自動試験だけでは確認できない。実機ログを重ねながら、制御の当たり外れを見極める段階ってところだな。",
+      "closingRemark": "RWLOGの書き出し領域まで起動時に確保して使い回す。測定後の記録が出せなければ、制御の検証も始まらないからな。",
       "features": [
-        "左右別のピーク角予測からリアクションホイールの電流と入力時間を算出",
-        "二次エネルギー式と旧到達角予測由来の制御方式を比較",
-        "Web画面で目標角、指令電流、学習補正などを設定",
-        "RWLOGにホイールの速度・位置と時刻を記録し、ブラウザで仕事を解析",
-        "負側ZEROクロスで固定幅300 mAを与える試験モードを搭載"
+        "ZEROクロスと次のピーク角を使った左右揺動制御",
+        "二次エネルギー式や旧到達角予測に基づく制御モード",
+        "条件・予測値・MEKF状態・実測電流をRWLOGに記録",
+        "ホイール位置・回転速度から反作用の仕事を取得後に解析",
+        "負側の仕事応答を調べる一括測定と専用試験モード"
       ],
       "technologies": [
         "C++",
+        "Python",
+        "JavaScript",
         "PlatformIO",
-        "ESP32",
-        "Arduino",
+        "Arduino framework",
         "AtomS3R",
-        "M5Unified",
-        "Adafruit AHRS",
-        "リアクションホイール"
+        "Unit Roller485",
+        "MEKF"
       ],
       "categories": [
         "組み込み",
         "制御工学",
-        "ロボティクス",
-        "実験"
+        "実機試験",
+        "データ解析"
       ],
       "status": "実験",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1416789371,
-      "sourcePushedAt": "2026-10-16T10:46:20Z",
+      "sourcePushedAt": "2026-10-21T04:59:18Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1416789371,
         "name": "atoms3r-lateral-energy-control",
-        "pushedAt": "2026-10-16T10:46:20Z",
+        "pushedAt": "2026-10-21T04:59:18Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -4841,8 +4841,8 @@
         "fork": false,
         "language": "C++"
       },
-      "sourceFingerprint": "272b92ffbf68bccd069fb6e18699bed6830cc28150e997278c681d436d51ec3b",
-      "generatedAt": "2026-10-16T11:36:12.713Z"
+      "sourceFingerprint": "840228825768f5f92e0d73f5d9eddf6535fccc7a448731b165a7723f1156b6dd",
+      "generatedAt": "2026-10-21T05:00:13.054Z"
     },
     "pico-copter-fc": {
       "title": "Pico向けクアッドコプター制御",
