@@ -1,18 +1,18 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-22T12:05:19.839Z",
+  "generatedAt": "2026-10-22T17:19:25.751Z",
   "repositories": {
     "github-tavern": {
       "title": "公開リポジトリ案内酒場",
-      "summary": "所有者の公開GitHubリポジトリを、古い情報端末風の画面から検索・閲覧する個人ポータル。GitHub APIで一覧を取得し、Copilotの日本語説明やREADME由来の暫定説明を添えて、各リポジトリの概要へ案内します。",
-      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、酒場の依頼帳のように探して中身を確かめるための個人ポータルだ。画面ではGitHub APIから一覧を取り、名前や説明、Topics、言語、Copilot要約を横断検索して、選んだ項目の概要をその場で表示する。説明はCopilot CLIがREADMEや設定、ファイル構成などをもとに生成し、6時間ごとのActionsで更新分を順に処理する仕組みだな。まだ解析されていない項目にはREADMEから短い暫定説明を出し、GitHub Pagesで静的に公開できる。対象は公開リポジトリだけで、サイトから削除や更新などの書き込みはしない。",
-      "closingRemark": "要約は最大8件ずつ更新する段取りだ。酒場の帳面も、一晩で全部書き換えるわけじゃないらしい。",
+      "summary": "所有する公開GitHubリポジトリを、酒場風の画面から検索・閲覧できる個人ポータル。GitHub APIで一覧を取得し、Copilotによる日本語説明やREADMEからの暫定説明を添えて、各リポジトリの概要や公開ページを確かめられます。",
+      "detail": "こいつは、所有する公開GitHubリポジトリを酒場風の画面から探して読める個人ポータルだ。中ではGitHub APIから一覧を取得し、リポジトリ名や説明、Topics、言語、Copilot要約をまとめて検索できる。カードを選べば概要が見られ、解析済みならREADMEや設定ファイルなどを根拠にした日本語説明が出る。未解析のものにはREADMEから短い暫定説明を添える仕組みだな。Actionsが6時間ごとに更新を確認し、変更のあったリポジトリをCopilot CLIで解析する。GitHub Pagesで静的に公開できる一方、対象は公開リポジトリに限られ、サイトから書き込み操作はしない。",
+      "closingRemark": "6時間ごとに棚を見回し、変わった品だけ説明札を刷り直す。酒場の帳簿としては、ずいぶん几帳面だな。",
       "features": [
-        "公開リポジトリをGitHub APIから取得",
+        "GitHub APIから所有する公開リポジトリを取得",
         "名前・説明・Topics・言語・要約を横断検索",
-        "Copilot CLIによる日本語説明の定期生成",
-        "未解析項目にはREADME由来の暫定説明を表示",
-        "GitHub Pagesで静的公開でき、書き込み操作は行わない"
+        "Copilot CLIで更新のあったリポジトリを定期解析",
+        "未解析のリポジトリにはREADME由来の暫定説明を表示",
+        "GitHub Pagesで静的に公開可能"
       ],
       "technologies": [
         "JavaScript",
@@ -24,21 +24,21 @@
         "GitHub Pages"
       ],
       "categories": [
-        "Webアプリ",
-        "個人ポータル",
+        "Web・ツール",
+        "GitHub",
         "リポジトリ検索",
-        "GitHub Pages"
+        "静的サイト"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-10-22T05:02:14Z",
+      "sourcePushedAt": "2026-10-22T12:31:06Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-10-22T05:02:14Z",
+        "pushedAt": "2026-10-22T12:31:06Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -48,8 +48,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "4fb4e03e346734686275010b2d05a6b697b3e0df785af5fe8660cae184364a68",
-      "generatedAt": "2026-10-22T12:05:19.839Z"
+      "sourceFingerprint": "dc97395d66183cbb0a67a6a8cbfcdfb7aa74204ca81349cc511402bc8ebdb80f",
+      "generatedAt": "2026-10-22T17:19:25.751Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -5045,39 +5045,40 @@
       "generatedAt": "2026-10-20T11:50:10.812Z"
     },
     "2026_10_22": {
-      "title": "遠方予報局の天気カードパズル",
-      "summary": "世界の都市の実際の天気をカードにして、組み合わせの得点で章ごとの目標を達成する一人用ブラウザゲーム。提出回数や引き直しを管理しながら、恒久強化を選んで全3章の攻略を目指します。",
-      "detail": "こいつは、遠くの都市の天気を観測カードに変えて、組み合わせの得点で全3章を攻略する一人用のデッキ構築パズルだ。中では位置情報を使わず、登録された都市から選んだ7都市の公開天気を取り込み、天気の種類や風などをカードにしてる。1〜5枚を選んで提出し、同じ天気の重なりや強度の連番、地域の広がりといった条件で得点を稼ぐ仕組みで、章の目標を達成すると次の章で使う恒久理論を選べる。各章の提出は4回、引き直しは2回までだから、手札をどう組み立てるかが肝になるな。通信できない場合も日付をもとにした代替観測で続けられるが、実際の天気が取得できているかは画面上の観測元を確かめる必要がある。",
-      "closingRemark": "天気が取れない日にも、日付由来の観測で局の業務は続く。空模様より粘り強い仕組みだな。",
+      "title": "反証局：都市記録の調査ゲーム",
+      "summary": "公開情報の動きを手掛かりに、都市の公的記録を書き換えようとする改竄者を追う一人用ゲーム。移動や照合、地点の隔離で追跡し、集めた証拠で書き換え済みの記録を反証します。現実の情報が追跡の速度や偽の痕跡に影響します。",
+      "detail": "こいつは、公開情報の動きを改竄者の行動に取り込み、公的記録を守る一人用の調査ゲームだ。プレイヤーは地図上の地点を移動し、照合で距離や痕跡を調べ、証拠を集めて書き換えられた記録を反証する。改竄者は記録の変更に2手かけるため、その準備地点を見つけて隔離したり、同じ地点に追い込んで確保したりできる。中ではGitHub Public Events、Hacker Newsの上位記事、USGSの直近1時間の地震情報を集計し、移動速度や迂回、偽の痕跡に反映してる。3つの記録が書き換えられる前に確保か反証を目指す仕組みで、通信できない場合も代替パルスで続けられる。ただし位置情報は使わず、現実の情報がゲーム上の信号に変わるところまでだな。",
+      "closingRemark": "世界のニュースや地震は追跡の燃料になるが、位置情報までは持ち込まない。調査の線引きは明快だな。",
       "features": [
-        "公開天気から観測カードを生成",
-        "位置情報を使わず7都市の天気を観測",
-        "カードの組み合わせで得点する全3章構成",
-        "章ごとに恒久理論を選んで強化",
-        "通信できない場合は日付由来の代替観測で継続"
+        "改竄者の準備地点を手掛かりに追跡",
+        "照合で距離を調べ、新しい痕跡から証拠を獲得",
+        "地点の隔離や確保で改竄を妨害",
+        "証拠を2つ使って記録を1つ反証",
+        "公開情報をゲーム内の速度や痕跡に反映し、取得できない場合は代替パルスを使用"
       ],
       "technologies": [
+        "JavaScript",
         "HTML",
         "CSS",
-        "JavaScript",
-        "GitHub Pages"
+        "GitHub Public Events API",
+        "Hacker News API",
+        "USGS Earthquake GeoJSON Feed"
       ],
       "categories": [
         "ブラウザゲーム",
-        "デッキ構築",
-        "ローグライク",
-        "パズル"
+        "調査",
+        "戦略"
       ],
-      "status": "完成品",
+      "status": "試作",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1429619361,
-      "sourcePushedAt": "2026-10-22T12:03:09Z",
+      "sourcePushedAt": "2026-10-22T16:34:48Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1429619361,
         "name": "2026_10_22",
-        "pushedAt": "2026-10-22T12:03:09Z",
+        "pushedAt": "2026-10-22T16:34:48Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5085,10 +5086,10 @@
         "archived": false,
         "disabled": false,
         "fork": false,
-        "language": "HTML"
+        "language": "JavaScript"
       },
-      "sourceFingerprint": "95592e0f6ebce5c54873b2b2ad0a9ef80e2b72f6454fc8d015b30c5ffb3e3281",
-      "generatedAt": "2026-10-22T12:04:55.100Z"
+      "sourceFingerprint": "356176bdd50d5aa314c773402b23a81e595c4e42080b21c3a7cca22e8cb509b9",
+      "generatedAt": "2026-10-22T17:19:12.170Z"
     }
   },
   "repositoryCount": 103
