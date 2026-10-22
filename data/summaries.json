@@ -1,44 +1,44 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-22T05:02:13.522Z",
+  "generatedAt": "2026-10-22T12:05:19.839Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ探索ポータル",
-      "summary": "所有する公開GitHubリポジトリを一覧から検索・閲覧する、個人向けのポータル。名前や説明、Topics、言語を横断検索でき、カードごとの概要やCopilotによる日本語説明も確認できます。",
-      "detail": "こいつは、temesotejamが所有する公開GitHubリポジトリを、酒場の依頼帳のような画面から探して閲覧するためのポータルだ。中ではGitHub APIから一覧を取得し、名前やDescription、Topics、言語、Copilotの説明をまとめて検索できる。技術領域ごとの簡易分類もあり、カードを選べば詳細を表示する仕組みだな。Copilotの説明がまだないリポジトリにはREADMEから短い仮説明を出し、6時間ごとのActionsが新規・更新分を最大8件ずつ解析する。GitHub Pagesで静的に公開できる一方、対象は公開リポジトリだけで、サイトから変更やIssue作成はしない構成だ。",
-      "closingRemark": "更新がないリポジトリは再解析せず、定期便も一度に最大8件。帳簿の更新は、なかなか慎重だな。",
+      "title": "公開リポジトリ案内酒場",
+      "summary": "所有者の公開GitHubリポジトリを、古い情報端末風の画面から検索・閲覧する個人ポータル。GitHub APIで一覧を取得し、Copilotの日本語説明やREADME由来の暫定説明を添えて、各リポジトリの概要へ案内します。",
+      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、酒場の依頼帳のように探して中身を確かめるための個人ポータルだ。画面ではGitHub APIから一覧を取り、名前や説明、Topics、言語、Copilot要約を横断検索して、選んだ項目の概要をその場で表示する。説明はCopilot CLIがREADMEや設定、ファイル構成などをもとに生成し、6時間ごとのActionsで更新分を順に処理する仕組みだな。まだ解析されていない項目にはREADMEから短い暫定説明を出し、GitHub Pagesで静的に公開できる。対象は公開リポジトリだけで、サイトから削除や更新などの書き込みはしない。",
+      "closingRemark": "要約は最大8件ずつ更新する段取りだ。酒場の帳面も、一晩で全部書き換えるわけじゃないらしい。",
       "features": [
-        "GitHub APIから所有する公開リポジトリを取得",
-        "名前・説明・Topics・言語などを横断検索",
-        "技術領域ごとの簡易分類とカード形式の詳細表示",
-        "Copilotによる日本語説明とREADME由来の仮説明",
-        "GitHub Actionsで新規・更新リポジトリを定期解析"
+        "公開リポジトリをGitHub APIから取得",
+        "名前・説明・Topics・言語・要約を横断検索",
+        "Copilot CLIによる日本語説明の定期生成",
+        "未解析項目にはREADME由来の暫定説明を表示",
+        "GitHub Pagesで静的公開でき、書き込み操作は行わない"
       ],
       "technologies": [
         "JavaScript",
         "CSS",
         "HTML",
         "GitHub API",
-        "GitHub Actions",
         "GitHub Copilot CLI",
+        "GitHub Actions",
         "GitHub Pages"
       ],
       "categories": [
         "Webアプリ",
+        "個人ポータル",
         "リポジトリ検索",
-        "開発支援",
-        "GitHub"
+        "GitHub Pages"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-10-21T21:49:31Z",
+      "sourcePushedAt": "2026-10-22T05:02:14Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-10-21T21:49:31Z",
+        "pushedAt": "2026-10-22T05:02:14Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -48,8 +48,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "6ba80f92d84f92110de6cda0cefce8cd6a84f184603ba931e866064f90716f1a",
-      "generatedAt": "2026-10-22T05:02:13.521Z"
+      "sourceFingerprint": "4fb4e03e346734686275010b2d05a6b697b3e0df785af5fe8660cae184364a68",
+      "generatedAt": "2026-10-22T12:05:19.839Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -301,16 +301,16 @@
       "generatedAt": "2026-09-04T10:52:42.974Z"
     },
     "spike-rt-web-toolkit": {
-      "title": "SPIKE-RTブラウザ開発キット",
-      "summary": "SPIKE Prime Hub向けのSPIKE-RTアプリを、ブラウザで編集・ビルドして書き込むためのツールキット。GitHub Actionsでの一括ビルドやWebUSBでのDFU書き込み、Web Serialでのログ確認までつながっています。",
-      "detail": "こいつは、SPIKE Prime Hub向けのSPIKE-RTアプリをブラウザ中心で編集・ビルド・書き込み・確認するための道具立てだ。中ではGitHub Actionsがapps/以下のCアプリをSPIKE-RT v0.2.0でまとめてビルドし、GitHub Pagesから選んだasp.binをSHA-256で確認してから、WebUSBとDFUでHubへ送る。書き込み先とDFU終了時のブート先も指定されていて、起動後はWeb Serialを115200 bpsで開き、syslog()の出力を見られる。アプリ追加は基本的に同名フォルダとCファイルだけで済み、サンプルから課題を作るworkflowや、DFU用WinUSBのWindows案内も揃ってる。LED countdownの起動まで実機で確認済みだが、WinUSB未設定PCへの新規割り当て経路は最終実機確認待ちで、ログのグラフ化などは今後の拡張だな。",
-      "closingRemark": "LED countdownの起動までは実機で通った。あとはWindowsの未設定PCでも、案内どおりに準備が整うかを確かめるところだな。",
+      "title": "SPIKE-RT開発・書き込みツール",
+      "summary": "SPIKE-RTアプリをブラウザで編集し、GitHub ActionsでビルドしてSPIKE Prime Hubへ書き込むためのツールキット。複数アプリや課題を扱え、Web Serialで実行ログも確認できます。",
+      "detail": "こいつは、SPIKE-RTアプリの編集からHubへの書き込み、実行ログの確認までをつなぐ開発ツールキットだ。中ではGitHub ActionsがSPIKE-RT v0.2.0を固定ビルドし、`apps/`以下の複数アプリをまとめて処理する。GitHub Pagesではアプリを選び、SHA-256を確認してからWebUSBとDfuSeでSPIKE Prime Hubへ書き込める。実行後はWeb Serialで115200 bpsのログを見られ、課題をサンプルから複製して独立に編集する仕組みもある。基準構成での実機動作は確認済みだが、WindowsでWinUSBを新規割り当てする経路は最終確認待ちで、ログのグラフ化なども今後の拡張として挙がっている。",
+      "closingRemark": "DFU用セットアップ本体は別リポジトリのReleaseに置き、こちらはダウンロードへの案内役に徹している。",
       "features": [
-        "GitHub Actionsでapps/以下の複数アプリを一括ビルド",
-        "GitHub Pagesからアプリを選び、SHA-256確認後にWebUSBでDFU書き込み",
-        "Web SerialでSPIKE-RTのUSBシリアルログを115200 bpsで表示",
-        "サンプルから課題アプリを複製するworkflowを用意",
-        "DFU用WinUSBセットアップへのWindows向け案内を提供"
+        "GitHub Actionsで複数のSPIKE-RTアプリをビルド",
+        "GitHub PagesからSHA-256を確認してWebUSB書き込み",
+        "課題アプリをサンプルから複製して編集・ビルド",
+        "Web Serialで115200 bpsの実行ログを表示",
+        "Windows向けDFU用WinUSBセットアップを案内"
       ],
       "technologies": [
         "C",
@@ -319,25 +319,25 @@
         "GitHub Actions",
         "GitHub Pages",
         "WebUSB",
-        "Web Serial",
-        "DFU"
+        "DfuSe",
+        "Web Serial"
       ],
       "categories": [
-        "組み込み開発",
-        "ブラウザツール",
-        "教育・課題",
-        "ファームウェア"
+        "開発ツール",
+        "組み込み",
+        "ロボット",
+        "ブラウザ"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1341511616,
-      "sourcePushedAt": "2026-10-15T06:57:41Z",
+      "sourcePushedAt": "2026-10-22T07:34:28Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1341511616,
         "name": "spike-rt-web-toolkit",
-        "pushedAt": "2026-10-15T06:57:41Z",
+        "pushedAt": "2026-10-22T07:34:28Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -347,8 +347,8 @@
         "fork": false,
         "language": "C"
       },
-      "sourceFingerprint": "b74a2abc99bf4183c6a7ce58e4ce844019cd8602222e08f3334970d64e7a2a20",
-      "generatedAt": "2026-10-15T11:42:52.559Z"
+      "sourceFingerprint": "fdbb551ea0cb12623fd385acf80aee7c219055237d5b927414ddc8880a40f8dd",
+      "generatedAt": "2026-10-22T12:05:07.802Z"
     },
     "reaction-wheel-rocker-baseline-sim": {
       "title": "反応ホイール機体の基準シミュレータ",
@@ -5043,7 +5043,53 @@
       },
       "sourceFingerprint": "fbef83998689f52377e7f1818f4902cde0b75f095550a3f9b56a7156f41c62f6",
       "generatedAt": "2026-10-20T11:50:10.812Z"
+    },
+    "2026_10_22": {
+      "title": "遠方予報局の天気カードパズル",
+      "summary": "世界の都市の実際の天気をカードにして、組み合わせの得点で章ごとの目標を達成する一人用ブラウザゲーム。提出回数や引き直しを管理しながら、恒久強化を選んで全3章の攻略を目指します。",
+      "detail": "こいつは、遠くの都市の天気を観測カードに変えて、組み合わせの得点で全3章を攻略する一人用のデッキ構築パズルだ。中では位置情報を使わず、登録された都市から選んだ7都市の公開天気を取り込み、天気の種類や風などをカードにしてる。1〜5枚を選んで提出し、同じ天気の重なりや強度の連番、地域の広がりといった条件で得点を稼ぐ仕組みで、章の目標を達成すると次の章で使う恒久理論を選べる。各章の提出は4回、引き直しは2回までだから、手札をどう組み立てるかが肝になるな。通信できない場合も日付をもとにした代替観測で続けられるが、実際の天気が取得できているかは画面上の観測元を確かめる必要がある。",
+      "closingRemark": "天気が取れない日にも、日付由来の観測で局の業務は続く。空模様より粘り強い仕組みだな。",
+      "features": [
+        "公開天気から観測カードを生成",
+        "位置情報を使わず7都市の天気を観測",
+        "カードの組み合わせで得点する全3章構成",
+        "章ごとに恒久理論を選んで強化",
+        "通信できない場合は日付由来の代替観測で継続"
+      ],
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "GitHub Pages"
+      ],
+      "categories": [
+        "ブラウザゲーム",
+        "デッキ構築",
+        "ローグライク",
+        "パズル"
+      ],
+      "status": "完成品",
+      "confidence": "high",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
+      "sourceRepositoryId": 1429619361,
+      "sourcePushedAt": "2026-10-22T12:03:09Z",
+      "sourceDefaultBranch": "main",
+      "sourceMetadata": {
+        "repositoryId": 1429619361,
+        "name": "2026_10_22",
+        "pushedAt": "2026-10-22T12:03:09Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "HTML"
+      },
+      "sourceFingerprint": "95592e0f6ebce5c54873b2b2ad0a9ef80e2b72f6454fc8d015b30c5ffb3e3281",
+      "generatedAt": "2026-10-22T12:04:55.100Z"
     }
   },
-  "repositoryCount": 102
+  "repositoryCount": 103
 }
