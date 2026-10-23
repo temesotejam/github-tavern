@@ -1,43 +1,44 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-22T21:44:45.237Z",
+  "generatedAt": "2026-10-23T05:03:13.957Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ探索酒場",
-      "summary": "公開GitHub APIから temesotejam 所有の公開リポジトリを集め、古い情報端末風の画面で検索・閲覧する個人ポータルだ。名前や説明、Topics、言語に加え、Copilotの日本語要約でも横断検索でき、カードから概要や確認済みの公開ページへ進める。",
-      "detail": "こいつは、temesotejam が公開しているGitHubリポジトリを、古い情報端末風の画面から探して中身を確かめる個人ポータルだ。中ではGitHub APIから情報を取得し、名前や説明、Topics、言語、Copilot要約をまとめて検索できるようにしてる。Copilot CLIは6時間ごとにリポジトリの変更を確認し、新規・更新分を最大8件ずつ解析して、日本語の説明をJSONに記録する仕組みだな。解析前のリポジトリにはREADMEから短い説明を補い、詳細画面では概要や確認済みの公開ページも見られる。GitHub Pagesで動かせる静的サイトで、対象は公開リポジトリのみ、書き込み操作はしない。",
-      "closingRemark": "6時間ごとに最大8件、変わった棚だけ調べる仕組みらしい。酒場の記録係も、案外せっかちじゃないな。",
+      "title": "公開リポジトリ酒場",
+      "summary": "個人所有の公開GitHubリポジトリを、酒場風の画面から検索・閲覧する静的ポータル。GitHub APIで一覧を取得し、READMEを使った暫定説明やCopilotの日本語解析、技術領域別の分類を表示します。",
+      "detail": "こいつは、temesotejamが所有する公開GitHubリポジトリを、酒場風の画面から探して中身を確かめるための個人ポータルだ。中ではGitHub APIから一覧を取得し、名前や説明、トピック、言語、Copilot要約を横断検索できるようにしてる。カードを選べば概要や技術情報が見られ、未解析のリポジトリにはREADMEから短い説明を出す仕組みもある。Copilot CLIによる解析はActionsで6時間ごとに確認し、変更があったものを定期実行なら最大8件ずつ処理する。GitHub Pagesで静的に公開できる一方、対象は公開リポジトリだけで、サイトから変更やIssue作成は行わない構成だ。",
+      "closingRemark": "更新がなければ再解析を省き、定期便も一度に8件まで。酒場の帳簿にしては、なかなか堅実だな。",
       "features": [
         "GitHub APIから所有者の公開リポジトリを取得",
-        "名前・説明・Topics・言語・Copilot要約を横断検索",
-        "技術領域ごとの簡易分類",
-        "未解析のリポジトリはREADMEから説明を補完",
-        "確認済みの公開ページへのリンクを表示"
+        "名前・説明・トピック・言語・要約を横断検索",
+        "技術領域ごとの分類とリポジトリ詳細表示",
+        "Copilot CLIで要約を定期更新し、変更がないものは再解析しない",
+        "未解析リポジトリはREADMEから暫定説明を表示"
       ],
       "technologies": [
         "JavaScript",
         "CSS",
         "HTML",
-        "GitHub API",
-        "GitHub Copilot CLI",
+        "GitHub REST API",
         "GitHub Actions",
+        "GitHub Copilot CLI",
         "GitHub Pages"
       ],
       "categories": [
-        "Web・ツール",
-        "GitHub",
+        "Webアプリ",
+        "静的サイト",
+        "GitHubツール",
         "リポジトリ検索"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-10-22T17:19:27Z",
+      "sourcePushedAt": "2026-10-22T21:44:46Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-10-22T17:19:27Z",
+        "pushedAt": "2026-10-22T21:44:46Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -47,8 +48,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "73205859dd8333a6bb37014fca07007eb467af05bf83f92387c86c45aad4ac4e",
-      "generatedAt": "2026-10-22T21:44:45.237Z"
+      "sourceFingerprint": "dd24ca535ebf8c04007cd9e83524f7251505c7a25b4e562bca4aad0f5ee3db7a",
+      "generatedAt": "2026-10-23T05:03:13.957Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -300,43 +301,43 @@
       "generatedAt": "2026-09-04T10:52:42.974Z"
     },
     "spike-rt-web-toolkit": {
-      "title": "SPIKE-RT開発・書き込みツール",
-      "summary": "SPIKE-RTアプリをブラウザで編集し、GitHub ActionsでビルドしてSPIKE Prime Hubへ書き込むためのツールキット。複数アプリや課題を扱え、Web Serialで実行ログも確認できます。",
-      "detail": "こいつは、SPIKE-RTアプリの編集からHubへの書き込み、実行ログの確認までをつなぐ開発ツールキットだ。中ではGitHub ActionsがSPIKE-RT v0.2.0を固定ビルドし、`apps/`以下の複数アプリをまとめて処理する。GitHub Pagesではアプリを選び、SHA-256を確認してからWebUSBとDfuSeでSPIKE Prime Hubへ書き込める。実行後はWeb Serialで115200 bpsのログを見られ、課題をサンプルから複製して独立に編集する仕組みもある。基準構成での実機動作は確認済みだが、WindowsでWinUSBを新規割り当てする経路は最終確認待ちで、ログのグラフ化なども今後の拡張として挙がっている。",
-      "closingRemark": "DFU用セットアップ本体は別リポジトリのReleaseに置き、こちらはダウンロードへの案内役に徹している。",
+      "title": "SPIKE-RT Web書き込みツール",
+      "summary": "SPIKE-RTアプリをブラウザで選び、SPIKE Prime Hubへ書き込んで実行ログまで確認するためのツールキット。GitHub Actionsによるビルドや差分アプリの再利用に対応し、課題用アプリも追加できます。",
+      "detail": "こいつは、SPIKE-RTアプリの編集からビルド、Hubへの書き込み、実行ログの確認までをブラウザ中心でつなぐツールキットだ。中ではGitHub Actionsがapps/以下のCアプリをビルドし、GitHub Pagesに公開したファームウェアをWebUSBとDfuSeでSPIKE Prime Hubへ送ってる。変更のないアプリはSHA-256で確認して成果物を再利用し、Pagesではアプリを選んで書き込めるほか、Web Serialで115200 bpsのログも読める。課題アプリのサンプルからの作成や、WindowsでDFU用WinUSBを準備する導線も用意されている。基準にしたコミットでは実機への書き込みからLED実行まで確認済みだが、WinUSB未設定PCへの新規ドライバ割り当ては最終実機確認待ちだ。",
+      "closingRemark": "変更のないファームウェアはハッシュを確かめて再利用する。キャッシュが消えたときの備えまで、抜かりはないようだな。",
       "features": [
-        "GitHub Actionsで複数のSPIKE-RTアプリをビルド",
-        "GitHub PagesからSHA-256を確認してWebUSB書き込み",
-        "課題アプリをサンプルから複製して編集・ビルド",
-        "Web Serialで115200 bpsの実行ログを表示",
-        "Windows向けDFU用WinUSBセットアップを案内"
+        "GitHub Actionsでapps/以下の複数アプリをビルド",
+        "変更のないファームウェアをSHA-256確認後に再利用",
+        "GitHub Pagesからアプリを選択してWebUSB書き込み",
+        "Web SerialでHubのUSBシリアルログを表示",
+        "課題アプリのサンプル複製とWindows向けDFU設定案内"
       ],
       "technologies": [
         "C",
         "JavaScript",
-        "SPIKE-RT",
+        "CSS",
+        "HTML",
+        "SPIKE-RT v0.2.0",
         "GitHub Actions",
         "GitHub Pages",
-        "WebUSB",
-        "DfuSe",
-        "Web Serial"
+        "WebUSB / DfuSe / Web Serial"
       ],
       "categories": [
         "開発ツール",
         "組み込み",
-        "ロボット",
-        "ブラウザ"
+        "ファームウェア",
+        "教育"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1341511616,
-      "sourcePushedAt": "2026-10-22T07:34:28Z",
+      "sourcePushedAt": "2026-10-23T04:59:44Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1341511616,
         "name": "spike-rt-web-toolkit",
-        "pushedAt": "2026-10-22T07:34:28Z",
+        "pushedAt": "2026-10-23T04:59:44Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -346,8 +347,8 @@
         "fork": false,
         "language": "C"
       },
-      "sourceFingerprint": "fdbb551ea0cb12623fd385acf80aee7c219055237d5b927414ddc8880a40f8dd",
-      "generatedAt": "2026-10-22T12:05:07.802Z"
+      "sourceFingerprint": "7439795fb3550b18b4e91851517abcd02f9f60f00a300ae47f5c67a6cb23e240",
+      "generatedAt": "2026-10-23T05:02:37.667Z"
     },
     "reaction-wheel-rocker-baseline-sim": {
       "title": "反応ホイール機体の基準シミュレータ",
@@ -4796,42 +4797,42 @@
     },
     "atoms3r-lateral-energy-control": {
       "title": "AtomS3R左右揺動制御",
-      "summary": "AtomS3Rとリアクションホイールで左右揺動を抑える実機向けファームウェアと、運転ログを調べる解析ページをまとめている。MEKFで姿勢を見ながらZEROクロスごとの入力を決め、負側入力の一括試験やRWLOGの予測・CSV出力にも対応するが、追加された予測式は解析専用で実機制御には使わない。",
-      "detail": "こいつは、AtomS3Rとリアクションホイールを使って左右揺動を抑える実機試験用ファームウェアと、その運転記録を調べる仕組みだ。中ではMEKFで姿勢を推定し、左右のピークとZEROクロスを見ながら、次のピークを目標角へ近づける入力時間を計算している。負側の入力幅を5条件で順序を変えて試し、割当や実行結果をRWLOGに残せるほか、保存ログからホイールの仕事や次ピークを予測してCSVに出す解析ページもある。最近の更新では測定順の乱数シードと実際の割当をそろえ、予測式は元の5回分に固定して解析専用にしている。係数や逆入力の応答は暫定で、実機の閉ループ性能までは自動試験だけでは確認できない。",
-      "closingRemark": "予測式は元の5回分に凍結し、実機入力には不使用。今回は制御より、ログに答え合わせを頼む慎重な構えだな。",
+      "summary": "AtomS3Rとリアクションホイールを使い、機体の左右揺動を抑える制御を実機で試すファームウェアだ。姿勢やZEROクロスから入力を調整し、ログ記録とブラウザ解析で制御の応答や予測誤差を確かめられる。",
+      "detail": "こいつは、AtomS3RとUnit Roller485、リアクションホイールを使って、機体の左右揺動を抑える制御を実機で調べるファームウェアだ。中ではMEKFで姿勢を推定し、左右のピークとZEROクロスを見ながら、次のピークを目標角へ近づける電流入力の時間を決めてる。二次エネルギー式の比較モードに加え、現行版では負側の次ピーク位置エネルギーから入力幅を選ぶ方式も試せる。測定条件や実行結果はRWLOGに残り、ブラウザで予測と実測の差を調べてCSVにできるってわけだ。ただ、新しい負側制御を含め、実機での閉ループ性能はまだ検証中で、自動試験だけでは確認できない。",
+      "closingRemark": "負側の予測は細かくなったが、実機での成績表はまだこれからだ。RWLOGはその日を待つように記録を続けてる。",
       "features": [
-        "MEKFの姿勢推定を使ったリアクションホイール制御",
-        "ZEROクロスごとに入力時間を計算し、RWLOGへ記録",
-        "負側5条件の順序をランダム化した一括実験に対応",
-        "保存済みRWLOGから次ピークを予測し、誤差や範囲外理由をCSV出力",
-        "直立基準の保存や異常停止など、実機試験向けの機能を搭載"
+        "リアクションホイールで左右揺動を制御する実機用ファームウェア",
+        "MEKFの姿勢推定からピークとZEROクロスを検出",
+        "二次エネルギー式と負側の次ピーク予測方式を比較可能",
+        "条件・入力・実測値をRWLOGに記録",
+        "ブラウザでログを解析し、予測誤差をCSVに保存"
       ],
       "technologies": [
         "C++",
         "Python",
-        "JavaScript",
         "PlatformIO",
         "Arduino",
+        "ESP32",
         "AtomS3R",
         "Unit Roller485",
         "MEKF"
       ],
       "categories": [
-        "ロボティクス",
-        "制御",
-        "ファームウェア",
-        "実験データ解析"
+        "組み込み",
+        "ロボット制御",
+        "実験",
+        "データ解析"
       ],
       "status": "実験",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1416789371,
-      "sourcePushedAt": "2026-10-21T07:29:52Z",
+      "sourcePushedAt": "2026-10-23T04:51:39Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1416789371,
         "name": "atoms3r-lateral-energy-control",
-        "pushedAt": "2026-10-21T07:29:52Z",
+        "pushedAt": "2026-10-23T04:51:39Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -4841,8 +4842,8 @@
         "fork": false,
         "language": "C++"
       },
-      "sourceFingerprint": "064b9e701d1fa3b60b57f4709b83714a42fed96641497b09b79ecd952216ee05",
-      "generatedAt": "2026-10-21T12:01:58.077Z"
+      "sourceFingerprint": "f40abe1ac3d3f7377ffb3b22aebf7c573bbd647f768f2975dc391892d728fe15",
+      "generatedAt": "2026-10-23T05:02:51.356Z"
     },
     "pico-copter-fc": {
       "title": "Pico向けクアッドコプター制御",
@@ -5044,16 +5045,16 @@
       "generatedAt": "2026-10-20T11:50:10.812Z"
     },
     "2026_10_22": {
-      "title": "反証局：都市記録の調査ゲーム",
-      "summary": "公開情報の動きを手掛かりに、都市の公的記録を書き換えようとする改竄者を追う一人用ゲーム。移動や照合、地点の隔離で追跡し、集めた証拠で書き換え済みの記録を反証します。現実の情報が追跡の速度や偽の痕跡に影響します。",
-      "detail": "こいつは、公開情報の動きを改竄者の行動に取り込み、公的記録を守る一人用の調査ゲームだ。プレイヤーは地図上の地点を移動し、照合で距離や痕跡を調べ、証拠を集めて書き換えられた記録を反証する。改竄者は記録の変更に2手かけるため、その準備地点を見つけて隔離したり、同じ地点に追い込んで確保したりできる。中ではGitHub Public Events、Hacker Newsの上位記事、USGSの直近1時間の地震情報を集計し、移動速度や迂回、偽の痕跡に反映してる。3つの記録が書き換えられる前に確保か反証を目指す仕組みで、通信できない場合も代替パルスで続けられる。ただし位置情報は使わず、現実の情報がゲーム上の信号に変わるところまでだな。",
-      "closingRemark": "世界のニュースや地震は追跡の燃料になるが、位置情報までは持ち込まない。調査の線引きは明快だな。",
+      "title": "公開情報連動の記録改竄調査ゲーム",
+      "summary": "公開情報の動きを手がかりに、都市の公的記録を書き換える改竄者を追う一人用ゲーム。異常反応を照合して証拠を集め、確保や記録の反証を目指します。GitHub、Hacker News、USGSの情報で相手の動きが変わり、通信できないときも代替パルスで続けられます。",
+      "detail": "こいつは、都市の公的記録が書き換えられる前に改竄者を確保するか、書き換えられた記録を反証する一人用の調査ゲームだ。中では12地点の地図を相手が移動し、記録の改竄には2手の準備が要る。準備中に複数の異常反応が出るので、照合で本物の作業を見分け、痕跡から証拠を集める。証拠があれば同じ地点に入って確保でき、2つ使えば改竄済みの記録を1つ取り戻せる。GitHub Public Events、Hacker News、USGSの情報を開始時や定期的に取り込み、移動速度や偽の痕跡に反映する仕組みだ。手数制限はなく、通信できない場合は代替パルスで続行する。位置情報は使わない。",
+      "closingRemark": "照合を誤れば偽の痕跡に振り回されるが、手数の上限はない。急ぐ理由は、相手が記録を書き換える前に見つけることだな。",
       "features": [
-        "改竄者の準備地点を手掛かりに追跡",
-        "照合で距離を調べ、新しい痕跡から証拠を獲得",
-        "地点の隔離や確保で改竄を妨害",
-        "証拠を2つ使って記録を1つ反証",
-        "公開情報をゲーム内の速度や痕跡に反映し、取得できない場合は代替パルスを使用"
+        "12地点を舞台に改竄者を追う一人用ゲーム",
+        "複数の異常反応を照合して本物の作業を特定",
+        "証拠を使った確保と、記録の反証が可能",
+        "公開情報の集計結果が相手の動きや偽の痕跡に反映",
+        "通信できない場合も代替パルスで続行"
       ],
       "technologies": [
         "JavaScript",
@@ -5061,23 +5062,23 @@
         "CSS",
         "GitHub Public Events API",
         "Hacker News API",
-        "USGS Earthquake GeoJSON Feed"
+        "USGS Earthquake GeoJSON feed"
       ],
       "categories": [
-        "ブラウザゲーム",
+        "ゲーム",
         "調査",
-        "戦略"
+        "公開データ連携"
       ],
-      "status": "試作",
+      "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1429619361,
-      "sourcePushedAt": "2026-10-22T16:34:48Z",
+      "sourcePushedAt": "2026-10-23T00:49:47Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1429619361,
         "name": "2026_10_22",
-        "pushedAt": "2026-10-22T16:34:48Z",
+        "pushedAt": "2026-10-23T00:49:47Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5087,8 +5088,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "356176bdd50d5aa314c773402b23a81e595c4e42080b21c3a7cca22e8cb509b9",
-      "generatedAt": "2026-10-22T17:19:12.170Z"
+      "sourceFingerprint": "26acbc5b1802deecbc65e6337900edd879a81ee5d17106f11f0f4bdddefa81ec",
+      "generatedAt": "2026-10-23T05:03:04.026Z"
     }
   },
   "repositoryCount": 103
