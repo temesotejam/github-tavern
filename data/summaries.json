@@ -1,43 +1,44 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-23T11:50:28.206Z",
+  "generatedAt": "2026-10-23T17:17:12.813Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ案内ポータル",
-      "summary": "temesotejamの公開GitHubリポジトリを、酒場風の画面で検索・閲覧する個人ポータル。GitHub APIから情報を集め、Copilotによる日本語要約やREADME由来の暫定紹介、分野別分類を使って各リポジトリを探せます。",
-      "detail": "こいつは、temesotejamの公開GitHubリポジトリを、酒場の依頼帳のような画面から探して読むための個人ポータルだ。ブラウザ側ではGitHub APIからリポジトリ情報を取得し、名前や説明、Topics、言語、Copilot要約をまとめて検索できる。分野別の簡易分類や並べ替えで候補を絞り、カードを選べば概要を確認できるほか、動作確認済みの公開ページがあればそこへ進める。説明がまだない新規リポジトリにはREADMEから短い暫定紹介を出し、GitHub Actions上のCopilot CLIが6時間ごとに更新分を最大8件ずつ解析して要約を蓄える仕組みだ。GitHub Pagesで静的に公開でき、扱うのは公開情報だけで、Private Repositoryやリポジトリへの書き込み操作は対象外ってわけだ。",
-      "closingRemark": "6時間ごとに最大8件ずつ帳面を更新するあたり、酒場の記録係も一度に全部は読まないらしい。",
+      "title": "公開リポジトリ探索酒場",
+      "summary": "所有する公開GitHubリポジトリを、酒場を巡るような画面で検索・閲覧する個人向けポータル。Copilotの日本語要約やREADMEからの暫定説明も使い、技術領域で絞り込んで内容を確かめられる。",
+      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、古い情報端末風の画面から探して読むための個人ポータルだ。中ではGitHub APIから一覧を取得し、名前や説明、Topics、言語、Copilot要約を横断検索できるようにしてる。カードを選べば概要を確認でき、Copilotの解析がまだないものにはREADMEから短い説明を出す仕組みもある。要約は6時間ごとのGitHub Actionsで更新され、変更のあったものを中心に最大8件ずつ解析する。GitHub Pagesで静的に公開できる一方、対象は公開リポジトリだけで、閲覧や検索以外の書き込み操作はしないってわけだ。",
+      "closingRemark": "6時間ごとに最大8件ずつ要約を補充する仕組みだ。酒場の記録係も、なかなか堅実に働いてるな。",
       "features": [
         "公開リポジトリをGitHub APIから取得",
         "名前・説明・Topics・言語・要約を横断検索",
-        "分野別の簡易分類と並べ替え",
-        "READMEから未解析リポジトリの暫定紹介を生成",
-        "Copilot CLIで更新分の要約を定期生成"
+        "技術領域ごとの分類とカードでの概要表示",
+        "Copilot CLIとGitHub Actionsによる要約の定期更新",
+        "要約未作成時はREADMEから暫定説明を表示"
       ],
       "technologies": [
         "JavaScript",
-        "HTML",
         "CSS",
+        "HTML",
         "GitHub API",
-        "GitHub Actions",
         "GitHub Copilot CLI",
+        "GitHub Actions",
         "GitHub Pages"
       ],
       "categories": [
-        "Web・ツール",
-        "GitHub",
-        "検索・アーカイブ"
+        "Webアプリ",
+        "検索・閲覧ツール",
+        "GitHub連携",
+        "個人ポータル"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-10-23T05:03:15Z",
+      "sourcePushedAt": "2026-10-23T11:50:29Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-10-23T05:03:15Z",
+        "pushedAt": "2026-10-23T11:50:29Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -47,8 +48,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "ea6248f6a82a34959a116df97de41b3290613f8d5e55d865a6a2fc740f172173",
-      "generatedAt": "2026-10-23T11:50:28.206Z"
+      "sourceFingerprint": "3b1ee273b4d234dd755ff3f8f6dbaa05ddc5640b928fef3a2ffd0c293a45b939",
+      "generatedAt": "2026-10-23T17:17:12.812Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -5044,15 +5045,15 @@
       "generatedAt": "2026-10-23T11:49:57.451Z"
     },
     "2026_10_22": {
-      "title": "公開情報連動の記録改竄調査ゲーム",
-      "summary": "公開情報の動きを手がかりに、都市の公的記録を書き換える改竄者を追う一人用ゲーム。異常反応を照合して証拠を集め、確保や記録の反証を目指します。GitHub、Hacker News、USGSの情報で相手の動きが変わり、通信できないときも代替パルスで続けられます。",
-      "detail": "こいつは、都市の公的記録が書き換えられる前に改竄者を確保するか、書き換えられた記録を反証する一人用の調査ゲームだ。中では12地点の地図を相手が移動し、記録の改竄には2手の準備が要る。準備中に複数の異常反応が出るので、照合で本物の作業を見分け、痕跡から証拠を集める。証拠があれば同じ地点に入って確保でき、2つ使えば改竄済みの記録を1つ取り戻せる。GitHub Public Events、Hacker News、USGSの情報を開始時や定期的に取り込み、移動速度や偽の痕跡に反映する仕組みだ。手数制限はなく、通信できない場合は代替パルスで続行する。位置情報は使わない。",
-      "closingRemark": "照合を誤れば偽の痕跡に振り回されるが、手数の上限はない。急ぐ理由は、相手が記録を書き換える前に見つけることだな。",
+      "title": "現実連動の調査ゲーム「反証局」",
+      "summary": "公開情報の動きを手がかりに、都市の公的記録を書き換える改竄者を追う一人用ゲーム。12地点の盤面で照合や証拠集め、隔離を使い、相手の確保か記録の反証を目指す。GitHub、Hacker News、USGSの情報が追跡に影響し、通信が途切れても代替パルスで続けられる。",
+      "detail": "こいつは、公開情報から組み立てた「世界の動き」を手がかりに、都市の公的記録を狙う改竄者を追う一人用の調査ゲームだ。盤面は12地点で、移動しながら照合して相手との距離や次の狙いを探り、痕跡から証拠を集める。改竄者は記録の変更に2手かかり、その準備中には偽を含む複数の異常反応が出るので、照合で本物を見極めるのが肝だな。証拠を持って同じ地点に入れば確保でき、証拠2つで変更済みの記録を反証することもできる。GitHub Public Events、Hacker Newsの上位記事、USGSの直近1時間の地震情報を開始時と定期的に取り込み、移動速度や迂回、偽の痕跡に反映する。手数制限はなく、通信できない場合も代替パルスで続行できるが、3件すべて改竄されると調査は終わりだ。",
+      "closingRemark": "GitHubの動きも地震も、ここでは追跡を左右する材料になる。現実の観測値が捜査の駆け引きに回るとは、なかなか妙な話だな。",
       "features": [
-        "12地点を舞台に改竄者を追う一人用ゲーム",
-        "複数の異常反応を照合して本物の作業を特定",
-        "証拠を使った確保と、記録の反証が可能",
-        "公開情報の集計結果が相手の動きや偽の痕跡に反映",
+        "12地点の盤面で改竄者を追跡",
+        "照合で距離や次の狙いを探り、痕跡から証拠を獲得",
+        "証拠による確保や記録の反証、地点の一時隔離が可能",
+        "公開情報を移動速度・迂回・偽の痕跡に反映",
         "通信できない場合も代替パルスで続行"
       ],
       "technologies": [
@@ -5060,24 +5061,25 @@
         "HTML",
         "CSS",
         "GitHub Public Events API",
-        "Hacker News API",
+        "Hacker News Firebase API",
         "USGS Earthquake GeoJSON feed"
       ],
       "categories": [
-        "ゲーム",
-        "調査",
-        "公開データ連携"
+        "ブラウザーゲーム",
+        "調査ゲーム",
+        "データ連動",
+        "戦略ゲーム"
       ],
-      "status": "ツール",
+      "status": "完成品",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1429619361,
-      "sourcePushedAt": "2026-10-23T00:49:47Z",
+      "sourcePushedAt": "2026-10-23T14:54:06Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1429619361,
         "name": "2026_10_22",
-        "pushedAt": "2026-10-23T00:49:47Z",
+        "pushedAt": "2026-10-23T14:54:06Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5087,8 +5089,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "26acbc5b1802deecbc65e6337900edd879a81ee5d17106f11f0f4bdddefa81ec",
-      "generatedAt": "2026-10-23T05:03:04.026Z"
+      "sourceFingerprint": "3dcd8932762d099c476b6c756c617059b8f68d129d65b851a64c886b3cc475f4",
+      "generatedAt": "2026-10-23T17:17:00.336Z"
     }
   },
   "repositoryCount": 103
