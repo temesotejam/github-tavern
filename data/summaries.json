@@ -1,44 +1,43 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-23T05:03:13.957Z",
+  "generatedAt": "2026-10-23T11:50:28.206Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ酒場",
-      "summary": "個人所有の公開GitHubリポジトリを、酒場風の画面から検索・閲覧する静的ポータル。GitHub APIで一覧を取得し、READMEを使った暫定説明やCopilotの日本語解析、技術領域別の分類を表示します。",
-      "detail": "こいつは、temesotejamが所有する公開GitHubリポジトリを、酒場風の画面から探して中身を確かめるための個人ポータルだ。中ではGitHub APIから一覧を取得し、名前や説明、トピック、言語、Copilot要約を横断検索できるようにしてる。カードを選べば概要や技術情報が見られ、未解析のリポジトリにはREADMEから短い説明を出す仕組みもある。Copilot CLIによる解析はActionsで6時間ごとに確認し、変更があったものを定期実行なら最大8件ずつ処理する。GitHub Pagesで静的に公開できる一方、対象は公開リポジトリだけで、サイトから変更やIssue作成は行わない構成だ。",
-      "closingRemark": "更新がなければ再解析を省き、定期便も一度に8件まで。酒場の帳簿にしては、なかなか堅実だな。",
+      "title": "公開リポジトリ案内ポータル",
+      "summary": "temesotejamの公開GitHubリポジトリを、酒場風の画面で検索・閲覧する個人ポータル。GitHub APIから情報を集め、Copilotによる日本語要約やREADME由来の暫定紹介、分野別分類を使って各リポジトリを探せます。",
+      "detail": "こいつは、temesotejamの公開GitHubリポジトリを、酒場の依頼帳のような画面から探して読むための個人ポータルだ。ブラウザ側ではGitHub APIからリポジトリ情報を取得し、名前や説明、Topics、言語、Copilot要約をまとめて検索できる。分野別の簡易分類や並べ替えで候補を絞り、カードを選べば概要を確認できるほか、動作確認済みの公開ページがあればそこへ進める。説明がまだない新規リポジトリにはREADMEから短い暫定紹介を出し、GitHub Actions上のCopilot CLIが6時間ごとに更新分を最大8件ずつ解析して要約を蓄える仕組みだ。GitHub Pagesで静的に公開でき、扱うのは公開情報だけで、Private Repositoryやリポジトリへの書き込み操作は対象外ってわけだ。",
+      "closingRemark": "6時間ごとに最大8件ずつ帳面を更新するあたり、酒場の記録係も一度に全部は読まないらしい。",
       "features": [
-        "GitHub APIから所有者の公開リポジトリを取得",
-        "名前・説明・トピック・言語・要約を横断検索",
-        "技術領域ごとの分類とリポジトリ詳細表示",
-        "Copilot CLIで要約を定期更新し、変更がないものは再解析しない",
-        "未解析リポジトリはREADMEから暫定説明を表示"
+        "公開リポジトリをGitHub APIから取得",
+        "名前・説明・Topics・言語・要約を横断検索",
+        "分野別の簡易分類と並べ替え",
+        "READMEから未解析リポジトリの暫定紹介を生成",
+        "Copilot CLIで更新分の要約を定期生成"
       ],
       "technologies": [
         "JavaScript",
-        "CSS",
         "HTML",
-        "GitHub REST API",
+        "CSS",
+        "GitHub API",
         "GitHub Actions",
         "GitHub Copilot CLI",
         "GitHub Pages"
       ],
       "categories": [
-        "Webアプリ",
-        "静的サイト",
-        "GitHubツール",
-        "リポジトリ検索"
+        "Web・ツール",
+        "GitHub",
+        "検索・アーカイブ"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-10-22T21:44:46Z",
+      "sourcePushedAt": "2026-10-23T05:03:15Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-10-22T21:44:46Z",
+        "pushedAt": "2026-10-23T05:03:15Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -48,8 +47,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "dd24ca535ebf8c04007cd9e83524f7251505c7a25b4e562bca4aad0f5ee3db7a",
-      "generatedAt": "2026-10-23T05:03:13.957Z"
+      "sourceFingerprint": "ea6248f6a82a34959a116df97de41b3290613f8d5e55d865a6a2fc740f172173",
+      "generatedAt": "2026-10-23T11:50:28.206Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -301,43 +300,43 @@
       "generatedAt": "2026-09-04T10:52:42.974Z"
     },
     "spike-rt-web-toolkit": {
-      "title": "SPIKE-RT Web書き込みツール",
-      "summary": "SPIKE-RTアプリをブラウザで選び、SPIKE Prime Hubへ書き込んで実行ログまで確認するためのツールキット。GitHub Actionsによるビルドや差分アプリの再利用に対応し、課題用アプリも追加できます。",
-      "detail": "こいつは、SPIKE-RTアプリの編集からビルド、Hubへの書き込み、実行ログの確認までをブラウザ中心でつなぐツールキットだ。中ではGitHub Actionsがapps/以下のCアプリをビルドし、GitHub Pagesに公開したファームウェアをWebUSBとDfuSeでSPIKE Prime Hubへ送ってる。変更のないアプリはSHA-256で確認して成果物を再利用し、Pagesではアプリを選んで書き込めるほか、Web Serialで115200 bpsのログも読める。課題アプリのサンプルからの作成や、WindowsでDFU用WinUSBを準備する導線も用意されている。基準にしたコミットでは実機への書き込みからLED実行まで確認済みだが、WinUSB未設定PCへの新規ドライバ割り当ては最終実機確認待ちだ。",
-      "closingRemark": "変更のないファームウェアはハッシュを確かめて再利用する。キャッシュが消えたときの備えまで、抜かりはないようだな。",
+      "title": "SPIKE-RT開発・書き込みツール",
+      "summary": "SPIKE-RTアプリの編集からビルド、SPIKE Prime Hubへの書き込み、実行ログの確認までをブラウザ中心でつなぐツールキット。変更のないファームウェアはSHA-256で確認して再利用し、課題アプリもサンプルから作成できます。",
+      "detail": "こいつは、SPIKE-RTアプリを編集してビルドし、SPIKE Prime Hubへ書き込んで動作ログまで確かめるためのツールキットだ。中ではGitHub Actionsが複数アプリをビルドし、ソースや設定に変更がなければSHA-256を確認したうえで過去のファームウェアを再利用する。GitHub PagesからWebUSBとDfuSeでDFUモードのHubへ書き込めて、通常起動後のUSBシリアルログはWeb Serialで確認できる。アプリはCファイル1つから追加でき、サンプルを複製して課題用アプリを作る仕組みもある。WindowsのWinUSBセットアップは別リポジトリのReleaseから案内しており、新規ドライバー割り当ての実機確認はまだ残ってるな。",
+      "closingRemark": "課題はサンプルから複製して独立したアプリにできる。書き込み窓口だけでなく、授業の段取りまで見ているわけだな。",
       "features": [
-        "GitHub Actionsでapps/以下の複数アプリをビルド",
-        "変更のないファームウェアをSHA-256確認後に再利用",
-        "GitHub Pagesからアプリを選択してWebUSB書き込み",
-        "Web SerialでHubのUSBシリアルログを表示",
-        "課題アプリのサンプル複製とWindows向けDFU設定案内"
+        "GitHub Actionsで複数アプリをビルドし、変更のないファームウェアをSHA-256確認後に再利用",
+        "GitHub PagesからWebUSBでSPIKE Prime HubへDFU書き込み",
+        "Web Serialで実行中のUSBシリアルログをブラウザ表示",
+        "Cファイル1つからアプリを追加でき、課題をサンプルから作成可能",
+        "Windows用WinUSBセットアップを外部Releaseから案内"
       ],
       "technologies": [
         "C",
         "JavaScript",
-        "CSS",
-        "HTML",
-        "SPIKE-RT v0.2.0",
+        "SPIKE-RT",
         "GitHub Actions",
         "GitHub Pages",
-        "WebUSB / DfuSe / Web Serial"
+        "WebUSB",
+        "DfuSe",
+        "Web Serial"
       ],
       "categories": [
+        "組み込み開発",
         "開発ツール",
-        "組み込み",
-        "ファームウェア",
+        "Webアプリ",
         "教育"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1341511616,
-      "sourcePushedAt": "2026-10-23T04:59:44Z",
+      "sourcePushedAt": "2026-10-23T07:02:09Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1341511616,
         "name": "spike-rt-web-toolkit",
-        "pushedAt": "2026-10-23T04:59:44Z",
+        "pushedAt": "2026-10-23T07:02:09Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -347,8 +346,8 @@
         "fork": false,
         "language": "C"
       },
-      "sourceFingerprint": "7439795fb3550b18b4e91851517abcd02f9f60f00a300ae47f5c67a6cb23e240",
-      "generatedAt": "2026-10-23T05:02:37.667Z"
+      "sourceFingerprint": "9296b8cc310402c620106e31d158c418aea8fb707e38d8be8b08ed398657400b",
+      "generatedAt": "2026-10-23T11:50:11.174Z"
     },
     "reaction-wheel-rocker-baseline-sim": {
       "title": "反応ホイール機体の基準シミュレータ",
@@ -4797,42 +4796,42 @@
     },
     "atoms3r-lateral-energy-control": {
       "title": "AtomS3R左右揺動制御",
-      "summary": "AtomS3Rとリアクションホイールを使い、機体の左右揺動を抑える制御を実機で試すファームウェアだ。姿勢やZEROクロスから入力を調整し、ログ記録とブラウザ解析で制御の応答や予測誤差を確かめられる。",
-      "detail": "こいつは、AtomS3RとUnit Roller485、リアクションホイールを使って、機体の左右揺動を抑える制御を実機で調べるファームウェアだ。中ではMEKFで姿勢を推定し、左右のピークとZEROクロスを見ながら、次のピークを目標角へ近づける電流入力の時間を決めてる。二次エネルギー式の比較モードに加え、現行版では負側の次ピーク位置エネルギーから入力幅を選ぶ方式も試せる。測定条件や実行結果はRWLOGに残り、ブラウザで予測と実測の差を調べてCSVにできるってわけだ。ただ、新しい負側制御を含め、実機での閉ループ性能はまだ検証中で、自動試験だけでは確認できない。",
-      "closingRemark": "負側の予測は細かくなったが、実機での成績表はまだこれからだ。RWLOGはその日を待つように記録を続けてる。",
+      "summary": "AtomS3Rとリアクションホイールを使い、機体の左右揺動を目標角へ近づける試験用ファームウェア。姿勢やピークをもとに入力時間を調整し、実機ログの記録・解析や条件を変えた一括測定にも対応する。",
+      "detail": "こいつは、AtomS3Rの左右揺動をリアクションホイールで抑える制御を、実機で試すためのファームウェアだ。中ではMEKFの姿勢推定から物理ピークとZEROクロスを見つけ、次のピークが目標角に近づくよう電流と入力時間を決めてる。二次エネルギー式の比較モードに加え、固定脚で負側の次ピーク位置エネルギーを予測する方式や、入力条件を変える一括測定も用意されている。RWLOGには指令や実電流、推定値などを残せて、ブラウザの解析ページでは入力による仕事や予測誤差を確認できる。係数は限られた実機ログに基づく暫定値で、閉ループ性能の確認は自動試験だけでは済まない。実機での改善は、これから測る段階だな。",
+      "closingRemark": "負側の入力幅を1 msずつ延ばす判定まで記録に残す。改善の確認も、ログに任せきりにはできないようだ。",
       "features": [
-        "リアクションホイールで左右揺動を制御する実機用ファームウェア",
         "MEKFの姿勢推定からピークとZEROクロスを検出",
-        "二次エネルギー式と負側の次ピーク予測方式を比較可能",
-        "条件・入力・実測値をRWLOGに記録",
-        "ブラウザでログを解析し、予測誤差をCSVに保存"
+        "リアクションホイールの電流と入力時間を調整",
+        "エネルギー予測による制御方式を比較可能",
+        "RWLOGに制御状態や実電流を記録",
+        "条件順序を変えた一括測定とブラウザ解析に対応"
       ],
       "technologies": [
         "C++",
         "Python",
+        "JavaScript",
         "PlatformIO",
         "Arduino",
         "ESP32",
-        "AtomS3R",
-        "Unit Roller485",
-        "MEKF"
+        "M5Unified",
+        "Adafruit AHRS"
       ],
       "categories": [
         "組み込み",
-        "ロボット制御",
-        "実験",
-        "データ解析"
+        "ロボティクス",
+        "制御",
+        "実験"
       ],
       "status": "実験",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1416789371,
-      "sourcePushedAt": "2026-10-23T04:51:39Z",
+      "sourcePushedAt": "2026-10-23T11:37:52Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1416789371,
         "name": "atoms3r-lateral-energy-control",
-        "pushedAt": "2026-10-23T04:51:39Z",
+        "pushedAt": "2026-10-23T11:37:52Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -4842,8 +4841,8 @@
         "fork": false,
         "language": "C++"
       },
-      "sourceFingerprint": "f40abe1ac3d3f7377ffb3b22aebf7c573bbd647f768f2975dc391892d728fe15",
-      "generatedAt": "2026-10-23T05:02:51.356Z"
+      "sourceFingerprint": "3820c71e15c655463cc338552e6f0d2e735a5f0244455dd842503c25faca9bca",
+      "generatedAt": "2026-10-23T11:49:42.239Z"
     },
     "pico-copter-fc": {
       "title": "Pico向けクアッドコプター制御",
@@ -4995,43 +4994,43 @@
       "generatedAt": "2026-10-19T13:36:25.403Z"
     },
     "pico-copter-fc-esc-telemetry": {
-      "title": "Pico Copter ESCテレメトリ",
-      "summary": "Raspberry Pi Pico系のクアッドコプター用ファームウェアに、BLHeli_32 ESCの専用TXパッドから温度・電圧・電流・回転数などを読む機能を加えた構成だ。ESCの応答確認には双方向DShotを使い、Arduino UNO R3向けの4-way HEX書き込みページも備える。",
-      "detail": "こいつは、Pico Copterのモーター制御を保ちながら、BLHeli_32 ESCの専用TXパッドから診断情報を読むためのファームウェアだ。中では双方向DShotの有効なeRPM返信でESCを認識し、認識した相手にだけGPIO5（UART1 RX）経由で別系統のテレメトリを要求してる。USBには温度、電圧、電流、消費mAh、電気回転数を表示し、返信が途切れてもモーター指令とは切り離して扱う。ブラウザーにはUNO R3向けの4-way HEX書き込みと読み戻し検証もあるが、HEXやESC用ファームウェアは同梱せず、ESC設定も変更しない。なお、特定のMAD ESC TXパッドでの受信確認はまだで、飛行試験済みのリリースではない。",
-      "closingRemark": "DShotの返信だけでESCを見分ける仕組みは整ったが、肝心の専用TXパッドでの受信確認はこれからだ。",
+      "title": "ESCテレメトリ対応Pico飛行制御",
+      "summary": "Raspberry Pi Pico向け飛行制御に、BLHeli_32 ESCのTXパッドから温度・電圧・電流・回転数などを読む診断機能を加えたファームウェア。GitHub ActionsでUF2をビルドして配布でき、SBUSフェイルセーフやCH5操作の飛行ログも備えています。",
+      "detail": "こいつは、Pico Copterの飛行制御にBLHeli_32 ESCの専用TXパッドテレメトリを加えたファームウェアだ。中では双方向DShotの返信でESCの接続を確かめ、認識したESCからUART経由で温度や電圧、電流、mAh、電気回転数を読み、USB診断へ出してる。SBUSの通信断に備えたフェイルセーフや、CH5を入れた間だけ動く100 Hz・38項目のリングログもあり、GitHub ActionsでPico用UF2をビルドしてPagesから配布できる。UNO R3向けのブラウザ書き込みページもあるが、HEXやESC用ファームウェアは同梱せず、ESC設定も変更しない。初代PicoでのDShot300とeRPM取得例はあるものの、専用TXパッドの受信や飛行動作は未検証で、飛行試験済みのリリースではない。",
+      "closingRemark": "DShotの返信確認とTXパッドの受信確認は別勘定だ。配線図とプロペラ外しの手順が、まだ出番を待ってるな。",
       "features": [
-        "双方向DShotの有効なeRPM返信からESCを自動認識",
-        "GPIO5のUART1 RXでESC専用TXテレメトリを受信",
-        "温度・電圧・電流・mAh・電気回転数をUSB表示",
-        "ESCテレメトリの有無にかかわらず4基のモーター出力を維持",
-        "ブラウザーからUNO R3へ4-way HEXを書き込み、読み戻し検証"
+        "双方向DShotの有効な返信でESCを検出し、モーター指令は返信の有無にかかわらず継続",
+        "UART1でESCの温度・電圧・電流・mAh・電気回転数を診断表示",
+        "SBUS受信断やフェイルセーフフラグに対応し、復帰後は再アーム操作を要求",
+        "CH5操作中に100 Hzで38項目をRAMへ記録するリングバッファ",
+        "GitHub ActionsでUF2をビルド・公開し、UNO R3用ブラウザ書き込みページも提供"
       ],
       "technologies": [
         "Raspberry Pi Pico",
         "RP2040",
-        "C",
-        "C++",
-        "双方向DShot300",
+        "Pico 2",
         "BLHeli_32",
+        "双方向DShot",
         "UART1",
-        "Web Serial"
+        "SBUS",
+        "GitHub Actions"
       ],
       "categories": [
-        "ドローン",
-        "フライトコントローラー",
+        "ファームウェア",
+        "飛行制御",
         "ESCテレメトリ",
-        "組み込みファームウェア"
+        "組み込み"
       ],
       "status": "実験",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1426713369,
-      "sourcePushedAt": "2026-10-20T10:23:14Z",
+      "sourcePushedAt": "2026-10-23T09:29:54Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1426713369,
         "name": "pico-copter-fc-esc-telemetry",
-        "pushedAt": "2026-10-20T10:23:14Z",
+        "pushedAt": "2026-10-23T09:29:54Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5041,8 +5040,8 @@
         "fork": false,
         "language": "C"
       },
-      "sourceFingerprint": "fbef83998689f52377e7f1818f4902cde0b75f095550a3f9b56a7156f41c62f6",
-      "generatedAt": "2026-10-20T11:50:10.812Z"
+      "sourceFingerprint": "750d222131b5821886dbe776861e1b50451a806e83aa481618cd870cfd55ff20",
+      "generatedAt": "2026-10-23T11:49:57.451Z"
     },
     "2026_10_22": {
       "title": "公開情報連動の記録改竄調査ゲーム",
