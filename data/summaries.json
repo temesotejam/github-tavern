@@ -1,43 +1,43 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-24T11:15:59.414Z",
+  "generatedAt": "2026-10-24T16:04:30.372Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ探索酒場",
-      "summary": "temesotejamが公開しているGitHubリポジトリを、検索・分類して概要を読める個人向けポータル。Copilot CLIがREADMEや構成をもとに日本語説明を更新し、未解析のものはREADMEから短い紹介を補う。",
-      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、酒場の依頼帳のような画面から探して内容を確かめるための個人ポータルだ。中ではGitHub APIから一覧を取得し、名前や説明、Topics、言語、Copilot要約を横断検索できるようにしてる。カードを選べば概要や確認済みの公開ページを見られ、説明がまだない新しいリポジトリにはREADMEから短い紹介を添える仕組みだ。別のGitHub Actionsワークフローは6時間ごとに更新を確認し、変更のあったものをCopilot CLIで解析して要約データを更新する。GitHub Pagesで動く静的サイトで、対象は公開リポジトリだけ、閲覧以外の書き込み操作はしない。定期解析は一度に最大8件だから、一覧の更新と説明の更新には少し時差が出ることもあるな。",
-      "closingRemark": "要約は6時間ごとに仕入れるが、一度の便は最大8件。酒場の帳面も、なかなか一気には埋まらないらしい。",
+      "title": "公開リポジトリ探索端末",
+      "summary": "所有する公開GitHubリポジトリを検索・分類し、カードから概要を確認できる個人向けポータル。更新されたリポジトリはCopilot CLIで解析し、日本語の説明を蓄積します。未解析のものはREADMEから短い説明を補います。",
+      "detail": "こいつは、所有する公開GitHubリポジトリを古い情報端末風の画面で探して、内容を確かめるための個人ポータルだ。中ではGitHub APIから一覧を取得し、名前や説明、Topics、言語、Copilot要約を横断検索して、技術領域ごとに分類してる。カードを選べばその場で概要を読めて、解析済みならREADMEや設定ファイルなどを根拠にした日本語説明も見られる。説明の更新は6時間ごとのActionsで行い、変更のあったものをCopilot CLIで解析する仕組みだ。未解析の新しいリポジトリにはREADMEから暫定説明を出すが、対象は公開リポジトリだけで、Private Repositoryの閲覧や書き込み操作はしない。",
+      "closingRemark": "6時間ごとに最大8件ずつ記録を更新する。急がせる仕組みではないが、公開分の棚卸しにはちょうどいい塩梅だな。",
       "features": [
-        "所有者の公開リポジトリをGitHub APIから取得",
-        "名前・説明・Topics・言語・Copilot要約を横断検索",
-        "技術領域による簡易分類とカード形式の詳細表示",
-        "未解析リポジトリはREADMEから短い紹介を生成",
-        "更新分を定期解析し、要約データを自動更新"
+        "所有する公開リポジトリをGitHub APIから取得",
+        "名前・説明・Topics・言語・要約を横断検索",
+        "技術領域ごとの分類とカード形式の概要表示",
+        "Copilot CLIによる定期解析と説明キャッシュ",
+        "未解析リポジトリはREADMEから暫定説明"
       ],
       "technologies": [
         "JavaScript",
         "CSS",
         "HTML",
         "GitHub API",
-        "GitHub Copilot CLI",
         "GitHub Actions",
+        "GitHub Copilot CLI",
         "GitHub Pages"
       ],
       "categories": [
-        "Webアプリ",
-        "GitHubツール",
-        "検索・アーカイブ"
+        "検索・閲覧ツール",
+        "GitHubリポジトリ管理",
+        "静的Webアプリ"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-10-24T05:05:50Z",
+      "sourcePushedAt": "2026-10-24T11:40:24Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-10-24T05:05:50Z",
+        "pushedAt": "2026-10-24T11:40:24Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -47,8 +47,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "3513b520e75032acfa874f5f006bca1f058100c82bbfbbbe18c3fdb49fe09d67",
-      "generatedAt": "2026-10-24T11:15:59.414Z"
+      "sourceFingerprint": "7f5ebd617e868b38e0a38cbe8586fcd3f1ead3059230fc1cbfd7e0244a526bd8",
+      "generatedAt": "2026-10-24T16:04:30.371Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -5091,39 +5091,43 @@
       "generatedAt": "2026-10-24T04:47:37.319Z"
     },
     "2026_10_24": {
-      "title": "PARADOX ARCHIVE",
-      "summary": "実在した技術・制度・思想の働きをカード能力に置き換えて戦う、一人用デッキ構築ゲーム。行動力や証拠・勢いをやりくりし、予告される敵の行動を見ながら検閲者の整合性を崩す。出典付きの反響カードを追加する仕組みもある。",
-      "detail": "こいつは、実在した技術や制度、思想が社会で果たした働きをカードにして、検閲者と戦う一人用のデッキ構築ゲームだ。中では行動力3を使って手札を切り、敵の整合性を0にすれば勝ち。科学的方法で証拠を集め、電信網で手札を増やし、蓄えた証拠や勢いを蒸気機関などの産業カードの攻撃に回す仕組みになってる。敵の次の行動は常に公開され、防御や恒久制度も使えるから、手札の強さだけでなく先を読んだ組み立てが要る。現実のニュースは出典付きの反響カードとして追加できる一方、悲劇や被害そのものは攻撃カードにしない方針だ。ブラウザで遊べるが、カードの追加や調整方法の詳しい説明までは資料から確認できないな。",
-      "closingRemark": "活版印刷で知識を複製する一方、敵は次の攻撃を先に知らせてくる。情報の扱いが、なかなか律儀な勝負だな。",
+      "title": "現象救助隊のニュース迷宮",
+      "summary": "現実のニュースや入力した話題を手がかりに、毎回形の変わる迷宮を探索する一人用ゲーム。RSS見出しが迷宮や敵に反映され、記事の出典を確かめながら、仲間と3階からの脱出を目指せます。",
+      "detail": "こいつは、現実の現象やニュースを迷宮に取り込んで探索する、一人用のターン制ゲームだ。プレイヤーが動くたびに仲間と敵も行動し、「観測」した敵を倒せば最大3体まで仲間になる。地域・環境・交通・科学のRSSニュースはGitHub Actionsで6時間ごとに集められ、記事の見出しや出典、日時が各階の「現実地点」として登場する。入力したニュースも次の迷宮の色や現象、観測ノートに反映され、現実地点での選択は次の階の関連タイプ数や強さを変える仕組みだ。記事本文を確認したとは表示せず、事件や事故などの見出しは自動除外する。探索の骨格は『赤の救助隊』の逆コンパイルを研究対象にしているが、任天堂などのコードや素材は使っていない。",
+      "closingRemark": "ニュースの見出しは迷宮に現れるが、記事本文までは読んだことにしない。その線引きも、このゲームの観測対象らしいな。",
       "features": [
-        "技術・制度・思想の働きをカード効果として表現",
-        "行動力を使う一人用デッキ構築バトル",
-        "証拠と勢いを蓄積して産業カードを強化",
-        "敵の次の行動が常に公開される",
-        "出典付きの反響カードを追加可能"
+        "ニュースや入力した話題から迷宮の色・敵・観測ノートを生成",
+        "RSS記事を現実地点として表示し、見出し・配信元・日時・出典を確認",
+        "地域・環境・交通・科学のニュースを6時間ごとに自動収集",
+        "仲間化や空腹、回復を含むターン制探索で3階からの脱出を目指す",
+        "記事本文は複製せず、事件・事故・災害などの見出しを自動除外"
       ],
       "technologies": [
-        "HTML",
         "JavaScript",
+        "HTML",
         "CSS",
-        "GitHub Pages"
+        "Canvas",
+        "GitHub Actions",
+        "RSS",
+        "GitHub Pages",
+        "LocalStorage"
       ],
       "categories": [
         "ゲーム",
-        "デッキ構築",
-        "歴史",
-        "シミュレーション"
+        "ローグライク",
+        "ニュース",
+        "一人用"
       ],
-      "status": "試作",
+      "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1431824671,
-      "sourcePushedAt": "2026-10-24T06:06:15Z",
+      "sourcePushedAt": "2026-10-24T15:58:37Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1431824671,
         "name": "2026_10_24",
-        "pushedAt": "2026-10-24T06:06:15Z",
+        "pushedAt": "2026-10-24T15:58:37Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5131,11 +5135,61 @@
         "archived": false,
         "disabled": false,
         "fork": false,
-        "language": "HTML"
+        "language": "JavaScript"
       },
-      "sourceFingerprint": "ecf0ce47089cbb398cc108164a94f3fc7187f0dfd28c60bec4300403def4d09d",
-      "generatedAt": "2026-10-24T11:15:47.128Z"
+      "sourceFingerprint": "25d2b34769b37ca1356a8da970b41060ea9141798814bbfa63ff9e6b06941260",
+      "generatedAt": "2026-10-24T16:04:16.862Z"
+    },
+    "2026_10_24_2": {
+      "title": "ブラウザ版ボクセルサバイバル",
+      "summary": "昔のMinecraftを参考にした、PCブラウザ向けのシングルプレイ・ボクセルゲーム。素材やモデルは手続き生成し、サーバーなしで遊べるほか、ワールドの状態をブラウザに保存して再開できます。",
+      "detail": "こいつは、昔のMinecraftを参考にしたPCブラウザ向けのシングルプレイ・ボクセルゲームだ。Three.jsとTypeScriptで動き、地形を掘って素材を集め、道具や設備を作りながらサバイバルを進めていく。中ではテクスチャやモデルを手続き生成していて、公式Minecraftの素材は同梱していない。ワールドの状態はSeedとモードごとにIndexedDBへ15秒ごとに保存され、JSONバックアップの書き出しや読み込みにも対応する。クリエイティブモードやGitHub Pagesへの公開も用意されてるが、流体表現は簡易方式で、長時間プレイや実機での操作感などの評価はまだ残っている。",
+      "closingRemark": "保存はこまめだが、ブラウザのデータ消去には勝てない。大事なワールドはJSONにも預けておくのがいい。",
+      "features": [
+        "採掘・クラフト・農業・戦闘を含む基本サバイバル",
+        "Seedとモードを指定してワールドを再開",
+        "IndexedDBへの自動保存とJSONバックアップ",
+        "素材やモデルを手続き生成し、公式素材は同梱しない",
+        "GitHub Pages向けビルドとブラウザ検証用スクリプト"
+      ],
+      "technologies": [
+        "TypeScript",
+        "Three.js",
+        "Vite",
+        "simplex-noise",
+        "IndexedDB",
+        "Vitest",
+        "Puppeteer",
+        "GitHub Pages"
+      ],
+      "categories": [
+        "ブラウザゲーム",
+        "ボクセル",
+        "サバイバル",
+        "シングルプレイ"
+      ],
+      "status": "試作",
+      "confidence": "high",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
+      "sourceRepositoryId": 1432235174,
+      "sourcePushedAt": "2026-10-24T15:59:54Z",
+      "sourceDefaultBranch": "main",
+      "sourceMetadata": {
+        "repositoryId": 1432235174,
+        "name": "2026_10_24_2",
+        "pushedAt": "2026-10-24T15:59:54Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "TypeScript"
+      },
+      "sourceFingerprint": "d2a156a3359d977586fa8f4176f006e0587752ee8433c03592e21977ae358f01",
+      "generatedAt": "2026-10-24T16:04:04.545Z"
     }
   },
-  "repositoryCount": 104
+  "repositoryCount": 105
 }
