@@ -1,24 +1,24 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-23T21:30:44.981Z",
+  "generatedAt": "2026-10-24T04:47:53.400Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ探索酒場",
-      "summary": "GitHub上で temesotejam が所有する公開リポジトリを、酒場風の画面から探して概要を確認する個人ポータル。名前や言語、Topics、Copilot要約で検索でき、更新に応じた日本語説明も自動で整えます。",
-      "detail": "こいつは、temesotejam の公開GitHubリポジトリを、古い情報端末のような画面から探して中身を確かめるための個人ポータルだ。ブラウザ側でGitHub APIから一覧を取り、名前や説明、Topics、使用言語、Copilot要約を横断検索し、技術領域ごとの分類やカード選択で概要表示もできる。詳しい説明はREADMEや設定、ファイル構成などを根拠にCopilot CLIで作り、6時間ごとのGitHub Actionsが更新済みのリポジトリを見てキャッシュへ反映する仕組みだ。未解析のものはREADMEから暫定説明を出すので、新しい記録も空欄のままにはしない。対象は公開リポジトリに限られ、サイトから削除や変更などの書き込みは行わない。定期更新は一度に最大8件、というところだな。",
-      "closingRemark": "更新のたびに全件を読み直すわけじゃない。前回の更新時刻が、ここでは番人の合図になってる。",
+      "title": "公開リポジトリ探索ポータル",
+      "summary": "公開GitHubリポジトリを、古い情報端末風の画面から検索・閲覧する個人向けポータル。GitHub APIで所有リポジトリを取得し、Copilotの日本語要約や分類、詳細表示をまとめて使える。",
+      "detail": "こいつは、temesotejamが所有する公開GitHubリポジトリを、酒場の依頼記録になぞらえた画面から探すための個人ポータルだ。中ではGitHub APIから一覧を読み込み、名前や説明、Topics、言語、要約を横断検索できる。カードを選べば概要が見られ、Copilot CLIの要約はREADMEやファイル構成、設定、直近コミットなどを根拠に作られる。未解析のリポジトリにはREADMEから暫定説明を表示し、Actionsが6時間ごとに確認して、更新されたものを最大8件ずつ解析する仕組みだ。GitHub Pagesで静的に公開できる一方、対象は公開リポジトリに限られ、書き込み操作もしない。",
+      "closingRemark": "公開APIだけを読む酒場で、要約の帳場は6時間ごとに開く。初回の大仕事も、まずは8件ずつだな。",
       "features": [
-        "公開リポジトリをGitHub APIから取得",
-        "名前・説明・Topics・言語・Copilot要約を横断検索",
-        "技術領域ごとの簡易分類とカード形式の概要表示",
-        "Copilot CLIとGitHub Actionsによる要約の定期更新",
-        "未解析のリポジトリはREADMEから暫定説明を表示"
+        "所有する公開リポジトリをGitHub APIから取得",
+        "名前・説明・Topics・言語・要約を横断検索",
+        "技術領域ごとの簡易分類とカードからの概要表示",
+        "READMEから未解析リポジトリの暫定説明を生成",
+        "Actionsで更新分のCopilot要約を定期生成"
       ],
       "technologies": [
         "JavaScript",
-        "CSS",
         "HTML",
-        "GitHub API",
+        "CSS",
+        "GitHub REST API",
         "GitHub Actions",
         "GitHub Copilot CLI",
         "GitHub Pages"
@@ -26,19 +26,18 @@
       "categories": [
         "Web・ツール",
         "GitHub",
-        "リポジトリ検索",
-        "自動要約"
+        "リポジトリ検索"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-10-23T17:17:14Z",
+      "sourcePushedAt": "2026-10-23T21:30:46Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-10-23T17:17:14Z",
+        "pushedAt": "2026-10-23T21:30:46Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -48,8 +47,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "928794e7c4eea6c65a7170944b7d3d9ec39225347d1069519fe8e9730523c61b",
-      "generatedAt": "2026-10-23T21:30:44.981Z"
+      "sourceFingerprint": "e080c1427300cbc690bc13bd96e329a598d39ac78055d3065e97113eb5d6c924",
+      "generatedAt": "2026-10-24T04:47:53.400Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -5045,41 +5044,40 @@
       "generatedAt": "2026-10-23T11:49:57.451Z"
     },
     "2026_10_22": {
-      "title": "現実連動の調査ゲーム「反証局」",
-      "summary": "公開情報の動きを手がかりに、都市の公的記録を書き換える改竄者を追う一人用ゲーム。12地点の盤面で照合や証拠集め、隔離を使い、相手の確保か記録の反証を目指す。GitHub、Hacker News、USGSの情報が追跡に影響し、通信が途切れても代替パルスで続けられる。",
-      "detail": "こいつは、公開情報から組み立てた「世界の動き」を手がかりに、都市の公的記録を狙う改竄者を追う一人用の調査ゲームだ。盤面は12地点で、移動しながら照合して相手との距離や次の狙いを探り、痕跡から証拠を集める。改竄者は記録の変更に2手かかり、その準備中には偽を含む複数の異常反応が出るので、照合で本物を見極めるのが肝だな。証拠を持って同じ地点に入れば確保でき、証拠2つで変更済みの記録を反証することもできる。GitHub Public Events、Hacker Newsの上位記事、USGSの直近1時間の地震情報を開始時と定期的に取り込み、移動速度や迂回、偽の痕跡に反映する。手数制限はなく、通信できない場合も代替パルスで続行できるが、3件すべて改竄されると調査は終わりだ。",
-      "closingRemark": "GitHubの動きも地震も、ここでは追跡を左右する材料になる。現実の観測値が捜査の駆け引きに回るとは、なかなか妙な話だな。",
+      "title": "都市記録の反証ゲーム",
+      "summary": "公開情報の動きを手掛かりに、公的記録を改竄する相手を追う一人用の調査ゲーム。GitHub、Hacker News、USGSの情報を移動速度や偽の痕跡に反映し、照合・隔離・反証を使って改竄を食い止める。",
+      "detail": "こいつは、都市の公的記録が三つ書き換えられる前に、改竄者を確保するか、書き換え済みの記録を反証する一人用ゲームだ。中では12地点の地図を移動しながら、照合で相手の距離や次の狙いを探り、証拠を集めていく。改竄には三手の準備が必要だが、その間は複数の異常反応が出るから、本物を見分けなきゃならない。GitHub Public Events、Hacker Newsの上位記事、USGSの直近一時間の地震情報を二手番ごと、または60秒ごとに集計し、移動速度や迂回、偽の痕跡へ反映してる。通信できない場合は代替パルスで続行し、位置情報は使わない仕組みだ。",
+      "closingRemark": "地震の件数まで改竄者の移動や偽痕跡に響くとは、追う側も世界情勢を見ておく必要があるらしい。",
       "features": [
-        "12地点の盤面で改竄者を追跡",
-        "照合で距離や次の狙いを探り、痕跡から証拠を獲得",
-        "証拠による確保や記録の反証、地点の一時隔離が可能",
-        "公開情報を移動速度・迂回・偽の痕跡に反映",
-        "通信できない場合も代替パルスで続行"
+        "12地点を舞台にした一人用の調査ゲーム",
+        "照合で改竄者の距離や次の狙いを調べ、証拠を集める",
+        "隔離で地点を一時閉鎖し、反証で記録を取り戻す",
+        "公開情報を移動速度、迂回、偽の痕跡に反映",
+        "通信できない場合も代替パルスで続行し、位置情報は不使用"
       ],
       "technologies": [
-        "JavaScript",
         "HTML",
         "CSS",
+        "JavaScript",
         "GitHub Public Events API",
-        "Hacker News Firebase API",
-        "USGS Earthquake GeoJSON feed"
+        "Hacker News API",
+        "USGS Earthquake GeoJSON Feed"
       ],
       "categories": [
-        "ブラウザーゲーム",
+        "ブラウザゲーム",
         "調査ゲーム",
-        "データ連動",
-        "戦略ゲーム"
+        "シミュレーション"
       ],
-      "status": "完成品",
+      "status": "実験",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1429619361,
-      "sourcePushedAt": "2026-10-23T14:54:06Z",
+      "sourcePushedAt": "2026-10-24T03:46:48Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1429619361,
         "name": "2026_10_22",
-        "pushedAt": "2026-10-23T14:54:06Z",
+        "pushedAt": "2026-10-24T03:46:48Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5087,10 +5085,10 @@
         "archived": false,
         "disabled": false,
         "fork": false,
-        "language": "JavaScript"
+        "language": "HTML"
       },
-      "sourceFingerprint": "3dcd8932762d099c476b6c756c617059b8f68d129d65b851a64c886b3cc475f4",
-      "generatedAt": "2026-10-23T17:17:00.336Z"
+      "sourceFingerprint": "10d2abada92a8cf9a25181c5958752814ecbdaa5306b314c3573a317a020a301",
+      "generatedAt": "2026-10-24T04:47:37.319Z"
     }
   },
   "repositoryCount": 103
