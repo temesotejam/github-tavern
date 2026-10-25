@@ -1,43 +1,44 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-24T20:58:50.188Z",
+  "generatedAt": "2026-10-25T04:55:39.225Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ案内端末",
-      "summary": "公開GitHubリポジトリを酒場風の画面で探し、概要まで読める個人向けポータル。所有者の公開リポジトリをAPIから取得し、名前・説明・Topics・言語・Copilot要約を横断検索できるほか、定期更新の日本語説明やREADME由来の暫定表示にも対応する。",
-      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、古い情報端末を模した画面から探して読むための個人ポータルだ。中ではGitHub APIから公開リポジトリを取得し、名前や説明、Topics、言語、Copilot要約をまとめて検索して、技術領域ごとの分類やカード上の詳細表示につないでる。説明文はCopilot CLIがREADMEや構成、設定ファイルなどを見て生成し、6時間ごとに確認して、更新のあったものを最大8件ずつ処理する仕組みだな。解析前の新しいリポジトリにはREADMEから短い暫定説明を出し、GitHub Pagesで静的に公開できる。扱うのは公開情報だけで、Private Repositoryの閲覧やリポジトリへの書き込みはしない。要するに、個人の公開コードを探しやすく見せる読み取り専用の案内所ってわけだ。",
-      "closingRemark": "更新がなければ要約を作り直さず、変更があれば一度に八件まで。酒場の帳面も、ちゃんと行列を作るらしい。",
+      "title": "公開リポジトリ探索ポータル",
+      "summary": "temesotejamが公開しているGitHubリポジトリを、酒場を思わせる画面から検索・閲覧する個人向けポータル。GitHub APIで情報を取得し、CopilotがREADMEや設定ファイルなどをもとに作る日本語の説明も確認できます。",
+      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを探して中身を眺めるための個人向けポータルだ。中ではGitHub APIからリポジトリ情報を取得し、名前や説明、Topics、言語、Copilotの要約を横断検索できる。カードを選べば概要や確認済みの公開ページを見られて、Copilotの説明がまだないリポジトリにはREADMEから作った短い説明を添える仕組みもある。説明の更新はGitHub Actionsが6時間ごとに確認し、更新のあったものを最大8件ずつ解析する。対象は公開リポジトリだけで、サイトから変更やIssue作成はしない。要するに、読むための端末に徹してるってわけだ。",
+      "closingRemark": "6時間ごとに最大8件ずつ、という更新ペースまで酒場らしく順番待ちだな。",
       "features": [
-        "所有者の公開リポジトリをGitHub APIから取得",
-        "名前・説明・Topics・言語・Copilot要約を横断検索",
-        "技術領域で分類し、カードから概要を表示",
-        "Copilot CLIで説明を定期更新し、変更分を段階的に解析",
-        "未解析のリポジトリはREADMEから暫定説明を表示"
+        "公開リポジトリをGitHub APIから取得",
+        "名前・説明・Topics・言語・要約を横断検索",
+        "技術領域ごとの簡易分類",
+        "Copilotによる日本語説明を定期更新",
+        "未解析のリポジトリはREADMEから短い説明を生成"
       ],
       "technologies": [
         "JavaScript",
-        "HTML",
         "CSS",
-        "GitHub REST API",
-        "GitHub Copilot CLI",
+        "HTML",
+        "GitHub API",
         "GitHub Actions",
+        "GitHub Copilot CLI",
         "GitHub Pages"
       ],
       "categories": [
         "Webアプリ",
         "GitHubツール",
-        "検索・閲覧"
+        "リポジトリ検索",
+        "静的サイト"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-10-24T16:17:18Z",
+      "sourcePushedAt": "2026-10-24T20:58:51Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-10-24T16:17:18Z",
+        "pushedAt": "2026-10-24T20:58:51Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -47,8 +48,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "abadd1bbb6916f07f48e47af9490d233939f9db2b86df94edf4c4030d658e2b4",
-      "generatedAt": "2026-10-24T20:58:50.188Z"
+      "sourceFingerprint": "2fc5febbbeb61bf7d4e412dcf3830dbc1a70954d1d616c58d5c20122ad045236",
+      "generatedAt": "2026-10-25T04:55:39.225Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -5091,43 +5092,42 @@
       "generatedAt": "2026-10-24T04:47:37.319Z"
     },
     "2026_10_24": {
-      "title": "現象救助隊・ニュース迷宮",
-      "summary": "現実のニュースや入力した出来事を手がかりに、形の変わる迷宮を探索する一人用ゲーム。ニュースの見出しやテーマが敵や階層の効果に反映され、3階からの脱出を目指します。",
-      "detail": "こいつは、現実のニュースや入力した出来事を迷宮に取り込み、探索する一人用ゲームだ。中では毎回変わるフロアを進み、プレイヤーが動くたびに仲間や敵も行動する。現象を観測して倒せば仲間になり、空腹やHPを管理しながら光る階段を探して3階から脱出する仕組みだな。ニュースは迷宮の色や出現する現象に加え、各階の「現実地点」として登場し、接触するとRSSの見出し・配信元・日時・出典を確認できる。記事本文を確認済みとは扱わず、現実地点での選択も記事への賛否ではなく、次の階の敵の種類や強さを変えるゲーム上の判断だ。地域・科学・交通・環境のニュースはGitHub Actionsで6時間ごとに収集され、事件や災害などの見出しは除外される。",
-      "closingRemark": "記事本文は複製せず、出典への道筋だけを迷宮に置く。現実との距離感まで、ゲームのルールに織り込んであるな。",
+      "title": "現象救助隊：ニュース迷宮",
+      "summary": "現実のニュースや入力した出来事を迷宮に取り込み、仲間と探索する一人用のターン制ゲーム。公開RSSの見出しも現実地点として登場し、記事の出典を確認しながら、ニュースのテーマが迷宮や攻略にどう反映されるかを体験できます。",
+      "detail": "こいつは、現実の出来事を手がかりに形を変える迷宮を、仲間と探索する一人用ゲームだ。矢印キーやWASDで進むと敵や仲間も行動し、「観測」した敵を仲間にしながら、3階の光る階段を目指す。入力したニュースは迷宮の色や敵、観測ノートに反映され、各階の現実地点ではRSSの見出し、配信元、日時、出典を確認できる。地域・環境・交通・科学のテーマは、それぞれ回復や地図開示などゲーム内の効果にもつながる仕組みだな。公開ニュースはGitHub Actionsで6時間ごとに集め、事件や事故などの見出しを除外しているが、記事本文を確認したとは扱わず、見出しと出典を表示するところまでだ。",
+      "closingRemark": "見出しは迷宮に現れるが、記事本文までは潜らない。その線引きも、この調査の一部ってわけだ。",
       "features": [
-        "ニュースや入力内容を迷宮の色・現象・観測ノートに反映",
-        "RSS記事を各階の現実地点として表示し、見出し・配信元・日時・出典を確認可能",
-        "現実地点での選択が次の階の関連タイプ数や強さに影響",
-        "現象を仲間にし、空腹やHPを管理するターン制探索",
-        "地域・科学・交通・環境のニュースを6時間ごとに自動収集"
+        "現実のニュースや入力内容を迷宮の生成に反映",
+        "ターン制の探索と、観測した敵の仲間化",
+        "3階から脱出すると調査成功",
+        "RSS見出し・配信元・日時・出典を現実地点で表示",
+        "ニュース収集は6時間ごとで、事件・事故などの見出しを除外"
       ],
       "technologies": [
         "JavaScript",
         "HTML",
         "CSS",
         "Canvas",
-        "RSS",
         "GitHub Actions",
-        "GitHub Pages",
-        "localStorage"
+        "RSS",
+        "GitHub Pages"
       ],
       "categories": [
         "ゲーム",
-        "ローグライク",
         "ニュース",
+        "ターン制探索",
         "ブラウザゲーム"
       ],
       "status": "完成品",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1431824671,
-      "sourcePushedAt": "2026-10-24T20:44:42Z",
+      "sourcePushedAt": "2026-10-25T04:36:18Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1431824671,
         "name": "2026_10_24",
-        "pushedAt": "2026-10-24T20:44:42Z",
+        "pushedAt": "2026-10-25T04:36:18Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5137,8 +5137,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "e1aece328314f5c51761098021bf769d271fe30309096aebc6851c87122da8a2",
-      "generatedAt": "2026-10-24T20:58:16.499Z"
+      "sourceFingerprint": "5fc2bb109479c8643897cf707300dfbc70d898559717cb9d53bd60b4a7b1167b",
+      "generatedAt": "2026-10-25T04:55:27.703Z"
     },
     "2026_10_24_2": {
       "title": "ブラウザ版ボクセルサバイバル",
