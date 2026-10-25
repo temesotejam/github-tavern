@@ -1,44 +1,44 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-25T16:34:17.452Z",
+  "generatedAt": "2026-10-25T20:58:56.433Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ酒場",
-      "summary": "temesotejamが所有する公開GitHubリポジトリを、酒場風の画面で検索・閲覧する個人ポータル。GitHub APIから情報を集め、CopilotがREADMEや設定などを根拠に作る日本語概要も表示し、未解析の新着にはREADMEから暫定紹介を付ける。",
-      "detail": "こいつは、temesotejamが所有する公開GitHubリポジトリを、酒場風の画面から探して中身を確かめる個人向けポータルだ。中ではGitHub APIから一覧を取り、名前や説明、Topics、言語、Copilot要約を横断検索し、技術領域で絞り込める。カードを選べば概要が開き、解析済みならREADMEや設定、構成などを根拠にした日本語説明が読めるし、未解析の新着にはREADMEから短い暫定紹介を付ける。Copilot CLIの更新は6時間ごとで、変更のあったものを定期実行では最大8件ずつ処理する仕組みだ。GitHub Pagesで静的に公開でき、対象は公開リポジトリだけ。閲覧専用で、書き込み操作はしない。",
-      "closingRemark": "6時間ごとに最大8件ずつか。酒場の帳面も、急かさず少しずつ更新する流儀らしいな。",
+      "title": "公開リポジトリ探索ポータル",
+      "summary": "公開GitHubリポジトリを検索・分類しながら選べる個人向けポータルだ。GitHub APIから取得した情報に、CopilotがREADMEや設定などを根拠に作る日本語概要を添え、GitHub Pages上で閲覧できる。",
+      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、古い情報端末風の画面から探して読むための個人ポータルだ。中ではJavaScriptがGitHub APIから公開リポジトリを取得し、名前・説明・Topics・言語・Copilot要約を横断検索できるようにしてる。技術領域ごとの分類や更新順の並べ替えもあり、カードを選べば概要や確認済みの公開ページへ進める。説明データはActionsが6時間ごとに更新を確認し、変更のあったものをCopilot CLIで解析してJSONに保存する仕組みで、定期実行では1回最大8件だ。GitHub Pagesで静的に公開できる一方、対象は公開リポジトリだけで、サイトから削除や変更などの書き込みはしない。要するに、眺めるためのアーカイブであって、リポジトリを操作する管理画面じゃないってわけだ。",
+      "closingRemark": "6時間ごとに更新を見張っても、一度に追うのは最大8件。酒場の帳面も、まとめて抱え込まない作りだな。",
       "features": [
-        "公開リポジトリの情報をGitHub APIから取得",
+        "公開リポジトリをGitHub APIから取得",
         "名前・説明・Topics・言語・要約を横断検索",
-        "技術領域での分類と絞り込み",
-        "Copilotによる根拠付き日本語概要",
-        "未解析リポジトリにはREADME由来の暫定紹介を表示"
+        "技術領域ごとの分類と更新順の並べ替え",
+        "Copilot CLIによる日本語概要の定期更新",
+        "READMEからの暫定説明と確認済み公開ページへのリンク"
       ],
       "technologies": [
         "JavaScript",
         "CSS",
         "HTML",
         "GitHub API",
-        "GitHub Actions",
         "GitHub Copilot CLI",
+        "GitHub Actions",
         "GitHub Pages"
       ],
       "categories": [
-        "公開リポジトリ検索",
-        "AI要約",
-        "静的サイト",
-        "GitHub連携"
+        "Web・ツール",
+        "GitHub",
+        "検索",
+        "個人ポータル"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-10-25T11:45:55Z",
+      "sourcePushedAt": "2026-10-25T16:34:18Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-10-25T11:45:55Z",
+        "pushedAt": "2026-10-25T16:34:18Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -48,8 +48,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "f37d42b6c4ed6c182e9610d653b981eaa0cc0ee1d03b2e03be127d5d5fa55705",
-      "generatedAt": "2026-10-25T16:34:17.452Z"
+      "sourceFingerprint": "0a2dfe2aa3f325a270d4019c1454fdd0951c87380ba27e1dd52aeea2fa07a5cb",
+      "generatedAt": "2026-10-25T20:58:56.432Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -5092,16 +5092,16 @@
       "generatedAt": "2026-10-24T04:47:37.319Z"
     },
     "2026_10_24": {
-      "title": "現象救助隊：ニュース迷宮",
-      "summary": "現実のニュースや入力した出来事をもとに、形や出現する現象が変わる一人用のターン制探索ゲーム。RSS見出しの出典を確かめながら迷宮を進み、仲間集めや階ごとの選択を経て3Fからの脱出を目指します。",
-      "detail": "こいつは、現実の現象やニュースを迷宮に取り込み、3Fからの脱出を目指す一人用の探索ゲームだ。中では、プレイヤーが一度動くたびに仲間と敵も行動し、「観測」した敵を仲間にしたり、携帯食や救護メモで探索を続けたりする。入力したニュースは次の迷宮の色や現象に反映され、各階にはRSS記事の見出し・配信元・日時・出典を示す「現実地点」も現れる。そこでの選択は次の階の敵の種類や強さを変えるが、記事への賛否を表すものじゃない。公開ニュースはGitHub Actionsで6時間ごとに収集し、事件や事故などの見出しを除外して記事本文は保存しないため、出典は追えても本文を確認したことにはならないってわけだ。",
-      "closingRemark": "迷宮には見出しが現れるが、記事本文までは連れてこない。そこは出典リンクをたどる番だな。",
+      "title": "ニュースから生まれる迷宮探索ゲーム",
+      "summary": "現実のニュースや入力した出来事をもとに迷宮が変化する、一人用の探索ゲーム。RSS見出しを現実地点として表示し、仲間やアイテムを活用して3階からの脱出を目指します。",
+      "detail": "こいつは、現実のニュースや入力した出来事を迷宮に映し出し、3階からの脱出を目指す一人用の探索ゲームだ。中ではターンごとに敵や仲間も動き、現象を観測して倒せば最大3体まで仲間になる。各階の現実地点ではRSSの見出し、配信元、日時、出典を確認でき、そこでの選択によって次の階の関連タイプや強さが変わる。地域・環境・交通・科学のニュースはGitHub Actionsが6時間ごとに収集し、事件や事故などの見出しは除外、記事本文は保存しない仕組みだ。入力ニュースも迷宮の色や出現する現象に反映されるが、現実地点での選択は記事への賛否を示すものじゃない。",
+      "closingRemark": "見出しと出典は迷宮に持ち込むが、記事本文を読んだふりはしない。探索隊にしては用心深いな。",
       "features": [
-        "ニュースや入力した出来事を迷宮の色・現象・観測ノートに反映",
-        "ターン制の探索、敵の観測と仲間化、空腹・HP管理",
-        "3Fの階段から脱出すると調査成功",
-        "各階の現実地点でRSS見出しと出典情報を確認",
-        "公開ニュースを6時間ごとに自動収集し、記事本文は保存しない"
+        "現実のニュースや入力内容で迷宮の色・現象が変化",
+        "ターン制で敵と仲間が行動し、現象を仲間にできる",
+        "RSS見出し・配信元・日時・出典を現実地点で表示",
+        "地域・環境・交通・科学のニュースを6時間ごとに自動収集",
+        "携帯食や救護メモを使い、3階からの脱出を目指す"
       ],
       "technologies": [
         "JavaScript",
@@ -5110,24 +5110,25 @@
         "Canvas",
         "GitHub Actions",
         "RSS",
-        "GitHub Pages"
+        "GitHub Pages",
+        "localStorage"
       ],
       "categories": [
         "ゲーム",
-        "ローグライク",
         "ニュース",
-        "ブラウザゲーム"
+        "ローグライク",
+        "ブラウザ"
       ],
-      "status": "試作",
+      "status": "完成品",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1431824671,
-      "sourcePushedAt": "2026-10-25T16:11:23Z",
+      "sourcePushedAt": "2026-10-25T20:47:50Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1431824671,
         "name": "2026_10_24",
-        "pushedAt": "2026-10-25T16:11:23Z",
+        "pushedAt": "2026-10-25T20:47:50Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5137,47 +5138,47 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "25fb0e0bad1566cee6b29dc44384e4c08bb49b514ae6f55bf9bafab77575161c",
-      "generatedAt": "2026-10-25T16:34:01.928Z"
+      "sourceFingerprint": "1677d0c5283dc9002e473d1f3e6e659d8d8934b86bf4ce44579f0c1d73810b96",
+      "generatedAt": "2026-10-25T20:58:29.288Z"
     },
     "2026_10_24_2": {
-      "title": "Classic風ボクセルサバイバル",
-      "summary": "昔のMinecraftを参考にした、PCブラウザ向けのシングルプレイ・ボクセルサバイバルゲーム。採掘やクラフト、農業、戦闘からエンド攻略まで遊べて、ワールドの状態はブラウザに保存できます。",
-      "detail": "こいつは、昔のMinecraftを参考にしたPCブラウザ向けのシングルプレイ・ボクセルゲームだ。Three.jsとTypeScriptで描画やゲームの仕組みを組み、テクスチャやモデルは手続き生成してるから、公式Minecraftの素材は同梱していない。木や石を集めて道具を作るところから始まり、動物や農業、村・遺跡の探索、エンドとエンダードラゴンまで遊べる。ワールドの状態はSeedとモードごとにIndexedDBへ15秒間隔で保存され、手動保存やJSONバックアップも使えるってわけだ。ただしMinecraftと同一仕様ではなく、流体の計算は簡易方式で、低スペックPCでの性能評価もまだ残ってる。",
-      "closingRemark": "2時間の耐久試験では5分ごとに保存と再読込を照合する一方、低スペックPCの30 FPSは未評価。記録の細かさと実機の快適さは、別勘定らしいな。",
+      "title": "ブラウザ向けボクセルサバイバル",
+      "summary": "昔のMinecraftを参考にした、PCブラウザで遊べるシングルプレイのボクセルゲーム。採掘やクラフト、農業、敵との戦闘に加え、ワールドの保存・バックアップやエンド攻略まで用意されています。ゲーム用サーバーは不要です。",
+      "detail": "こいつは、昔のMinecraftを参考にしたPCブラウザ向けのシングルプレイ・ボクセルゲームだ。Three.jsとTypeScriptで描画やゲームの仕組みを組み、テクスチャやモデルは手続き生成しているから、公式Minecraftの素材は同梱していない。木を集めて道具を作るところから始まり、農業や動物の繁殖、村や遺跡の探索、エンドとエンダードラゴンまで遊べる。ワールドはSeedとモードごとにIndexedDBへ保存でき、JSONでのバックアップや復元にも対応してる。GitHub Pagesで公開でき、サーバーは不要。ただし流体計算は簡易方式で、Minecraftと同じ仕様ではなく、実機の操作感や性能評価にも未確認の部分が残っているな。",
+      "closingRemark": "旧セーブは新しい地形に置き換わらない。エンドを探すなら、新しいSeedを用意するのが筋ってわけだ。",
       "features": [
-        "採掘・クラフト・農業・戦闘を含むシングルプレイのサバイバル",
-        "村や遺跡、エンド、エンダードラゴンを追加",
-        "Seedとモードごとにワールドを保存し、JSONでバックアップ可能",
-        "テクスチャ・アイコン・モデルを手続き生成",
-        "GitHub Pagesで公開でき、ゲーム用サーバーは不要"
+        "採掘・クラフト・戦闘・農業を含むサバイバル",
+        "村や遺跡、エンドとエンダードラゴンを実装",
+        "Seedとモードごとの自動保存、JSONバックアップと復元",
+        "素材を手続き生成し、公式Minecraftの素材は同梱しない",
+        "ブラウザ操作によるプレイ・保存検証用スクリプトを用意"
       ],
       "technologies": [
         "TypeScript",
         "Three.js",
         "Vite",
-        "simplex-noise",
         "IndexedDB",
-        "GitHub Pages",
+        "simplex-noise",
+        "Node.js",
         "Puppeteer",
-        "Vitest"
+        "GitHub Pages"
       ],
       "categories": [
-        "ブラウザゲーム",
+        "ゲーム",
         "ボクセル",
         "サバイバル",
-        "シングルプレイ"
+        "ブラウザ"
       ],
       "status": "試作",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1432235174,
-      "sourcePushedAt": "2026-10-25T16:30:40Z",
+      "sourcePushedAt": "2026-10-25T16:43:16Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1432235174,
         "name": "2026_10_24_2",
-        "pushedAt": "2026-10-25T16:30:40Z",
+        "pushedAt": "2026-10-25T16:43:16Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5187,8 +5188,8 @@
         "fork": false,
         "language": "TypeScript"
       },
-      "sourceFingerprint": "8d48ff81d480ec13e109e2af61be14a4db577dba653de51d01dfe517a2a8e3d8",
-      "generatedAt": "2026-10-25T16:33:47.799Z"
+      "sourceFingerprint": "6c686070c152a92492b58fdfc4cd7656402ef65a193967231c10164162e17c7e",
+      "generatedAt": "2026-10-25T20:58:40.415Z"
     }
   },
   "repositoryCount": 105
