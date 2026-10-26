@@ -1,42 +1,44 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-26T13:19:46.919Z",
+  "generatedAt": "2026-10-26T22:46:33.188Z",
   "repositories": {
     "github-tavern": {
-      "title": "GitHubリポジトリ案内端末",
-      "summary": "公開GitHubリポジトリを、古い情報端末を思わせる画面から探して内容を確かめるWebアプリ。キーワードやカテゴリで絞り込み、概要や技術情報、確認済みの公開ページへのリンクを見られます。",
-      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、古い情報端末のような画面で探して中身をつかむためのWebアプリだ。中ではGitHub APIからリポジトリ情報を読み込み、キーワードやカテゴリで絞り、更新順などで並べ替えてる。選んだ項目の概要や特徴、技術情報はsummaries.jsonから表示し、READMEがあるものは短い紹介文をカードに補う仕組みだ。詳細画面では確認済みの公開ページへのリンクや、リポジトリごとの締めの一言も扱う。JavaScript・HTML・CSSで組まれていて、READMEの取得は同時に最大6件まで。ただ、README自体は今回の観察資料にないから、説明の網羅性や運用状況までは断定できないな。",
-      "closingRemark": "READMEの紹介文は一度に最大6件まで。棚を覗く順番まで、ちゃんと決めてあるらしい。",
+      "title": "公開リポジトリ探索酒場",
+      "summary": "所有する公開GitHubリポジトリを一覧し、名前や説明、Topics、言語、Copilot要約を横断検索できる個人ポータル。カードを選ぶと概要を確認でき、未解析のものはREADMEから短い説明を補います。",
+      "detail": "こいつは、temesotejamが所有する公開GitHubリポジトリを探して中身を確かめるための個人ポータルだ。ブラウザからGitHub APIで一覧を取得し、名前やDescription、Topics、使用言語、Copilot要約をまとめて検索できる。カードを選べば概要が開き、解析済みならREADMEや設定、ファイル構成などを根拠にした説明が読めるし、未解析ならREADMEから短いプレビューを表示する。裏ではGitHub Actionsが6時間ごとに更新を確認し、変更のあったものをCopilot CLIで順次解析する仕組みだ。GitHub Pagesで動く静的サイトで、Private Repositoryや書き込み操作は扱わない。定期解析は1回最大8件なので、全件が一度に更新されるわけじゃない。",
+      "closingRemark": "説明がまだ届かない新顔にも、READMEの短い抜粋だけは用意してある。ひとまず看板くらいは出るってわけだ。",
       "features": [
-        "キーワード検索とカテゴリ絞り込み",
-        "リポジトリの並べ替え",
-        "概要・特徴・技術情報を表示",
-        "READMEからカード用の短い紹介文を取得",
-        "確認済みの公開ページへのリンクを表示"
+        "公開リポジトリをGitHub APIから取得",
+        "名前・説明・Topics・言語・要約を横断検索",
+        "カテゴリで絞り込み、カードから概要を表示",
+        "Copilot CLIで変更のあったリポジトリを定期解析",
+        "未解析のリポジトリはREADMEから短い説明を表示"
       ],
       "technologies": [
         "JavaScript",
-        "HTML",
         "CSS",
+        "HTML",
         "GitHub API",
-        "Fetch API",
-        "MutationObserver"
+        "GitHub Actions",
+        "GitHub Copilot CLI",
+        "GitHub Pages"
       ],
       "categories": [
         "Web・ツール",
         "GitHub",
-        "リポジトリ検索"
+        "検索",
+        "個人ポータル"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-10-26T04:59:28Z",
+      "sourcePushedAt": "2026-10-26T13:37:46Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-10-26T04:59:28Z",
+        "pushedAt": "2026-10-26T13:37:46Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -46,8 +48,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "e84aad25d9a7eeb55253a4d83856cc0c00e6c982e4c81d350ae6e08ec5724377",
-      "generatedAt": "2026-10-26T13:19:46.919Z"
+      "sourceFingerprint": "f6b383079dfb6cd2d56607678039e5fd4abac5068124164526d09499bf24825e",
+      "generatedAt": "2026-10-26T22:46:33.188Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -5090,16 +5092,16 @@
       "generatedAt": "2026-10-24T04:47:37.319Z"
     },
     "2026_10_24": {
-      "title": "ニュースで変わる迷宮探索ゲーム",
-      "summary": "現実のニュースや入力した出来事をもとに、毎回姿の変わる迷宮を探索する一人用ブラウザゲーム。RSS見出しをゲーム内の現実地点として表示し、仲間や回復、階層攻略を組み合わせて3階からの脱出を目指します。",
-      "detail": "こいつは、現実のニュースや入力した出来事を迷宮に取り込み、3階からの脱出を目指す一人用の探索ゲームだ。中では、移動のたびに仲間と敵も行動し、観測した現象を仲間にしたり、携帯食や救護メモで探索を続けたりする。地域・環境・交通・科学のニュースは迷宮の色や出現する現象に反映され、各階の現実地点ではRSSの見出し、配信元、日時、出典を確認できる。記事本文を確認したとは表示せず、ゲーム内での選択も記事への賛否とは切り分けている。GitHub Actionsが公開RSSを6時間ごとに収集し、事件・事故・災害などの見出しを除外して、見出しや日時、出典リンクを保存する仕組みだ。GitHub Pagesで遊べる一方、記事本文の内容まではゲーム内で確認できない。",
-      "closingRemark": "記事本文を読んだふりはせず、見出しと出典だけを迷宮へ連れてくる。そこは妙に几帳面だな。",
+      "title": "現象救助隊：ニュース迷宮",
+      "summary": "現実のニュースや入力した出来事を題材に、毎回形の変わる迷宮を探索する一人用ブラウザゲーム。公開RSSから地域・環境・交通・科学のニュースを自動収集し、見出しやテーマをゲーム内の現象、階層、観測ノートに反映します。",
+      "detail": "こいつは、現実のニュースや身近な出来事を迷宮に変えて調査する、一人用の探索ゲームだ。矢印キーやWASDで進み、プレイヤーが動くたびに仲間と敵も行動する。現象を観測して仲間にしたり、食料や救護メモを使ったりしながら、3階からの脱出を目指す仕組みになってる。ニュースは入力できるほか、GitHub Actionsが地域・環境・交通・科学の公開RSSを6時間ごとに集め、迷宮の色や出現する現象、観測ノートに反映する。記事は見出しや日時、出典リンクを現実地点で確認できるが、本文を確認したとは表示せず、事件・事故などの見出しは自動除外する。調査成功を目指すゲームとして公開されている一方、ニュースの内容そのものを詳しく読む仕組みではないんだ。",
+      "closingRemark": "迷宮に現れるのはニュースの見出しまでで、記事本文は持ち込まない。現実との距離は、そこに引いてあるらしい。",
       "features": [
-        "ニュースや入力内容に応じて迷宮の色や出現する現象が変化",
-        "ターン制の探索と、現象の仲間化",
-        "空腹・HPの管理と3階からの脱出",
-        "RSS記事を現実地点として表示し、出典を確認可能",
-        "GitHub Actionsで6時間ごとにニュースを自動収集"
+        "ニュースや入力した出来事から迷宮のテーマや現象を生成",
+        "仲間化・空腹・ターン進行のある一人用探索",
+        "公開RSSを6時間ごとに自動収集",
+        "現実地点で見出し・配信元・日時・出典を表示",
+        "3階から脱出すると調査成功"
       ],
       "technologies": [
         "JavaScript",
@@ -5108,25 +5110,24 @@
         "Canvas",
         "GitHub Actions",
         "RSS",
-        "GitHub Pages",
-        "Python http.server"
+        "GitHub Pages"
       ],
       "categories": [
         "ブラウザゲーム",
         "ローグライク",
         "ニュース",
-        "RSS"
+        "一人用ゲーム"
       ],
-      "status": "試作",
+      "status": "完成品",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1431824671,
-      "sourcePushedAt": "2026-10-26T12:54:46Z",
+      "sourcePushedAt": "2026-10-26T22:37:51Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1431824671,
         "name": "2026_10_24",
-        "pushedAt": "2026-10-26T12:54:46Z",
+        "pushedAt": "2026-10-26T22:37:51Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5136,8 +5137,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "3cae8688def7559f7ed58e1570a2c309a54014d78471b47323b804d15b16437b",
-      "generatedAt": "2026-10-26T13:18:12.626Z"
+      "sourceFingerprint": "85f1f553882fbdb744c47205f79176ba1b0badabf85350266352926f83b4ac45",
+      "generatedAt": "2026-10-26T22:46:11.268Z"
     },
     "2026_10_24_2": {
       "title": "ブラウザ向けボクセルサバイバル",
