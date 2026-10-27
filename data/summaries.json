@@ -1,43 +1,44 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-27T05:16:49.538Z",
+  "generatedAt": "2026-10-27T12:26:22.992Z",
   "repositories": {
     "github-tavern": {
       "title": "公開リポジトリ探索ポータル",
-      "summary": "temesotejamが公開しているGitHubリポジトリを、酒場を巡るように検索・閲覧する個人向けポータル。名前や言語、Copilotによる日本語説明で探せて、説明が未生成のリポジトリにはREADMEから短い案内を補います。",
-      "detail": "こいつは、temesotejamが所有する公開GitHubリポジトリを検索して、気になるものを選んで眺めるための個人向けポータルだ。中ではGitHub APIから一覧を取得し、名前やDescription、Topics、言語、Copilot要約を横断検索できるようにしてる。カードを選べば概要が表示され、Copilotの説明がまだない場合はREADMEから短いプレビューを作って補う仕組みだな。Copilot CLIによる説明更新はGitHub Actionsで6時間ごとに行い、変更のあったものを定期実行では最大8件ずつ処理する。GitHub Pagesで静的に公開できる一方、対象は公開リポジトリだけで、サイト側から削除や変更などの書き込みはしない。",
-      "closingRemark": "公開分だけを並べ、説明の更新は一度に最大8件。酒場の帳簿にしては、ずいぶん慎重な回転だな。",
+      "summary": "公開GitHubリポジトリを、古い情報端末風の画面から検索・閲覧する個人向けポータルだ。GitHub APIで取得した情報を横断検索でき、CopilotがREADMEや構成をもとに作る日本語説明も確認できる。",
+      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを探して中身を確かめるための個人向けポータルだ。中ではGitHub APIから一覧を取り、名前や説明、Topics、言語、Copilot要約をまとめて検索できるようにしてる。カードを選べば概要が開き、解析済みならREADMEや設定、ファイル構成などを根拠にした日本語説明が読めるし、未解析のものはREADMEから短い暫定説明を出す。要約はGitHub Actionsが6時間ごとに確認し、更新のあったものをCopilot CLIで処理してJSONに保存する仕組みだな。GitHub Pagesで静的に公開できる一方、対象は公開リポジトリのみで、削除や変更などの書き込み操作はしない。",
+      "closingRemark": "6時間ごとの見回りでも、要約の更新は一度に最大8件。帳簿は急がず順番に埋めていくらしい。",
       "features": [
-        "GitHub APIから所有する公開リポジトリを取得",
-        "名前・Description・Topics・言語・Copilot要約を横断検索",
-        "技術領域ごとの簡易分類とカード形式の詳細表示",
-        "READMEから未解析リポジトリの短い説明を生成",
-        "GitHub ActionsでCopilot要約を定期更新"
+        "公開リポジトリの検索・選択・概要表示",
+        "名前、説明、Topics、言語、要約を横断検索",
+        "技術領域による簡易分類",
+        "Copilot CLIによる日本語説明の定期更新",
+        "未解析リポジトリ向けのREADME暫定説明"
       ],
       "technologies": [
         "JavaScript",
-        "HTML",
-        "CSS",
         "GitHub API",
-        "GitHub Copilot CLI",
         "GitHub Actions",
-        "GitHub Pages"
+        "GitHub Copilot CLI",
+        "GitHub Pages",
+        "HTML",
+        "CSS"
       ],
       "categories": [
         "Webアプリ",
         "GitHubツール",
-        "リポジトリ検索"
+        "リポジトリ検索",
+        "自動要約"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-10-26T22:46:35Z",
+      "sourcePushedAt": "2026-10-27T05:16:50Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-10-26T22:46:35Z",
+        "pushedAt": "2026-10-27T05:16:50Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -47,8 +48,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "c3cd60aad23b592319f52e0fa17257259e72f9e3a4d08a226d36b53748127d9a",
-      "generatedAt": "2026-10-27T05:16:49.538Z"
+      "sourceFingerprint": "7915dee65cc755083e39d3221ef0148a14eb78b6ca470dac7182a6a0e5f6662e",
+      "generatedAt": "2026-10-27T12:26:22.991Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -4994,43 +4995,43 @@
       "generatedAt": "2026-10-19T13:36:25.403Z"
     },
     "pico-copter-fc-esc-telemetry": {
-      "title": "ESCテレメトリ対応Pico飛行制御",
-      "summary": "Raspberry Pi Pico向け飛行制御に、BLHeli_32 ESCのTXパッドから温度・電圧・電流・回転数などを読む診断機能を加えたファームウェア。GitHub ActionsでUF2をビルドして配布でき、SBUSフェイルセーフやCH5操作の飛行ログも備えています。",
-      "detail": "こいつは、Pico Copterの飛行制御にBLHeli_32 ESCの専用TXパッドテレメトリを加えたファームウェアだ。中では双方向DShotの返信でESCの接続を確かめ、認識したESCからUART経由で温度や電圧、電流、mAh、電気回転数を読み、USB診断へ出してる。SBUSの通信断に備えたフェイルセーフや、CH5を入れた間だけ動く100 Hz・38項目のリングログもあり、GitHub ActionsでPico用UF2をビルドしてPagesから配布できる。UNO R3向けのブラウザ書き込みページもあるが、HEXやESC用ファームウェアは同梱せず、ESC設定も変更しない。初代PicoでのDShot300とeRPM取得例はあるものの、専用TXパッドの受信や飛行動作は未検証で、飛行試験済みのリリースではない。",
-      "closingRemark": "DShotの返信確認とTXパッドの受信確認は別勘定だ。配線図とプロペラ外しの手順が、まだ出番を待ってるな。",
+      "title": "Picoコプター制御とESC計測",
+      "summary": "Raspberry Pi Pico／Pico 2向けのコプターファームウェアをビルド・配布し、ESCの回転数や電圧などを診断するためのプロジェクト。双方向DShotとESC専用UARTテレメトリに加え、SBUSフェイルセーフや飛行ログも備え、UF2はGitHub Actions経由で公開される。",
+      "detail": "こいつは、Raspberry Pi Pico／Pico 2で動かすコプターのファームウェアをビルドし、ESCの状態も確認するためのプロジェクトだ。中では双方向DShotでモーターを制御し、認識できたESCから専用TXパッド経由の温度・電圧・電流・回転数などを読み、USB診断に出してる。SBUSの受信断に備えるフェイルセーフや、CH5操作中だけ記録する約10秒分のリングログもあり、ログはUSBへ取り出せる。GitHub ActionsがUF2を作ってPagesに公開し、別途UNO R3向けのESC書き込みページも用意されている。ただしESCテレメトリの実機受信や飛行は未検証で、確認済みのDShot300も初代Picoでモーター1組までだ。プロペラを外した検証が前提だな。",
+      "closingRemark": "ESCの数字はUSBまで届くが、飛行の太鼓判までは運んでこない。そこはまだ実機検証の仕事だ。",
       "features": [
-        "双方向DShotの有効な返信でESCを検出し、モーター指令は返信の有無にかかわらず継続",
-        "UART1でESCの温度・電圧・電流・mAh・電気回転数を診断表示",
-        "SBUS受信断やフェイルセーフフラグに対応し、復帰後は再アーム操作を要求",
-        "CH5操作中に100 Hzで38項目をRAMへ記録するリングバッファ",
-        "GitHub ActionsでUF2をビルド・公開し、UNO R3用ブラウザ書き込みページも提供"
+        "双方向DShotで4基のモーターを制御し、ESCの返信は診断に利用",
+        "ESCを認識した場合に専用TXパッドのテレメトリを取得",
+        "SBUS受信断やフェイルセーフフラグに対応",
+        "CH5操作中に100 Hz・38項目のログをRAMへ記録",
+        "GitHub ActionsでUF2をビルドし、Pagesで配布"
       ],
       "technologies": [
         "Raspberry Pi Pico",
-        "RP2040",
         "Pico 2",
+        "RP2040",
+        "C",
+        "C++17",
+        "DShot300",
         "BLHeli_32",
-        "双方向DShot",
-        "UART1",
-        "SBUS",
-        "GitHub Actions"
+        "SBUS"
       ],
       "categories": [
+        "組み込み",
+        "ドローン",
         "ファームウェア",
-        "飛行制御",
-        "ESCテレメトリ",
-        "組み込み"
+        "テレメトリ"
       ],
       "status": "実験",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1426713369,
-      "sourcePushedAt": "2026-10-23T09:29:54Z",
+      "sourcePushedAt": "2026-10-27T09:23:18Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1426713369,
         "name": "pico-copter-fc-esc-telemetry",
-        "pushedAt": "2026-10-23T09:29:54Z",
+        "pushedAt": "2026-10-27T09:23:18Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5040,8 +5041,8 @@
         "fork": false,
         "language": "C"
       },
-      "sourceFingerprint": "750d222131b5821886dbe776861e1b50451a806e83aa481618cd870cfd55ff20",
-      "generatedAt": "2026-10-23T11:49:57.451Z"
+      "sourceFingerprint": "f64b9dc1735549bb1c62bd86864632f1ad63a7ed1b3ef986b2900e21c9492bf6",
+      "generatedAt": "2026-10-27T12:26:10.399Z"
     },
     "2026_10_22": {
       "title": "都市記録の反証ゲーム",
@@ -5091,41 +5092,42 @@
       "generatedAt": "2026-10-24T04:47:37.319Z"
     },
     "2026_10_24": {
-      "title": "現象救助隊：現実迷宮",
-      "summary": "公開ニュースや入力した出来事をもとに迷宮が変わる、一人用の探索ゲーム。仲間や回復アイテムを活用して3階からの脱出を目指し、ニュースの見出し・出典もゲーム内で確認できます。",
-      "detail": "こいつは、現実のニュースや入力した出来事を迷宮に取り込み、探索しながら3階からの脱出を目指す一人用ゲームだ。中ではターン制で敵や仲間が動き、「観測」した敵を仲間にしたり、食料や救護メモで空腹とHPを管理したりして進む。入力内容は迷宮の色や出現する現象、観測ノートに反映されるほか、各階の記事の現実地点では見出し・配信元・日時・出典を確認できる。ニュースはGitHub Actionsが6時間ごとにRSSから集め、事件・事故などの見出しを除外して保存する仕組みだ。記事本文を複製せず、本文を確認済みとも扱わない。ゲームの骨格は『ポケモン不思議のダンジョン 赤の救助隊』の設計を研究対象にしているが、関連作品のコードや素材は使っていない。",
-      "closingRemark": "記事本文ではなく見出しと出典を迷宮に持ち込むあたり、現実との距離感もちゃんと設計されてるな。",
+      "title": "現象救助隊",
+      "summary": "現実の現象やニュースをもとに迷宮を生成し、仲間と探索する一人用ブラウザーゲーム。公開RSSから見出しを自動収集するほか、記事の出典を確かめながら進み方を選べるのが特徴だ。",
+      "detail": "こいつは、現実の現象やニュースを迷宮に変えて調査する一人用の探索ゲームだ。矢印キーやWASDで進み、プレイヤーが動くたびに仲間と敵も行動する。現象を「観測」して倒せば仲間になり、携帯食や救護メモを使いながら3階からの脱出を目指す仕組みだな。入力したニュースは迷宮の色や出現する現象に反映され、各階の現実地点ではRSS見出し、配信元、日時、出典リンクを確認できる。ニュースはGitHub Actionsで6時間ごとに収集し、事件・事故などの見出しは除外、記事本文は保存しない。ただし本文を読んだことにはせず、ゲーム内の選択も記事への賛否を表すものではないと明記されている。",
+      "closingRemark": "記事本文は持ち込まず、出典への道だけを迷宮に置いてある。調査隊らしい節度だな。",
       "features": [
-        "ニュースや入力内容に応じて迷宮の色・現象・観測ノートが変化",
-        "ターン制の探索で敵を観測し、最大3体まで仲間にできる",
-        "空腹とHPを管理しながら3階からの脱出を目指す",
-        "記事の見出し・配信元・日時・出典リンクをゲーム内で表示",
-        "6時間ごとにRSSを自動収集し、事件・事故などの見出しを除外"
+        "現実の現象や入力ニュースを反映した迷宮を生成",
+        "仲間化、ターン制の戦闘、空腹と回復を備えた探索",
+        "3階からの脱出を目指す一人用ゲーム",
+        "現実地点でRSS見出し、日時、配信元、出典リンクを表示",
+        "公開ニュースを6時間ごとに自動収集し、記事本文は複製しない"
       ],
       "technologies": [
         "JavaScript",
         "HTML",
         "CSS",
-        "Canvas",
+        "Canvas API",
         "GitHub Actions",
-        "RSS"
+        "RSS",
+        "GitHub Pages"
       ],
       "categories": [
         "ブラウザーゲーム",
         "ローグライク",
-        "ニュース連携",
-        "個人制作"
+        "ニュース",
+        "探索"
       ],
-      "status": "完成品",
+      "status": "試作",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1431824671,
-      "sourcePushedAt": "2026-10-27T04:59:02Z",
+      "sourcePushedAt": "2026-10-27T12:05:55Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1431824671,
         "name": "2026_10_24",
-        "pushedAt": "2026-10-27T04:59:02Z",
+        "pushedAt": "2026-10-27T12:05:55Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5135,8 +5137,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "75aeed0521a1c0fa2900549543ab3b9859db57efe2594cb8b9ac3d342ad9cb17",
-      "generatedAt": "2026-10-27T05:16:21.774Z"
+      "sourceFingerprint": "94d2aa2a9a17588ffaac1c2c16594d8eacf21395333f3a09fe9dd14bb81693b1",
+      "generatedAt": "2026-10-27T12:25:54.099Z"
     },
     "2026_10_24_2": {
       "title": "ブラウザ向けボクセルサバイバル",
