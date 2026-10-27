@@ -1,44 +1,43 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-26T22:46:33.188Z",
+  "generatedAt": "2026-10-27T05:16:49.538Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ探索酒場",
-      "summary": "所有する公開GitHubリポジトリを一覧し、名前や説明、Topics、言語、Copilot要約を横断検索できる個人ポータル。カードを選ぶと概要を確認でき、未解析のものはREADMEから短い説明を補います。",
-      "detail": "こいつは、temesotejamが所有する公開GitHubリポジトリを探して中身を確かめるための個人ポータルだ。ブラウザからGitHub APIで一覧を取得し、名前やDescription、Topics、使用言語、Copilot要約をまとめて検索できる。カードを選べば概要が開き、解析済みならREADMEや設定、ファイル構成などを根拠にした説明が読めるし、未解析ならREADMEから短いプレビューを表示する。裏ではGitHub Actionsが6時間ごとに更新を確認し、変更のあったものをCopilot CLIで順次解析する仕組みだ。GitHub Pagesで動く静的サイトで、Private Repositoryや書き込み操作は扱わない。定期解析は1回最大8件なので、全件が一度に更新されるわけじゃない。",
-      "closingRemark": "説明がまだ届かない新顔にも、READMEの短い抜粋だけは用意してある。ひとまず看板くらいは出るってわけだ。",
+      "title": "公開リポジトリ探索ポータル",
+      "summary": "temesotejamが公開しているGitHubリポジトリを、酒場を巡るように検索・閲覧する個人向けポータル。名前や言語、Copilotによる日本語説明で探せて、説明が未生成のリポジトリにはREADMEから短い案内を補います。",
+      "detail": "こいつは、temesotejamが所有する公開GitHubリポジトリを検索して、気になるものを選んで眺めるための個人向けポータルだ。中ではGitHub APIから一覧を取得し、名前やDescription、Topics、言語、Copilot要約を横断検索できるようにしてる。カードを選べば概要が表示され、Copilotの説明がまだない場合はREADMEから短いプレビューを作って補う仕組みだな。Copilot CLIによる説明更新はGitHub Actionsで6時間ごとに行い、変更のあったものを定期実行では最大8件ずつ処理する。GitHub Pagesで静的に公開できる一方、対象は公開リポジトリだけで、サイト側から削除や変更などの書き込みはしない。",
+      "closingRemark": "公開分だけを並べ、説明の更新は一度に最大8件。酒場の帳簿にしては、ずいぶん慎重な回転だな。",
       "features": [
-        "公開リポジトリをGitHub APIから取得",
-        "名前・説明・Topics・言語・要約を横断検索",
-        "カテゴリで絞り込み、カードから概要を表示",
-        "Copilot CLIで変更のあったリポジトリを定期解析",
-        "未解析のリポジトリはREADMEから短い説明を表示"
+        "GitHub APIから所有する公開リポジトリを取得",
+        "名前・Description・Topics・言語・Copilot要約を横断検索",
+        "技術領域ごとの簡易分類とカード形式の詳細表示",
+        "READMEから未解析リポジトリの短い説明を生成",
+        "GitHub ActionsでCopilot要約を定期更新"
       ],
       "technologies": [
         "JavaScript",
-        "CSS",
         "HTML",
+        "CSS",
         "GitHub API",
-        "GitHub Actions",
         "GitHub Copilot CLI",
+        "GitHub Actions",
         "GitHub Pages"
       ],
       "categories": [
-        "Web・ツール",
-        "GitHub",
-        "検索",
-        "個人ポータル"
+        "Webアプリ",
+        "GitHubツール",
+        "リポジトリ検索"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-10-26T13:37:46Z",
+      "sourcePushedAt": "2026-10-26T22:46:35Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-10-26T13:37:46Z",
+        "pushedAt": "2026-10-26T22:46:35Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -48,8 +47,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "f6b383079dfb6cd2d56607678039e5fd4abac5068124164526d09499bf24825e",
-      "generatedAt": "2026-10-26T22:46:33.188Z"
+      "sourceFingerprint": "c3cd60aad23b592319f52e0fa17257259e72f9e3a4d08a226d36b53748127d9a",
+      "generatedAt": "2026-10-27T05:16:49.538Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -4796,43 +4795,43 @@
       "generatedAt": "2026-10-06T06:31:41.613Z"
     },
     "atoms3r-lateral-energy-control": {
-      "title": "AtomS3R左右揺動エネルギー制御",
-      "summary": "AtomS3Rとリアクションホイールを使い、機体の左右揺動を目標角へ近づける試験用ファームウェア。MEKFでピークとZEROクロスを捉え、エネルギーに応じた入力を計算します。実機Web画面から条件を変えて測定でき、結果はRWLOGに記録されます。",
-      "detail": "こいつは、AtomS3RとUnit Roller485、リアクションホイールを使って左右揺動を制御する、実機試験用ファームウェアだ。中ではMEKFの姿勢推定から左右のピークとZEROクロスを見つけ、次のピークを目標角へ近づける電流と入力時間を計算してる。エネルギー式や目標角を選べるほか、Web画面から負側入力などの一括測定を始められ、条件と実測値はRWLOGに残る。位置や速度の記録を使った仕事量の解析ページもあり、CSVで比較できるってわけだ。ただし係数や逆入力の応答は暫定で、閉ループ性能の改善は実機でこれから確かめる段階だな。",
-      "closingRemark": "RWLOGはずいぶん細かく語るが、実機の答えはまだ測定待ちだな。",
+      "title": "AtomS3R左右揺動制御",
+      "summary": "AtomS3Rとリアクションホイールを使い、機体の左右揺動を目標角へ近づける試験用ファームウェア。ZEROクロスや次のピークを見て入力を調整し、実機ログとブラウザ解析で制御や一括測定の結果を確かめられる。",
+      "detail": "こいつは、AtomS3RとUnit Roller485、リアクションホイールを使って左右揺動を抑える試験用ファームウェアだ。中ではMEKFで姿勢を推定し、物理ピークとZEROクロスを検出して、次のピークを目標角へ近づける入力時間を計算してる。位置エネルギーを使う制御や負側入力の方式を比較でき、実機Web画面から測定を始めて、設定・実出力・状態をRWLOGに記録する仕組みもある。ログはブラウザで解析でき、一括測定では条件の割当や予測誤差も確認できる。制御係数や逆入力の応答は暫定で、実機の閉ループ性能は自動試験だけでは確認できない。そこは今後の測定で詰める段階だな。",
+      "closingRemark": "入力条件の順序までログに残す念の入れようだが、制御の腕前はまだ実機の次の揺れが答え合わせする。",
       "features": [
-        "MEKFで左右の物理ピークとZEROクロスを検出",
-        "目標角と予測エネルギーから電流・パルス幅を計算",
-        "Web画面から制御条件の選択と一括測定を実行",
-        "RWLOGに制御条件、予測、実測値を記録",
-        "保存ログからホイールの仕事量を解析しCSV出力"
+        "MEKFによる姿勢推定とZEROクロス・物理ピークの検出",
+        "目標角に応じたリアクションホイールの電流入力時間計算",
+        "エネルギー制御方式や負側入力条件の比較",
+        "RWLOGへの状態・指令・実出力の記録",
+        "一括測定ログのブラウザ解析とCSV保存"
       ],
       "technologies": [
-        "C++",
-        "Python",
-        "JavaScript",
-        "PlatformIO",
-        "Arduino framework",
         "AtomS3R",
         "Unit Roller485",
-        "リアクションホイール"
+        "リアクションホイール",
+        "MEKF",
+        "PlatformIO",
+        "Arduino",
+        "M5Unified",
+        "Adafruit AHRS"
       ],
       "categories": [
         "組み込み",
-        "ロボット制御",
-        "ファームウェア",
+        "制御",
+        "ロボティクス",
         "実験"
       ],
       "status": "実験",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1416789371,
-      "sourcePushedAt": "2026-10-26T11:25:32Z",
+      "sourcePushedAt": "2026-10-27T03:07:49Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1416789371,
         "name": "atoms3r-lateral-energy-control",
-        "pushedAt": "2026-10-26T11:25:32Z",
+        "pushedAt": "2026-10-27T03:07:49Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -4842,8 +4841,8 @@
         "fork": false,
         "language": "C++"
       },
-      "sourceFingerprint": "0a8176c2ad1400c7d36d13142bb049d06eca07eda28fb311d182f4c3431cdc44",
-      "generatedAt": "2026-10-26T13:18:35.504Z"
+      "sourceFingerprint": "8fa9985817f60a4339bbda2aa05ec9a4e023ef9814b85b98423051f533c21fda",
+      "generatedAt": "2026-10-27T05:16:35.530Z"
     },
     "pico-copter-fc": {
       "title": "Pico向けコプター制御",
@@ -5092,16 +5091,16 @@
       "generatedAt": "2026-10-24T04:47:37.319Z"
     },
     "2026_10_24": {
-      "title": "現象救助隊：ニュース迷宮",
-      "summary": "現実のニュースや入力した出来事を題材に、毎回形の変わる迷宮を探索する一人用ブラウザゲーム。公開RSSから地域・環境・交通・科学のニュースを自動収集し、見出しやテーマをゲーム内の現象、階層、観測ノートに反映します。",
-      "detail": "こいつは、現実のニュースや身近な出来事を迷宮に変えて調査する、一人用の探索ゲームだ。矢印キーやWASDで進み、プレイヤーが動くたびに仲間と敵も行動する。現象を観測して仲間にしたり、食料や救護メモを使ったりしながら、3階からの脱出を目指す仕組みになってる。ニュースは入力できるほか、GitHub Actionsが地域・環境・交通・科学の公開RSSを6時間ごとに集め、迷宮の色や出現する現象、観測ノートに反映する。記事は見出しや日時、出典リンクを現実地点で確認できるが、本文を確認したとは表示せず、事件・事故などの見出しは自動除外する。調査成功を目指すゲームとして公開されている一方、ニュースの内容そのものを詳しく読む仕組みではないんだ。",
-      "closingRemark": "迷宮に現れるのはニュースの見出しまでで、記事本文は持ち込まない。現実との距離は、そこに引いてあるらしい。",
+      "title": "現象救助隊：現実迷宮",
+      "summary": "公開ニュースや入力した出来事をもとに迷宮が変わる、一人用の探索ゲーム。仲間や回復アイテムを活用して3階からの脱出を目指し、ニュースの見出し・出典もゲーム内で確認できます。",
+      "detail": "こいつは、現実のニュースや入力した出来事を迷宮に取り込み、探索しながら3階からの脱出を目指す一人用ゲームだ。中ではターン制で敵や仲間が動き、「観測」した敵を仲間にしたり、食料や救護メモで空腹とHPを管理したりして進む。入力内容は迷宮の色や出現する現象、観測ノートに反映されるほか、各階の記事の現実地点では見出し・配信元・日時・出典を確認できる。ニュースはGitHub Actionsが6時間ごとにRSSから集め、事件・事故などの見出しを除外して保存する仕組みだ。記事本文を複製せず、本文を確認済みとも扱わない。ゲームの骨格は『ポケモン不思議のダンジョン 赤の救助隊』の設計を研究対象にしているが、関連作品のコードや素材は使っていない。",
+      "closingRemark": "記事本文ではなく見出しと出典を迷宮に持ち込むあたり、現実との距離感もちゃんと設計されてるな。",
       "features": [
-        "ニュースや入力した出来事から迷宮のテーマや現象を生成",
-        "仲間化・空腹・ターン進行のある一人用探索",
-        "公開RSSを6時間ごとに自動収集",
-        "現実地点で見出し・配信元・日時・出典を表示",
-        "3階から脱出すると調査成功"
+        "ニュースや入力内容に応じて迷宮の色・現象・観測ノートが変化",
+        "ターン制の探索で敵を観測し、最大3体まで仲間にできる",
+        "空腹とHPを管理しながら3階からの脱出を目指す",
+        "記事の見出し・配信元・日時・出典リンクをゲーム内で表示",
+        "6時間ごとにRSSを自動収集し、事件・事故などの見出しを除外"
       ],
       "technologies": [
         "JavaScript",
@@ -5109,25 +5108,24 @@
         "CSS",
         "Canvas",
         "GitHub Actions",
-        "RSS",
-        "GitHub Pages"
+        "RSS"
       ],
       "categories": [
-        "ブラウザゲーム",
+        "ブラウザーゲーム",
         "ローグライク",
-        "ニュース",
-        "一人用ゲーム"
+        "ニュース連携",
+        "個人制作"
       ],
       "status": "完成品",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1431824671,
-      "sourcePushedAt": "2026-10-26T22:37:51Z",
+      "sourcePushedAt": "2026-10-27T04:59:02Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1431824671,
         "name": "2026_10_24",
-        "pushedAt": "2026-10-26T22:37:51Z",
+        "pushedAt": "2026-10-27T04:59:02Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5137,8 +5135,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "85f1f553882fbdb744c47205f79176ba1b0badabf85350266352926f83b4ac45",
-      "generatedAt": "2026-10-26T22:46:11.268Z"
+      "sourceFingerprint": "75aeed0521a1c0fa2900549543ab3b9859db57efe2594cb8b9ac3d342ad9cb17",
+      "generatedAt": "2026-10-27T05:16:21.774Z"
     },
     "2026_10_24_2": {
       "title": "ブラウザ向けボクセルサバイバル",
