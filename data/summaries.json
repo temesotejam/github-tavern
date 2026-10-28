@@ -1,44 +1,44 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-27T22:24:52.482Z",
+  "generatedAt": "2026-10-28T05:55:25.260Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ探索端末",
-      "summary": "GitHubの公開リポジトリを検索・閲覧する、古い情報端末風の個人ポータル。名前や言語で横断検索でき、READMEを根拠にした日本語の概要も確認できます。説明はCopilotで定期更新されます。",
-      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、古い情報端末のような画面から探して読める個人ポータルだ。画面ではGitHub APIから一覧を取り込み、名前やDescription、Topics、言語、Copilot要約をまとめて検索できる。カードを選ぶと概要が開き、解析済みならREADMEや設定、ファイル構成などを根拠にした日本語説明が見られる。未解析のリポジトリにはREADMEから短い説明を補い、GitHub ActionsとCopilot CLIが6時間ごとに更新分を確認して、要約を最大8件ずつ生成する仕組みだ。ただし対象は公開リポジトリだけで、サイトから削除や変更などの書き込みはしない。",
-      "closingRemark": "要約の更新は一度に最大8件。酒場の帳面も、急ぎすぎないよう順番待ちだな。",
+      "title": "公開リポジトリ探索酒場",
+      "summary": "GitHub APIから temesotejam の公開リポジトリを集め、古い情報端末風の画面で検索・分類・閲覧する個人向けポータル。詳細にはREADMEや構成を根拠にしたCopilotの日本語説明を表示し、未解析のものにはREADMEから短い紹介を補います。",
+      "detail": "こいつは、temesotejam が持つ公開GitHubリポジトリを、古い情報端末風の画面で探して読める個人用ポータルだ。中ではGitHub APIから一覧を取り、名前や説明、Topics、言語、Copilot要約を横断検索し、技術領域ごとの分類や並べ替えをしてる。選んだカードでは概要を見られ、要約がまだないものにはREADMEから短い紹介を出す。別のActionsワークフローが6時間ごとに更新を確認し、新規または更新分をCopilot CLIで解析して、通常は一度に最大8件ずつ summaries.json に蓄える。GitHub Pagesで静的に公開できる一方、対象は公開リポジトリだけで、サイトから削除やIssue作成などの書き込みはしない。要するに、個人の公開コードを読むための目録と案内を一緒にした仕組みってところだ。",
+      "closingRemark": "更新がなければ再解析せず、通常は一度に8件まで。酒場の帳簿としては、ずいぶん堅実だな。",
       "features": [
-        "公開リポジトリをGitHub APIから自動取得",
-        "名前・説明・Topics・言語・要約を横断検索",
-        "技術領域ごとの簡易分類",
-        "READMEを使った未解析リポジトリの暫定説明",
-        "Copilot CLIによる要約の定期更新"
+        "公開リポジトリ一覧をGitHub APIから取得",
+        "名前・説明・Topics・言語・Copilot要約を横断検索",
+        "技術領域ごとの分類や並べ替えに対応",
+        "Copilot未解析のリポジトリにはREADMEから短い紹介を表示",
+        "6時間ごとに変更を確認し、要約を更新"
       ],
       "technologies": [
         "JavaScript",
         "HTML",
         "CSS",
         "GitHub API",
-        "GitHub Pages",
         "GitHub Actions",
-        "GitHub Copilot CLI"
+        "GitHub Copilot CLI",
+        "GitHub Pages"
       ],
       "categories": [
-        "Webアプリ",
+        "Web・ツール",
         "GitHub",
-        "検索・閲覧ツール",
-        "生成AI"
+        "検索",
+        "静的サイト"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-10-27T12:26:24Z",
+      "sourcePushedAt": "2026-10-27T22:24:55Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-10-27T12:26:24Z",
+        "pushedAt": "2026-10-27T22:24:55Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -48,8 +48,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "2d7724b6732a8e3c609202bf8e7d0b0b58626c9018b39f587ce568d385ec6f42",
-      "generatedAt": "2026-10-27T22:24:52.482Z"
+      "sourceFingerprint": "5b949320821245f7f293139f0c44f8bbaa24be81a15a33413daccf3455094794",
+      "generatedAt": "2026-10-28T05:55:25.260Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -5092,41 +5092,42 @@
       "generatedAt": "2026-10-24T04:47:37.319Z"
     },
     "2026_10_24": {
-      "title": "現象救助隊：ニュース迷宮",
-      "summary": "現実のニュースや入力した出来事を、毎回形の変わる迷宮に取り込む一人用探索ゲーム。仲間や敵とターンを進めながら3階からの脱出を目指し、ニュースのカテゴリによって迷宮や攻略にも変化が出ます。",
-      "detail": "こいつは、現実のニュースや入力した出来事を手がかりに、毎回違う迷宮を探索する一人用ゲームだ。中ではプレイヤーの行動ごとに仲間と敵も動き、現象を観測して倒せば仲間にできる。ニュースは迷宮の色や敵、観測ノートに反映され、地域・環境・交通・科学のテーマごとに回復や地図開示などの効果も変わる。各階の現実地点ではRSS見出しや配信元、日時、出典を確認できるが、記事本文を確認した扱いにはならないし、選択肢も記事への賛否ではない。公開ニュースはGitHub Actionsで6時間ごとに収集し、事件・事故などの見出しを除外して見出し・日時・出典リンクを保存する仕組みだ。探索の設計は『ポケモン不思議のダンジョン 赤の救助隊』の逆コンパイルを研究対象にしているが、コードや画像などは使用していない。",
-      "closingRemark": "ニュースの本文ではなく見出しと出典を持ち帰るあたり、迷宮の調査隊もなかなか慎重だな。",
+      "title": "現象救助隊：現実ニュース迷宮",
+      "summary": "現実のニュースや小さな出来事を迷宮の色・敵・観測ノートへ反映し、仲間と探索する一人用ブラウザーゲーム。公開RSSから地域・環境・交通・科学の見出しを6時間ごとに集め、記事本文を複製せず出典を示します。",
+      "detail": "こいつは、現実のニュースや小さな出来事を迷宮に変え、3階からの脱出を目指す一人用ブラウザーゲームだ。矢印キーやWASDで進み、1回動くごとに仲間と敵も行動するターン制で、「観測」した敵を仲間にしたり、食料や救護メモで持ちこたえたりする。入力したニュースは迷宮の色や出現する現象、観測ノートに反映され、各階の現実地点ではRSS見出し・配信元・日時・出典を確認できる。公開RSSの収集はGitHub Actionsが6時間ごとに行い、事件・事故などの見出しを除外して、取得できない場合は前回のデータを残す仕組みだ。記事本文を確認したとは扱わず、現実地点での選択も記事への賛否ではない。",
+      "closingRemark": "記事本文は持ち込まず、見出しと出典だけを迷宮に置く。現実との距離感まで、ちゃんと設計に入ってるな。",
       "features": [
-        "ニュースや入力内容から迷宮の色・現象・観測ノートを生成",
-        "ターン制の探索と、最大3体までの仲間化",
-        "3階からの脱出を目指す一人用ゲーム",
-        "現実地点でRSS見出し・配信元・日時・出典を表示",
-        "公開ニュースを6時間ごとに自動収集し、事件・事故などの見出しを除外"
+        "ニュース入力に応じて迷宮の色や現象、観測ノートが変化",
+        "ターン制の探索と、敵の仲間化・空腹・HP回復",
+        "現実地点でRSS見出しや配信元、日時、出典を確認",
+        "地域・環境・交通・科学の公開ニュースを6時間ごとに自動収集",
+        "事件・事故などの見出しを除外し、記事本文は複製しない"
       ],
       "technologies": [
         "JavaScript",
         "HTML",
         "CSS",
-        "Canvas",
+        "Canvas API",
+        "GitHub Actions",
         "RSS",
-        "GitHub Actions"
+        "GitHub Pages"
       ],
       "categories": [
-        "ゲーム",
+        "ブラウザーゲーム",
         "ローグライク",
         "ニュース",
-        "ブラウザゲーム"
+        "ターン制探索"
       ],
-      "status": "ツール",
+      "status": "完成品",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1431824671,
-      "sourcePushedAt": "2026-10-27T22:10:05Z",
+      "sourcePushedAt": "2026-10-28T05:35:37Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1431824671,
         "name": "2026_10_24",
-        "pushedAt": "2026-10-27T22:10:05Z",
+        "pushedAt": "2026-10-28T05:35:37Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5136,8 +5137,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "e5f98184e4d70761d4a6e2971203c02f14f73db6a35fc5cc71d298db0ecc13b4",
-      "generatedAt": "2026-10-27T22:24:35.165Z"
+      "sourceFingerprint": "c174aa5a317e4ddc035c40520e73cba48955aa23ed204507dbf541a1afcd5e9b",
+      "generatedAt": "2026-10-28T05:55:09.315Z"
     },
     "2026_10_24_2": {
       "title": "ブラウザ向けボクセルサバイバル",
