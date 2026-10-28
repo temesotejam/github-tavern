@@ -1,23 +1,23 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-28T05:55:25.260Z",
+  "generatedAt": "2026-10-28T13:13:48.901Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ探索酒場",
-      "summary": "GitHub APIから temesotejam の公開リポジトリを集め、古い情報端末風の画面で検索・分類・閲覧する個人向けポータル。詳細にはREADMEや構成を根拠にしたCopilotの日本語説明を表示し、未解析のものにはREADMEから短い紹介を補います。",
-      "detail": "こいつは、temesotejam が持つ公開GitHubリポジトリを、古い情報端末風の画面で探して読める個人用ポータルだ。中ではGitHub APIから一覧を取り、名前や説明、Topics、言語、Copilot要約を横断検索し、技術領域ごとの分類や並べ替えをしてる。選んだカードでは概要を見られ、要約がまだないものにはREADMEから短い紹介を出す。別のActionsワークフローが6時間ごとに更新を確認し、新規または更新分をCopilot CLIで解析して、通常は一度に最大8件ずつ summaries.json に蓄える。GitHub Pagesで静的に公開できる一方、対象は公開リポジトリだけで、サイトから削除やIssue作成などの書き込みはしない。要するに、個人の公開コードを読むための目録と案内を一緒にした仕組みってところだ。",
-      "closingRemark": "更新がなければ再解析せず、通常は一度に8件まで。酒場の帳簿としては、ずいぶん堅実だな。",
+      "title": "公開リポジトリ探索ポータル",
+      "summary": "temesotejamの公開GitHubリポジトリを、古い情報端末風の画面から検索・閲覧する個人向けポータル。Copilotによる日本語要約やREADMEからの暫定紹介も使い、気になるリポジトリの概要をその場で確認できます。",
+      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、古い情報端末風の画面から探して読むための個人ポータルだ。ブラウザ側ではGitHub APIから一覧を取り、名前や説明、Topics、言語、Copilot要約を横断検索できる。技術領域で絞り込んだり、選んだリポジトリの概要をその場で見たりできて、要約がないものにはREADMEから短い紹介を補う仕組みもある。別のGitHub Actionsワークフローが6時間ごとに更新を確認し、変更されたリポジトリをCopilot CLIで解析してJSONキャッシュへ反映する。公開リポジトリだけが対象で、サイトから削除やIssue作成などの書き込みはしないってわけだ。",
+      "closingRemark": "6時間ごとに帳簿は更新されるが、扱うのは公開情報だけ。酒場の裏口まで覗く気はないらしい。",
       "features": [
-        "公開リポジトリ一覧をGitHub APIから取得",
-        "名前・説明・Topics・言語・Copilot要約を横断検索",
-        "技術領域ごとの分類や並べ替えに対応",
-        "Copilot未解析のリポジトリにはREADMEから短い紹介を表示",
-        "6時間ごとに変更を確認し、要約を更新"
+        "公開リポジトリをGitHub APIから取得",
+        "名前・説明・Topics・言語・要約を横断検索",
+        "技術領域での絞り込みと詳細表示",
+        "READMEから要約未作成リポジトリの紹介を補完",
+        "更新分をCopilot CLIで解析し、説明をキャッシュ"
       ],
       "technologies": [
         "JavaScript",
-        "HTML",
         "CSS",
+        "HTML",
         "GitHub API",
         "GitHub Actions",
         "GitHub Copilot CLI",
@@ -26,19 +26,19 @@
       "categories": [
         "Web・ツール",
         "GitHub",
-        "検索",
+        "リポジトリ検索",
         "静的サイト"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-10-27T22:24:55Z",
+      "sourcePushedAt": "2026-10-28T05:55:26Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-10-27T22:24:55Z",
+        "pushedAt": "2026-10-28T05:55:26Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -48,8 +48,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "5b949320821245f7f293139f0c44f8bbaa24be81a15a33413daccf3455094794",
-      "generatedAt": "2026-10-28T05:55:25.260Z"
+      "sourceFingerprint": "c1fa912cf8b7e07af430c852871b631ea7fd0f3fd3d70c347c3cf5b43f00ac13",
+      "generatedAt": "2026-10-28T13:13:48.901Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -5092,16 +5092,16 @@
       "generatedAt": "2026-10-24T04:47:37.319Z"
     },
     "2026_10_24": {
-      "title": "現象救助隊：現実ニュース迷宮",
-      "summary": "現実のニュースや小さな出来事を迷宮の色・敵・観測ノートへ反映し、仲間と探索する一人用ブラウザーゲーム。公開RSSから地域・環境・交通・科学の見出しを6時間ごとに集め、記事本文を複製せず出典を示します。",
-      "detail": "こいつは、現実のニュースや小さな出来事を迷宮に変え、3階からの脱出を目指す一人用ブラウザーゲームだ。矢印キーやWASDで進み、1回動くごとに仲間と敵も行動するターン制で、「観測」した敵を仲間にしたり、食料や救護メモで持ちこたえたりする。入力したニュースは迷宮の色や出現する現象、観測ノートに反映され、各階の現実地点ではRSS見出し・配信元・日時・出典を確認できる。公開RSSの収集はGitHub Actionsが6時間ごとに行い、事件・事故などの見出しを除外して、取得できない場合は前回のデータを残す仕組みだ。記事本文を確認したとは扱わず、現実地点での選択も記事への賛否ではない。",
-      "closingRemark": "記事本文は持ち込まず、見出しと出典だけを迷宮に置く。現実との距離感まで、ちゃんと設計に入ってるな。",
+      "title": "現象救助隊：ニュース迷宮",
+      "summary": "現実のニュースや小さな出来事を手がかりに、毎回姿の変わる迷宮を探索する一人用ゲーム。ニュースは迷宮の色や敵、観測ノートに反映され、公開RSSからの自動収集にも対応しています。",
+      "detail": "こいつは、現実のニュースや身近な現象を材料に、形の変わる迷宮を探索する一人用ゲームだ。中ではプレイヤーが一度動くたびに仲間と敵も行動し、「観測」した敵を倒せば仲間にできる。ニュースは迷宮の色や出現する現象、観測ノートに反映され、各階の「現実地点」ではRSSの見出し、配信元、日時、出典リンクを確認できる。地域・環境・交通・科学のニュースはGitHub Actionsで6時間ごとに収集され、入力したニュースから遊ぶこともできる。3階から脱出すれば調査成功。ただし記事本文を確認済みとは扱わず、見出しなどだけを保持する作りだ。",
+      "closingRemark": "迷宮の敵はニュースから生まれるが、記事本文まで背負わせてはいない。その線引きは、なかなか堅実だな。",
       "features": [
-        "ニュース入力に応じて迷宮の色や現象、観測ノートが変化",
-        "ターン制の探索と、敵の仲間化・空腹・HP回復",
-        "現実地点でRSS見出しや配信元、日時、出典を確認",
-        "地域・環境・交通・科学の公開ニュースを6時間ごとに自動収集",
-        "事件・事故などの見出しを除外し、記事本文は複製しない"
+        "ニュースや現象を反映して迷宮を生成",
+        "ターン制の探索と、敵の仲間化",
+        "3階からの脱出を目指す一人用ゲーム",
+        "RSS見出し・配信元・日時・出典リンクを表示",
+        "公開ニュースを6時間ごとに自動収集"
       ],
       "technologies": [
         "JavaScript",
@@ -5113,21 +5113,21 @@
         "GitHub Pages"
       ],
       "categories": [
-        "ブラウザーゲーム",
-        "ローグライク",
+        "ゲーム",
         "ニュース",
-        "ターン制探索"
+        "ローグライク",
+        "ブラウザ"
       ],
       "status": "完成品",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1431824671,
-      "sourcePushedAt": "2026-10-28T05:35:37Z",
+      "sourcePushedAt": "2026-10-28T12:47:09Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1431824671,
         "name": "2026_10_24",
-        "pushedAt": "2026-10-28T05:35:37Z",
+        "pushedAt": "2026-10-28T12:47:09Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5137,8 +5137,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "c174aa5a317e4ddc035c40520e73cba48955aa23ed204507dbf541a1afcd5e9b",
-      "generatedAt": "2026-10-28T05:55:09.315Z"
+      "sourceFingerprint": "84f6be4e3d1f87b1eab491e5a07bf2cac49b8ef54441153085724da777924054",
+      "generatedAt": "2026-10-28T13:13:00.409Z"
     },
     "2026_10_24_2": {
       "title": "ブラウザ向けボクセルサバイバル",
@@ -5235,7 +5235,107 @@
       },
       "sourceFingerprint": "e2ffb54a171b7032ebcf831bf9f061668121b08494fe35cb139830623a42e215",
       "generatedAt": "2026-10-26T13:18:53.478Z"
+    },
+    "uno-r3-4esc-dshot300": {
+      "title": "Uno R3・4基ESC制御",
+      "summary": "Arduino Uno R3の可変抵抗ひとつで、4基のESCへ同じ指令を送る制御スケッチ。単方向DShot300の4系統同時出力と始動前の操作抑止を備え、Arduino IDEで書き込めるほか、Actionsのビルド成果物も利用できます。",
+      "detail": "こいつはArduino Uno R3から4基のESCへ同じスロットル指令を送る、実機動作確認済みの制御スケッチだ。可変抵抗をA0で100Hz読み取り、平滑化や出力変化量の制限、停止・始動のヒステリシスをかけながら、D8〜D11から単方向DShot300を同時に出してる。電源投入後は3秒間停止値を送り、つまみを最小で0.6秒保つと操作を許可する仕組みだな。Arduino IDEで書き込めて、GitHub Actionsからarduino-cliでビルドしたHEXも取得できる。ただしeRPMテレメトリは受けず、DShot 0も電源遮断ではない。実機ではプロペラを外して確認し、ESC用電源も適切に扱う必要がある。",
+      "closingRemark": "DShot 0で止めても電源までは切れない。停止指令と非常時の切断は、別勘定ってわけだ。",
+      "features": [
+        "Uno R3から4基のESCへ同一スロットル指令を出力",
+        "D8〜D11で単方向DShot300を同時生成",
+        "可変抵抗入力に平滑化・出力変化量制限・ヒステリシスを適用",
+        "電源投入後の待機と、つまみ最小位置の保持による操作許可",
+        "GitHub ActionsでビルドしたHEXを取得可能"
+      ],
+      "technologies": [
+        "Arduino Uno R3",
+        "ATmega328P",
+        "C++",
+        "Arduino IDE",
+        "DShot300",
+        "arduino-cli",
+        "GitHub Actions",
+        "ESC"
+      ],
+      "categories": [
+        "組み込み",
+        "マイコン",
+        "モーター制御",
+        "ESC制御"
+      ],
+      "status": "試作",
+      "confidence": "high",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
+      "sourceRepositoryId": 1436941386,
+      "sourcePushedAt": "2026-10-28T10:43:56Z",
+      "sourceDefaultBranch": "main",
+      "sourceMetadata": {
+        "repositoryId": 1436941386,
+        "name": "uno-r3-4esc-dshot300",
+        "pushedAt": "2026-10-28T10:43:56Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "C++"
+      },
+      "sourceFingerprint": "15c4a3a6e26d9b9d1dac2a42d0ce423caad85d290d920d87b234435db040c218",
+      "generatedAt": "2026-10-28T13:13:17.885Z"
+    },
+    "2026_10_28": {
+      "title": "Pico・Uno間のDShot試験用ファームウェア",
+      "summary": "Raspberry Pi PicoでSBUSのスロットルを読み取り、UART経由でArduino Uno R3へ送り、ESCへDShot300を出すプロペラなしのモーター単体試験用ファームウェア。通信断やフェイルセーフ時の停止処理に加え、USBログとUnoのGPIO信号で状態を切り分けられます。",
+      "detail": "こいつは、PicoとArduino Uno R3を使ってESCやモーターをプロペラなしで試験するためのファームウェアだ。PicoがSBUSからCH3のスロットルを読み、PIO UARTでUnoへ送り、UnoがDShot300を出す。通信断やSBUSのフェイルセーフを検出すると停止指令を送り、受信再開後もスロットル最下端を200ms保つまで再始動しない仕組みになってる。PicoのUSBログやUnoのD6・D7を使えば、受信状態と実際のDShot指令を分けて確認できるのも特徴だな。PicoとPico 2向けのUF2はCIでビルドされるが、実基板の通信や波形、モーター始動は未検証で、姿勢制御も行わない。",
+      "closingRemark": "D6は通信、D7は実際の指令。止まった理由を、まず二つの信号に聞いてみる設計だ。",
+      "features": [
+        "PicoがSBUSのCH3を読み、UARTでUnoへ一方向に転送",
+        "Unoが500HzでDShot300を送信し、双方向eRPM受信は行わない",
+        "SBUS途絶・フェイルセーフ・UART通信断で停止する安全処理",
+        "USBシリアルログとUnoのD6・D7で状態を診断",
+        "Pico／Pico 2向けUF2をCIでビルド"
+      ],
+      "technologies": [
+        "C++",
+        "Raspberry Pi Pico",
+        "RP2040",
+        "RP2350",
+        "Arduino Uno R3",
+        "SBUS",
+        "PIO UART",
+        "DShot300"
+      ],
+      "categories": [
+        "組み込みファームウェア",
+        "モーター試験",
+        "ESC制御",
+        "ハードウェア診断"
+      ],
+      "status": "試作",
+      "confidence": "high",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
+      "sourceRepositoryId": 1436871009,
+      "sourcePushedAt": "2026-10-28T09:54:37Z",
+      "sourceDefaultBranch": "main",
+      "sourceMetadata": {
+        "repositoryId": 1436871009,
+        "name": "2026_10_28",
+        "pushedAt": "2026-10-28T09:54:37Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "C++"
+      },
+      "sourceFingerprint": "7619492117b912efb47794f8e972bb99094a6a3cddd3569a6a91085c2b7ab4f2",
+      "generatedAt": "2026-10-28T13:13:32.088Z"
     }
   },
-  "repositoryCount": 106
+  "repositoryCount": 108
 }
