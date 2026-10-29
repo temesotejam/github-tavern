@@ -1,18 +1,18 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-28T22:42:07.355Z",
+  "generatedAt": "2026-10-29T06:00:10.889Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ探索ポータル",
-      "summary": "temesotejamが公開しているGitHubリポジトリを、酒場を巡るような画面で検索・閲覧する個人向けポータル。READMEからの暫定説明に加え、Copilotがリポジトリの内容を調べて生成した日本語概要も確認できます。",
-      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを探して中身を確かめるための個人向けポータルだ。ブラウザからGitHub APIで公開リポジトリを取得し、名前や説明、Topics、使用言語、Copilot要約を横断検索できる。カードを選べば概要が開き、解析済みならREADMEやファイル構成などを根拠にした日本語説明が読めるし、未解析のものにはREADMEから短い暫定説明を出す。別のワークフローでは6時間ごとに更新を確認し、変更のあったリポジトリをCopilot CLIで解析して要約データを更新する仕組みだ。GitHub Pagesで静的に公開でき、対象は公開リポジトリのみ、サイトから削除や変更などの書き込みはしない。",
-      "closingRemark": "6時間ごとに要約を見直す一方、サイトからリポジトリへ手は出さない。案内役としては、なかなか慎重な店だな。",
+      "title": "GitHubリポジトリ酒場",
+      "summary": "公開リポジトリを酒場風の画面から探し、選んで概要を読める個人向けポータル。GitHub APIで一覧を取得し、Copilotによる日本語説明やREADMEからの暫定説明も表示します。",
+      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、酒場を巡るような画面で探して読める個人向けポータルだ。中ではGitHub APIから一覧を取り、名前や説明、Topics、言語、Copilot要約をまとめて検索できるようにしてる。カードを選べば概要が開き、まだ解析されていないものにはREADMEから短い暫定説明を添える。別のワークフローが6時間ごとに更新を確認し、変更のあったリポジトリを最大8件ずつ解析して要約を保存する仕組みだ。GitHub Pagesで静的に公開でき、対象は公開リポジトリだけで、サイトから変更や書き込みはしない。",
+      "closingRemark": "要約の更新は6時間ごとに最大8件ずつ。酒場の帳簿も、全件いっぺんには埋まらないらしい。",
       "features": [
         "公開リポジトリをGitHub APIから取得",
         "名前・説明・Topics・言語・要約を横断検索",
-        "技術領域ごとの簡易分類とカード形式の詳細表示",
-        "Copilot CLIで変更分を定期解析し、日本語要約をキャッシュ",
-        "未解析リポジトリはREADMEから暫定説明を表示"
+        "カードから概要と技術情報を確認",
+        "未解析リポジトリはREADMEから暫定説明を表示",
+        "変更分を定期解析して日本語要約を更新"
       ],
       "technologies": [
         "JavaScript",
@@ -27,18 +27,18 @@
         "Web・ツール",
         "GitHub",
         "リポジトリ検索",
-        "個人ポータル"
+        "自動要約"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-10-28T13:35:08Z",
+      "sourcePushedAt": "2026-10-28T22:42:08Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-10-28T13:35:08Z",
+        "pushedAt": "2026-10-28T22:42:08Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -48,8 +48,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "302c4f36c2f6743c3cedd9f8de090ca2f99253ef60b45a61639420b2172b2710",
-      "generatedAt": "2026-10-28T22:42:07.355Z"
+      "sourceFingerprint": "14790e057de60349beb834cc6d5c841d966c48a3b28cbfcc4f940a25245f9590",
+      "generatedAt": "2026-10-29T06:00:10.889Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -302,42 +302,41 @@
     },
     "spike-rt-web-toolkit": {
       "title": "SPIKE-RT開発・書き込みツール",
-      "summary": "SPIKE-RTアプリの編集からビルド、SPIKE Prime Hubへの書き込み、実行ログの確認までをブラウザ中心でつなぐツールキット。変更のないファームウェアはSHA-256で確認して再利用し、課題アプリもサンプルから作成できます。",
-      "detail": "こいつは、SPIKE-RTアプリを編集してビルドし、SPIKE Prime Hubへ書き込んで動作ログまで確かめるためのツールキットだ。中ではGitHub Actionsが複数アプリをビルドし、ソースや設定に変更がなければSHA-256を確認したうえで過去のファームウェアを再利用する。GitHub PagesからWebUSBとDfuSeでDFUモードのHubへ書き込めて、通常起動後のUSBシリアルログはWeb Serialで確認できる。アプリはCファイル1つから追加でき、サンプルを複製して課題用アプリを作る仕組みもある。WindowsのWinUSBセットアップは別リポジトリのReleaseから案内しており、新規ドライバー割り当ての実機確認はまだ残ってるな。",
-      "closingRemark": "課題はサンプルから複製して独立したアプリにできる。書き込み窓口だけでなく、授業の段取りまで見ているわけだな。",
+      "summary": "SPIKE Prime Hub向けのSPIKE-RTアプリを、ブラウザで編集・ビルド・書き込み・ログ確認するためのツールキット。変更のないアプリはビルド成果物を再利用し、課題作成やWindows向けのDFU初期設定案内にも対応する。",
+      "detail": "こいつは、SPIKE Prime Hub向けのSPIKE-RTアプリを編集して、実機への書き込みやログ確認までつなぐWebツールキットだ。中ではGitHub Actionsがapps/以下のCアプリをビルドし、GitHub Pagesの画面からWebUSBとDfuSeでDFU書き込みを行う。変更のないアプリはSHA-256を確かめて成果物を再利用するから、毎回すべてをビルドし直さずに済む。実行後はWeb Serialで115200 bpsのログをブラウザに表示でき、課題をサンプルから作る仕組みや、WindowsのDFU用WinUSBセットアップへの導線も用意されてる。ただし、WinUSB未設定PCでの新規ドライバ割り当ては最終実機確認待ちで、キャッシュが失われた場合は再ビルドが必要だな。",
+      "closingRemark": "変わったアプリだけをビルドし直す一方、DFU用ドライバの新規割り当てはまだ最終確認待ち。急ぐところと慎重なところが分かれてる。",
       "features": [
-        "GitHub Actionsで複数アプリをビルドし、変更のないファームウェアをSHA-256確認後に再利用",
-        "GitHub PagesからWebUSBでSPIKE Prime HubへDFU書き込み",
-        "Web Serialで実行中のUSBシリアルログをブラウザ表示",
-        "Cファイル1つからアプリを追加でき、課題をサンプルから作成可能",
-        "Windows用WinUSBセットアップを外部Releaseから案内"
+        "GitHub Actionsでapps/以下のSPIKE-RTアプリを一括ビルド",
+        "変更のないアプリのビルド成果物をSHA-256確認後に再利用",
+        "GitHub PagesからWebUSB経由でSPIKE Prime Hubへ書き込み",
+        "Web Serialで実行中のUSBシリアルログを表示",
+        "サンプルから課題アプリを作成し、独立して編集・ビルド"
       ],
       "technologies": [
         "C",
         "JavaScript",
+        "CSS",
+        "HTML",
         "SPIKE-RT",
         "GitHub Actions",
-        "GitHub Pages",
         "WebUSB",
-        "DfuSe",
         "Web Serial"
       ],
       "categories": [
-        "組み込み開発",
         "開発ツール",
-        "Webアプリ",
+        "組み込み",
         "教育"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1341511616,
-      "sourcePushedAt": "2026-10-23T07:02:09Z",
+      "sourcePushedAt": "2026-10-29T04:57:50Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1341511616,
         "name": "spike-rt-web-toolkit",
-        "pushedAt": "2026-10-23T07:02:09Z",
+        "pushedAt": "2026-10-29T04:57:50Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -347,8 +346,8 @@
         "fork": false,
         "language": "C"
       },
-      "sourceFingerprint": "9296b8cc310402c620106e31d158c418aea8fb707e38d8be8b08ed398657400b",
-      "generatedAt": "2026-10-23T11:50:11.174Z"
+      "sourceFingerprint": "be22bd126c06578904e0f9341eae5d0c9f3a689f80a1a7d50105e10ffdca2e26",
+      "generatedAt": "2026-10-29T05:59:45.556Z"
     },
     "reaction-wheel-rocker-baseline-sim": {
       "title": "反応ホイール機体の基準シミュレータ",
@@ -5092,42 +5091,43 @@
       "generatedAt": "2026-10-24T04:47:37.319Z"
     },
     "2026_10_24": {
-      "title": "ニュース連動型迷宮探索ゲーム",
-      "summary": "現実のニュースや入力した出来事をもとに迷宮が変わる、一人用の探索ゲーム。ターン制の戦闘や仲間集め、RSS記事の出典確認を組み合わせ、3階からの脱出を目指します。",
-      "detail": "こいつは、現実のニュースや入力した出来事を迷宮に取り込み、探索を通じて観察する一人用ゲームだ。中では、プレイヤーが動くたびに仲間と敵も行動し、現象を「観測」して倒せば最大3体まで仲間になる。空腹やHPを管理しながら光る階段を探し、3階から脱出すれば調査成功ってわけだ。各階にはRSSの見出し・配信元・日時・出典を示す現実地点があり、そこでの選択が次の階の現象の種類や強さに影響する。記事本文を確認済みとは扱わず、選択も記事への賛否を表さない。公開ニュースはGitHub Actionsで6時間ごとに集める仕組みだな。",
-      "closingRemark": "迷宮の現実地点に残るのは見出しと出典まで。記事の中身は、脱出してから確かめることになりそうだ。",
+      "title": "ニュースで変わる現象迷宮",
+      "summary": "公開ニュースや入力した出来事を迷宮の色や敵に反映し、仲間と探索する一人用のブラウザゲーム。RSS見出しの出典を現実地点で確認しながら、3階からの脱出を目指します。",
+      "detail": "こいつは、現実のニュースや小さな出来事を手がかりに、毎回形の変わる迷宮を探索する一人用ゲームだ。中では移動のたびに仲間と敵も行動し、現象を観測して倒せば仲間にできる。ニュースは迷宮の色や出現する現象に影響し、地域・環境・交通・科学のテーマごとに回復や地図開示などの副効果も変わる。各階の現実地点ではRSS見出し、配信元、日時、出典を確認でき、そこでの選択は次の階の敵の種類や強さに反映される。記事本文を確認済みとは扱わず、事件や事故などの見出しを自動除外する設計で、3階から脱出すれば調査成功ってわけだ。",
+      "closingRemark": "現実地点で選べるのは迷宮の進み方で、記事への賛否じゃない。そこは取り違えないようにな。",
       "features": [
-        "入力したニュースが迷宮の色や出現する現象に反映される",
-        "RSS記事を現実地点として表示し、見出し・配信元・日時・出典を確認できる",
-        "観測した現象を最大3体まで仲間にできるターン制探索",
-        "カテゴリに応じた副効果で回復や地図開示、観測能力強化などが変わる",
-        "公開ニュースを6時間ごとに自動収集し、事件・事故などの見出しを除外する"
+        "ニュースや入力内容で迷宮の色・現象が変化",
+        "ターン制の探索と、観測した敵の仲間化",
+        "3階からの脱出を目指す一人用ゲーム",
+        "RSS見出し・配信元・日時・出典リンクを表示",
+        "公開ニュースを6時間ごとに自動収集し、事件・事故などの見出しを除外"
       ],
       "technologies": [
         "JavaScript",
         "HTML",
         "CSS",
-        "Canvas API",
-        "GitHub Actions",
+        "Canvas",
         "RSS",
-        "GitHub Pages"
+        "GitHub Actions",
+        "GitHub Pages",
+        "LocalStorage"
       ],
       "categories": [
-        "ゲーム",
+        "ブラウザゲーム",
         "ローグライク",
         "ニュース",
-        "ブラウザ"
+        "ターン制"
       ],
       "status": "完成品",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1431824671,
-      "sourcePushedAt": "2026-10-28T22:31:41Z",
+      "sourcePushedAt": "2026-10-29T05:42:49Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1431824671,
         "name": "2026_10_24",
-        "pushedAt": "2026-10-28T22:31:41Z",
+        "pushedAt": "2026-10-29T05:42:49Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5137,8 +5137,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "5b29031b7ae05a483d1e48897844eb73630246598eafbdbdf6d9caae9e2a84b0",
-      "generatedAt": "2026-10-28T22:41:55.119Z"
+      "sourceFingerprint": "1e3cda2334403968b8726aafda57f39465a4911550018903cde3c7952f3ba1ee",
+      "generatedAt": "2026-10-29T05:59:33.930Z"
     },
     "2026_10_24_2": {
       "title": "ブラウザ向けボクセルサバイバル",
@@ -5238,42 +5238,42 @@
     },
     "uno-r3-4esc-dshot300": {
       "title": "Uno R3・4基ESC制御",
-      "summary": "Arduino Uno R3の可変抵抗ひとつで、4基のESCへ同じ指令を送る制御スケッチ。単方向DShot300の4系統同時出力と始動前の操作抑止を備え、Arduino IDEで書き込めるほか、Actionsのビルド成果物も利用できます。",
-      "detail": "こいつはArduino Uno R3から4基のESCへ同じスロットル指令を送る、実機動作確認済みの制御スケッチだ。可変抵抗をA0で100Hz読み取り、平滑化や出力変化量の制限、停止・始動のヒステリシスをかけながら、D8〜D11から単方向DShot300を同時に出してる。電源投入後は3秒間停止値を送り、つまみを最小で0.6秒保つと操作を許可する仕組みだな。Arduino IDEで書き込めて、GitHub Actionsからarduino-cliでビルドしたHEXも取得できる。ただしeRPMテレメトリは受けず、DShot 0も電源遮断ではない。実機ではプロペラを外して確認し、ESC用電源も適切に扱う必要がある。",
-      "closingRemark": "DShot 0で止めても電源までは切れない。停止指令と非常時の切断は、別勘定ってわけだ。",
+      "summary": "Arduino Uno R3で4基のESCへ同一のDShot300指令を送り、可変抵抗ひとつでモーターを制御する構成だ。Arduino IDE用スケッチに加え、ブラウザから検証付きで書き込めるWeb Serialページも用意されている。",
+      "detail": "こいつは、Arduino Uno R3から4基のESCを同じスロットル指令で動かすためのファームウェアと書き込み手段だ。中では可変抵抗の値をA0で読み、D8〜D11からDShot300を同時に出力している。起動後の待機やつまみ最小位置の確認、停止と回転開始の境界に設けたヒステリシスで、意図しない始動を抑える作りだな。書き込みはArduino IDEのほか、Web Serial対応ブラウザからもでき、GitHub Actionsで生成したHEXをフラッシュへ書いたあと読み戻して照合する。ただしDShotの0は電源遮断ではなく、実機確認もプロペラを外して行う必要がある。",
+      "closingRemark": "ブラウザ書き込みは読み戻しまで見るが、DShotの0がLiPoを切ってくれるわけじゃない。",
       "features": [
-        "Uno R3から4基のESCへ同一スロットル指令を出力",
-        "D8〜D11で単方向DShot300を同時生成",
-        "可変抵抗入力に平滑化・出力変化量制限・ヒステリシスを適用",
-        "電源投入後の待機と、つまみ最小位置の保持による操作許可",
-        "GitHub ActionsでビルドしたHEXを取得可能"
+        "可変抵抗ひとつで4基へ同一のスロットル指令を送信",
+        "D8〜D11から単方向DShot300を同時出力",
+        "起動待機、最小位置確認、停止・開始ヒステリシスを実装",
+        "Web Serialでブラウザからファームウェアを書き込み",
+        "書き込み後にフラッシュを読み戻して照合"
       ],
       "technologies": [
         "Arduino Uno R3",
         "ATmega328P",
-        "C++",
-        "Arduino IDE",
         "DShot300",
-        "arduino-cli",
+        "Web Serial",
+        "STK500v1",
+        "Arduino CLI",
         "GitHub Actions",
-        "ESC"
+        "JavaScript"
       ],
       "categories": [
         "組み込み",
-        "マイコン",
         "モーター制御",
-        "ESC制御"
+        "ファームウェア",
+        "書き込みツール"
       ],
-      "status": "試作",
+      "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1436941386,
-      "sourcePushedAt": "2026-10-28T10:43:56Z",
+      "sourcePushedAt": "2026-10-29T04:10:32Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1436941386,
         "name": "uno-r3-4esc-dshot300",
-        "pushedAt": "2026-10-28T10:43:56Z",
+        "pushedAt": "2026-10-29T04:10:32Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5281,10 +5281,10 @@
         "archived": false,
         "disabled": false,
         "fork": false,
-        "language": "C++"
+        "language": "JavaScript"
       },
-      "sourceFingerprint": "15c4a3a6e26d9b9d1dac2a42d0ce423caad85d290d920d87b234435db040c218",
-      "generatedAt": "2026-10-28T13:13:17.885Z"
+      "sourceFingerprint": "f0065ea87f6d1ccbe9e453a1819603ed0200a6c69c365f35a638f5556baf8e7c",
+      "generatedAt": "2026-10-29T05:59:57.429Z"
     },
     "2026_10_28": {
       "title": "Pico・Uno間のDShot試験用ファームウェア",
