@@ -1,31 +1,31 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-30T13:11:38.109Z",
+  "generatedAt": "2026-10-30T22:29:25.599Z",
   "repositories": {
     "github-tavern": {
       "title": "公開リポジトリ探索酒場",
-      "summary": "temesotejamの公開GitHubリポジトリを、酒場風の画面から探して概要を読む個人向けポータル。名前や説明、Topics、言語、Copilot要約を横断検索でき、新規・更新分の説明もActionsで定期生成する。",
-      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、古い情報端末を思わせる酒場風の画面で探して読むための個人ポータルだ。中ではGitHub APIから公開リポジトリを取得し、名前・Description・Topics・言語・Copilot要約を横断検索、技術領域ごとの簡易分類もしてる。カードを選べば概要が開き、Copilot解析前ならREADMEから短い暫定説明を出す仕組みだな。裏ではActionsが6時間ごとに更新分を最大8件ずつ解析して summaries.json を更新し、確認済みの公開ページも詳細画面から開ける。ただし対象は公開リポジトリだけで、削除やIssue作成などの書き込みはしない。",
-      "closingRemark": "6時間おきに最大8件ずつ帳面を更新する。記録係も、一度に抱える依頼は決めてあるらしい。",
+      "summary": "個人所有の公開GitHubリポジトリを、酒場風の画面から検索・閲覧するためのポータル。GitHub APIで情報を取得し、Copilotによる日本語説明やREADMEの暫定紹介も使って、気になるリポジトリの概要をその場で確かめられる。",
+      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、古い情報端末を思わせる画面から探して読むためのポータルだ。中ではGitHub APIから一覧を取り、名前や説明、Topics、言語、Copilot要約をまとめて検索できるようにしてる。カードを選べば概要や技術情報が見られ、Copilotの解析がまだないものにはREADMEから短い紹介を補う仕組みもある。別のワークフローが6時間ごとに更新を確認し、変更されたリポジトリを最大8件ずつ解析して説明を蓄積する。GitHub Pagesで静的に公開できる一方、対象は公開リポジトリだけで、サイトから書き込み操作はしない構成だ。",
+      "closingRemark": "6時間ごとに最大8件ずつ、酒場の記録は少しずつ増える。急がせる仕組みではないらしいな。",
       "features": [
-        "公開リポジトリをGitHub APIから自動取得",
-        "名前・説明・Topics・言語・Copilot要約を横断検索",
-        "技術領域ごとに簡易分類",
-        "Copilot解析前はREADMEから暫定説明を表示",
-        "詳細画面から確認済みの公開ページを開ける"
+        "公開リポジトリをGitHub APIから取得",
+        "名前・説明・Topics・言語・要約を横断検索",
+        "CopilotがREADMEや設定などを根拠に日本語説明を生成",
+        "解析前のリポジトリはREADMEから短い紹介を表示",
+        "GitHub Pagesで静的公開でき、サイトから書き込みは行わない"
       ],
       "technologies": [
         "JavaScript",
-        "HTML",
         "CSS",
+        "HTML",
         "GitHub API",
         "GitHub Actions",
         "GitHub Copilot CLI",
         "GitHub Pages"
       ],
       "categories": [
-        "Webアプリ",
-        "GitHubツール",
+        "Web・ツール",
+        "GitHub",
         "リポジトリ検索",
         "静的サイト"
       ],
@@ -33,12 +33,12 @@
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-10-30T06:31:37Z",
+      "sourcePushedAt": "2026-10-30T13:11:39Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-10-30T06:31:37Z",
+        "pushedAt": "2026-10-30T13:11:39Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -48,8 +48,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "40b1f03de7b3e5dc322f0c5f93ad66948283be77a923519ecda356bfc468514e",
-      "generatedAt": "2026-10-30T13:11:38.108Z"
+      "sourceFingerprint": "0972f1830e7db1e72cfe210a92f417a2e3a62d8b78836433f13be2b8f2b85318",
+      "generatedAt": "2026-10-30T22:29:25.599Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -5091,42 +5091,42 @@
       "generatedAt": "2026-10-24T04:47:37.319Z"
     },
     "2026_10_24": {
-      "title": "現象救助隊・現実迷宮",
-      "summary": "公開ニュースや入力した出来事を手がかりに、毎回形の変わる迷宮を探索する一人用ゲーム。仲間や敵も行動するターン制で、記事の見出しや出典はゲーム内の「現実地点」で確認できます。",
-      "detail": "こいつは、現実のニュースや入力した出来事を迷宮に取り込み、探索を通じて現象を観測する一人用ゲームだ。中ではJavaScriptでターン制の移動や戦闘、仲間化、空腹を進め、入力したニュースを迷宮の色や出現する現象、観測ノートに反映してる。地域・環境・交通・科学の公開RSSはGitHub Actionsで6時間ごとに集め、記事は各階の「現実地点」として登場する。接触すると見出しや配信元、日時、出典リンクを確認でき、ゲーム内での選択は記事への賛否を表すものじゃない。事件や事故などの見出しは除外し、記事本文も保持しない作りで、3階から脱出すれば調査成功ってところだ。",
-      "closingRemark": "迷宮に現れるのは記事本文じゃなく、見出しと出典まで。現実との距離は、きちんと一線引いてあるな。",
+      "title": "現象救助隊：現実ダンジョン",
+      "summary": "ニュースや身近な現象を題材に、毎回姿の変わる迷宮を探索する一人用ブラウザーゲーム。自動収集した公開ニュースや入力した記事が迷宮の色や敵、観測ノートに反映され、記事の出典もゲーム内で確認できます。",
+      "detail": "こいつは、現実のニュースや小さな現象を手がかりに、3階建ての迷宮を探索して脱出を目指す一人用ゲームだ。中ではターン制でプレイヤー、仲間、敵が動き、「観測」した敵を仲間にしたり、食料で空腹をしのいだりしながら進んでいく。入力したニュースは次の迷宮の色や出現する現象、観測ノートに反映されるほか、各階には公開記事の見出し・配信元・日時・出典リンクを示す「現実地点」も現れる。地域・環境・交通・科学のニュースはGitHub Actionsで6時間ごとにRSSから収集し、現実地点での選択は次の階の敵の種類や強さに影響する。ただし記事本文を確認済みとは扱わず、事件・事故・災害などの見出しは除外する設計だ。",
+      "closingRemark": "迷宮は記事から形を借りるが、記事の中身まで読んだふりはしない。その線引きは、なかなか堅実だな。",
       "features": [
-        "ニュースや入力内容で迷宮の色・現象・観測ノートが変化",
-        "仲間と敵がプレイヤーの行動ごとに動くターン制探索",
-        "現実地点でRSS見出し・配信元・日時・出典リンクを表示",
-        "地域・環境・交通・科学のニュースを6時間ごとに自動収集",
-        "事件・事故などの見出しを除外し、記事本文は保持しない"
+        "毎回形の変わるターン制ダンジョン探索",
+        "観測した敵を最大3体まで仲間にできる",
+        "入力ニュースが迷宮の色や敵、観測ノートに反映",
+        "現実地点で記事の見出し・配信元・日時・出典を表示",
+        "公開RSSニュースを6時間ごとに自動収集"
       ],
       "technologies": [
         "JavaScript",
         "HTML",
         "CSS",
         "Canvas",
-        "GitHub Actions",
         "RSS",
+        "GitHub Actions",
         "GitHub Pages"
       ],
       "categories": [
-        "ゲーム",
+        "ブラウザーゲーム",
         "ローグライク",
         "ニュース",
-        "Web"
+        "シミュレーション"
       ],
-      "status": "実験",
+      "status": "完成品",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1431824671,
-      "sourcePushedAt": "2026-10-30T12:49:00Z",
+      "sourcePushedAt": "2026-10-30T22:15:24Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1431824671,
         "name": "2026_10_24",
-        "pushedAt": "2026-10-30T12:49:00Z",
+        "pushedAt": "2026-10-30T22:15:24Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5136,29 +5136,29 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "8cd55f51fa947938e03e3867aabb844cd4de54bb605e3fa75736c865d68dd3cc",
-      "generatedAt": "2026-10-30T13:11:09.082Z"
+      "sourceFingerprint": "38f33b36684ef9f74a8c15a768eba0556dc234d00130bb5966ffd84794f53967",
+      "generatedAt": "2026-10-30T22:29:14.304Z"
     },
     "2026_10_24_2": {
-      "title": "クラシック風ボクセルサバイバル",
-      "summary": "昔のMinecraftを参考にした、PCブラウザ向けの一人用ボクセルゲーム。採掘やクラフトからエンドラ討伐まで遊べて、ワールドの状態はブラウザに保存できます。公式素材を使わず、テクスチャやモデルを生成しているのも特徴です。",
-      "detail": "こいつは、昔のMinecraftを参考にしたPCブラウザ向けのシングルプレイ・ボクセルゲームだ。ゲーム用サーバーは不要で、Three.jsで描画しながら、採掘やクラフト、農業、動物や敵との戦闘を進められる。村やネザー、エンドもあり、Seedを選んで同じワールドを続けて遊べる仕組みだな。テクスチャやアイコン、モデルは手続き生成で、公式Minecraftの素材は同梱していない。ワールドの状態はIndexedDBに保存でき、手動バックアップや復元にも対応してる。ただし流体の広がり方は簡易方式で、低スペックPCでの性能や実機の操作感は未評価。旧セーブは地形を保つため、新しい地形を確かめるなら未使用Seedが必要だ。",
-      "closingRemark": "新仕様の討伐確認には旧攻略ドライバーを使えないそうだ。攻略役にも、ルール改定の周知が要るらしい。",
+      "title": "ブラウザ版ボクセルサバイバル",
+      "summary": "昔のMinecraftを参考にした、PCブラウザ向けの一人用ボクセルサバイバルゲーム。手続き生成の世界で採掘やクラフトを進め、エンドラ討伐を目指せます。公式素材やゲームサーバーは不要で、GitHub Pagesから遊べます。",
+      "detail": "こいつは、昔のMinecraftを参考にしたPCブラウザ向けの一人用ボクセルサバイバルゲームだ。Three.jsとTypeScriptで世界を描き、テクスチャやモデルも手続き生成しているから、公式素材やゲームサーバーには頼らずGitHub Pagesで動く。木材集めから道具作り、採掘、農業、村やネザーの探索を経てエンドラ討伐まで進められ、位置や所持品などはSeedとモードごとにIndexedDBへ保存できる。視点や描画設定に加え、遊び方、検証スクリプト、プレイ記録も揃っていて、どこまで確かめたか追いやすい。とはいえ原版と同じ仕様ではなく、流体は簡易処理で、実機の操作感や低性能PCでの目標FPSは未評価だ。",
+      "closingRemark": "137パート、死亡10回で卵を持ち帰った記録はある。遺跡探しは既知の座標頼みで、アイの投擲はしていない――攻略にも但し書きが付く。",
       "features": [
-        "採掘・クラフト・農業・戦闘を含む一人用サバイバル",
-        "Seedとモードを選んでワールドを作成・再開",
-        "IndexedDBへの自動保存とJSONバックアップ・復元",
-        "テクスチャ・アイコン・モデルを手続き生成",
-        "ブラウザ操作や長時間プレイの検証スクリプトを用意"
+        "採掘・クラフト・農業・戦闘からエンドラ討伐まで遊べる",
+        "Seedとモードごとにワールドを保存し、JSONでバックアップ・復元できる",
+        "地形やテクスチャ、モデルを手続き生成し、公式素材を同梱しない",
+        "描画設定や三人称視点を切り替えられる",
+        "ブラウザ操作による検証スクリプトとプレイ記録を公開"
       ],
       "technologies": [
         "JavaScript",
         "TypeScript",
         "Three.js",
         "Vite",
-        "simplex-noise",
         "IndexedDB",
         "Puppeteer",
+        "Vitest",
         "GitHub Pages"
       ],
       "categories": [
@@ -5170,12 +5170,12 @@
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1432235174,
-      "sourcePushedAt": "2026-10-30T13:02:57Z",
+      "sourcePushedAt": "2026-10-30T22:22:56Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1432235174,
         "name": "2026_10_24_2",
-        "pushedAt": "2026-10-30T13:02:57Z",
+        "pushedAt": "2026-10-30T22:22:56Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5185,8 +5185,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "304740fdea1ac4f65ad4e4b0614f039c1cd82a39947ac6500089f7eb745ed62a",
-      "generatedAt": "2026-10-30T13:10:57.272Z"
+      "sourceFingerprint": "eeb7832e40f79f983fccd3735e6479ca76259980156c21e2c6fb4b957a50c81b",
+      "generatedAt": "2026-10-30T22:29:01.637Z"
     },
     "rw-walker-3d-dynamics": {
       "title": "準受動歩行器の3D動力学実験",
