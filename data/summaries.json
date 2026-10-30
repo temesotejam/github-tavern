@@ -1,18 +1,18 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-29T22:51:28.982Z",
+  "generatedAt": "2026-10-30T06:01:18.597Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ案内酒場",
-      "summary": "所有者 temesotejam の公開GitHubリポジトリを、酒場風の画面から検索・閲覧する個人向けポータル。技術領域で絞り込めるほか、Copilotの日本語説明やREADMEからの暫定紹介も見られる。",
-      "detail": "こいつは、temesotejam が公開しているGitHubリポジトリを、酒場風の画面から探して中身を確かめるための個人向けポータルだ。ブラウザ側ではGitHub APIから一覧を取得し、名前や説明、Topics、言語、Copilot要約を横断検索できる。カテゴリで絞り込んでカードを選ぶと概要が開き、解析済みならREADMEや設定、ファイル構成などを根拠にした日本語説明が出る。裏ではGitHub Actionsが6時間ごとに更新を確認し、新規または変更のあったものをCopilot CLIで解析して、説明データを更新してる。未解析のものはREADMEから短い紹介を補うが、対象は公開リポジトリだけで、サイトから削除や変更などの書き込みはしない構成だ。",
-      "closingRemark": "定期解析は一度に最大8件。酒場の記録係も、帳簿を一晩で全部片づけるつもりはないらしい。",
+      "title": "公開リポジトリ探索ポータル",
+      "summary": "自分が所有する公開GitHubリポジトリを、古い情報端末風の画面から検索・閲覧する個人向けポータル。CopilotがREADMEや設定、ファイル構成などをもとに日本語の説明を作り、一覧と詳細画面で確認できます。",
+      "detail": "こいつは、temesotejamが所有する公開GitHubリポジトリを、酒場の依頼帳のような画面から探すための個人ポータルだ。中ではGitHub APIから一覧を取得し、名前や説明、Topics、言語、Copilot要約を横断検索できるようにしてる。カードを選べば概要や特徴を確認でき、Copilotの解析がまだない新しいリポジトリにはREADMEから短い暫定説明を出す仕組みもある。解析結果はJSONに保存され、GitHub Actionsが6時間ごとに更新を確認し、変更のあったものを最大8件ずつCopilot CLIで調べる。GitHub Pagesで静的に公開できる一方、対象は公開リポジトリだけで、サイトから削除や変更などの書き込み操作はしない構成だ。",
+      "closingRemark": "6時間ごとに最大8件。帳簿の更新も、まとめて片づけるより小分けが性に合うらしい。",
       "features": [
-        "公開リポジトリ一覧をGitHub APIから取得",
+        "所有する公開リポジトリをGitHub APIから取得",
         "名前・説明・Topics・言語・要約を横断検索",
-        "技術領域ごとのカテゴリ絞り込み",
-        "Copilot CLIで要約を定期更新",
-        "未解析リポジトリはREADMEから暫定紹介"
+        "Copilot CLIがリポジトリ資料をもとに日本語説明を生成",
+        "未解析のリポジトリにはREADME由来の暫定説明を表示",
+        "変更分を定期解析し、GitHub Pagesで静的公開"
       ],
       "technologies": [
         "JavaScript",
@@ -24,21 +24,21 @@
         "GitHub Pages"
       ],
       "categories": [
-        "Webアプリ",
-        "リポジトリ検索",
-        "GitHub Pages",
-        "自動要約"
+        "Web・ツール",
+        "GitHub",
+        "リポジトリ管理",
+        "AI要約"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-10-29T13:19:27Z",
+      "sourcePushedAt": "2026-10-29T22:51:30Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-10-29T13:19:27Z",
+        "pushedAt": "2026-10-29T22:51:30Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -48,8 +48,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "c58276b2b34e6ae20131d8b47164b462b01248e75ed67b6fe648fd457174dc93",
-      "generatedAt": "2026-10-29T22:51:28.982Z"
+      "sourceFingerprint": "7e88ec7343993493fdd6434d56542d5824ed40a1bf0b08e71b6aa7ee5d8ecf39",
+      "generatedAt": "2026-10-30T06:01:18.597Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -4845,43 +4845,43 @@
       "generatedAt": "2026-10-27T05:16:35.530Z"
     },
     "pico-copter-fc": {
-      "title": "Pico向けコプター制御",
-      "summary": "Raspberry Pi Pico／Pico 2向けのクアッドコプター飛行制御ファームウェアをビルドし、UF2として配布するプロジェクト。SBUSフェイルセーフやCH5操作時のログ、DShot設定、持ち運べるソースZIPも用意されていますが、実機での検証範囲は限られます。",
-      "detail": "こいつは、Raspberry Pi PicoやPico 2で動くクアッドコプターの飛行制御ファームウェアと、そのビルド・配布をまとめたものだ。中ではSBUS入力、姿勢制御のPIDやEKF、モータミキシング、DShot出力を扱い、通信が途絶えたときはアーム解除と最小ESC指令へ移る。CH5を使えば飛行中のデータを100 Hzで記録し、USB診断やUF2、ローカルビルド用ソースZIPも利用できる。GitHub Actionsがビルドし、成功したUF2をPagesへ公開する仕組みだな。ただ、最近のコミットは既定を単方向DShot150に変更している一方、READMEには双方向やDShot300を前提とした記述もあり、実際の配布設定は設定ファイルで確認が必要だ。飛行安全性は保証されず、Pico 2や複数モータでの検証にも未確認の範囲が残る。",
-      "closingRemark": "CH5のログは約10秒ぶんをRAMに預ける仕組みだ。電源を切ると記憶まできれいに消える。",
+      "title": "Picoコプター飛行制御",
+      "summary": "Raspberry Pi Pico／Pico 2向けの飛行制御ファームウェアをビルドし、UF2として配布する仕組みだ。SBUSのフェイルセーフや飛行ログ、DShot設定を備え、GitHub ActionsからビルドとPages公開を行える。",
+      "detail": "こいつは、Raspberry Pi PicoやPico 2で動かすクアッドコプター用ファームウェアと、そのビルド・配布の仕組みだ。中では400 Hzの制御周期でモータ指令を送り、姿勢制御にはPIDとEKF、受信にはSBUSを使っている。SBUSが途切れた際のアーム解除や、CH5操作中だけ100 Hzで最大約10秒分を残すRAMリングログも備え、USBから診断情報を確認できる。DShotの速度や双方向・単方向はビルド時に選べ、GitHub ActionsがUF2を作ってPagesへ公開する。直近のコミットではRP2040で確認済みの単方向DShot300を標準へ戻しているが、READMEには双方向を初期値とする記述も残るため、設定は実際のビルド内容を確認したい。飛行安全性や全構成の実機動作が保証されているわけではない。",
+      "closingRemark": "DShotの標準設定はコミット履歴とREADMEで食い違う。プロペラを外す前に、まず設定のほうも確かめておきたいところだな。",
       "features": [
-        "Pico／Pico 2向けファームウェアをUF2にビルドして公開",
-        "SBUSの受信断やフェイルセーフフラグに応じたアーム解除",
-        "CH5操作中に100 Hzで最大約10秒分のログをRAMへ記録",
-        "DShotの速度と双方向・単方向モードをビルド時に設定",
-        "ファームウェア単体のビルドとソースZIP配布に対応"
+        "Pico／Pico 2向け飛行制御ファームウェア",
+        "SBUS受信断やフェイルセーフフラグへの安全処理",
+        "CH5操作中の100 Hz・38項目リングログ",
+        "ビルド時に選べるDShot速度と通信方式",
+        "GitHub ActionsによるUF2ビルドとPages配布"
       ],
       "technologies": [
-        "C/C++17",
+        "C",
+        "C++17",
         "Raspberry Pi Pico",
         "RP2040",
-        "Pico 2",
-        "Pico SDK",
-        "Eigen 3.4.0",
         "SBUS",
-        "DShot"
+        "DShot",
+        "Pico SDK",
+        "Eigen"
       ],
       "categories": [
-        "組み込み",
-        "飛行制御",
         "ファームウェア",
-        "ビルド・配布"
+        "飛行制御",
+        "組み込み",
+        "ビルド・配布ツール"
       ],
       "status": "実験",
-      "confidence": "medium",
+      "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1418263649,
-      "sourcePushedAt": "2026-10-26T08:29:34Z",
+      "sourcePushedAt": "2026-10-30T04:06:44Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1418263649,
         "name": "pico-copter-fc",
-        "pushedAt": "2026-10-26T08:29:34Z",
+        "pushedAt": "2026-10-30T04:06:44Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -4891,8 +4891,8 @@
         "fork": false,
         "language": "C"
       },
-      "sourceFingerprint": "02b8f70da91759aa3a5b2077ae307d246392404f63f5d71961628e76941e21cd",
-      "generatedAt": "2026-10-26T13:19:20.825Z"
+      "sourceFingerprint": "2ff8dc2fe531be429b6608e71bcebf262340518cfa8642efa08651f80427002a",
+      "generatedAt": "2026-10-30T06:00:38.789Z"
     },
     "atoms3r-motor-inertia-test": {
       "title": "AtomS3Rモーター応答測定",
@@ -5091,16 +5091,16 @@
       "generatedAt": "2026-10-24T04:47:37.319Z"
     },
     "2026_10_24": {
-      "title": "現象救助隊：ニュース迷宮",
-      "summary": "公開ニュースや入力した出来事を手がかりに、毎回形の変わる迷宮を探索する一人用ゲーム。仲間や空腹を管理しながら3階からの脱出を目指し、記事の見出しや出典もゲーム内で確認できます。",
-      "detail": "こいつは、現実の現象や小さなニュースを題材に、形の変わる迷宮を探索する一人用ゲームだ。中ではターン制で敵や仲間が動き、「観測」した敵を仲間にしたり、食料で空腹をしのいだりしながら3階からの脱出を目指す。ニュースは迷宮の色や出現する現象、観測ノートに反映され、各階の現実地点ではRSSの見出し、配信元、日時、出典を確かめられる。地域・環境・交通・科学のニュースはGitHub Actionsで6時間ごとに集め、事件や事故などの見出しは除外、記事本文も複製しない作りだ。探索の設計は既存ゲームの逆コンパイル研究を参考にしているが、その作品のコードや画像などは使っていない。記事本文の内容を確認済みとは扱わず、ゲーム内の選択も記事への賛否を示すものではない。",
-      "closingRemark": "脱出条件は3階、ニュースの扱いは見出しと出典まで。迷宮の出口より、情報の境界線のほうが明るく照らされてるな。",
+      "title": "現象救助隊 — REALITY DUNGEON",
+      "summary": "ニュースや身近な現象を材料に、毎回形の変わる迷宮を探索する一人用ブラウザーゲーム。公開RSSの記事もゲーム内の地点として登場し、仲間集めや階層ごとの変化を楽しめます。",
+      "detail": "こいつは、現実の現象や小さなニュースを迷宮に取り込み、3階からの脱出を目指す一人用探索ゲームだ。中ではJavaScriptで迷宮や敵を生成し、プレイヤーが動くたびに仲間と敵も行動する。敵を観測して倒せば仲間になり、空腹やHPを管理しながら光る階段を探す仕組みだな。入力したニュースは迷宮の色や出現する現象、観測ノートに反映され、公開RSSの記事は現実地点として表示される。地点での選択は次の階の敵の種類や強さに影響するが、記事への賛否を表すものではない。RSSの見出し・日時・出典を扱い、記事本文は複製せず、事件や事故などの見出しも除外する設計だ。",
+      "closingRemark": "ニュースの本文までは迷宮に持ち込まない。見出しと出典だけで、探索の材料には足りるらしい。",
       "features": [
-        "毎回形の変わるターン制迷宮を探索",
-        "観測した敵を最大3体まで仲間にできる",
-        "公開ニュースを6時間ごとに自動収集",
-        "現実地点で見出し・配信元・日時・出典を表示",
-        "ニュース本文は複製せず、事件・事故などの見出しを除外"
+        "毎回形の変わる迷宮を探索",
+        "観測して倒した敵を最大3体まで仲間にできる",
+        "入力ニュースが迷宮の色や現象に反映される",
+        "公開RSSの記事を出典付きの現実地点として表示",
+        "地域・科学・交通・環境のニュースを6時間ごとに自動収集"
       ],
       "technologies": [
         "JavaScript",
@@ -5112,21 +5112,21 @@
         "GitHub Pages"
       ],
       "categories": [
-        "ゲーム",
+        "ブラウザーゲーム",
         "ローグライク",
-        "ニュース",
-        "ブラウザゲーム"
+        "ニュース連携",
+        "一人用"
       ],
-      "status": "完成品",
+      "status": "実験",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1431824671,
-      "sourcePushedAt": "2026-10-29T22:43:30Z",
+      "sourcePushedAt": "2026-10-30T05:41:55Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1431824671,
         "name": "2026_10_24",
-        "pushedAt": "2026-10-29T22:43:30Z",
+        "pushedAt": "2026-10-30T05:41:55Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5136,47 +5136,47 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "509480e4d91eeefbebf33ff73590aaab22d401d63acfe1f685aba243207a3f90",
-      "generatedAt": "2026-10-29T22:51:03.472Z"
+      "sourceFingerprint": "6d0d2e3a93e2a903e44763fd8cb7c52a520628e3082629da058e36ea775c4270",
+      "generatedAt": "2026-10-30T06:00:25.284Z"
     },
     "2026_10_24_2": {
-      "title": "ブラウザ向けボクセルサバイバル",
-      "summary": "昔のMinecraftを参考にした、PCブラウザ向けの一人用ボクセルサバイバルゲーム。採掘やクラフトからエンド攻略まで遊べて、ワールドはSeedごとに保存できる。素材やモデルは手続き生成で、ゲーム用サーバーは不要だ。",
-      "detail": "こいつは、昔のMinecraftを参考にしたPCブラウザ向けの一人用ボクセルサバイバルゲームだ。Three.jsでワールドを描き、採掘やクラフト、動物の飼育、農業、村や遺跡の探索を経て、エンドとエンダードラゴンまで遊べる。Seedとモードを選んで同じ世界を再開でき、位置や所持品などはIndexedDBに15秒ごとに保存し、手動バックアップや復元にも対応してる。公式Minecraftの素材は含めず、テクスチャやモデル、音を独自に生成しているのも特徴だな。ただし原作と同じ仕様ではなく、流体計算は簡易方式で、低スペックPCでの性能や実機の操作感は未評価。新しい地形や進行調整を確認するなら、新規Seedで始める必要がある。",
-      "closingRemark": "新規ワールドではエンド攻略を組み直したが、旧セーブの地形はそのまま。冒険の更新にも、なかなか慎重なところがある。",
+      "title": "ブラウザ版ボクセルサバイバル",
+      "summary": "昔のMinecraftを参考にした、PCブラウザ向けのシングルプレイゲーム。採掘やクラフトからエンダードラゴン討伐まで遊べて、ワールドの状態はブラウザに保存できます。",
+      "detail": "こいつは、昔のMinecraftを参考にしたPCブラウザ向けのシングルプレイ・ボクセルゲームだ。Three.jsとTypeScriptで描画やゲームの仕組みを組み立て、テクスチャやモデルは手続き生成してるから、公式Minecraftの素材は同梱していない。サバイバルでは採掘、クラフト、農業や戦闘を進め、村や遺跡を探してエンダードラゴンにも挑める。Seedごとのワールド状態はIndexedDBに保存され、バックアップの書き出しや読み込みもできるってわけだ。ただし流体の計算は簡易方式で、低スペックPCでの性能や実機の操作感は未評価。Minecraftと同一仕様でも、公式製品でもない。",
+      "closingRemark": "旧セーブは地形を保ち、改修後の冒険は新しいSeedから。公開済みの討伐映像は、ひと足先に旧仕様の記録だな。",
       "features": [
-        "Seedとモードを選んでワールドを開始・再開",
-        "採掘、クラフト、農業、戦闘、探索を含むサバイバル進行",
-        "IndexedDBへの定期保存とJSONバックアップ・復元",
-        "素材やモデル、効果音を独自に生成",
-        "ブラウザ操作による進行・保存・描画の検証スクリプト"
+        "採掘・クラフト・農業・戦闘を含むサバイバル",
+        "Seedとモードごとのワールド保存とJSONバックアップ",
+        "テクスチャ・アイコン・モデルを手続き生成",
+        "一人称・三人称の視点切り替え",
+        "ブラウザ操作による進行や保存の検証スクリプト"
       ],
       "technologies": [
+        "JavaScript",
         "TypeScript",
         "Three.js",
         "Vite",
-        "JavaScript",
+        "WebGL",
         "IndexedDB",
-        "simplex-noise",
-        "Vitest",
+        "GitHub Pages",
         "Puppeteer"
       ],
       "categories": [
         "ゲーム",
-        "ボクセル",
         "サバイバル",
-        "ブラウザゲーム"
+        "ボクセル",
+        "ブラウザ"
       ],
-      "status": "試作",
+      "status": "完成品",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1432235174,
-      "sourcePushedAt": "2026-10-29T20:02:50Z",
+      "sourcePushedAt": "2026-10-30T01:23:38Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1432235174,
         "name": "2026_10_24_2",
-        "pushedAt": "2026-10-29T20:02:50Z",
+        "pushedAt": "2026-10-30T01:23:38Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5184,10 +5184,10 @@
         "archived": false,
         "disabled": false,
         "fork": false,
-        "language": "TypeScript"
+        "language": "JavaScript"
       },
-      "sourceFingerprint": "bb1d82791af3c2ef094bb1763348076d85fab7f4d2dd383c0d2070d3c4390456",
-      "generatedAt": "2026-10-29T22:51:17.226Z"
+      "sourceFingerprint": "f7b7285fe3fb306f69c1c0a0fa50d56afcf2fabb44d51d02961a41adc240f354",
+      "generatedAt": "2026-10-30T06:01:04.549Z"
     },
     "rw-walker-3d-dynamics": {
       "title": "準受動歩行器の3D動力学実験",
@@ -5334,7 +5334,57 @@
       },
       "sourceFingerprint": "7619492117b912efb47794f8e972bb99094a6a3cddd3569a6a91085c2b7ab4f2",
       "generatedAt": "2026-10-28T13:13:32.088Z"
+    },
+    "pico-bluejay-configurator": {
+      "title": "Pico用Bluejay設定接続ファーム",
+      "summary": "Raspberry Pi Picoを、BluejayなどのESC設定に使うUSB接続の4-way passthroughインターフェースにする実験用ファームウェア。既存フライトコントローラと同じGPIO配線を使い、ESC Configuratorからの読み出しを試せますが、設定の書き込みや復元の安全性は未検証です。",
+      "detail": "こいつは、Raspberry Pi PicoをBluejayなどのESC設定用インターフェースとして使う実験用ファームウェアだ。中ではUSB CDCからの通信をMSP v1とBLHeli 4-way passthroughにつなぎ、PIOでESCと単線半二重通信をしてる。モーター信号線のGPIO割り当ては既存フライトコントローラに合わせてあり、ESC Configuratorから機体の配線を大きく変えずに接続できる。mainブランチのビルド成功時にはRP2040用UF2がGitHub Releasesへ自動公開される。ESC 1/2の認識と設定画面表示は確認済みだが、設定の書き込み・復元や全ESCとの互換性は未検証で、Pico 2とRP2350も対象外だ。まずはプロペラを外し、読み出しだけで確かめる段階ってところだな。",
+      "closingRemark": "UF2の配布は自動化済みだが、ESCへの書き込みはまだ慎重に、という分担らしい。",
+      "features": [
+        "PicoをUSB - BLHeli 4-way passthroughインターフェースとして使用",
+        "既存フライトコントローラに合わせたGPIO割り当て",
+        "RP2040用UF2をGitHub Actionsでビルドし、Releaseへ公開",
+        "ESC 1/2の認識と設定画面表示を確認済み",
+        "設定の書き込み・復元と全ESC互換性は未検証"
+      ],
+      "technologies": [
+        "Raspberry Pi Pico",
+        "RP2040",
+        "Arduino-Pico",
+        "USB CDC",
+        "MSP v1",
+        "BLHeli 4-way passthrough",
+        "PIO",
+        "ESC Configurator"
+      ],
+      "categories": [
+        "組み込み",
+        "ファームウェア",
+        "ESC設定",
+        "実験"
+      ],
+      "status": "実験",
+      "confidence": "high",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
+      "sourceRepositoryId": 1439197792,
+      "sourcePushedAt": "2026-10-30T03:21:57Z",
+      "sourceDefaultBranch": "main",
+      "sourceMetadata": {
+        "repositoryId": 1439197792,
+        "name": "pico-bluejay-configurator",
+        "pushedAt": "2026-10-30T03:21:57Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "C++"
+      },
+      "sourceFingerprint": "b34ad108e4194d0bbff42d202812cca279e66811b51db40a90360a27e007b68e",
+      "generatedAt": "2026-10-30T06:00:51.432Z"
     }
   },
-  "repositoryCount": 108
+  "repositoryCount": 109
 }
