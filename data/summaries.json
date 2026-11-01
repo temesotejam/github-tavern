@@ -1,44 +1,43 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-01T06:25:04.117Z",
+  "generatedAt": "2026-11-01T17:59:24.875Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ探索酒場",
-      "summary": "公開GitHubリポジトリを、酒場の記録帳のように検索・閲覧する個人向けポータル。GitHub APIで一覧を取得し、Copilotの日本語要約やREADMEからの暫定説明を使って、分類や詳細確認ができる。GitHub Pagesで静的に公開可能。",
-      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、酒場の依頼帳のように探して中身を確かめる個人ポータルだ。ブラウザ側ではGitHub APIから一覧を取り込み、名前・説明・Topics・言語・Copilot要約を横断検索し、分類や更新順で絞り込める。カードを選べば概要や技術情報が見られ、Copilot解析がまだないものにはREADMEから短い暫定説明を出す。裏ではGitHub Actionsが6時間ごとに更新を確認し、変更のあったリポジトリを最大8件ずつCopilot CLIで解析して、JSONに蓄えている。GitHub Pagesで静的に公開でき、対象は公開情報だけ。Privateリポジトリや書き込み操作は扱わないってわけだ。",
-      "closingRemark": "六時間ごとに最大八件ずつ記録を見直す仕組みか。急がず棚を整えるあたり、ここの記録係は堅実だな。",
+      "title": "公開リポジトリ案内所",
+      "summary": "個人所有の公開GitHubリポジトリを、酒場風の画面で探して概要を読むための静的ポータル。GitHub APIによる一覧取得や横断検索、技術分類に加え、Copilotの説明と未解析時のREADME紹介も表示する。",
+      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、古い情報端末を思わせる画面から探して読むための個人ポータルだ。中ではGitHub APIから一覧を取り込み、名前や説明、Topics、言語、Copilot要約を横断検索して、技術領域ごとの分類やカード内の概要表示につなげてる。説明データはGitHub Actionsが6時間ごとに確認し、更新のあったリポジトリをCopilot CLIで解析して保存する仕組みで、未解析ならREADMEから短い暫定紹介を出す。GitHub Pagesで静的に公開でき、対象は公開リポジトリだけ。閲覧や説明表示に限られ、リポジトリへの書き込みはしないってところだな。",
+      "closingRemark": "六時間おきに最大八件ずつ、という刻み方がこの酒場らしい。帳簿も一晩で全部は書き換えないわけだ。",
       "features": [
         "公開リポジトリをGitHub APIから自動取得",
         "名前・説明・Topics・言語・要約を横断検索",
-        "技術領域や更新順で絞り込み",
-        "Copilot CLIで要約を定期更新",
-        "未解析リポジトリにはREADME由来の暫定説明を表示"
+        "技術領域ごとの簡易分類とカード内の概要表示",
+        "Copilot CLIが更新分を解析し、日本語説明を保存",
+        "解析前はREADMEから短い暫定紹介を表示"
       ],
       "technologies": [
         "JavaScript",
         "CSS",
         "HTML",
         "GitHub API",
-        "GitHub Actions",
         "GitHub Copilot CLI",
+        "GitHub Actions",
         "GitHub Pages"
       ],
       "categories": [
         "Web・ツール",
-        "GitHub API",
-        "静的サイト",
-        "AI要約"
+        "GitHub",
+        "静的サイト"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-10-31T21:43:54Z",
+      "sourcePushedAt": "2026-11-01T06:53:46Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-10-31T21:43:54Z",
+        "pushedAt": "2026-11-01T06:53:46Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -48,8 +47,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "48f28574e1f66a4e417c18c0240ab579231b32b383ad032e392f94c552c91c00",
-      "generatedAt": "2026-11-01T06:25:04.117Z"
+      "sourceFingerprint": "86de6556011575878e123789ecba29d0c2e937e8c91a1810f1ce4948610c4f1f",
+      "generatedAt": "2026-11-01T17:59:24.875Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -4795,43 +4794,43 @@
       "generatedAt": "2026-10-06T06:31:41.613Z"
     },
     "atoms3r-lateral-energy-control": {
-      "title": "AtomS3R左右揺動制御",
-      "summary": "AtomS3Rとリアクションホイールを使った左右揺動の制御を実機で試し、入力条件や予測式を検証するファームウェア。ZEROクロスとピークから入力時間を決め、RWLOGに状態・指令・実測を記録できるほか、Web画面で実験を選び、保存ログをブラウザーで解析できる。",
-      "detail": "こいつは、AtomS3Rとリアクションホイールで左右に揺れる機体を制御し、入力条件や予測式を実機で確かめるためのファームウェアだ。中ではMEKFの姿勢推定から物理ピークとZEROクロスを見つけ、目標ピークに近づける電流とパルス幅を計算してる。従来の二次エネルギー式に加え、負側の次ピーク位置エネルギーから入力時間を選ぶ方式もあり、Web画面で切り替えて測定できる。測定条件や実電流、予測と実測はRWLOGに残り、ブラウザーの解析ページでは仕事量や予測誤差をCSVに出せる。一方、係数は実機ログに基づく暫定値で、閉ループ性能や新方式の改善はまだ実機で確認が必要だな。",
-      "closingRemark": "30秒の一括測定で条件は揃えられるが、制御が効いたかの答えはログを読み終えるまでお預けだ。",
+      "title": "AtomS3R左右揺動制御ファームウェア",
+      "summary": "AtomS3Rとリアクションホイールを使い、機体の左右揺動を抑える実機試験用ファームウェア。Web画面から制御方式や測定を選べて、状態・出力を記録し、ブラウザで解析できる。",
+      "detail": "こいつはAtomS3RとUnit Roller485、リアクションホイールで機体の左右揺動を抑える実機試験用ファームウェアだ。姿勢はMEKFで推定し、左右のピークとZEROクロスから次の振幅を見積もって、ホイールへ与える電流とパルス幅を毎回決めてる。制御方式には二次エネルギー式の比較モードや、負側の次ピークを予測する方式があり、Web画面から目標角や測定を選べる。保存した直立姿勢を基準に使い、RWLOGへ状態や実出力を記録するほか、ブラウザの解析ページで仕事や予測誤差をCSVにできる。一括測定では入力条件の順を変えて比較するが、係数は限られた実機記録に基づく暫定値で、閉ループ性能は実機での確認が必要だな。",
+      "closingRemark": "MEKFの絶対角を1.932539°に合わせなくていい一方、直立基準の保存は要る。原点の扱いは案外きっちりしてるな。",
       "features": [
-        "ZEROクロスとピークを使ってリアクションホイールの入力を調整",
-        "二次エネルギー式と負側の一ピーク予測方式を比較",
-        "Web画面から通常測定や条件別の一括実験を実行",
-        "RWLOGに制御状態・指令・実測値を記録",
-        "ブラウザーでログを解析し、結果をCSV出力"
+        "ZEROクロスとピークを使い、リアクションホイールの電流・入力時間を調整",
+        "二次エネルギー式と負側ピーク予測方式を比較できる",
+        "Web画面から測定や制御条件を選択",
+        "RWLOGをブラウザで解析し、仕事や予測誤差をCSV出力",
+        "入力条件の順を変える一括測定と安全停止条件"
       ],
       "technologies": [
+        "AtomS3R",
+        "Unit Roller485",
+        "リアクションホイール",
         "C++",
-        "Python",
-        "JavaScript",
         "PlatformIO",
         "Arduino",
-        "AtomS3R",
-        "リアクションホイール",
-        "MEKF"
+        "MEKF",
+        "RWLOG"
       ],
       "categories": [
         "組み込み",
-        "ロボット制御",
-        "ファームウェア",
-        "実機実験"
+        "制御工学",
+        "ロボティクス",
+        "ファームウェア"
       ],
       "status": "実験",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1416789371,
-      "sourcePushedAt": "2026-11-01T06:14:21Z",
+      "sourcePushedAt": "2026-11-01T10:15:27Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1416789371,
         "name": "atoms3r-lateral-energy-control",
-        "pushedAt": "2026-11-01T06:14:21Z",
+        "pushedAt": "2026-11-01T10:15:27Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -4841,8 +4840,8 @@
         "fork": false,
         "language": "C++"
       },
-      "sourceFingerprint": "1ab2efffcfa47c62e122d87a4494d7705aacc8e7c4c86dd999ff2bb42fbe5f26",
-      "generatedAt": "2026-11-01T06:24:31.868Z"
+      "sourceFingerprint": "b344c1962d8162ac04819d8752ab19815e90566e797371ecc954bdaa58e083e6",
+      "generatedAt": "2026-11-01T17:58:48.045Z"
     },
     "pico-copter-fc": {
       "title": "Picoコプター飛行制御",
@@ -5092,19 +5091,20 @@
     },
     "2026_10_24": {
       "title": "現象救助隊：ニュース迷宮",
-      "summary": "現実のニュースや小さな出来事を種に、色や敵が変わる迷宮を探索する一人用ブラウザーゲーム。公開RSSを6時間ごとに集め、記事の見出し・配信元・日時・出典をゲーム内の「現実地点」で確かめられます。記事本文を複製せず、見出しの自動除外も行う作りです。",
-      "detail": "こいつは、現実のニュースや入力した出来事を手がかりに、毎回姿の変わる迷宮を探索する一人用ゲームだ。中では地域・環境・交通・科学といったテーマが迷宮の色や出現する現象に結びつき、プレイヤーが動くたびに仲間や敵も行動する。現象を観測して仲間にしたり、食料で空腹をしのいだりしながら、3階からの脱出を目指すわけだ。各階の「現実地点」ではRSSの見出し、配信元、日時、出典を確認でき、記事本文を読んだことにはしない。公開ニュースはGitHub Actionsで6時間ごとに収集され、事件・事故などの見出しは除外されるが、取得できない場合は前回のデータが残る。探索やターン進行の設計を研究している一方、参照元のコードや画像などは使っていないとREADMEにある。",
-      "closingRemark": "迷宮の奥で見つかるのは記事本文じゃなく、見出しと出典まで。現実との距離は、そこできちんと保ってる。",
+      "summary": "現実のニュースや入力した出来事を、毎回形の変わる迷宮に取り込んで探索する一人用ブラウザーゲーム。仲間や敵も動くターン制で、記事の出典を確かめながら3階からの脱出を目指します。",
+      "detail": "こいつは、現実のニュースや身近な出来事を迷宮に変えて調査する、一人用の探索ゲームだ。矢印キーやWASDで進むターン制で、プレイヤーが動くたびに仲間と敵も行動する。現象を「観測」して倒せば仲間になり、空腹やHPを管理しながら光る階段を探して、3階からの脱出を目指す仕組みだな。ニュースは迷宮の色や出現する現象に影響し、各階の現実地点ではRSSの見出し、配信元、日時、出典リンクを確認できる。ニュースは6時間ごとに自動収集されるが、本文を複製せず、記事内容を確認済みとも扱わない。収集対象やゲームの詳しい設計の全容までは、この資料だけでは分からない。",
+      "closingRemark": "迷宮に現れるのはニュースの見出しまでで、記事本文は持ち込まない。調査の線引きも、ゲームのルールに組み込んであるわけだ。",
       "features": [
-        "ニュースや入力内容に応じて迷宮の色や現象が変化",
-        "移動のたびに仲間と敵も行動するターン制探索",
-        "現象を観測して最大3体まで仲間にできる",
-        "現実地点でRSS見出し・配信元・日時・出典を表示",
-        "公開RSSを6時間ごとに自動収集し、特定の見出しを除外"
+        "ニュースや入力内容を迷宮の色・現象・観測ノートに反映",
+        "仲間と敵が行動するターン制の探索",
+        "RSS見出しの出典・配信元・日時を現実地点で表示",
+        "地域・科学・交通・環境のニュースを6時間ごとに自動収集",
+        "事件・事故などの見出しを除外し、記事本文は保存しない"
       ],
       "technologies": [
         "JavaScript",
         "HTML",
+        "CSS",
         "Canvas",
         "RSS",
         "GitHub Actions",
@@ -5114,18 +5114,18 @@
         "ブラウザーゲーム",
         "ローグライク",
         "ニュース",
-        "自動収集"
+        "ターン制探索"
       ],
       "status": "完成品",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1431824671,
-      "sourcePushedAt": "2026-11-01T05:57:19Z",
+      "sourcePushedAt": "2026-11-01T13:15:43Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1431824671,
         "name": "2026_10_24",
-        "pushedAt": "2026-11-01T05:57:19Z",
+        "pushedAt": "2026-11-01T13:15:43Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5135,8 +5135,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "23337323ced20e492ca3903a9b8b275dc6bef8b6dac6aa8d084f6cd45c71754a",
-      "generatedAt": "2026-11-01T06:24:46.220Z"
+      "sourceFingerprint": "9e836821d28bd045036bee4bb70199a95058418494c9422619e2b32f5781e754",
+      "generatedAt": "2026-11-01T17:58:30.006Z"
     },
     "2026_10_24_2": {
       "title": "協調実験つきボクセルサバイバル",
@@ -5385,41 +5385,42 @@
       "generatedAt": "2026-10-30T06:00:51.432Z"
     },
     "github-ai-researcher": {
-      "title": "公開リポジトリ横断AI研究",
-      "summary": "temesotejamの公開GitHubリポジトリを読み取り、実装や技術の再利用候補、組み合わせ、新しい研究テーマをAIで探すツールだ。根拠ファイル付きのプロフィールやレポートを蓄積し、検索・比較できるダッシュボードも公開する。",
-      "detail": "こいつは、temesotejamが所有する公開リポジトリを横断して、過去の実装から再利用できそうなものや、新しい研究・開発テーマを探すためのAI研究ツールだ。中では公開GitHub APIやRaw URLからREADME、構成、設定、代表的なソースコードを集め、リポジトリごとの技術プロフィールと、複数プロジェクトをまたぐ分析レポートにまとめてる。提案には根拠となるリポジトリやファイルを添え、GitHub Pagesの画面では検索、絞り込み、最大3件の比較もできる。GitHub Actionsから毎週または手動で動かせて、初回は未解析のものを最大8件ずつ調べる仕組みだ。ただし、分析対象は公開リポジトリに限られ、元のリポジトリを書き換えたりIssueやPull Requestを作ったりはしない。",
-      "closingRemark": "提案は根拠ファイル付きだが、最後に確かめるのは人の役目らしい。AIにも裏取りは必要だな。",
+      "title": "公開リポジトリ横断研究ツール",
+      "summary": "GitHub上の公開リポジトリを横断して調べ、技術や再利用できそうな実装、新しい研究テーマを提案するツール。根拠ファイル付きのレポートを蓄積し、検索や比較ができるダッシュボードも公開する。",
+      "detail": "こいつは、temesotejamが所有する公開リポジトリを横断して、過去の実装や技術を新しい研究・開発にどう生かせるか探る仕組みだ。中ではGitHub APIや公開Raw URLからREADME、構成、設定、代表的なソースを集め、Copilot CLIでプロフィールや横断分析レポートを作っている。提案には根拠となるリポジトリやファイルを添え、結果はJSONやMarkdownとしてこのリポジトリに蓄積する。GitHub Pagesの画面では検索や絞り込み、最大3件の比較に加え、109件のリポジトリ・技術・言語・テーマを結ぶナレッジグラフも見られる。定期実行は毎日で、更新がなければ分析をスキップする設計だ。ただし調査対象への変更やIssue・Pull Requestの作成はせず、AIの提案も実験前に根拠を確かめる必要がある。",
+      "closingRemark": "109件を結ぶグラフは賑やかだが、最後に確かめるのは結局、提案の根拠ファイルってわけだ。",
       "features": [
-        "公開リポジトリのプロフィールと横断分析レポートを生成",
-        "提案に根拠となるリポジトリやファイルを記録",
-        "GitHub Pagesで検索・絞り込み・最大3件の比較が可能",
-        "GitHub Actionsから週次または手動で実行",
-        "分析対象のコードは実行せず、元リポジトリへの変更もしない"
+        "公開リポジトリのプロフィールと横断分析レポートを作成",
+        "提案に根拠リポジトリ・ファイルを記録",
+        "検索・絞り込み・最大3リポジトリの比較に対応",
+        "109件の要素を結ぶインタラクティブなナレッジグラフ",
+        "更新がない日は分析とデータ更新をスキップ"
       ],
       "technologies": [
         "JavaScript",
-        "GitHub API",
         "GitHub Actions",
+        "GitHub API",
         "GitHub Copilot CLI",
         "GitHub Pages",
-        "Markdown"
+        "Markdown",
+        "JSON"
       ],
       "categories": [
-        "AI研究",
-        "GitHub自動化",
-        "リポジトリ分析",
-        "開発支援"
+        "GitHub分析",
+        "AI研究支援",
+        "ナレッジグラフ",
+        "自動化ツール"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1441487171,
-      "sourcePushedAt": "2026-11-01T06:22:26Z",
+      "sourcePushedAt": "2026-11-01T07:24:07Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1441487171,
         "name": "github-ai-researcher",
-        "pushedAt": "2026-11-01T06:22:26Z",
+        "pushedAt": "2026-11-01T07:24:07Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5429,9 +5430,58 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "0474d8bac8c5fab7b64bbd531a0d18253a942996ff5b2b9936584cca9c92d299",
-      "generatedAt": "2026-11-01T06:24:15.372Z"
+      "sourceFingerprint": "c7a94fb3e0f6524bb7475d2ab5cb4c7ad5e9375ba54e1c39a10116249fb54cc5",
+      "generatedAt": "2026-11-01T17:59:09.312Z"
+    },
+    "personal-browser-os": {
+      "title": "個人用ブラウザーOS",
+      "summary": "ビルド不要の静的Webアプリで、ブラウザー内に自分用のデスクトップ環境を作るプロジェクト。電卓やメモ帳、簡易ブラウザーなどをウィンドウで使え、PWAによるインストールやオフライン起動の基盤も備えています。",
+      "detail": "こいつは、ブラウザーの中に個人用のデスクトップ環境を作る静的Webアプリだ。中ではJavaScriptでウィンドウの移動やサイズ変更を管理し、電卓、メモ帳、画像ビューア、設定画面、それに簡易ブラウザーを動かしてる。Webサイトや自作アプリをランチャーに登録でき、メモや外観設定はlocalStorageに保存する仕組みだ。Service WorkerとPWA設定もあり、インストールやオフライン起動の土台が用意されている。ただし、サイト側がiframe表示を禁じていれば開けず、通常のブラウザーのタブやアドレスバーを置き換えるものでもない。保存データは端末間で同期されず、画像も選んだ端末内でプレビューするだけだな。",
+      "closingRemark": "デスクトップの中にブラウザーを置いたが、外側のブラウザーまでは乗っ取らない。その線引きはなかなか堅実だ。",
+      "features": [
+        "ウィンドウの移動、サイズ変更、最大化、最小化に対応",
+        "電卓、メモ帳、画像ビューア、設定、簡易ブラウザーを搭載",
+        "Webサイトや自作Webアプリをランチャーに登録可能",
+        "メモや外観設定をlocalStorageに保存",
+        "Service WorkerによるキャッシュとPWAの基盤を用意"
+      ],
+      "technologies": [
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "PWA",
+        "Service Worker",
+        "localStorage",
+        "iframe"
+      ],
+      "categories": [
+        "ブラウザー",
+        "デスクトップ環境",
+        "Webアプリ",
+        "PWA"
+      ],
+      "status": "ツール",
+      "confidence": "high",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
+      "sourceRepositoryId": 1441606688,
+      "sourcePushedAt": "2026-11-01T09:42:13Z",
+      "sourceDefaultBranch": "main",
+      "sourceMetadata": {
+        "repositoryId": 1441606688,
+        "name": "personal-browser-os",
+        "pushedAt": "2026-11-01T09:42:13Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "JavaScript"
+      },
+      "sourceFingerprint": "ba2470c1a219c9275b909123efc23df250f8cdd975614f35a94f41e752368002",
+      "generatedAt": "2026-11-01T17:58:58.702Z"
     }
   },
-  "repositoryCount": 110
+  "repositoryCount": 111
 }
