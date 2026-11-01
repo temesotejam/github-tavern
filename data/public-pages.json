@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-30T06:31:33.724Z",
-  "repositoryCount": 109,
-  "pageCount": 65,
+  "generatedAt": "2026-11-01T06:53:43.686Z",
+  "repositoryCount": 110,
+  "pageCount": 66,
   "pages": {
     "2026_10_22": {
       "url": "https://temesotejam.github.io/2026_10_22/",
@@ -126,6 +126,11 @@
     },
     "dualsense-input-inspector": {
       "url": "https://temesotejam.github.io/dualsense-input-inspector/",
+      "source": "github-pages",
+      "status": 200
+    },
+    "github-ai-researcher": {
+      "url": "https://temesotejam.github.io/github-ai-researcher/",
       "source": "github-pages",
       "status": 200
     },
