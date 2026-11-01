@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-01T06:53:43.686Z",
-  "repositoryCount": 110,
-  "pageCount": 66,
+  "generatedAt": "2026-11-01T18:08:48.532Z",
+  "repositoryCount": 111,
+  "pageCount": 67,
   "pages": {
     "2026_10_22": {
       "url": "https://temesotejam.github.io/2026_10_22/",
@@ -166,6 +166,11 @@
     },
     "mediapipe-hand-demo": {
       "url": "https://temesotejam.github.io/mediapipe-hand-demo/",
+      "source": "github-pages",
+      "status": 200
+    },
+    "personal-browser-os": {
+      "url": "https://temesotejam.github.io/personal-browser-os/",
       "source": "github-pages",
       "status": 200
     },
