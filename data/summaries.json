@@ -1,18 +1,18 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-02T06:26:19.083Z",
+  "generatedAt": "2026-11-02T21:48:39.793Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ探索ポータル",
-      "summary": "temesotejamが公開しているGitHubリポジトリを、酒場風の画面で探して概要を読む個人向けポータル。GitHub APIから一覧を取得し、検索・分類に加えて、CopilotがREADMEや設定を根拠に作る日本語説明も表示する。",
-      "detail": "こいつは、temesotejamの公開GitHubリポジトリを、酒場の依頼帳のような画面から探して中身を確かめる個人向けポータルだ。中ではGitHub APIから一覧を取り、名前や説明、Topics、言語、Copilot要約を横断検索し、技術領域ごとの分類やカード内の概要表示につないでる。説明データはGitHub Actions経由で6時間ごとに更新され、前回の更新以降に変化したものをCopilot CLIがREADMEや構成、設定、最近のコミットなどを見て要約する仕組みだ。未解析のリポジトリにはREADMEから短い暫定説明を出し、公開ページが確認済みなら詳細画面から開ける。GitHub Pagesで静的に動かせて、対象は公開リポジトリのみ、サイトから書き込み操作はしない。定期処理は一度に最大8件だから、全部を一気に見直す仕掛けではないってところだな。",
-      "closingRemark": "6時間ごとに最大8件ずつ更新するあたり、酒場の帳簿も一晩で全部は書き直さないらしい。",
+      "title": "公開リポジトリ探索酒場",
+      "summary": "temesotejamが公開しているGitHubリポジトリを、古い情報端末風の画面から検索・閲覧する個人ポータル。Copilotによる日本語説明やREADMEからの暫定紹介も使い、気になるリポジトリの概要をその場で確認できます。",
+      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、古い情報端末のような画面から探して閲覧する個人ポータルだ。中ではGitHub APIから公開リポジトリを取得し、名前や説明、Topics、言語、Copilot要約を横断検索できるようにしてる。技術領域ごとの分類もあり、カードを選べば概要がその場で開く。説明はREADMEやファイル構成などを根拠にCopilotが生成し、未解析の新しいリポジトリにはREADMEから短い暫定紹介を出す仕組みだ。GitHub Pagesで静的に公開でき、サイトから行うのは公開情報の読み取りだけで、非公開リポジトリや書き込み操作は扱わない。",
+      "closingRemark": "説明の更新は6時間ごとに最大8件。長期PATをPagesに置かずに済むよう、そこも手順に入ってる。",
       "features": [
-        "GitHub APIから公開リポジトリ一覧を自動取得",
-        "名前・説明・Topics・言語・要約を横断検索",
-        "技術領域ごとの簡易分類とカード内の概要表示",
-        "Copilot CLIがREADMEや設定などを根拠に日本語説明を生成",
-        "未解析リポジトリのREADME暫定説明と、確認済み公開ページへのリンク"
+        "公開リポジトリをGitHub APIから自動取得",
+        "名前・説明・Topics・言語・Copilot要約を横断検索",
+        "技術領域ごとの簡易分類とカード上での概要表示",
+        "READMEや構成を根拠にした日本語の自動説明",
+        "未解析のリポジトリにはREADMEから暫定紹介を表示"
       ],
       "technologies": [
         "JavaScript",
@@ -24,20 +24,21 @@
         "GitHub Pages"
       ],
       "categories": [
-        "Web・ツール",
-        "GitHubリポジトリ管理",
-        "検索・アーカイブ"
+        "GitHubリポジトリ閲覧",
+        "検索・アーカイブ",
+        "静的Webアプリ",
+        "自動要約"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-11-01T22:11:17Z",
+      "sourcePushedAt": "2026-11-02T06:26:20Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-11-01T22:11:17Z",
+        "pushedAt": "2026-11-02T06:26:20Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -47,8 +48,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "199784a66aeed1c32eb358512acf02a590a282fd1c104b6593c2e7e97762ca68",
-      "generatedAt": "2026-11-02T06:26:02.279Z"
+      "sourceFingerprint": "ffa4a8e21db4507236145e9ba9df9a05cf8acaa2f7f88a56e6d38ab2b74e9ee6",
+      "generatedAt": "2026-11-02T21:48:39.793Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -4794,43 +4795,43 @@
       "generatedAt": "2026-10-06T06:31:41.613Z"
     },
     "atoms3r-lateral-energy-control": {
-      "title": "AtomS3R左右揺動制御",
-      "summary": "AtomS3Rとリアクションホイールを使い、機体の左右揺動を目標角へ近づける実験用ファームウェア。電流入力を調整する複数の制御方式や一括測定があり、実機ログはブラウザで解析できる。",
-      "detail": "こいつは、AtomS3Rを使った機体の左右揺動を、リアクションホイールで制御する実験用ファームウェアだ。中ではMEKFの姿勢推定から物理ピークとZEROクロスを検出し、次のピークを目標角へ近づける入力電流とパルス幅を計算してる。従来の方式に加えて、次ピークの位置エネルギーを予測する方式や、条件を変えて比較する一括測定も選べる。入力や推定値はRWLOGに記録され、ブラウザの解析ページでは仕事の計算や誤差の確認、CSV保存ができるってわけだ。ただし係数は暫定で、実機の閉ループ性能が確認済みとはいえない。",
-      "closingRemark": "条件の順番まで記録に残す実験だ、結果を見てから順番のせいにはしにくいな。",
+      "title": "AtomS3R左右揺動制御ファームウェア",
+      "summary": "AtomS3Rとリアクションホイールを使い、機体の左右揺動を目標角へ近づける実機試験用ファームウェア。ZEROクロスやピークを検出して入力時間を調整し、条件別の一括測定とRWLOGによる解析にも対応しています。",
+      "detail": "こいつは、AtomS3Rとリアクションホイールで機体の左右揺動を抑える制御を試すためのファームウェアだ。中ではMEKFの姿勢推定から左右のピークとZEROクロスを拾い、次のピークが目標角に近づくよう電流と入力時間を計算してる。二次エネルギー式など複数の方式を比較でき、Web画面から15秒の制御測定や、条件を変えた一括実験を始められる。設定や実出力、推定値はRWLOGに記録され、ブラウザの解析ページで予測と実測の差をCSVにまとめられるってわけだ。ただし係数や逆入力の応答は暫定で、実機の閉ループ性能や新方式の改善はまだ確認途中だな。",
+      "closingRemark": "16°の角度制限と異常停止は残してある。あとはRWLOGが、モデルの見立てと実機の揺れを仲裁する番だな。",
       "features": [
-        "ZEROクロスと次の物理ピークに基づく入力制御",
-        "エネルギー予測方式と従来方式を比較可能",
-        "電流やパルス幅を変える一括測定",
-        "RWLOG記録とブラウザでのログ解析・CSV保存",
-        "異常停止と左右角制限を備える"
+        "ZEROクロスと物理ピークを使った左右揺動制御",
+        "エネルギー式などの制御方式を比較可能",
+        "実機Web画面から通常測定や条件別一括実験を開始",
+        "RWLOGに制御条件・推定値・実電流などを記録",
+        "ブラウザでログ解析し、予測誤差をCSV保存"
       ],
       "technologies": [
         "C++",
         "Python",
         "JavaScript",
         "PlatformIO",
-        "ESP32 Arduino",
-        "M5Unified",
-        "Adafruit AHRS",
-        "AtomS3R"
+        "Arduino",
+        "AtomS3R",
+        "Unit Roller485",
+        "MEKF"
       ],
       "categories": [
         "組み込み",
-        "制御",
-        "ロボティクス",
-        "実験"
+        "制御工学",
+        "実機実験",
+        "データ解析"
       ],
       "status": "実験",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1416789371,
-      "sourcePushedAt": "2026-11-02T06:18:39Z",
+      "sourcePushedAt": "2026-11-02T11:54:14Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1416789371,
         "name": "atoms3r-lateral-energy-control",
-        "pushedAt": "2026-11-02T06:18:39Z",
+        "pushedAt": "2026-11-02T11:54:14Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -4840,8 +4841,8 @@
         "fork": false,
         "language": "C++"
       },
-      "sourceFingerprint": "e2bb40d845c546e55ca9c9af93c2ddca782958c59f1147bedcdeb79508726256",
-      "generatedAt": "2026-11-02T06:25:04.001Z"
+      "sourceFingerprint": "54f3bffd3429a43e642f79c619affe273f896ce96e7da3b3e2b97d9d63a968e0",
+      "generatedAt": "2026-11-02T21:48:14.344Z"
     },
     "pico-copter-fc": {
       "title": "Picoコプター飛行制御",
@@ -5090,42 +5091,42 @@
       "generatedAt": "2026-10-24T04:47:37.319Z"
     },
     "2026_10_24": {
-      "title": "現象救助隊 — ニュース迷宮探索",
-      "summary": "ニュースや小さな現実の出来事を迷宮に取り込み、探索・戦闘・仲間集めを進める一人用ブラウザーゲーム。公開RSSを6時間ごとに更新し、記事本文は保存せず、見出しや出典をゲーム内の現実地点として扱う仕組みも備えている。",
-      "detail": "こいつは、現実のニュースや小さな出来事を材料に、形の変わる迷宮を探索する一人用ブラウザーゲームだ。中ではJavaScriptでターン制の移動や戦闘、仲間化、空腹を進め、入力したニュースを迷宮の色や現象、観測ノートに反映してる。GitHub Actionsが地域・環境・交通・科学のRSSを6時間ごとに集め、事件や事故などの見出しを除外して、見出し・日時・出典を保存する仕組みだ。現実地点では記事の見出しや配信元などを表示し、ゲーム内の進み方を選べるが、その選択は記事への賛否を表さないし、記事本文を確認済みとも扱わない。3Fから脱出すれば調査成功で、参考にした作品の設計や、関連コード・画像などを使っていないこともREADMEに明記されてる。",
-      "closingRemark": "記事本文を抱え込まず、見出しだけを迷宮に放つ。現実との距離感までゲーム設計に入ってるのが、なかなか慎重だな。",
+      "title": "現象救助隊 — ニュース迷宮",
+      "summary": "ニュースや現実の現象をもとに毎回変わる迷宮を探索する、一人用のターン制ブラウザゲーム。公開RSSの記事は見出しや出典などを「現実地点」として登場させ、入力したニュースは迷宮の色や敵、観測ノートにも反映される。",
+      "detail": "こいつは、現実の現象や小さなニュースを材料に、毎回姿の変わる迷宮を進む一人用ブラウザゲームだ。矢印キーやWASD、画面ボタンで動き、プレイヤーの一手ごとに仲間と敵も動くターン制で、観測した現象を倒せば最大3体まで仲間になる。入力したニュースは迷宮の色や出現する現象、観測ノートに反映され、RSSの記事は各階の「現実地点」で見出し・配信元・日時・出典として確認できる。GitHub Actionsが地域・科学・交通・環境の公開ニュースを6時間ごとに集め、事件や事故などの見出しを除外して data/news.json を更新する仕組みだ。3階からの脱出を目指す作りで、記事本文を確認したとは表示せず、現実地点での選択も記事への賛否ではなくゲーム内効果を変えるものに限られてる。",
+      "closingRemark": "迷宮に入るのはニュースの見出しまでで、記事本文の確認までは引き受けない。その線引きも、このゲームの観測の一部だな。",
       "features": [
-        "入力したニュースが迷宮の色や出現する現象、観測ノートに反映される",
-        "仲間と敵がプレイヤーの行動ごとに動くターン制探索",
-        "「観測」した現象を仲間にでき、最大3体まで同行する",
-        "RSS記事を現実地点に表示し、見出し・配信元・日時・出典を確認できる",
-        "ニュースのテーマごとに回復や地図開示などの副効果が変わる"
+        "ニュースや現象をもとに毎回変わる迷宮を生成",
+        "プレイヤーの行動ごとに仲間と敵も動くターン制",
+        "観測した現象を倒すと最大3体まで仲間になる",
+        "現実地点でRSSの見出し・配信元・日時・出典を表示",
+        "地域・科学・交通・環境のニュースを6時間ごとに自動収集"
       ],
       "technologies": [
         "JavaScript",
         "HTML",
         "CSS",
         "Canvas API",
-        "GitHub Actions",
         "RSS",
+        "GitHub Actions",
         "GitHub Pages"
       ],
       "categories": [
-        "ブラウザーゲーム",
+        "ブラウザゲーム",
+        "ターン制ゲーム",
         "ローグライク",
-        "ニュース連動",
-        "ターン制"
+        "ニュース連携"
       ],
       "status": "完成品",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1431824671,
-      "sourcePushedAt": "2026-11-02T05:56:38Z",
+      "sourcePushedAt": "2026-11-02T15:42:18Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1431824671,
         "name": "2026_10_24",
-        "pushedAt": "2026-11-02T05:56:38Z",
+        "pushedAt": "2026-11-02T15:42:18Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5135,8 +5136,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "507351749933d3565c74d64a0190098c7041886d37d6d4094f41e468ebbb9c29",
-      "generatedAt": "2026-11-02T06:25:21.457Z"
+      "sourceFingerprint": "eae87fe3a3be4c99c44f92f000653fcc6c39ec6077cc1a0595e248a0ef8d90ed",
+      "generatedAt": "2026-11-02T21:48:03.024Z"
     },
     "2026_10_24_2": {
       "title": "協調実験つきボクセルサバイバル",
@@ -5434,43 +5435,43 @@
       "generatedAt": "2026-11-02T06:25:47.491Z"
     },
     "personal-browser-os": {
-      "title": "ブラウザー内デスクトップ環境",
-      "summary": "ブラウザー内に個人用デスクトップ環境を作る、ビルド不要の静的Webアプリ。ウィンドウ操作や電卓・メモ・画像表示のほか、Webアプリの登録やテーマ変更、PWAのオフライン起動にも対応する。埋め込みできないサイトは確認後に別タブで開く設計だ。",
-      "detail": "こいつは、ブラウザーの中に自分用のデスクトップを用意する静的Webアプリだ。中ではJavaScriptでウィンドウやドック、アプリ一覧を動かし、電卓・メモ帳・画像ビューア・設定に加えて、Webサイトを開く簡易ブラウザーとWebアプリの登録機能を扱ってる。メモやテーマ、追加アプリは端末のlocalStorageに保存され、Service Workerがアプリ本体をキャッシュするため、PWAとしてインストールしオフライン起動する土台もある。埋め込みを拒むサイトは自動で別タブに移さず、確認後にHTTPまたはHTTPSの別タブで開く仕組みだな。ただし通常のブラウザーのタブやアドレスバーを置き換えるものではなく、サイト側のiframe制限も解除できない。ビルド手順なしでGitHub Pagesに公開できる一方、ファイル管理などは今後追加したい機能として挙がっている。",
-      "closingRemark": "埋め込み拒否には確認ボタンで対処する。ブラウザーの壁まで、デスクトップの壁紙で隠せるわけじゃないな。",
+      "title": "パーソナルブラウザーOS",
+      "summary": "ブラウザー内に自分用のデスクトップ環境を作り、メモや画像表示、Web閲覧などをひとまとめに使える静的Webアプリだ。ウィンドウ操作やPWA対応に加え、C11の編集・コンパイル・実行までブラウザー内で行えるのが特徴。",
+      "detail": "こいつは、ビルドやアカウント登録なしで使える個人用デスクトップ環境をブラウザーに作るプロジェクトだ。中ではJavaScriptでウィンドウやランチャーを管理し、電卓、メモ帳、画像ビューア、簡易ブラウザーなどを動かしてる。目を引くのはC言語開発環境で、Clangとwasi-libcをWebAssemblyで実行し、C11の編集からコンパイル、標準入力、実行結果の表示まで端末内で完結する。独自の描画命令をprintfで出せば、同じ画面のCanvasに図形や波形も描けるってわけだ。PWAとService Workerでインストールやオフライン起動の基盤もあるが、コンパイラの初回読み込みには約70MBかかり、Webサイトの埋め込みや通常ブラウザーのタブ置き換えには制約がある。",
+      "closingRemark": "70MBのコンパイラはキャッシュの外。オフラインの備えにも、置き場所の算段は要るらしいな。",
       "features": [
         "ウィンドウの移動、サイズ変更、最大化・最小化に対応",
-        "電卓、メモ帳、画像ビューア、テーマ・壁紙設定を搭載",
-        "Webサイトや自作Webアプリをランチャーに登録",
-        "埋め込みできないサイトは確認後に別タブで開く",
-        "Service Workerによるキャッシュとオフライン起動に対応"
+        "メモや設定、追加アプリ情報をブラウザー内に保存",
+        "C11を端末内でコンパイル・実行し、標準入力も扱える",
+        "独自のC描画命令でCanvasに図形や波形を表示",
+        "PWAとService Workerによるインストール・オフライン起動の基盤"
       ],
       "technologies": [
         "JavaScript",
         "HTML",
         "CSS",
-        "localStorage",
-        "Service Worker",
         "PWA",
-        "iframe",
-        "GitHub Pages"
+        "Service Worker",
+        "WebAssembly",
+        "Clang 18.1.2",
+        "wasi-libc"
       ],
       "categories": [
+        "ブラウザーアプリ",
         "デスクトップ環境",
-        "静的Webアプリ",
-        "PWA",
-        "個人用ツール"
+        "C言語開発ツール",
+        "PWA"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1441606688,
-      "sourcePushedAt": "2026-11-02T04:36:59Z",
+      "sourcePushedAt": "2026-11-02T07:23:15Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1441606688,
         "name": "personal-browser-os",
-        "pushedAt": "2026-11-02T04:36:59Z",
+        "pushedAt": "2026-11-02T07:23:15Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5480,8 +5481,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "adb468d68d97d7c96038b7779303d2e336244d3d177fd4d254d3d8130fef61a2",
-      "generatedAt": "2026-11-02T06:25:35.209Z"
+      "sourceFingerprint": "fc4fa0d7ba9890494173f3a74a65be487135955db4839098016c34092fb90f3c",
+      "generatedAt": "2026-11-02T21:48:25.720Z"
     },
     "Strata": {
       "title": "ローカルAI実行環境",
