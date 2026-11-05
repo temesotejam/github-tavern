@@ -1,44 +1,41 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-05T07:00:21.589Z",
+  "generatedAt": "2026-11-05T20:06:49.193Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ探索ポータル",
-      "summary": "公開GitHubリポジトリを酒場の記録のように探して選ぶ、temesotejam向けの個人ポータルだ。GitHub APIから一覧を取り込み、横断検索や技術領域別の分類、カード内の概要表示を備え、Copilot未解析分はREADMEから暫定説明を補う。",
-      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、無機質な一覧ではなく古い情報端末風の画面から探すためのポータルだ。中ではGitHub APIから公開リポジトリを取得し、名前や説明、Topics、言語、Copilot要約をまとめて検索できるようにしてる。カードを選べば概要が開き、解析済みならREADMEや設定、ファイル構成などを根拠にした日本語説明が出るし、未解析ならREADMEから短い暫定説明を表示する。更新分の説明はActionsが6時間ごとに確認し、1回最大8件ずつ生成してキャッシュする仕組みだな。静的なGitHub Pagesで動かせる一方、Private Repositoryは対象外で、サイト側から変更やIssue作成はしない。",
-      "closingRemark": "6時間ごとに最大8件ずつ記録を更新する。酒場の帳簿としては、なかなか几帳面なほうだな。",
+      "title": "公開リポジトリ案内端末",
+      "summary": "公開リポジトリを古い情報端末風の画面で探し、概要まで読める個人向けポータル。GitHub APIから一覧を取得し、名前・説明・Topics・言語などで横断検索できます。Copilotの日本語要約や、未解析時にREADMEから拾った短い説明も表示します。",
+      "detail": "こいつは、temesotejamの公開GitHubリポジトリを、酒場の依頼記録のように探して読むための個人ポータルだ。ブラウザ側のJavaScriptがGitHubの公開APIから一覧を取り、名前や説明、Topics、言語、Copilot要約をまとめて検索できるようにしてる。カードを選べば概要が開き、要約がまだないものにはREADMEから短い説明を拾って表示する。裏ではGitHub Actionsが6時間ごとに更新状況を確かめ、新規・変更分をCopilot CLIで解析してdata/summaries.jsonに保存する仕組みだ。GitHub Pagesで静的に公開できる一方、対象は公開リポジトリだけで、サイトから変更や書き込みはしない。定期処理は一度に最大8件だから、大量更新を一晩で片づける設計ではないな。",
+      "closingRemark": "要約の更新も一度に最大8件。酒場の帳簿を急いでめくる気は、どうやらないらしい。",
       "features": [
-        "公開リポジトリをGitHub APIから自動取得",
-        "名前・説明・Topics・言語・Copilot要約を横断検索",
-        "技術領域ごとの簡易分類とカード内の概要表示",
-        "未解析リポジトリはREADMEから暫定説明を表示",
-        "更新分の要約を6時間ごとに最大8件ずつ生成"
+        "公開リポジトリ一覧をGitHub APIから取得",
+        "名前・説明・Topics・言語・要約を横断検索",
+        "選択したカードでリポジトリ概要を表示",
+        "Copilot CLIで新規・更新リポジトリを定期解析",
+        "未解析時はREADMEから短い説明を表示"
       ],
       "technologies": [
         "JavaScript",
-        "CSS",
-        "HTML",
-        "GitHub API",
+        "GitHub REST API",
         "GitHub Actions",
         "GitHub Copilot CLI",
         "GitHub Pages"
       ],
       "categories": [
-        "Webツール",
-        "静的サイト",
-        "GitHub",
-        "リポジトリ検索"
+        "Webアプリ",
+        "リポジトリ検索",
+        "個人ポータル"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-11-04T19:53:41Z",
+      "sourcePushedAt": "2026-11-05T07:00:23Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-11-04T19:53:41Z",
+        "pushedAt": "2026-11-05T07:00:23Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -48,8 +45,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "020856c5d8106ede4a9128b14e4404c83a34d54ec056496032a4b8a73b72e084",
-      "generatedAt": "2026-11-05T07:00:21.589Z"
+      "sourceFingerprint": "756d8f60ed3c838d26a000cc721a265a501d0e8c3e3792ffc99118001b97a666",
+      "generatedAt": "2026-11-05T20:06:49.192Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -4796,42 +4793,42 @@
     },
     "atoms3r-lateral-energy-control": {
       "title": "AtomS3R左右揺動制御",
-      "summary": "AtomS3Rとリアクションホイールを使い、機体の左右揺動を目標角へ近づける実験用ファームウェア。姿勢やピークを見て入力時間を調整し、実機ログとWeb解析ページで制御応答を確かめられます。",
-      "detail": "こいつは、AtomS3Rの左右揺動をリアクションホイールで制御し、次のピーク角を目標に近づけるための実験用ファームウェアだ。中ではMEKFで姿勢を推定し、物理ピークやZEROクロスを検出して、エネルギー予測などから電流と入力時間を決めてる。設定や実際の出力、状態はRWLOGに記録され、Web画面から測定を始めたり、保存したログを解析したりできる。負側入力の条件を変える一括測定もあり、条件の割当や実測ピークを比べられるのが特徴だな。ただし係数や逆入力の応答は暫定で、実機の閉ループ性能は自動試験だけでは確認できない。",
-      "closingRemark": "負側の入力条件は順序まで入れ替えて検証中だ。ログが揃っても、実機の返事はまだ別に聞く必要がある。",
+      "summary": "AtomS3Rとリアクションホイールを使い、左右に揺れる機体の次のピーク角を目標へ近づける実機試験用ファームウェア。制御方式や入力条件を切り替えて測定し、RWLOGとブラウザ解析ページで予測と実測を比べられます。",
+      "detail": "こいつは、AtomS3RとUnit Roller485のリアクションホイールで、機体の左右揺動を目標角へ近づけるための実機試験用ファームウェアだ。中ではMEKFで姿勢を推定し、物理ピークとZEROクロスを見つけて、次のピークに必要な電流と入力時間を計算してる。二次エネルギー式などの制御方式を選べるほか、脚を固定した一括測定や条件順を変える実験も用意され、設定や実出力はRWLOGに記録される。ログはブラウザで予測と実測の誤差を調べ、CSVにも保存できる。係数は暫定で、実機の閉ループ性能が確認済みというわけではない。そこはログを重ねて検証している段階だな。",
+      "closingRemark": "負側の入力を1 ms刻みで延ばす判断まで記録するあたり、勢いよりログを信用する制御だな。",
       "features": [
-        "MEKFによる姿勢推定とピーク・ZEROクロス検出",
-        "リアクションホイールの電流・入力時間を調整",
-        "RWLOGへの制御状態・実出力の記録",
-        "Web画面からの測定操作とログ解析",
-        "負側入力条件を変える一括測定"
+        "MEKFによる姿勢推定とZEROクロス検出",
+        "リアクションホイールの電流・入力時間を計算",
+        "複数のエネルギー制御方式と比較試験",
+        "RWLOGへの条件・指令・実測値の記録",
+        "ブラウザでのログ解析とCSV保存"
       ],
       "technologies": [
-        "C++",
-        "Python",
+        "AtomS3R",
+        "Unit Roller485",
         "PlatformIO",
         "Arduino",
-        "ESP32",
-        "AtomS3R",
+        "MEKF",
         "M5Unified",
-        "MEKF"
+        "Adafruit AHRS",
+        "RWLOG"
       ],
       "categories": [
         "組み込み",
         "制御工学",
         "ロボティクス",
-        "実験・計測"
+        "実機実験"
       ],
       "status": "実験",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1416789371,
-      "sourcePushedAt": "2026-11-05T03:52:13Z",
+      "sourcePushedAt": "2026-11-05T08:49:50Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1416789371,
         "name": "atoms3r-lateral-energy-control",
-        "pushedAt": "2026-11-05T03:52:13Z",
+        "pushedAt": "2026-11-05T08:49:50Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -4841,8 +4838,8 @@
         "fork": false,
         "language": "C++"
       },
-      "sourceFingerprint": "f9748cab01a18c496a33cef66c8cff8a0628ab1bdcab12991d0010687688aa33",
-      "generatedAt": "2026-11-05T06:59:55.464Z"
+      "sourceFingerprint": "0f6cfd2368faf946d5e7428248518acc27ef1b827078bd56d03ed68d4961353d",
+      "generatedAt": "2026-11-05T20:06:36.014Z"
     },
     "pico-copter-fc": {
       "title": "Picoコプター飛行制御",
@@ -5091,42 +5088,43 @@
       "generatedAt": "2026-10-24T04:47:37.319Z"
     },
     "2026_10_24": {
-      "title": "現象救助隊のニュース迷宮",
-      "summary": "現実の出来事や公開ニュースを、毎回形の変わる迷宮に取り込んで探索する一人用ブラウザゲーム。ターン制の戦闘や現象の仲間化に加え、RSS見出しを出典付きで表示し、ニュースのカテゴリを迷宮の色や敵に反映します。",
-      "detail": "こいつは、入力したニュースや公開RSSの見出しを、毎回形の変わる迷宮に映して探索する一人用のブラウザゲームだ。中ではJavaScriptでターン制の移動や戦闘、現象の仲間化、空腹と回復を扱い、ニュースのカテゴリを階層の色や出現する現象に結びつけてる。各階の「現実地点」では見出し・配信元・日時・出典を確認できるが、記事本文を読んだことにはしない。そこで選ぶ進み方によって次の階の関連タイプ数や強さが変わるものの、記事への賛否を示す仕組みじゃない。探索やターン進行の設計は『ポケモン不思議のダンジョン 赤の救助隊』の逆コンパイルを研究対象にしており、READMEでは任天堂などのコードや画像、名称、音声は使っていないとしている。RSSはGitHub Actionsで6時間ごとに更新し、取得に失敗すれば前回のデータを残す構成だな。",
-      "closingRemark": "迷宮に来るのはニュースの見出しまで。記事の続きは、現実地点の出典リンクに預けてある。",
+      "title": "ニュースが迷宮になる探索ゲーム",
+      "summary": "現実のニュースや小さな出来事をもとに、迷宮の色や敵、観測ノートが変わる一人用の探索ゲーム。RSSの見出しを現実地点としてたどり、仲間と戦いながら3階からの脱出を目指します。",
+      "detail": "こいつは、現実の現象やニュースを手がかりに、形の変わる迷宮を探索する一人用ゲームだ。中ではターンごとに仲間や敵も行動し、観測した現象を倒せば仲間にできる。ニュースは迷宮の色や出現する現象に反映され、各階の現実地点ではRSSの見出し、配信元、日時、出典リンクを確認できるんだ。「現在の効果を使う」か「慎重に進む」かで次の階の関連タイプ数や強さも変わるが、記事への賛否を選ぶ仕組みではない。地域・科学・交通・環境のニュースは6時間ごとに自動収集され、事件や事故などの見出しは除外される。記事本文は複製せず、見出しから本文の内容を確認したとも扱わない作りだな。",
+      "closingRemark": "迷宮の現実地点で読めるのは見出しまで。記事の続きは、脱出してから出典リンクで確かめるってわけだ。",
       "features": [
-        "ニュースのカテゴリを迷宮の色や出現する現象に反映",
-        "ターン制の探索・戦闘と、現象の仲間化",
-        "現実地点でRSS見出し、配信元、日時、出典を表示",
-        "ゲーム内の選択で次の階の関連タイプ数や強さが変化",
-        "公開RSSを6時間ごとに収集し、失敗時は前回データを保持"
+        "入力したニュースが迷宮の色や現象、観測ノートに反映",
+        "RSS記事を現実地点として表示し、見出し・配信元・日時・出典を確認",
+        "仲間化、空腹、回復、ターン制バトルを備えた探索",
+        "現実地点での選択が次の階の敵の種類や強さに影響",
+        "公開ニュースを6時間ごとに自動収集し、記事本文は複製しない"
       ],
       "technologies": [
         "JavaScript",
         "HTML",
         "CSS",
-        "Canvas",
+        "Canvas API",
         "RSS",
         "GitHub Actions",
-        "GitHub Pages"
+        "GitHub Pages",
+        "Python http.server"
       ],
       "categories": [
         "ブラウザゲーム",
         "ローグライク",
         "ニュース",
-        "ゲーム"
+        "一人用ゲーム"
       ],
       "status": "完成品",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1431824671,
-      "sourcePushedAt": "2026-11-05T06:40:10Z",
+      "sourcePushedAt": "2026-11-05T19:53:50Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1431824671,
         "name": "2026_10_24",
-        "pushedAt": "2026-11-05T06:40:10Z",
+        "pushedAt": "2026-11-05T19:53:50Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5136,8 +5134,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "8566f2becae487cfc6a0b949104c46ddc0b7ab5ba65ba74dbf9c1ae7d145c65e",
-      "generatedAt": "2026-11-05T06:59:43.997Z"
+      "sourceFingerprint": "376b6bc311295155a6b82e6e1f1cf8f1c78f3a34f9a7ab919c50eb431c261884",
+      "generatedAt": "2026-11-05T20:06:02.502Z"
     },
     "2026_10_24_2": {
       "title": "協調実験つきボクセルサバイバル",
@@ -5485,43 +5483,43 @@
       "generatedAt": "2026-11-03T06:58:52.239Z"
     },
     "Strata": {
-      "title": "ローカルAI実行環境",
-      "summary": "Strataは、Windows・Linux・Macの手元のPCで言語モデルを動かし、チャットやコーディング支援に使うための実行環境だ。デスクトップアプリと端末CLIを備え、OpenAI・Anthropic互換APIで外部ツールとも接続できる。画像入力に対応する構成もある。",
-      "detail": "こいつは、言語モデルを自分のPCで動かして、チャットやコーディング支援に使うための環境だ。デスクトップアプリか端末CLIからモデルを選んで起動でき、アプリは初回起動時にグラフィックカード向けのエンジンをダウンロードする。中ではC++やPythonを中心に、CUDAやMetalなどを使った推論エンジンを扱い、AMDやIntel向けの設定も用意されてる。起動したモデルはローカルのOpenAI・Anthropic互換APIで公開でき、対応する外部ツールから呼び出せるほか、画像入力にも対応する構成がある。Qwen系やDeepSeekなどが案内されているが、使えるモデルや速度はハードウェア次第で、DeepSeekはSSDの空き容量も大きく要るってわけだ。",
-      "closingRemark": "DeepSeekの2.00 bpwセットでも空き容量は約265GB。モデル選びの前に、まずSSDと相談することになりそうだな。",
+      "title": "手元で動かすAI推論環境",
+      "summary": "Strataは、Windows・Linux・Macの手元のPCでAIモデルを動かし、チャットや画像入力に使うための推論環境だ。デスクトップアプリとターミナルの両方を備え、OpenAI・Anthropic互換APIで開発ツールからも接続できる。",
+      "detail": "こいつは、クラウドに頼らず手元のPCでAIモデルを動かすための推論エンジンと利用環境だ。中ではC++のエンジンを中心に、CUDAやHIP、SYCL、Metalなど複数のGPU向け経路を使い、モデルの取得から起動までをデスクトップアプリやターミナルから進められる。チャットに加えて、対応モデルでは画像も入力でき、ローカルのOpenAI・Anthropic互換APIを通じてClaude CodeやCodex CLIなどのツールから利用できる。複数GPU向けの分割や投機的デコードにも手が入っているが、使える条件はモデルと機材で変わる。READMEには巨大なDeepSeekモデルの例もあり、構成によっては数百GBの空きディスクが要る。フォークとして更新が続いているため、対応状況は案内やリリースごとに確かめるのがよさそうだ。",
+      "closingRemark": "手元で完結する代わりに、DeepSeekの大きなモデルではSSDにも相応の席を空けてもらう必要がある。",
       "features": [
-        "Windows・Linux・Mac向けのデスクトップアプリと端末CLI",
-        "ローカルで言語モデルを実行",
-        "OpenAI・Anthropic互換APIで外部ツールと接続",
-        "構成により画像入力に対応",
-        "対応モデルや必要メモリ・ディスク容量のガイドを掲載"
+        "Windows・Linux・Mac向けのデスクトップアプリとターミナル",
+        "モデルの取得、起動、チャットを支援",
+        "ローカルのOpenAI・Anthropic互換API",
+        "対応モデルでの画像入力",
+        "複数GPU向けの分割推論や投機的デコード"
       ],
       "technologies": [
         "C++",
         "Python",
         "CUDA",
-        "Metal",
         "HIP",
         "SYCL",
-        "OpenAI互換API",
-        "Anthropic互換API"
+        "Metal",
+        "CMake",
+        "llama.cpp"
       ],
       "categories": [
         "ローカルAI",
         "推論エンジン",
         "デスクトップアプリ",
-        "CLIツール"
+        "開発ツール"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1442583666,
-      "sourcePushedAt": "2026-10-31T07:39:18Z",
+      "sourcePushedAt": "2026-11-05T09:08:16Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1442583666,
         "name": "Strata",
-        "pushedAt": "2026-10-31T07:39:18Z",
+        "pushedAt": "2026-11-05T09:08:16Z",
         "description": "Qwen3.8-Flash-Next on any consumer hardware: one-click install for Windows / Linux. Strata inference engine, OpenAI/Anthropic API on localhost, optional image input.",
         "topics": [],
         "homepage": "",
@@ -5529,10 +5527,10 @@
         "archived": false,
         "disabled": false,
         "fork": true,
-        "language": ""
+        "language": "C++"
       },
-      "sourceFingerprint": "285a4bd376dc04e8e041cfddcf40a352042dbab31ee67d0bd238c237af88ec8b",
-      "generatedAt": "2026-11-02T06:26:19.083Z"
+      "sourceFingerprint": "11264ccab84eaf9ca0da7b28303750312492aabf3c1eb6150e7a50cbf94824df",
+      "generatedAt": "2026-11-05T20:06:20.589Z"
     }
   },
   "repositoryCount": 112
