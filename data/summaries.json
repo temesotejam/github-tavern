@@ -1,41 +1,42 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-05T20:06:49.193Z",
+  "generatedAt": "2026-11-06T06:59:46.413Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ案内端末",
-      "summary": "公開リポジトリを古い情報端末風の画面で探し、概要まで読める個人向けポータル。GitHub APIから一覧を取得し、名前・説明・Topics・言語などで横断検索できます。Copilotの日本語要約や、未解析時にREADMEから拾った短い説明も表示します。",
-      "detail": "こいつは、temesotejamの公開GitHubリポジトリを、酒場の依頼記録のように探して読むための個人ポータルだ。ブラウザ側のJavaScriptがGitHubの公開APIから一覧を取り、名前や説明、Topics、言語、Copilot要約をまとめて検索できるようにしてる。カードを選べば概要が開き、要約がまだないものにはREADMEから短い説明を拾って表示する。裏ではGitHub Actionsが6時間ごとに更新状況を確かめ、新規・変更分をCopilot CLIで解析してdata/summaries.jsonに保存する仕組みだ。GitHub Pagesで静的に公開できる一方、対象は公開リポジトリだけで、サイトから変更や書き込みはしない。定期処理は一度に最大8件だから、大量更新を一晩で片づける設計ではないな。",
-      "closingRemark": "要約の更新も一度に最大8件。酒場の帳簿を急いでめくる気は、どうやらないらしい。",
+      "title": "公開リポジトリ探索酒場",
+      "summary": "GitHub上の公開リポジトリを、酒場を巡るような画面から検索・閲覧する個人向けポータル。GitHub APIで一覧を取得し、CopilotがREADMEや設定をもとに作る日本語説明も表示します。",
+      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、古い情報端末風の画面から探して読める個人ポータルだ。中ではGitHub APIから一覧を取り、名前や説明、Topics、言語、Copilot要約を横断検索できるようにしてる。カードを選べば概要が見られ、解析済みならREADMEや設定ファイルなどを根拠にした日本語説明が出る。説明がまだないリポジトリにはREADMEから短い暫定説明を表示し、Copilot CLIによる更新は6時間ごとに最大8件ずつ処理する仕組みだな。GitHub Pagesで静的に公開できる一方、対象は公開リポジトリだけで、サイトから変更やIssue作成はしない。",
+      "closingRemark": "説明の更新は6時間おき、しかも一度に最大8件。酒場の帳簿も、順番に片づけるらしい。",
       "features": [
-        "公開リポジトリ一覧をGitHub APIから取得",
+        "公開リポジトリをGitHub APIから自動取得",
         "名前・説明・Topics・言語・要約を横断検索",
-        "選択したカードでリポジトリ概要を表示",
-        "Copilot CLIで新規・更新リポジトリを定期解析",
+        "技術領域ごとの簡易分類とカード別の概要表示",
+        "Copilot CLIがリポジトリ資料をもとに日本語説明を生成",
         "未解析時はREADMEから短い説明を表示"
       ],
       "technologies": [
         "JavaScript",
-        "GitHub REST API",
-        "GitHub Actions",
+        "GitHub API",
         "GitHub Copilot CLI",
+        "GitHub Actions",
         "GitHub Pages"
       ],
       "categories": [
         "Webアプリ",
         "リポジトリ検索",
-        "個人ポータル"
+        "GitHub連携",
+        "自動要約"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-11-05T07:00:23Z",
+      "sourcePushedAt": "2026-11-05T20:06:51Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-11-05T07:00:23Z",
+        "pushedAt": "2026-11-05T20:06:51Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -45,8 +46,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "756d8f60ed3c838d26a000cc721a265a501d0e8c3e3792ffc99118001b97a666",
-      "generatedAt": "2026-11-05T20:06:49.192Z"
+      "sourceFingerprint": "ed236684c4261e02fa0befcb199d9ec5cc4bb1b587fe5148cecff06af6df7ae5",
+      "generatedAt": "2026-11-06T06:59:46.413Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -5088,43 +5089,42 @@
       "generatedAt": "2026-10-24T04:47:37.319Z"
     },
     "2026_10_24": {
-      "title": "ニュースが迷宮になる探索ゲーム",
-      "summary": "現実のニュースや小さな出来事をもとに、迷宮の色や敵、観測ノートが変わる一人用の探索ゲーム。RSSの見出しを現実地点としてたどり、仲間と戦いながら3階からの脱出を目指します。",
-      "detail": "こいつは、現実の現象やニュースを手がかりに、形の変わる迷宮を探索する一人用ゲームだ。中ではターンごとに仲間や敵も行動し、観測した現象を倒せば仲間にできる。ニュースは迷宮の色や出現する現象に反映され、各階の現実地点ではRSSの見出し、配信元、日時、出典リンクを確認できるんだ。「現在の効果を使う」か「慎重に進む」かで次の階の関連タイプ数や強さも変わるが、記事への賛否を選ぶ仕組みではない。地域・科学・交通・環境のニュースは6時間ごとに自動収集され、事件や事故などの見出しは除外される。記事本文は複製せず、見出しから本文の内容を確認したとも扱わない作りだな。",
-      "closingRemark": "迷宮の現実地点で読めるのは見出しまで。記事の続きは、脱出してから出典リンクで確かめるってわけだ。",
+      "title": "現象救助隊・現実連動迷宮",
+      "summary": "現実のニュースや入力した出来事をもとに迷宮が変わる、一人用のターン制探索ゲームだ。仲間や敵と行動を重ね、3階からの脱出を目指しながら、記事の見出しや出典もゲーム内で確認できる。",
+      "detail": "こいつは、現実のニュースや入力した出来事を迷宮に取り込み、探索を通して現象を調べる一人用ゲームだ。中ではターンごとにプレイヤー、仲間、敵が行動し、観測した現象を倒せば仲間にできる。空腹やHPを管理しながら光る階段を探し、3階から脱出すれば調査成功ってわけだ。入力したニュースは迷宮の色や出現する現象に影響し、各階の現実地点ではRSSの見出し、配信元、日時、出典を確かめられる。地域・科学・交通・環境のニュースはGitHub Actionsで6時間ごとに集める仕組みで、事件や事故などの見出しは除外し、記事本文も複製しない。現実地点での選択はゲーム内の進み方を変えるだけで、記事への賛否を示すものではない。そこはちゃんと線を引いてあるな。",
+      "closingRemark": "見出しは迷宮の入口になるが、記事本文まで読んだふりはしない。現実を扱うゲームとして、その線引きは悪くないな。",
       "features": [
-        "入力したニュースが迷宮の色や現象、観測ノートに反映",
-        "RSS記事を現実地点として表示し、見出し・配信元・日時・出典を確認",
-        "仲間化、空腹、回復、ターン制バトルを備えた探索",
-        "現実地点での選択が次の階の敵の種類や強さに影響",
-        "公開ニュースを6時間ごとに自動収集し、記事本文は複製しない"
+        "入力したニュースが迷宮の色や現象に反映される",
+        "仲間の勧誘や空腹管理を含むターン制探索",
+        "現実地点でRSS見出し、配信元、日時、出典を表示",
+        "4テーマの公開ニュースを6時間ごとに自動収集",
+        "記事本文を複製せず、事件・事故などの見出しを除外"
       ],
       "technologies": [
         "JavaScript",
         "HTML",
         "CSS",
         "Canvas API",
-        "RSS",
         "GitHub Actions",
-        "GitHub Pages",
-        "Python http.server"
+        "RSS",
+        "GitHub Pages"
       ],
       "categories": [
         "ブラウザゲーム",
-        "ローグライク",
-        "ニュース",
-        "一人用ゲーム"
+        "ターン制探索",
+        "ニュース連動",
+        "自動収集"
       ],
-      "status": "完成品",
+      "status": "実験",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1431824671,
-      "sourcePushedAt": "2026-11-05T19:53:50Z",
+      "sourcePushedAt": "2026-11-06T06:35:35Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1431824671,
         "name": "2026_10_24",
-        "pushedAt": "2026-11-05T19:53:50Z",
+        "pushedAt": "2026-11-06T06:35:35Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5134,8 +5134,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "376b6bc311295155a6b82e6e1f1cf8f1c78f3a34f9a7ab919c50eb431c261884",
-      "generatedAt": "2026-11-05T20:06:02.502Z"
+      "sourceFingerprint": "fceef4445783e2a60c3e59161c6446b69c685abd73497adf9682178d8713a549",
+      "generatedAt": "2026-11-06T06:59:11.070Z"
     },
     "2026_10_24_2": {
       "title": "協調実験つきボクセルサバイバル",
@@ -5384,16 +5384,16 @@
       "generatedAt": "2026-10-30T06:00:51.432Z"
     },
     "github-ai-researcher": {
-      "title": "GitHub横断AI研究員",
-      "summary": "自分が所有する公開GitHubリポジトリを横断して調べ、技術や再利用できる実装、新しい研究テーマを提案するツールだ。分析結果は根拠ファイルへのリンク付きで蓄積され、検索・比較できるダッシュボードから確認できる。",
-      "detail": "こいつは、自分が所有する公開GitHubリポジトリを横断調査して、過去の実装を次の研究や開発につなげるためのツールだ。中では公開GitHub APIやRaw URLからREADME、構成、設定、代表的なソースを集め、技術や再利用候補、プロジェクト間の組み合わせを分析して、根拠ファイルと一緒にプロフィールやMarkdownレポートへ記録してる。GitHub Actionsから毎日定期実行でき、更新分だけを分析するほか、GitHub Pagesの画面で検索、絞り込み、最大3件の比較やKnowledge Graphの探索もできる。調査対象には読み取りのみで、コードを実行したり元リポジトリを変更したりはしない。提案には誤りもあり得るから、実験や実装に進む前に根拠を確かめる必要があるな。",
-      "closingRemark": "109件を結ぶKnowledge Graphまで用意してあるが、元リポジトリには手を出さない。研究員としては、ずいぶん慎重な仕事ぶりだな。",
+      "title": "公開リポジトリ横断研究員",
+      "summary": "GitHub上の所有者自身の公開リポジトリを横断調査し、実装や技術の再利用候補、新しい開発テーマを提案するAI研究ツール。根拠ファイル付きのプロフィールやMarkdownレポートを蓄積し、検索・比較できるダッシュボードも公開する。",
+      "detail": "こいつは temesotejam が所有する公開リポジトリだけを読み、過去の実装を次の研究や開発につなげるためのAI研究ツールだ。中では公開GitHub APIから一覧や構成を、Raw URLからREADMEやソースを集め、目的・技術・アルゴリズム・再利用候補を整理してる。提案には根拠となるリポジトリやファイルを添え、プロフィールをJSON、日付別の横断分析をMarkdownで保存する仕組みだな。GitHub Pagesの画面では検索や絞り込み、最大3件の比較、Knowledge Graphで関連プロジェクトを追える。定期・手動実行に対応する一方、Private Repositoryは対象外で、収集したコードの実行や元リポジトリの変更、Issue・Pull Request作成もしない。AIの見落としはあり得るから、提案を使う前に根拠ファイルを確かめるのが筋ってわけだ。",
+      "closingRemark": "元リポジトリには読み取り専用、書き込みは自分の分析庫だけ。研究員としては、手を出す範囲がずいぶん慎重だな。",
       "features": [
-        "公開リポジトリのプロフィールと更新情報をJSONに蓄積",
-        "技術や実装の再利用候補を根拠ファイル付きで提案",
-        "日次実行で更新されたリポジトリを優先して分析",
-        "検索・絞り込み・最大3件の比較ができるWebダッシュボード",
-        "109件のリポジトリ・技術・言語・テーマを結ぶKnowledge Graph"
+        "公開リポジトリのプロフィールと横断分析レポートを生成",
+        "提案に根拠となるリポジトリ・ファイルを記録",
+        "GitHub Pagesで検索、絞り込み、最大3件の比較が可能",
+        "Knowledge Graphでリポジトリ・技術・テーマの関係を探索",
+        "更新分のみの定期分析と手動実行に対応"
       ],
       "technologies": [
         "JavaScript",
@@ -5401,25 +5401,25 @@
         "GitHub API",
         "GitHub Pages",
         "GitHub Copilot CLI",
-        "Markdown",
-        "JSON"
+        "JSON",
+        "Markdown"
       ],
       "categories": [
         "AI分析",
         "GitHub自動化",
-        "リポジトリ横断調査",
-        "ダッシュボード"
+        "開発支援",
+        "ナレッジグラフ"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1441487171,
-      "sourcePushedAt": "2026-11-04T23:56:39Z",
+      "sourcePushedAt": "2026-11-05T23:50:34Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1441487171,
         "name": "github-ai-researcher",
-        "pushedAt": "2026-11-04T23:56:39Z",
+        "pushedAt": "2026-11-05T23:50:34Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5429,8 +5429,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "a41b6dea597c3ef8cd99b61c854195dc07339fee8c4b72600f10ea119f73cbd2",
-      "generatedAt": "2026-11-05T07:00:05.642Z"
+      "sourceFingerprint": "c1a6e923882192c051fe7e25195f01a2f808efc48c16966cae5ae7553af00ccf",
+      "generatedAt": "2026-11-06T06:59:34.782Z"
     },
     "personal-browser-os": {
       "title": "ブラウザー内の個人デスクトップ",
