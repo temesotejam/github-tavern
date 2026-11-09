@@ -1,43 +1,43 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-09T06:52:03.402Z",
+  "generatedAt": "2026-11-09T22:31:14.532Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ酒場",
-      "summary": "公開GitHubリポジトリを酒場風の画面から探し、気になるものの概要を読める個人向けポータル。GitHub APIで情報を集め、検索や技術領域での分類に加え、CopilotがREADMEや構成をもとに作る日本語説明も表示する。",
-      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、酒場風の画面から探して内容を確かめる個人ポータルだ。ブラウザ側ではGitHub APIから一覧を取り、名前・説明・Topics・言語・Copilot要約を横断検索できるほか、技術領域で絞り込んだり、カードから概要を開いたりできる。説明の更新は6時間ごとのGitHub Actionsが担当し、変更のあったリポジトリだけをCopilot CLIで解析して、READMEや設定、構成などを根拠に日本語の説明を記録する。定期実行は一度に最大8件で、GitHub Pagesから静的に公開できる。扱うのは公開情報だけで、privateリポジトリや書き込み操作は対象外、長期PATをページに置かない構成だな。",
-      "closingRemark": "6時間ごとに更新を拾い、8件ずつ帳簿に足す。酒場の記録係も、なかなか几帳面だな。",
+      "title": "公開リポジトリ探索酒場",
+      "summary": "GitHubの公開リポジトリを酒場風の画面で探し、選んだ項目の概要を読める個人ポータル。名前や説明、言語などで横断検索でき、Copilotによる説明の自動更新とREADMEからの暫定表示にも対応している。",
+      "detail": "こいつは、temesotejamが所有する公開GitHubリポジトリを、酒場風の画面から探して読める個人ポータルだ。中ではGitHub APIから一覧を取得し、名前やDescription、Topics、言語、Copilot要約を横断検索できるようにしてる。カードを選べば概要が開き、Copilotの解析がまだないものはREADMEから短い説明を拾う仕組みもある。説明データは6時間ごとのActionsで更新を確認し、変更や新規追加があったものをCopilot CLIで解析して保存するが、定期実行は最大8件ずつだ。GitHub Pagesで静的に公開でき、対象は公開リポジトリのみ、削除やIssue作成といった書き込みはしない設計だな。",
+      "closingRemark": "6時間ごとに最大8件。酒場の帳簿も、更新の早さより順番を守るらしい。",
       "features": [
         "公開リポジトリ一覧をGitHub APIから取得",
-        "名前・説明・Topics・言語・Copilot要約を横断検索",
-        "技術領域による簡易分類とカードからの概要表示",
-        "Copilot CLIでREADMEや設定などを根拠に日本語説明を生成",
-        "GitHub Actionsで変更分を定期解析し、GitHub Pagesで公開"
+        "名前・説明・Topics・言語・要約を横断検索",
+        "技術領域ごとの簡易分類とカード形式の詳細表示",
+        "Copilot CLIで説明を定期更新し、JSONにキャッシュ",
+        "未解析リポジトリはREADMEから暫定説明を表示"
       ],
       "technologies": [
         "JavaScript",
         "CSS",
         "HTML",
         "GitHub API",
-        "GitHub Copilot CLI",
         "GitHub Actions",
+        "GitHub Copilot CLI",
         "GitHub Pages"
       ],
       "categories": [
         "Web・ツール",
-        "GitHub",
-        "リポジトリ検索"
+        "リポジトリ検索",
+        "静的サイト"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-11-08T22:16:07Z",
+      "sourcePushedAt": "2026-11-09T06:52:04Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-11-08T22:16:07Z",
+        "pushedAt": "2026-11-09T06:52:04Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -47,8 +47,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "90af18c463005137565567298bf7a707cc2d5ba3626e5a12f2907eeade64868d",
-      "generatedAt": "2026-11-09T06:52:03.402Z"
+      "sourceFingerprint": "abb74a34bfd13de2717a0add00e5a9fb5c40c968f5ecd8ce6b07951dafbd6acc",
+      "generatedAt": "2026-11-09T22:31:14.532Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -4794,43 +4794,42 @@
       "generatedAt": "2026-10-06T06:31:41.613Z"
     },
     "atoms3r-lateral-energy-control": {
-      "title": "AtomS3R左右揺動制御",
-      "summary": "AtomS3Rとリアクションホイールを使い、機体の左右揺動を目標角へ近づける実機試験用ファームウェア。ZEROクロスや次のピークを見て入力を調整し、条件別の一括測定とログ解析で制御応答を確かめられます。",
-      "detail": "こいつは、AtomS3RとUnit Roller485のリアクションホイールで機体の左右揺動を抑える、実機試験用のファームウェアだ。中ではMEKFで姿勢を推定し、左右のピークとZEROクロスを拾って、次のピークを目標角へ近づける電流と入力時間を決めてる。新しい方式では負側の次ピーク位置エネルギーを予測し、測定済みの入力時間から選ぶ一方、正側には従来制御を使う。実機画面から通常測定や条件別の一括試験を始められ、RWLOGをブラウザで解析して予測と実測の差も確認できる。係数は暫定で、逆入力の応答も十分に同定されていないため、実機での閉ループ性能はまだ確かめきれていない。",
-      "closingRemark": "入力幅を1 ms刻みで見直す手順まであるが、最後の判定役は自動試験ではなく実機ログってわけだ。",
+      "title": "AtomS3R左右揺動制御実験",
+      "summary": "AtomS3Rとリアクションホイールを使い、左右に揺れる機体のピーク角を目標へ近づける制御を実機で試すファームウェアだ。エネルギー予測に基づく入力に加え、条件を変えた一括測定や詳細なログ解析も用意されている。",
+      "detail": "こいつは、AtomS3Rの機体が左右に揺れる動きを、リアクションホイールでどう抑えられるか実機で調べるためのファームウェアだ。中ではMEKFの姿勢推定から物理ピークとZEROクロスを見つけ、次のピークに残るエネルギーを予測して、ホイールへ流す電流とパルス幅を決めてる。Web画面から目標角や制御方式を選べるほか、入力条件を順序を変えて試す一括測定もあり、割当と実出力、機体の状態をRWLOGに残せる。ブラウザの解析ページでは、予測と実測ピークの差やホイールの仕事を確認し、CSVにも保存できる。係数や逆入力の応答は暫定で、実機の閉ループ性能は自動試験だけでは確認できない。そこはログを取りながら検証している段階だな。",
+      "closingRemark": "条件の順番まで入れ替えて記録するあたり、揺れだけでなく実験の思い込みにも手を打ってるわけだ。",
       "features": [
-        "MEKFで姿勢を推定し、左右ピークとZEROクロスを検出",
-        "次のピークのエネルギー予測からホイール入力を調整",
-        "実機Web画面から通常測定や条件別の一括試験を実行",
-        "RWLOGを記録し、ブラウザで予測・実測・誤差を解析",
-        "16°の左右角制限と異常停止を維持"
+        "MEKFで左右のピークとZEROクロスを検出",
+        "エネルギー予測からホイールの入力方向とパルス幅を決定",
+        "Web画面で目標角や制御方式を設定",
+        "条件順を変える一括測定とRWLOG記録",
+        "ブラウザでログを解析しCSVへ保存"
       ],
       "technologies": [
-        "AtomS3R",
-        "Unit Roller485",
-        "リアクションホイール",
-        "MEKF",
+        "C++",
+        "Python",
+        "JavaScript",
         "PlatformIO",
         "Arduino",
         "M5Unified",
-        "Python"
+        "AtomS3R",
+        "MEKF"
       ],
       "categories": [
-        "組み込みファームウェア",
-        "姿勢制御",
-        "実機実験",
-        "データ解析"
+        "組み込み",
+        "制御工学",
+        "実機実験"
       ],
       "status": "実験",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1416789371,
-      "sourcePushedAt": "2026-11-09T06:40:56Z",
+      "sourcePushedAt": "2026-11-09T07:39:50Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1416789371,
         "name": "atoms3r-lateral-energy-control",
-        "pushedAt": "2026-11-09T06:40:56Z",
+        "pushedAt": "2026-11-09T07:39:50Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -4840,8 +4839,8 @@
         "fork": false,
         "language": "C++"
       },
-      "sourceFingerprint": "c70576fd9ff4d81fec061d5d136383b99b8e217cb99c0d1089941352cc7d3147",
-      "generatedAt": "2026-11-09T06:51:19.412Z"
+      "sourceFingerprint": "a0691e63c61ed220196f4ea359518973a05f1938eb12a6639fac7c51f9147b8c",
+      "generatedAt": "2026-11-09T22:30:59.750Z"
     },
     "pico-copter-fc": {
       "title": "Picoコプター飛行制御",
@@ -5090,42 +5089,42 @@
       "generatedAt": "2026-10-24T04:47:37.319Z"
     },
     "2026_10_24": {
-      "title": "現象救助隊：現実ニュース迷宮",
-      "summary": "現実のニュースや入力した話題をもとに、迷宮を探索する一人用ブラウザゲーム。ターン制の戦闘や現象の仲間化に加え、RSS見出しをゲーム内で確認でき、ニュースの扱いにも配慮がある。",
-      "detail": "こいつは、現実の現象やニュースを迷宮に変えて調査する一人用の探索ゲームだ。矢印キーやWASD、画面のボタンで動き、プレイヤーが行動すると仲間と敵も動くターン制で進む。現象を「観測」して倒せば仲間になり、携帯食で空腹をしのぎながら3階からの脱出を目指す。入力したニュースは迷宮の色や出現する現象に反映され、各階の現実地点ではRSSの見出し、配信元、日時、出典を確かめられる。記事本文を確認済みとは扱わず、事件や事故などの見出しを自動除外する仕組みもある。探索やターン進行の設計は『ポケモン不思議のダンジョン 赤の救助隊』の逆コンパイルを研究対象にしているが、同作のコードや素材は使っていない。",
-      "closingRemark": "現実地点で選ぶ進み方は記事への賛否じゃない。ニュースに迷宮の行き先まで決めさせない、という線引きだな。",
+      "title": "ニュースから生まれる迷宮探索ゲーム",
+      "summary": "入力したニュースや自動収集した公開記事をもとに、迷宮の色や敵が変わる一人用の探索ゲームだ。記事の見出しや出典をゲーム内で確かめながら、仲間とともに3階からの脱出を目指せる。",
+      "detail": "こいつは、現実のニュースや小さな出来事を材料に、形の変わる迷宮を探索する一人用ゲームだ。中ではプレイヤーが一度動くたびに仲間と敵も行動し、観測した現象を仲間にしたり、食料や救護メモで持ちこたえたりする。入力したニュースは迷宮の色や敵、観測ノートに反映されるほか、地域・環境・交通・科学の公開ニュースをGitHub Actionsが6時間ごとに集め、記事の見出しや配信元、日時、出典リンクを「現実地点」として配置する。現実地点での選択は次の階の敵の種類や強さに影響するが、記事への賛否を表すものではない。見出しや出典は表示する一方、記事本文を確認済みとは扱わず、事件や事故などの見出しも自動で除外する設計だ。3階からの脱出が調査成功になる。探索の骨格は既存ゲームの設計研究を参考にしているが、その作品のコードや画像などは使っていない。",
+      "closingRemark": "ニュースの見出しは迷宮に現れるが、記事本文まで読んだことにはならない。その線引きは、なかなか慎重だな。",
       "features": [
-        "入力ニュースに応じて迷宮の色や現象が変化",
-        "観測した現象を最大3体まで仲間にできる",
-        "ターン制の探索と戦闘、空腹・HP管理",
-        "RSSの見出し・配信元・日時・出典を現実地点で表示",
-        "6時間ごとの自動ニュース収集と事件・事故などの見出し除外"
+        "ニュース入力が迷宮の色・敵・観測ノートに反映される",
+        "公開ニュースを6時間ごとに自動収集",
+        "記事を見出し・配信元・日時・出典リンクの「現実地点」として表示",
+        "現実地点での選択が次の階の敵の種類や強さに影響",
+        "仲間化や空腹を含むターン制探索で3階からの脱出を目指す"
       ],
       "technologies": [
         "JavaScript",
         "HTML",
         "CSS",
-        "GitHub Actions",
+        "Canvas",
         "RSS",
-        "JSON",
-        "Canvas"
+        "GitHub Actions",
+        "GitHub Pages"
       ],
       "categories": [
-        "ブラウザゲーム",
+        "ブラウザーゲーム",
         "ローグライク",
-        "ニュース連携",
+        "ニュース",
         "自動生成"
       ],
-      "status": "完成品",
+      "status": "不明",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1431824671,
-      "sourcePushedAt": "2026-11-09T06:18:17Z",
+      "sourcePushedAt": "2026-11-09T22:17:43Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1431824671,
         "name": "2026_10_24",
-        "pushedAt": "2026-11-09T06:18:17Z",
+        "pushedAt": "2026-11-09T22:17:43Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5135,8 +5134,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "1380e8314c047a347dc77590d6da49926832c457136cffddc36a6d4482338528",
-      "generatedAt": "2026-11-09T06:51:34.223Z"
+      "sourceFingerprint": "4f1967a97c89d5f80d35032873a9e6ccf7419b4849af1b11e6df61d0149dfab5",
+      "generatedAt": "2026-11-09T22:30:34.076Z"
     },
     "2026_10_24_2": {
       "title": "協調実験つきボクセルサバイバル",
@@ -5532,7 +5531,57 @@
       },
       "sourceFingerprint": "11264ccab84eaf9ca0da7b28303750312492aabf3c1eb6150e7a50cbf94824df",
       "generatedAt": "2026-11-05T20:06:20.589Z"
+    },
+    "rw-walker-motion-control": {
+      "title": "リアクションホイール歩行制御",
+      "summary": "リアクションホイール歩行器を動かすための制御ファームウェアで、M5Stack AtomS3向けにPlatformIOとArduinoでビルドする。歩行や姿勢制御の試験設定を複数のビルド環境に分け、実機への書き込みはPCから行う構成だ。",
+      "detail": "こいつは、リアクションホイール歩行器の制御を実機で試すためのファームウェアだ。中ではM5Stack AtomS3向けに、PlatformIOとArduinoの設定を使ってC++のプログラムをビルドする。早期入力や歩行の滑らかさ、救援動作、速い横断といった試験ごとにビルド環境が分かれていて、通常版と試験版を明示して選べるようになってる。コミットには歩行試験の観察記録や比較試験の追加も見えるな。ただし、GitHub更新から自動ビルドやデプロイは行わず、実機への書き込みはPCで行う。READMEには試験ログに基づく改善がまだ含まれていないともあるので、最新の制御内容は記録や実装を確かめる必要がある。",
+      "closingRemark": "速い横断は適用候補と影響を観察する設定が別々にある。試す前に比べる段取りまで用意してあるわけだな。",
+      "features": [
+        "リアクションホイール歩行器向けの制御ファームウェア",
+        "歩行・救援動作などを切り替える複数のPlatformIO試験環境",
+        "通常版と試験版のビルド設定を分離",
+        "歩行試験の観察記録と比較試験を収録",
+        "実機への書き込みはPCから実施"
+      ],
+      "technologies": [
+        "C++",
+        "PlatformIO",
+        "Arduino",
+        "ESP32",
+        "M5Stack AtomS3",
+        "M5Unified",
+        "M5GFX",
+        "Adafruit AHRS"
+      ],
+      "categories": [
+        "組み込み",
+        "ロボティクス",
+        "制御",
+        "実験"
+      ],
+      "status": "実験",
+      "confidence": "high",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
+      "sourceRepositoryId": 1451079532,
+      "sourcePushedAt": "2026-11-09T11:39:35Z",
+      "sourceDefaultBranch": "main",
+      "sourceMetadata": {
+        "repositoryId": 1451079532,
+        "name": "rw-walker-motion-control",
+        "pushedAt": "2026-11-09T11:39:35Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "C++"
+      },
+      "sourceFingerprint": "a6b55878618a5bc3907ea4af4f87ce87a0d35d567ca40ab446575891513bdcef",
+      "generatedAt": "2026-11-09T22:30:46.297Z"
     }
   },
-  "repositoryCount": 112
+  "repositoryCount": 113
 }
