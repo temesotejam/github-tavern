@@ -1,43 +1,44 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-10T07:30:19.407Z",
+  "generatedAt": "2026-11-10T19:51:55.982Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ探索端末",
-      "summary": "temesotejamが公開しているGitHubリポジトリを、検索・分類して閲覧する個人向けポータル。GitHub APIから情報を取得し、Copilotによる日本語説明やREADMEからの暫定紹介もカードと詳細画面に表示します。",
-      "detail": "こいつは、temesotejamの公開GitHubリポジトリを古い情報端末風の画面から探して、内容を確かめるためのポータルだ。中ではGitHub APIから一覧を取り、名前や説明、Topics、言語、Copilot要約を横断検索し、技術領域ごとに絞り込める。カードを選ぶと概要が開き、解析済みならREADMEや設定、ファイル構成などを根拠にした日本語説明が読めるんだ。説明がまだない新しいリポジトリにはREADMEから短い紹介を補う一方、6時間ごとの自動解析は変更されたものを中心に最大8件ずつ処理する。公開リポジトリだけを読み、削除や更新などの書き込みはしない。長期PATをPagesに置かず、Actionsのトークンで解析を回す構成ってところだな。",
-      "closingRemark": "説明がまだ届かないカードにもREADMEの短い紹介は出る。酒場の記録係としては、ひとまず看板だけでも読めるのが助かるな。",
+      "title": "公開リポジトリ探索酒場",
+      "summary": "temesotejamの公開GitHubリポジトリを、酒場の記録を選ぶように検索・閲覧できる個人向けポータル。技術領域での絞り込みや、CopilotがREADMEなどをもとに作る日本語説明も確認できます。",
+      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、酒場の依頼帳のように探して中身を確かめる個人向けポータルだ。ブラウザ側ではGitHub APIから公開リポジトリを取得し、名前や説明、Topics、言語、Copilot要約をまとめて検索できる。技術領域で絞り込んだり、カードを選んで概要を読んだりできて、解析前のリポジトリにはREADMEから短い暫定説明を出す仕組みもある。裏側ではActionsが6時間ごとに更新状況を見て、変化したリポジトリの説明をCopilot CLIで作り、JSONに蓄えている。GitHub Pagesで静的に公開できる一方、Privateリポジトリや書き込み操作は扱わない。定期処理は一度に最大8件だから、全件が一気に整うわけじゃないな。",
+      "closingRemark": "帳面の更新は6時間ごと、ただし一度に最大8件。急がず埋めるあたりも、この酒場らしいな。",
       "features": [
-        "公開リポジトリ一覧をGitHub APIから取得",
+        "公開リポジトリをGitHub APIから取得",
         "名前・説明・Topics・言語・要約を横断検索",
-        "技術領域での分類と詳細表示",
-        "Copilotによる要約を定期更新",
-        "未解析リポジトリはREADMEから紹介を補完"
+        "技術領域ごとの分類と絞り込み",
+        "Copilot CLIによる日本語説明の生成とキャッシュ",
+        "READMEから解析前の暫定説明を表示"
       ],
       "technologies": [
         "JavaScript",
         "CSS",
         "HTML",
         "GitHub API",
-        "GitHub Pages",
         "GitHub Actions",
-        "GitHub Copilot CLI"
+        "GitHub Copilot CLI",
+        "GitHub Pages"
       ],
       "categories": [
-        "Web・ツール",
-        "GitHub",
-        "リポジトリ検索"
+        "Webアプリ",
+        "GitHubリポジトリ閲覧",
+        "検索・アーカイブ",
+        "自動要約"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-11-09T22:44:34Z",
+      "sourcePushedAt": "2026-11-10T07:30:20Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-11-09T22:44:34Z",
+        "pushedAt": "2026-11-10T07:30:20Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -47,8 +48,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "7ca788536e8d8ac3951c21a397cbe81fe78deef1bed11b6b3bac17d2cce0f845",
-      "generatedAt": "2026-11-10T07:30:19.407Z"
+      "sourceFingerprint": "10f50cbca1a114936901e31fe3d8020d02ad2f8ae2089c856f47a6453ec69c63",
+      "generatedAt": "2026-11-10T19:51:55.982Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -5089,42 +5090,43 @@
       "generatedAt": "2026-10-24T04:47:37.319Z"
     },
     "2026_10_24": {
-      "title": "ニュースが迷宮になる探索ゲーム",
-      "summary": "現実のニュースや入力した出来事を手がかりに、形の変わる迷宮を探索する一人用ゲーム。仲間や空腹を管理しながら3階からの脱出を目指し、ニュースは迷宮の色や現象にも反映されます。",
-      "detail": "こいつは、現実のニュースや入力した出来事を迷宮に変えて、3階からの脱出を目指す一人用探索ゲームだ。中ではターンごとにプレイヤー、仲間、敵が行動し、現象を観測して倒せば仲間にできる。ニュースは迷宮の色や出現する現象、観測ノートに反映され、地域・環境・交通・科学のテーマごとに回復や地図開示などの副効果も変わる。各階の「現実地点」ではRSSの見出し、配信元、日時、出典リンクを確認できるが、記事本文を確認したとは扱わない。公開ニュースはGitHub Actionsで6時間ごとに収集し、事件・事故・災害などの見出しを除外する仕組みで、現実地点での選択も記事への賛否ではなく次の階のゲーム内容を変えるものだ。",
-      "closingRemark": "記事本文を迷宮へ持ち込まず、見出しと出典だけを置いていく。現実との距離は、なかなか慎重だな。",
+      "title": "現象救助隊・現実ニュース迷宮",
+      "summary": "入力したニュースや自動収集された見出しをもとに迷宮が変わる、一人用の探索ゲーム。仲間や敵とターン制で行動し、現実の記事情報を手がかりに3階からの脱出を目指します。",
+      "detail": "こいつは、現実のニュースや小さな出来事を材料に、毎回違う迷宮を探索する一人用ゲームだ。入力したニュースは迷宮の色や出現する現象、観測ノートに反映され、中ではプレイヤーの行動ごとに仲間と敵も動く。現象を観測して仲間にしたり、食料で空腹をしのいだりしながら、3階の階段を探して脱出する。各階の「現実地点」ではRSSの見出しや配信元、日時、出典を確認でき、選択によって次の階の敵の種類や強さも変わるが、記事への賛否を示す仕組みではない。地域・科学・交通・環境のニュースはGitHub Actionsで6時間ごとに収集され、事件や事故などの見出しは除外、記事本文も保存しない。探索の骨格は『ポケモン不思議のダンジョン 赤の救助隊』の逆コンパイル研究を参考にしているが、同作のコードや素材は使っていない。",
+      "closingRemark": "現実地点に記事本文はなく、見出しと出典まで。迷宮の奥より先に、リンクを確かめる場面もありそうだな。",
       "features": [
-        "ニュースや入力内容に応じて迷宮の色・現象・観測ノートが変化",
-        "観測した現象を倒すと、最大3体まで仲間になる",
-        "現実地点でRSS見出し・配信元・日時・出典リンクを表示",
-        "地域・環境・交通・科学のテーマがゲーム内の副効果に反映",
-        "公開ニュースを6時間ごとに収集し、特定の見出しを除外"
+        "ニュースをもとに色や現象が変わる迷宮を自動生成",
+        "仲間と敵がプレイヤーの行動に合わせて動くターン制探索",
+        "現象を観測して最大3体まで仲間にできる",
+        "記事の見出し・配信元・日時・出典をゲーム内で表示",
+        "公開RSSを6時間ごとに収集し、事件・事故などの見出しを除外"
       ],
       "technologies": [
         "JavaScript",
         "HTML",
         "CSS",
-        "Canvas",
-        "GitHub Actions",
+        "Canvas API",
         "RSS",
-        "GitHub Pages"
+        "GitHub Actions",
+        "GitHub Pages",
+        "localStorage"
       ],
       "categories": [
-        "ゲーム",
+        "ブラウザゲーム",
         "ローグライク",
         "ニュース",
-        "Webアプリ"
+        "一人用ゲーム"
       ],
       "status": "完成品",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1431824671,
-      "sourcePushedAt": "2026-11-10T07:11:43Z",
+      "sourcePushedAt": "2026-11-10T19:40:58Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1431824671,
         "name": "2026_10_24",
-        "pushedAt": "2026-11-10T07:11:43Z",
+        "pushedAt": "2026-11-10T19:40:58Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5134,8 +5136,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "3c8bd62052ed95f2722c4d5bfc015015c7c82764e068a71fe32d6ad0f94d5355",
-      "generatedAt": "2026-11-10T07:29:51.975Z"
+      "sourceFingerprint": "7701433198b33f51abdd26e0b48492a4f0f83b86ba051834faef5c7b9d198a98",
+      "generatedAt": "2026-11-10T19:51:33.649Z"
     },
     "2026_10_24_2": {
       "title": "協調実験つきボクセルサバイバル",
