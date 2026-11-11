@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-11T07:14:37.852Z",
+  "generatedAt": "2026-11-11T19:53:21.013Z",
   "repositoryCount": 114,
-  "pageCount": 67,
+  "pageCount": 68,
   "pages": {
     "2026_10_22": {
       "url": "https://temesotejam.github.io/2026_10_22/",
@@ -151,6 +151,11 @@
     },
     "inertial-perception-sim": {
       "url": "https://temesotejam.github.io/inertial-perception-sim/",
+      "source": "github-pages",
+      "status": 200
+    },
+    "layer-workbench": {
+      "url": "https://temesotejam.github.io/layer-workbench/",
       "source": "github-pages",
       "status": 200
     },
