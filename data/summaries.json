@@ -1,18 +1,18 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-19T07:39:51.033Z",
+  "generatedAt": "2026-11-19T20:48:39.502Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ探索端末",
-      "summary": "公開GitHubリポジトリを、古い情報端末風の画面で検索・閲覧する個人向けポータル。GitHub APIから一覧を取り込み、Copilotの日本語要約やREADME由来の暫定説明、技術分類を添えて、カードから概要を確認できる。",
-      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、酒場の依頼帳のような画面で探して中身を確かめるための個人ポータルだ。ブラウザ側ではGitHubの公開APIから一覧を取り込み、名前や説明、Topics、言語、Copilot要約を横断検索し、技術領域でも絞り込める。選んだカードでは概要やリンクを見られ、説明がまだないものにはREADMEから短い暫定文を作って表示する。裏側ではActionsが6時間ごとに更新を確認し、変更のあったものを最大8件ずつCopilot CLIで解析して、説明をJSONに蓄える仕組みだな。Private Repositoryや書き込み操作は扱わず、Pagesへ長期PATも埋め込まない。閲覧に徹した静的サイトで、一覧と説明の更新は別の自動処理に任せてるってわけだ。",
-      "closingRemark": "一度に片づけるのは最大8件。更新分だけを追うあたり、帳簿仕事はなかなか堅実だな。",
+      "title": "公開リポジトリ探索酒場",
+      "summary": "temesotejamが公開しているGitHubリポジトリを、酒場風の画面から探して内容を確かめる個人ポータル。GitHub APIで情報を集め、検索・分類・詳細表示に加え、CopilotがREADMEや構成を根拠に作る日本語要約も閲覧できる。",
+      "detail": "こいつは、temesotejamが公開しているリポジトリを、古い情報端末を模した画面から探して読むための個人ポータルだ。中ではGitHubの公開APIから情報を取り込み、名前や説明、Topics、言語、Copilot要約を横断検索し、技術領域ごとの分類やカードからの概要表示につなげてる。Copilot CLIを使うActionsが6時間ごとに一覧を確認し、更新のあったものを最大8件ずつ解析して data/summaries.json に保存する仕組みだ。解析済みならREADMEや構成、設定などを根拠にした説明が出て、未解析ならREADMEから短い暫定説明を補う。GitHub Pagesで静的に公開でき、読むのは公開情報だけで書き込みも行わないが、Private Repositoryは対象外ってところだ。",
+      "closingRemark": "6時間ごとに最大8件ずつ、という歩幅まで堅実だ。非公開の棚には手を出さない。",
       "features": [
-        "公開リポジトリ一覧をGitHub APIから取得",
+        "公開リポジトリをGitHub APIから取得",
         "名前・説明・Topics・言語・要約を横断検索",
-        "技術領域による分類と絞り込み",
-        "Copilot CLIで日本語説明を定期生成",
-        "未解析のリポジトリはREADMEから暫定説明を表示"
+        "技術領域ごとの簡易分類とカード詳細表示",
+        "Copilot CLIで変更分の日本語説明を定期生成",
+        "未解析リポジトリはREADMEから暫定説明を表示"
       ],
       "technologies": [
         "JavaScript",
@@ -26,18 +26,18 @@
       "categories": [
         "Web・ツール",
         "GitHub",
-        "生成AI"
+        "個人ポータル"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-11-18T20:42:20Z",
+      "sourcePushedAt": "2026-11-19T07:39:52Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-11-18T20:42:20Z",
+        "pushedAt": "2026-11-19T07:39:52Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -47,8 +47,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "1d3bb80609e3d15717e13bb46ee123777fb8571cf819567ce890574f9680e9ca",
-      "generatedAt": "2026-11-19T07:39:51.032Z"
+      "sourceFingerprint": "2fb8c4ab83db32d2b34806eb0334b71b31b34a6dfbcf0c9722fa7dd2d18cba5d",
+      "generatedAt": "2026-11-19T20:48:39.502Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -300,43 +300,43 @@
       "generatedAt": "2026-09-04T10:52:42.974Z"
     },
     "spike-rt-web-toolkit": {
-      "title": "SPIKE-RT開発・書き込みツール",
-      "summary": "SPIKE-RTアプリをブラウザで編集・ビルドし、SPIKE Prime Hubへ書き込んでUSBシリアルログを確認するためのツールキット。アプリごとの差分ビルドや、Cファイル中心の追加手順も用意されています。",
-      "detail": "こいつは、SPIKE-RTアプリの編集からHubへの書き込み、実行ログの確認までをつなぐWebツールキットだ。github.devでCソースを編集すると、GitHub Actionsがアプリをビルドし、GitHub PagesからWebUSBとDfuSeを使ってSPIKE Prime Hubへ書き込める。書き込み前のSHA-256確認や差分ビルドに加え、変更のないファームウェアはキャッシュから再利用する仕組みもある。実行後はWeb Serialで115200 bpsのログをブラウザ表示でき、アプリは基本的にapps配下へ同名のCファイルを置けば追加できる。WindowsのDFU用WinUSBセットアップは既設定時の無変更動作などを確認済みだが、新規割り当ての経路は実機確認待ちだな。",
-      "closingRemark": "変更のないファームウェアは再利用できるが、WinUSBの新規割り当てだけはまだ実機で答え合わせが残ってる。",
+      "title": "SPIKE-RT Web書き込みツール",
+      "summary": "SPIKE-RTアプリをブラウザからSPIKE Prime Hubへ書き込み、実行ログも確認できる開発ツールだ。GitHub Actionsで複数アプリをビルドし、変更のないファームウェアは再利用してGitHub Pagesから選んで書き込める。",
+      "detail": "こいつは、SPIKE-RTアプリの編集からビルド、Hubへの書き込み、実行ログの確認までをつなぐWebツールキットだ。中ではGitHub Actionsがapps/以下のCアプリをビルドし、ソースに変更のないファームウェアはSHA-256を確かめてキャッシュから再利用してる。GitHub Pagesでアプリを選び、WebUSBとDfuSeでSPIKE Prime HubのDFUモードへ書き込めるほか、Web Serialで115200 bpsのログもブラウザに表示できる。アプリは基本的にフォルダ名と同じCファイルから追加でき、課題用アプリをサンプルから作る仕組みもある。Windows向けの専用WinUSBセットアップ案内も用意されているが、新規ドライバ割り当ての実機確認はまだ完了していない。",
+      "closingRemark": "変更のないファームウェアは再利用する一方、Pagesのカタログは毎回作り直す。手間を省く場所と省かない場所が、きちんと分かれてるな。",
       "features": [
-        "GitHub Actionsで複数アプリをビルドし、差分のない成果物を再利用",
-        "GitHub PagesからWebUSBでSPIKE Prime Hubへファームウェアを書き込み",
-        "Web Serialで実行中のUSBシリアルログをブラウザ表示",
-        "基本はアプリごとに同名のCファイルを置いて追加",
-        "課題アプリをサンプルから作成するワークフローを用意"
+        "GitHub Actionsでapps/以下の複数アプリをビルド",
+        "変更のないファームウェアをSHA-256確認後に再利用",
+        "GitHub PagesからWebUSBでSPIKE Prime Hubへ書き込み",
+        "Web Serialで実行中のUSBシリアルログを表示",
+        "サンプルから課題アプリを作成"
       ],
       "technologies": [
         "C",
         "JavaScript",
+        "CSS",
+        "HTML",
         "SPIKE-RT",
-        "WebUSB",
-        "DfuSe",
-        "Web Serial API",
         "GitHub Actions",
-        "GitHub Pages"
+        "WebUSB",
+        "Web Serial API"
       ],
       "categories": [
         "開発ツール",
         "組み込み",
-        "教育",
-        "ファームウェア書き込み"
+        "ファームウェア",
+        "教育"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1341511616,
-      "sourcePushedAt": "2026-11-19T06:51:14Z",
+      "sourcePushedAt": "2026-11-19T12:00:43Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1341511616,
         "name": "spike-rt-web-toolkit",
-        "pushedAt": "2026-11-19T06:51:14Z",
+        "pushedAt": "2026-11-19T12:00:43Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -346,8 +346,8 @@
         "fork": false,
         "language": "C"
       },
-      "sourceFingerprint": "28478034d6b91aa697d1f954e9bed7c7ff9f3bcf50f9bd289417e3ee922ba5f9",
-      "generatedAt": "2026-11-19T07:39:21.273Z"
+      "sourceFingerprint": "d9436e06d71b48898b0d0619816aece87c5fa1ceb32ca349f1bc4ab6c4b81d09",
+      "generatedAt": "2026-11-19T20:48:10.923Z"
     },
     "reaction-wheel-rocker-baseline-sim": {
       "title": "反応ホイール機体の基準シミュレータ",
@@ -5090,42 +5090,42 @@
       "generatedAt": "2026-10-24T04:47:37.319Z"
     },
     "2026_10_24": {
-      "title": "現実ニュース迷宮探索ゲーム",
-      "summary": "現実の現象やニュースを手がかりに、毎回形の変わる迷宮を探索する一人用ブラウザーゲーム。RSSの見出しや入力したニュースが迷宮のテーマや敵に反映され、仲間集めやターン制の戦闘をしながら3階からの脱出を目指します。",
-      "detail": "こいつは、現実の現象や小さなニュースを迷宮に変えて探索する、一人用のブラウザーゲームだ。中ではJavaScriptとCanvasでターン制の移動や戦闘を動かし、「観測」した敵を仲間にしたり、食料や救護メモでしのいだりしながら、3階からの脱出を目指す。入力したニュースは次の迷宮の色や出現する現象に影響し、各階にはRSS記事の見出し、配信元、日時、出典リンクを示す「現実地点」も現れる。そこでの選択はゲーム内の進み方を変えるだけで、記事への賛否を示すものではない。公開ニュースはGitHub Actionsで6時間ごとに集め、事件や事故などの見出しを除外し、記事本文は複製しない作りだ。探索の骨格は『ポケモン不思議のダンジョン 赤の救助隊』の逆コンパイルを研究対象にしているが、任天堂や株式会社ポケモン等のコードや素材は使っていない。",
-      "closingRemark": "迷宮に記事の入口は作るが、本文を読んだふりはしない。探索者より慎重な設計だな。",
+      "title": "現象救助隊：ニュース迷宮",
+      "summary": "現実のニュースや入力した出来事を迷宮に映し出し、仲間と探索する一人用ブラウザゲーム。ターン制の戦闘や現象の仲間化に加え、出典付きのRSS見出しをゲーム内で観測できる。",
+      "detail": "こいつは、現実の現象やニュースを手がかりに、毎回姿の変わる迷宮を探索する一人用ゲームだ。中ではプレイヤーが一度動くたびに仲間と敵も行動し、「観測」した現象を倒せば仲間にできる。空腹やHPを管理しながら光る階段を探し、3階から脱出すれば調査成功ってわけだ。入力したニュースは迷宮の色や出現する現象に反映され、各階の現実地点ではRSSの見出し、配信元、日時、出典を確かめられる。ニュースはGitHub Actionsで6時間ごとに集め、事件・事故などの見出しは除外する仕組みだが、記事本文を確認済みとは扱わず、ゲーム内の選択も記事への賛否を示すものではない。",
+      "closingRemark": "現実地点で見られるのは見出しと出典まで。迷宮の奥へ進んでも、記事本文まではついてこない。",
       "features": [
-        "毎回形の変わるターン制迷宮を探索",
-        "観測した敵を最大3体まで仲間にできる",
-        "ニュース入力が迷宮の色や現象に反映される",
-        "RSS記事の見出し・配信元・日時・出典を現実地点に表示",
-        "GitHub Actionsで公開ニュースを6時間ごとに収集"
+        "ニュースや入力内容に応じて迷宮の色・現象が変化",
+        "ターン制探索と最大3体までの現象の仲間化",
+        "空腹・HPを管理しながら3階からの脱出を目指す",
+        "現実地点でRSS見出し・配信元・日時・出典を表示",
+        "公開ニュースを6時間ごとに自動収集し、事件・事故などの見出しを除外"
       ],
       "technologies": [
         "JavaScript",
         "HTML",
-        "Canvas",
         "CSS",
-        "RSS",
+        "Canvas",
         "GitHub Actions",
+        "RSS",
         "GitHub Pages"
       ],
       "categories": [
-        "ブラウザーゲーム",
-        "ターン制探索",
-        "ニュース活用",
-        "ローグライク"
+        "ブラウザゲーム",
+        "ローグライク",
+        "ニュース",
+        "一人用ゲーム"
       ],
       "status": "完成品",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1431824671,
-      "sourcePushedAt": "2026-11-19T07:18:30Z",
+      "sourcePushedAt": "2026-11-19T20:30:05Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1431824671,
         "name": "2026_10_24",
-        "pushedAt": "2026-11-19T07:18:30Z",
+        "pushedAt": "2026-11-19T20:30:05Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5135,8 +5135,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "9e6cb9d4f00d5af5fc9818b731a8eb7cf41ffd19c5c8bbbb15347fb315c91dff",
-      "generatedAt": "2026-11-19T07:39:06.867Z"
+      "sourceFingerprint": "97998bfb7bf068ce837f3dd799fb96bc1938398cb12115b1dd667426b38583e5",
+      "generatedAt": "2026-11-19T20:47:38.838Z"
     },
     "2026_10_24_2": {
       "title": "協調実験つきボクセルサバイバル",
@@ -5534,43 +5534,43 @@
       "generatedAt": "2026-11-05T20:06:20.589Z"
     },
     "rw-walker-motion-control": {
-      "title": "リアクションホイール歩行器制御",
-      "summary": "リアクションホイール歩行器の制御プログラムを開発・試験するためのファームウェアだ。PlatformIOで通常版と複数の実験版を切り替えられ、足の状態の記録や走行テレメトリの確認にも取り組んでいる。",
-      "detail": "こいつは、リアクションホイール歩行器を制御するファームウェアを開発し、実機で試すためのリポジトリだ。中ではPlatformIOの環境を分け、角度を使った早期入力や歩行の滑らかさ、足の支持補助といった試験機能をビルドフラグで選べるようにしてる。候補の制御を適用せず観測だけするシャドー設定もあり、足の推定値や走行中のテレメトリを記録しながら比較できる。対象はM5Stack ATOMS3上のArduinoファームウェアで、実機への書き込みはPCから行う構成だ。GitHub更新時の自動ビルドやデプロイはなく、試験設定を通常版と取り違えないよう明示的に選ぶ必要がある。制御の詳しい中身や各試験の結果までは、ここにある観察情報だけでは断定できないな。",
-      "closingRemark": "試験版の入口は細かく分かれているが、最後に実機へ書き込む役目はPCに残ってる。",
+      "title": "リアクションホイール歩行制御",
+      "summary": "リアクションホイール歩行器を制御するファームウェアで、実機への書き込みはPCから行う。PlatformIOには早期入力や歩行補助、エネルギー制御などの試験用ビルド構成があり、通常版と分けて検証できる。",
+      "detail": "こいつは、リアクションホイール歩行器の制御を試すためのファームウェアだ。中ではPlatformIOとArduinoを使い、AtomS3向けの通常版に加えて、早期入力や足の支持補助、エネルギー制御などをビルドフラグで切り替えてる。影響を適用せず観測するシャドー用の構成もあり、条件ごとに動きを比べられるってわけだ。実機への書き込みはPCから行い、GitHubへの更新で自動ビルドやデプロイはしない。最近の記録には荷重移動や戻りエネルギーに関する検討が見えるが、READMEによればログに基づく改善がまだ含まれていない段階もあり、現状の制御性能までは資料だけでは断定できないな。",
+      "closingRemark": "歩行の目標は記録されているが、GitHub更新だけでは実機は動かない。最後の一歩はPCからだな。",
       "features": [
-        "通常版と複数の試験用PlatformIO環境を切り替え",
-        "歩行制御の候補機能をビルドフラグで選択",
-        "適用せず観測するシャドー設定を用意",
-        "足の状態や走行テレメトリを記録",
-        "実機への書き込みはPCから実施"
+        "AtomS3向けの歩行制御ファームウェア",
+        "ビルドフラグで複数の試験版を切り替え",
+        "適用せず観測するシャドー用ビルド構成",
+        "実機への書き込みはPCから実施",
+        "荷重移動やエネルギー制御に関する検討記録"
       ],
       "technologies": [
         "C++",
-        "Python",
-        "JavaScript",
         "PlatformIO",
-        "ESP32",
-        "M5Stack ATOMS3",
         "Arduino",
+        "ESP32",
+        "M5Stack AtomS3",
+        "M5Unified",
+        "M5GFX",
         "Adafruit AHRS"
       ],
       "categories": [
         "組み込み",
-        "ロボティクス",
-        "モーション制御",
-        "ファームウェア"
+        "ロボット制御",
+        "歩行制御",
+        "実験"
       ],
       "status": "実験",
       "confidence": "medium",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1451079532,
-      "sourcePushedAt": "2026-11-18T05:02:28Z",
+      "sourcePushedAt": "2026-11-19T11:55:29Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1451079532,
         "name": "rw-walker-motion-control",
-        "pushedAt": "2026-11-18T05:02:28Z",
+        "pushedAt": "2026-11-19T11:55:29Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5580,47 +5580,46 @@
         "fork": false,
         "language": "C++"
       },
-      "sourceFingerprint": "5b05c661fe3cf35e0b7ca8a62747fc9eecb962f5a2f0abef7f35ffb6b84fd330",
-      "generatedAt": "2026-11-18T07:42:42.844Z"
+      "sourceFingerprint": "c1b1c27831e96d08e726659942bf16112ddd1369c7ad3c3181c488b22ef70216",
+      "generatedAt": "2026-11-19T20:48:24.767Z"
     },
     "layer-workbench": {
-      "title": "ブラウザー向け3Dプリント作業台",
-      "summary": "個人向けに、ブラウザーから3Dプリントの準備を進める作業台を作っている。OrcaSlicerの安定版エンジンをWebAssembly化して互換性を確かめつつ、画面側はまだ試作段階で、読み込んだモデルのスライスまではできない。",
-      "detail": "こいつは、デスクトップ版スライサーの設定やプロジェクトとの互換性を保ちながら、ブラウザーで3Dプリント準備を進める個人用の作業台だ。中ではOrcaSlicerのC++スライス処理をWebAssemblyで動かす方針で、v2.5.0候補はビルドやAPI適合性、Node上の動作確認を通している。画面側にはSTL・3MF・OBJを選ぶ入口があるが、今はまだ表示用の殻で、モデル形状の読み込みやエンジン接続、スライスはできない。安定版だけを追い、検証できない更新では既知の正常版を保つのも特徴だな。ただし、デスクトップとの機能差は残り、マルチスレッド動作に必要なブラウザーの分離設定やPagesでの公開も未検証という段階だ。",
-      "closingRemark": "エンジン候補は試験を通ったが、画面はまだモデルを切れない。刃より先に、作業台を整えているところだな。",
+      "title": "ブラウザー向け3Dプリント準備室",
+      "summary": "OrcaSlicerのスライス処理をブラウザーで使うことを目指す、個人向けの3Dプリント準備ワークスペース。上流C++エンジンのWebAssembly化を検証しつつ、画面側はSTL・3MF・OBJの選択に対応していますが、スライス実行やブラウザー公開はまだ準備中です。",
+      "detail": "こいつは、OrcaSlicerのデスクトップ向けスライス処理をブラウザーで扱えるようにする、個人用の3Dプリント準備室だ。中では上流のC++実装をWebAssembly化する方針で、v2.5.0候補はビルドとAPI適合性、非同期バインディング、Node上のスモークテストを通してる。画面側はPrepare風の作り直し中で、STL・3MF・OBJを選べる一方、README上では形状表示やプロファイル読み込み、エンジン呼び出し、スライスはまだ未接続だ。安定版だけを追い、互換性検証を通るまで統合基準を上げない運用も特徴だな。ただしデスクトップ機能との完全な同等性は未確認で、候補エンジンにはSharedArrayBufferとクロスオリジン分離が要るため、GitHub Pagesでの公開可否もまだ決着してない。",
+      "closingRemark": "3MFの座標扱いも検証対象だが、診断用の座標変換は条件を満たしたlocalhost限定。まずは作業台の場所から決める必要がありそうだな。",
       "features": [
-        "OrcaSlicer v2.5.0のWebAssemblyエンジン候補を検証",
-        "API適合性、非同期バインディング、Node上のスモークテストを実施",
-        "画面でSTL・3MF・OBJファイルを選択可能",
-        "安定版のみを追跡し、更新前に互換性を確認",
-        "ブラウザーUIは未接続の試作段階で、スライス機能は未実装"
+        "OrcaSlicer v2.5.0のヘッドレスWebAssemblyエンジン候補を検証",
+        "画面側でSTL・3MF・OBJファイルを選択できる",
+        "安定版リリースを日次確認し、新版を見つけても自動では統合しない",
+        "互換性テストを通るまでエンジンの統合基準を進めない"
       ],
       "technologies": [
         "JavaScript",
         "Python",
+        "HTML",
         "Three.js",
-        "WebAssembly",
-        "OrcaSlicer",
         "C++",
+        "WebAssembly",
         "GitHub Actions",
         "GitHub Pages"
       ],
       "categories": [
         "3Dプリント",
-        "スライサー",
+        "Webアプリ",
         "WebAssembly",
-        "ブラウザーツール"
+        "開発ツール"
       ],
       "status": "試作",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1453622619,
-      "sourcePushedAt": "2026-11-19T07:37:54Z",
+      "sourcePushedAt": "2026-11-19T20:21:40Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1453622619,
         "name": "layer-workbench",
-        "pushedAt": "2026-11-19T07:37:54Z",
+        "pushedAt": "2026-11-19T20:21:40Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5630,8 +5629,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "6efe66d22f40e547e5851c34c4b354eac8cce84d00fb9854ad3e96e4c0d16e8d",
-      "generatedAt": "2026-11-19T07:38:46.734Z"
+      "sourceFingerprint": "0ecd712606d7466a8e8caf54fbd02b37967ba046f5b28d67a3bbfe17cea9bb81",
+      "generatedAt": "2026-11-19T20:48:00.218Z"
     },
     "atoms3r-camera-pipeline": {
       "title": "AtomS3Rカメラ遅延検証",
