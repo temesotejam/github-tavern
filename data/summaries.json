@@ -1,43 +1,43 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-21T19:29:08.422Z",
+  "generatedAt": "2026-11-22T07:06:20.595Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ探索酒場",
-      "summary": "公開GitHubリポジトリを酒場風の画面から検索・閲覧する個人向けポータル。GitHub APIで情報を取得し、Copilotの日本語説明やREADMEからの暫定説明をカードと詳細画面に表示します。",
-      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、酒場の依頼や記録のように探して読める個人向けポータルだ。中では公開GitHub APIから一覧を取得し、名前や説明、Topics、言語、Copilot要約を横断検索できるようにしてる。カードを選ぶと概要が開き、解析済みならREADMEや設定、ファイル構成などを根拠にした日本語説明が読める。未解析のリポジトリにはREADMEから短い説明を補い、Copilot要約は6時間ごとのActionsで更新する仕組みだな。静的なGitHub Pagesで動き、Private Repositoryや書き込み操作は扱わない。定期更新は1回最大8件までで、手動実行なら件数を増やせる。",
-      "closingRemark": "要約の更新は一度に最大8件。公開リポジトリの帳簿も、順番に片付けるらしい。",
+      "title": "公開リポジトリの酒場ポータル",
+      "summary": "公開GitHubリポジトリを酒場の依頼帳のように探し、選んで内容を読める個人ポータル。GitHub APIで一覧を取得し、横断検索や技術領域の分類に加え、Copilotによる日本語概要を表示する。更新分の説明はActionsで定期生成し、GitHub Pagesで静的公開できる。",
+      "detail": "こいつは、temesotejamが所有する公開GitHubリポジトリを、酒場の依頼や記録のように探して読める個人ポータルだ。中ではGitHub APIから一覧を取得し、リポジトリ名やDescription、Topics、言語、Copilot要約を横断検索できるようにしてる。カードを選べばその場で概要を確認でき、Copilot未解析のものにはREADMEをもとにした暫定説明を出す仕組みもある。説明の更新はGitHub Actionsから6時間ごとに行い、前回の更新後に変化したものを中心に解析する。公開リポジトリだけが対象で、書き込み操作はせず、GitHub Pagesで静的に公開できるってわけだ。",
+      "closingRemark": "定期実行で扱うのは一度に最大8件。記録係も、更新のあった依頼から順に片づけるらしい。",
       "features": [
-        "公開リポジトリをGitHub APIから取得",
-        "名前・説明・Topics・言語・Copilot要約を横断検索",
-        "技術領域ごとの簡易分類と詳細表示",
-        "未解析リポジトリはREADMEから暫定説明を表示",
-        "Copilot要約をGitHub Actionsで定期更新"
+        "公開リポジトリ一覧をGitHub APIから取得",
+        "名前・説明・Topics・言語・要約を横断検索",
+        "技術領域ごとの簡易分類とカード形式の詳細表示",
+        "CopilotでREADMEや設定を参照した日本語説明を生成",
+        "GitHub Pagesで静的公開"
       ],
       "technologies": [
         "JavaScript",
         "CSS",
         "HTML",
         "GitHub API",
-        "GitHub Pages",
+        "GitHub Copilot CLI",
         "GitHub Actions",
-        "GitHub Copilot CLI"
+        "GitHub Pages"
       ],
       "categories": [
-        "Webアプリ",
-        "GitHubツール",
-        "検索・閲覧"
+        "個人ポータル",
+        "リポジトリ検索",
+        "静的Webアプリ"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-11-21T07:25:24Z",
+      "sourcePushedAt": "2026-11-21T19:29:09Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-11-21T07:25:24Z",
+        "pushedAt": "2026-11-21T19:29:09Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -47,8 +47,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "a25195d294d377c256279312e8eb8eb66124e6471f211c97948ead8800b2d95b",
-      "generatedAt": "2026-11-21T19:29:08.422Z"
+      "sourceFingerprint": "d5bce614ad6875bfed40a696e2a5f22f37b0c715686052b597477f600598ea06",
+      "generatedAt": "2026-11-22T07:06:20.595Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -300,43 +300,43 @@
       "generatedAt": "2026-09-04T10:52:42.974Z"
     },
     "spike-rt-web-toolkit": {
-      "title": "SPIKE-RT開発・書き込みツール",
-      "summary": "SPIKE-RTアプリをブラウザーで編集・ビルドし、SPIKE Prime Hubへ書き込んでログを確認するためのツールキット。アプリごとの差分ビルドやファームウェア再利用にも対応し、複数のサンプルや課題を扱えます。",
-      "detail": "こいつは、SPIKE-RTアプリの編集からHubへの書き込み、実行ログの確認までをつなぐWebツールキットだ。中ではGitHub Actionsが`apps/`以下のCアプリをビルドし、変更のないファームウェアはSHA-256を確かめて再利用する。GitHub Pagesではアプリを選び、WebUSBとDfuSeでSPIKE Prime Hubへ書き込めるほか、Web Serialで115200 bpsのログも見られる。アプリ追加は基本的にフォルダ名と同じCファイルを置くだけで、課題用アプリをサンプルから作る仕組みもある。実機での書き込み確認済み構成を基準にしているが、WindowsでWinUSBを新規割り当てする経路は最終確認待ちだ。",
-      "closingRemark": "書き込みとログ確認はブラウザーでつながるが、Windowsの新規WinUSB割り当てだけは、まだ実機で最後のひと押しが残ってる。",
+      "title": "SPIKE-RT Web開発・書き込みツール",
+      "summary": "SPIKE Prime Hub向けのSPIKE-RTアプリをブラウザで編集・ビルド・書き込みし、実行ログまで確認できるツールキット。アプリごとの差分ビルドやファームウェア再利用にも対応し、課題用アプリの作成もできる。",
+      "detail": "こいつは、SPIKE Prime Hub向けのSPIKE-RTアプリを編集して、ビルドから実機への書き込み、実行ログの確認までつなぐWebツールキットだ。github.devでCコードを編集すると、GitHub ActionsがSPIKE-RT v0.2.0で複数アプリをビルドし、GitHub PagesからWebUSBとDfuSeでHubへ書き込める。ソースや設定のSHA-256を使って変更のないファームウェアを再利用するため、毎回すべてをビルドする必要はない。書き込み後はWeb Serialで115200 bpsのログをブラウザに表示でき、課題アプリの複製・編集にも対応してる。ただし、Windowsで未設定のWinUSBドライバを新規割り当てする経路は、最終的な実機確認がまだ残っている。",
+      "closingRemark": "アプリ本体はキャッシュで再利用しつつ、選択用カタログは毎回更新する。棚札だけは新しくしておく、手堅い仕組みだな。",
       "features": [
-        "GitHub Actionsで複数アプリをビルド",
-        "変更のないファームウェアをSHA-256で確認して再利用",
-        "WebUSBでSPIKE Prime Hubへファームウェアを書き込み",
+        "github.devでCソースを編集し、GitHub Actionsで複数アプリをビルド",
+        "変更のないファームウェアはSHA-256で確認して再利用",
+        "GitHub PagesからWebUSBでSPIKE Prime Hubへ書き込み",
         "Web Serialで実行中のUSBシリアルログを表示",
-        "サンプルから課題用アプリを作成"
+        "サンプルから課題アプリを作成して独立に編集・ビルド"
       ],
       "technologies": [
-        "SPIKE-RT",
         "C",
+        "SPIKE-RT",
         "GitHub Actions",
         "GitHub Pages",
         "WebUSB",
         "DfuSe",
         "Web Serial API",
-        "SHA-256"
+        "WinUSB"
       ],
       "categories": [
-        "組み込み開発",
-        "ファームウェア",
         "開発ツール",
+        "組み込み",
+        "ロボティクス",
         "教育"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1341511616,
-      "sourcePushedAt": "2026-11-20T11:57:43Z",
+      "sourcePushedAt": "2026-11-22T05:25:08Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1341511616,
         "name": "spike-rt-web-toolkit",
-        "pushedAt": "2026-11-20T11:57:43Z",
+        "pushedAt": "2026-11-22T05:25:08Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -346,8 +346,8 @@
         "fork": false,
         "language": "C"
       },
-      "sourceFingerprint": "2010c0386c70f1deb6fb446d8f11e2716ec6311440a278671cf977bed2f9b998",
-      "generatedAt": "2026-11-20T20:32:17.405Z"
+      "sourceFingerprint": "6a3ad4d2e73d1c5188232cda1161ff57b01336d7d6b7393341bc98c66626c5d6",
+      "generatedAt": "2026-11-22T07:05:58.940Z"
     },
     "reaction-wheel-rocker-baseline-sim": {
       "title": "反応ホイール機体の基準シミュレータ",
@@ -5090,42 +5090,40 @@
       "generatedAt": "2026-10-24T04:47:37.319Z"
     },
     "2026_10_24": {
-      "title": "現実ニュース迷宮",
-      "summary": "現実の公開ニュースから、毎回形の変わる迷宮を作る一人用ブラウザ探索ゲームだ。ターン制で移動と戦闘を進め、観測した現象を仲間にしたり、ニュースの分類で迷宮の性質を変えていく。",
-      "detail": "こいつは、現実の現象や小さなニュースを迷宮の種にして、一人で探索するブラウザゲームだ。プレイヤーが1回行動するたびに仲間と敵も動くターン制で、矢印キーや画面上のボタンで移動し、敵を倒したり「観測」を使って仲間にしたりする。迷宮では地域・環境・交通・科学のニュースが現実地点として出て、接触した記事の見出しや配信元、日時、出典だけを確認できる。GitHub Actionsが公開RSSを6時間ごとに集めて迷宮の種類や色に反映し、事件や災害などの見出しは除外する仕組みだ。携帯食と救護メモで体力を保ちながら3階の脱出を目指す構成で、記事本文は保存も複製もせず、選択も賛否の表明には当たらない。",
-      "closingRemark": "迷宮に現れるニュースは本文ではなく見出しだけ。現実地点は証拠よりも、ゲームの種になっている。",
+      "title": "現象救助隊：ニュース迷宮",
+      "summary": "現実のニュースや入力した出来事を手がかりに、毎回形の変わる迷宮を探索する一人用ブラウザゲーム。仲間や敵とターン制で行動し、公開RSSの見出しをゲーム内の現実地点として確かめながら、3階からの脱出を目指します。",
+      "detail": "こいつは、現実のニュースや入力した出来事を迷宮に取り込み、探索する一人用ブラウザゲームだ。中では迷宮をランダムに作り、プレイヤーが動くたびに仲間と敵も行動する。現象を観測して倒せば仲間になり、空腹やHPを管理しながら光る階段を探して3階からの脱出を目指すってわけだ。各階にはRSS記事の見出しや配信元、日時、出典を示す現実地点があり、選んだ進み方は次の階の敵の種類や強さに影響する。ニュースはGitHub Actionsで6時間ごとに収集されるが、記事本文を保持せず、本文を確認済みとも表示しない。入力したニュースも迷宮の色や出現する現象に反映されるぜ。",
+      "closingRemark": "記事本文は迷宮に持ち込まず、見出しと出典だけが現実地点に残る。探索の手がかりも、そこは慎重だな。",
       "features": [
-        "公開ニュースから迷宮の色や現象を生成する",
-        "ターン制で移動、通常攻撃、観測、仲間化を行う",
-        "地域・環境・交通・科学をテーマにした階層を持つ",
-        "現実地点に見出し、配信元、日時、出典リンクを表示する",
-        "GitHub Actionsで6時間ごとのRSS更新を自動化する"
+        "現実のニュースや入力内容から毎回異なる迷宮を生成",
+        "仲間と敵がプレイヤーの行動ごとに動くターン制探索",
+        "観測した現象を倒すと最大3体まで仲間になる",
+        "RSS記事を現実地点として表示し、ゲーム内の選択が次階に影響",
+        "地域・環境・交通・科学のニュースを6時間ごとに自動収集"
       ],
       "technologies": [
         "JavaScript",
         "HTML",
         "Canvas",
-        "CSS",
         "GitHub Actions",
         "RSS",
-        "JSON",
-        "GitHub Pages"
+        "localStorage"
       ],
       "categories": [
         "ブラウザゲーム",
-        "ターン制探索",
-        "公開ニュース"
+        "ローグライク",
+        "ニュース"
       ],
-      "status": "試作",
+      "status": "完成品",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1431824671,
-      "sourcePushedAt": "2026-11-21T19:10:12Z",
+      "sourcePushedAt": "2026-11-22T06:41:03Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1431824671,
         "name": "2026_10_24",
-        "pushedAt": "2026-11-21T19:10:12Z",
+        "pushedAt": "2026-11-22T06:41:03Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5135,8 +5133,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "1f1a7ca19f8f96ca127a988b8be9bb979ed99d1f4e7cc67c4a5f3ea4a6eaa0b1",
-      "generatedAt": "2026-11-21T19:28:40.598Z"
+      "sourceFingerprint": "77c5109ad7e210d7225e0600a87f331579d014c12c2bdb919a8d91b32aad5f2a",
+      "generatedAt": "2026-11-22T07:05:46.436Z"
     },
     "2026_10_24_2": {
       "title": "協調実験つきボクセルサバイバル",
@@ -5385,16 +5383,16 @@
       "generatedAt": "2026-10-30T06:00:51.432Z"
     },
     "github-ai-researcher": {
-      "title": "公開リポジトリ横断AI研究員",
-      "summary": "GitHub上の所有者本人の公開リポジトリを調べ、実装や技術の再利用候補、プロジェクト間の組み合わせ、新しい研究テーマを提案するツール。分析結果は根拠ファイルとともに蓄積され、検索・比較できるGitHub Pagesのダッシュボードにも反映される。",
-      "detail": "こいつは、所有者が公開しているGitHubリポジトリを横断して、過去の実装から再利用の手がかりや次の研究テーマを探すAI研究員だ。中では公開GitHub APIやRaw URLからREADME、構成、設定、代表的なソースを読み取り、リポジトリごとの技術プロフィールと根拠付きの分析レポートを作ってる。更新分を定期または手動で調べ、結果はこのリポジトリに保存される仕組みだな。GitHub Pagesの画面では検索や絞り込み、最大3件の比較、Knowledge Graphでの関連探索もできる。調査対象のコードは実行せず、元リポジトリにも書き込まない設計で、提案の正確さは根拠ファイルを確認する必要がある。",
-      "closingRemark": "提案は根拠ファイルと一緒に棚へ並ぶ。元のリポジトリには手を出さず、次の実験案までが担当範囲だ。",
+      "title": "GitHub公開リポジトリ横断研究",
+      "summary": "所有する公開リポジトリをAIで横断分析し、技術や実装の再利用候補、プロジェクト間の組み合わせ、新たな研究テーマを提案する仕組み。根拠ファイル付きのプロフィールやレポートを蓄積し、検索・比較できるダッシュボードも備える。",
+      "detail": "こいつは、所有する公開GitHubリポジトリを横断して調べ、過去の実装を次の研究や開発に生かすためのAI研究員だ。中では公開GitHub APIやRaw URLからREADME、構成、設定、代表的なソースコードを集め、技術プロフィールや再利用候補、プロジェクト間の組み合わせを整理してる。提案には根拠となるリポジトリやファイルを添え、Markdownレポートとして蓄積する仕組みだな。GitHub Pagesのダッシュボードでは検索や絞り込み、最大3件の比較、Knowledge Graphでの関連探索もできる。定期実行は更新のあった公開リポジトリを中心に行い、コードを実行したり元のリポジトリへ変更を加えたりはしない。分析には誤りもあり得るから、提案を試す前に根拠ファイルを確かめる必要がある。",
+      "closingRemark": "公開リポジトリだけを読み、書き込むのは自分の分析帳だけ。研究員としては、境界線を心得てるな。",
       "features": [
-        "公開リポジトリの技術プロフィールを作成",
-        "複数リポジトリの共通点や再利用候補を分析",
-        "根拠ファイル付きのMarkdownレポートを蓄積",
-        "GitHub Pagesで検索・比較・関連探索",
-        "更新分を定期確認し、手動での再分析にも対応"
+        "公開リポジトリのプロフィールと横断分析レポートを生成",
+        "提案に根拠となるリポジトリやファイルを記録",
+        "GitHub Pagesで検索、絞り込み、最大3件の比較が可能",
+        "109件のリポジトリ・技術・言語・テーマを結ぶKnowledge Graph",
+        "更新があったリポジトリを中心に定期分析し、変更がなければ処理をスキップ"
       ],
       "technologies": [
         "JavaScript",
@@ -5402,24 +5400,25 @@
         "GitHub API",
         "GitHub Pages",
         "GitHub Copilot CLI",
-        "Markdown"
+        "Markdown",
+        "JSON"
       ],
       "categories": [
-        "AI研究支援",
+        "AI研究",
         "GitHub分析",
-        "ナレッジ管理",
+        "開発支援",
         "ダッシュボード"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1441487171,
-      "sourcePushedAt": "2026-11-21T00:11:15Z",
+      "sourcePushedAt": "2026-11-21T23:36:44Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1441487171,
         "name": "github-ai-researcher",
-        "pushedAt": "2026-11-21T00:11:15Z",
+        "pushedAt": "2026-11-21T23:36:44Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5429,8 +5428,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "b1a88917d5fc43ea1767eff346fffbf8ad30980f1be2d5a2957543b32697cf13",
-      "generatedAt": "2026-11-21T07:25:08.369Z"
+      "sourceFingerprint": "704e1bd22a2a6186f6bc1a8eb61797c46cc299032e252864262b7289b643db75",
+      "generatedAt": "2026-11-22T07:06:08.920Z"
     },
     "personal-browser-os": {
       "title": "ブラウザー内の個人デスクトップ",
@@ -5533,43 +5532,43 @@
       "generatedAt": "2026-11-05T20:06:20.589Z"
     },
     "rw-walker-motion-control": {
-      "title": "リアクションホイール歩行制御",
-      "summary": "リアクションホイールで左右に揺れて歩く実験機のファームウェアと、測定・ログ解析のためのツール群。実走で得た到達エネルギーを使って歩き始めの右振れを調整でき、小歩幅条件との比較や計測ログの再生にも対応しています。",
-      "detail": "こいつは、リアクションホイールで左右に揺れながら受動脚を振り出す歩行器を動かし、歩き始めの右振れを抑えるためのファームウェアと実験ツールだ。中では胴体姿勢をMEKFで推定し、カメラから取った足角を40 Hzで扱いながら、実走で測った到達エネルギーをもとに右向きの主入力を調整してる。測定画面では30秒間の調整計測を選べるほか、v14式の小歩幅条件も切り替えて比べられる。RWLOGはCRCを確認してCSVへ変換でき、制御判断時点の情報を使った再生や、テスト一括実行の手段も揃ってる。現状は制御条件を実走で詰めている段階で、停止した2走の記録も分析対象に含まれている。",
-      "closingRemark": "右へ振れすぎる癖を、実走の到達エネルギーで測り直す。歩幅の話も、まずは30秒計ってからってわけだな。",
+      "title": "リアクションホイール歩行制御研究",
+      "summary": "リアクションホイールで胴体を左右に揺らし、受動脚の交互歩行を再現する歩行器のファームウェアと実験ツールだ。次の荷重移行を予測して補助仕事を計算し、±8°での比較測定やMEKFによる姿勢推定、ログ解析まで一通り扱っている。",
+      "detail": "こいつは、リアクションホイールを使って左右に揺動し、受動脚を交互に振り出す歩行器を実機で試すためのプロジェクトだ。中ではMEKFで胴体姿勢を推定し、足角を定周期で観測しながら、必要な補助仕事と電流パルスの開始を判断している。v39では前回の左右移行と足裏円弧の端まで戻れた経過を参照し、次の左への荷重移行で作業量を再計算している。配布版の書き込み、実機の状態確認、RWLOGの変換や再生、二つの測定条件の比較までツールとして揃ってる。PlatformIOとESP32-S3ベースの環境から構成される実験的な仕組みだが、資料上確認できるのは装置上の制御と測定再現で、歩行の汎用的な完成度や実機の耐久性までは示していない。",
+      "closingRemark": "±8°の測定が左右の振れではなく左への戻りの補正まで追っている点に、この歩行器の研究のいまの温度が出てるな。",
       "features": [
-        "実走で得た到達エネルギーによる右向き主入力の調整",
-        "小歩幅条件を選んで歩行を比較",
-        "MEKFによる胴体姿勢推定と足角の40 Hz処理",
-        "ブラウザーの測定画面とRWLOG保存",
-        "ログのCSV変換・再生とPC上の一括テスト"
+        "リアクションホイールによる左右の胴体制御",
+        "MEKFを使った胴体姿勢推定",
+        "荷重移行を予測した足角補助制御",
+        "RWLOGのCRC確認、CSV変換、再生比較",
+        "PlatformIO向け配布バイナリの生成と書き込み"
       ],
       "technologies": [
         "C++",
-        "PlatformIO",
         "Arduino",
+        "PlatformIO",
         "ESP32-S3",
+        "M5Stack AtomS3R",
         "M5Unified",
-        "Adafruit AHRS",
-        "MEKF",
-        "Python"
+        "M5GFX",
+        "Adafruit AHRS"
       ],
       "categories": [
-        "ロボット",
-        "歩行制御",
-        "組み込み",
-        "実験ツール"
+        "歩行ロボット",
+        "モーション制御",
+        "組み込みファームウェア",
+        "実験計測"
       ],
       "status": "実験",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1451079532,
-      "sourcePushedAt": "2026-11-20T11:54:15Z",
+      "sourcePushedAt": "2026-11-22T06:51:05Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1451079532,
         "name": "rw-walker-motion-control",
-        "pushedAt": "2026-11-20T11:54:15Z",
+        "pushedAt": "2026-11-22T06:51:05Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5579,47 +5578,45 @@
         "fork": false,
         "language": "C++"
       },
-      "sourceFingerprint": "758d34fa57a5716d55132b4ebb88fe09acf5ed8eff2d187a20542076b9a2fac6",
-      "generatedAt": "2026-11-20T20:32:31.896Z"
+      "sourceFingerprint": "7c22eef3f9758aa896fda69f04520658bab8c56a30f34acc69cf94a9cd3a0da5",
+      "generatedAt": "2026-11-22T07:05:24.876Z"
     },
     "layer-workbench": {
-      "title": "ブラウザー向け3Dプリント作業台",
-      "summary": "OrcaSlicerに近い3Dプリント準備環境をブラウザーで作る、個人向けの作業台だ。v2.5.0のWebAssemblyエンジン候補は適合性テストを通過しているが、公開画面はまだファイル選択までで、形状表示やスライスは未接続。",
-      "detail": "こいつは、デスクトップのOrcaSlicerに近い環境をブラウザーで用意し、3Dプリント用モデルを扱うための個人向け作業台だ。中では上流のC++スライス実装を優先し、OrcaSlicer v2.5.0をヘッドレスWebAssemblyエンジン候補として検証している。API適合性やNodeでのスモークテストは通過済みで、安定版だけを追い、互換性確認後に基準版を更新する方針だ。リリース確認も、更新を自動適用せず追跡issueを作るところまでに留めている。いっぽう公開画面はまだ準備用の殻で、STL・3MF・OBJを選べても形状表示やエンジン実行、スライスにはつながっていない。SharedArrayBuffer向けのクロスオリジン分離とPagesでの配信も未検証だから、エンジン候補の検証済み範囲と、ブラウザーで実際に使える状態は分けて見る必要があるな。",
-      "closingRemark": "エンジン候補にはテストの合格印があるが、公開画面のスライス機能はまだ出番待ちだ。",
+      "title": "3Dプリント準備ワークベンチ",
+      "summary": "STL・3MF・OBJをブラウザで扱う、個人向けの3Dプリント準備環境だ。OrcaSlicerのC++スライス処理をWebAssemblyで動かす候補エンジンも検証中だが、現在の画面はまだモデル表示やスライスには接続されていない。",
+      "detail": "こいつは、デスクトップ版スライサーの設定やプロジェクトとの互換性を保ちながら、ブラウザで3Dプリント準備を進めるための作業場だ。中ではOrcaSlicer v2.5.0のC++スライス処理をWebAssembly化した候補エンジンを用意し、API適合性やNodeでの動作を確かめてる。いっぽう公開画面はまだ見た目を整えている段階で、STL・3MF・OBJを選んで一覧にできるものの、形状の読み込み・表示やエンジン呼び出し、スライスは未接続だ。上流の安定版だけを追い、更新時には互換性を検証する方針で、毎日のリリース確認も行う。ただしSharedArrayBufferが必要な候補エンジンをGitHub Pagesで動かせるかは未検証で、デスクトップ版との機能差も残ってる。",
+      "closingRemark": "エンジン候補は試験を通ったが、画面とはまだ別々の持ち場にいる。合流はこれからだな。",
       "features": [
-        "STL・3MF・OBJファイルをローカルで選択できる",
-        "OrcaSlicer v2.5.0のヘッドレスWebAssemblyエンジン候補を検証",
-        "安定版リリースを毎日確認し、新版は追跡issueで管理",
-        "エンジン更新前に互換性・回帰テストを重視",
-        "ブラウザー画面の形状表示やスライス機能は未接続"
+        "ブラウザ上でSTL・3MF・OBJファイルを選択できる",
+        "OrcaSlicer v2.5.0のWebAssemblyエンジン候補を検証",
+        "上流の安定版リリースを毎日確認するワークフロー",
+        "互換性や機能差を監査資料とパリティ台帳で記録"
       ],
       "technologies": [
-        "OrcaSlicer",
-        "WebAssembly",
-        "C++",
         "JavaScript",
+        "Python",
         "Three.js",
-        "one-slicer-api 0.7.0",
-        "Node.js",
-        "GitHub Actions"
+        "C++",
+        "WebAssembly",
+        "OrcaSlicer",
+        "GitHub Actions",
+        "GitHub Pages"
       ],
       "categories": [
         "3Dプリント",
         "スライサー",
-        "Webアプリ",
-        "WebAssembly"
+        "ブラウザツール"
       ],
-      "status": "ツール",
+      "status": "試作",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1453622619,
-      "sourcePushedAt": "2026-11-21T18:42:05Z",
+      "sourcePushedAt": "2026-11-22T06:47:18Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1453622619,
         "name": "layer-workbench",
-        "pushedAt": "2026-11-21T18:42:05Z",
+        "pushedAt": "2026-11-22T06:47:18Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5629,8 +5626,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "6d8ac125671a0c86667c7763348c8a69f712447c1fe7b4f34815f120544b0827",
-      "generatedAt": "2026-11-21T19:28:56.320Z"
+      "sourceFingerprint": "e9a1d6d556ed842de50e62844153659c8448c78cac77b8e265fe7797bc5f59b4",
+      "generatedAt": "2026-11-22T07:05:35.541Z"
     },
     "atoms3r-camera-pipeline": {
       "title": "AtomS3Rカメラ遅延検証",
@@ -5681,7 +5678,57 @@
       },
       "sourceFingerprint": "67ec736229e7a7fe7c7d644fed35bc791c09af7063446e342edd3926acd78e5b",
       "generatedAt": "2026-11-13T19:52:50.539Z"
+    },
+    "m5stack-mobile-robot": {
+      "title": "M5Stack移動ロボット用ファームウェア",
+      "summary": "M5Stack Basic向けに、姿勢推定とサーボの手動操作を行うロボット用ファームウェアだ。BMI270の加速度・ジャイロによる6軸EKFや、シリアル操作、ブラウザーからの書き込みに対応する一方、自動走行やモーター制御は含まれない。",
+      "detail": "こいつは、M5Stack Basicを使った移動ロボットのハードウェアを扱うファームウェアだな。中ではBMI270の加速度とジャイロだけを使う6軸EKFで姿勢を推定し、ロール・ピッチ・ヨーを出してる。加速度が重力の範囲から外れた場合は補正を見送り、磁気方位の基準もないため、ヨーは起動時を基準にずれていく。サーボは本体ボタンかシリアルコマンドで4チャンネルを手動操作でき、ブラウザー用フラッシャーから書き込むことも可能だ。ただ、GNSSの受信データは位置解析に使わず、モーター制御や自動走行も実装されていない。",
+      "closingRemark": "GNSSのUARTは起きているが、位置は読まない。ヨーの基準もないあたり、まずは姿勢と手動操作に話を絞った作りだな。",
+      "features": [
+        "BMI270による6軸EKF姿勢推定",
+        "加速度の大きさとイノベーションによる外れ値除外",
+        "ボタン・シリアル経由の4チャンネルサーボ手動操作",
+        "シリアルで姿勢・機器状態を確認",
+        "ESP Web Tools対応のブラウザーフラッシャー"
+      ],
+      "technologies": [
+        "C++",
+        "PlatformIO",
+        "Arduino",
+        "ESP32",
+        "M5Unified",
+        "BMI270",
+        "BMM150",
+        "BMP280"
+      ],
+      "categories": [
+        "組み込み",
+        "ロボット",
+        "ファームウェア",
+        "姿勢推定"
+      ],
+      "status": "試作",
+      "confidence": "high",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
+      "sourceRepositoryId": 1467257739,
+      "sourcePushedAt": "2026-11-22T06:53:20Z",
+      "sourceDefaultBranch": "main",
+      "sourceMetadata": {
+        "repositoryId": 1467257739,
+        "name": "m5stack-mobile-robot",
+        "pushedAt": "2026-11-22T06:53:20Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "C++"
+      },
+      "sourceFingerprint": "a6e70d4ce9bf79964301e3d44cf7a155dbc4fba7ef8ebd16bc6b10991cd1af2b",
+      "generatedAt": "2026-11-22T07:05:09.420Z"
     }
   },
-  "repositoryCount": 115
+  "repositoryCount": 116
 }
