@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-13T20:05:56.715Z",
-  "repositoryCount": 115,
-  "pageCount": 69,
+  "generatedAt": "2026-11-22T07:31:19.304Z",
+  "repositoryCount": 116,
+  "pageCount": 70,
   "pages": {
     "2026_10_22": {
       "url": "https://temesotejam.github.io/2026_10_22/",
@@ -161,6 +161,11 @@
     },
     "layer-workbench": {
       "url": "https://temesotejam.github.io/layer-workbench/",
+      "source": "github-pages",
+      "status": 200
+    },
+    "m5stack-mobile-robot": {
+      "url": "https://temesotejam.github.io/m5stack-mobile-robot/",
       "source": "github-pages",
       "status": 200
     },
