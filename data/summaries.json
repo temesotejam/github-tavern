@@ -1,18 +1,18 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-22T07:06:20.595Z",
+  "generatedAt": "2026-11-22T19:51:46.643Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリの酒場ポータル",
-      "summary": "公開GitHubリポジトリを酒場の依頼帳のように探し、選んで内容を読める個人ポータル。GitHub APIで一覧を取得し、横断検索や技術領域の分類に加え、Copilotによる日本語概要を表示する。更新分の説明はActionsで定期生成し、GitHub Pagesで静的公開できる。",
-      "detail": "こいつは、temesotejamが所有する公開GitHubリポジトリを、酒場の依頼や記録のように探して読める個人ポータルだ。中ではGitHub APIから一覧を取得し、リポジトリ名やDescription、Topics、言語、Copilot要約を横断検索できるようにしてる。カードを選べばその場で概要を確認でき、Copilot未解析のものにはREADMEをもとにした暫定説明を出す仕組みもある。説明の更新はGitHub Actionsから6時間ごとに行い、前回の更新後に変化したものを中心に解析する。公開リポジトリだけが対象で、書き込み操作はせず、GitHub Pagesで静的に公開できるってわけだ。",
-      "closingRemark": "定期実行で扱うのは一度に最大8件。記録係も、更新のあった依頼から順に片づけるらしい。",
+      "title": "公開リポジトリ探索酒場",
+      "summary": "自分が公開しているGitHubリポジトリを、古い情報端末風の画面から検索・閲覧する個人向けポータル。CopilotがREADMEや構成をもとに日本語説明を作り、未解析のリポジトリにはREADMEから暫定説明を表示します。",
+      "detail": "こいつは、自分の公開GitHubリポジトリを一覧から探し、内容をつかみやすくするための個人ポータルだ。中ではGitHub APIからリポジトリ情報を取得し、名前や説明、Topics、言語、Copilot要約を横断検索できるようにしてる。カードを選べば概要が開き、技術領域ごとの分類や、動作確認済みの公開ページへのリンクも確認できる。説明はGitHub Actionsが6時間ごとに更新状況を調べ、変更のあったものをCopilot CLIで解析してキャッシュする仕組みで、未解析ならREADMEから短い暫定説明を出す。GitHub Pagesで静的に公開でき、サイト側は公開情報の閲覧に限られる。定期解析は1回最大8件だから、全件を一度に片づける作りではないな。",
+      "closingRemark": "6時間ごとに確認しても、定期便は最大8件。古い情報端末らしく、更新にも順番があるってわけだ。",
       "features": [
-        "公開リポジトリ一覧をGitHub APIから取得",
+        "公開リポジトリをGitHub APIから取得",
         "名前・説明・Topics・言語・要約を横断検索",
-        "技術領域ごとの簡易分類とカード形式の詳細表示",
-        "CopilotでREADMEや設定を参照した日本語説明を生成",
-        "GitHub Pagesで静的公開"
+        "技術領域ごとに簡易分類",
+        "Copilot CLIで日本語説明を生成し、キャッシュ",
+        "未解析時はREADMEから暫定説明を表示"
       ],
       "technologies": [
         "JavaScript",
@@ -24,20 +24,21 @@
         "GitHub Pages"
       ],
       "categories": [
-        "個人ポータル",
+        "Web・ツール",
+        "GitHub",
         "リポジトリ検索",
-        "静的Webアプリ"
+        "個人ポータル"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-11-21T19:29:09Z",
+      "sourcePushedAt": "2026-11-22T07:31:22Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-11-21T19:29:09Z",
+        "pushedAt": "2026-11-22T07:31:22Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -47,8 +48,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "d5bce614ad6875bfed40a696e2a5f22f37b0c715686052b597477f600598ea06",
-      "generatedAt": "2026-11-22T07:06:20.595Z"
+      "sourceFingerprint": "3059c2bc05382a258ad3180df594ad48c86d0f4ac95a1ad0321e267f35443a2d",
+      "generatedAt": "2026-11-22T19:51:46.643Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -300,16 +301,16 @@
       "generatedAt": "2026-09-04T10:52:42.974Z"
     },
     "spike-rt-web-toolkit": {
-      "title": "SPIKE-RT Web開発・書き込みツール",
-      "summary": "SPIKE Prime Hub向けのSPIKE-RTアプリをブラウザで編集・ビルド・書き込みし、実行ログまで確認できるツールキット。アプリごとの差分ビルドやファームウェア再利用にも対応し、課題用アプリの作成もできる。",
-      "detail": "こいつは、SPIKE Prime Hub向けのSPIKE-RTアプリを編集して、ビルドから実機への書き込み、実行ログの確認までつなぐWebツールキットだ。github.devでCコードを編集すると、GitHub ActionsがSPIKE-RT v0.2.0で複数アプリをビルドし、GitHub PagesからWebUSBとDfuSeでHubへ書き込める。ソースや設定のSHA-256を使って変更のないファームウェアを再利用するため、毎回すべてをビルドする必要はない。書き込み後はWeb Serialで115200 bpsのログをブラウザに表示でき、課題アプリの複製・編集にも対応してる。ただし、Windowsで未設定のWinUSBドライバを新規割り当てする経路は、最終的な実機確認がまだ残っている。",
-      "closingRemark": "アプリ本体はキャッシュで再利用しつつ、選択用カタログは毎回更新する。棚札だけは新しくしておく、手堅い仕組みだな。",
+      "title": "SPIKE-RT開発・書き込みツール",
+      "summary": "SPIKE-RTアプリをブラウザで編集・ビルドし、SPIKE Prime Hubへ書き込んで実行ログを確認するためのツールキット。複数アプリの差分ビルドや課題作成にも対応し、WebUSBとWeb Serialで書き込みからデバッグまでつなげている。",
+      "detail": "こいつは、SPIKE-RTのアプリを編集してSPIKE Prime Hubで動かすまでを、GitHub中心に進めるためのツールキットだ。中ではGitHub Actionsがapps/以下のCアプリをビルドし、ソースのSHA-256を使って変更のないファームウェアを再利用する。GitHub Pagesからアプリを選び、WebUSBとDfuSeでHubのDFU領域へ書き込めるほか、Web Serialで実行中のログも確認できる。アプリは基本的にフォルダ名と同じCファイルから追加でき、課題用にサンプルを複製する仕組みもある。SPIKE-RT v0.2.0の実機書き込みと起動は確認済みだが、WindowsでWinUSBを新規割り当てする経路は最終実機確認待ちとなっている。",
+      "closingRemark": "変わっていないアプリはキャッシュから戻し、カタログは毎回作り直す。手間のかけどころを分けてあるな。",
       "features": [
-        "github.devでCソースを編集し、GitHub Actionsで複数アプリをビルド",
-        "変更のないファームウェアはSHA-256で確認して再利用",
-        "GitHub PagesからWebUSBでSPIKE Prime Hubへ書き込み",
-        "Web Serialで実行中のUSBシリアルログを表示",
-        "サンプルから課題アプリを作成して独立に編集・ビルド"
+        "GitHub Actionsで複数のSPIKE-RTアプリをビルドし、変更分だけ再ビルド",
+        "GitHub PagesからWebUSBでSPIKE Prime Hubへファームウェアを書き込み",
+        "Web Serialで115200 bpsのUSBシリアルログをブラウザ表示",
+        "Cファイル中心のアプリ追加と、サンプルからの課題作成に対応",
+        "WindowsのDFU用WinUSBセットアップへの案内を提供"
       ],
       "technologies": [
         "C",
@@ -318,25 +319,24 @@
         "GitHub Pages",
         "WebUSB",
         "DfuSe",
-        "Web Serial API",
+        "Web Serial",
         "WinUSB"
       ],
       "categories": [
         "開発ツール",
         "組み込み",
-        "ロボティクス",
         "教育"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1341511616,
-      "sourcePushedAt": "2026-11-22T05:25:08Z",
+      "sourcePushedAt": "2026-11-22T11:04:23Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1341511616,
         "name": "spike-rt-web-toolkit",
-        "pushedAt": "2026-11-22T05:25:08Z",
+        "pushedAt": "2026-11-22T11:04:23Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -346,8 +346,8 @@
         "fork": false,
         "language": "C"
       },
-      "sourceFingerprint": "6a3ad4d2e73d1c5188232cda1161ff57b01336d7d6b7393341bc98c66626c5d6",
-      "generatedAt": "2026-11-22T07:05:58.940Z"
+      "sourceFingerprint": "7bcb76d25b41afceda5ec8d222c7a747a4f65cad94615428d2a431a2f9668f69",
+      "generatedAt": "2026-11-22T19:51:06.071Z"
     },
     "reaction-wheel-rocker-baseline-sim": {
       "title": "反応ホイール機体の基準シミュレータ",
@@ -5091,39 +5091,41 @@
     },
     "2026_10_24": {
       "title": "現象救助隊：ニュース迷宮",
-      "summary": "現実のニュースや入力した出来事を手がかりに、毎回形の変わる迷宮を探索する一人用ブラウザゲーム。仲間や敵とターン制で行動し、公開RSSの見出しをゲーム内の現実地点として確かめながら、3階からの脱出を目指します。",
-      "detail": "こいつは、現実のニュースや入力した出来事を迷宮に取り込み、探索する一人用ブラウザゲームだ。中では迷宮をランダムに作り、プレイヤーが動くたびに仲間と敵も行動する。現象を観測して倒せば仲間になり、空腹やHPを管理しながら光る階段を探して3階からの脱出を目指すってわけだ。各階にはRSS記事の見出しや配信元、日時、出典を示す現実地点があり、選んだ進み方は次の階の敵の種類や強さに影響する。ニュースはGitHub Actionsで6時間ごとに収集されるが、記事本文を保持せず、本文を確認済みとも表示しない。入力したニュースも迷宮の色や出現する現象に反映されるぜ。",
-      "closingRemark": "記事本文は迷宮に持ち込まず、見出しと出典だけが現実地点に残る。探索の手がかりも、そこは慎重だな。",
+      "summary": "公開ニュースや入力した出来事を迷宮に取り込み、仲間と探索する一人用ブラウザーゲーム。RSSの見出し・配信元・日時・出典を現実地点として表示し、3階からの脱出を目指します。",
+      "detail": "こいつは、現実のニュースや入力した出来事を迷宮に映し、探索を通じて現象を観測する一人用ゲームだ。中ではターンごとに仲間と敵が動き、観測した敵は最大3体まで仲間になる。空腹や回復を管理しながら3階まで進み、光る階段から脱出すれば調査成功ってわけだ。公開RSSの記事は現実地点として現れ、接触すると見出しや配信元、日時、出典を確認できるが、本文を確認したとは扱わない。ニュースは6時間ごとに自動収集され、事件・事故などの見出しは除外される。探索の骨格は『ポケモン不思議のダンジョン 赤の救助隊』の逆コンパイルを研究対象にしているものの、任天堂や株式会社ポケモン等のコードや素材は使っていない。",
+      "closingRemark": "迷宮に持ち込まれるのは記事本文じゃなく、見出しと出典まで。調査の線引きは、なかなか慎重だな。",
       "features": [
-        "現実のニュースや入力内容から毎回異なる迷宮を生成",
-        "仲間と敵がプレイヤーの行動ごとに動くターン制探索",
-        "観測した現象を倒すと最大3体まで仲間になる",
-        "RSS記事を現実地点として表示し、ゲーム内の選択が次階に影響",
-        "地域・環境・交通・科学のニュースを6時間ごとに自動収集"
+        "ニュースや入力内容を反映するランダム迷宮",
+        "ターン制の探索と最大3体の仲間化",
+        "空腹・HPを管理し、3階からの脱出を目指す",
+        "RSS記事を現実地点として表示",
+        "6時間ごとのニュース自動収集と不適切見出しの除外"
       ],
       "technologies": [
         "JavaScript",
         "HTML",
+        "CSS",
         "Canvas",
         "GitHub Actions",
         "RSS",
-        "localStorage"
+        "GitHub Pages"
       ],
       "categories": [
-        "ブラウザゲーム",
+        "ブラウザーゲーム",
         "ローグライク",
-        "ニュース"
+        "ニュース連携",
+        "一人用ゲーム"
       ],
-      "status": "完成品",
+      "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1431824671,
-      "sourcePushedAt": "2026-11-22T06:41:03Z",
+      "sourcePushedAt": "2026-11-22T19:32:13Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1431824671,
         "name": "2026_10_24",
-        "pushedAt": "2026-11-22T06:41:03Z",
+        "pushedAt": "2026-11-22T19:32:13Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5133,8 +5135,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "77c5109ad7e210d7225e0600a87f331579d014c12c2bdb919a8d91b32aad5f2a",
-      "generatedAt": "2026-11-22T07:05:46.436Z"
+      "sourceFingerprint": "58ad509e4a5c7b1dc6b7f52f92c885cad8b152f71bf5031978ed240464f82c87",
+      "generatedAt": "2026-11-22T19:50:55.512Z"
     },
     "2026_10_24_2": {
       "title": "協調実験つきボクセルサバイバル",
@@ -5532,43 +5534,43 @@
       "generatedAt": "2026-11-05T20:06:20.589Z"
     },
     "rw-walker-motion-control": {
-      "title": "リアクションホイール歩行制御研究",
-      "summary": "リアクションホイールで胴体を左右に揺らし、受動脚の交互歩行を再現する歩行器のファームウェアと実験ツールだ。次の荷重移行を予測して補助仕事を計算し、±8°での比較測定やMEKFによる姿勢推定、ログ解析まで一通り扱っている。",
-      "detail": "こいつは、リアクションホイールを使って左右に揺動し、受動脚を交互に振り出す歩行器を実機で試すためのプロジェクトだ。中ではMEKFで胴体姿勢を推定し、足角を定周期で観測しながら、必要な補助仕事と電流パルスの開始を判断している。v39では前回の左右移行と足裏円弧の端まで戻れた経過を参照し、次の左への荷重移行で作業量を再計算している。配布版の書き込み、実機の状態確認、RWLOGの変換や再生、二つの測定条件の比較までツールとして揃ってる。PlatformIOとESP32-S3ベースの環境から構成される実験的な仕組みだが、資料上確認できるのは装置上の制御と測定再現で、歩行の汎用的な完成度や実機の耐久性までは示していない。",
-      "closingRemark": "±8°の測定が左右の振れではなく左への戻りの補正まで追っている点に、この歩行器の研究のいまの温度が出てるな。",
+      "title": "歩行器のリアクションホイール制御",
+      "summary": "リアクションホイールと受動脚を使う歩行器を、実機上で制御・測定する実験用ファームウェアだ。足角の40 Hz推定、MEKF姿勢推定、不足仕事に応じた通電制御、圧縮ログの再開転送まで一通り扱う。",
+      "detail": "こいつは、リアクションホイールで左右に揺動し、受動脚を交互に振り出す歩行実験の制御をまとめたリポジトリだ。中ではM5Stack AtomS3R相当のESP32-S3環境でセンサー処理と歩行制御を動かし、MEKFで胴体姿勢を推定すると同時に、カメラから足角を40 Hzで取得して周期的に更新してる。歩行版v39-walk5では左へ戻る過程の不足仕事を再計算し、必要なら残り時間で再通電するが、十分な勢いが観測できれば早めに切り上げる仕組みだ。実験画面から開始でき、RWLOGを圧縮して保存したり、切断後に検証済み位置から再開したりもできる。READMEではビルド、書き込み、ログ再生、テストの入口が揃っていて、資料もかなり具体的だな。実機の歩行挙動や制御精度までは実測条件ごとの差が残るため、そこは公開されている再生や実験手順で確認する必要がある。",
+      "closingRemark": "歩行ロボットに、まだ足りない仕事を半周期から計算させるあたりがこの機体らしいところだ。",
       "features": [
-        "リアクションホイールによる左右の胴体制御",
-        "MEKFを使った胴体姿勢推定",
-        "荷重移行を予測した足角補助制御",
-        "RWLOGのCRC確認、CSV変換、再生比較",
-        "PlatformIO向け配布バイナリの生成と書き込み"
+        "リアクションホイールによる左右のバランス制御",
+        "受動脚を対象にした足角の40 Hz推定",
+        "不足仕事を再計算する電流パルス制御",
+        "荷重移行を予測するv39の制御研究",
+        "圧縮RWLOGの再開転送と実験ログ再生"
       ],
       "technologies": [
         "C++",
-        "Arduino",
+        "Python",
         "PlatformIO",
         "ESP32-S3",
-        "M5Stack AtomS3R",
+        "Arduino",
         "M5Unified",
         "M5GFX",
         "Adafruit AHRS"
       ],
       "categories": [
-        "歩行ロボット",
         "モーション制御",
-        "組み込みファームウェア",
-        "実験計測"
+        "ロボット工学",
+        "組込みシステム",
+        "実験ツール"
       ],
       "status": "実験",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1451079532,
-      "sourcePushedAt": "2026-11-22T06:51:05Z",
+      "sourcePushedAt": "2026-11-22T11:00:28Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1451079532,
         "name": "rw-walker-motion-control",
-        "pushedAt": "2026-11-22T06:51:05Z",
+        "pushedAt": "2026-11-22T11:00:28Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5578,45 +5580,47 @@
         "fork": false,
         "language": "C++"
       },
-      "sourceFingerprint": "7c22eef3f9758aa896fda69f04520658bab8c56a30f34acc69cf94a9cd3a0da5",
-      "generatedAt": "2026-11-22T07:05:24.876Z"
+      "sourceFingerprint": "9013c4c51cc6ad8f531607fd138b407e85c05254d86f7a80dccaf8d79e250e82",
+      "generatedAt": "2026-11-22T19:51:20.440Z"
     },
     "layer-workbench": {
-      "title": "3Dプリント準備ワークベンチ",
-      "summary": "STL・3MF・OBJをブラウザで扱う、個人向けの3Dプリント準備環境だ。OrcaSlicerのC++スライス処理をWebAssemblyで動かす候補エンジンも検証中だが、現在の画面はまだモデル表示やスライスには接続されていない。",
-      "detail": "こいつは、デスクトップ版スライサーの設定やプロジェクトとの互換性を保ちながら、ブラウザで3Dプリント準備を進めるための作業場だ。中ではOrcaSlicer v2.5.0のC++スライス処理をWebAssembly化した候補エンジンを用意し、API適合性やNodeでの動作を確かめてる。いっぽう公開画面はまだ見た目を整えている段階で、STL・3MF・OBJを選んで一覧にできるものの、形状の読み込み・表示やエンジン呼び出し、スライスは未接続だ。上流の安定版だけを追い、更新時には互換性を検証する方針で、毎日のリリース確認も行う。ただしSharedArrayBufferが必要な候補エンジンをGitHub Pagesで動かせるかは未検証で、デスクトップ版との機能差も残ってる。",
-      "closingRemark": "エンジン候補は試験を通ったが、画面とはまだ別々の持ち場にいる。合流はこれからだな。",
+      "title": "ブラウザー向け3Dプリント作業台",
+      "summary": "OrcaSlicerのデスクトップ版に近い操作やスライス結果を目指す、個人向けのブラウザー作業台。安定版エンジンの移植と互換性検証を進めている一方、公開画面はまだ準備段階で、モデル編集やスライスは利用できません。",
+      "detail": "こいつは、デスクトップのOrcaSlicerに近い設定やスライス結果をブラウザーでも扱えるようにする、個人向けの3Dプリント作業台だ。中では上流のC++スライサーをWebAssembly化して使う方針で、v2.5.0の候補エンジンはビルドやAPI適合性、Nodeでの動作確認を通過してる。安定版だけを追い、更新時には互換性テストを済ませてから基準バージョンを進める仕組みもある。いっぽう公開画面はまだ表示の枠組みで、STL・3MF・OBJの選択はできても、形状の表示やエンジン連携、スライスには対応していない。さらに、候補エンジンが必要とするブラウザーの分離設定をGitHub Pagesで実現できるかも未検証だな。",
+      "closingRemark": "エンジン候補は試験を通ったが、公開画面との合流とPagesのヘッダー問題はこれからだ。刃は研げたが、まだ台には据わっていない。",
       "features": [
-        "ブラウザ上でSTL・3MF・OBJファイルを選択できる",
-        "OrcaSlicer v2.5.0のWebAssemblyエンジン候補を検証",
-        "上流の安定版リリースを毎日確認するワークフロー",
-        "互換性や機能差を監査資料とパリティ台帳で記録"
+        "OrcaSlicer v2.5.0のヘッドレスWebAssemblyエンジン候補を検証",
+        "安定版リリースを日次確認し、新版発見時に追跡Issueを作成",
+        "STL・3MF・OBJファイルを選択できる準備中のブラウザー画面",
+        "互換性確認が済むまで統合基準バージョンを更新しない方針",
+        "エンジン監査や機能差分を文書化"
       ],
       "technologies": [
         "JavaScript",
         "Python",
-        "Three.js",
-        "C++",
         "WebAssembly",
         "OrcaSlicer",
-        "GitHub Actions",
-        "GitHub Pages"
+        "Three.js",
+        "STL",
+        "3MF",
+        "OBJ"
       ],
       "categories": [
         "3Dプリント",
         "スライサー",
-        "ブラウザツール"
+        "WebAssembly",
+        "ブラウザーアプリ"
       ],
       "status": "試作",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1453622619,
-      "sourcePushedAt": "2026-11-22T06:47:18Z",
+      "sourcePushedAt": "2026-11-22T19:49:21Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1453622619,
         "name": "layer-workbench",
-        "pushedAt": "2026-11-22T06:47:18Z",
+        "pushedAt": "2026-11-22T19:49:21Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5626,8 +5630,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "e9a1d6d556ed842de50e62844153659c8448c78cac77b8e265fe7797bc5f59b4",
-      "generatedAt": "2026-11-22T07:05:35.541Z"
+      "sourceFingerprint": "948e57ad99f59a83a5cdebca265eac6bf59b7e13c9bbc3b52c603f1f22163098",
+      "generatedAt": "2026-11-22T19:50:44.374Z"
     },
     "atoms3r-camera-pipeline": {
       "title": "AtomS3Rカメラ遅延検証",
@@ -5680,43 +5684,43 @@
       "generatedAt": "2026-11-13T19:52:50.539Z"
     },
     "m5stack-mobile-robot": {
-      "title": "M5Stack移動ロボット用ファームウェア",
-      "summary": "M5Stack Basic向けに、姿勢推定とサーボの手動操作を行うロボット用ファームウェアだ。BMI270の加速度・ジャイロによる6軸EKFや、シリアル操作、ブラウザーからの書き込みに対応する一方、自動走行やモーター制御は含まれない。",
-      "detail": "こいつは、M5Stack Basicを使った移動ロボットのハードウェアを扱うファームウェアだな。中ではBMI270の加速度とジャイロだけを使う6軸EKFで姿勢を推定し、ロール・ピッチ・ヨーを出してる。加速度が重力の範囲から外れた場合は補正を見送り、磁気方位の基準もないため、ヨーは起動時を基準にずれていく。サーボは本体ボタンかシリアルコマンドで4チャンネルを手動操作でき、ブラウザー用フラッシャーから書き込むことも可能だ。ただ、GNSSの受信データは位置解析に使わず、モーター制御や自動走行も実装されていない。",
-      "closingRemark": "GNSSのUARTは起きているが、位置は読まない。ヨーの基準もないあたり、まずは姿勢と手動操作に話を絞った作りだな。",
+      "title": "M5Stack移動ロボット制御ファームウェア",
+      "summary": "M5Stack Basicを使った移動ロボット用のファームウェアだ。GoPlus2サーボ操作、BMI270による姿勢推定、NMEA GNSS測定に加え、ブラウザから書き込めるWeb Flasherも備えている。",
+      "detail": "こいつはM5Stack Basicと周辺モジュールを用いて、移動ロボットハードウェアを操作・計測するためのファームウェアだな。中ではGoPlus2のサーボをボタンまたはシリアルコマンドで動かし、BMI270の加速度・ジャイロデータだけで6軸姿勢EKFを回している。GNSSモジュールから38400bpsでNMEAを受け、修理したばかりの位置だけに限定せず、衛星数、HDOP、緯度経度、高度、速度まで表示できる。ブラウザ版はESP Web ToolsでM5Stackへ直接書き込める構成だが、起動時に自動でサーボやモータを動かす処理はなく、姿勢推定も磁気センサーを使わないためヨー角は相対値としてドリフトする。屋内ではGNSSがそもそも入らない点もREADMEで明示されていて、屋外アンテナでの受信確認が前提だ。",
+      "closingRemark": "モーターは動かさず、サーボと姿勢とGNSSだけを丁寧に測る実験機だ。",
       "features": [
-        "BMI270による6軸EKF姿勢推定",
-        "加速度の大きさとイノベーションによる外れ値除外",
-        "ボタン・シリアル経由の4チャンネルサーボ手動操作",
-        "シリアルで姿勢・機器状態を確認",
-        "ESP Web Tools対応のブラウザーフラッシャー"
+        "A/B/Cボタンとシリアルコマンドによる4系統サーボ制御",
+        "BMI270の加速度・ジャイロだけを使う姿勢EKF",
+        "GNSSのNMEAデータから位置・衛星・測位品質を表示",
+        "ブラウザからESP Web Toolsでファームウェアを書込可能",
+        "起動時にモーターやサーボを自動制御しない安全寄りの構成"
       ],
       "technologies": [
         "C++",
         "PlatformIO",
         "Arduino",
-        "ESP32",
         "M5Unified",
+        "M5Stack Basic",
+        "GoPlus2",
         "BMI270",
-        "BMM150",
-        "BMP280"
+        "TinyGPSPlus"
       ],
       "categories": [
-        "組み込み",
-        "ロボット",
-        "ファームウェア",
-        "姿勢推定"
+        "ロボット制御",
+        "組込みファームウェア",
+        "姿勢推定",
+        "GNSS計測"
       ],
-      "status": "試作",
+      "status": "実験",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1467257739,
-      "sourcePushedAt": "2026-11-22T06:53:20Z",
+      "sourcePushedAt": "2026-11-22T08:23:55Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1467257739,
         "name": "m5stack-mobile-robot",
-        "pushedAt": "2026-11-22T06:53:20Z",
+        "pushedAt": "2026-11-22T08:23:55Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5726,8 +5730,8 @@
         "fork": false,
         "language": "C++"
       },
-      "sourceFingerprint": "a6e70d4ce9bf79964301e3d44cf7a155dbc4fba7ef8ebd16bc6b10991cd1af2b",
-      "generatedAt": "2026-11-22T07:05:09.420Z"
+      "sourceFingerprint": "bd472605943eb41a76c830b6720b359fc617ff90633536a133575cca7490ea31",
+      "generatedAt": "2026-11-22T19:51:35.025Z"
     }
   },
   "repositoryCount": 116
