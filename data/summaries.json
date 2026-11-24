@@ -1,41 +1,43 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-24T10:06:15.447Z",
+  "generatedAt": "2026-11-24T22:36:17.993Z",
   "repositories": {
     "github-tavern": {
       "title": "公開リポジトリ探索酒場",
-      "summary": "個人所有の公開GitHubリポジトリを、酒場風の画面から検索・閲覧する静的サイトだ。GitHub APIで情報を取得し、Copilotによる日本語説明やREADMEからの暫定説明もカードに表示する。",
-      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、酒場風の画面から探して中身を確かめるための個人ポータルだ。中ではGitHub APIから一覧を取得し、名前や説明、Topics、言語、Copilot要約を横断検索できるようにしてる。カードを選べば概要や特徴を読めて、Copilotの解析がまだないものにはREADMEから短い暫定説明を出す仕組みだな。解析用のActionsは6時間ごとに更新・新規分を確認し、要約をJSONに蓄えてGitHub Pagesで静的に公開できる。ただし対象は公開リポジトリだけで、サイトから削除や変更などの書き込みはしない。",
-      "closingRemark": "自動解析は一度に最大8件。更新のないリポジトリまで毎度読み直すほど、台帳係も暇じゃないらしい。",
+      "summary": "temesotejamが公開しているGitHubリポジトリを、酒場風の画面から探して概要を読む個人向けポータル。GitHub APIで一覧を取得し、名前や説明、Topics、言語、Copilot要約を横断検索できるほか、未解析のものはREADMEから短い説明を補う。",
+      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、古い情報端末を思わせる画面から探して読むための個人向けポータルだ。中ではGitHub APIから一覧を取り、名前やDescription、Topics、言語、Copilot要約を横断検索し、分類で絞り込める。カードを選ぶと概要が開き、解析済みならREADMEや設定、ファイル構成などを根拠にした説明が読めるし、未解析ならREADMEから短い紹介を補う仕組みだ。Copilot CLIによる要約更新は6時間ごとで、変更のあったリポジトリを一度に最大8件処理する。GitHub Pagesで静的に公開でき、対象は公開リポジトリのみ、サイトから書き込み操作はしないってわけだ。",
+      "closingRemark": "要約の定期便は一度に最大8件。酒場の帳簿も、全店分を一晩で書き直す気はないらしい。",
       "features": [
-        "公開リポジトリをGitHub APIから取得",
-        "名前・説明・Topics・言語・要約を横断検索",
-        "カード選択でリポジトリ概要を表示",
-        "Copilot未解析ならREADMEから暫定説明を表示",
-        "更新分を定期解析してJSONに保存"
+        "公開リポジトリ一覧をGitHub APIから取得",
+        "名前・Description・Topics・言語・Copilot要約を横断検索",
+        "技術領域による分類と絞り込み",
+        "カードから詳細概要を表示",
+        "Copilot要約がない場合はREADMEから短い説明を表示"
       ],
       "technologies": [
         "JavaScript",
+        "CSS",
+        "HTML",
         "GitHub API",
         "GitHub Copilot CLI",
         "GitHub Actions",
         "GitHub Pages"
       ],
       "categories": [
-        "Web・ツール",
-        "リポジトリ検索",
-        "GitHub"
+        "Webアプリ",
+        "GitHubツール",
+        "リポジトリ検索"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-11-24T00:03:01Z",
+      "sourcePushedAt": "2026-11-24T10:28:04Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-11-24T00:03:01Z",
+        "pushedAt": "2026-11-24T10:28:04Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -45,8 +47,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "ffeadc964f758631d59e713676978f4c632481da50113be5661933296fff5247",
-      "generatedAt": "2026-11-24T10:06:15.447Z"
+      "sourceFingerprint": "bfc9d52ecea9c3d4e0a8a275aba5a84686bde14c5c4e51b87e243986b4793db5",
+      "generatedAt": "2026-11-24T22:36:17.993Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -5088,40 +5090,41 @@
     },
     "2026_10_24": {
       "title": "現象救助隊：ニュース迷宮",
-      "summary": "現実の現象やニュースをもとに形の変わる迷宮を探索する、一人用のブラウザゲーム。公開RSSから地域・環境・交通・科学のニュースを自動収集し、見出しや選択内容を迷宮や観測ノートに反映します。",
-      "detail": "こいつは、現実の現象や小さなニュースを迷宮に変えて探索する、一人用のブラウザゲームだ。中ではターンごとに仲間と敵が動き、「観測」した敵を倒して仲間にしたり、食料や救護メモを使ったりしながら、3階からの脱出を目指す。入力したニュースや収集テーマは迷宮の色や出現する現象、観測ノートに反映され、各階の現実地点ではRSSの見出し・配信元・日時・出典を確認できる。GitHub Actionsが地域・環境・交通・科学の公開ニュースを6時間ごとに集め、事件や事故などの見出しは除外する仕組みだ。記事本文を確認したとは表示せず、現実地点での選択も記事への賛否とは切り分けている。探索やターン進行の設計は『ポケモン不思議のダンジョン 赤の救助隊』の逆コンパイルを研究対象にしているが、同作のコードや素材は使っていない。",
-      "closingRemark": "現実地点に並ぶのは記事そのものじゃなく、見出しと出典まで。迷宮も、そこから先は勝手に話を盛らないらしい。",
+      "summary": "入力したニュースや公開記事をもとに迷宮が変わる、一人用の探索ゲーム。仲間と敵がターンごとに動く中、3階からの脱出を目指し、記事の見出しや出典もゲーム内で確認できます。",
+      "detail": "こいつは、現実の現象やニュースを手がかりに、形の変わる迷宮を探索する一人用ゲームだ。矢印キーやWASDで進み、プレイヤーが動くたびに仲間と敵も行動する。現象を観測して倒せば仲間になり、回復や空腹にも気を配りながら、3階からの脱出を目指す仕組みだな。ニュースは迷宮の色や出現する現象、観測ノートに反映され、各階の現実地点ではRSS記事の見出し・配信元・日時・出典を見られる。地域・科学・交通・環境のニュースはGitHub Actionsで6時間ごとに収集されるが、記事本文を複製したり、本文を確認済みと示したりはしない。探索の骨格は既存ゲームの逆コンパイル研究を参考にしているものの、コードや画像などは使用していない。",
+      "closingRemark": "現実地点で見られるのは見出しと出典まで。迷宮の先は歩けても、記事本文までは覗けない作りだ。",
       "features": [
-        "現実の現象や入力ニュースを反映して迷宮を生成",
-        "ターン制の探索と、観測した敵の仲間化",
-        "空腹・HPを管理しながら3階からの脱出を目指す",
-        "公開RSSニュースを6時間ごとに自動収集",
-        "現実地点で見出しや出典を表示し、記事本文の確認とは区別"
+        "ニュース入力が迷宮の色や現象、観測ノートに反映される",
+        "ターン制で仲間や敵も行動し、観測した現象を仲間にできる",
+        "3階から脱出すると調査成功",
+        "現実地点でRSS見出し・配信元・日時・出典を表示",
+        "公開ニュースを6時間ごとに自動収集し、事件・事故などの見出しを除外"
       ],
       "technologies": [
         "JavaScript",
         "HTML",
         "CSS",
         "Canvas",
+        "RSS",
         "GitHub Actions",
-        "RSS"
+        "GitHub Pages"
       ],
       "categories": [
         "ブラウザゲーム",
         "ローグライク",
-        "ニュース",
-        "ターン制"
+        "ニュース連携",
+        "一人用ゲーム"
       ],
       "status": "完成品",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1431824671,
-      "sourcePushedAt": "2026-11-24T09:49:20Z",
+      "sourcePushedAt": "2026-11-24T22:22:14Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1431824671,
         "name": "2026_10_24",
-        "pushedAt": "2026-11-24T09:49:20Z",
+        "pushedAt": "2026-11-24T22:22:14Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5131,8 +5134,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "9489352f1b5cd922fc48c711fcb99d36898e8065fe3460951a562c1530957b06",
-      "generatedAt": "2026-11-24T10:05:26.741Z"
+      "sourceFingerprint": "61a230fa60910d87e8aafb89909979e257836db6e798c890f604467ec4d663c4",
+      "generatedAt": "2026-11-24T22:35:40.382Z"
     },
     "2026_10_24_2": {
       "title": "協調実験つきボクセルサバイバル",
@@ -5580,43 +5583,43 @@
       "generatedAt": "2026-11-22T19:51:20.440Z"
     },
     "layer-workbench": {
-      "title": "ブラウザー向け3Dプリント作業台",
-      "summary": "OrcaSlicerの機能をブラウザーで使うことを目指す、個人向けの3Dプリント準備作業台だ。v2.5.0のWebAssemblyエンジン候補は検証済みだが、公開画面への接続やスライス機能はまだこれから。",
-      "detail": "こいつは、デスクトップ版OrcaSlicerに近い環境をブラウザーで使うための、個人向け3Dプリント作業台だ。中では上流のC++スライス実装をWebAssembly化する方針を取り、v2.5.0の候補エンジンはAPI適合性やNodeでの動作確認まで進んでる。最近の変更では、WASMで編集した3MFを公式CLIで開き直し、ネイティブ側で失われるメタデータも調べている。画面側にはThree.jsによるモデル表示や変形操作の土台が見える一方、READMEでは公開UIはまだ準備画面の段階で、エンジン接続やスライスは未実装とされている。デスクトップ版との完全な機能互換やブラウザーでの公開準備も、まだ確認済みとは言えないな。",
-      "closingRemark": "3MFを開き直して差分まで測る慎重さはあるが、肝心のスライスボタンはまだ出番待ちだ。",
+      "title": "ブラウザ向け3Dプリント作業場",
+      "summary": "OrcaSlicerを土台に、ブラウザで3Dプリントの準備を行う個人向けワークスペース。WebAssembly版エンジン候補は検証済みですが、公開ページからの読み込みやスライスにはまだ接続されていません。",
+      "detail": "こいつは、OrcaSlicerを土台にブラウザで3Dプリントの準備を進める、個人向けの作業場だ。中では上流のC++スライサーをWebAssembly化し、独自にスライサーを書き直すより、本家の設定や結果を保つ方針を取ってる。v2.5.0のエンジン候補はビルドやAPI適合性、非同期バインディング、Nodeでの動作確認を通過した。ただ、公開ページはSTL・3MF・OBJファイルを選んで一覧にできる段階で、モデル表示やエンジン呼び出し、スライスにはまだつながってない。安定版だけを追い、検証を終えるまで対応バージョンを上げない慎重さも特徴だな。デスクトップ版との完全な機能・G-code同等性や、GitHub Pagesで必要なブラウザの分離環境は未確認だ。",
+      "closingRemark": "エンジン候補は検証を通ったが、SharedArrayBufferとGitHub Pagesの相性はまだ未確認。刃物より先に、作業台の置き場所を決めるところだな。",
       "features": [
-        "OrcaSlicer v2.5.0のWebAssemblyエンジン候補を検証",
-        "公式CLIを使ったWASM編集済み3MFの再オープン確認",
-        "3MFのメタデータ損失を調査",
-        "安定版リリースのみを追跡するGitHub Actions",
-        "ブラウザー上の3Dプリント準備画面を開発中"
+        "OrcaSlicerの上流C++実装をWebAssembly化する方針",
+        "STL・3MF・OBJファイルを選択して一覧表示",
+        "安定版の更新を毎日確認し、新版は追跡課題で知らせる",
+        "エンジン候補のAPI適合性や動作を検証",
+        "未検証の更新では既知の正常な配備を維持する方針"
       ],
       "technologies": [
         "JavaScript",
         "Python",
         "Three.js",
         "WebAssembly",
-        "C++",
         "OrcaSlicer",
-        "GitHub Actions",
-        "GitHub Pages"
+        "STL",
+        "3MF",
+        "OBJ"
       ],
       "categories": [
         "3Dプリント",
-        "ブラウザーツール",
+        "ブラウザアプリ",
         "スライサー",
         "WebAssembly"
       ],
-      "status": "実験",
+      "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1453622619,
-      "sourcePushedAt": "2026-11-24T09:22:29Z",
+      "sourcePushedAt": "2026-11-24T21:41:52Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1453622619,
         "name": "layer-workbench",
-        "pushedAt": "2026-11-24T09:22:29Z",
+        "pushedAt": "2026-11-24T21:41:52Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5626,8 +5629,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "f109cf4b76093028044cd290bbe646a49c2bf8a774931e18f4489400dc009b23",
-      "generatedAt": "2026-11-24T10:05:45.393Z"
+      "sourceFingerprint": "4c798e7535ec6c9d8595b1bfc6db1630612af32a5b1dd489d7a57140b729a173",
+      "generatedAt": "2026-11-24T22:35:55.226Z"
     },
     "atoms3r-camera-pipeline": {
       "title": "AtomS3Rカメラ遅延検証",
@@ -5728,7 +5731,57 @@
       },
       "sourceFingerprint": "bd472605943eb41a76c830b6720b359fc617ff90633536a133575cca7490ea31",
       "generatedAt": "2026-11-22T19:51:35.025Z"
+    },
+    "matlab-simulink-stm32-nucleo": {
+      "title": "SimulinkでSTM32実機書き込み手順",
+      "summary": "MATLAB / SimulinkでSTM32向けコードを生成し、ビルドからST-LINK経由の実機書き込みまで進める手順をまとめている。NUCLEO-F446REでのLED点滅を確認した環境設定や、画面図付きのセットアップ・トラブル対応を参照できる。",
+      "detail": "こいつは、MATLAB / Simulinkで作った制御モデルをSTM32へ書き込み、実機で動かすまでの環境構築と手順を記録したものだ。中ではSTM32CubeMXの設定からCコード生成、GNU Arm ToolchainでのELF・HEX・BIN作成、ST-LINK経由の書き込みまでを順に追える。確認対象はNUCLEO-F446REで、LD2を点滅させるモデルを実機展開したところまで記録されてる。R2026bの各種ツールやCubeMX、CubeProgrammerのバージョンも明記され、画面配置図とトラブルシューティングも用意されている。ただし、確認に使ったSimulinkモデルとCubeMX設定ファイル自体はまだ登録されていない。そこは手順を見ながら再現する必要があるな。",
+      "closingRemark": "画面図と手順は揃っているが、肝心の.slxと.iocはまだ不在。再現の最後は、資料を頼りに自分で組み立てる段取りだ。",
+      "features": [
+        "NUCLEO-F446REでのLED点滅モデルの実機展開を確認",
+        "モデル作成からビルド、ST-LINK書き込みまでの手順を記録",
+        "MATLAB・Simulink関連ツールの確認済みバージョンを掲載",
+        "設定画面の配置図とトラブルシューティングを収録",
+        "実際に使用した.slxと.iocファイルは未登録"
+      ],
+      "technologies": [
+        "MATLAB",
+        "Simulink",
+        "STM32 Microcontroller Blockset",
+        "STM32CubeMX",
+        "GNU Arm Toolchain",
+        "STM32CubeProgrammer",
+        "ST-LINK/V2-1",
+        "NUCLEO-F446RE"
+      ],
+      "categories": [
+        "組み込み開発",
+        "開発環境構築",
+        "STM32",
+        "手順書"
+      ],
+      "status": "教材",
+      "confidence": "high",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
+      "sourceRepositoryId": 1469982324,
+      "sourcePushedAt": "2026-11-24T10:40:39Z",
+      "sourceDefaultBranch": "main",
+      "sourceMetadata": {
+        "repositoryId": 1469982324,
+        "name": "matlab-simulink-stm32-nucleo",
+        "pushedAt": "2026-11-24T10:40:39Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": ""
+      },
+      "sourceFingerprint": "2b381bb72b5955baf77e7cd8ee8263cd5c907504a762914487daf466600d0225",
+      "generatedAt": "2026-11-24T22:36:05.921Z"
     }
   },
-  "repositoryCount": 116
+  "repositoryCount": 117
 }
