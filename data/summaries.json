@@ -1,23 +1,21 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-24T00:03:00.516Z",
+  "generatedAt": "2026-11-24T10:06:15.447Z",
   "repositories": {
     "github-tavern": {
       "title": "公開リポジトリ探索酒場",
-      "summary": "公開GitHubリポジトリを酒場風の画面で探し、概要を読むための個人向けポータル。名前や説明、Topics、言語に加えてCopilotの要約も検索でき、未解析のものはREADMEから暫定説明を補う。",
-      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、酒場風の画面から探して中身を確かめるための個人向けポータルだ。中ではGitHub APIから一覧を取り込み、名前や説明、Topics、言語、Copilot要約を横断検索できるようにしてる。カードを選べば概要や確認済みの公開ページへ進めるし、Copilotの説明がまだないものにはREADMEから短い暫定説明を出す。要約はGitHub Actionsから6時間ごとに確認し、更新されたものを最大8件ずつ処理する仕組みだな。静的サイトとしてGitHub Pagesで動かせて、対象は公開リポジトリのみ、書き込み操作はしない。",
-      "closingRemark": "6時間ごとに最大8件ずつ、というあたりにも個人運営らしい手堅さが出てるな。",
+      "summary": "個人所有の公開GitHubリポジトリを、酒場風の画面から検索・閲覧する静的サイトだ。GitHub APIで情報を取得し、Copilotによる日本語説明やREADMEからの暫定説明もカードに表示する。",
+      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、酒場風の画面から探して中身を確かめるための個人ポータルだ。中ではGitHub APIから一覧を取得し、名前や説明、Topics、言語、Copilot要約を横断検索できるようにしてる。カードを選べば概要や特徴を読めて、Copilotの解析がまだないものにはREADMEから短い暫定説明を出す仕組みだな。解析用のActionsは6時間ごとに更新・新規分を確認し、要約をJSONに蓄えてGitHub Pagesで静的に公開できる。ただし対象は公開リポジトリだけで、サイトから削除や変更などの書き込みはしない。",
+      "closingRemark": "自動解析は一度に最大8件。更新のないリポジトリまで毎度読み直すほど、台帳係も暇じゃないらしい。",
       "features": [
         "公開リポジトリをGitHub APIから取得",
-        "名前・説明・Topics・言語・Copilot要約を横断検索",
-        "技術領域ごとの簡易分類とカード詳細表示",
-        "Copilot未解析時はREADMEから暫定説明を生成",
-        "変更されたリポジトリの要約を定期更新"
+        "名前・説明・Topics・言語・要約を横断検索",
+        "カード選択でリポジトリ概要を表示",
+        "Copilot未解析ならREADMEから暫定説明を表示",
+        "更新分を定期解析してJSONに保存"
       ],
       "technologies": [
         "JavaScript",
-        "CSS",
-        "HTML",
         "GitHub API",
         "GitHub Copilot CLI",
         "GitHub Actions",
@@ -25,19 +23,19 @@
       ],
       "categories": [
         "Web・ツール",
-        "検索",
+        "リポジトリ検索",
         "GitHub"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-11-23T07:53:40Z",
+      "sourcePushedAt": "2026-11-24T00:03:01Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-11-23T07:53:40Z",
+        "pushedAt": "2026-11-24T00:03:01Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -47,8 +45,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "c69f8e008575861f73aa3728cc2cf8a3b2bda455d57f30271537f9ef220d7671",
-      "generatedAt": "2026-11-24T00:03:00.516Z"
+      "sourceFingerprint": "ffeadc964f758631d59e713676978f4c632481da50113be5661933296fff5247",
+      "generatedAt": "2026-11-24T10:06:15.447Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -5089,16 +5087,16 @@
       "generatedAt": "2026-10-24T04:47:37.319Z"
     },
     "2026_10_24": {
-      "title": "現象救助隊・ニュース迷宮",
-      "summary": "公開ニュースや入力した出来事をもとに迷宮が変わる、一人用の探索ゲーム。仲間や敵とターン制で行動し、記事の出典を確かめながら3階からの脱出を目指します。",
-      "detail": "こいつは、現実の現象やニュースを手がかりに、毎回姿の変わる迷宮を探索する一人用ゲームだ。中では矢印キーやWASDで移動し、プレイヤーが動くたびに仲間と敵も行動する。現象を「観測」して倒せば仲間になり、携帯食や救護メモを使いながら光る階段を探して、3階からの脱出を目指す仕組みだな。ニュースはGitHub Actionsが6時間ごとにRSSから集め、見出しや出典を「現実地点」として迷宮に反映する。記事本文を確認済みとは扱わず、記事への賛否とゲーム内の選択も切り分けている。探索の骨格は『ポケモン不思議のダンジョン 赤の救助隊』の設計を研究対象にしているが、同作のコードや画像などは使っていない。",
-      "closingRemark": "現実地点で見られるのは見出しと出典まで。迷宮の奥へ進んでも、記事本文まではついてこないようだ。",
+      "title": "現象救助隊：ニュース迷宮",
+      "summary": "現実の現象やニュースをもとに形の変わる迷宮を探索する、一人用のブラウザゲーム。公開RSSから地域・環境・交通・科学のニュースを自動収集し、見出しや選択内容を迷宮や観測ノートに反映します。",
+      "detail": "こいつは、現実の現象や小さなニュースを迷宮に変えて探索する、一人用のブラウザゲームだ。中ではターンごとに仲間と敵が動き、「観測」した敵を倒して仲間にしたり、食料や救護メモを使ったりしながら、3階からの脱出を目指す。入力したニュースや収集テーマは迷宮の色や出現する現象、観測ノートに反映され、各階の現実地点ではRSSの見出し・配信元・日時・出典を確認できる。GitHub Actionsが地域・環境・交通・科学の公開ニュースを6時間ごとに集め、事件や事故などの見出しは除外する仕組みだ。記事本文を確認したとは表示せず、現実地点での選択も記事への賛否とは切り分けている。探索やターン進行の設計は『ポケモン不思議のダンジョン 赤の救助隊』の逆コンパイルを研究対象にしているが、同作のコードや素材は使っていない。",
+      "closingRemark": "現実地点に並ぶのは記事そのものじゃなく、見出しと出典まで。迷宮も、そこから先は勝手に話を盛らないらしい。",
       "features": [
-        "ニュースを色や出現する現象に反映する迷宮生成",
-        "仲間も行動するターン制の探索と戦闘",
-        "RSS記事を出典付きの現実地点として表示",
-        "地域・環境・交通・科学のテーマ別効果",
-        "事件・事故などの見出しを除外し、記事本文は保持しない"
+        "現実の現象や入力ニュースを反映して迷宮を生成",
+        "ターン制の探索と、観測した敵の仲間化",
+        "空腹・HPを管理しながら3階からの脱出を目指す",
+        "公開RSSニュースを6時間ごとに自動収集",
+        "現実地点で見出しや出典を表示し、記事本文の確認とは区別"
       ],
       "technologies": [
         "JavaScript",
@@ -5106,25 +5104,24 @@
         "CSS",
         "Canvas",
         "GitHub Actions",
-        "RSS",
-        "GitHub Pages"
+        "RSS"
       ],
       "categories": [
-        "ゲーム",
+        "ブラウザゲーム",
         "ローグライク",
         "ニュース",
-        "ブラウザゲーム"
+        "ターン制"
       ],
-      "status": "ツール",
+      "status": "完成品",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1431824671,
-      "sourcePushedAt": "2026-11-23T23:49:13Z",
+      "sourcePushedAt": "2026-11-24T09:49:20Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1431824671,
         "name": "2026_10_24",
-        "pushedAt": "2026-11-23T23:49:13Z",
+        "pushedAt": "2026-11-24T09:49:20Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5134,8 +5131,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "fc07d148d1c4606b8c219a5b675dd818eacb6793caca512b9dcb4a4a79c7ee65",
-      "generatedAt": "2026-11-24T00:02:32.783Z"
+      "sourceFingerprint": "9489352f1b5cd922fc48c711fcb99d36898e8065fe3460951a562c1530957b06",
+      "generatedAt": "2026-11-24T10:05:26.741Z"
     },
     "2026_10_24_2": {
       "title": "協調実験つきボクセルサバイバル",
@@ -5384,43 +5381,42 @@
       "generatedAt": "2026-10-30T06:00:51.432Z"
     },
     "github-ai-researcher": {
-      "title": "GitHub横断AI研究員",
-      "summary": "temesotejamが所有する公開リポジトリを横断調査し、技術の再利用候補や新しい研究テーマを提案するツール。GitHub ActionsからCopilot CLIで分析し、根拠付きのプロフィールやレポートを蓄積、Pagesの検索・比較画面で閲覧できる。",
-      "detail": "こいつは、temesotejamが所有する公開リポジトリを調べ、過去の実装から再利用の候補や新しい研究テーマを見つけるためのAI研究員だ。中ではGitHub APIや公開Raw URLからREADME、構成、設定、代表的なソースを集め、Copilot CLIで分析して、根拠ファイルと一緒にプロフィールやMarkdownレポートへまとめてる。GitHub Actionsから手動または毎日実行でき、更新がない日は分析やデータ書き換えを省く仕組みだ。結果はGitHub Pagesの画面で検索・絞り込みでき、最大3件の比較や、リポジトリ・技術・テーマを結ぶ知識グラフも確認できる。ただし、元のリポジトリは読み取り専用で、コード変更やIssue・Pull Requestの作成はしない。提案には誤りもあり得るから、実装前には根拠ファイルを確かめる必要があるな。",
-      "closingRemark": "元のコードには触れず、比較は最大3件まで。調査の手は慎重だが、候補を絞る仕事は人間に残るってわけだ。",
+      "title": "公開リポジトリ横断AI研究員",
+      "summary": "所有する公開GitHubリポジトリを横断して、技術や再利用できる実装を整理し、新しい研究・開発テーマを提案するツール。根拠ファイル付きのプロフィールやレポートを蓄積し、検索や比較ができるGitHub Pagesのダッシュボードも公開する。",
+      "detail": "こいつは、temesotejamが所有する公開リポジトリを調べ、過去の実装を次の研究や開発につなげるためのAI研究員だ。中ではGitHubの公開APIやRaw URLからREADME、構成、設定、代表的なソースを集め、技術や再利用候補を根拠ファイルと一緒に整理してる。更新があったリポジトリを中心にプロフィールを作り、横断分析レポートをMarkdownで蓄積する仕組みだな。GitHub Pagesの画面では検索や絞り込み、最大3件の比較に加え、109件のリポジトリ・技術・言語・テーマを結ぶKnowledge Graphも見られる。調査対象は公開リポジトリに限られ、コードは実行せず、元リポジトリの変更やIssue・Pull Request作成もしない。提案には誤りもあり得るから、実験に移る前に根拠を確かめる必要があるぜ。",
+      "closingRemark": "調査結果は自分のリポジトリにだけ書き戻す。研究員も、そこはずいぶん慎重らしい。",
       "features": [
-        "公開リポジトリのプロフィールを根拠ファイル付きで作成",
-        "複数リポジトリを横断して再利用候補や研究テーマを提案",
-        "更新がない日は分析とデータ書き換えをスキップ",
-        "Pages上で検索・絞り込み・最大3件の比較が可能",
-        "分析結果を日付別Markdownレポートに蓄積"
+        "公開リポジトリの技術・構成・再利用候補を横断分析",
+        "根拠ファイル付きのプロフィールとMarkdownレポートを蓄積",
+        "GitHub Pagesで検索・絞り込み・最大3件の比較が可能",
+        "Knowledge Graphでリポジトリや技術、テーマのつながりを探索",
+        "更新分を定期分析し、成功しなかったプロフィール作成は再試行"
       ],
       "technologies": [
         "JavaScript",
-        "GitHub Actions",
         "GitHub API",
-        "GitHub Copilot CLI",
+        "GitHub Actions",
         "GitHub Pages",
-        "GITHUB_TOKEN",
-        "JSON",
-        "Markdown"
+        "GitHub Copilot CLI",
+        "Markdown",
+        "JSON"
       ],
       "categories": [
-        "AI調査",
-        "リポジトリ分析",
-        "知識グラフ",
-        "開発支援ツール"
+        "AI分析",
+        "GitHub自動化",
+        "リポジトリ横断調査",
+        "ダッシュボード"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1441487171,
-      "sourcePushedAt": "2026-11-22T23:49:55Z",
+      "sourcePushedAt": "2026-11-24T04:07:12Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1441487171,
         "name": "github-ai-researcher",
-        "pushedAt": "2026-11-22T23:49:55Z",
+        "pushedAt": "2026-11-24T04:07:12Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5430,8 +5426,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "2d506e3992dd4f8c084f4d02e61dfd0c7655ccfbb0897e6b1f33c897107fe937",
-      "generatedAt": "2026-11-23T07:53:28.589Z"
+      "sourceFingerprint": "c51d0921dd8963ace649b2906e6907a54bcefa8cbdfdd87cb6151de87a511fe8",
+      "generatedAt": "2026-11-24T10:05:58.202Z"
     },
     "personal-browser-os": {
       "title": "ブラウザー内の個人デスクトップ",
@@ -5584,16 +5580,16 @@
       "generatedAt": "2026-11-22T19:51:20.440Z"
     },
     "layer-workbench": {
-      "title": "ブラウザー版3Dプリント準備環境",
-      "summary": "OrcaSlicerを土台に、ブラウザーから3Dプリント準備を行う個人用ワークスペースを目指している。v2.5.0のWebAssemblyエンジン候補は検証済みだが、画面との接続やブラウザーでの公開にはまだ課題が残る。",
-      "detail": "こいつは、OrcaSlicerのデスクトップ版に近い設定やスライス結果を保ちながら、ブラウザーで3Dプリントの準備をするための作業場だ。中では上流のC++スライス処理をWebAssemblyで動かす方針で、v2.5.0候補はビルドやAPI適合性、Node上のスモークテストを通している。安定版だけを追い、更新のたびに互換性を確かめる仕組みもあるな。ただ、READMEによれば画面はまだ準備段階で、エンジン接続やスライス、完全な3MF互換性は未達だ。さらに、画面の説明とThree.jsの読み込み・変形操作を含むコード抜粋には食い違いがあり、現在の表示機能の範囲までは資料だけで断定できない。",
-      "closingRemark": "v2.5.0候補の検証は済んでも、SharedArrayBufferを使う公開環境は未確認。店開きには、もうひと仕事あるようだ。",
+      "title": "ブラウザー向け3Dプリント作業台",
+      "summary": "OrcaSlicerの機能をブラウザーで使うことを目指す、個人向けの3Dプリント準備作業台だ。v2.5.0のWebAssemblyエンジン候補は検証済みだが、公開画面への接続やスライス機能はまだこれから。",
+      "detail": "こいつは、デスクトップ版OrcaSlicerに近い環境をブラウザーで使うための、個人向け3Dプリント作業台だ。中では上流のC++スライス実装をWebAssembly化する方針を取り、v2.5.0の候補エンジンはAPI適合性やNodeでの動作確認まで進んでる。最近の変更では、WASMで編集した3MFを公式CLIで開き直し、ネイティブ側で失われるメタデータも調べている。画面側にはThree.jsによるモデル表示や変形操作の土台が見える一方、READMEでは公開UIはまだ準備画面の段階で、エンジン接続やスライスは未実装とされている。デスクトップ版との完全な機能互換やブラウザーでの公開準備も、まだ確認済みとは言えないな。",
+      "closingRemark": "3MFを開き直して差分まで測る慎重さはあるが、肝心のスライスボタンはまだ出番待ちだ。",
       "features": [
-        "OrcaSlicer v2.5.0のヘッドレスWebAssemblyエンジン候補を検証",
-        "安定版リリースを毎日確認し、新版があれば追跡用Issueを作成",
-        "3MFの書き出し・再取り込みや共有メッシュを継続監査",
-        "ブラウザー画面とスライサーエンジンの接続は未完了",
-        "GitHub Pagesで必要なクロスオリジン分離は未検証"
+        "OrcaSlicer v2.5.0のWebAssemblyエンジン候補を検証",
+        "公式CLIを使ったWASM編集済み3MFの再オープン確認",
+        "3MFのメタデータ損失を調査",
+        "安定版リリースのみを追跡するGitHub Actions",
+        "ブラウザー上の3Dプリント準備画面を開発中"
       ],
       "technologies": [
         "JavaScript",
@@ -5607,20 +5603,20 @@
       ],
       "categories": [
         "3Dプリント",
-        "ブラウザーアプリ",
-        "WebAssembly",
-        "開発中ツール"
+        "ブラウザーツール",
+        "スライサー",
+        "WebAssembly"
       ],
-      "status": "ツール",
-      "confidence": "medium",
+      "status": "実験",
+      "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1453622619,
-      "sourcePushedAt": "2026-11-23T23:36:15Z",
+      "sourcePushedAt": "2026-11-24T09:22:29Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1453622619,
         "name": "layer-workbench",
-        "pushedAt": "2026-11-23T23:36:15Z",
+        "pushedAt": "2026-11-24T09:22:29Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5630,8 +5626,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "eb5c5c44f08eb1f98fe6bbfeca710df3ab63f45ba5d6f068156e39f2514ad43e",
-      "generatedAt": "2026-11-24T00:02:48.316Z"
+      "sourceFingerprint": "f109cf4b76093028044cd290bbe646a49c2bf8a774931e18f4489400dc009b23",
+      "generatedAt": "2026-11-24T10:05:45.393Z"
     },
     "atoms3r-camera-pipeline": {
       "title": "AtomS3Rカメラ遅延検証",
