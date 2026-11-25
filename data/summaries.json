@@ -1,18 +1,18 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-24T22:36:17.993Z",
+  "generatedAt": "2026-11-25T08:52:03.312Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ探索酒場",
-      "summary": "temesotejamが公開しているGitHubリポジトリを、酒場風の画面から探して概要を読む個人向けポータル。GitHub APIで一覧を取得し、名前や説明、Topics、言語、Copilot要約を横断検索できるほか、未解析のものはREADMEから短い説明を補う。",
-      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、古い情報端末を思わせる画面から探して読むための個人向けポータルだ。中ではGitHub APIから一覧を取り、名前やDescription、Topics、言語、Copilot要約を横断検索し、分類で絞り込める。カードを選ぶと概要が開き、解析済みならREADMEや設定、ファイル構成などを根拠にした説明が読めるし、未解析ならREADMEから短い紹介を補う仕組みだ。Copilot CLIによる要約更新は6時間ごとで、変更のあったリポジトリを一度に最大8件処理する。GitHub Pagesで静的に公開でき、対象は公開リポジトリのみ、サイトから書き込み操作はしないってわけだ。",
-      "closingRemark": "要約の定期便は一度に最大8件。酒場の帳簿も、全店分を一晩で書き直す気はないらしい。",
+      "title": "公開リポジトリ探索ポータル",
+      "summary": "公開GitHubリポジトリを検索・閲覧する、個人向けの静的ポータル。GitHub APIから一覧を取得し、CopilotがREADMEや構成をもとに作る日本語説明と簡易分類で、気になるリポジトリをその場で確かめられます。",
+      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、検索して選び、内容を見渡すための個人ポータルだ。中ではGitHub APIから公開リポジトリの情報を読み込み、名前や説明、Topics、言語、Copilot要約を横断検索できるようにしてる。カードを選べば概要が開き、解析済みならREADMEやファイル構成などを根拠にした日本語説明が出る。未解析のものにはREADMEから短い説明を作り、Copilotによる更新はGitHub Actionsが6時間ごとに確認して、新規・更新分を処理する仕組みだな。ただし定期処理は一度に最大8件で、サイトが扱うのは公開情報だけ。リポジトリへの書き込みはしないってわけだ。",
+      "closingRemark": "6時間ごとに棚を見回るが、一度に並べ替えるのは最大8件。酒場の記録係としては、なかなか堅実な手順だな。",
       "features": [
-        "公開リポジトリ一覧をGitHub APIから取得",
-        "名前・Description・Topics・言語・Copilot要約を横断検索",
-        "技術領域による分類と絞り込み",
-        "カードから詳細概要を表示",
-        "Copilot要約がない場合はREADMEから短い説明を表示"
+        "公開リポジトリをGitHub APIから自動取得",
+        "名前・説明・Topics・言語・要約を横断検索",
+        "技術領域ごとの簡易分類とカード内の概要表示",
+        "Copilot CLIでREADMEや構成をもとに日本語要約を生成",
+        "未解析リポジトリはREADMEから暫定説明を表示"
       ],
       "technologies": [
         "JavaScript",
@@ -24,20 +24,20 @@
         "GitHub Pages"
       ],
       "categories": [
-        "Webアプリ",
-        "GitHubツール",
-        "リポジトリ検索"
+        "Web・ツール",
+        "ポートフォリオ",
+        "GitHub"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-11-24T10:28:04Z",
+      "sourcePushedAt": "2026-11-24T22:36:19Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-11-24T10:28:04Z",
+        "pushedAt": "2026-11-24T22:36:19Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -47,8 +47,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "bfc9d52ecea9c3d4e0a8a275aba5a84686bde14c5c4e51b87e243986b4793db5",
-      "generatedAt": "2026-11-24T22:36:17.993Z"
+      "sourceFingerprint": "98009f4dcd80d49e33c1fad9332d181714f535366106c665fae8099baa767bfb",
+      "generatedAt": "2026-11-25T08:52:03.311Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -5089,16 +5089,16 @@
       "generatedAt": "2026-10-24T04:47:37.319Z"
     },
     "2026_10_24": {
-      "title": "現象救助隊：ニュース迷宮",
-      "summary": "入力したニュースや公開記事をもとに迷宮が変わる、一人用の探索ゲーム。仲間と敵がターンごとに動く中、3階からの脱出を目指し、記事の見出しや出典もゲーム内で確認できます。",
-      "detail": "こいつは、現実の現象やニュースを手がかりに、形の変わる迷宮を探索する一人用ゲームだ。矢印キーやWASDで進み、プレイヤーが動くたびに仲間と敵も行動する。現象を観測して倒せば仲間になり、回復や空腹にも気を配りながら、3階からの脱出を目指す仕組みだな。ニュースは迷宮の色や出現する現象、観測ノートに反映され、各階の現実地点ではRSS記事の見出し・配信元・日時・出典を見られる。地域・科学・交通・環境のニュースはGitHub Actionsで6時間ごとに収集されるが、記事本文を複製したり、本文を確認済みと示したりはしない。探索の骨格は既存ゲームの逆コンパイル研究を参考にしているものの、コードや画像などは使用していない。",
-      "closingRemark": "現実地点で見られるのは見出しと出典まで。迷宮の先は歩けても、記事本文までは覗けない作りだ。",
+      "title": "現象救助隊：現実迷宮",
+      "summary": "現実の現象や小さなニュースを迷宮や敵に映し出す、一人用の探索ゲーム。ニュースは6時間ごとに自動収集され、入力した内容も迷宮の色や出現する現象に反映されます。記事本文は保持せず、見出しや出典を現実地点で確認できるのも特徴です。",
+      "detail": "こいつは、現実の現象や小さなニュースを材料に、毎回姿を変える迷宮を進む一人用探索ゲームだ。矢印キーやWASDで歩き、プレイヤーが動くたび仲間と敵も動くターン制で、観測した現象を倒せば最大3体まで仲間になる。入力したニュースは迷宮の色や出現する現象、観測ノートに反映され、各階の「現実地点」ではRSSの見出し・配信元・日時・出典を確かめられる。携帯食や救護メモを使いながら3階からの脱出を目指す仕立てで、地域・環境・交通・科学のニュースはGitHub Actionsが6時間ごとに集める。記事本文は保持せず、事件・事故などの見出しを除外する設計で、記事内容を確認済みとは扱わない。ゲームの骨格は『ポケモン不思議のダンジョン 赤の救助隊』の逆コンパイルを研究対象にしたものだが、関連作品のコードや素材は使っていないとREADMEにある。",
+      "closingRemark": "見出しは迷宮に化けても、記事本文まで潜ってくるわけじゃない。現実地点の距離感は、なかなか慎重だな。",
       "features": [
-        "ニュース入力が迷宮の色や現象、観測ノートに反映される",
-        "ターン制で仲間や敵も行動し、観測した現象を仲間にできる",
-        "3階から脱出すると調査成功",
-        "現実地点でRSS見出し・配信元・日時・出典を表示",
-        "公開ニュースを6時間ごとに自動収集し、事件・事故などの見出しを除外"
+        "ニュースや入力内容に応じて迷宮の色・現象・観測ノートが変化",
+        "ターン制で仲間や敵も行動し、現象を倒すと最大3体まで仲間になる",
+        "各階の現実地点でRSS見出し・配信元・日時・出典を表示",
+        "地域・環境・交通・科学のニュースをGitHub Actionsで6時間ごとに収集",
+        "記事本文は保持せず、事件・事故などの見出しを自動除外"
       ],
       "technologies": [
         "JavaScript",
@@ -5119,12 +5119,12 @@
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1431824671,
-      "sourcePushedAt": "2026-11-24T22:22:14Z",
+      "sourcePushedAt": "2026-11-25T08:24:57Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1431824671,
         "name": "2026_10_24",
-        "pushedAt": "2026-11-24T22:22:14Z",
+        "pushedAt": "2026-11-25T08:24:57Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5134,8 +5134,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "61a230fa60910d87e8aafb89909979e257836db6e798c890f604467ec4d663c4",
-      "generatedAt": "2026-11-24T22:35:40.382Z"
+      "sourceFingerprint": "2f7413b6bd8159ef9b63c3a5b1489ce8636354b1b08c95e8e3323619b8899720",
+      "generatedAt": "2026-11-25T08:51:17.724Z"
     },
     "2026_10_24_2": {
       "title": "協調実験つきボクセルサバイバル",
@@ -5385,41 +5385,41 @@
     },
     "github-ai-researcher": {
       "title": "公開リポジトリ横断AI研究員",
-      "summary": "所有する公開GitHubリポジトリを横断して、技術や再利用できる実装を整理し、新しい研究・開発テーマを提案するツール。根拠ファイル付きのプロフィールやレポートを蓄積し、検索や比較ができるGitHub Pagesのダッシュボードも公開する。",
-      "detail": "こいつは、temesotejamが所有する公開リポジトリを調べ、過去の実装を次の研究や開発につなげるためのAI研究員だ。中ではGitHubの公開APIやRaw URLからREADME、構成、設定、代表的なソースを集め、技術や再利用候補を根拠ファイルと一緒に整理してる。更新があったリポジトリを中心にプロフィールを作り、横断分析レポートをMarkdownで蓄積する仕組みだな。GitHub Pagesの画面では検索や絞り込み、最大3件の比較に加え、109件のリポジトリ・技術・言語・テーマを結ぶKnowledge Graphも見られる。調査対象は公開リポジトリに限られ、コードは実行せず、元リポジトリの変更やIssue・Pull Request作成もしない。提案には誤りもあり得るから、実験に移る前に根拠を確かめる必要があるぜ。",
-      "closingRemark": "調査結果は自分のリポジトリにだけ書き戻す。研究員も、そこはずいぶん慎重らしい。",
+      "summary": "所有する公開GitHubリポジトリを横断して読み取り、実装や技術の再利用候補、プロジェクト間の組み合わせ、新しい研究テーマを提案する仕組み。根拠ファイル付きのプロフィールやレポートを蓄積し、検索・比較できるダッシュボードも公開する。",
+      "detail": "こいつは、temesotejamが所有する公開リポジトリを横断して調べ、再利用できそうな実装や次の研究テーマを見つけるAI研究員だ。GitHub ActionsからCopilot CLIを動かし、READMEや構成、設定、代表的なソースコードを集めて分析する。提案には根拠となるリポジトリやファイルを添え、プロフィールや日付別レポートとしてこのリポジトリに記録していく。GitHub Pagesの画面では検索や絞り込み、最大3件の比較ができ、109件のリポジトリ・技術・言語・テーマを結ぶナレッジグラフも見られる。調査対象は公開情報だけで、コードは実行せず、元リポジトリへの変更やIssue・Pull Requestの作成もしない。提案の正確さは保証されないから、実装に移る前に根拠を確かめる必要があるな。",
+      "closingRemark": "調査対象には読み取り専用、書き込み先は自分の保管庫だけ。研究員にしては、ずいぶん行儀がいい。",
       "features": [
-        "公開リポジトリの技術・構成・再利用候補を横断分析",
-        "根拠ファイル付きのプロフィールとMarkdownレポートを蓄積",
-        "GitHub Pagesで検索・絞り込み・最大3件の比較が可能",
-        "Knowledge Graphでリポジトリや技術、テーマのつながりを探索",
-        "更新分を定期分析し、成功しなかったプロフィール作成は再試行"
+        "公開リポジトリのプロフィールと横断分析レポートを生成",
+        "提案に根拠となるリポジトリやファイルを記録",
+        "更新分を定期分析し、変更がない日は処理をスキップ",
+        "Pagesで検索・絞り込み・最大3件の比較が可能",
+        "リポジトリや技術などを結ぶナレッジグラフを提供"
       ],
       "technologies": [
         "JavaScript",
-        "GitHub API",
         "GitHub Actions",
-        "GitHub Pages",
+        "GitHub API",
         "GitHub Copilot CLI",
+        "GitHub Pages",
         "Markdown",
         "JSON"
       ],
       "categories": [
-        "AI分析",
+        "AI研究支援",
         "GitHub自動化",
-        "リポジトリ横断調査",
+        "リポジトリ分析",
         "ダッシュボード"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1441487171,
-      "sourcePushedAt": "2026-11-24T04:07:12Z",
+      "sourcePushedAt": "2026-11-25T02:46:15Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1441487171,
         "name": "github-ai-researcher",
-        "pushedAt": "2026-11-24T04:07:12Z",
+        "pushedAt": "2026-11-25T02:46:15Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5429,8 +5429,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "c51d0921dd8963ace649b2906e6907a54bcefa8cbdfdd87cb6151de87a511fe8",
-      "generatedAt": "2026-11-24T10:05:58.202Z"
+      "sourceFingerprint": "552405c05bde0fdb8fd67c3b98f4e378204709c5a5b6b830c9c56c9cbd3ea2fa",
+      "generatedAt": "2026-11-25T08:51:52.877Z"
     },
     "personal-browser-os": {
       "title": "ブラウザー内の個人デスクトップ",
@@ -5533,43 +5533,43 @@
       "generatedAt": "2026-11-05T20:06:20.589Z"
     },
     "rw-walker-motion-control": {
-      "title": "歩行器のリアクションホイール制御",
-      "summary": "リアクションホイールと受動脚を使う歩行器を、実機上で制御・測定する実験用ファームウェアだ。足角の40 Hz推定、MEKF姿勢推定、不足仕事に応じた通電制御、圧縮ログの再開転送まで一通り扱う。",
-      "detail": "こいつは、リアクションホイールで左右に揺動し、受動脚を交互に振り出す歩行実験の制御をまとめたリポジトリだ。中ではM5Stack AtomS3R相当のESP32-S3環境でセンサー処理と歩行制御を動かし、MEKFで胴体姿勢を推定すると同時に、カメラから足角を40 Hzで取得して周期的に更新してる。歩行版v39-walk5では左へ戻る過程の不足仕事を再計算し、必要なら残り時間で再通電するが、十分な勢いが観測できれば早めに切り上げる仕組みだ。実験画面から開始でき、RWLOGを圧縮して保存したり、切断後に検証済み位置から再開したりもできる。READMEではビルド、書き込み、ログ再生、テストの入口が揃っていて、資料もかなり具体的だな。実機の歩行挙動や制御精度までは実測条件ごとの差が残るため、そこは公開されている再生や実験手順で確認する必要がある。",
-      "closingRemark": "歩行ロボットに、まだ足りない仕事を半周期から計算させるあたりがこの機体らしいところだ。",
+      "title": "リアクションホイール歩行制御",
+      "summary": "リアクションホイールと受動脚を使う歩行器の制御を、実測しながら調整する実験プロジェクトだ。胴体姿勢と足角を観測し、歩行開始、中心へ戻す介入、荷重移行の予測までを本体と測定画面で確認できる。",
+      "detail": "こいつは、リアクションホイールで左右に揺動し、受動脚を交互に振り出す歩行器を実際に動かすためのファームウェアと実験ツールだ。中ではMEKFで胴体姿勢を推定し、40 Hzで足角を配信しながら、エネルギーや過去の通過速度から歩行の開始、停止、中心への戻り入力を決めている。測定画面では約30秒の歩行を開始でき、RWLOGを圧縮保存して再開取得し、PythonツールでCRC確認、時系列展開、イベント再生を行える。PlatformIOでM5Stack AtomS3環境向けにビルドし、追加ライブラリやカメラ・通信処理は構成ファイルに細かく分けてある。資料から確認できるのは実機の制御と実測を繰り返す試作段階までで、一般的な歩行環境への汎用性や完成度までは判断できない。",
+      "closingRemark": "30秒の測定で止まり方まで記録し、次の足の荷重移行を読もうとしている点がこの歩行器らしい。",
       "features": [
-        "リアクションホイールによる左右のバランス制御",
-        "受動脚を対象にした足角の40 Hz推定",
-        "不足仕事を再計算する電流パルス制御",
-        "荷重移行を予測するv39の制御研究",
-        "圧縮RWLOGの再開転送と実験ログ再生"
+        "リアクションホイールと受動脚による歩行制御",
+        "MEKFによる胴体姿勢推定",
+        "40 Hz周期での足角配信",
+        "RWLOGの圧縮保存と通信断続時の再取得",
+        "実測ログのCSV変換とイベント再生"
       ],
       "technologies": [
         "C++",
         "Python",
-        "PlatformIO",
         "ESP32-S3",
-        "Arduino",
+        "M5Stack AtomS3",
+        "PlatformIO",
         "M5Unified",
         "M5GFX",
         "Adafruit AHRS"
       ],
       "categories": [
+        "歩行ロボット",
         "モーション制御",
-        "ロボット工学",
-        "組込みシステム",
-        "実験ツール"
+        "組み込みファームウェア",
+        "実験解析ツール"
       ],
       "status": "実験",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1451079532,
-      "sourcePushedAt": "2026-11-22T11:00:28Z",
+      "sourcePushedAt": "2026-11-25T08:32:05Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1451079532,
         "name": "rw-walker-motion-control",
-        "pushedAt": "2026-11-22T11:00:28Z",
+        "pushedAt": "2026-11-25T08:32:05Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5579,47 +5579,47 @@
         "fork": false,
         "language": "C++"
       },
-      "sourceFingerprint": "9013c4c51cc6ad8f531607fd138b407e85c05254d86f7a80dccaf8d79e250e82",
-      "generatedAt": "2026-11-22T19:51:20.440Z"
+      "sourceFingerprint": "674eb31ffae9a4fc390db703a1bdaff837ec048c563847b6c40dfe981d773a30",
+      "generatedAt": "2026-11-25T08:50:49.285Z"
     },
     "layer-workbench": {
-      "title": "ブラウザ向け3Dプリント作業場",
-      "summary": "OrcaSlicerを土台に、ブラウザで3Dプリントの準備を行う個人向けワークスペース。WebAssembly版エンジン候補は検証済みですが、公開ページからの読み込みやスライスにはまだ接続されていません。",
-      "detail": "こいつは、OrcaSlicerを土台にブラウザで3Dプリントの準備を進める、個人向けの作業場だ。中では上流のC++スライサーをWebAssembly化し、独自にスライサーを書き直すより、本家の設定や結果を保つ方針を取ってる。v2.5.0のエンジン候補はビルドやAPI適合性、非同期バインディング、Nodeでの動作確認を通過した。ただ、公開ページはSTL・3MF・OBJファイルを選んで一覧にできる段階で、モデル表示やエンジン呼び出し、スライスにはまだつながってない。安定版だけを追い、検証を終えるまで対応バージョンを上げない慎重さも特徴だな。デスクトップ版との完全な機能・G-code同等性や、GitHub Pagesで必要なブラウザの分離環境は未確認だ。",
-      "closingRemark": "エンジン候補は検証を通ったが、SharedArrayBufferとGitHub Pagesの相性はまだ未確認。刃物より先に、作業台の置き場所を決めるところだな。",
+      "title": "ブラウザー版3Dプリント準備室",
+      "summary": "OrcaSlicerのデスクトップ版に近い操作や設定を保ちながら、ブラウザーで使える3Dプリント準備環境を目指している。スライサーエンジン候補の検証は進んでいるが、公開画面はまだモデル表示やスライスに対応していない。",
+      "detail": "こいつは、OrcaSlicerの設定やプロジェクトとの互換性をできるだけ保った、ブラウザー向けの3Dプリント準備環境を作るプロジェクトだ。中では上流のC++スライサーをWebAssemblyで動かす方針を取り、v2.5.0の候補エンジンはビルドとAPI適合性、Nodeでの動作確認を通過している。安定版だけを追い、互換性を確かめてから統合基準を進める仕組みも用意されてる。いっぽう公開画面はまだ準備中で、STL・3MF・OBJの選択ファイルを一覧にできる段階にとどまり、形状表示やプロファイル読込、エンジン実行、スライスは未接続だ。さらにSharedArrayBufferが必要な候補エンジンとGitHub Pagesの相性も未検証で、完成したブラウザー版と呼ぶにはまだ早いな。",
+      "closingRemark": "エンジン候補は試験を通ったが、画面とはまだ別行動中。合流はこれからだな。",
       "features": [
-        "OrcaSlicerの上流C++実装をWebAssembly化する方針",
-        "STL・3MF・OBJファイルを選択して一覧表示",
-        "安定版の更新を毎日確認し、新版は追跡課題で知らせる",
-        "エンジン候補のAPI適合性や動作を検証",
-        "未検証の更新では既知の正常な配備を維持する方針"
+        "OrcaSlicer v2.5.0のWebAssemblyエンジン候補を検証",
+        "安定版リリースを毎日確認し、新版があれば追跡Issueを作成",
+        "STL・3MF・OBJファイルの選択一覧に対応",
+        "エンジンとブラウザーUIのコードを分離する方針",
+        "GitHub Pagesでの公開を想定するが、ブラウザー互換性は未検証"
       ],
       "technologies": [
         "JavaScript",
         "Python",
         "Three.js",
+        "C++",
         "WebAssembly",
         "OrcaSlicer",
-        "STL",
-        "3MF",
-        "OBJ"
+        "GitHub Actions",
+        "GitHub Pages"
       ],
       "categories": [
         "3Dプリント",
-        "ブラウザアプリ",
+        "ブラウザーアプリ",
         "スライサー",
         "WebAssembly"
       ],
-      "status": "ツール",
+      "status": "試作",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1453622619,
-      "sourcePushedAt": "2026-11-24T21:41:52Z",
+      "sourcePushedAt": "2026-11-25T08:25:51Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1453622619,
         "name": "layer-workbench",
-        "pushedAt": "2026-11-24T21:41:52Z",
+        "pushedAt": "2026-11-25T08:25:51Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5629,8 +5629,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "4c798e7535ec6c9d8595b1bfc6db1630612af32a5b1dd489d7a57140b729a173",
-      "generatedAt": "2026-11-24T22:35:55.226Z"
+      "sourceFingerprint": "ef7dbe98dadf30ea3c053c7873b26c14ec393d471d505345d1c03006486f026a",
+      "generatedAt": "2026-11-25T08:51:02.036Z"
     },
     "atoms3r-camera-pipeline": {
       "title": "AtomS3Rカメラ遅延検証",
@@ -5733,16 +5733,16 @@
       "generatedAt": "2026-11-22T19:51:35.025Z"
     },
     "matlab-simulink-stm32-nucleo": {
-      "title": "SimulinkでSTM32実機書き込み手順",
-      "summary": "MATLAB / SimulinkでSTM32向けコードを生成し、ビルドからST-LINK経由の実機書き込みまで進める手順をまとめている。NUCLEO-F446REでのLED点滅を確認した環境設定や、画面図付きのセットアップ・トラブル対応を参照できる。",
-      "detail": "こいつは、MATLAB / Simulinkで作った制御モデルをSTM32へ書き込み、実機で動かすまでの環境構築と手順を記録したものだ。中ではSTM32CubeMXの設定からCコード生成、GNU Arm ToolchainでのELF・HEX・BIN作成、ST-LINK経由の書き込みまでを順に追える。確認対象はNUCLEO-F446REで、LD2を点滅させるモデルを実機展開したところまで記録されてる。R2026bの各種ツールやCubeMX、CubeProgrammerのバージョンも明記され、画面配置図とトラブルシューティングも用意されている。ただし、確認に使ったSimulinkモデルとCubeMX設定ファイル自体はまだ登録されていない。そこは手順を見ながら再現する必要があるな。",
-      "closingRemark": "画面図と手順は揃っているが、肝心の.slxと.iocはまだ不在。再現の最後は、資料を頼りに自分で組み立てる段取りだ。",
+      "title": "Simulinkで動かすSTM32",
+      "summary": "MATLAB/SimulinkでSTM32向け制御モデルを作り、コード生成からNUCLEO-F446REへの書き込みまで試すための手順とサンプル一式。環境構築やトラブル対応の資料もあり、LED点滅を通して実機動作を確認できます。",
+      "detail": "こいつは、MATLAB/Simulinkで作った制御モデルをSTM32マイコンへ書き込み、実機で動かすまでの環境構築と手順をまとめたものだ。中心になるのはNUCLEO-F446REで、SimulinkのPulse GeneratorとSTM32 Digital Port Writeを使い、LD2を1秒ごとに点滅させるモデルが用意されてる。CubeMXの設定ファイルも同梱され、Simulinkからコード生成、GNU Arm Toolchainでのビルド、ST-LINK経由の書き込みまで確認できる。初めての人向けのセットアップ手順や画面配置図、トラブルシューティングも揃ってるな。ただし確認環境はWindows 11とMATLAB/Simulink R2026bで、ソフトウェア本体やライセンスは含まれない。書き込み時はFlash全消去が有効なので、残したいデータがあるなら設定の確認が先だ。",
+      "closingRemark": "LD2は点滅しても、書き込み設定しだいでFlashの中身は残らない。光る前に一度、Build optionsを見るのが無難だな。",
       "features": [
-        "NUCLEO-F446REでのLED点滅モデルの実機展開を確認",
-        "モデル作成からビルド、ST-LINK書き込みまでの手順を記録",
-        "MATLAB・Simulink関連ツールの確認済みバージョンを掲載",
-        "設定画面の配置図とトラブルシューティングを収録",
-        "実際に使用した.slxと.iocファイルは未登録"
+        "NUCLEO-F446RE用SimulinkモデルとCubeMX設定をZIPで提供",
+        "LD2（PA5）の1秒間隔点滅を実機で確認",
+        "Simulinkからコード生成・ビルド・ST-LINK書き込みまで手順を案内",
+        "環境構築手順、設定画面の配置図、トラブルシューティングを掲載",
+        "コンパイル済みバイナリやソフトウェア本体、ライセンスは同梱しない"
       ],
       "technologies": [
         "MATLAB",
@@ -5750,26 +5750,26 @@
         "STM32 Microcontroller Blockset",
         "STM32CubeMX",
         "GNU Arm Toolchain",
-        "STM32CubeProgrammer",
         "ST-LINK/V2-1",
+        "STM32CubeProgrammer",
         "NUCLEO-F446RE"
       ],
       "categories": [
         "組み込み開発",
-        "開発環境構築",
         "STM32",
-        "手順書"
+        "Simulink",
+        "チュートリアル"
       ],
       "status": "教材",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1469982324,
-      "sourcePushedAt": "2026-11-24T10:40:39Z",
+      "sourcePushedAt": "2026-11-25T05:23:32Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1469982324,
         "name": "matlab-simulink-stm32-nucleo",
-        "pushedAt": "2026-11-24T10:40:39Z",
+        "pushedAt": "2026-11-25T05:23:32Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5779,9 +5779,105 @@
         "fork": false,
         "language": ""
       },
-      "sourceFingerprint": "2b381bb72b5955baf77e7cd8ee8263cd5c907504a762914487daf466600d0225",
-      "generatedAt": "2026-11-24T22:36:05.921Z"
+      "sourceFingerprint": "b993daaae3998ae60cf8bf6b64580ddb12a9433be87137742bf3540d9046d378",
+      "generatedAt": "2026-11-25T08:51:37.489Z"
+    },
+    "pcb-workbench": {
+      "title": "EasyEDA向け基板製造ワークベンチ",
+      "summary": "EasyEDA Proの基板設計をブラウザから検証し、JLCPCB向けの製造データを確認するための作業環境だ。ローカル接続でERC/DRCや出力を扱い、ハッシュ照合付きの編集とレビュー専用の出力で、設計変更から製造確認までを支援する。",
+      "detail": "こいつは、EasyEDA Proで作業中の基板を検証し、JLCPCB向けの製造データをレビューするためのワークベンチだ。ブラウザで引き継ぎZIPを読み込み、ローカルのBridgeを通じて対象の設計に接続し、基板のDRCや回路図と連動したERC/DRCを実行する。BOMや部品配置データ、Gerberなども出力でき、部品番号やレイヤーの整合性を確かめられる。AIが用意したJSONパッチは、元ファイルのハッシュ確認やバックアップ、読み戻し検証を経て適用され、失敗時にはロールバックする仕組みだ。ただし、公開されている統合クーポンの検証結果は実際のNUCLEO基板の再検証ではなく、製造データも注文可能な状態とは限らない。最終確認と発注は人が行う設計になってる。",
+      "closingRemark": "CN7とCN10は、図面上の表裏と組立要件が食い違えば出力を止める。基板相手には、そのくらい用心深いほうがいい。",
+      "features": [
+        "引き継ぎZIPのマニフェストとSHA-256を検証して読み込む",
+        "ローカルBridge経由でEasyEDA Proに接続し、ERC/DRCを実行する",
+        "Gerber、BOM、CPL、STEP、ネットリストを出力・確認する",
+        "ハッシュ照合やバックアップ、ロールバックを備えたJSONパッチ適用",
+        "製造データはレビュー専用で、自動発注や注文確定は行わない"
+      ],
+      "technologies": [
+        "JavaScript",
+        "TypeScript",
+        "Python",
+        "EasyEDA Pro",
+        "KiCad",
+        "tscircuit",
+        "JLCPCB",
+        "Node.js"
+      ],
+      "categories": [
+        "EDA",
+        "基板設計",
+        "製造支援",
+        "ブラウザツール"
+      ],
+      "status": "ツール",
+      "confidence": "high",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
+      "sourceRepositoryId": 1471086401,
+      "sourcePushedAt": "2026-11-25T08:34:16Z",
+      "sourceDefaultBranch": "main",
+      "sourceMetadata": {
+        "repositoryId": 1471086401,
+        "name": "pcb-workbench",
+        "pushedAt": "2026-11-25T08:34:16Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "JavaScript"
+      },
+      "sourceFingerprint": "94e3e804fe0eacc856242a54324079b7cc3bda18378944250ea246b9f261893b",
+      "generatedAt": "2026-11-25T08:50:29.050Z"
+    },
+    "triple-formation-battle": {
+      "title": "三機編隊バトル試作",
+      "summary": "A・B・Cの三機を編隊として操り、並べる順番で戦闘形態を切り替えるブラウザゲーム。分離と再合流、移動補助、敵の優先指定などを試せる小規模なHTML5 Canvasの試作だ。",
+      "detail": "こいつは、三機の編隊を動かしながら、並べる順番が戦い方をどう変えるか試すブラウザゲームだ。中ではHTML5 CanvasとインラインJavaScriptで動き、ビルド手順や外部ランタイムへの依存はない。A・B・Cを異なる順で選ぶと、SABERやAEGISなど役割の違う六つの形態になり、Vキーで分離・再合流できる。WASDの移動補助やShiftのダッシュ、敵クリックでの優先指定も用意されていて、GitHub Pagesからそのまま遊べる。大作というより、編隊の切り替えと支援付き戦闘に焦点を絞った試作ってところだな。",
+      "closingRemark": "六つの形態を決めるのは三機の並び順。矢印キーの割り当ても最近調整されたらしい。",
+      "features": [
+        "三機の選択順で六つの戦闘形態に切り替え",
+        "編隊の分離と現在の形態への再合流",
+        "WASDによる移動補助とShiftダッシュ",
+        "敵をクリックして優先ターゲットに指定",
+        "GitHub Pagesで公開する単体HTML5 Canvasゲーム"
+      ],
+      "technologies": [
+        "HTML5",
+        "Canvas",
+        "JavaScript",
+        "GitHub Pages",
+        "GitHub Actions"
+      ],
+      "categories": [
+        "ゲーム",
+        "ブラウザゲーム",
+        "試作"
+      ],
+      "status": "実験",
+      "confidence": "high",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
+      "sourceRepositoryId": 1471323117,
+      "sourcePushedAt": "2026-11-25T06:22:35Z",
+      "sourceDefaultBranch": "main",
+      "sourceMetadata": {
+        "repositoryId": 1471323117,
+        "name": "triple-formation-battle",
+        "pushedAt": "2026-11-25T06:22:35Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "HTML"
+      },
+      "sourceFingerprint": "f88f41086b71bd80c84e954d06eb4565cd28637af167737603b99bc17822e04a",
+      "generatedAt": "2026-11-25T08:51:25.124Z"
     }
   },
-  "repositoryCount": 117
+  "repositoryCount": 119
 }
