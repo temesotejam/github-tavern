@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-24T10:28:00.382Z",
-  "repositoryCount": 117,
-  "pageCount": 70,
+  "generatedAt": "2026-11-25T09:15:59.430Z",
+  "repositoryCount": 119,
+  "pageCount": 72,
   "pages": {
     "2026_10_22": {
       "url": "https://temesotejam.github.io/2026_10_22/",
@@ -184,6 +184,11 @@
       "source": "github-pages",
       "status": 200
     },
+    "pcb-workbench": {
+      "url": "https://temesotejam.github.io/pcb-workbench/",
+      "source": "github-pages",
+      "status": 200
+    },
     "personal-browser-os": {
       "url": "https://temesotejam.github.io/personal-browser-os/",
       "source": "github-pages",
@@ -301,6 +306,11 @@
     },
     "splitsend-web": {
       "url": "https://temesotejam.github.io/splitsend-web/",
+      "source": "github-pages",
+      "status": 200
+    },
+    "triple-formation-battle": {
+      "url": "https://temesotejam.github.io/triple-formation-battle/",
       "source": "github-pages",
       "status": 200
     },
