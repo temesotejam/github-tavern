@@ -1,23 +1,23 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-26T08:37:07.946Z",
+  "generatedAt": "2026-11-26T21:43:11.437Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ案内酒場",
-      "summary": "temesotejamが所有する公開GitHubリポジトリを、酒場風の画面から検索・閲覧する個人ポータル。Copilotによる日本語説明やREADMEからの暫定紹介も表示でき、GitHub Pagesで静的に公開できる。",
-      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、古い情報端末を思わせる画面から探して読める個人ポータルだ。中ではGitHub APIから一覧を取得し、名前や説明、Topics、言語、Copilot要約をまとめて検索できるようにしてる。カテゴリで絞り込み、カードを選べば概要や確認済みの公開ページへのリンクも見られる。説明はCopilot CLIがREADMEやファイル構成などをもとに生成し、更新のないリポジトリは再解析を避ける仕組みだ。未解析ならREADMEから短い紹介を補うが、対象は公開リポジトリだけで、サイト側から変更や書き込みはしない。",
-      "closingRemark": "6時間ごとに更新を見回り、変わった棚だけ説明を仕込み直す。静かな酒場だが、帳簿はまめに付けてるな。",
+      "title": "公開リポジトリ探索酒場",
+      "summary": "公開GitHubリポジトリを酒場風の画面から検索し、気になるものを選んで概要を読める個人ポータル。GitHub APIで情報を取得し、Copilotによる日本語説明やREADMEからの暫定紹介も表示します。",
+      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、無機質な一覧ではなく酒場風の画面から探すための個人ポータルだ。中では公開GitHub APIからリポジトリ情報を取得し、名前や説明、Topics、言語、Copilot要約をまとめて検索できる。カードを選べば詳細を確認でき、要約がまだないものにはREADMEから短い紹介を出す仕組みもある。別の処理が6時間ごとに更新分を調べて要約データを作り、定期実行では一度に最大8件を解析する。GitHub Pagesで静的に公開でき、サイトから行うのは公開情報の読み取りだけだ。",
+      "closingRemark": "要約が追いつかない新顔にもREADMEの出番はある。公開情報だけで回す酒場らしいな。",
       "features": [
-        "所有する公開リポジトリをGitHub APIから取得",
-        "名前・説明・Topics・言語・Copilot要約を横断検索",
-        "カテゴリで絞り込み、カードから概要を表示",
-        "Copilot未解析時はREADMEから暫定説明を生成",
-        "GitHub Pagesで静的ホスティング可能"
+        "公開リポジトリをGitHub APIから取得",
+        "名前・説明・Topics・言語・要約を横断検索",
+        "技術領域ごとの簡易分類と詳細表示",
+        "Copilot CLIで更新分の日本語要約を生成",
+        "要約未作成時はREADMEから暫定紹介"
       ],
       "technologies": [
         "JavaScript",
-        "CSS",
         "HTML",
+        "CSS",
         "GitHub API",
         "GitHub Copilot CLI",
         "GitHub Actions",
@@ -26,18 +26,19 @@
       "categories": [
         "Web・ツール",
         "GitHub",
-        "開発者ポータル"
+        "リポジトリ検索",
+        "自動要約"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-11-25T21:50:40Z",
+      "sourcePushedAt": "2026-11-26T08:37:09Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-11-25T21:50:40Z",
+        "pushedAt": "2026-11-26T08:37:09Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -47,8 +48,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "7d9af8e84d39690fae1bd5a58c2bb979dfcd0f1ffd5127caf2bd773837721e84",
-      "generatedAt": "2026-11-26T08:37:07.946Z"
+      "sourceFingerprint": "7ada8e9854ff7a4e248d2e677d0a66ec8a329370d6abfcba97420fa121fb60fa",
+      "generatedAt": "2026-11-26T21:43:11.437Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -5090,42 +5091,43 @@
       "generatedAt": "2026-10-24T04:47:37.319Z"
     },
     "2026_10_24": {
-      "title": "ニュース生成迷宮ゲーム",
-      "summary": "現実のニュースや入力した出来事をもとに、迷宮の色や敵が変わる一人用の探索ゲーム。RSS見出しをゲーム内の現実地点として確かめながら、仲間を集めて3階からの脱出を目指します。",
-      "detail": "こいつは、現実のニュースや入力した出来事を迷宮に映し、探索しながら情報に触れる一人用ゲームだ。矢印キーやWASDで進み、プレイヤーが動くたびに仲間と敵も行動する。現象を「観測」して倒せば仲間にでき、最大3体まで連れていける。各階の現実地点ではRSSの見出し、配信元、日時、出典を確認でき、記事本文を読んだと装うことはない。ニュースの分類や現実地点での選択は次の階の敵や強さに影響し、地域・環境・交通・科学にはそれぞれ異なる副効果がある。公開ニュースは6時間ごとに取得され、事件や事故などの見出しは除外される仕組みだ。",
-      "closingRemark": "迷宮に現れるのは記事そのものじゃなく、見出しと出典まで。情報の境界線は、階段より見つけやすそうだな。",
+      "title": "現象救助隊：現実ニュース迷宮",
+      "summary": "現実のニュースや入力した現象から迷宮を作り、探索する一人用ブラウザゲームだ。ターン制の戦闘、仲間化、空腹や階層脱出に加え、RSSニュースを安全に収集する仕組みを備えている。",
+      "detail": "こいつは、現実のニュースや入力されたテーマを迷宮の色や出現する現象に変えるブラウザゲームだ。プレイヤー、仲間、敵が順番に行動するターン制で進み、現象を倒して仲間にしたり、携帯食や救護メモで生存を保つ。WASD、矢印キー、画面の方向ボタンで操作でき、最上位の機能は現実地点から選べる関連効果と収集テーマの副作用だ。中ではGitHub Actionsが公開RSSを6時間ごとに確認し、文章ではなく見出し、配信元、日時、出典だけをdata/news.jsonへ残している。事故や災害などの見出しは除外し、取得失敗時には直前のデータを残す構成だ。『ポケモン不思議のダンジョン 赤の救助隊』のコードや画像には依存せず、研究対象としている設計に独自のゲーム内容を載せている。",
+      "closingRemark": "迷宮を作る資料はニュースなのに、記事本文ではなく見出しだけを持ち帰る慎重さが効いている。",
       "features": [
-        "入力ニュースが迷宮の色や出現する現象に反映される",
-        "ターン制の探索と、最大3体までの仲間化",
-        "RSS記事を現実地点で確認し、選択が次階の難易度に影響",
-        "地域・環境・交通・科学ごとのゲーム内副効果",
-        "公開RSSを6時間ごとに自動収集し、取得失敗時は前回データを保持"
+        "ニュースやテーマで迷宮の構造と内容を変える",
+        "ターン制探索で敵の攻撃や仲間化を行う",
+        "3階層から脱出することを調査成功の条件にする",
+        "地域、環境、交通、科学のテーマ効果を反映",
+        "GitHub Actionsで公開RSSニュースを定期収集"
       ],
       "technologies": [
         "JavaScript",
         "HTML",
         "CSS",
-        "Canvas",
-        "RSS",
+        "Canvas API",
         "GitHub Actions",
-        "GitHub Pages"
+        "RSS",
+        "JSON",
+        "localStorage"
       ],
       "categories": [
-        "ブラウザーゲーム",
+        "ブラウザゲーム",
         "ターン制探索",
-        "ニュース活用",
-        "情報リテラシー"
+        "ニュース連動",
+        "ランダム生成"
       ],
       "status": "完成品",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1431824671,
-      "sourcePushedAt": "2026-11-26T08:10:18Z",
+      "sourcePushedAt": "2026-11-26T21:27:16Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1431824671,
         "name": "2026_10_24",
-        "pushedAt": "2026-11-26T08:10:18Z",
+        "pushedAt": "2026-11-26T21:27:16Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5135,8 +5137,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "413944a2d79c796168898240881a1b8dfb219e11dd062e344039fef09c5c6680",
-      "generatedAt": "2026-11-26T08:36:34.612Z"
+      "sourceFingerprint": "c80d7a6ba74e3b0fe208e3fdff0c613a1868475d6ef6a7248debfcd9c14d3ec2",
+      "generatedAt": "2026-11-26T21:42:50.345Z"
     },
     "2026_10_24_2": {
       "title": "協調実験つきボクセルサバイバル",
@@ -5583,43 +5585,43 @@
       "generatedAt": "2026-11-25T21:50:14.841Z"
     },
     "layer-workbench": {
-      "title": "ブラウザー向け3Dプリント準備環境",
-      "summary": "OrcaSlicerに近い設定やスライス結果を保ちながら、ブラウザーで3Dプリント準備を行う環境を目指している。WebAssemblyエンジン候補はテストを通過した一方、公開画面からの形状表示やスライスはまだ実装途中だ。",
-      "detail": "こいつは、OrcaSlicerのデスクトップ版に近い設定やスライス結果を保ちながら、ブラウザーで使える3Dプリント準備環境を目指してる。中では上流のC++スライサーをWebAssembly化する方針で、v2.5.0のエンジン候補はビルドに加え、one-slicer-api 0.7.0への適合性、非同期バインディング、NodeでのE2Eスモークテストを通過した。画面側はOrcaSlicer風のPrepare作業場を組み立て中で、STL・3MF・OBJの選択ファイルを一覧できるが、形状表示やプロファイル読込、エンジン呼び出し、スライスはまだつながっていない。さらにSharedArrayBufferに必要なクロスオリジン分離とGitHub Pagesでの配信方法も未検証で、候補エンジンの合格がブラウザー運用の完成を意味するわけじゃない。",
-      "closingRemark": "エンジン候補は試験済みでも、公開画面はまだスライス前。刃物だけ先に研いである状態だな。",
+      "title": "ブラウザー向け3Dプリント準備室",
+      "summary": "OrcaSlicerのスライス機能をブラウザーで使うことを目指す、個人向けの3Dプリント準備環境だ。v2.5.0のWebAssemblyエンジン候補は検証済みだが、公開画面からモデルを読み込んでスライスする段階には至っていない。",
+      "detail": "こいつは、デスクトップ版OrcaSlicerの設定やスライス結果との互換性をできるだけ保ちながら、ブラウザーで3Dプリントの準備をするための個人用ワークスペースだ。中では上流のC++スライサーをWebAssembly化し、画面向けの処理はエンジンから分けている。OrcaSlicer v2.5.0のエンジン候補はビルドされ、one-slicer-apiの適合確認やNode.jsでのテストを通過した。ただし、これは確認したAPI経路の話で、全機能の互換性やブラウザーでの運用までは保証しない。公開画面はまだ準備中で、STL・3MF・OBJの一覧表示はできるものの、形状表示やプロファイル読み込み、スライス実行は未接続だ。安定版だけを追い、検証できない更新では既知の正常版を保つ方針だな。",
+      "closingRemark": "エンジン候補は試験を通ったが、画面のスライス操作はまだ眠ったまま。合格証と実用品は、ここでは別々に扱われている。",
       "features": [
-        "上流の安定版リリースを追い、検証前に対応バージョンを進めない方針",
-        "OrcaSlicer v2.5.0のWebAssemblyエンジン候補がビルドと複数のテストを通過",
-        "画面からSTL・3MF・OBJファイルを選んで一覧できる",
-        "エンジン監査やデスクトップ版との互換性を記録した資料がある",
-        "安定版の更新を毎日確認し、新しいタグがあれば追跡用Issueを作成"
+        "OrcaSlicerの上流C++スライサーをWebAssembly化する方針",
+        "v2.5.0エンジン候補のビルドとAPI・Node.jsテスト",
+        "公開画面でSTL・3MF・OBJファイルを一覧表示",
+        "安定版リリースを定期確認し、新版を追跡するGitHub Actions",
+        "互換性を検証できない場合は既知の正常版を維持"
       ],
       "technologies": [
         "JavaScript",
         "Python",
         "Three.js",
+        "C++",
         "WebAssembly",
         "OrcaSlicer",
-        "STL",
-        "3MF",
-        "OBJ"
+        "one-slicer-api",
+        "GitHub Actions"
       ],
       "categories": [
         "3Dプリント",
-        "スライサー",
-        "Webアプリ",
-        "WebAssembly"
+        "ブラウザーアプリ",
+        "WebAssembly",
+        "スライサー"
       ],
-      "status": "試作",
+      "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1453622619,
-      "sourcePushedAt": "2026-11-26T08:17:32Z",
+      "sourcePushedAt": "2026-11-26T21:14:52Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1453622619,
         "name": "layer-workbench",
-        "pushedAt": "2026-11-26T08:17:32Z",
+        "pushedAt": "2026-11-26T21:14:52Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5629,8 +5631,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "490efab4c0fff2faa44fd442c069be253701badda3ca3f7901e881d1d2d51513",
-      "generatedAt": "2026-11-26T08:36:22.575Z"
+      "sourceFingerprint": "f1c1a9a256bcc7baad0b42e65b0310d2273bc67b70b66dfd441e80b331e520f1",
+      "generatedAt": "2026-11-26T21:43:01.816Z"
     },
     "atoms3r-camera-pipeline": {
       "title": "AtomS3Rカメラ遅延検証",
