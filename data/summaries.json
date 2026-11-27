@@ -1,43 +1,45 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-27T08:48:03.868Z",
+  "generatedAt": "2026-11-27T21:28:27.787Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ探索酒場",
-      "summary": "temesotejamが公開しているGitHubリポジトリを、酒場風の画面から探して内容を確かめる個人ポータル。GitHub APIで一覧を取得し、横断検索や分類、詳細表示に対応するほか、CopilotがREADMEなどを根拠に日本語説明を定期更新する。",
-      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、古い情報端末を思わせる画面から探して閲覧するための個人ポータルだ。中ではGitHub APIから一覧を取得し、名前や説明、Topics、言語、Copilot要約を横断検索できるようにしてる。カードを選べば概要や特徴を確認でき、Copilotの解析がまだないリポジトリにはREADMEから作った暫定説明も表示する。説明の更新はGitHub Actionsが6時間ごとに確認し、前回から更新されたものを最大8件ずつCopilot CLIで解析する仕組みだな。GitHub Pagesで静的に公開できる一方、対象は公開リポジトリだけで、サイトから削除や変更などの書き込みはしない。",
-      "closingRemark": "定期便は一度に最大8件、変更がないものは再解析しない。酒場の帳簿も、差分がなければ静かなものだな。",
+      "title": "公開リポジトリ案内酒場",
+      "summary": "公開GitHubリポジトリを検索・閲覧するための個人ポータル。Copilotによる日本語の説明やREADMEからの暫定紹介を添え、酒場を巡るような画面でリポジトリを選べます。",
+      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを探して中身を確かめるための個人ポータルだ。ブラウザからGitHub APIで一覧を取得し、名前や説明、Topics、言語、Copilot要約を横断検索できる。カードを選べば概要が開き、解析済みならREADMEやファイル構成などを根拠にした日本語説明が読めるし、まだ解析されていないものにはREADMEから短い暫定紹介を添える。裏側ではActionsが6時間ごとに更新を確認し、変更のあったリポジトリをCopilot CLIで解析して要約データを更新する仕組みだ。ただし定期実行は一度に最大8件で、対象は公開リポジトリのみ。サイトからリポジトリを書き換えることもない。",
+      "closingRemark": "要約の更新は6時間ごと、定期便は最大8件。酒場の帳簿も、一晩で全部は書き換えないらしい。",
       "features": [
-        "公開リポジトリ一覧をGitHub APIから取得",
+        "公開リポジトリをGitHub APIから取得",
         "名前・説明・Topics・言語・要約を横断検索",
-        "技術領域による簡易分類とカード形式の詳細表示",
-        "Copilot CLIで日本語説明を定期生成・更新",
-        "解析前はREADMEから暫定説明を表示"
+        "カテゴリでの簡易分類とカード形式の詳細表示",
+        "Copilot CLIで要約を定期生成し、JSONに保存",
+        "未解析リポジトリはREADMEから暫定紹介"
       ],
       "technologies": [
         "JavaScript",
         "CSS",
         "HTML",
         "GitHub API",
+        "GitHub Pages",
         "GitHub Actions",
         "GitHub Copilot CLI",
-        "GitHub Pages"
+        "JSON"
       ],
       "categories": [
-        "Webツール",
-        "検索ポータル",
-        "GitHub管理"
+        "Web・ツール",
+        "GitHub",
+        "検索",
+        "リポジトリ閲覧"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-11-26T21:43:12Z",
+      "sourcePushedAt": "2026-11-27T08:48:05Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-11-26T21:43:12Z",
+        "pushedAt": "2026-11-27T08:48:05Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -47,8 +49,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "756961d4c2776e75b1c83077fcae71e184743d85bacab3a2e9bbcc6d18d516d5",
-      "generatedAt": "2026-11-27T08:48:03.868Z"
+      "sourceFingerprint": "37c0c2b7770b13b772f1b908187ca7da0db53827f1831f8ed0c39620334cc86f",
+      "generatedAt": "2026-11-27T21:28:27.787Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -5089,42 +5091,42 @@
       "generatedAt": "2026-10-24T04:47:37.319Z"
     },
     "2026_10_24": {
-      "title": "ニュース連動型ダンジョン探索ゲーム",
-      "summary": "現実のニュースや入力した出来事をもとに迷宮が変わる、一人用の探索ゲーム。仲間や敵が交互に行動するターン制で、RSSから見出しを自動収集し、出典を確かめながら3階からの脱出を目指します。",
-      "detail": "こいつは、現実のニュースや入力した出来事を迷宮に映し出して探索する、一人用のターン制ゲームだ。中ではプレイヤーの行動ごとに仲間と敵も動き、「観測」した現象を仲間にしたり、食料や救護メモで状態を整えたりしながら3階からの脱出を目指す。地域・環境・交通・科学のニュースはGitHub Actionsが6時間ごとにRSSから集め、記事の見出しや出典を各階の「現実地点」として表示する。入力したニュースは迷宮の色や出現する現象にも反映され、現実地点での進み方の選択は次の階の構成に影響するが、記事への賛否を示すものではない。事件や災害などの見出しは除外し、記事本文も保存しない設計で、本文まで確認したと誤解させないようにしてる。",
-      "closingRemark": "現実地点で選ぶのは迷宮の進み方だけ。ニュースへの賛否まで冒険者に背負わせないあたり、線引きは慎重だな。",
+      "title": "現象救助隊・現実迷宮",
+      "summary": "現実の現象やニュースを手がかりに、毎回形の変わる迷宮を探索する一人用ゲーム。仲間や敵がターンごとに動くダンジョン探索に、RSSニュースの自動収集と記事情報を使った迷宮の変化を組み合わせています。",
+      "detail": "こいつは、現実の現象や小さなニュースを手がかりに、形の変わる迷宮を探索する一人用ゲームだ。中ではプレイヤーの一手ごとに仲間と敵も動き、「観測」した敵を仲間にしたり、食料で空腹をしのいだりしながら3階からの脱出を目指す。入力したニュースは迷宮の色や出現する現象、観測ノートに反映され、各階の現実地点ではRSS記事の見出し・配信元・日時・出典を確認できる。ニュースは地域・環境・交通・科学の公開RSSからGitHub Actionsで6時間ごとに集め、事件や事故などの見出しは除外する仕組みだ。記事本文を保持・確認したとは扱わず、現実地点での選択も記事への賛否ではない。ブラウザで遊べる一方、記事の内容そのものをゲーム内で検証するものではないってところだな。",
+      "closingRemark": "現実地点に出るのは見出しと出典まで。迷宮のほうが、記事本文を読んだふりはしないらしい。",
       "features": [
-        "入力ニュースが迷宮の色や現象、観測ノートに反映される",
-        "仲間と敵がプレイヤーの行動ごとに動くターン制探索",
-        "観測した現象を最大3体まで仲間にできる",
-        "RSS見出し・配信元・日時・出典を現実地点で確認できる",
-        "公開ニュースを6時間ごとに自動収集し、危険な話題の見出しを除外する"
+        "毎回形の変わる迷宮を探索する一人用ゲーム",
+        "ターン制の移動・戦闘と、観測した敵の仲間化",
+        "ニュース入力が迷宮の色や出現現象に反映される",
+        "現実地点でRSS記事の見出し・配信元・日時・出典を表示",
+        "公開RSSを6時間ごとに自動収集し、事件・事故などの見出しを除外"
       ],
       "technologies": [
         "JavaScript",
         "HTML",
         "CSS",
         "Canvas API",
-        "GitHub Actions",
         "RSS",
+        "GitHub Actions",
         "GitHub Pages"
       ],
       "categories": [
-        "ブラウザーゲーム",
-        "ターン制探索",
-        "ニュース連動",
-        "ローグライク"
+        "ブラウザゲーム",
+        "ローグライク",
+        "ニュース",
+        "一人用ゲーム"
       ],
-      "status": "試作",
+      "status": "完成品",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1431824671,
-      "sourcePushedAt": "2026-11-27T08:20:36Z",
+      "sourcePushedAt": "2026-11-27T21:11:36Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1431824671,
         "name": "2026_10_24",
-        "pushedAt": "2026-11-27T08:20:36Z",
+        "pushedAt": "2026-11-27T21:11:36Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5134,8 +5136,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "9867a36e279345e631554f4eb0518f8716bfbe7783d7e5b959f40c19bebe39af",
-      "generatedAt": "2026-11-27T08:47:44.285Z"
+      "sourceFingerprint": "aea56b78b2fd778284cf578e69ed45c56d2ea2842ce063be639408bf1e8bf5b4",
+      "generatedAt": "2026-11-27T21:27:43.821Z"
     },
     "2026_10_24_2": {
       "title": "協調実験つきボクセルサバイバル",
@@ -5534,15 +5536,15 @@
     },
     "rw-walker-motion-control": {
       "title": "リアクションホイール歩行制御",
-      "summary": "リアクションホイールで左右に揺れ、受動脚を交互に振り出す歩行器の制御ファームウェアと実験ツール群。足角のカメラ計測、支持移行を考慮した制御、Wi-Fi測定画面とログ解析まで揃い、実機での歩行検証を支える。",
-      "detail": "こいつは、リアクションホイールで左右に揺れながら受動脚を交互に振り出す歩行器を動かし、実機で歩行を検証するための一式だ。中ではカメラ画像から左右の足角を求め、足や胴体の状態をもとにホイールへの入力を決めている。通常歩行版には支持移行やエネルギーに基づく制御が組み込まれ、その判断根拠やモデルの仮定は仕様書で追える。書き込み用ページと機体のWi-Fi測定画面があり、測定後はRWLOGを保存してCSV化し、解析や歩行再生に回せるってわけだ。ただし、実機で確認した版や未確認点は引き継ぎ資料で確認する必要があり、制御モデルにも明記された限界がある。",
-      "closingRemark": "通常歩行版の名前は walk7-logfix1。歩行の記録まで含めて、版名もなかなか忙しい。",
+      "summary": "リアクションホイールで左右に揺れ、受動脚を交互に振り出す歩行器の制御ファームウェアだ。足角のカメラ計測や支持移行の予測、ブラウザーでの測定とログ解析まで、実機試験を支える仕組みが揃っている。",
+      "detail": "こいつは、リアクションホイールの左右の揺れを使って受動脚を交互に振り出す歩行器の制御ファームウェアだ。中ではAtomS3R（ESP32-S3）上で歩行周期ごとのホイール入力を決め、カメラ画像から足角を捉えながら、支持脚が移るタイミングを予測している。エネルギーに基づく入力の許可や失速からの回復も含め、歩行版は `walking-support-transfer-v39-walk7-logfix1` としてまとめられている。機体のWi-Fiにつないでブラウザーから歩行を開始し、状態を見たりRWLOGを保存したりできるほか、PC側の回帰試験や実測ログ・動画の解析にも対応する。実機での確認を重ねている試作段階で、予測や制御の妥当性はログと試験結果に照らして確かめる作りだな。",
+      "closingRemark": "±8度・30秒の歩行を測ってRWLOGを持ち帰る。歩いた結果を後から検算するところまで、ずいぶん几帳面な機体だな。",
       "features": [
-        "リアクションホイールと受動脚を使う歩行器の制御",
-        "カメラ画像から左右の足角を計測",
-        "支持移行・エネルギーを考慮した歩行入力",
+        "リアクションホイールと受動脚による交互歩行",
+        "カメラ画像からの足角計測と40 Hzでの定期配信",
+        "支持移行予測やエネルギーに基づく歩行制御",
         "ブラウザーからの実機測定とRWLOG保存",
-        "ログ解析、シミュレーション、回帰試験を収録"
+        "回帰試験、実測ログ解析、動画・CADによる姿勢検証"
       ],
       "technologies": [
         "C++",
@@ -5555,21 +5557,21 @@
         "Adafruit AHRS"
       ],
       "categories": [
-        "ロボティクス",
+        "ロボット",
         "歩行制御",
         "組み込みファームウェア",
-        "実験・解析ツール"
+        "実機実験"
       ],
       "status": "実験",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1451079532,
-      "sourcePushedAt": "2026-11-27T08:22:28Z",
+      "sourcePushedAt": "2026-11-27T11:47:22Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1451079532,
         "name": "rw-walker-motion-control",
-        "pushedAt": "2026-11-27T08:22:28Z",
+        "pushedAt": "2026-11-27T11:47:22Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5579,47 +5581,47 @@
         "fork": false,
         "language": "C++"
       },
-      "sourceFingerprint": "0647512cc209e5e0215c3609f4a2723ca6f598fa80a0cc8eb201cb86b805fe46",
-      "generatedAt": "2026-11-27T08:47:34.486Z"
+      "sourceFingerprint": "d855cf16c1d07802aaede3d60d2a8ee9dbeb4b3b377ebc9b5eb65d9417913b3f",
+      "generatedAt": "2026-11-27T21:28:16.941Z"
     },
     "layer-workbench": {
-      "title": "ブラウザー版3Dプリント準備環境",
-      "summary": "OrcaSlicerのデスクトップ版に近い動作を目指す、個人向けのブラウザー作業環境。v2.5.0のWebAssemblyエンジン候補は検証済みですが、公開画面からの読み込みやスライス実行はまだ接続されていません。",
-      "detail": "こいつは、OrcaSlicerに近い環境で3Dプリントの準備をブラウザーから行うための作業場だ。中では上流のC++スライサーをWebAssembly化して使う方針で、v2.5.0の候補はビルドとAPI適合性、Node.jsでのテストを通している。安定版だけを追い、互換性を確かめてから基準バージョンを進めるのが流儀だな。ただし公開ページはまだ準備画面の枠組みで、STL・3MF・OBJの一覧表示はできても、モデル表示やプロファイル読み込み、エンジン実行、スライスにはつながっていない。デスクトップ版との完全な機能・出力一致や、ブラウザーでのエンジン動作も未確認の範囲が残ってる。",
-      "closingRemark": "v2.5.0候補の検証は進んだが、公開画面のスライス操作はまだお預け。急いで安定版を名乗らないあたり、慎重な仕事だな。",
+      "title": "ブラウザー向け3Dプリント準備環境",
+      "summary": "OrcaSlicerの挙動や設定、スライス結果をできるだけ保ちながら、ブラウザーで使える3Dプリント準備環境を目指している。v2.5.0のWebAssemblyエンジン候補は検証済みだが、公開画面からのスライス実行にはまだつながっていない。",
+      "detail": "こいつは、デスクトップ版OrcaSlicerの挙動に近い3Dプリント準備環境を、ブラウザーで使えるようにする個人向けの作業場だ。中では上流のC++スライサーをWebAssembly化し、画面側のコードと分けて扱う方針を取ってる。v2.5.0のエンジン候補はAPI適合性や非同期処理、実際の移動・Zホップなどを検証済みで、安定版だけを追う更新ワークフローもある。ただ、公開画面はいまのところファイル一覧などを扱う段階で、モデル表示やプロファイル読み込み、エンジン実行、スライスは未接続だ。機能の差やブラウザー展開の課題も監査資料に整理されていて、完成品というより、検証を重ねながら組み立てているところだな。",
+      "closingRemark": "エンジンはZホップまで実測検証済みだが、公開画面のスライスボタンはまだ出番待ちというわけだ。",
       "features": [
-        "OrcaSlicerの安定版を基準に追跡",
-        "C++スライサーのWebAssembly移植を優先",
-        "エンジン候補のビルド・API適合性・E2Eテストを実施",
-        "新しい安定版を検知して追跡Issueを作成",
-        "公開画面は未接続の機能が残る準備段階"
+        "OrcaSlicer v2.5.0のWebAssemblyエンジン候補を検証",
+        "API適合性、非同期処理、実際の移動動作を確認",
+        "安定版リリースを日次確認し、新版を追跡する仕組み",
+        "エンジン監査と機能差分を資料化",
+        "公開画面ではSTL・3MF・OBJファイルを選択可能"
       ],
       "technologies": [
         "JavaScript",
         "Python",
-        "C++",
-        "WebAssembly",
         "Three.js",
-        "Node.js",
+        "OrcaSlicer",
+        "WebAssembly",
         "GitHub Actions",
-        "OrcaSlicer"
+        "GitHub Pages",
+        "STL"
       ],
       "categories": [
         "3Dプリント",
         "ブラウザーアプリ",
-        "WebAssembly",
-        "スライサー"
+        "スライサー",
+        "WebAssembly"
       ],
       "status": "試作",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1453622619,
-      "sourcePushedAt": "2026-11-27T08:46:12Z",
+      "sourcePushedAt": "2026-11-27T21:26:19Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1453622619,
         "name": "layer-workbench",
-        "pushedAt": "2026-11-27T08:46:12Z",
+        "pushedAt": "2026-11-27T21:26:19Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5629,8 +5631,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "b727c88facb74377944912e75e9878855994ec06f3eb8d98eaced400e61ddce6",
-      "generatedAt": "2026-11-27T08:47:15.169Z"
+      "sourceFingerprint": "dd98f1d7e504f68df89f641b10ac23083420b0c14697133831a2940903df9837",
+      "generatedAt": "2026-11-27T21:27:32.971Z"
     },
     "atoms3r-camera-pipeline": {
       "title": "AtomS3Rカメラ遅延検証",
@@ -5784,42 +5786,42 @@
     },
     "pcb-workbench": {
       "title": "PCB設計・製造レビュー作業台",
-      "summary": "EasyEDA Pro上の基板をブラウザーから検査・編集し、JLCPCB向けの製造確認用データをまとめる作業台。AIパッチ適用前後の改訂確認やERC/DRCを経て、部品表・配置データ・Gerberを同一版から出力できるが、注文可否は人が最終確認する。",
-      "detail": "こいつは、EasyEDA Proで開いている基板を確認・編集し、JLCPCBへ渡す前のレビュー資料を作るブラウザー中心の作業台だ。中ではローカルBridge経由で基板と接続し、ERC/DRCの結果を保存したり、制限付きのAIパッチをネイティブファイルへ反映したりする。書き込み前には元データのSHA-256を照合し、失敗時はバックアップから戻す仕組みもある。製造用ZIPにはGerber、BOM/CPL、検証情報などをまとめ、編集後は再検査する流れだな。ただし出力はREVIEW ONLYで、自動発注もしない。自動検証で確認できているのは汎用クーポンで、実際のNUCLEO基板は利用者のEasyEDA環境で新たに検査する必要がある。",
-      "closingRemark": "CN7/CN10の表裏違いは出力ゲートが止めるが、部品の在庫までは保証しない。最後は人の目の出番だな。",
+      "summary": "EasyEDA Proの基板をブラウザーから確認・編集し、ERC/DRCやJLCPCB向けのレビュー用出力をまとめる作業台だ。AIパッチの安全な適用や独立したJSON変換にも対応するが、製造発注に使える状態かの最終確認は別途必要になる。",
+      "detail": "こいつは、EasyEDA Proの基板を確認・編集し、製造前の検証とレビュー用データ作成を助ける作業台だ。ブラウザーでローカルのBridgeにつなぎ、ERC/DRCを実行したり、内容を限定したAI生成パッチを適用したりできる。変更前後のファイル検査やバックアップ、読み戻し確認も行い、JLCPCB向けにはGerber、BOM、CPLなどをソースのハッシュと結び付けたレビュー用ZIPにまとめる。別経路として、ブラウザーで作ったJSONからKiCad候補を生成する仕組みもあり、現状は対応範囲の限られた設計例で検証している。出力はあくまでREVIEW ONLYで、実基板の独立検証や部品・実装条件の確認を済ませるまでは発注できない。",
+      "closingRemark": "出力にDO_NOT_ORDERまで同梱するあたり、作業台自身も「まだ発注するな」と念を押してるわけだ。",
       "features": [
-        "検証済みの基板引き継ぎZIPをブラウザーで読み込める",
-        "ローカルEasyEDA Pro Bridge経由で対象基板に接続する",
-        "ERC/DRC結果をJSONで保存できる",
-        "改訂ハッシュ照合とバックアップ復元を備えたガード付き編集",
-        "Gerber・BOM/CPLなどを含むレビュー専用のJLCPCB向けZIPを生成する"
+        "EasyEDA ProのローカルBridge接続とERC/DRC実行",
+        "変更前後を検査するAIパッチ適用と失敗時のロールバック",
+        "ソース改訂のハッシュを記録したJLCPCBレビュー用ZIP生成",
+        "独立したJSON設計からKiCad候補を変換",
+        "ブラウザーで論理接続や部品配置を編集する初期エディター"
       ],
       "technologies": [
-        "EasyEDA Pro",
-        "JLCPCB",
-        "KiCad 10",
         "JavaScript",
         "TypeScript",
         "Python",
-        "Node.js",
+        "Bun",
+        "EasyEDA Pro",
+        "KiCad",
+        "JLCPCB",
         "tscircuit"
       ],
       "categories": [
         "PCB設計",
-        "電子工作",
-        "製造支援",
+        "EDA",
+        "製造レビュー",
         "ブラウザーツール"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1471086401,
-      "sourcePushedAt": "2026-11-25T10:34:01Z",
+      "sourcePushedAt": "2026-11-27T20:37:26Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1471086401,
         "name": "pcb-workbench",
-        "pushedAt": "2026-11-25T10:34:01Z",
+        "pushedAt": "2026-11-27T20:37:26Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5829,8 +5831,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "f0bbc9d59d32ccce03a991442a7b1483246fc9b8a3c94fea395bafad9181c89f",
-      "generatedAt": "2026-11-25T21:50:28.818Z"
+      "sourceFingerprint": "fd00dd4a1180f2509a756ca83bb0f9b2a1548d8042b91b36bfd7acc022b2cba9",
+      "generatedAt": "2026-11-27T21:27:53.493Z"
     },
     "triple-formation-battle": {
       "title": "三機編隊バトル試作",
@@ -5877,7 +5879,57 @@
       },
       "sourceFingerprint": "f88f41086b71bd80c84e954d06eb4565cd28637af167737603b99bc17822e04a",
       "generatedAt": "2026-11-25T08:51:25.124Z"
+    },
+    "mast3r-photo-to-3d": {
+      "title": "写真・動画の3D復元ツール",
+      "summary": "複数の写真からカラー点群を作り、ブラウザーで確認してPLYに保存できるツール。動画では動く物体を部品ごとに追跡し、姿勢と形状を時系列で復元でき、複数の推定方式も比べられます。",
+      "detail": "こいつは、写真や短い動画から物体の形と動きを3Dで確かめるためのツールだ。写真モードでは、同じ被写体を別の位置から撮った2〜10枚をMASt3Rで処理し、色付き点群を作ってPLYに書き出す。動画モードは最初のコマで指定した1〜6個の部品を追い、見えた表面を部品ごとの座標に蓄積しながら、時刻ごとの姿勢を記録する仕組みになってる。MASt3Rのほか、RGB-SfM、Depth Anything V2、MonST3Rも選べて、復元結果を再生したり方式ごとに比べたりできる。ブラウザー画面やコマンド、GitHub Actionsから扱えるが、単眼動画の寸法はスケールに依存し、映らない面や奥行き方向の動きは実測なしに確かめきれない。",
+      "closingRemark": "写真の結果はPLY、動画の結果は時系列JSON。出口は整ってるが、映らなかった面まで記録してくれるわけじゃない。",
+      "features": [
+        "2〜10枚の写真からカラー点群を生成",
+        "点群をブラウザーで回転・拡大し、PLYで保存",
+        "動画内の1〜6個の剛体部品を追跡して時系列復元",
+        "動画の推定方式を選択し、結果を比較",
+        "ブラウザー、コマンド、GitHub Actionsから実行"
+      ],
+      "technologies": [
+        "Python",
+        "MASt3R",
+        "OpenCV",
+        "NumPy",
+        "SciPy",
+        "RGB-SfM",
+        "Depth Anything V2",
+        "MonST3R"
+      ],
+      "categories": [
+        "3D再構成",
+        "コンピュータビジョン",
+        "点群処理",
+        "動画解析"
+      ],
+      "status": "ツール",
+      "confidence": "high",
+      "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
+      "sourceRepositoryId": 1474328080,
+      "sourcePushedAt": "2026-11-27T15:02:07Z",
+      "sourceDefaultBranch": "main",
+      "sourceMetadata": {
+        "repositoryId": 1474328080,
+        "name": "mast3r-photo-to-3d",
+        "pushedAt": "2026-11-27T15:02:07Z",
+        "description": "",
+        "topics": [],
+        "homepage": "",
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "fork": false,
+        "language": "Python"
+      },
+      "sourceFingerprint": "34ec5f2949cbe553d8778d70df1c8d547ccb70f1384c417a434e062098108099",
+      "generatedAt": "2026-11-27T21:28:05.700Z"
     }
   },
-  "repositoryCount": 119
+  "repositoryCount": 120
 }
