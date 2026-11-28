@@ -1,45 +1,44 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-27T21:28:27.787Z",
+  "generatedAt": "2026-11-28T08:04:17.483Z",
   "repositories": {
     "github-tavern": {
-      "title": "公開リポジトリ案内酒場",
-      "summary": "公開GitHubリポジトリを検索・閲覧するための個人ポータル。Copilotによる日本語の説明やREADMEからの暫定紹介を添え、酒場を巡るような画面でリポジトリを選べます。",
-      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを探して中身を確かめるための個人ポータルだ。ブラウザからGitHub APIで一覧を取得し、名前や説明、Topics、言語、Copilot要約を横断検索できる。カードを選べば概要が開き、解析済みならREADMEやファイル構成などを根拠にした日本語説明が読めるし、まだ解析されていないものにはREADMEから短い暫定紹介を添える。裏側ではActionsが6時間ごとに更新を確認し、変更のあったリポジトリをCopilot CLIで解析して要約データを更新する仕組みだ。ただし定期実行は一度に最大8件で、対象は公開リポジトリのみ。サイトからリポジトリを書き換えることもない。",
-      "closingRemark": "要約の更新は6時間ごと、定期便は最大8件。酒場の帳簿も、一晩で全部は書き換えないらしい。",
+      "title": "公開リポジトリ探索酒場",
+      "summary": "個人所有の公開GitHubリポジトリを、酒場風の画面から探して選べるポータルだ。名前や説明、言語などで横断検索でき、Copilotの日本語解説やREADME由来の暫定説明も確認できる。",
+      "detail": "こいつは、temesotejamが公開しているGitHubリポジトリを、古い情報端末を思わせる画面から探して読むためのポータルだ。中ではGitHub APIから一覧を取得し、名前やDescription、Topics、言語、Copilot要約を横断検索したり、技術領域で絞り込んだりできる。カードを選べば概要が開き、解析済みならREADMEや設定、ファイル構成などを根拠にした日本語説明が出る。新しいリポジトリにはREADMEから短い説明を補い、Copilot解析は6時間ごとに更新対象を確認して最大8件ずつ処理する仕組みだ。公開リポジトリ専用で、サイトから削除や変更などの書き込みはしない。",
+      "closingRemark": "棚卸しは6時間ごと、運ぶのは一度に最大8件。酒場の記録係も、なかなか堅実なペースだな。",
       "features": [
         "公開リポジトリをGitHub APIから取得",
         "名前・説明・Topics・言語・要約を横断検索",
-        "カテゴリでの簡易分類とカード形式の詳細表示",
-        "Copilot CLIで要約を定期生成し、JSONに保存",
-        "未解析リポジトリはREADMEから暫定紹介"
+        "技術領域ごとの分類とカード表示",
+        "Copilot CLIで日本語説明を定期生成",
+        "未解析時はREADMEから短い説明を表示"
       ],
       "technologies": [
         "JavaScript",
         "CSS",
         "HTML",
         "GitHub API",
-        "GitHub Pages",
         "GitHub Actions",
         "GitHub Copilot CLI",
-        "JSON"
+        "GitHub Pages"
       ],
       "categories": [
-        "Web・ツール",
-        "GitHub",
-        "検索",
-        "リポジトリ閲覧"
+        "Webアプリ",
+        "GitHubツール",
+        "リポジトリ検索",
+        "自動要約"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1356723072,
-      "sourcePushedAt": "2026-11-27T08:48:05Z",
+      "sourcePushedAt": "2026-11-27T21:40:41Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1356723072,
         "name": "github-tavern",
-        "pushedAt": "2026-11-27T08:48:05Z",
+        "pushedAt": "2026-11-27T21:40:41Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -49,8 +48,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "37c0c2b7770b13b772f1b908187ca7da0db53827f1831f8ed0c39620334cc86f",
-      "generatedAt": "2026-11-27T21:28:27.787Z"
+      "sourceFingerprint": "908f6c615d34c61caf7a7361253cee82f6156c7f5156eb68e378b6f6e1ebe8d3",
+      "generatedAt": "2026-11-28T08:04:17.483Z"
     },
     "semicircle-decay-sim": {
       "title": "足裏形状付きロッキング解析",
@@ -5091,42 +5090,43 @@
       "generatedAt": "2026-10-24T04:47:37.319Z"
     },
     "2026_10_24": {
-      "title": "現象救助隊・現実迷宮",
-      "summary": "現実の現象やニュースを手がかりに、毎回形の変わる迷宮を探索する一人用ゲーム。仲間や敵がターンごとに動くダンジョン探索に、RSSニュースの自動収集と記事情報を使った迷宮の変化を組み合わせています。",
-      "detail": "こいつは、現実の現象や小さなニュースを手がかりに、形の変わる迷宮を探索する一人用ゲームだ。中ではプレイヤーの一手ごとに仲間と敵も動き、「観測」した敵を仲間にしたり、食料で空腹をしのいだりしながら3階からの脱出を目指す。入力したニュースは迷宮の色や出現する現象、観測ノートに反映され、各階の現実地点ではRSS記事の見出し・配信元・日時・出典を確認できる。ニュースは地域・環境・交通・科学の公開RSSからGitHub Actionsで6時間ごとに集め、事件や事故などの見出しは除外する仕組みだ。記事本文を保持・確認したとは扱わず、現実地点での選択も記事への賛否ではない。ブラウザで遊べる一方、記事の内容そのものをゲーム内で検証するものではないってところだな。",
-      "closingRemark": "現実地点に出るのは見出しと出典まで。迷宮のほうが、記事本文を読んだふりはしないらしい。",
+      "title": "現象救助隊 REALITY DUNGEON",
+      "summary": "現実のニュースや現象を迷宮の素材にした一人用探索ゲーム。方向キーで移動し、敵とのターン制戦闘や仲間化を進めながら、自動収集したRSS情報をもとに変化する3階層を攻略する。",
+      "detail": "こいつは、公開ニュースを小さな迷宮へ変えるブラウザゲームだ。プレイヤーが1回行動すると仲間と敵も動き、現象を倒して仲間を増やしながら空腹とHPを管理する。見出しは熱だまりや交通の結び目など敵や地形に対応させ、地域・環境・交通・科学のテーマによって階層の色や強さまで変わる仕組みになっている。GitHub Actionsで公開RSSを6時間ごとに取得し、事故や災害の見出しを除外した上で、本文ではなく見出し・日時・配信元・リンクだけを保持している。光る階段を探して3階で脱出できれば調査成功というわけだが、記事本文の確認や内容の賛否を判定する仕組みではない。",
+      "closingRemark": "ニュースが迷宮の床や敵に姿を変えても、本文までは持ち込まない慎重さがある。",
       "features": [
-        "毎回形の変わる迷宮を探索する一人用ゲーム",
-        "ターン制の移動・戦闘と、観測した敵の仲間化",
-        "ニュース入力が迷宮の色や出現現象に反映される",
-        "現実地点でRSS記事の見出し・配信元・日時・出典を表示",
-        "公開RSSを6時間ごとに自動収集し、事件・事故などの見出しを除外"
+        "ニュース見出しを迷宮の敵、地形、出現傾向に反映",
+        "現象を倒して最大3体まで仲間にできるターン制探索",
+        "空腹とHPを管理しながら光る階段を探す脱出ルール",
+        "GitHub Actionsによる6時間ごとのRSS自動収集",
+        "事故・災害などの危険な見出しを除外し本文を保存しない"
       ],
       "technologies": [
         "JavaScript",
         "HTML",
         "CSS",
-        "Canvas API",
+        "Canvas",
         "RSS",
+        "JSON",
         "GitHub Actions",
         "GitHub Pages"
       ],
       "categories": [
         "ブラウザゲーム",
-        "ローグライク",
-        "ニュース",
-        "一人用ゲーム"
+        "ターン制ローグライク",
+        "ニュース連携",
+        "公開データ活用"
       ],
       "status": "完成品",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1431824671,
-      "sourcePushedAt": "2026-11-27T21:11:36Z",
+      "sourcePushedAt": "2026-11-28T07:41:29Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1431824671,
         "name": "2026_10_24",
-        "pushedAt": "2026-11-27T21:11:36Z",
+        "pushedAt": "2026-11-28T07:41:29Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5136,8 +5136,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "aea56b78b2fd778284cf578e69ed45c56d2ea2842ce063be639408bf1e8bf5b4",
-      "generatedAt": "2026-11-27T21:27:43.821Z"
+      "sourceFingerprint": "fece49f9d7edfe6de9fa7d1e5c1f13a2d659ca4958071a1aa478cebcb1bda7d5",
+      "generatedAt": "2026-11-28T08:03:41.103Z"
     },
     "2026_10_24_2": {
       "title": "協調実験つきボクセルサバイバル",
@@ -5386,42 +5386,42 @@
       "generatedAt": "2026-10-30T06:00:51.432Z"
     },
     "github-ai-researcher": {
-      "title": "公開リポジトリ横断AI研究員",
-      "summary": "所有する公開GitHubリポジトリを読み取り専用で調べ、技術や再利用できる実装、プロジェクト間のつながりを整理するAI分析ツール。根拠付きのプロフィールや横断レポートを蓄積し、検索・比較できるダッシュボードも公開する。",
-      "detail": "こいつは、所有する公開GitHubリポジトリを横断して調べ、過去の実装から再利用候補や新しい研究テーマを見つけるためのAI研究員だ。中では公開GitHub APIやRaw URLからREADME、構成、設定、代表的なソースを集め、技術プロフィールと根拠ファイル付きの提案をまとめてる。結果はJSONや日付別Markdownに蓄積され、Pagesの画面で検索したり、最大3件を並べて比べたりできる。109件のリポジトリ・技術・言語・テーマを結ぶKnowledge Graphも用意されているな。Actionsから手動実行でき、毎日更新を確認して変更分だけ分析する仕組みだ。ただし解析には誤りもあり、提案を実験や実装に移す前には根拠ファイルの確認が要る。",
-      "closingRemark": "調査対象のコードは読むだけで、書き込みはこの研究員自身のリポジトリに限る。研究員が勝手に研究対象を書き換える心配はなさそうだな。",
+      "title": "GitHub公開リポジトリAI研究員",
+      "summary": "所有する公開リポジトリを横断して、技術や再利用できそうな実装を調べ、新しい研究・開発テーマを提案するツール。根拠ファイル付きのプロフィールやレポートを蓄積し、検索や比較ができるダッシュボードも公開します。",
+      "detail": "こいつは、temesotejamが所有する公開リポジトリを横断して調べ、過去の実装を生かせるテーマを探すAI研究員だ。中ではGitHub APIや公開Raw URLからREADME、構成、設定、代表的なソースを集め、Copilot CLIで技術プロフィールや横断レポートを作ってる。提案には根拠となるリポジトリやファイルを添え、結果はこのリポジトリに蓄積する仕組みだな。GitHub Pagesの画面では検索や絞り込み、最大3件の比較、Knowledge Graphでの関連探索もできる。定期実行は更新のあった公開リポジトリを中心に行い、非公開リポジトリには触れず、収集したコードも実行しない。提案を元のリポジトリへ反映したり、IssueやPull Requestを作ったりする機能は初期版にはない。",
+      "closingRemark": "提案だけでなく根拠ファイルまで残すあたり、記憶力には頼らない研究員ってわけだ。",
       "features": [
-        "公開リポジトリのプロフィールと根拠付き分析を作成",
-        "複数リポジトリの共通技術や再利用候補を横断分析",
-        "変更があったリポジトリを定期的に分析",
-        "検索・絞り込み・最大3件の比較ができるWebダッシュボード",
-        "Knowledge Graphで関連プロジェクトや技術を探索"
+        "公開リポジトリの技術プロフィールと更新情報を記録",
+        "複数リポジトリを横断した再利用候補や研究テーマを提案",
+        "根拠となるリポジトリ・ファイルを提案に紐付け",
+        "GitHub Pagesで検索、絞り込み、最大3件の比較が可能",
+        "Knowledge Graphでリポジトリ・技術・テーマの関連を探索"
       ],
       "technologies": [
         "JavaScript",
-        "GitHub API",
         "GitHub Actions",
-        "GitHub Copilot CLI",
+        "GitHub API",
         "GitHub Pages",
+        "GitHub Copilot CLI",
         "Markdown",
         "JSON"
       ],
       "categories": [
-        "AI分析ツール",
-        "GitHubリポジトリ分析",
-        "開発支援",
+        "AI研究",
+        "GitHub自動化",
+        "リポジトリ分析",
         "ダッシュボード"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1441487171,
-      "sourcePushedAt": "2026-11-27T01:55:40Z",
+      "sourcePushedAt": "2026-11-28T01:39:18Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1441487171,
         "name": "github-ai-researcher",
-        "pushedAt": "2026-11-27T01:55:40Z",
+        "pushedAt": "2026-11-28T01:39:18Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5431,8 +5431,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "a68803e4aed76320858de424920353923cae0918aa5b35ed6dffef983a4cb025",
-      "generatedAt": "2026-11-27T08:47:52.475Z"
+      "sourceFingerprint": "7da93a1b0428214a23efa6087b39c141719cb86d8dc50bfc896e0163ad83abf1",
+      "generatedAt": "2026-11-28T08:04:04.749Z"
     },
     "personal-browser-os": {
       "title": "ブラウザー内の個人デスクトップ",
@@ -5585,43 +5585,43 @@
       "generatedAt": "2026-11-27T21:28:16.941Z"
     },
     "layer-workbench": {
-      "title": "ブラウザー向け3Dプリント準備環境",
-      "summary": "OrcaSlicerの挙動や設定、スライス結果をできるだけ保ちながら、ブラウザーで使える3Dプリント準備環境を目指している。v2.5.0のWebAssemblyエンジン候補は検証済みだが、公開画面からのスライス実行にはまだつながっていない。",
-      "detail": "こいつは、デスクトップ版OrcaSlicerの挙動に近い3Dプリント準備環境を、ブラウザーで使えるようにする個人向けの作業場だ。中では上流のC++スライサーをWebAssembly化し、画面側のコードと分けて扱う方針を取ってる。v2.5.0のエンジン候補はAPI適合性や非同期処理、実際の移動・Zホップなどを検証済みで、安定版だけを追う更新ワークフローもある。ただ、公開画面はいまのところファイル一覧などを扱う段階で、モデル表示やプロファイル読み込み、エンジン実行、スライスは未接続だ。機能の差やブラウザー展開の課題も監査資料に整理されていて、完成品というより、検証を重ねながら組み立てているところだな。",
-      "closingRemark": "エンジンはZホップまで実測検証済みだが、公開画面のスライスボタンはまだ出番待ちというわけだ。",
+      "title": "ブラウザー版3Dプリント作業台",
+      "summary": "STL・3MF・OBJを扱う、個人向けのブラウザー版3Dプリント準備環境を目指している。OrcaSlicerのC++エンジンをWebAssembly化する検証が進む一方、公開画面はまだスライス機能と接続されていない。",
+      "detail": "こいつは、デスクトップのOrcaSlicerに近い使い勝手とスライス結果をブラウザーで実現しようとしている、個人向けの作業台だ。中では上流のC++スライサーをWebAssemblyで動かす方針を取り、v2.5.0のエンジン候補はビルドやAPI適合性、Nodeでの動作確認を通過している。更新は安定版だけを追い、互換性を確かめてから基準バージョンを進める仕組みだな。ただし、公開画面はまだ再構築中で、STL・3MF・OBJの選択はできても、形状表示やプロファイル読み込み、エンジン呼び出し、スライスにはつながっていない。ブラウザーでの実運用やデスクトップとの完全な機能・G-code同等性も、まだ確認済みとは言えない。",
+      "closingRemark": "エンジン候補は試験を通ったが、公開画面はまだスライスしない。刃は研いだ、あとは作業台に載せる段階ってところだ。",
       "features": [
         "OrcaSlicer v2.5.0のWebAssemblyエンジン候補を検証",
-        "API適合性、非同期処理、実際の移動動作を確認",
-        "安定版リリースを日次確認し、新版を追跡する仕組み",
-        "エンジン監査と機能差分を資料化",
-        "公開画面ではSTL・3MF・OBJファイルを選択可能"
+        "API適合性・非同期バインディング・Nodeでの動作確認を実施",
+        "上流の安定版リリースを毎日確認し、更新候補を追跡",
+        "STL・3MF・OBJファイルを選択できるブラウザー画面",
+        "デスクトップ版との機能差や未検証項目を監査資料で管理"
       ],
       "technologies": [
         "JavaScript",
         "Python",
         "Three.js",
-        "OrcaSlicer",
         "WebAssembly",
-        "GitHub Actions",
-        "GitHub Pages",
-        "STL"
+        "C++",
+        "OrcaSlicer",
+        "STL",
+        "3MF"
       ],
       "categories": [
         "3Dプリント",
-        "ブラウザーアプリ",
         "スライサー",
+        "Webアプリ",
         "WebAssembly"
       ],
       "status": "試作",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1453622619,
-      "sourcePushedAt": "2026-11-27T21:26:19Z",
+      "sourcePushedAt": "2026-11-28T07:48:56Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1453622619,
         "name": "layer-workbench",
-        "pushedAt": "2026-11-27T21:26:19Z",
+        "pushedAt": "2026-11-28T07:48:56Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5631,8 +5631,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "dd98f1d7e504f68df89f641b10ac23083420b0c14697133831a2940903df9837",
-      "generatedAt": "2026-11-27T21:27:32.971Z"
+      "sourceFingerprint": "8bb3cf36649926c6b18c24f58bc7e05747e87bd1cbca9ef87116595a99fa6011",
+      "generatedAt": "2026-11-28T08:03:27.709Z"
     },
     "atoms3r-camera-pipeline": {
       "title": "AtomS3Rカメラ遅延検証",
@@ -5786,42 +5786,42 @@
     },
     "pcb-workbench": {
       "title": "PCB設計・製造レビュー作業台",
-      "summary": "EasyEDA Proの基板をブラウザーから確認・編集し、ERC/DRCやJLCPCB向けのレビュー用出力をまとめる作業台だ。AIパッチの安全な適用や独立したJSON変換にも対応するが、製造発注に使える状態かの最終確認は別途必要になる。",
-      "detail": "こいつは、EasyEDA Proの基板を確認・編集し、製造前の検証とレビュー用データ作成を助ける作業台だ。ブラウザーでローカルのBridgeにつなぎ、ERC/DRCを実行したり、内容を限定したAI生成パッチを適用したりできる。変更前後のファイル検査やバックアップ、読み戻し確認も行い、JLCPCB向けにはGerber、BOM、CPLなどをソースのハッシュと結び付けたレビュー用ZIPにまとめる。別経路として、ブラウザーで作ったJSONからKiCad候補を生成する仕組みもあり、現状は対応範囲の限られた設計例で検証している。出力はあくまでREVIEW ONLYで、実基板の独立検証や部品・実装条件の確認を済ませるまでは発注できない。",
-      "closingRemark": "出力にDO_NOT_ORDERまで同梱するあたり、作業台自身も「まだ発注するな」と念を押してるわけだ。",
+      "summary": "ブラウザーでの基板設計やEasyEDA Proの確認、KiCadを使った製造データの検証を支援する作業台だ。JSONからの変換や配線機能も開発中だが、出力はレビュー用で、製造発注に使える状態とはされていない。",
+      "detail": "こいつは、PCBの設計内容を確認し、製造に進む前の検証やレビュー用データ作成を助ける作業台だ。ブラウザーでは部品配置や論理ネットを編集でき、別の経路として、出力したJSONをNode/BunのビルドでKiCad候補へ変換する仕組みもある。EasyEDA ProとはローカルのBridgeを介して接続し、ERC/DRCの結果保存や、変更元と生成ファイルのハッシュを記録したJLCPCB向けレビューZIPの作成ができる。手動配線やビア、混在配線、自動配線の障害物処理などは段階的に開発されていて、独立したKiCad検証や出力との整合確認を重視している。確認済みの基板例はあるものの、任意の設計を製造可能と保証するものではなく、発注用出力も有効化されていない。",
+      "closingRemark": "レビューZIPにはDO_NOT_ORDERの札まで入る。ここでは、作れることと発注できることをきっちり分けてるわけだ。",
       "features": [
-        "EasyEDA ProのローカルBridge接続とERC/DRC実行",
-        "変更前後を検査するAIパッチ適用と失敗時のロールバック",
-        "ソース改訂のハッシュを記録したJLCPCBレビュー用ZIP生成",
-        "独立したJSON設計からKiCad候補を変換",
-        "ブラウザーで論理接続や部品配置を編集する初期エディター"
+        "ブラウザーで部品配置や論理ネットを編集し、JSONで保存・読み込みできる",
+        "EasyEDA ProのERC/DRC結果を取得してJSONに保存できる",
+        "JLCPCB向けレビューZIPに生成物のハッシュや製造上の注意を記録する",
+        "JSONからKiCad候補を作成し、独立したERC/DRCなどで検証する",
+        "手動配線、ビア、混在配線、自動配線の機能を開発中"
       ],
       "technologies": [
         "JavaScript",
         "TypeScript",
         "Python",
         "Bun",
+        "React",
         "EasyEDA Pro",
         "KiCad",
-        "JLCPCB",
-        "tscircuit"
+        "Circuit JSON"
       ],
       "categories": [
         "PCB設計",
         "EDA",
-        "製造レビュー",
+        "製造検証",
         "ブラウザーツール"
       ],
       "status": "ツール",
       "confidence": "high",
       "summaryStyleVersion": "keeper-spoken-v5-individual-closing",
       "sourceRepositoryId": 1471086401,
-      "sourcePushedAt": "2026-11-27T20:37:26Z",
+      "sourcePushedAt": "2026-11-28T07:39:55Z",
       "sourceDefaultBranch": "main",
       "sourceMetadata": {
         "repositoryId": 1471086401,
         "name": "pcb-workbench",
-        "pushedAt": "2026-11-27T20:37:26Z",
+        "pushedAt": "2026-11-28T07:39:55Z",
         "description": "",
         "topics": [],
         "homepage": "",
@@ -5831,8 +5831,8 @@
         "fork": false,
         "language": "JavaScript"
       },
-      "sourceFingerprint": "fd00dd4a1180f2509a756ca83bb0f9b2a1548d8042b91b36bfd7acc022b2cba9",
-      "generatedAt": "2026-11-27T21:27:53.493Z"
+      "sourceFingerprint": "7b13e57824e1c1b068132a655c87d2f776bce5cf93f8a0c09cde8624451497d9",
+      "generatedAt": "2026-11-28T08:03:54.410Z"
     },
     "triple-formation-battle": {
       "title": "三機編隊バトル試作",
